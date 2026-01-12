@@ -1,0 +1,1128 @@
+Name: DataTypes
+Id: g=e227fddb6cdead57807b8457533944ce
+Type: FolderType
+Children:
+- Class: DataType
+  Name: UDT_PLS_Cam
+  Id: g=547f890ff922ade572b64c998148bcfe
+  Supertype: Structure
+  StructDefinition: 
+   {
+    "Name": "UDT_PLS_Cam",
+    "DataType": {
+     "IdType": 2,
+     "Id": "547f890ff922ade572b64c998148bcfe",
+     "Namespace": 36
+    },
+    "Fields": [{
+      "Name": "OnSpeed_Comp",
+      "DataType": {
+       "Id": 10
+      }
+     },{
+      "Name": "OffSpeed_Comp",
+      "DataType": {
+       "Id": 10
+      }
+     },{
+      "Name": "Cam_1_On",
+      "DataType": {
+       "Id": 10
+      }
+     },{
+      "Name": "Cam_1_Off",
+      "DataType": {
+       "Id": 10
+      }
+     },{
+      "Name": "Cam_2_On",
+      "DataType": {
+       "Id": 10
+      }
+     },{
+      "Name": "Cam_2_Off",
+      "DataType": {
+       "Id": 10
+      }
+     },{
+      "Name": "Cam_3_On",
+      "DataType": {
+       "Id": 10
+      }
+     },{
+      "Name": "Cam_3_Off",
+      "DataType": {
+       "Id": 10
+      }
+     },{
+      "Name": "Cam_4_On",
+      "DataType": {
+       "Id": 10
+      }
+     },{
+      "Name": "Cam_4_Off",
+      "DataType": {
+       "Id": 10
+      }
+     },{
+      "Name": "Cam_5_On",
+      "DataType": {
+       "Id": 10
+      }
+     },{
+      "Name": "Cam_5_Off",
+      "DataType": {
+       "Id": 10
+      }
+     }]
+   }
+  DisplayName: {"LocaleId":"","Text":"UDT_PLS_Cam"}
+  Children:
+  - Name: ns=0;Default Binary
+    Id: g=2e2750ff724122d65d8dd8f8ffd1c2f7
+    Type: DataTypeEncodingType
+    ModellingRule: None
+    DisplayName: {"LocaleId":"","Text":"Default Binary"}
+    ReferenceType: HasEncoding
+- Class: DataType
+  Name: UDT_TIME
+  Id: g=2fa377a905550d8ac79dc65d2b9d928c
+  Supertype: Structure
+  StructDefinition: 
+   {
+    "Name": "UDT_TIME",
+    "DataType": {
+     "IdType": 2,
+     "Id": "2fa377a905550d8ac79dc65d2b9d928c",
+     "Namespace": 36
+    },
+    "Fields": [{
+      "Name": "Year",
+      "DataType": {
+       "Id": 6
+      }
+     },{
+      "Name": "Month",
+      "DataType": {
+       "Id": 6
+      }
+     },{
+      "Name": "Day",
+      "DataType": {
+       "Id": 6
+      }
+     },{
+      "Name": "Hour",
+      "DataType": {
+       "Id": 6
+      }
+     },{
+      "Name": "Minute",
+      "DataType": {
+       "Id": 6
+      }
+     },{
+      "Name": "Second",
+      "DataType": {
+       "Id": 6
+      }
+     },{
+      "Name": "Microsecond",
+      "DataType": {
+       "Id": 6
+      }
+     }]
+   }
+  DisplayName: {"LocaleId":"","Text":"UDT_TIME"}
+  Children:
+  - Name: ns=0;Default Binary
+    Id: g=3a84f7a294ba578a7a38904979cd7658
+    Type: DataTypeEncodingType
+    ModellingRule: None
+    DisplayName: {"LocaleId":"","Text":"Default Binary"}
+    ReferenceType: HasEncoding
+- Class: DataType
+  Name: PackML_Status
+  Id: g=628833036fe65aa1a9d5c1e75f27a8cb
+  Supertype: Structure
+  StructDefinition: 
+   {
+    "Name": "PackML_Status",
+    "DataType": {
+     "IdType": 2,
+     "Id": "628833036fe65aa1a9d5c1e75f27a8cb",
+     "Namespace": 36
+    },
+    "Fields": [{
+      "Name": "UnitModeCurrent",
+      "DataType": {
+       "Id": 6
+      }
+     },{
+      "Name": "StateCurrent",
+      "DataType": {
+       "Id": 6
+      }
+     },{
+      "Name": "MachSpeed",
+      "DataType": {
+       "Id": 6
+      }
+     },{
+      "Name": "CurMachSpeed",
+      "DataType": {
+       "Id": 6
+      }
+     },{
+      "Name": "EquipmentInterlock",
+      "DataType": {
+       "IdType": 2,
+       "Id": "2aad0c2ce5e209b16b14de5c4f80fb6e",
+       "Namespace": 36
+      }
+     },{
+      "Name": "HeartbeatOUT",
+      "DataType": {
+       "Id": 1
+      }
+     }]
+   }
+  DisplayName: {"LocaleId":"","Text":"PackML_Status"}
+  Children:
+  - Name: ns=0;Default Binary
+    Id: g=6c007bbf2b3a8ac9c61c333ee3616462
+    Type: DataTypeEncodingType
+    ModellingRule: None
+    DisplayName: {"LocaleId":"","Text":"Default Binary"}
+    ReferenceType: HasEncoding
+- Class: DataType
+  Name: Equpiment_Interlock
+  Id: g=2aad0c2ce5e209b16b14de5c4f80fb6e
+  Supertype: Structure
+  StructDefinition: 
+   {
+    "Name": "Equpiment_Interlock",
+    "DataType": {
+     "IdType": 2,
+     "Id": "2aad0c2ce5e209b16b14de5c4f80fb6e",
+     "Namespace": 36
+    },
+    "Fields": [{
+      "Name": "Blocked",
+      "DataType": {
+       "Id": 1
+      }
+     },{
+      "Name": "Starved",
+      "DataType": {
+       "Id": 1
+      }
+     }]
+   }
+  DisplayName: {"LocaleId":"","Text":"Equpiment_Interlock"}
+  Children:
+  - Name: ns=0;Default Binary
+    Id: g=5578386019e30e8e3567a24bb10dd1f4
+    Type: DataTypeEncodingType
+    ModellingRule: None
+    DisplayName: {"LocaleId":"","Text":"Default Binary"}
+    ReferenceType: HasEncoding
+- Class: DataType
+  Name: UDT_Size
+  Id: g=c800e49c839c2d8a1cebc2c1ec01e6e9
+  Supertype: Structure
+  StructDefinition: 
+   {
+    "Name": "UDT_Size",
+    "DataType": {
+     "IdType": 2,
+     "Id": "c800e49c839c2d8a1cebc2c1ec01e6e9",
+     "Namespace": 36
+    },
+    "Fields": [{
+      "Name": "GlueCam01",
+      "DataType": {
+       "IdType": 2,
+       "Id": "547f890ff922ade572b64c998148bcfe",
+       "Namespace": 36
+      }
+     },{
+      "Name": "GlueCam02",
+      "DataType": {
+       "IdType": 2,
+       "Id": "547f890ff922ade572b64c998148bcfe",
+       "Namespace": 36
+      }
+     },{
+      "Name": "GlueCam03",
+      "DataType": {
+       "IdType": 2,
+       "Id": "547f890ff922ade572b64c998148bcfe",
+       "Namespace": 36
+      }
+     },{
+      "Name": "GlueCam04",
+      "DataType": {
+       "IdType": 2,
+       "Id": "547f890ff922ade572b64c998148bcfe",
+       "Namespace": 36
+      }
+     },{
+      "Name": "GlueCam05",
+      "DataType": {
+       "IdType": 2,
+       "Id": "547f890ff922ade572b64c998148bcfe",
+       "Namespace": 36
+      }
+     },{
+      "Name": "GlueCam06",
+      "DataType": {
+       "IdType": 2,
+       "Id": "547f890ff922ade572b64c998148bcfe",
+       "Namespace": 36
+      }
+     },{
+      "Name": "GlueCam07",
+      "DataType": {
+       "IdType": 2,
+       "Id": "547f890ff922ade572b64c998148bcfe",
+       "Namespace": 36
+      }
+     },{
+      "Name": "GlueCam08",
+      "DataType": {
+       "IdType": 2,
+       "Id": "547f890ff922ade572b64c998148bcfe",
+       "Namespace": 36
+      }
+     },{
+      "Name": "TimingCam01",
+      "DataType": {
+       "IdType": 2,
+       "Id": "547f890ff922ade572b64c998148bcfe",
+       "Namespace": 36
+      }
+     },{
+      "Name": "TimingCam02",
+      "DataType": {
+       "IdType": 2,
+       "Id": "547f890ff922ade572b64c998148bcfe",
+       "Namespace": 36
+      }
+     },{
+      "Name": "TimingCam03",
+      "DataType": {
+       "IdType": 2,
+       "Id": "547f890ff922ade572b64c998148bcfe",
+       "Namespace": 36
+      }
+     },{
+      "Name": "TimingCam04",
+      "DataType": {
+       "IdType": 2,
+       "Id": "547f890ff922ade572b64c998148bcfe",
+       "Namespace": 36
+      }
+     },{
+      "Name": "TimingCam05",
+      "DataType": {
+       "IdType": 2,
+       "Id": "547f890ff922ade572b64c998148bcfe",
+       "Namespace": 36
+      }
+     },{
+      "Name": "TimingCam06",
+      "DataType": {
+       "IdType": 2,
+       "Id": "547f890ff922ade572b64c998148bcfe",
+       "Namespace": 36
+      }
+     },{
+      "Name": "TimingCam07",
+      "DataType": {
+       "IdType": 2,
+       "Id": "547f890ff922ade572b64c998148bcfe",
+       "Namespace": 36
+      }
+     },{
+      "Name": "TimingCam08",
+      "DataType": {
+       "IdType": 2,
+       "Id": "547f890ff922ade572b64c998148bcfe",
+       "Namespace": 36
+      }
+     },{
+      "Name": "TimingCam09",
+      "DataType": {
+       "IdType": 2,
+       "Id": "547f890ff922ade572b64c998148bcfe",
+       "Namespace": 36
+      }
+     },{
+      "Name": "TimingCam10",
+      "DataType": {
+       "IdType": 2,
+       "Id": "547f890ff922ade572b64c998148bcfe",
+       "Namespace": 36
+      }
+     },{
+      "Name": "TimingCam11",
+      "DataType": {
+       "IdType": 2,
+       "Id": "547f890ff922ade572b64c998148bcfe",
+       "Namespace": 36
+      }
+     },{
+      "Name": "TimingCam12",
+      "DataType": {
+       "IdType": 2,
+       "Id": "547f890ff922ade572b64c998148bcfe",
+       "Namespace": 36
+      }
+     },{
+      "Name": "TimingCam13",
+      "DataType": {
+       "IdType": 2,
+       "Id": "547f890ff922ade572b64c998148bcfe",
+       "Namespace": 36
+      }
+     },{
+      "Name": "TimingCam14",
+      "DataType": {
+       "IdType": 2,
+       "Id": "547f890ff922ade572b64c998148bcfe",
+       "Namespace": 36
+      }
+     },{
+      "Name": "TimingCam15",
+      "DataType": {
+       "IdType": 2,
+       "Id": "547f890ff922ade572b64c998148bcfe",
+       "Namespace": 36
+      }
+     },{
+      "Name": "TimingCam16",
+      "DataType": {
+       "IdType": 2,
+       "Id": "547f890ff922ade572b64c998148bcfe",
+       "Namespace": 36
+      }
+     },{
+      "Name": "TimingCam17",
+      "DataType": {
+       "IdType": 2,
+       "Id": "547f890ff922ade572b64c998148bcfe",
+       "Namespace": 36
+      }
+     },{
+      "Name": "TimingCam18",
+      "DataType": {
+       "IdType": 2,
+       "Id": "547f890ff922ade572b64c998148bcfe",
+       "Namespace": 36
+      }
+     },{
+      "Name": "TimingCam19",
+      "DataType": {
+       "IdType": 2,
+       "Id": "547f890ff922ade572b64c998148bcfe",
+       "Namespace": 36
+      }
+     },{
+      "Name": "TimingCam20",
+      "DataType": {
+       "IdType": 2,
+       "Id": "547f890ff922ade572b64c998148bcfe",
+       "Namespace": 36
+      }
+     },{
+      "Name": "TimingCam21",
+      "DataType": {
+       "IdType": 2,
+       "Id": "547f890ff922ade572b64c998148bcfe",
+       "Namespace": 36
+      }
+     },{
+      "Name": "TimingCam22",
+      "DataType": {
+       "IdType": 2,
+       "Id": "547f890ff922ade572b64c998148bcfe",
+       "Namespace": 36
+      }
+     },{
+      "Name": "Axis02LeadingLugThickness",
+      "DataType": {
+       "Id": 10
+      }
+     },{
+      "Name": "Axis02Offset",
+      "DataType": {
+       "Id": 10
+      }
+     },{
+      "Name": "Axis03Offset",
+      "DataType": {
+       "Id": 4
+      }
+     },{
+      "Name": "Axis04Offset",
+      "DataType": {
+       "Id": 10
+      }
+     },{
+      "Name": "Axis05Offset",
+      "DataType": {
+       "Id": 4
+      }
+     },{
+      "Name": "Axis06Offset",
+      "DataType": {
+       "Id": 4
+      }
+     },{
+      "Name": "Axis07Offset",
+      "DataType": {
+       "Id": 4
+      }
+     },{
+      "Name": "Axis08Offset",
+      "DataType": {
+       "Id": 4
+      }
+     },{
+      "Name": "Axis09Offset",
+      "DataType": {
+       "Id": 4
+      }
+     },{
+      "Name": "Axis10Offset",
+      "DataType": {
+       "Id": 4
+      }
+     },{
+      "Name": "Axis11Offset",
+      "DataType": {
+       "Id": 10
+      }
+     },{
+      "Name": "Axis12Offset",
+      "DataType": {
+       "Id": 10
+      }
+     },{
+      "Name": "Axis13Offset",
+      "DataType": {
+       "Id": 4
+      }
+     },{
+      "Name": "Axis14Offset",
+      "DataType": {
+       "Id": 4
+      }
+     },{
+      "Name": "Axis15Offset",
+      "DataType": {
+       "Id": 4
+      }
+     },{
+      "Name": "Axis15DwellPosition",
+      "DataType": {
+       "Id": 4
+      }
+     },{
+      "Name": "Axis16Offset",
+      "DataType": {
+       "Id": 4
+      }
+     },{
+      "Name": "Axis16DwellPosition",
+      "DataType": {
+       "Id": 4
+      }
+     },{
+      "Name": "Axis21Offset",
+      "DataType": {
+       "Id": 4
+      }
+     },{
+      "Name": "Axis22Offset",
+      "DataType": {
+       "Id": 4
+      }
+     },{
+      "Name": "INT01",
+      "DataType": {
+       "Id": 4
+      }
+     },{
+      "Name": "INT02",
+      "DataType": {
+       "Id": 4
+      }
+     },{
+      "Name": "INT03",
+      "DataType": {
+       "Id": 4
+      }
+     },{
+      "Name": "INT04",
+      "DataType": {
+       "Id": 4
+      }
+     },{
+      "Name": "INT05",
+      "DataType": {
+       "Id": 4
+      }
+     },{
+      "Name": "INT06",
+      "DataType": {
+       "Id": 4
+      }
+     },{
+      "Name": "INT07",
+      "DataType": {
+       "Id": 4
+      }
+     },{
+      "Name": "INT08",
+      "DataType": {
+       "Id": 4
+      }
+     },{
+      "Name": "INT09",
+      "DataType": {
+       "Id": 4
+      }
+     },{
+      "Name": "INT10",
+      "DataType": {
+       "Id": 4
+      }
+     },{
+      "Name": "INT11",
+      "DataType": {
+       "Id": 4
+      }
+     },{
+      "Name": "INT12",
+      "DataType": {
+       "Id": 4
+      }
+     },{
+      "Name": "INT13",
+      "DataType": {
+       "Id": 4
+      }
+     },{
+      "Name": "INT14",
+      "DataType": {
+       "Id": 4
+      }
+     },{
+      "Name": "INT15",
+      "DataType": {
+       "Id": 4
+      }
+     },{
+      "Name": "INT16",
+      "DataType": {
+       "Id": 4
+      }
+     },{
+      "Name": "INT17",
+      "DataType": {
+       "Id": 4
+      }
+     },{
+      "Name": "INT18",
+      "DataType": {
+       "Id": 4
+      }
+     },{
+      "Name": "INT19",
+      "DataType": {
+       "Id": 4
+      }
+     },{
+      "Name": "INT20",
+      "DataType": {
+       "Id": 4
+      }
+     },{
+      "Name": "INT21",
+      "DataType": {
+       "Id": 4
+      }
+     },{
+      "Name": "INT22",
+      "DataType": {
+       "Id": 4
+      }
+     },{
+      "Name": "INT23",
+      "DataType": {
+       "Id": 4
+      }
+     },{
+      "Name": "INT24",
+      "DataType": {
+       "Id": 4
+      }
+     },{
+      "Name": "INT25",
+      "DataType": {
+       "Id": 4
+      }
+     },{
+      "Name": "INT26",
+      "DataType": {
+       "Id": 4
+      }
+     },{
+      "Name": "REAL03",
+      "DataType": {
+       "Id": 10
+      }
+     },{
+      "Name": "NumberOfCartonsPerMagazineFlight",
+      "DataType": {
+       "Id": 10
+      }
+     },{
+      "Name": "UpHill_Carton_Mag_Speed_IPM",
+      "DataType": {
+       "Id": 10
+      }
+     },{
+      "Name": "Straight_Carton_Mag_Speed_IPM",
+      "DataType": {
+       "Id": 10
+      }
+     },{
+      "Name": "EnableHoseGun1and4",
+      "DataType": {
+       "Id": 1
+      }
+     },{
+      "Name": "EnableCartonFeedAirAssist",
+      "DataType": {
+       "Id": 1
+      }
+     },{
+      "Name": "InfeedConveyor1_Mul",
+      "DataType": {
+       "Id": 10
+      }
+     },{
+      "Name": "InfeedConveyor2_Mul",
+      "DataType": {
+       "Id": 10
+      }
+     },{
+      "Name": "Auto_NominalSpeed_CPM",
+      "DataType": {
+       "Id": 4
+      }
+     },{
+      "Name": "Auto_SurgeSpeed_CPM",
+      "DataType": {
+       "Id": 4
+      }
+     },{
+      "Name": "Auto_NominalSpeed_CPM_OtherPackerDown",
+      "DataType": {
+       "Id": 4
+      }
+     },{
+      "Name": "Auto_SurgeSpeed_CPM_OtherPackerDown",
+      "DataType": {
+       "Id": 4
+      }
+     },{
+      "Name": "GarveyInfeedConv1_Mul",
+      "DataType": {
+       "Id": 10
+      }
+     },{
+      "Name": "GarveyInfinityLoop_Mul",
+      "DataType": {
+       "Id": 10
+      }
+     },{
+      "Name": "GarveyInfinityOutput_Mul",
+      "DataType": {
+       "Id": 10
+      }
+     },{
+      "Name": "GarveyInfinitySlowDownLane_Mul",
+      "DataType": {
+       "Id": 10
+      }
+     },{
+      "Name": "Auto_MediumSpeed_CPM",
+      "DataType": {
+       "Id": 4
+      }
+     },{
+      "Name": "Auto_HighSpeed_CPM",
+      "DataType": {
+       "Id": 4
+      }
+     },{
+      "Name": "ProductDiameter_Inches",
+      "DataType": {
+       "Id": 10
+      }
+     },{
+      "Name": "GluePressureAtLowSpeed_PSI",
+      "DataType": {
+       "Id": 4
+      }
+     },{
+      "Name": "GluePressureAtHighSpeed_PSI",
+      "DataType": {
+       "Id": 4
+      }
+     },{
+      "Name": "MaxSpeedThisSize_CPM",
+      "DataType": {
+       "Id": 4
+      }
+     },{
+      "Name": "SikoCounterSetpoint",
+      "DataType": {
+       "Id": 10
+      },
+      "ValueRank": "OneDimension",
+      "ArrayDimensions": [110]
+     },{
+      "Name": "SizeChangePoint_PushToVerify",
+      "DataType": {
+       "Id": 10
+      },
+      "ValueRank": "OneDimension",
+      "ArrayDimensions": [55]
+     },{
+      "Name": "D510_VFD1_NerconBot_Mul",
+      "DataType": {
+       "Id": 10
+      }
+     },{
+      "Name": "D510_VFD2_NerconSide_Mul",
+      "DataType": {
+       "Id": 10
+      }
+     },{
+      "Name": "D510_VFD3_IntroloxInfeed_Mul",
+      "DataType": {
+       "Id": 10
+      }
+     },{
+      "Name": "D510_VFD4_IntroloxTurning_Mul",
+      "DataType": {
+       "Id": 10
+      }
+     },{
+      "Name": "D510_VFD5_IntroloxReject_Mul",
+      "DataType": {
+       "Id": 10
+      }
+     },{
+      "Name": "D510_VFD6_IntroloxReject_Mul",
+      "DataType": {
+       "Id": 10
+      }
+     },{
+      "Name": "D510_VFD7_IntroloxDischarge_Mul",
+      "DataType": {
+       "Id": 10
+      }
+     },{
+      "Name": "i_447_SensorCenteredOnTarget",
+      "DataType": {
+       "Id": 4
+      },
+      "ValueRank": "OneDimension",
+      "ArrayDimensions": [20]
+     },{
+      "Name": "i_447_InfeedSensorProx",
+      "DataType": {
+       "Id": 4
+      }
+     },{
+      "Name": "i_447_UpstreamInfeedSensorProx",
+      "DataType": {
+       "Id": 4
+      }
+     },{
+      "Name": "bo_447_CenterBoardRequired",
+      "DataType": {
+       "Id": 1
+      }
+     },{
+      "Name": "byte_445_RFID_SensorSetpoint",
+      "DataType": {
+       "Id": 2
+      },
+      "ValueRank": "OneDimension",
+      "ArrayDimensions": [60]
+     },{
+      "Name": "i_445_TagCenteredOnSensor",
+      "DataType": {
+       "Id": 4
+      },
+      "ValueRank": "OneDimension",
+      "ArrayDimensions": [60]
+     },{
+      "Name": "D232_SRStation_RejectAtXRay",
+      "DataType": {
+       "Id": 6
+      }
+     },{
+      "Name": "D232_SRStation_RejectAtDischargeJam",
+      "DataType": {
+       "Id": 6
+      }
+     },{
+      "Name": "D232_SRStation_RejectAtOpenOuterFlap",
+      "DataType": {
+       "Id": 6
+      }
+     },{
+      "Name": "D232_SRStation_RejectAtIntralox",
+      "DataType": {
+       "Id": 6
+      }
+     },{
+      "Name": "D510_Intralox_MenuNumber",
+      "DataType": {
+       "Id": 6
+      }
+     },{
+      "Name": "D510_Intralox_NumPacksLane1",
+      "DataType": {
+       "Id": 6
+      }
+     },{
+      "Name": "D510_Intralox_NumPacksLane2",
+      "DataType": {
+       "Id": 6
+      }
+     },{
+      "Name": "D510_Intralox_NumPacksLane3",
+      "DataType": {
+       "Id": 6
+      }
+     },{
+      "Name": "D510_Intralox_TurnProduct",
+      "DataType": {
+       "Id": 6
+      }
+     },{
+      "Name": "r_449_TouchToVerifySetpoints",
+      "DataType": {
+       "Id": 10
+      },
+      "ValueRank": "OneDimension",
+      "ArrayDimensions": [50]
+     },{
+      "Name": "R128_SpeconInfeed_Mul",
+      "DataType": {
+       "Id": 10
+      }
+     },{
+      "Name": "R213_DischargeConveyor_Mul",
+      "DataType": {
+       "Id": 10
+      }
+     },{
+      "Name": "Enable2ndStationBottomFlapCloser",
+      "DataType": {
+       "Id": 1
+      }
+     },{
+      "Name": "FlapSeparatorMode",
+      "DataType": {
+       "Id": 1
+      }
+     },{
+      "Name": "GluePressureAtLowSpeed2_PSI",
+      "DataType": {
+       "Id": 4
+      }
+     },{
+      "Name": "GluePressureAtHighSpeed2_PSI",
+      "DataType": {
+       "Id": 4
+      }
+     },{
+      "Name": "SecondStationBotGlueHosesGunsEnable",
+      "DataType": {
+       "Id": 1
+      }
+     },{
+      "Name": "SecondStationTopMidGlueHosesGunsEnable",
+      "DataType": {
+       "Id": 1
+      }
+     },{
+      "Name": "FirstStationGlueHosesGunsEnable",
+      "DataType": {
+       "Id": 1
+      }
+     },{
+      "Name": "B370_CodeDaterActive_OS",
+      "DataType": {
+       "Id": 1
+      }
+     },{
+      "Name": "B371_CodeDaterActive_LS",
+      "DataType": {
+       "Id": 1
+      }
+     },{
+      "Name": "SpecCon_Parallel_Multiplier",
+      "DataType": {
+       "Id": 10
+      }
+     },{
+      "Name": "RotaryFlapSeparatorDirection",
+      "DataType": {
+       "Id": 4
+      }
+     },{
+      "Name": "B510_IntraloxBypassMode",
+      "DataType": {
+       "Id": 1
+      }
+     },{
+      "Name": "B160_TopFlapNotPresent",
+      "DataType": {
+       "Id": 1
+      }
+     },{
+      "Name": "I200_PEC1_OpenInnerFlapMaxDist_mm_LS",
+      "DataType": {
+       "Id": 4
+      }
+     },{
+      "Name": "I200_PEC2_OpenInnerFlapMaxDist_mm_OS",
+      "DataType": {
+       "Id": 4
+      }
+     },{
+      "Name": "I195_TemperatureSetpoint_Tank",
+      "DataType": {
+       "Id": 4
+      }
+     },{
+      "Name": "I195_TemperatureSetpoint_Manifold",
+      "DataType": {
+       "Id": 4
+      }
+     },{
+      "Name": "I195_TemperatureSetpoint_Hose1",
+      "DataType": {
+       "Id": 4
+      }
+     },{
+      "Name": "I195_TemperatureSetpoint_Gun1",
+      "DataType": {
+       "Id": 4
+      }
+     },{
+      "Name": "I195_TemperatureSetpoint_Hose2",
+      "DataType": {
+       "Id": 4
+      }
+     },{
+      "Name": "I195_TemperatureSetpoint_Gun2",
+      "DataType": {
+       "Id": 4
+      }
+     },{
+      "Name": "I195_TemperatureSetpoint_Hose3",
+      "DataType": {
+       "Id": 4
+      }
+     },{
+      "Name": "I195_TemperatureSetpoint_Gun3",
+      "DataType": {
+       "Id": 4
+      }
+     },{
+      "Name": "I195_TemperatureSetpoint_Hose4",
+      "DataType": {
+       "Id": 4
+      }
+     },{
+      "Name": "I195_TemperatureSetpoint_Gun4",
+      "DataType": {
+       "Id": 4
+      }
+     },{
+      "Name": "I195_TemperatureSetpoint_Hose5",
+      "DataType": {
+       "Id": 4
+      }
+     },{
+      "Name": "I195_TemperatureSetpoint_Gun5",
+      "DataType": {
+       "Id": 4
+      }
+     },{
+      "Name": "I195_TemperatureSetpoint_Hose6",
+      "DataType": {
+       "Id": 4
+      }
+     },{
+      "Name": "I195_TemperatureSetpoint_Gun6",
+      "DataType": {
+       "Id": 4
+      }
+     },{
+      "Name": "I195_TemperatureSetpoint_Hose7",
+      "DataType": {
+       "Id": 4
+      }
+     },{
+      "Name": "I195_TemperatureSetpoint_Gun7",
+      "DataType": {
+       "Id": 4
+      }
+     },{
+      "Name": "I195_TemperatureSetpoint_Hose8",
+      "DataType": {
+       "Id": 4
+      }
+     },{
+      "Name": "I195_TemperatureSetpoint_Gun8",
+      "DataType": {
+       "Id": 4
+      }
+     },{
+      "Name": "I240_CartonFeedLugPitch",
+      "DataType": {
+       "Id": 6
+      }
+     },{
+      "Name": "I150_CartonFed_ShiftRegisterStation",
+      "DataType": {
+       "Id": 6
+      }
+     },{
+      "Name": "I160_MissingCartonCheck_ShiftRegisterSta",
+      "DataType": {
+       "Id": 6
+      }
+     }]
+   }
+  DisplayName: {"LocaleId":"","Text":"UDT_Size"}
+  Children:
+  - Name: ns=0;Default Binary
+    Id: g=2638a2b25f767b48ffcd15e29a414ad0
+    Type: DataTypeEncodingType
+    ModellingRule: None
+    DisplayName: {"LocaleId":"","Text":"Default Binary"}
+    ReferenceType: HasEncoding

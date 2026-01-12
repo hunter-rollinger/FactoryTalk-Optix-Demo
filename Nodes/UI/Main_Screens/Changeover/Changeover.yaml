@@ -1,0 +1,225 @@
+Name: Changeover
+Id: g=de8dfd2b06a3a61cace7bb9d196a41b7
+Type: FolderType
+Children:
+- Name: Changeover_Main
+  Id: g=ae721355ffe738149606332ce3fd551f
+  Supertype: Screen
+  DisplayName: {"NamespaceIndex":36,"TextId":"Changeover"}
+  ReferenceType: HasComponent
+  Children:
+  - Name: Height
+    Id: g=6092404ab5c85e89188c8837df84313b
+    Type: BaseVariableType
+    DataType: Size
+    ModellingRule: Optional
+    Value: 745.0
+  - Name: Width
+    Id: g=1a5fa16d91dc7fbf05d532b2a75f5690
+    Type: BaseVariableType
+    DataType: Size
+    ModellingRule: Optional
+    Value: 1920.0
+  - Name: ScrollView
+    Id: g=31b67a24b7d96b957dbe9c7e98d7ca23
+    Type: ScrollView
+    Children:
+    - Name: Width
+      Id: g=30c7f66c1d9d9435302b8be1254dc9f8
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 300.0
+    - Name: Height
+      Id: g=8eef98aa8e145acea72bb296e076a524
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 300.0
+    - Name: HorizontalAlignment
+      Id: g=59161556cccba5931ec5ae3083afa669
+      Type: BaseVariableType
+      DataType: HorizontalAlignment
+      ModellingRule: Optional
+      Value: 3
+    - Name: VerticalAlignment
+      Id: g=8eb371aa440527c1815b2181bf836aec
+      Type: BaseVariableType
+      DataType: VerticalAlignment
+      ModellingRule: Optional
+      Value: 3
+    - Name: MinZoomOut
+      Id: g=1e81e4de2b56305502af4b7444385a83
+      Type: BaseDataVariableType
+      DataType: Int32
+      ModellingRule: Optional
+      Value: 100
+    - Name: MaxZoomIn
+      Id: g=f3d9b14884e61693eeeb166927371770
+      Type: BaseDataVariableType
+      DataType: Int32
+      ModellingRule: Optional
+      Value: 200
+    - Name: Zoommable
+      Id: g=a4a38f6f8f23c68f7a496d145e174e58
+      Type: BaseDataVariableType
+      DataType: Boolean
+      ModellingRule: Optional
+      Value: true
+    - Name: ScrollAxesEnabled
+      Id: g=4a660b79363592d8a4fb3ac5ee976eec
+      Type: BaseDataVariableType
+      DataType: ScrollAxesEnabledEnum
+      ModellingRule: Optional
+    - Name: ContentWidth
+      Id: g=e6d75b4666f8b963360fd2f25fb0c8df
+      Type: BaseDataVariableType
+      DataType: Size
+      AccessLevel: Read
+    - Name: ContentHeight
+      Id: g=3dac72f0dec1becef545d6d1106ca12b
+      Type: BaseDataVariableType
+      DataType: Size
+      AccessLevel: Read
+    - Name: ViewWidth
+      Id: g=94a57156c94486ff6d8a872af511cdfb
+      Type: BaseDataVariableType
+      DataType: Size
+      AccessLevel: Read
+    - Name: ViewHeight
+      Id: g=5c7d18c50fdbe005efe0cc4a6b022f3c
+      Type: BaseDataVariableType
+      DataType: Size
+      AccessLevel: Read
+    - Name: ContentX
+      Id: g=67d37bd50b769f08c2f431bd9514a1d2
+      Type: BaseDataVariableType
+      DataType: Size
+    - Name: ContentY
+      Id: g=d3d87890611ac669014ccd864952c7d1
+      Type: BaseDataVariableType
+      DataType: Size
+    - Class: Reference
+      Target: ns=11;i=1394
+      Direction: Forward
+  - Name: Screen Display Name
+    Id: g=4e52a933e7a294bf9196a8e5904b2348
+    Type: Label
+    Children:
+    - Name: Text
+      Id: g=bc05676094d89f00b71e25a31de11e38
+      Type: BaseDataVariableType
+      DataType: LocalizedText
+      Children:
+      - Name: DynamicLink
+        Id: g=bc6ce571f3e4b5f626b31bc60ff41af0
+        Type: DynamicLink
+        DataType: NodePath
+        Value: "../..@DisplayName"
+    - Name: LeftMargin
+      Id: g=bbb0c3787e5b2dbbd8a5800e342a3364
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 20.0
+    - Name: TopMargin
+      Id: g=7a2ba577fd494811f95494f0c734dbca
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 18.0
+    - Name: FontSize
+      Id: g=03d1c19a66732592ad80996fb99dd8dd
+      Type: BaseDataVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 24.0
+    - Name: FontFamily
+      Id: g=22f4569b76e0da29e9eccbce66eac480
+      Type: BaseDataVariableType
+      DataType: Font
+      ModellingRule: Optional
+      Value: "Roboto Condensed"
+    - Name: Height
+      Id: g=1f0aaec1c5a8fa26353c77ecbb167376
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 30.0
+    - Name: VerticalAlignment
+      Id: g=6454aacb76e2023e97b142a747cece74
+      Type: BaseVariableType
+      DataType: VerticalAlignment
+      ModellingRule: Optional
+    - Name: TextVerticalAlignment
+      Id: g=8a232cd3e22938d3a91182233a8f4092
+      Type: BaseVariableType
+      DataType: TextVerticalAlignment
+      ModellingRule: Optional
+      Value: 1
+  - Name: Style
+    Id: g=f2347fc66ab3ca355c9d000710a58db0
+    Type: BaseDataVariableType
+    DataType: String
+    ModellingRule: Optional
+    Value: "WhiteBackground"
+- Name: Changeover_Menu_Bar
+  Id: g=76be7b4d7c2c3a388907143a04718fdc
+  Supertype: Menu_Bar
+  ReferenceType: HasComponent
+  Children:
+  - Name: BackgroundColor
+    Id: g=b2dc2e67b8336b2b3e482dd130e52f3e
+    Type: BaseDataVariableType
+    DataType: Color
+    Value: "#b9b9b9"
+    Children:
+    - Name: DynamicLink
+      Id: g=42fc89bf72a6d6742074892fbd2194fd
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Light Grey/Light Grey 650"
+  - Name: Rectangle1
+    Id: g=62f312cef453bdab7d93cd49010d3d6b
+    Type: Rectangle
+    Children:
+    - Name: BorderColor
+      Id: g=f0cd215f664ac5e4ea18744168bf153f
+      Type: BaseDataVariableType
+      DataType: Color
+      Value: "#e5e5e5"
+      Children:
+      - Name: DynamicLink
+        Id: g=4a74b55d720d04e78007f0e3f159be56
+        Type: DynamicLink
+        DataType: NodePath
+        Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Light Grey/Light Grey 330"
+  - Name: Rectangle2
+    Id: g=3a0aca178a6e5ab1b195dee92f3d217b
+    Type: Rectangle
+    Children:
+    - Name: Width
+      Id: g=b44a05b7bc93f2c9ab07a39c9b898f67
+      Type: BaseVariableType
+      DataType: Size
+      Value: 37.0
+    - Name: Height
+      Id: g=112b7bf9b5827a2bd5c0195b911ed0ee
+      Type: BaseVariableType
+      DataType: Size
+      Value: 37.0
+    - Name: BorderColor
+      Id: g=a7d667386df597e42e4fdf63d6200cc8
+      Type: BaseDataVariableType
+      DataType: Color
+    - Name: FillColor
+      Id: g=67eb864bef089f6824d3b4a44cf7d476
+      Type: BaseDataVariableType
+      DataType: Color
+      Value: "#b9b9b9"
+      Children:
+      - Name: DynamicLink
+        Id: g=3c376bdf193d6c02c14ac3f693d2115c
+        Type: DynamicLink
+        DataType: NodePath
+        Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Light Grey/Light Grey 650"

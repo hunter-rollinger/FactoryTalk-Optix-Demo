@@ -1,0 +1,367 @@
+Name: Loggers
+Id: g=eb53befa766e8cbb448afe711bee9490
+Type: LoggersCategoryFolder
+Children:
+- Name: ShiftData
+  Id: g=44cf3c7bc16641b48d442e5f508c4bc0
+  Type: DataLogger
+  Children:
+  - Name: SamplingMode
+    Id: g=b9185ec4ab6047cd9bc390506df09c4c
+    Type: PropertyType
+    DataType: SamplingModeEnum
+    Value: 1
+  - Name: Store
+    Id: g=345f33b3e71286d89e9e447a83a8e6b4
+    Type: NodePointer
+    DataType: NodeId
+    Value: "/Objects/OptimateDemoProject/DataStores/ShiftData"
+    Children:
+    - Name: Kind
+      Id: g=b454c5c159231e90616e95cb595de4ec
+      Type: PropertyType
+      DataType: NodeId
+      Value: "/Types/ObjectTypes/BaseObjectType/Store"
+  - Name: VariablesToLog
+    Id: g=df5f71c0d66ff53959c421d09731ca83
+    Type: BaseObjectType
+    Children:
+    - Name: Items Good
+      Id: g=5b77f937511d72c94a4ea5b3180ffb63
+      Type: VariableToLog
+      DataType: BaseDataType
+      Children:
+      - Name: LastValue
+        Id: g=8dfcd6a46d2b98f6ee8257e24d241d0d
+        Type: PropertyType
+        DataType: BaseDataType
+        AccessLevel: Read
+      - Name: Timestamp
+        Id: g=aaefef7a450e757e550947d444d35d80
+        Type: PropertyType
+        DataType: UtcTime
+        AccessLevel: Read
+      - Name: LastOperationCode
+        Id: g=891463c3ddf53b8beec96efc6104099c
+        Type: PropertyType
+        DataType: StatusCode
+        AccessLevel: Read
+      - Name: DynamicLink
+        Id: g=45028495446f123368f0a6b4e5f6a19d
+        Type: DynamicLink
+        DataType: NodePath
+        Value: "../../../../Model/Internal/Shift Report Variables/Items Good"
+        Children:
+        - Name: Mode
+          Id: g=d466c649808ee24141df0d8699487675
+          Type: BaseVariableType
+          DataType: DynamicLinkMode
+          Value: 2
+    - Name: Items Bad
+      Id: g=498ccff2189d2272751c0c19c548fb8c
+      Type: VariableToLog
+      DataType: BaseDataType
+      Children:
+      - Name: LastValue
+        Id: g=a1a70481b839d5f0285a0931d5f2866c
+        Type: PropertyType
+        DataType: BaseDataType
+        AccessLevel: Read
+      - Name: Timestamp
+        Id: g=33f9b2dd850011af6da543f6d2a25d4f
+        Type: PropertyType
+        DataType: UtcTime
+        AccessLevel: Read
+      - Name: LastOperationCode
+        Id: g=e83a13b84ae7962e90393d38bcbd9cab
+        Type: PropertyType
+        DataType: StatusCode
+        AccessLevel: Read
+      - Name: DynamicLink
+        Id: g=de690f62f5fd4f2aa51b99caf821a313
+        Type: DynamicLink
+        DataType: NodePath
+        Value: "../../../../Model/Internal/Shift Report Variables/Items Bad"
+        Children:
+        - Name: Mode
+          Id: g=02047398bd760273d34700fb092a4729
+          Type: BaseVariableType
+          DataType: DynamicLinkMode
+          Value: 2
+    - Name: Machine Run Time
+      Id: g=829f8814214c9a42306ead01a65f8300
+      Type: VariableToLog
+      DataType: BaseDataType
+      Children:
+      - Name: LastValue
+        Id: g=177b82cbcee93942798646d728d07c76
+        Type: PropertyType
+        DataType: BaseDataType
+        AccessLevel: Read
+      - Name: Timestamp
+        Id: g=d815b8156d8145e0743a3a85969f93ce
+        Type: PropertyType
+        DataType: UtcTime
+        AccessLevel: Read
+      - Name: LastOperationCode
+        Id: g=71e5e511d0b6ae4dfa33f38e51edb9dd
+        Type: PropertyType
+        DataType: StatusCode
+        AccessLevel: Read
+      - Name: DynamicLink
+        Id: g=9eda3687629b1f846cba9e892734de7e
+        Type: DynamicLink
+        DataType: NodePath
+        Value: "../../../../Model/Internal/Shift Report Variables/Machine Run Time"
+        Children:
+        - Name: Mode
+          Id: g=f3359c465baef0de5b2d9ed8ec65c1e3
+          Type: BaseVariableType
+          DataType: DynamicLinkMode
+          Value: 2
+    - Name: Outside Stop Time
+      Id: g=9dfee3f406eb8d7938d64b514bf83f05
+      Type: VariableToLog
+      DataType: BaseDataType
+      Children:
+      - Name: LastValue
+        Id: g=2df7339746b4c447a84fa78516661590
+        Type: PropertyType
+        DataType: BaseDataType
+        AccessLevel: Read
+      - Name: Timestamp
+        Id: g=aab3f0b7b94dde799ab75e616bd107ad
+        Type: PropertyType
+        DataType: UtcTime
+        AccessLevel: Read
+      - Name: LastOperationCode
+        Id: g=22cfaeae2a7c1f145b8a1f3544928880
+        Type: PropertyType
+        DataType: StatusCode
+        AccessLevel: Read
+      - Name: DynamicLink
+        Id: g=b19a7f910d5f60dfd7102b859f772629
+        Type: DynamicLink
+        DataType: NodePath
+        Value: "../../../../Model/Internal/Shift Report Variables/Outside Stop Time"
+        Children:
+        - Name: Mode
+          Id: g=aba918725abde451a30ae528b2b14a06
+          Type: BaseVariableType
+          DataType: DynamicLinkMode
+          Value: 2
+    - Name: Operator Stop Time
+      Id: g=e1635055052de120161c35631a3a03e2
+      Type: VariableToLog
+      DataType: BaseDataType
+      Children:
+      - Name: LastValue
+        Id: g=2b796b7d40ad90e664d61419e9066104
+        Type: PropertyType
+        DataType: BaseDataType
+        AccessLevel: Read
+      - Name: Timestamp
+        Id: g=b9e028eac8be68fe539350ca6d7565ac
+        Type: PropertyType
+        DataType: UtcTime
+        AccessLevel: Read
+      - Name: LastOperationCode
+        Id: g=8cc72f9aab063aede6e4de4190ce2b28
+        Type: PropertyType
+        DataType: StatusCode
+        AccessLevel: Read
+      - Name: DynamicLink
+        Id: g=35d347da1308722feba202c40091b752
+        Type: DynamicLink
+        DataType: NodePath
+        Value: "../../../../Model/Internal/Shift Report Variables/Operator Stop Time"
+        Children:
+        - Name: Mode
+          Id: g=f68db16232dddd41bbe9961236f7b63f
+          Type: BaseVariableType
+          DataType: DynamicLinkMode
+          Value: 2
+    - Name: Alarm Stop Time
+      Id: g=467ef915f62e5b8e639103bd0d57ce6d
+      Type: VariableToLog
+      DataType: BaseDataType
+      Children:
+      - Name: LastValue
+        Id: g=9142c32139b80614d16c6989aee95c48
+        Type: PropertyType
+        DataType: BaseDataType
+        AccessLevel: Read
+      - Name: Timestamp
+        Id: g=450f6061211123db860e4ef57cd1ce56
+        Type: PropertyType
+        DataType: UtcTime
+        AccessLevel: Read
+      - Name: LastOperationCode
+        Id: g=e017799df79ada3326e8ac29cc1ebd11
+        Type: PropertyType
+        DataType: StatusCode
+        AccessLevel: Read
+      - Name: DynamicLink
+        Id: g=7834c8249fbb6ac6f2f0b5e52ebc8193
+        Type: DynamicLink
+        DataType: NodePath
+        Value: "../../../../Model/Internal/Shift Report Variables/Alarm Stop Time"
+        Children:
+        - Name: Mode
+          Id: g=514cfefc899258304a2ff8d126a3d347
+          Type: BaseVariableType
+          DataType: DynamicLinkMode
+          Value: 2
+  - Class: Reference
+    Target: ns=13;i=21
+    Direction: Forward
+  - Name: LogLocalTime
+    Id: g=13212643a12ea6de31a2e98affc86f28
+    Type: PropertyType
+    DataType: Boolean
+    Value: true
+  - Name: PollingPeriod
+    Id: g=f89fa708d2f2e0ca000a1f7277a43832
+    Type: PropertyType
+    DataType: Duration
+    Value: "0:00:00:01.0000000"
+- Name: VariablesToMonitor
+  Id: g=23a39537d17b058ff831284289c3ac63
+  Type: DataLogger
+  Children:
+  - Name: SamplingMode
+    Id: g=27bc41e3514958282b86fb52a45318b3
+    Type: PropertyType
+    DataType: SamplingModeEnum
+    Value: 2
+  - Name: Store
+    Id: g=f6c3cda8deb8ab469143fbce11d6a905
+    Type: NodePointer
+    DataType: NodeId
+    Value: "/Objects/OptimateDemoProject/DataStores/VariablesToMonitor"
+    Children:
+    - Name: Kind
+      Id: g=52784dfad293d6e93d43c7a4766307f0
+      Type: PropertyType
+      DataType: NodeId
+      Value: "/Types/ObjectTypes/BaseObjectType/Store"
+  - Name: VariablesToLog
+    Id: g=c1ec58acde4719d79d11dfa58a483271
+    Type: BaseObjectType
+    Children:
+    - Name: CounterNumber1
+      Id: g=4e55144dcf1dc255e32e04ae651a1bf0
+      Type: VariableToLog
+      DataType: BaseDataType
+      Children:
+      - Name: LastValue
+        Id: g=f738ae46855b6f8034b5f1fadc11e72f
+        Type: PropertyType
+        DataType: BaseDataType
+        AccessLevel: Read
+      - Name: Timestamp
+        Id: g=bca1bbfd79659e693cb16bc6e13bfbe1
+        Type: PropertyType
+        DataType: UtcTime
+        AccessLevel: Read
+      - Name: LastOperationCode
+        Id: g=6edf90866817a4c03df4886aaa60ab18
+        Type: PropertyType
+        DataType: StatusCode
+        AccessLevel: Read
+      - Name: DynamicLink
+        Id: g=bdb77a1fc2a6432019d348d6b4f6f7b2
+        Type: DynamicLink
+        DataType: NodePath
+        Value: "../../../../Model/Custom Datatypes/DigitalFeedbackCounter1/CounterNumber"
+        Children:
+        - Name: Mode
+          Id: g=3bf9b9688de5673f7fb6862e05065a26
+          Type: BaseVariableType
+          DataType: DynamicLinkMode
+          Value: 2
+    - Name: CounterNumber2
+      Id: g=3349e63e7e30c3105f637e8e10447027
+      Type: VariableToLog
+      DataType: BaseDataType
+      Children:
+      - Name: LastValue
+        Id: g=e9982201e0a6c582dafa2834309e01a8
+        Type: PropertyType
+        DataType: BaseDataType
+        AccessLevel: Read
+      - Name: Timestamp
+        Id: g=4a3f7a3059b12e058317d10b6fafa574
+        Type: PropertyType
+        DataType: UtcTime
+        AccessLevel: Read
+      - Name: LastOperationCode
+        Id: g=5bbf249ef705b2ecf476ac3bbb80d4bf
+        Type: PropertyType
+        DataType: StatusCode
+        AccessLevel: Read
+      - Name: DynamicLink
+        Id: g=d313b7a5fc8748e283b191fb17d6abf3
+        Type: DynamicLink
+        DataType: NodePath
+        Value: "../../../../Model/Custom Datatypes/DigitalFeedbackCounter2/CounterNumber"
+        Children:
+        - Name: Mode
+          Id: g=e999fe839ef486da61585a09b0e8a669
+          Type: BaseVariableType
+          DataType: DynamicLinkMode
+          Value: 2
+    - Name: CounterNumber3
+      Id: g=d0655414ed085e4feac21787a90092a6
+      Type: VariableToLog
+      DataType: BaseDataType
+      Children:
+      - Name: LastValue
+        Id: g=374cdb4ed5588cfd90e935a3cc64f33a
+        Type: PropertyType
+        DataType: BaseDataType
+        AccessLevel: Read
+      - Name: Timestamp
+        Id: g=22753f7443584eafd1385570927a7a76
+        Type: PropertyType
+        DataType: UtcTime
+        AccessLevel: Read
+      - Name: LastOperationCode
+        Id: g=93238a0ee4bbff03898525769110b299
+        Type: PropertyType
+        DataType: StatusCode
+        AccessLevel: Read
+      - Name: DynamicLink
+        Id: g=e82174ab38e8761f0ecfc1152ebc3f4b
+        Type: DynamicLink
+        DataType: NodePath
+        Value: "../../../../Model/Custom Datatypes/DigitalFeedbackCounter3/CounterNumber"
+        Children:
+        - Name: Mode
+          Id: g=fed4a37fe55d5fd2bbfc718a5a97fac6
+          Type: BaseVariableType
+          DataType: DynamicLinkMode
+          Value: 2
+  - Class: Reference
+    Target: ns=13;i=21
+    Direction: Forward
+  - Name: LogLocalTime
+    Id: g=2fd89e666b024ac993969e01777a80f8
+    Type: PropertyType
+    DataType: Boolean
+    Value: true
+  - Name: PollingPeriod
+    Id: g=e4306fb56bb9246952c64e1ca8124873
+    Type: PropertyType
+    DataType: Duration
+    Value: "0:00:00:01.0000000"
+  - Name: LogVariableOperationCode
+    Id: g=9ccfa413c5052b86c156a4d89c6602ff
+    Type: PropertyType
+    DataType: Boolean
+    Value: true
+  - Name: LogVariableTimestamp
+    Id: g=af220268358f0c481816870ca622f3aa
+    Type: PropertyType
+    DataType: Boolean
+    Value: true

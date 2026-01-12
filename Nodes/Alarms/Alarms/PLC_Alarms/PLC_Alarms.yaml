@@ -1,0 +1,230 @@
+Name: PLC Alarms
+Id: g=10e0ccda43769ba125b455ce2c380e46
+Type: FolderType
+Children:
+- Name: OI_Stop_Test
+  Id: g=1d9e364aac1818ebaf688b41876bd769
+  Type: OffNormalAlarmController
+  Children:
+  - Name: NormalStateValue
+    Id: g=18f2dba26f182c1fabb25cec0892ae27
+    Type: BaseDataVariableType
+    DataType: Double
+  - Name: InputValue
+    Id: g=f73293ae24afad25d5b53d3f0067e062
+    Type: BaseDataVariableType
+    DataType: Double
+    Children:
+    - Name: DynamicLink
+      Id: g=f22b942f73e645298586e24b5a3a3b86
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "../../../../../CommDrivers/Rockwell/Impact/Tags/Controller Tags/OI_Stop[0].0"
+      Children:
+      - Name: Mode
+        Id: g=2d4578a7f400fa51e0c6cc1cedd455ae
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        Value: 2
+  - Name: LastEvent
+    Id: g=65795171b8e10ccdb2f1fe11819575fc
+    Type: BaseDataVariableType
+    DataType: BaseDataType
+    ValueRank: OneDimension
+    ArrayDimensions: [0]
+  - Class: Reference
+    Target: ns=25;i=81
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=82
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=83
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=130
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=135
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=132
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=146
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=148
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=150
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=152
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=154
+    Direction: Forward
+  - Name: AutoAcknowledge
+    Id: g=5e95837fe3044d3a0c195c18833641cf
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Value: true
+  - Name: AutoConfirm
+    Id: g=7896d0c46ad7dd14fe589619769056c6
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Value: true
+  - Name: Severity
+    Id: g=50ab0790e40efe36ef3663b6fde1da3b
+    Type: BaseDataVariableType
+    DataType: UInt16
+    Value: 1000
+  - Name: Message
+    Id: g=2deb97ca6b1b028ba773f6dfda52dc09
+    Type: BaseDataVariableType
+    DataType: LocalizedText
+    Value: {"LocaleId":"en-US","Text":"TestAlarm1"}
+    Children:
+    - Name: DynamicLink
+      Id: g=cc9d4bdd12e500a10ff8add1f2e4e13a
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "../../../../../CommDrivers/Rockwell/Impact/Tags/Controller Tags/OI_Stop/0/0/Description"
+      Children:
+      - Name: IsPull
+        Id: g=f2bbdd840699ef9ede582c9653daedff
+        Type: BaseVariableType
+        DataType: Boolean
+        Value: true
+  - Name: MaxTimeShelved
+    Id: g=9ecc76043399f70b61a92aef6fac0f2c
+    Type: BaseDataVariableType
+    DataType: Duration
+  - Name: PresetTimeShelved
+    Id: g=78f247184bf701b76aa8a64259f3481b
+    Type: BaseDataVariableType
+    DataType: Duration
+  - Name: LatchingEnabled
+    Id: g=dcbacaae6ebe76daaf03e80bfc074b37
+    Type: BaseDataVariableType
+    DataType: Boolean
+- Name: PackML_Test
+  Id: g=c044f52f0164e3b7ef9154d553f6d24e
+  Type: OffNormalAlarmController
+  Children:
+  - Name: NormalStateValue
+    Id: g=40d7e325f973350de426d0fbaa5b1675
+    Type: BaseDataVariableType
+    DataType: Double
+  - Name: InputValue
+    Id: g=21055555ce6a459a322e40513936392e
+    Type: BaseDataVariableType
+    DataType: Double
+    Children:
+    - Name: DynamicLink
+      Id: g=b3cd2510dc4b26d41e277faad3675bb8
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "../../../../../CommDrivers/Rockwell/Essity/Tags/Controller Tags/AlarmCfg/0/Value"
+      Children:
+      - Name: Mode
+        Id: g=ae5fa9a779d4defbe96b73b39c98cf11
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        Value: 2
+  - Name: LastEvent
+    Id: g=0b50443d8ab795609290cb1a0ba36c0b
+    Type: BaseDataVariableType
+    DataType: BaseDataType
+    ValueRank: OneDimension
+    ArrayDimensions: [0]
+  - Class: Reference
+    Target: ns=25;i=81
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=82
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=83
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=130
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=135
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=132
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=146
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=148
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=150
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=152
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=154
+    Direction: Forward
+  - Name: AutoAcknowledge
+    Id: g=0adbb382f88f630d9221627af9d54a9b
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Value: true
+  - Name: AutoConfirm
+    Id: g=95e410e5f932ee5e25ab6707c34c4a57
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Value: true
+  - Name: Severity
+    Id: g=83ecc57edc0ba52cb8626b2a48e8b189
+    Type: BaseDataVariableType
+    DataType: UInt16
+    Value: 1000
+    Children:
+    - Name: DynamicLink
+      Id: g=da28bdb696c1c6f689e64480cea372e7
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "../../../../../CommDrivers/Rockwell/Essity/Tags/Controller Tags/AlarmCfg/0/Category"
+      Children:
+      - Name: Mode
+        Id: g=6129a69566f52cd1be447189ae5a9228
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        Value: 2
+  - Name: Message
+    Id: g=5e681262f3606b06dfb614e8f9ac1a7b
+    Type: BaseDataVariableType
+    DataType: LocalizedText
+    Value: {"LocaleId":"en-US","Text":"TestAlarm1"}
+    Children:
+    - Name: DynamicLink
+      Id: g=90607784b94f2dc5f7e5073b43a89651
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "../../../../../CommDrivers/Rockwell/Essity/Tags/Controller Tags/AlarmCfg/0/Message[0]"
+      Children:
+      - Name: IsPull
+        Id: g=e0ae4de61cbe7a932cc9539368288afb
+        Type: BaseVariableType
+        DataType: Boolean
+        Value: true
+  - Name: MaxTimeShelved
+    Id: g=27fc1ab270bcd62fad2d2bcc3c305df7
+    Type: BaseDataVariableType
+    DataType: Duration
+  - Name: PresetTimeShelved
+    Id: g=b5b65f43eb9f26355a899d57dde2f99a
+    Type: BaseDataVariableType
+    DataType: Duration
+  - Name: LatchingEnabled
+    Id: g=d07fb3805258274e3ec52f2ccdfb08b8
+    Type: BaseDataVariableType
+    DataType: Boolean

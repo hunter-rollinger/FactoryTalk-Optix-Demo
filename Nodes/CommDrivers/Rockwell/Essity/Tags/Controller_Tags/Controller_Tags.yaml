@@ -1,0 +1,102 @@
+Name: Controller Tags
+Id: g=f313b41aa40c207390c0341c90af4030
+Type: FolderType
+Children:
+- Name: AlarmCfg
+  Id: g=9182389b3b6930b1c627d89c412fd886
+  Type: UDT_EventCfg
+  DataType: UDT_EventCfg
+  ValueRank: OneDimension
+  ArrayDimensions: [300]
+  Children:
+  - Name: 0
+    Id: g=bffbe485e05d051e8f1a8827bdc649a1
+    Type: UDT_EventCfg
+    DataType: UDT_EventCfg
+    Children:
+    - Name: ID
+      Id: g=332e91caaababd6d78c6feefdda2010f
+      Type: RAEtherNetIPTag
+      DataType: Int32
+      Children:
+      - Name: SymbolName
+        Id: g=2e0d8dd7b428be40a22422413c27ae2c
+        Type: BaseDataVariableType
+        DataType: String
+        Value: "AlarmCfg[0].ID"
+      - Name: Description
+        Id: g=67a57b0cf7ac1ea7b68671950a415f8a
+        Type: RAEtherNetIPMetaTag
+        DataType: String
+        Value: "ID"
+        Children:
+        - Name: SymbolName
+          Id: g=a8913355fc1256f6bf28c01ef887d1be
+          Type: BaseDataVariableType
+          DataType: String
+          Value: "AlarmCfg[0].ID.@Description"
+    - Name: Value
+      Id: g=e2a7040afe52d69e70526e8317e3e7f3
+      Type: RAEtherNetIPTag
+      DataType: Int32
+      Children:
+      - Name: SymbolName
+        Id: g=7bc38937f5cd1e40ad0f4c848eea28a9
+        Type: BaseDataVariableType
+        DataType: String
+        Value: "AlarmCfg[0].Value"
+      - Name: Description
+        Id: g=72c17fbc95e0f5b1d50cd9ed70a6bed5
+        Type: RAEtherNetIPMetaTag
+        DataType: String
+        Value: "Value"
+        Children:
+        - Name: SymbolName
+          Id: g=83c1ef7d8551629633600d0ca9f5a51c
+          Type: BaseDataVariableType
+          DataType: String
+          Value: "AlarmCfg[0].Value.@Description"
+    - Name: Message
+      Id: g=91c6a1e549fd738f6c639992c3786d2e
+      Type: RAEtherNetIPTag
+      DataType: String
+      ValueRank: OneDimension
+      ArrayDimensions: [2]
+      Children:
+      - Name: SymbolName
+        Id: g=1547dacd439f76f6e727703abf8d65a7
+        Type: BaseDataVariableType
+        DataType: String
+        Value: "AlarmCfg[0].Message"
+      - Name: Description
+        Id: g=312d92d9d4c25452a49cac82d51e40ca
+        Type: RAEtherNetIPMetaTag
+        DataType: String
+        Value: "Message"
+        Children:
+        - Name: SymbolName
+          Id: g=4c0b07ca4adbb2581a52e16258da8553
+          Type: BaseDataVariableType
+          DataType: String
+          Value: "AlarmCfg[0].Message.@Description"
+    - Name: Category
+      Id: g=f27508d621311707ff6266f45f129481
+      Type: RAEtherNetIPTag
+      DataType: Int32
+      Children:
+      - Name: SymbolName
+        Id: g=3cd48735f1a0655f27054693ac8e9081
+        Type: BaseDataVariableType
+        DataType: String
+        Value: "AlarmCfg[0].Category"
+      - Name: Description
+        Id: g=a2c34ef85e2cf541a46c4b2ce5dc4cc4
+        Type: RAEtherNetIPMetaTag
+        DataType: String
+        Value: "Category"
+        Children:
+        - Name: SymbolName
+          Id: g=356f0665c8f5f05370ede9eeb64a1f59
+          Type: BaseDataVariableType
+          DataType: String
+          Value: "AlarmCfg[0].Category.@Description"

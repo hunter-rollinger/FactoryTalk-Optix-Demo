@@ -1,0 +1,40 @@
+Name: Groups
+Id: g=33ac98afcbbcd645bc8146197074cc43
+Type: GroupsCategoryFolder
+Children:
+- Name: Operators
+  Id: g=86a3839baefd630d8c4dbec8acd149f1
+  Type: GroupType
+  DisplayName: {"NamespaceIndex":36,"TextId":"Operator"}
+  Description: {"NamespaceIndex":36,"TextId":"Machine Operator"}
+  Children:
+  - Class: Reference
+    Type: HasRole
+    Target: g=2a6734f56d95341c0016f564b164feee
+- Name: Maintenance
+  Id: g=24d27a5dd435e9d3030f7b0a96bb94ba
+  Type: GroupType
+  DisplayName: {"NamespaceIndex":36,"TextId":"Maintenance"}
+  Description: {"NamespaceIndex":36,"TextId":"Maintenance Technician"}
+  Children:
+  - Class: Reference
+    Type: HasRole
+    Target: g=cfd5c78595304bf3c8a351b3de4eedba
+- Name: Administrators
+  Id: g=69e555e0b6b29faf0175b1e27868622a
+  Type: GroupType
+  DisplayName: {"NamespaceIndex":36,"TextId":"Administrator"}
+  Description: {"NamespaceIndex":36,"TextId":"Administrator"}
+  Children:
+  - Class: Reference
+    Type: HasRole
+    Target: g=9b9c964b82ffd32df20685ed526b6e4a
+- Name: Jones
+  Id: g=97f937d1ac14d630d65d5abe89582f10
+  Type: GroupType
+  DisplayName: {"NamespaceIndex":36,"TextId":"Jones"}
+  Description: {"NamespaceIndex":36,"TextId":"R.A Jones Employee"}
+  Children:
+  - Class: Reference
+    Type: HasRole
+    Target: g=eeb625bfbd66a7c72514c879fa201b2f

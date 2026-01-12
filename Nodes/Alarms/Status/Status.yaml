@@ -1,0 +1,93 @@
+Name: Status
+Id: g=e76f7933d686ebdf063ea9d594d44dcf
+Type: FolderType
+Children:
+- Name: Status1
+  Id: g=c8848f42aeaf4684906a4d8ffeedb0a8
+  Type: OffNormalAlarmController
+  Children:
+  - Name: NormalStateValue
+    Id: g=8fc342140abac83f311c7f83ba35bd66
+    Type: BaseDataVariableType
+    DataType: Double
+  - Name: InputValue
+    Id: g=95041784060de656e94ee1fdbb08da70
+    Type: BaseDataVariableType
+    DataType: Double
+    Children:
+    - Name: DynamicLink
+      Id: g=ca4f96e7245d478bb7dd61e9649af3e3
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "/Objects/OptimateDemoProject/Model/Testing/TestStatus1"
+  - Name: LastEvent
+    Id: g=a57896d92810cf138ebb4e27ac7f4e9b
+    Type: BaseDataVariableType
+    DataType: BaseDataType
+    ValueRank: OneDimension
+    ArrayDimensions: [0]
+  - Class: Reference
+    Target: ns=25;i=81
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=82
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=83
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=130
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=135
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=132
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=146
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=148
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=150
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=152
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=154
+    Direction: Forward
+  - Name: AutoAcknowledge
+    Id: g=a6763e28575ab9de4913b1ec62c6fa4d
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Value: true
+  - Name: AutoConfirm
+    Id: g=6efae337a2c9aeff97ac1d8809703e91
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Value: true
+  - Name: Severity
+    Id: g=f8d570aac2e999c5d48f0e744395bab4
+    Type: BaseDataVariableType
+    DataType: UInt16
+    Value: 10
+  - Name: Message
+    Id: g=5b0700f6253ba9799dca33bd092d781f
+    Type: BaseDataVariableType
+    DataType: LocalizedText
+    Value: {"LocaleId":"en-US","Text":"TestStatus1"}
+  - Name: MaxTimeShelved
+    Id: g=e73bfaf59e84ad409400973fe8742971
+    Type: BaseDataVariableType
+    DataType: Duration
+  - Name: PresetTimeShelved
+    Id: g=32c7457e8172248b5bf127098fa94a4f
+    Type: BaseDataVariableType
+    DataType: Duration
+  - Name: LatchingEnabled
+    Id: g=af889b904ab50569cf74e47754fd70b6
+    Type: BaseDataVariableType
+    DataType: Boolean

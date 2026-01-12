@@ -1,0 +1,203 @@
+Name: Basic keys
+Id: g=6cfd0100e37657e85c8498ce396f6b05
+Type: FolderType
+Children:
+- Name: BasicTextButton
+  Id: g=476258d414b27f90d6dd4bf7c8b37129
+  Supertype: VirtualKeyboardTextButton
+  ReferenceType: HasComponent
+  Children:
+  - Name: Width
+    Id: g=3ef6243ae2101ffcc871738804830d2b
+    Type: BaseVariableType
+    DataType: Size
+    ModellingRule: Optional
+    Value: 60.0
+  - Name: Height
+    Id: g=ae1b6dc41218f738ca1db8176abfd407
+    Type: BaseVariableType
+    DataType: Size
+    ModellingRule: Optional
+    Value: 60.0
+  - Name: Style
+    Id: g=31ed3d60a4e2255904cccf545d5be678
+    Type: BaseDataVariableType
+    DataType: String
+    ModellingRule: Optional
+    Value: "KeyboardButton"
+  - Name: FontSize
+    Id: g=124b63728e21d45ea271df75a34eac26
+    Type: BaseDataVariableType
+    DataType: Size
+    ModellingRule: Optional
+    Value: 20.0
+  - Name: FontItalic
+    Id: g=003ada6a7a87eb65230368c666204f45
+    Type: BaseDataVariableType
+    DataType: Boolean
+    ModellingRule: Optional
+- Name: BasicSymbolHorizontalButton
+  Id: g=b1abb62c23e1a3ad51c9fa4612b5cfb8
+  Supertype: VirtualKeyboardSymbolButton
+  ReferenceType: HasComponent
+  Children:
+  - Name: Width
+    Id: g=0c7aa1cd0d11913e9d467fef27befd1b
+    Type: BaseVariableType
+    DataType: Size
+    ModellingRule: Optional
+    Value: 100.0
+  - Name: Height
+    Id: g=6135bbcb0ede3f1d0db4766d298ce259
+    Type: BaseVariableType
+    DataType: Size
+    ModellingRule: Optional
+    Value: 60.0
+  - Name: ImageWidth
+    Id: g=e3cbff2ddf7bc660fe21c30ae8626524
+    Type: BaseDataVariableType
+    DataType: Size
+    ModellingRule: Optional
+    Value: 24.0
+  - Name: Style
+    Id: g=ca9b38a816c2f014064da9220192d10f
+    Type: BaseDataVariableType
+    DataType: String
+    ModellingRule: Optional
+    Value: "KeyboardButton"
+  - Name: FontSize
+    Id: g=fbcbda12baa261381902562f4fbd6f29
+    Type: BaseDataVariableType
+    DataType: Size
+    ModellingRule: Optional
+    Value: 20.0
+- Name: BasicSymbolVerticalButton
+  Id: g=450e1e9381613f4b71607ddf16020ebb
+  Supertype: VirtualKeyboardSymbolButton
+  ReferenceType: HasComponent
+  Children:
+  - Name: Width
+    Id: g=79c7a8c6e65506736328571d0811c904
+    Type: BaseVariableType
+    DataType: Size
+    ModellingRule: Optional
+    Value: 50.0
+  - Name: Height
+    Id: g=9091cb758c44ad35d2de387a31cba51f
+    Type: BaseVariableType
+    DataType: Size
+    ModellingRule: Optional
+    Value: 90.0
+  - Name: ImageWidth
+    Id: g=31bc338b78f6fd9ae45d45174c33b31b
+    Type: BaseDataVariableType
+    DataType: Size
+    ModellingRule: Optional
+    Value: 24.0
+  - Name: Symbol
+    Id: g=da724a847784e7b467f5b22ae79d0cd9
+    Type: BaseDataVariableType
+    DataType: VirtualKeyboardKeySymbolEnum
+    ModellingRule: Optional
+  - Name: Style
+    Id: g=99c6b1257b8cce027902e7cb14991ae6
+    Type: BaseDataVariableType
+    DataType: String
+    ModellingRule: Optional
+    Value: "KeyboardButton"
+  - Name: FontSize
+    Id: g=40babf0c1ab2652bbbb3566e699c3dcf
+    Type: BaseDataVariableType
+    DataType: Size
+    ModellingRule: Optional
+    Value: 20.0
+- Name: BasicSpaceButton
+  Id: g=0642b30a582e14c745079c727f361ad1
+  Supertype: VirtualKeyboardSymbolButton
+  ReferenceType: HasComponent
+  Children:
+  - Name: Width
+    Id: g=ca9537514aa2e79b38e6bc307d0001ac
+    Type: BaseVariableType
+    DataType: Size
+    ModellingRule: Optional
+    Value: 489.0
+  - Name: Height
+    Id: g=69746179f43643440c6a86e3aa45432e
+    Type: BaseVariableType
+    DataType: Size
+    ModellingRule: Optional
+    Value: 60.0
+  - Name: Symbol
+    Id: g=114cffb45145daab7ea5c6d3df7fe6c7
+    Type: BaseDataVariableType
+    DataType: VirtualKeyboardKeySymbolEnum
+    ModellingRule: Optional
+    Value: 8
+  - Name: Text
+    Id: g=30228c1591497a3d3cd21e8d49b11909
+    Type: BaseDataVariableType
+    DataType: LocalizedText
+  - Name: RightMargin
+    Id: g=26f7f9990a33772dcfe824b2c032e82b
+    Type: BaseVariableType
+    DataType: Size
+    ModellingRule: Optional
+  - Name: ImagePath
+    Id: g=67d98f369a0879c9b82bf5b3034fd223
+    Type: BaseDataVariableType
+    DataType: ResourceUri
+    ModellingRule: Optional
+    Value: "ns=36;%PROJECTDIR%/res/Space_Outline_24x.svg"
+  - Name: ImageWidth
+    Id: g=084fd549e8dc8b0d8c892dc50dfa4513
+    Type: BaseDataVariableType
+    DataType: Size
+    ModellingRule: Optional
+    Value: 24.0
+  - Name: Style
+    Id: g=df02ca9d1156371ff6adfd4bd83e53b4
+    Type: BaseDataVariableType
+    DataType: String
+    ModellingRule: Optional
+    Value: "KeyboardButton"
+  - Name: FontSize
+    Id: g=548a5a385a49fe5deba708ca660d18eb
+    Type: BaseDataVariableType
+    DataType: Size
+    ModellingRule: Optional
+    Value: 20.0
+- Name: BasicSwitchPushButton
+  Id: g=cf246b9bd07567ff4a53fa5a9a230801
+  Supertype: Button
+  ReferenceType: HasComponent
+  Children:
+  - Name: Height
+    Id: g=375b8d365fcc817aef7c4f14f44bba5a
+    Type: BaseVariableType
+    DataType: Size
+    ModellingRule: Optional
+    Value: 60.0
+  - Name: Visible
+    Id: g=71aa44280296bf2259ad3844419095ff
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Value: true
+  - Name: Width
+    Id: g=49f0a96fdbc86f1202925abca807b8ef
+    Type: BaseVariableType
+    DataType: Size
+    ModellingRule: Optional
+    Value: 80.0
+  - Name: Style
+    Id: g=8234dba9eb2811d725eb8079c6f83ecf
+    Type: BaseDataVariableType
+    DataType: String
+    ModellingRule: Optional
+    Value: "KeyboardButton"
+  - Name: FontSize
+    Id: g=13616c9b1e58b861adff3627ab5844bb
+    Type: BaseDataVariableType
+    DataType: Size
+    ModellingRule: Optional
+    Value: 20.0

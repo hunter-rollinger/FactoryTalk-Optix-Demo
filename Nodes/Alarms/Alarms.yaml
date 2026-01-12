@@ -1,0 +1,453 @@
+Name: Alarms
+Id: g=3293e7cd8de0bb06cc725e017a984470
+Type: AlarmsCategoryFolder
+Children:
+- File: Alarms/Alarms.yaml
+- File: Warnings/Warnings.yaml
+- File: Status/Status.yaml
+- File: Messages/Messages.yaml
+- Name: OptimateAlarm
+  Id: g=cad23cc01859ccdb433eb4694398e887
+  Supertype: OffNormalAlarmController
+  Children:
+  - Class: Reference
+    Target: ns=25;i=81
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=82
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=83
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=130
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=135
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=132
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=146
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=148
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=150
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=152
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=154
+    Direction: Forward
+  - Name: NormalStateValue
+    Id: g=2727ca522493d6f2e5934aea0c98d057
+    Type: BaseDataVariableType
+    DataType: Double
+  - Name: InputValue
+    Id: g=f3568b5c4c1a15da395985458110b7e0
+    Type: BaseDataVariableType
+    DataType: Double
+    Children:
+    - Name: DynamicLink
+      Id: g=ee0c7264c34444a027f78c7a0cc5c7c4
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "/Objects/OptimateDemoProject/Model/Internal/Placeholders/Placeholder_Value_BOOL"
+      Children:
+      - Name: Mode
+        Id: g=ca275d44fe7e4a9f0ca0c1c3872a29ce
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        ModellingRule: Optional
+        Value: 2
+  - Name: LastEvent
+    Id: g=78497cdaefaea72181efb7284a5c4606
+    Type: BaseDataVariableType
+    DataType: BaseDataType
+    ValueRank: OneDimension
+    ArrayDimensions: [0]
+  - Name: AutoAcknowledge
+    Id: g=ec7aede93252f0dfdc749aee77d73d6f
+    Type: BaseDataVariableType
+    DataType: Boolean
+    ModellingRule: Optional
+    Value: true
+  - Name: AutoConfirm
+    Id: g=32237f479e9f409323f7fa26548446f9
+    Type: BaseDataVariableType
+    DataType: Boolean
+    ModellingRule: Optional
+    Value: true
+  - Name: Severity
+    Id: g=984319730cf010894f6e8bc91bb0f847
+    Type: BaseDataVariableType
+    DataType: UInt16
+    ModellingRule: Optional
+    Value: 1000
+  - Name: Message
+    Id: g=216c989f6073e99113ab46cb19eef247
+    Type: BaseDataVariableType
+    DataType: LocalizedText
+    ModellingRule: Optional
+    Value: {"LocaleId":"en-US","Text":"PLACEHOLDER"}
+  - Name: PresetTimeShelved
+    Id: g=c622b333f1ae6ab4f75dc6d41bc498f0
+    Type: BaseDataVariableType
+    DataType: Duration
+    ModellingRule: Optional
+  - Name: LatchingEnabled
+    Id: g=a9d8194c36ab7b53ca259cc195d1d6ac
+    Type: BaseDataVariableType
+    DataType: Boolean
+    ModellingRule: Optional
+  - Class: Reference
+    Type: GeneratesEvent
+    Target: g=f0c80e232644cc79ed299e59a20ecd2d
+  - Name: Help_Text
+    Id: g=ab98bb47743efc61cc8bfeeec279ca51
+    Type: BaseDataVariableType
+    DataType: String
+  - Name: Aux_Text
+    Id: g=6fa816669c78d40cf09aea114beaef28
+    Type: BaseDataVariableType
+    DataType: String
+  - Name: Image
+    Id: g=d5d5af69abb4324e049df1703cb6ade3
+    Type: BaseDataVariableType
+    DataType: ResourceUri
+    Description: {"LocaleId":"en-US","Text":"Image Path"}
+  - Name: Overview
+    Id: g=2337c71007e312726d34b9c03153f532
+    Type: BaseDataVariableType
+    DataType: ResourceUri
+    Description: {"LocaleId":"en-US","Text":"Image Path"}
+  - Name: Timestamp
+    Id: g=f80ae271cda38e93beba410c9b8ed498
+    Type: BaseDataVariableType
+    DataType: DateTime
+- Name: OptimateWarning
+  Id: g=bb5928a79adae253341d86267f2f8c8d
+  Supertype: OffNormalAlarmController
+  Children:
+  - Class: Reference
+    Target: ns=25;i=81
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=82
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=83
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=130
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=135
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=132
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=146
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=148
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=150
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=152
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=154
+    Direction: Forward
+  - Name: NormalStateValue
+    Id: g=9f5b1d67262938dade4530e8927167df
+    Type: BaseDataVariableType
+    DataType: Double
+  - Name: InputValue
+    Id: g=24555b462915d9be1ecf3f0235d3b45b
+    Type: BaseDataVariableType
+    DataType: Double
+    Children:
+    - Name: DynamicLink
+      Id: g=ced4a45eefacd68d1d895b4d858bb5ee
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "/Objects/OptimateDemoProject/Model/Internal/Placeholders/Placeholder_Value_BOOL"
+      Children:
+      - Name: Mode
+        Id: g=f437ad4cb37257e709f239609d6b849d
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        ModellingRule: Optional
+        Value: 2
+  - Name: LastEvent
+    Id: g=9c49a73fc0857e1c52b818740cf0f23d
+    Type: BaseDataVariableType
+    DataType: BaseDataType
+    ValueRank: OneDimension
+    ArrayDimensions: [0]
+  - Name: AutoAcknowledge
+    Id: g=68f22bb682415c5c3f77fae2dd2f1a18
+    Type: BaseDataVariableType
+    DataType: Boolean
+    ModellingRule: Optional
+    Value: true
+  - Name: AutoConfirm
+    Id: g=eed2891c37dde6dca7c8e9e23948674a
+    Type: BaseDataVariableType
+    DataType: Boolean
+    ModellingRule: Optional
+    Value: true
+  - Name: Severity
+    Id: g=983b9a4a0e9c0ac31fb9c7873c894b8c
+    Type: BaseDataVariableType
+    DataType: UInt16
+    ModellingRule: Optional
+    Value: 100
+  - Name: Message
+    Id: g=8c7fa6bc24e8c193a864693df0d3ec37
+    Type: BaseDataVariableType
+    DataType: LocalizedText
+    ModellingRule: Optional
+    Value: {"LocaleId":"en-US","Text":"PLACEHOLDER"}
+  - Name: PresetTimeShelved
+    Id: g=20309e6ed9e068c04892011802727a7b
+    Type: BaseDataVariableType
+    DataType: Duration
+    ModellingRule: Optional
+  - Name: LatchingEnabled
+    Id: g=56d7e1382667b65ab797008c5b9b820e
+    Type: BaseDataVariableType
+    DataType: Boolean
+    ModellingRule: Optional
+  - Name: Help_Text
+    Id: g=4a066ea0d46ba503a622cf839aeff138
+    Type: BaseDataVariableType
+    DataType: String
+  - Name: Aux_Text
+    Id: g=7e0a9c51eaaa7fb79c590c0af8cf5e7f
+    Type: BaseDataVariableType
+    DataType: String
+  - Class: Reference
+    Type: GeneratesEvent
+    Target: g=6560a3da9e3d0eea7647fbb81060cba2
+- Name: OptimateStatus
+  Id: g=05e862619b891247738e0618931b3d0e
+  Supertype: OffNormalAlarmController
+  Children:
+  - Class: Reference
+    Target: ns=25;i=81
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=82
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=83
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=130
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=135
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=132
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=146
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=148
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=150
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=152
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=154
+    Direction: Forward
+  - Name: NormalStateValue
+    Id: g=cb3786db06d554bee1c2c81ece500fc2
+    Type: BaseDataVariableType
+    DataType: Double
+  - Name: InputValue
+    Id: g=1ddfb06b460a32082767da47ac9c1996
+    Type: BaseDataVariableType
+    DataType: Double
+    Children:
+    - Name: DynamicLink
+      Id: g=8efb07986796c4b9c08e1dfa136d92dd
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "/Objects/OptimateDemoProject/Model/Internal/Placeholders/Placeholder_Value_BOOL"
+      Children:
+      - Name: Mode
+        Id: g=e96ff4394e4a6824acf0bc2056caa1d2
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        ModellingRule: Optional
+        Value: 2
+  - Name: LastEvent
+    Id: g=11c33c388265bd12677a0d007a9ac631
+    Type: BaseDataVariableType
+    DataType: BaseDataType
+    ValueRank: OneDimension
+    ArrayDimensions: [0]
+  - Name: AutoAcknowledge
+    Id: g=44e4a0e74abf5122187ab6d744994a8b
+    Type: BaseDataVariableType
+    DataType: Boolean
+    ModellingRule: Optional
+    Value: true
+  - Name: AutoConfirm
+    Id: g=8dd7ae585c711646834d405c709b6a76
+    Type: BaseDataVariableType
+    DataType: Boolean
+    ModellingRule: Optional
+    Value: true
+  - Name: Severity
+    Id: g=9daa8f03a41fbc42d6b7809468cc18cf
+    Type: BaseDataVariableType
+    DataType: UInt16
+    ModellingRule: Optional
+    Value: 10
+  - Name: Message
+    Id: g=7f5f2dba82978d561a4182116f38177e
+    Type: BaseDataVariableType
+    DataType: LocalizedText
+    ModellingRule: Optional
+    Value: {"LocaleId":"en-US","Text":"PLACEHOLDER"}
+  - Name: PresetTimeShelved
+    Id: g=10b35fbd310ddcd60e53bb77052a9a73
+    Type: BaseDataVariableType
+    DataType: Duration
+    ModellingRule: Optional
+  - Name: LatchingEnabled
+    Id: g=75bbba4d660be9709530b1946781ce89
+    Type: BaseDataVariableType
+    DataType: Boolean
+    ModellingRule: Optional
+  - Name: Help_Text
+    Id: g=cfd6f735e5ab49ca845d37fee3912b15
+    Type: BaseDataVariableType
+    DataType: String
+  - Name: Aux_Text
+    Id: g=8ee7d7330cdd48cf2099f729393b6389
+    Type: BaseDataVariableType
+    DataType: String
+  - Class: Reference
+    Type: GeneratesEvent
+    Target: g=c2ca38a4c19da392aaa3d5751f2c6362
+- Name: OptimateMessage
+  Id: g=598895e89105a56f1d85c90d08f46a7b
+  Supertype: OffNormalAlarmController
+  Children:
+  - Class: Reference
+    Target: ns=25;i=81
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=82
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=83
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=130
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=135
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=132
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=146
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=148
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=150
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=152
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=154
+    Direction: Forward
+  - Name: NormalStateValue
+    Id: g=369e1bea2d1929e65fe121a690708a18
+    Type: BaseDataVariableType
+    DataType: Double
+  - Name: InputValue
+    Id: g=ac537be7e1f988774b12e704ef074ce0
+    Type: BaseDataVariableType
+    DataType: Double
+    Children:
+    - Name: DynamicLink
+      Id: g=e1a0f7f022d2f83703badb0083d6cbca
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "/Objects/OptimateDemoProject/Model/Internal/Placeholders/Placeholder_Value_BOOL"
+      Children:
+      - Name: Mode
+        Id: g=09fb5398345d583dc51452d7e086023a
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        ModellingRule: Optional
+        Value: 2
+  - Name: LastEvent
+    Id: g=33a8f959ad520eccd943e75329dc0b7a
+    Type: BaseDataVariableType
+    DataType: BaseDataType
+    ValueRank: OneDimension
+    ArrayDimensions: [0]
+  - Name: AutoAcknowledge
+    Id: g=b093eb68ea20de10834894701727d661
+    Type: BaseDataVariableType
+    DataType: Boolean
+    ModellingRule: Optional
+    Value: true
+  - Name: AutoConfirm
+    Id: g=dae69a87f561ff1fa32db4c207b5b06e
+    Type: BaseDataVariableType
+    DataType: Boolean
+    ModellingRule: Optional
+    Value: true
+  - Name: Severity
+    Id: g=784be84d755504b9f3d7e7d91900081c
+    Type: BaseDataVariableType
+    DataType: UInt16
+    ModellingRule: Optional
+    Value: 1
+  - Name: Message
+    Id: g=622682c83e1749f451943af5f03d96ef
+    Type: BaseDataVariableType
+    DataType: LocalizedText
+    ModellingRule: Optional
+    Value: {"LocaleId":"en-US","Text":"PLACEHOLDER"}
+  - Name: LatchingEnabled
+    Id: g=8d41194192517b251c6917703255eaa6
+    Type: BaseDataVariableType
+    DataType: Boolean
+    ModellingRule: Optional
+  - Name: Help_Text
+    Id: g=da4c4b61e72e9ccf4128aae20b36ef98
+    Type: BaseDataVariableType
+    DataType: String
+  - Name: Aux_Text
+    Id: g=25aaae19f7ea4264a73f693277308312
+    Type: BaseDataVariableType
+    DataType: String
+  - Class: Reference
+    Type: GeneratesEvent
+    Target: g=4a85c14492d2cdb01d3612a5412f1b98

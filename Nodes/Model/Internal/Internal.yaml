@@ -1,0 +1,36 @@
+Name: Internal
+Id: g=564c033f9ae9077aa6c2df05177ea39e
+Type: FolderType
+Children:
+- File: Current_Recipe/Current_Recipe.yaml
+- Name: Run Mode Speed
+  Id: g=ce62686f2a2fd6a1e5eb672ce85a13e3
+  Type: BaseDataVariableType
+  DataType: Int32
+  DisplayName: {"NamespaceIndex":36,"TextId":"Speed"}
+  Value: 50
+  Children:
+  - Name: ns=0;EURange
+    Id: g=6a1f22e837e85b5c486bec426a42158c
+    Type: RangeType
+    DataType: Range
+    Children:
+    - Name: Low
+      Id: g=38fc30634df241fff1b1f51892d578a0
+      Type: BaseDataVariableType
+      DataType: Double
+      Value: 10.0
+    - Name: High
+      Id: g=0b92510e5c9876cee07b918a3f0fceb8
+      Type: BaseDataVariableType
+      DataType: Double
+      Value: 400.0
+    - Name: Constrain
+      Id: g=c5d4e1d7e15be8eae855820ade69cf55
+      Type: BaseDataVariableType
+      DataType: Boolean
+      Value: true
+- File: Shift_Report_Variables/Shift_Report_Variables.yaml
+- File: Aliases_Pointers/Aliases_Pointers.yaml
+- File: Placeholders/Placeholders.yaml
+- File: Constants/Constants.yaml

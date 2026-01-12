@@ -1,0 +1,310 @@
+Name: Constants
+Id: g=185af50f7c3cce92ff5275ca6fa0ddb9
+Type: FolderType
+Children:
+- Name: Always_FALSE
+  Id: g=0abab9e54f08517682a84cd3686b9b7e
+  Type: BaseDataVariableType
+  DataType: Boolean
+- Name: Always_TRUE
+  Id: g=6127b388c275e1b6c63a8f7dc3cc4343
+  Type: BaseDataVariableType
+  DataType: Boolean
+  Value: true
+- Name: Always_FALSEChanged
+  Id: g=b48995dc55f87418a4de82e099e118dc
+  Type: VariableChangedEventDispatcher
+  Children:
+  - Name: VariableNodePath
+    Id: g=a8edf5abed54a138c473dfbc46da1f53
+    Type: BaseVariableType
+    DataType: NodePath
+    Value: "../Always_FALSE"
+  - Name: VariableValueChangedEventHandler1
+    Id: g=280826cf5550c12aab68611461b77749
+    Type: EventHandler
+    Children:
+    - Name: ListenEventType
+      Id: g=fd40ba87e53faa60c32aee521e87dcf3
+      Type: PropertyType
+      DataType: NodeId
+      Value: "/Types/EventTypes/BaseEventType/VariableConditionEvent/VariableValueChangedEvent"
+    - Name: MethodsToCall
+      Id: g=603efa5c0d7c72441dd90732115dceea
+      Type: BaseObjectType
+      Children:
+      - Name: MethodContainer1
+        Id: g=a24de6c2680d03c5d2fdba1992e04799
+        Type: BaseObjectType
+        Children:
+        - Name: ns=9;ObjectPointer
+          Id: g=264ecd36134c427701f526787d1e46d8
+          Type: NodePointer
+          DataType: NodeId
+          Children:
+          - Name: Kind
+            Id: g=03b882f33c3c53b065fdbbc721b65c42
+            Type: PropertyType
+            DataType: NodeId
+            Value: "/Types/ObjectTypes/BaseObjectType"
+          - Name: DynamicLink
+            Id: g=b2af637f30b2b76fe692af836f9ee466
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "../../../../../../../../../Commands/VariableCommands@NodeId"
+            Children:
+            - Name: Mode
+              Id: g=7c0ffb33576d9350b6c5aa2c882a423f
+              Type: BaseVariableType
+              DataType: DynamicLinkMode
+              Value: 2
+        - Name: ns=9;Method
+          Id: g=fcc18078e33fa171d988aa76498331f4
+          Type: BaseDataVariableType
+          DataType: String
+          Value: "Set"
+        - Name: InputArguments
+          Id: g=628218e61ad280a75d26ff060b597e0b
+          Type: BaseObjectType
+          Children:
+          - Name: VariableToModify
+            Id: g=6b839d821d039a416cfecd22161ceaf3
+            Type: BaseDataVariableType
+            DataType: VariablePointer
+            Description: {"NamespaceIndex":9,"TextId":"SetVariableToModifyDescription"}
+            Value: "/Objects/OptimateDemoProject/Model/Internal/Constants/Always_FALSE"
+          - Name: Value
+            Id: g=d6e32aafc8047ab52257f837f51e1170
+            Type: BaseDataVariableType
+            DataType: Boolean
+            Description: {"NamespaceIndex":9,"TextId":"SetValueDescription"}
+          - Name: ArrayIndex
+            Id: g=7c32ed03f2be48fb63c4291d8a6280f5
+            Type: BaseDataVariableType
+            DataType: UInt32
+            Description: {"NamespaceIndex":9,"TextId":"SetArrayIndexDescription"}
+            ValueRank: ScalarOrOneDimension
+    - Name: EventArguments
+      Id: g=aa23d0e0725716ca66e96823704e5c86
+      Type: VariableValueChangedEvent
+      Children:
+      - Name: VariableNodeId
+        Id: g=097761b38c502e6dad956f220a5b8116
+        Type: BaseVariableType
+        DataType: NodeId
+      - Name: NewValue
+        Id: g=9ffb8d861f49cdf22bb134fc949d9a23
+        Type: BaseVariableType
+        DataType: BaseDataType
+      - Name: OldValue
+        Id: g=ff3e6b85bac7459cc59a76e221dce52d
+        Type: BaseVariableType
+        DataType: BaseDataType
+      - Name: EventId
+        Id: g=8c1074ca2c8c85dfdf404b3e17bd12f7
+        Type: PropertyType
+        DataType: ByteString
+      - Name: EventType
+        Id: g=5bd06ba586b9792ed79faa63a69f60a5
+        Type: PropertyType
+        DataType: NodeId
+      - Name: SourceNode
+        Id: g=349cd4d06b145064033474070f95899b
+        Type: PropertyType
+        DataType: NodeId
+      - Name: SourceName
+        Id: g=8c9ef8adf575f080a077bb2c874983de
+        Type: PropertyType
+        DataType: String
+      - Name: Time
+        Id: g=c9b82d5b1da3ac2dea5a6248142790d2
+        Type: PropertyType
+        DataType: UtcTime
+      - Name: ReceiveTime
+        Id: g=63952a6cec120a44427e343ff664e7dc
+        Type: PropertyType
+        DataType: UtcTime
+      - Name: Message
+        Id: g=859a77efa2a9813f3117af370958f645
+        Type: PropertyType
+        DataType: LocalizedText
+      - Name: Severity
+        Id: g=6b04691d9f85836a44b2915d758eb13a
+        Type: PropertyType
+        DataType: UInt16
+- Name: Always_TRUEChanged
+  Id: g=6c7c9820baf6ece4ed631d5f636c3987
+  Type: VariableChangedEventDispatcher
+  Children:
+  - Name: VariableNodePath
+    Id: g=4058ef8c1bc6a75eb57dd4079b4b929b
+    Type: BaseVariableType
+    DataType: NodePath
+    Value: "../Always_TRUE"
+  - Name: VariableValueChangedEventHandler1
+    Id: g=c2095f6a122b67996fc7cd632f24e8b1
+    Type: EventHandler
+    Children:
+    - Name: ListenEventType
+      Id: g=fd2b120dd9d372afb5482c1ca50cbffd
+      Type: PropertyType
+      DataType: NodeId
+      Value: "/Types/EventTypes/BaseEventType/VariableConditionEvent/VariableValueChangedEvent"
+    - Name: MethodsToCall
+      Id: g=3c5cb9921763e1264d41748079ff6bfb
+      Type: BaseObjectType
+      Children:
+      - Name: MethodContainer1
+        Id: g=10a0b2a222d873f4d76a2ff84033b171
+        Type: BaseObjectType
+        Children:
+        - Name: ns=9;ObjectPointer
+          Id: g=9784650d1bd9576b324d5227184e1e23
+          Type: NodePointer
+          DataType: NodeId
+          Children:
+          - Name: Kind
+            Id: g=35439b3536b94761966c054b3bab69f1
+            Type: PropertyType
+            DataType: NodeId
+            Value: "/Types/ObjectTypes/BaseObjectType"
+          - Name: DynamicLink
+            Id: g=a331c18f6052f8e7d4dca22de675404c
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "../../../../../../../../../Commands/VariableCommands@NodeId"
+            Children:
+            - Name: Mode
+              Id: g=cb484f8fc7d2d70e632d6bf9a3408bb1
+              Type: BaseVariableType
+              DataType: DynamicLinkMode
+              Value: 2
+        - Name: ns=9;Method
+          Id: g=9ae0d84f3dee69ca68838ba79968ca0c
+          Type: BaseDataVariableType
+          DataType: String
+          Value: "Set"
+        - Name: InputArguments
+          Id: g=6d9a82ccad2b1dd44212684e9ea7d75e
+          Type: BaseObjectType
+          Children:
+          - Name: VariableToModify
+            Id: g=de5efc75ccaa6203a7dee80bfe87ce8a
+            Type: BaseDataVariableType
+            DataType: VariablePointer
+            Description: {"NamespaceIndex":9,"TextId":"SetVariableToModifyDescription"}
+            Value: "/Objects/OptimateDemoProject/Model/Internal/Constants/Always_TRUE"
+          - Name: Value
+            Id: g=ed79d822aac4b3755c6a560e50c802fd
+            Type: BaseDataVariableType
+            DataType: Boolean
+            Description: {"NamespaceIndex":9,"TextId":"SetValueDescription"}
+            Value: true
+          - Name: ArrayIndex
+            Id: g=6f52b6a61f10f8ebf233f69518d74ab7
+            Type: BaseDataVariableType
+            DataType: UInt32
+            Description: {"NamespaceIndex":9,"TextId":"SetArrayIndexDescription"}
+            ValueRank: ScalarOrOneDimension
+    - Name: EventArguments
+      Id: g=1d7a03f5bee6d1d18310203c6b91b488
+      Type: VariableValueChangedEvent
+      Children:
+      - Name: VariableNodeId
+        Id: g=eadf5560db0d430372389da0d5124608
+        Type: BaseVariableType
+        DataType: NodeId
+      - Name: NewValue
+        Id: g=3f05e0d841c668a1024389af337d358c
+        Type: BaseVariableType
+        DataType: BaseDataType
+      - Name: OldValue
+        Id: g=58bcd6c0861b7e306b5ab51e9790a56d
+        Type: BaseVariableType
+        DataType: BaseDataType
+      - Name: EventId
+        Id: g=ed636c5e50a349aa7d9f6d94d418ec30
+        Type: PropertyType
+        DataType: ByteString
+      - Name: EventType
+        Id: g=ed752afcb9c5516220a7ebc93030aaf6
+        Type: PropertyType
+        DataType: NodeId
+      - Name: SourceNode
+        Id: g=c0acf680acaad6166352ecfa24dd79f1
+        Type: PropertyType
+        DataType: NodeId
+      - Name: SourceName
+        Id: g=71ba97c73275d0a887bf1ec0a9d8222a
+        Type: PropertyType
+        DataType: String
+      - Name: Time
+        Id: g=8bcae0a44b340aee8f5870c284f8724c
+        Type: PropertyType
+        DataType: UtcTime
+      - Name: ReceiveTime
+        Id: g=3ef3528c644fb6c8175de9be2d3a9ff1
+        Type: PropertyType
+        DataType: UtcTime
+      - Name: Message
+        Id: g=7dbfce59ecd4eb5b697ebf85e8e926ff
+        Type: PropertyType
+        DataType: LocalizedText
+      - Name: Severity
+        Id: g=706f1a347d5619c3dc9219d741ef1198
+        Type: PropertyType
+        DataType: UInt16
+- Name: Always_FALSETransitioned
+  Id: g=b34ae30250526a2ccba7f1d62fb7d301
+  Type: VariableTransitionEventDispatcher
+  Children:
+  - Name: Value
+    Id: g=d3e4e002e2bb8537e8e12b9d76ed1c1e
+    Type: BaseVariableType
+    DataType: Double
+  - Name: Transition
+    Id: g=fae79ad0a369212eecffc941587fda82
+    Type: BaseVariableType
+    DataType: VariableTransition
+    Value: 1
+  - Name: VariableNodePath
+    Id: g=0128ce3d50fe699b77a8eb1e6f2638ae
+    Type: BaseVariableType
+    DataType: NodePath
+    Value: "../Always_FALSE"
+- Name: Always_TRUETransitioned
+  Id: g=ee9c5218b5ef02c3d66ef35454be6d08
+  Type: VariableTransitionEventDispatcher
+  Children:
+  - Name: Value
+    Id: g=258f47395819ab560f25a6135901413e
+    Type: BaseVariableType
+    DataType: Double
+    Value: 1.0
+  - Name: Transition
+    Id: g=d619fd5c38858677a0e5e1a04c0843f5
+    Type: BaseVariableType
+    DataType: VariableTransition
+    Value: 1
+  - Name: VariableNodePath
+    Id: g=b841146a1dc2404cc515cadbf45e9adc
+    Type: BaseVariableType
+    DataType: NodePath
+    Value: "../Always_TRUE"
+- Name: Always_FALSETransitioned1
+  Id: g=26fc800a8a196287958861a3d6655539
+  Type: VariableTransitionEventDispatcher
+  Children:
+  - Name: Value
+    Id: g=e4c99b5d40d080a92f17824a713cfdb7
+    Type: BaseVariableType
+    DataType: Double
+  - Name: Transition
+    Id: g=62e03f5f92cda7a2e7dbf7cb60b08e0c
+    Type: BaseVariableType
+    DataType: VariableTransition
+  - Name: VariableNodePath
+    Id: g=848e7e70d9d2cc076a32ee8f43bda333
+    Type: BaseVariableType
+    DataType: NodePath
+    Value: "../Always_FALSE"

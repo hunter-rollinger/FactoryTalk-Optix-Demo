@@ -1,0 +1,120 @@
+Name: Dynamic
+Id: g=368ede731f1d083badd7da5fa4c5a596
+Type: FolderType
+Children:
+- Name: Overview
+  Id: g=024a29d60cbc2f26d0f2fc5a2d03dbe6
+  Supertype: Screen
+  DisplayName: {"NamespaceIndex":36,"TextId":"Overview"}
+  ReferenceType: HasComponent
+  Children:
+  - Name: ScaleLayout
+    Id: g=31c9647952a33bb6174bf29b048a0bd1
+    Type: ScaleLayout
+    Children:
+    - Name: OriginalWidth
+      Id: g=14a38af17ec4f385b3350f0ab92c41f5
+      Type: BaseDataVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 300.0
+    - Name: OriginalHeight
+      Id: g=08dcdf869bfbbdc7ff61e96defa3d913
+      Type: BaseDataVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 300.0
+    - Name: HorizontalAlignment
+      Id: g=4348994c4d35049c562499ec729ef491
+      Type: BaseVariableType
+      DataType: HorizontalAlignment
+      ModellingRule: Optional
+      Value: 3
+    - Name: VerticalAlignment
+      Id: g=d1642f17f840525dc608a49ae3115b44
+      Type: BaseVariableType
+      DataType: VerticalAlignment
+      ModellingRule: Optional
+      Value: 3
+    - Name: Image1
+      Id: g=e357d0b1a89095eb4576deabad64ef82
+      Type: Image
+      Children:
+      - Name: Path
+        Id: g=7514571d2f71cfc34439742d2ff951de
+        Type: BaseDataVariableType
+        DataType: ResourceUri
+        Value: "ns=36;%PROJECTDIR%/Graphics/Jones/MBE Overview Flipped.png"
+      - Name: Width
+        Id: g=0432c50124bb4126edbd6c97abd81ca6
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 50.0
+      - Name: Height
+        Id: g=aa9c847f2ced7c8a56170f5a4d0f9389
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 50.0
+      - Name: ImageLeftMargin
+        Id: g=25edf80d75f35ab7e89232cea39b18d9
+        Type: BaseDataVariableType
+        DataType: Size
+        ModellingRule: Optional
+      - Name: ImageTopMargin
+        Id: g=692d8ca7a1908b9106a7d940a7c59928
+        Type: BaseDataVariableType
+        DataType: Size
+        ModellingRule: Optional
+      - Name: ImageRightMargin
+        Id: g=8b5ebda35d8db0aa62bf6fdb5c7332e4
+        Type: BaseDataVariableType
+        DataType: Size
+        ModellingRule: Optional
+      - Name: ImageBottomMargin
+        Id: g=b10eee0a48880dedcb0eda7ed105f16d
+        Type: BaseDataVariableType
+        DataType: Size
+        ModellingRule: Optional
+      - Name: HorizontalAlignment
+        Id: g=a6ecf3a9129cdcf30e6391ea5a06d328
+        Type: BaseVariableType
+        DataType: HorizontalAlignment
+        ModellingRule: Optional
+        Value: 3
+      - Name: VerticalAlignment
+        Id: g=f4352dc146d2e0af3e678cdc1d0daef7
+        Type: BaseVariableType
+        DataType: VerticalAlignment
+        ModellingRule: Optional
+        Value: 3
+    - Name: FillMode
+      Id: g=52edbdd24f39922f50e0c60eb9c1331f
+      Type: BaseDataVariableType
+      DataType: FillModeEnum
+      ModellingRule: Optional
+      Value: 1
+    - Name: FontScaling
+      Id: g=7218d154f79cb04d820377361340d320
+      Type: BaseDataVariableType
+      DataType: Boolean
+      ModellingRule: Optional
+      Value: true
+  - Name: Width
+    Id: g=078f9a6a0f310312e85efd611df50499
+    Type: BaseVariableType
+    DataType: Size
+    ModellingRule: Optional
+    Value: -1.0
+  - Name: BackgroundColor
+    Id: g=033619ed3bbf7389cc8949efaf6cbadd
+    Type: BaseDataVariableType
+    DataType: Color
+    Value: "#ffffff"
+    Children:
+    - Name: DynamicLink
+      Id: g=d26814555acbb53a07ef93ab31e85540
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Light Grey/Light Grey 100"
