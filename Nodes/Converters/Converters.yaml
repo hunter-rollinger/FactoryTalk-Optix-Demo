@@ -2236,7 +2236,7 @@ Children:
           - Name: StringFormatter1
             Id: g=f7ecd8067d3a31a8020c33eea751930c
             Type: StringFormatter
-- Name: IndicatorColors
+- Name: Colors
   Id: g=0639732cc60c02ff1d396f2182fef77a
   Supertype: ValueMapConverter
   ReferenceType: HasComponent
@@ -2284,7 +2284,7 @@ Children:
         Id: g=6ad8c81cfd11a20c655404c6adf039d2
         Type: BaseDataVariableType
         DataType: Int16
-        Value: 4
+        Value: 2
       - Name: Value
         Id: g=968b50777b90ffbc43a33591338a02c9
         Type: BaseDataVariableType
@@ -2310,7 +2310,7 @@ Children:
         Id: g=0d9cac996e7d058e91ad86cf10ccb7a7
         Type: BaseDataVariableType
         DataType: Int16
-        Value: 2
+        Value: 3
       - Name: Value
         Id: g=d990e958870bdae06cb3a8b6b3bfcac2
         Type: BaseDataVariableType
@@ -2336,7 +2336,7 @@ Children:
         Id: g=442cf0b60817682dad56b54c34c953cd
         Type: BaseDataVariableType
         DataType: Int16
-        Value: 5
+        Value: 4
       - Name: Value
         Id: g=c009623c157ceb8b072628690dd85da6
         Type: BaseDataVariableType
@@ -2362,7 +2362,7 @@ Children:
         Id: g=dae2de153d0bf7e4151a7e68ad0fc479
         Type: BaseDataVariableType
         DataType: Int16
-        Value: 3
+        Value: 5
       - Name: Value
         Id: g=addde160b5a9d9ea18fd7df93c4ee03b
         Type: BaseDataVariableType
@@ -2380,7 +2380,20 @@ Children:
             DataType: DynamicLinkMode
             ModellingRule: Optional
             Value: 2
-- Name: IndicatorSymbol
+    - Name: Pair1
+      Id: g=21defc39901f0b63252d626554c19ff1
+      Type: ValueMapPair
+      Children:
+      - Name: Key
+        Id: g=e30100fb88b22c82764bea5868a68549
+        Type: BaseDataVariableType
+        DataType: Int16
+        Value: 6
+      - Name: Value
+        Id: g=f4cc79bc1f405811bc436368b5788e89
+        Type: BaseDataVariableType
+        DataType: Color
+- Name: Symbols
   Id: g=5568c1728c246268e044fc1f217996c8
   Supertype: ValueMapConverter
   ReferenceType: HasComponent
@@ -2416,7 +2429,7 @@ Children:
         Id: g=cb8179c6f62a59ab0522b3f321cdbfea
         Type: BaseDataVariableType
         DataType: Int16
-        Value: 3
+        Value: 2
       - Name: Value
         Id: g=e67e1f80cfb2a6e71428c1dddfa3fa35
         Type: BaseDataVariableType
@@ -2430,7 +2443,7 @@ Children:
         Id: g=5fb6f6ca6fa2c581c9e777e16c48864f
         Type: BaseDataVariableType
         DataType: Int16
-        Value: 4
+        Value: 3
       - Name: Value
         Id: g=fdf07e259d879d843717fcc3333bd205
         Type: BaseDataVariableType
@@ -2444,7 +2457,7 @@ Children:
         Id: g=984d6c968c81ca2f04951f5618c31cdc
         Type: BaseDataVariableType
         DataType: Int16
-        Value: 5
+        Value: 4
       - Name: Value
         Id: g=116778dffedfc5089058a4902f035060
         Type: BaseDataVariableType
@@ -2458,7 +2471,7 @@ Children:
         Id: g=3c93c33cc03bea41021b4ecab265d9c7
         Type: BaseDataVariableType
         DataType: Int16
-        Value: 6
+        Value: 5
       - Name: Value
         Id: g=b48f63a9ac8772afc512b687b124ba82
         Type: BaseDataVariableType
@@ -2472,7 +2485,7 @@ Children:
         Id: g=53f2bba2c791b7b0b096f971cff13095
         Type: BaseDataVariableType
         DataType: Int16
-        Value: 7
+        Value: 6
       - Name: Value
         Id: g=7879c1d8d94114209caf01a3c5d28075
         Type: BaseDataVariableType
@@ -2486,7 +2499,7 @@ Children:
         Id: g=2438b583382bdeee3ab2bb8b16e17827
         Type: BaseDataVariableType
         DataType: Int16
-        Value: 8
+        Value: 7
       - Name: Value
         Id: g=59ee964b7f8c89fd41dd02c6c2ced3f3
         Type: BaseDataVariableType
@@ -2500,7 +2513,7 @@ Children:
         Id: g=eb548d32b218de71edb730edde70929e
         Type: BaseDataVariableType
         DataType: Int16
-        Value: 2
+        Value: 8
       - Name: Value
         Id: g=a74087d5d25be06b06734e2483264494
         Type: BaseDataVariableType
@@ -2520,3 +2533,16 @@ Children:
         Type: BaseDataVariableType
         DataType: ResourceUri
         Value: "ns=36;%PROJECTDIR%/Graphics/Coesia - Library/indicator items/exclaim.svg"
+    - Name: Pair10
+      Id: g=786d10503b34d0587c08ef3c69312cdc
+      Type: ValueMapPair
+      Children:
+      - Name: Key
+        Id: g=bb84fba66e7479766dde837510fcb31a
+        Type: BaseDataVariableType
+        DataType: Int16
+        Value: 10
+      - Name: Value
+        Id: g=16d4f425c16f460b9fffbb308108f78d
+        Type: BaseDataVariableType
+        DataType: ResourceUri

@@ -1,0 +1,1849 @@
+Name: Other
+Id: g=4b664408f638154bb7466d6c4b9aff46
+Type: FolderType
+Children:
+- Name: MultiColor_InfoBox
+  Id: g=d554a49d0fb6749fc4ce6e656dfd5f56
+  Supertype: Panel
+  ReferenceType: HasComponent
+  Children:
+  - Name: HorizontalAlignment
+    Id: g=efb78fe0f9686868b8077ae585f87fc5
+    Type: BaseVariableType
+    DataType: HorizontalAlignment
+    ModellingRule: Optional
+  - Name: Color
+    Id: g=28693fc0e1e4c1de744adf3e7a6db35d
+    Type: BaseDataVariableType
+    DataType: 'Multi-Color InfoBox Colors'
+    Value: 2
+  - Name: Symbol
+    Id: g=850f9463f6368c192e18c6454431fede
+    Type: BaseDataVariableType
+    DataType: 'Multi-Color InfoBox Symbols'
+    Value: 3
+  - Name: Symbol Shape
+    Id: g=855db64ff4b19b6e8b909f1c705a05f8
+    Type: BaseDataVariableType
+    DataType: 'Multi-Color InfoBox Symbol Shape'
+    Value: 1
+  - Name: Background
+    Id: g=b9be6c1c3c0f0b534095bf798074b854
+    Type: Rectangle
+    Children:
+    - Name: Width
+      Id: g=ffbb627d402acbc6355bc55cca89b075
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 30.0
+    - Name: Height
+      Id: g=f9e64cb8d210f8298d2271db2b607de3
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 40.0
+    - Name: LeftMargin
+      Id: g=6f7dff92d9d37bc4122997fe00b6e8ca
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+    - Name: TopMargin
+      Id: g=1da0c4955048cf470c8a073db896e2d0
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+    - Name: HorizontalAlignment
+      Id: g=fcdd246e9029b13b1f3fd4b115932cbd
+      Type: BaseVariableType
+      DataType: HorizontalAlignment
+      ModellingRule: Optional
+      Value: 3
+    - Name: VerticalAlignment
+      Id: g=bd00e686b31b27855d116f236ddd91ef
+      Type: BaseVariableType
+      DataType: VerticalAlignment
+      ModellingRule: Optional
+      Value: 3
+    - Name: Style
+      Id: g=70698a564c9d909c01df22dee8c0008d
+      Type: BaseDataVariableType
+      DataType: String
+      ModellingRule: Optional
+      Value: "Default"
+    - Name: CornerRadius
+      Id: g=8953c618d7033c603bb1675adba61697
+      Type: BaseDataVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 8.0
+    - Name: FillColor
+      Id: g=409f7e857286cd8fcf1f5b4d8ac202c9
+      Type: BaseDataVariableType
+      DataType: Color
+      Value: "#ff9900"
+      Children:
+      - Name: SolidColors1
+        Id: g=9461f7747787c0edd31ef08b29ecdadd
+        Type: Colors
+        Children:
+        - Name: Source
+          Id: g=adce65475d466658acea43168ce4c711
+          Type: BaseDataVariableType
+          DataType: BaseDataType
+          ReferenceType: HasSource
+          Children:
+          - Name: DynamicLink
+            Id: g=719fc901c047058c0760f4a632d6e179
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "../../../../Color"
+        - Name: Pairs
+          Id: g=35351719c13e2bbdcfa754ad891fa144
+          Type: BaseObjectType
+          Children:
+          - Name: Pair3
+            Id: g=d5145bf7a526602c2c39b0df4f3a93a6
+            Type: ValueMapPair
+            Children:
+            - Name: Key
+              Id: g=62b78492e567ece6ede7eeef7f49b041
+              Type: BaseDataVariableType
+              DataType: Int16
+              Value: 1
+            - Name: Value
+              Id: g=bc1f2f0cce18251f5c935b1d3cce3e35
+              Type: BaseDataVariableType
+              DataType: Color
+              Children:
+              - Name: DynamicLink
+                Id: g=09ca55ee5365279ab400ec0637ebd07c
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "/Objects/OptimateDemoProject/UI/Stylesheets/Jones/good"
+          - Name: Pair4
+            Id: g=f0a7f29bd0b8935037d2e0f6af8deee7
+            Type: ValueMapPair
+            Children:
+            - Name: Key
+              Id: g=288b2c1da8c9133a34efb3c24d3fbdbe
+              Type: BaseDataVariableType
+              DataType: Int16
+              Value: 2
+            - Name: Value
+              Id: g=c34f04cc9ac4f862bec791cbadb9b4e1
+              Type: BaseDataVariableType
+              DataType: Color
+              Children:
+              - Name: DynamicLink
+                Id: g=4cf284ae1dff2734e100a4a38f986cac
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "/Objects/OptimateDemoProject/UI/Stylesheets/Jones/neutral"
+          - Name: Pair5
+            Id: g=5b60f08c6cd4eaf425d2c81a7b3e7f7a
+            Type: ValueMapPair
+            Children:
+            - Name: Key
+              Id: g=a516ed06596e06cb64ebec7a4391fc80
+              Type: BaseDataVariableType
+              DataType: Int16
+              Value: 3
+            - Name: Value
+              Id: g=a9f181b21f8f424eed405ace707c4645
+              Type: BaseDataVariableType
+              DataType: Color
+              Children:
+              - Name: DynamicLink
+                Id: g=16aedb19b1edf183759315efa89a3a0b
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "/Objects/OptimateDemoProject/UI/Stylesheets/Jones/warning"
+          - Name: Pair
+            Id: g=32d551b113b05fd4efacebbed5b5471b
+            Type: ValueMapPair
+            Children:
+            - Name: Key
+              Id: g=d675d390e384b9f905a8990f4617453d
+              Type: BaseDataVariableType
+              DataType: Int16
+              Value: 4
+            - Name: Value
+              Id: g=ad3fb4db4afd231229b71ed4909cb860
+              Type: BaseDataVariableType
+              DataType: Color
+              Children:
+              - Name: DynamicLink
+                Id: g=2882a276d6e76669e14cd8caf19a86ea
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "/Objects/OptimateDemoProject/UI/Stylesheets/Jones/error"
+          - Name: Pair6
+            Id: g=75ee7c5430725128aa758077fde5b440
+            Type: ValueMapPair
+            Children:
+            - Name: Key
+              Id: g=0273c9a20d32f6fc622046c6ab58c32c
+              Type: BaseDataVariableType
+              DataType: Int16
+              Value: 5
+            - Name: Value
+              Id: g=32369d2e3aeb60efc22369414b4c0069
+              Type: BaseDataVariableType
+              DataType: Color
+              Children:
+              - Name: DynamicLink
+                Id: g=e02af4ede8bc4a24fb619b76febea86b
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "/Objects/OptimateDemoProject/UI/Stylesheets/Jones/dark grey 2"
+          - Name: Pair1
+            Id: g=76f1fda1ee0b734d20bb9916284bdce4
+            Type: ValueMapPair
+            Children:
+            - Name: Key
+              Id: g=48e94b56d4cee6a74e263f13b52f641e
+              Type: BaseDataVariableType
+              DataType: Int16
+              Value: 6
+            - Name: Value
+              Id: g=7849b98e6ee2d6e91ba06873313664d0
+              Type: BaseDataVariableType
+              DataType: Color
+    - Name: BorderColor
+      Id: g=478aebdbf6a684cc5328d4c6fb63c330
+      Type: BaseDataVariableType
+      DataType: Color
+      ModellingRule: Optional
+    - Name: Opacity
+      Id: g=9a50da609d8b761f7fb2acb82f854acd
+      Type: BaseVariableType
+      DataType: Float
+      ModellingRule: Optional
+      Value: 20.0
+  - Name: Shape
+    Id: g=36071a3955fa48fce8e240d4f5ef70e4
+    Type: ScaleLayout
+    Children:
+    - Name: Width
+      Id: g=64bc60c2008eede25551d618d6cc6a33
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 68.0
+    - Name: Height
+      Id: g=1dd12659b3a43ab0bb05a6bbd92e47ad
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 68.0
+    - Name: VerticalAlignment
+      Id: g=ed2e09e72e5f3ba109d9f33926bc74f8
+      Type: BaseVariableType
+      DataType: VerticalAlignment
+      ModellingRule: Optional
+      Value: 2
+    - Name: Triangle
+      Id: g=f531ac4135a5b51fbbd5f9478bdf1cbf
+      Type: AdvancedSVGImage
+      Children:
+      - Name: SVGElementProperties
+        Id: g=91a0b3f45008051d1dd9daaacaa39519
+        Type: BaseObjectType
+        Children:
+        - Name: AdvancedSVGImageProperty1
+          Id: g=de4abf48e7503ff6eaf83bae581df9be
+          Type: AdvancedSVGImageElementProperty
+          Children:
+          - Name: ID
+            Id: g=d2e124ad82ba5c11387fd18b589d45a9
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "triangle"
+          - Name: Property
+            Id: g=5cf880ed26da3815a8e09242b1b9bf56
+            Type: BaseDataVariableType
+            DataType: AdvancedSVGImagePropertyClass
+          - Name: Value
+            Id: g=db2727f46dbe741fed89091282d26622
+            Type: BaseDataVariableType
+            DataType: Color
+            Value: "#ff9900"
+            Children:
+            - Name: IndicatorColors1
+              Id: g=c48641af2ad2a6afbba84ebde61b29d6
+              Type: Colors
+              Children:
+              - Name: Source
+                Id: g=bbee1f389e9db62178129ce6d867c414
+                Type: BaseDataVariableType
+                DataType: BaseDataType
+                ReferenceType: HasSource
+                Children:
+                - Name: DynamicLink
+                  Id: g=d12f90d3069b5682b9924380a6f4fbe3
+                  Type: DynamicLink
+                  DataType: NodePath
+                  Value: "../../../../../../../Color"
+              - Name: Pairs
+                Id: g=95c0527ebd41039924a5d1abbc8bdfce
+                Type: BaseObjectType
+                Children:
+                - Name: Pair3
+                  Id: g=8b523f180af6ab3f0ad4bb08d9d7ff49
+                  Type: ValueMapPair
+                  Children:
+                  - Name: Key
+                    Id: g=67ceda1308dc97fa65165e303737cd76
+                    Type: BaseDataVariableType
+                    DataType: Int16
+                    Value: 1
+                  - Name: Value
+                    Id: g=617b5e5074c6004cfed11259bb0e3456
+                    Type: BaseDataVariableType
+                    DataType: Color
+                    Children:
+                    - Name: DynamicLink
+                      Id: g=6bda4d82dd6d4db5b99c51a19460d410
+                      Type: DynamicLink
+                      DataType: NodePath
+                      Value: "/Objects/OptimateDemoProject/UI/Stylesheets/Jones/good"
+                - Name: Pair4
+                  Id: g=d73a5bfe669fd461c08ccec3854bf028
+                  Type: ValueMapPair
+                  Children:
+                  - Name: Key
+                    Id: g=f4b4501c607e2d7bae2384582284b6bc
+                    Type: BaseDataVariableType
+                    DataType: Int16
+                    Value: 2
+                  - Name: Value
+                    Id: g=ba9bec200e0d0ace918262290ae6e4f6
+                    Type: BaseDataVariableType
+                    DataType: Color
+                    Children:
+                    - Name: DynamicLink
+                      Id: g=3bee132535acc15e973f42786625138a
+                      Type: DynamicLink
+                      DataType: NodePath
+                      Value: "/Objects/OptimateDemoProject/UI/Stylesheets/Jones/neutral"
+                - Name: Pair5
+                  Id: g=59bba54e56d39d9a0edcf097f5838aa3
+                  Type: ValueMapPair
+                  Children:
+                  - Name: Key
+                    Id: g=55288039e41267cf9ff37156ca62b519
+                    Type: BaseDataVariableType
+                    DataType: Int16
+                    Value: 3
+                  - Name: Value
+                    Id: g=a5a8bcf6ccd83faf61336fcdf0e5134e
+                    Type: BaseDataVariableType
+                    DataType: Color
+                    Children:
+                    - Name: DynamicLink
+                      Id: g=000d2ef4c62bdba011988ef1c00d1431
+                      Type: DynamicLink
+                      DataType: NodePath
+                      Value: "/Objects/OptimateDemoProject/UI/Stylesheets/Jones/warning"
+                - Name: Pair
+                  Id: g=71cbd0fa70bd348e8bd7305f6ea37563
+                  Type: ValueMapPair
+                  Children:
+                  - Name: Key
+                    Id: g=d12aa1f308913c7ec9ea485fb7aa5056
+                    Type: BaseDataVariableType
+                    DataType: Int16
+                    Value: 4
+                  - Name: Value
+                    Id: g=e8f6eb15546dd823659cb2382f3a77f9
+                    Type: BaseDataVariableType
+                    DataType: Color
+                    Children:
+                    - Name: DynamicLink
+                      Id: g=6f51ebe02aec8171d940b60ff28ba6b5
+                      Type: DynamicLink
+                      DataType: NodePath
+                      Value: "/Objects/OptimateDemoProject/UI/Stylesheets/Jones/error"
+                - Name: Pair6
+                  Id: g=34d0f9d2d054c3be000c4a7704b8490d
+                  Type: ValueMapPair
+                  Children:
+                  - Name: Key
+                    Id: g=1ce96b03477ec991b4bf666d6be67276
+                    Type: BaseDataVariableType
+                    DataType: Int16
+                    Value: 5
+                  - Name: Value
+                    Id: g=e6eca55c206b3f09dac1a20512c89390
+                    Type: BaseDataVariableType
+                    DataType: Color
+                    Children:
+                    - Name: DynamicLink
+                      Id: g=d9a6dbc17bc644caf0d7aca0b02a2670
+                      Type: DynamicLink
+                      DataType: NodePath
+                      Value: "/Objects/OptimateDemoProject/UI/Stylesheets/Jones/dark grey 2"
+                - Name: Pair1
+                  Id: g=c4654645f562ed30fd95b9b956276446
+                  Type: ValueMapPair
+                  Children:
+                  - Name: Key
+                    Id: g=b48539db4a7834b2d0f7e2eefa7e2539
+                    Type: BaseDataVariableType
+                    DataType: Int16
+                    Value: 6
+                  - Name: Value
+                    Id: g=6c63c4f902d714f7742e72f07043d046
+                    Type: BaseDataVariableType
+                    DataType: Color
+      - Name: Path
+        Id: g=d9907b56f5768a44781bab8819f145ea
+        Type: BaseDataVariableType
+        DataType: ResourceUri
+        Value: "ns=36;%PROJECTDIR%/Graphics/Jones/triangle.svg"
+      - Class: Reference
+        Target: ns=11;i=1360
+        Direction: Forward
+      - Name: Width
+        Id: g=688159cf53245cd984539d09221d308e
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 32.0
+      - Name: Height
+        Id: g=59d66236258e359aa8d5e39ddea3e6ae
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 32.0
+      - Name: LeftMargin
+        Id: g=a25f3a3f450ed25aeec5abcc86d078a4
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 18.0
+      - Name: TopMargin
+        Id: g=738b28ae79b3f95d914f0afdd6ee2e73
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+      - Name: HorizontalAlignment
+        Id: g=5f249c2ae40506992bdc2cc573a50b26
+        Type: BaseVariableType
+        DataType: HorizontalAlignment
+        ModellingRule: Optional
+      - Name: VerticalAlignment
+        Id: g=4e55d8d68900e04f823fc36c90141d05
+        Type: BaseVariableType
+        DataType: VerticalAlignment
+        ModellingRule: Optional
+        Value: 2
+      - Name: ColorizationMode
+        Id: g=da9421b66877e8ab3aaa16cce896b776
+        Type: BaseDataVariableType
+        DataType: ColorizationModeEnum
+        ModellingRule: Optional
+      - Name: FillMode
+        Id: g=fc1d4dd5a5ee545213298ad823f824c4
+        Type: BaseDataVariableType
+        DataType: FillModeEnum
+        ModellingRule: Optional
+        Value: 1
+      - Name: Indicator
+        Id: g=032042b2d6358a6c22c5f725b7082a02
+        Type: Image
+        Children:
+        - Name: Path
+          Id: g=352685dcce8410a5306afe3bdafaca79
+          Type: BaseDataVariableType
+          DataType: ResourceUri
+          Children:
+          - Name: IndicatorSymbol1
+            Id: g=de280dde3176cae99ab022c939e3bf4e
+            Type: Symbols
+            Children:
+            - Name: Source
+              Id: g=182e39dd99a6f223c46d2190b7c63964
+              Type: BaseDataVariableType
+              DataType: BaseDataType
+              ReferenceType: HasSource
+              Children:
+              - Name: DynamicLink
+                Id: g=6e00ea976afc26033b241dfbe0e2b058
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "../../../../../../Symbol"
+            - Name: Pairs
+              Id: g=869a44d27ebe9afc37ae7934313c9fd3
+              Type: BaseObjectType
+              Children:
+              - Name: Pair2
+                Id: g=ea25c202171aca4483e5a6f397102388
+                Type: ValueMapPair
+                Children:
+                - Name: Key
+                  Id: g=fa4c18bb22ff085c8e2cf54fa32638d5
+                  Type: BaseDataVariableType
+                  DataType: Int16
+                  Value: 1
+                - Name: Value
+                  Id: g=4c091580e2da598e0d642c9a5a95e184
+                  Type: BaseDataVariableType
+                  DataType: ResourceUri
+                  Value: "ns=36;%PROJECTDIR%/Graphics/Coesia - Library/indicator items/warning.svg"
+              - Name: Pair3
+                Id: g=78e1a7d3e9e4c64997b1623a388850f3
+                Type: ValueMapPair
+                Children:
+                - Name: Key
+                  Id: g=eeba4b65fc45d4d216e59af134406eba
+                  Type: BaseDataVariableType
+                  DataType: Int16
+                  Value: 2
+                - Name: Value
+                  Id: g=239b1428af6d2ebd650d18f8bb0e6869
+                  Type: BaseDataVariableType
+                  DataType: ResourceUri
+                  Value: "ns=36;%PROJECTDIR%/Graphics/Coesia - Library/indicator items/good.svg"
+              - Name: Pair4
+                Id: g=d92bf0728e8f067fbda87d1f859bd804
+                Type: ValueMapPair
+                Children:
+                - Name: Key
+                  Id: g=987e4c2fd5b150e2bb35664bfacd8bfa
+                  Type: BaseDataVariableType
+                  DataType: Int16
+                  Value: 3
+                - Name: Value
+                  Id: g=2e87c35ca871634510067cbba2a22ada
+                  Type: BaseDataVariableType
+                  DataType: ResourceUri
+                  Value: "ns=36;%PROJECTDIR%/Graphics/Coesia - Library/indicator items/info.svg"
+              - Name: Pair5
+                Id: g=bcf29acd462a254e79c98ccdc1901154
+                Type: ValueMapPair
+                Children:
+                - Name: Key
+                  Id: g=1c22fafb607316dc68dfb2d8ef1f7945
+                  Type: BaseDataVariableType
+                  DataType: Int16
+                  Value: 4
+                - Name: Value
+                  Id: g=af015cec060e2d32d1496d7e3f98b0aa
+                  Type: BaseDataVariableType
+                  DataType: ResourceUri
+                  Value: "ns=36;%PROJECTDIR%/Graphics/Coesia - Library/indicator items/led-lit.svg"
+              - Name: Pair6
+                Id: g=f94bacbdc7701fb94a9f5f9735351d5c
+                Type: ValueMapPair
+                Children:
+                - Name: Key
+                  Id: g=cccf9f095ab8b6534670318b461bce4e
+                  Type: BaseDataVariableType
+                  DataType: Int16
+                  Value: 5
+                - Name: Value
+                  Id: g=12457d6ace9c20c2e5c479f1904773bd
+                  Type: BaseDataVariableType
+                  DataType: ResourceUri
+                  Value: "ns=36;%PROJECTDIR%/Graphics/Coesia - Library/indicator items/servo axis.svg"
+              - Name: Pair7
+                Id: g=67abd728968167f334e96c14e6b8efd6
+                Type: ValueMapPair
+                Children:
+                - Name: Key
+                  Id: g=c0c620c934c0a51b51006ecb86d64ace
+                  Type: BaseDataVariableType
+                  DataType: Int16
+                  Value: 6
+                - Name: Value
+                  Id: g=8c52e21e1c01a0425e5d52f6c1744569
+                  Type: BaseDataVariableType
+                  DataType: ResourceUri
+                  Value: "ns=36;%PROJECTDIR%/Graphics/Coesia - Library/indicator items/open.svg"
+              - Name: Pair8
+                Id: g=0ee613d778c32654705cb268a55234a5
+                Type: ValueMapPair
+                Children:
+                - Name: Key
+                  Id: g=d2d052dae51fa0491dca23a98fe0a892
+                  Type: BaseDataVariableType
+                  DataType: Int16
+                  Value: 7
+                - Name: Value
+                  Id: g=1f938715e062d8a7c977978a4234fdd2
+                  Type: BaseDataVariableType
+                  DataType: ResourceUri
+                  Value: "ns=36;%PROJECTDIR%/Graphics/Coesia - Library/indicator items/closed.svg"
+              - Name: Pair9
+                Id: g=02e49c718edb274a4bfa8eef48d32a0f
+                Type: ValueMapPair
+                Children:
+                - Name: Key
+                  Id: g=b2a935ae016c5edfc11b234c65cf3d69
+                  Type: BaseDataVariableType
+                  DataType: Int16
+                  Value: 8
+                - Name: Value
+                  Id: g=ef365f8d90ae94e73ac5696302852360
+                  Type: BaseDataVariableType
+                  DataType: ResourceUri
+                  Value: "ns=36;%PROJECTDIR%/Graphics/Coesia - Library/indicator items/error.svg"
+              - Name: Pair1
+                Id: g=12575638d8a339c9e361981df8015497
+                Type: ValueMapPair
+                Children:
+                - Name: Key
+                  Id: g=9e6a000af2293923b02c88574673bead
+                  Type: BaseDataVariableType
+                  DataType: Int16
+                  Value: 9
+                - Name: Value
+                  Id: g=2f475a70963b6edc0176aa703560ee73
+                  Type: BaseDataVariableType
+                  DataType: ResourceUri
+                  Value: "ns=36;%PROJECTDIR%/Graphics/Coesia - Library/indicator items/exclaim.svg"
+              - Name: Pair10
+                Id: g=1ad8b3e2e09f6a51ca4f0fbea20c8458
+                Type: ValueMapPair
+                Children:
+                - Name: Key
+                  Id: g=8c7fc0fdacff6fa1aff5448ba36e94dd
+                  Type: BaseDataVariableType
+                  DataType: Int16
+                  Value: 10
+                - Name: Value
+                  Id: g=a32ec5b9e4170936dbef5353dbc61e8d
+                  Type: BaseDataVariableType
+                  DataType: ResourceUri
+        - Name: Width
+          Id: g=1b165aecefcb55777df1b24eddf31ca1
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 50.0
+        - Name: Height
+          Id: g=f973dfec3cf79d6a33a6f95f742a89d7
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 50.0
+        - Name: HorizontalAlignment
+          Id: g=f4cc4a9365a4a420958ffef2968dbd5b
+          Type: BaseVariableType
+          DataType: HorizontalAlignment
+          ModellingRule: Optional
+          Value: 3
+        - Name: VerticalAlignment
+          Id: g=7b2c1f64693bb5e53aa4c4a0778a4945
+          Type: BaseVariableType
+          DataType: VerticalAlignment
+          ModellingRule: Optional
+          Value: 3
+        - Name: ColorizationMode
+          Id: g=c0f44335a83ae3ae4cd6b53d565a23fb
+          Type: BaseDataVariableType
+          DataType: ColorizationModeEnum
+          ModellingRule: Optional
+        - Name: FillMode
+          Id: g=87f232b9de7c3698033fe353d1defe8c
+          Type: BaseDataVariableType
+          DataType: FillModeEnum
+          ModellingRule: Optional
+        - Name: ImageLeftMargin
+          Id: g=3d50ec32460f16087cb5df8256d765f7
+          Type: BaseDataVariableType
+          DataType: Size
+          ModellingRule: Optional
+        - Name: ImageTopMargin
+          Id: g=961f658f67f1c0224553cba121b62ef4
+          Type: BaseDataVariableType
+          DataType: Size
+          ModellingRule: Optional
+        - Name: ImageRightMargin
+          Id: g=b7dab131fd4bcf338e908a8214b5bb0d
+          Type: BaseDataVariableType
+          DataType: Size
+          ModellingRule: Optional
+        - Name: ImageBottomMargin
+          Id: g=2b092796cd39242ebce199779fcbc9d4
+          Type: BaseDataVariableType
+          DataType: Size
+          ModellingRule: Optional
+        - Name: LeftMargin
+          Id: g=24acd38aa99e4698934bcef5059248cc
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 4.0
+        - Name: TopMargin
+          Id: g=9ee3ce5425a7201703cfa3112af6ec17
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 9.0
+        - Name: RightMargin
+          Id: g=adf8bbfe60c32c4ac7f8fe674ae4cbc8
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 4.0
+        - Name: BottomMargin
+          Id: g=c9284069f0862d45cbaf07401bf03751
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 2.0
+        - Name: DynamicColor
+          Id: g=1639162b7f9738902459169ee3864ac6
+          Type: BaseDataVariableType
+          DataType: Color
+          Value: "#ffffff"
+      - Name: ns=11;GridLayoutProperties
+        Id: g=0751e9baa5e36d8402569d4c5243c427
+        Type: GridLayoutProperties
+        DisplayName: {"NamespaceIndex":11,"TextId":"GridLayoutPropertiesDisplayName"}
+        Children:
+        - Name: RowStart
+          Id: g=009bde95e96bb4cf09f7cc7d5ac251b7
+          Type: BaseDataVariableType
+          DataType: Int32
+          ModellingRule: Optional
+        - Name: ColumnStart
+          Id: g=cfb1fdf2bc3d52e3cd8714892257b767
+          Type: BaseDataVariableType
+          DataType: Int32
+          ModellingRule: Optional
+      - Name: Visible
+        Id: g=4df5cc83c3b5d306333dea140d3b1875
+        Type: BaseDataVariableType
+        DataType: Boolean
+        Value: true
+        Children:
+        - Name: ExpressionEvaluator1
+          Id: g=571daad3a15963865198b592f2fcb2b6
+          Type: ExpressionEvaluator
+          Children:
+          - Name: Expression
+            Id: g=7ede270f534d8e5f5015b4401597e8e1
+            Type: BaseDataVariableType
+            DataType: String
+            ReferenceType: HasParameter
+            ModellingRule: Optional
+            Value: "{0}==2"
+          - Name: ns=9;Source0
+            Id: g=66bd3ef44ecb595825bb6012c177fe00
+            Type: BaseDataVariableType
+            DataType: BaseDataType
+            ReferenceType: HasSource
+            Children:
+            - Name: DynamicLink
+              Id: g=e73b5a4a998387dfae2412a51216f8b0
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "../../../../../Symbol Shape"
+    - Name: Diamond
+      Id: g=1ca17be280be6b190172cbb6cfcf5e28
+      Type: Rectangle
+      Children:
+      - Name: Width
+        Id: g=8bb292f6c561b9f40097226a3673ea4c
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 28.0
+      - Name: Height
+        Id: g=10142d5272214e7a927bd5d64e258fd9
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 28.0
+      - Name: LeftMargin
+        Id: g=b60566c50be3e0be0e94ecce484f945c
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 20.0
+      - Name: TopMargin
+        Id: g=e86c0f000f3b1340ac357b82e884395a
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+      - Name: HorizontalAlignment
+        Id: g=021d1961e4b2ef010390c2cc812f35e4
+        Type: BaseVariableType
+        DataType: HorizontalAlignment
+        ModellingRule: Optional
+      - Name: VerticalAlignment
+        Id: g=6e0d2e7cf0ae91182078d99efa844042
+        Type: BaseVariableType
+        DataType: VerticalAlignment
+        ModellingRule: Optional
+        Value: 2
+      - Name: Rotation
+        Id: g=b789c624e54f0ca2844dfe3a88ed1c48
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 45.0
+      - Name: CornerRadius
+        Id: g=b3252b4a76a49e402caf7fd375264f1e
+        Type: BaseDataVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 5.0
+      - Name: FillColor
+        Id: g=ab48d170bd869f7fa33331dc2cb4f0a6
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#ff9900"
+        Children:
+        - Name: IndicatorColors1
+          Id: g=e2653e0201f55dea146f3ec9067b1ad9
+          Type: Colors
+          Children:
+          - Name: Source
+            Id: g=753bd12699184283d2c64e6b016cd802
+            Type: BaseDataVariableType
+            DataType: BaseDataType
+            ReferenceType: HasSource
+            Children:
+            - Name: DynamicLink
+              Id: g=6c8ee2db78f05df4365b7659304da4bf
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "../../../../../Color"
+          - Name: Pairs
+            Id: g=5c1820e587c95f8df4a512e88fdf38f4
+            Type: BaseObjectType
+            Children:
+            - Name: Pair3
+              Id: g=fd429c5060d8f71a32ba18a60e5e8018
+              Type: ValueMapPair
+              Children:
+              - Name: Key
+                Id: g=ef12a7f572d2f026d0907fdb7b6503f2
+                Type: BaseDataVariableType
+                DataType: Int16
+                Value: 1
+              - Name: Value
+                Id: g=ada9861a43e89876f0a2f108a2e5a66f
+                Type: BaseDataVariableType
+                DataType: Color
+                Children:
+                - Name: DynamicLink
+                  Id: g=66f271c8968407db4699ffd382bc1694
+                  Type: DynamicLink
+                  DataType: NodePath
+                  Value: "/Objects/OptimateDemoProject/UI/Stylesheets/Jones/good"
+            - Name: Pair4
+              Id: g=515f74c99be644a1468afa8d61a43ad0
+              Type: ValueMapPair
+              Children:
+              - Name: Key
+                Id: g=da601777b457eb7f43213e1e591c4fc3
+                Type: BaseDataVariableType
+                DataType: Int16
+                Value: 2
+              - Name: Value
+                Id: g=6b50cacc139d2320c03f280f7fbac37c
+                Type: BaseDataVariableType
+                DataType: Color
+                Children:
+                - Name: DynamicLink
+                  Id: g=0806ccc21a49f5ef86c62bc3b64cd368
+                  Type: DynamicLink
+                  DataType: NodePath
+                  Value: "/Objects/OptimateDemoProject/UI/Stylesheets/Jones/neutral"
+            - Name: Pair5
+              Id: g=f8aaa0116e7b254804655d28e36dee8b
+              Type: ValueMapPair
+              Children:
+              - Name: Key
+                Id: g=38934d21a368d75e31c04b32dfc932fb
+                Type: BaseDataVariableType
+                DataType: Int16
+                Value: 3
+              - Name: Value
+                Id: g=1877e5a7b87a561fc7332ea07ed21992
+                Type: BaseDataVariableType
+                DataType: Color
+                Children:
+                - Name: DynamicLink
+                  Id: g=5c1cb3689c48c8ec6274e451424c5849
+                  Type: DynamicLink
+                  DataType: NodePath
+                  Value: "/Objects/OptimateDemoProject/UI/Stylesheets/Jones/warning"
+            - Name: Pair
+              Id: g=b80a5c035e8dbb2e03f27667ffe1f21a
+              Type: ValueMapPair
+              Children:
+              - Name: Key
+                Id: g=52f492a5d0b9f07b6e43a9dd5c2551f6
+                Type: BaseDataVariableType
+                DataType: Int16
+                Value: 4
+              - Name: Value
+                Id: g=b55f02317122be5ab1ed934fe701bb4c
+                Type: BaseDataVariableType
+                DataType: Color
+                Children:
+                - Name: DynamicLink
+                  Id: g=e27b0c727ad1f2d8edcc6bd23f69cc6f
+                  Type: DynamicLink
+                  DataType: NodePath
+                  Value: "/Objects/OptimateDemoProject/UI/Stylesheets/Jones/error"
+            - Name: Pair6
+              Id: g=b443a1fd4c8ad64ff8b1449db5e0fb1b
+              Type: ValueMapPair
+              Children:
+              - Name: Key
+                Id: g=d8a3eaf043b2d72f5e4e36313ad6dcd0
+                Type: BaseDataVariableType
+                DataType: Int16
+                Value: 5
+              - Name: Value
+                Id: g=752821b09477479b6516c6c34b670b63
+                Type: BaseDataVariableType
+                DataType: Color
+                Children:
+                - Name: DynamicLink
+                  Id: g=53f68a08dd1fa705ba55467f77d193a4
+                  Type: DynamicLink
+                  DataType: NodePath
+                  Value: "/Objects/OptimateDemoProject/UI/Stylesheets/Jones/dark grey 2"
+            - Name: Pair1
+              Id: g=8e4b2fdacd9407818b281631834a5ac5
+              Type: ValueMapPair
+              Children:
+              - Name: Key
+                Id: g=d558d4eac2dde706fae05ce55055371a
+                Type: BaseDataVariableType
+                DataType: Int16
+                Value: 6
+              - Name: Value
+                Id: g=1f6a1a28be73420393157fe5a9d2531c
+                Type: BaseDataVariableType
+                DataType: Color
+      - Name: RightMargin
+        Id: g=8d6307f759e1394c066e91704f9f8823
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 3.0
+      - Name: BottomMargin
+        Id: g=c156ff33a20b23848115ef60f4f2015c
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+      - Name: Indicator
+        Id: g=b03eed5e5fdf62b0c14c56d69be9a989
+        Type: Image
+        Children:
+        - Name: Path
+          Id: g=7c83c2dd0ee8d13e2a07b4f163757c2b
+          Type: BaseDataVariableType
+          DataType: ResourceUri
+          Children:
+          - Name: IndicatorSymbol1
+            Id: g=4db2fa81d9d655dcc054794afca147e2
+            Type: Symbols
+            Children:
+            - Name: Source
+              Id: g=dee453c99f0c583334fb9c0570b77f9f
+              Type: BaseDataVariableType
+              DataType: BaseDataType
+              ReferenceType: HasSource
+              Children:
+              - Name: DynamicLink
+                Id: g=6348a6dfe615eab3a1b38e7193ef2783
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "../../../../../../Symbol"
+            - Name: Pairs
+              Id: g=4a04f37d66c3736bc6a2ed9770be8b9a
+              Type: BaseObjectType
+              Children:
+              - Name: Pair2
+                Id: g=07a3fe67524cbf2f1d209188f856812d
+                Type: ValueMapPair
+                Children:
+                - Name: Key
+                  Id: g=973f26878103430ad9be6b8a5ff27f73
+                  Type: BaseDataVariableType
+                  DataType: Int16
+                  Value: 1
+                - Name: Value
+                  Id: g=4664c0f4945d334dd18abfc0bdbec3c3
+                  Type: BaseDataVariableType
+                  DataType: ResourceUri
+                  Value: "ns=36;%PROJECTDIR%/Graphics/Coesia - Library/indicator items/warning.svg"
+              - Name: Pair3
+                Id: g=32e6f37670a86b7d5d42620a5a1daa3e
+                Type: ValueMapPair
+                Children:
+                - Name: Key
+                  Id: g=7b1cd8379999e4e7563142d3274919c6
+                  Type: BaseDataVariableType
+                  DataType: Int16
+                  Value: 2
+                - Name: Value
+                  Id: g=945ba6be0088dfbc0bb27a06c1c15187
+                  Type: BaseDataVariableType
+                  DataType: ResourceUri
+                  Value: "ns=36;%PROJECTDIR%/Graphics/Coesia - Library/indicator items/good.svg"
+              - Name: Pair4
+                Id: g=2fc4eccae710a6b39e7e2add9a37737e
+                Type: ValueMapPair
+                Children:
+                - Name: Key
+                  Id: g=7623a208a2776a5ac332d89cb93423ff
+                  Type: BaseDataVariableType
+                  DataType: Int16
+                  Value: 3
+                - Name: Value
+                  Id: g=d306792be67188e73a3a513ab9968b29
+                  Type: BaseDataVariableType
+                  DataType: ResourceUri
+                  Value: "ns=36;%PROJECTDIR%/Graphics/Coesia - Library/indicator items/info.svg"
+              - Name: Pair5
+                Id: g=70931e72fc9c0e2cfb5f48870e26afca
+                Type: ValueMapPair
+                Children:
+                - Name: Key
+                  Id: g=c8bbd2ccdfb655c09378434488fdb910
+                  Type: BaseDataVariableType
+                  DataType: Int16
+                  Value: 4
+                - Name: Value
+                  Id: g=91f2737f020f10c026c72499c27926ff
+                  Type: BaseDataVariableType
+                  DataType: ResourceUri
+                  Value: "ns=36;%PROJECTDIR%/Graphics/Coesia - Library/indicator items/led-lit.svg"
+              - Name: Pair6
+                Id: g=de4091882715c29b07a0a0917dd76eda
+                Type: ValueMapPair
+                Children:
+                - Name: Key
+                  Id: g=e54961e04c274d387ad255cf44dab91f
+                  Type: BaseDataVariableType
+                  DataType: Int16
+                  Value: 5
+                - Name: Value
+                  Id: g=2f846bcd29171af788d7b2a9671270a8
+                  Type: BaseDataVariableType
+                  DataType: ResourceUri
+                  Value: "ns=36;%PROJECTDIR%/Graphics/Coesia - Library/indicator items/servo axis.svg"
+              - Name: Pair7
+                Id: g=2bc674692d0c0f84a36012766aa8bb73
+                Type: ValueMapPair
+                Children:
+                - Name: Key
+                  Id: g=4f58ffea39eb18c271f0f8dcb29161f9
+                  Type: BaseDataVariableType
+                  DataType: Int16
+                  Value: 6
+                - Name: Value
+                  Id: g=7c0e0f46d598bb180c96f1f864e6aaf7
+                  Type: BaseDataVariableType
+                  DataType: ResourceUri
+                  Value: "ns=36;%PROJECTDIR%/Graphics/Coesia - Library/indicator items/open.svg"
+              - Name: Pair8
+                Id: g=f2a75e4c585aade28dae11fdc3308b2f
+                Type: ValueMapPair
+                Children:
+                - Name: Key
+                  Id: g=e728580308a89c2ac8783dd87ba98e56
+                  Type: BaseDataVariableType
+                  DataType: Int16
+                  Value: 7
+                - Name: Value
+                  Id: g=865dc473a5e18e702519ea5f51f34149
+                  Type: BaseDataVariableType
+                  DataType: ResourceUri
+                  Value: "ns=36;%PROJECTDIR%/Graphics/Coesia - Library/indicator items/closed.svg"
+              - Name: Pair9
+                Id: g=904d671c64cdd4b411bf9279897021c1
+                Type: ValueMapPair
+                Children:
+                - Name: Key
+                  Id: g=6aec3b4a49a9ea1d2ffca44a07779079
+                  Type: BaseDataVariableType
+                  DataType: Int16
+                  Value: 8
+                - Name: Value
+                  Id: g=f764e6e06879eb8a7c5e9a79e3dad28d
+                  Type: BaseDataVariableType
+                  DataType: ResourceUri
+                  Value: "ns=36;%PROJECTDIR%/Graphics/Coesia - Library/indicator items/error.svg"
+              - Name: Pair1
+                Id: g=28f95ed2df9d4a4b63746c06bfabe5a6
+                Type: ValueMapPair
+                Children:
+                - Name: Key
+                  Id: g=d2698453f6f9dec8c3fc26418dcc0882
+                  Type: BaseDataVariableType
+                  DataType: Int16
+                  Value: 9
+                - Name: Value
+                  Id: g=f192bfd587d2e0aed1e7464e80d3029e
+                  Type: BaseDataVariableType
+                  DataType: ResourceUri
+                  Value: "ns=36;%PROJECTDIR%/Graphics/Coesia - Library/indicator items/exclaim.svg"
+              - Name: Pair10
+                Id: g=7c0900a2922f0c17a95b34fef8ea2bdf
+                Type: ValueMapPair
+                Children:
+                - Name: Key
+                  Id: g=99f71129cf38e3d561c83168f2d04178
+                  Type: BaseDataVariableType
+                  DataType: Int16
+                  Value: 10
+                - Name: Value
+                  Id: g=aac1df98af65255ef5e9ae3d8ba4305d
+                  Type: BaseDataVariableType
+                  DataType: ResourceUri
+        - Name: Width
+          Id: g=17ebb0d546d2d7bbb17b8ab27ee039f6
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 50.0
+        - Name: Height
+          Id: g=7d9ffa0ed7df71d35eaf1c5ab26c65c3
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 50.0
+        - Name: HorizontalAlignment
+          Id: g=2b67701caa7b42f954eb11fc43bfc768
+          Type: BaseVariableType
+          DataType: HorizontalAlignment
+          ModellingRule: Optional
+          Value: 3
+        - Name: VerticalAlignment
+          Id: g=565630e0739c59a4ea226895b30a0eaa
+          Type: BaseVariableType
+          DataType: VerticalAlignment
+          ModellingRule: Optional
+          Value: 3
+        - Name: ColorizationMode
+          Id: g=ca1c48ef3b2fbf691a34426490602828
+          Type: BaseDataVariableType
+          DataType: ColorizationModeEnum
+          ModellingRule: Optional
+        - Name: FillMode
+          Id: g=fbc950d350393ff79456bf96aabbd965
+          Type: BaseDataVariableType
+          DataType: FillModeEnum
+          ModellingRule: Optional
+        - Name: ImageLeftMargin
+          Id: g=a647874f9575104ab4d18eef899b85a6
+          Type: BaseDataVariableType
+          DataType: Size
+          ModellingRule: Optional
+        - Name: ImageTopMargin
+          Id: g=825b306e6e5208e43e7822c13be99d82
+          Type: BaseDataVariableType
+          DataType: Size
+          ModellingRule: Optional
+        - Name: ImageRightMargin
+          Id: g=1fccecb5846868c8d3fe39e8ca5a118f
+          Type: BaseDataVariableType
+          DataType: Size
+          ModellingRule: Optional
+        - Name: ImageBottomMargin
+          Id: g=421b7cd0e6a1e563065f88453815a350
+          Type: BaseDataVariableType
+          DataType: Size
+          ModellingRule: Optional
+        - Name: LeftMargin
+          Id: g=87c1b3262ec34a0421862d67420f2221
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 2.0
+        - Name: TopMargin
+          Id: g=5060b054735a43292871f6a6ae006c55
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 2.0
+        - Name: RightMargin
+          Id: g=2134fbec5909abcf92f43f73748b3af0
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 2.0
+        - Name: BottomMargin
+          Id: g=deae36614de06dbb3ced680699b1c4c4
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 2.0
+        - Name: Rotation
+          Id: g=b1029a830cde31762f625a5b79c789ee
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: -45.0
+        - Name: DynamicColor
+          Id: g=e46b8678dcf20d0a25c2ab7ecc73e750
+          Type: BaseDataVariableType
+          DataType: Color
+          ModellingRule: Optional
+          Value: "#ffffff"
+      - Name: Visible
+        Id: g=b1b72e7d5aa3cbd18c9378026667b306
+        Type: BaseDataVariableType
+        DataType: Boolean
+        Value: true
+        Children:
+        - Name: ExpressionEvaluator1
+          Id: g=8531b0075c1693355cbc5112479f4e82
+          Type: ExpressionEvaluator
+          Children:
+          - Name: Expression
+            Id: g=b518b82ad0c6749e6199a6db26740eed
+            Type: BaseDataVariableType
+            DataType: String
+            ReferenceType: HasParameter
+            ModellingRule: Optional
+            Value: "{0}==3"
+          - Name: ns=9;Source0
+            Id: g=264a0c06e4675fc0b21fec03f0d50273
+            Type: BaseDataVariableType
+            DataType: BaseDataType
+            ReferenceType: HasSource
+            Children:
+            - Name: DynamicLink
+              Id: g=0dd8405c1addb5a088c76a58e83b995a
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "../../../../../Symbol Shape"
+      - Name: Opacity
+        Id: g=4c45e5a93a1d03115857dbdf504b37d7
+        Type: BaseVariableType
+        DataType: Float
+        ModellingRule: Optional
+        Value: 100.0
+      - Name: ns=11;GridLayoutProperties
+        Id: g=f59fa4880983cd6e90b36a4f56167de2
+        Type: GridLayoutProperties
+        DisplayName: {"NamespaceIndex":11,"TextId":"GridLayoutPropertiesDisplayName"}
+        Children:
+        - Name: ColumnStart
+          Id: g=b781b3241f7f7bcb924ac852467dc388
+          Type: BaseDataVariableType
+          DataType: Int32
+          ModellingRule: Optional
+        - Name: RowSpan
+          Id: g=7327d13fc4cb69c34239a8b36f1ed45d
+          Type: BaseDataVariableType
+          DataType: Int32
+          ModellingRule: Optional
+          Value: 1
+        - Name: RowStart
+          Id: g=f2387fb2d08b47227196a51171525241
+          Type: BaseDataVariableType
+          DataType: Int32
+          ModellingRule: Optional
+    - Name: Circle
+      Id: g=a8353506df198d59ea8424f14d5bf407
+      Type: Ellipse
+      Children:
+      - Name: Width
+        Id: g=92057861634b71761e17ee0483a05998
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 32.0
+      - Name: Height
+        Id: g=67cffb6e2f094eaecf158c9e422030bd
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 32.0
+      - Name: BorderThickness
+        Id: g=f06a06f8ff0f5fd8a986e15d813e77e6
+        Type: BaseDataVariableType
+        DataType: Size
+        ModellingRule: Optional
+      - Name: HorizontalAlignment
+        Id: g=0317d3bfa88e594a08aea5f4be64219f
+        Type: BaseVariableType
+        DataType: HorizontalAlignment
+        ModellingRule: Optional
+      - Name: VerticalAlignment
+        Id: g=c8f821f6d85ffa6d8000afcbde3ffd69
+        Type: BaseVariableType
+        DataType: VerticalAlignment
+        ModellingRule: Optional
+        Value: 2
+      - Name: FillColor
+        Id: g=c2290faf607a46fb94b7131dd9f94b44
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#ff9900"
+        Children:
+        - Name: IndicatorColors1
+          Id: g=57ed07204c70de09d4f4664d9af2ffc9
+          Type: Colors
+          Children:
+          - Name: Source
+            Id: g=3d34b104b1982326f5594f5e0df4bee8
+            Type: BaseDataVariableType
+            DataType: BaseDataType
+            ReferenceType: HasSource
+            Children:
+            - Name: DynamicLink
+              Id: g=f425fce10ced66a2b0290341df18d8cf
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "../../../../../Color"
+          - Name: Pairs
+            Id: g=1bb2b334c899c437d0e0f12c672731ec
+            Type: BaseObjectType
+            Children:
+            - Name: Pair3
+              Id: g=5cdc17b7b42dce35402b484513e52f73
+              Type: ValueMapPair
+              Children:
+              - Name: Key
+                Id: g=37984dd5407ba48a9405d1ad6a75804f
+                Type: BaseDataVariableType
+                DataType: Int16
+                Value: 1
+              - Name: Value
+                Id: g=cb8f81488ca09137242249c34d05df67
+                Type: BaseDataVariableType
+                DataType: Color
+                Children:
+                - Name: DynamicLink
+                  Id: g=6606d5eb8919402332802d2bf71aff5e
+                  Type: DynamicLink
+                  DataType: NodePath
+                  Value: "/Objects/OptimateDemoProject/UI/Stylesheets/Jones/good"
+            - Name: Pair4
+              Id: g=5f085dabf5bdf5b900b8b82dc3303210
+              Type: ValueMapPair
+              Children:
+              - Name: Key
+                Id: g=d61825fce98eb3c70069767a904d4c2f
+                Type: BaseDataVariableType
+                DataType: Int16
+                Value: 2
+              - Name: Value
+                Id: g=c67ce84ef13c95f4cfc42b848fe8dfcf
+                Type: BaseDataVariableType
+                DataType: Color
+                Children:
+                - Name: DynamicLink
+                  Id: g=5c511afdae8047950a57cf7d9d3015f1
+                  Type: DynamicLink
+                  DataType: NodePath
+                  Value: "/Objects/OptimateDemoProject/UI/Stylesheets/Jones/neutral"
+            - Name: Pair5
+              Id: g=cf8901e7f5b6c80d0a6444cd305e39fe
+              Type: ValueMapPair
+              Children:
+              - Name: Key
+                Id: g=e7634aa4d582fc4dbaca390d3345f62f
+                Type: BaseDataVariableType
+                DataType: Int16
+                Value: 3
+              - Name: Value
+                Id: g=5cd4be35a3e09712e9a103d9870a62f7
+                Type: BaseDataVariableType
+                DataType: Color
+                Children:
+                - Name: DynamicLink
+                  Id: g=cc8410018cb4b354c061440d0a9c3998
+                  Type: DynamicLink
+                  DataType: NodePath
+                  Value: "/Objects/OptimateDemoProject/UI/Stylesheets/Jones/warning"
+            - Name: Pair
+              Id: g=b3418288c57acac8a259a5a6ae0d69a4
+              Type: ValueMapPair
+              Children:
+              - Name: Key
+                Id: g=55f52132e4ab53f004ba56ca2a66ca61
+                Type: BaseDataVariableType
+                DataType: Int16
+                Value: 4
+              - Name: Value
+                Id: g=9a48c8c7e5fd5fbc441e244cb866eaaa
+                Type: BaseDataVariableType
+                DataType: Color
+                Children:
+                - Name: DynamicLink
+                  Id: g=52848f59eb93f983f2b0e78d54a3dc52
+                  Type: DynamicLink
+                  DataType: NodePath
+                  Value: "/Objects/OptimateDemoProject/UI/Stylesheets/Jones/error"
+            - Name: Pair6
+              Id: g=799fd8582f09dbc8a6faf6b54c9676ca
+              Type: ValueMapPair
+              Children:
+              - Name: Key
+                Id: g=8e89499faacead079c56322570f964b8
+                Type: BaseDataVariableType
+                DataType: Int16
+                Value: 5
+              - Name: Value
+                Id: g=cd0d8fef80b608fe1a9d1da5f49a493f
+                Type: BaseDataVariableType
+                DataType: Color
+                Children:
+                - Name: DynamicLink
+                  Id: g=4125ef3ee9972399ce087f21d4595152
+                  Type: DynamicLink
+                  DataType: NodePath
+                  Value: "/Objects/OptimateDemoProject/UI/Stylesheets/Jones/dark grey 2"
+            - Name: Pair1
+              Id: g=ea3b603b201a58868fe8b9f8953f9020
+              Type: ValueMapPair
+              Children:
+              - Name: Key
+                Id: g=0692cc9d0c7f0bd2ca5ad0cb0c076c42
+                Type: BaseDataVariableType
+                DataType: Int16
+                Value: 6
+              - Name: Value
+                Id: g=639369f400c0a041a945791d82495caa
+                Type: BaseDataVariableType
+                DataType: Color
+      - Name: HitTestVisible
+        Id: g=68a2e92a3d39356be490aaba9abffbab
+        Type: BaseDataVariableType
+        DataType: Boolean
+        ModellingRule: Optional
+      - Name: BorderColor
+        Id: g=c10ec6d4db7b61fc2e7b04dea82a7b18
+        Type: BaseDataVariableType
+        DataType: Color
+      - Name: Indicator
+        Id: g=70006e50e3c5e8f8f099ab4d21ee0ec2
+        Type: Image
+        Children:
+        - Name: Path
+          Id: g=49d4d5dda19946898b899f3c2969e5a0
+          Type: BaseDataVariableType
+          DataType: ResourceUri
+          Children:
+          - Name: IndicatorSymbol1
+            Id: g=67f36779ebc8ee59038694d75ff8adc0
+            Type: Symbols
+            Children:
+            - Name: Source
+              Id: g=2632e2e4b16a746eb65da3abec942774
+              Type: BaseDataVariableType
+              DataType: BaseDataType
+              ReferenceType: HasSource
+              Children:
+              - Name: DynamicLink
+                Id: g=b3a6dabefd4bf1a7a7d17ee25d5883ec
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "../../../../../../Symbol"
+            - Name: Pairs
+              Id: g=a20e356541ddaf8f223955861d525d4a
+              Type: BaseObjectType
+              Children:
+              - Name: Pair2
+                Id: g=54f627eb6466160ede6aca98eb160c15
+                Type: ValueMapPair
+                Children:
+                - Name: Key
+                  Id: g=bfd3449b331c9213865d062cdeec6eca
+                  Type: BaseDataVariableType
+                  DataType: Int16
+                  Value: 1
+                - Name: Value
+                  Id: g=30a208004928343d5f2cd9de6c4315ed
+                  Type: BaseDataVariableType
+                  DataType: ResourceUri
+                  Value: "ns=36;%PROJECTDIR%/Graphics/Coesia - Library/indicator items/warning.svg"
+              - Name: Pair3
+                Id: g=8bd7b8c855c13f8dbd4cb56a17980023
+                Type: ValueMapPair
+                Children:
+                - Name: Key
+                  Id: g=6a4bf5cf761f363ec86b3ba5f521efbb
+                  Type: BaseDataVariableType
+                  DataType: Int16
+                  Value: 2
+                - Name: Value
+                  Id: g=e1f34754d3e0464613f9cd5db19c0abf
+                  Type: BaseDataVariableType
+                  DataType: ResourceUri
+                  Value: "ns=36;%PROJECTDIR%/Graphics/Coesia - Library/indicator items/good.svg"
+              - Name: Pair4
+                Id: g=d1e59582829c4c5fbeb6f0a2b39c354b
+                Type: ValueMapPair
+                Children:
+                - Name: Key
+                  Id: g=29a7eefa764b45f482ac8a843634937a
+                  Type: BaseDataVariableType
+                  DataType: Int16
+                  Value: 3
+                - Name: Value
+                  Id: g=c33a24af6e4a16ae26561f1c118ab898
+                  Type: BaseDataVariableType
+                  DataType: ResourceUri
+                  Value: "ns=36;%PROJECTDIR%/Graphics/Coesia - Library/indicator items/info.svg"
+              - Name: Pair5
+                Id: g=23d69d638e15736a2ccf2e6e9cdd7e0c
+                Type: ValueMapPair
+                Children:
+                - Name: Key
+                  Id: g=f9c54d5d0d9a58b33cec6610deb56c62
+                  Type: BaseDataVariableType
+                  DataType: Int16
+                  Value: 4
+                - Name: Value
+                  Id: g=4c003b32b779a2f9521bd811fad2e737
+                  Type: BaseDataVariableType
+                  DataType: ResourceUri
+                  Value: "ns=36;%PROJECTDIR%/Graphics/Coesia - Library/indicator items/led-lit.svg"
+              - Name: Pair6
+                Id: g=7fc95a3c239fb52a451b3bc46408353d
+                Type: ValueMapPair
+                Children:
+                - Name: Key
+                  Id: g=296da3f810a7c35673816539b007612f
+                  Type: BaseDataVariableType
+                  DataType: Int16
+                  Value: 5
+                - Name: Value
+                  Id: g=53c8b268d444079d4a1b9273868741ec
+                  Type: BaseDataVariableType
+                  DataType: ResourceUri
+                  Value: "ns=36;%PROJECTDIR%/Graphics/Coesia - Library/indicator items/servo axis.svg"
+              - Name: Pair7
+                Id: g=e6cff88eb982b910ff3ecc871419039e
+                Type: ValueMapPair
+                Children:
+                - Name: Key
+                  Id: g=e4dfc2f8486203bd60f1e69bbd57071c
+                  Type: BaseDataVariableType
+                  DataType: Int16
+                  Value: 6
+                - Name: Value
+                  Id: g=6dc631a5c4d75a6a564c1a389cc18c3f
+                  Type: BaseDataVariableType
+                  DataType: ResourceUri
+                  Value: "ns=36;%PROJECTDIR%/Graphics/Coesia - Library/indicator items/open.svg"
+              - Name: Pair8
+                Id: g=152184b0f57bb458e30849f07396ef0c
+                Type: ValueMapPair
+                Children:
+                - Name: Key
+                  Id: g=165157e0920093aa08344771b210a5b8
+                  Type: BaseDataVariableType
+                  DataType: Int16
+                  Value: 7
+                - Name: Value
+                  Id: g=a55d088d39d73576c9afc7be752b225e
+                  Type: BaseDataVariableType
+                  DataType: ResourceUri
+                  Value: "ns=36;%PROJECTDIR%/Graphics/Coesia - Library/indicator items/closed.svg"
+              - Name: Pair9
+                Id: g=6cfa303852b63965d7e835d9f7a26f5e
+                Type: ValueMapPair
+                Children:
+                - Name: Key
+                  Id: g=f2bb7bce94cb757687dae76acb12319d
+                  Type: BaseDataVariableType
+                  DataType: Int16
+                  Value: 8
+                - Name: Value
+                  Id: g=39c51cc458c3992335eb01c18ba83b6c
+                  Type: BaseDataVariableType
+                  DataType: ResourceUri
+                  Value: "ns=36;%PROJECTDIR%/Graphics/Coesia - Library/indicator items/error.svg"
+              - Name: Pair1
+                Id: g=27d6269d16bcf401eaf9cf4ca83f8e37
+                Type: ValueMapPair
+                Children:
+                - Name: Key
+                  Id: g=a2f4b84e2d279fe538b07b8d476437fc
+                  Type: BaseDataVariableType
+                  DataType: Int16
+                  Value: 9
+                - Name: Value
+                  Id: g=b5471847d3d779e243134133849c2809
+                  Type: BaseDataVariableType
+                  DataType: ResourceUri
+                  Value: "ns=36;%PROJECTDIR%/Graphics/Coesia - Library/indicator items/exclaim.svg"
+              - Name: Pair10
+                Id: g=46028b3efda659e7a8d2b864f2972d62
+                Type: ValueMapPair
+                Children:
+                - Name: Key
+                  Id: g=fe455e330843e1e656b25132c09be497
+                  Type: BaseDataVariableType
+                  DataType: Int16
+                  Value: 10
+                - Name: Value
+                  Id: g=d0964f45be99557f1eb039e9a0cb8f6f
+                  Type: BaseDataVariableType
+                  DataType: ResourceUri
+        - Name: Width
+          Id: g=4508fd06585455bef6d0237a2010ef35
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 50.0
+        - Name: Height
+          Id: g=fe438779dcc639993e4c954a4133382b
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 50.0
+        - Name: HorizontalAlignment
+          Id: g=3987527522cd4dac15ff54077c28c042
+          Type: BaseVariableType
+          DataType: HorizontalAlignment
+          ModellingRule: Optional
+          Value: 3
+        - Name: VerticalAlignment
+          Id: g=7aa21447ec509dc32bfde041d4b6a847
+          Type: BaseVariableType
+          DataType: VerticalAlignment
+          ModellingRule: Optional
+          Value: 3
+        - Name: ColorizationMode
+          Id: g=3efb76285819375200a7eaa18bfa01b0
+          Type: BaseDataVariableType
+          DataType: ColorizationModeEnum
+          ModellingRule: Optional
+        - Name: FillMode
+          Id: g=627d7bc110d8ae964ac725c2c990a5b3
+          Type: BaseDataVariableType
+          DataType: FillModeEnum
+          ModellingRule: Optional
+        - Name: ImageLeftMargin
+          Id: g=0f4edc3107c4040cdaa56e4297aa4c55
+          Type: BaseDataVariableType
+          DataType: Size
+          ModellingRule: Optional
+        - Name: ImageTopMargin
+          Id: g=dc549304dc4d95d146f48b2d5d066da8
+          Type: BaseDataVariableType
+          DataType: Size
+          ModellingRule: Optional
+        - Name: ImageRightMargin
+          Id: g=f3f7d288c44916e148df503dfd2f7112
+          Type: BaseDataVariableType
+          DataType: Size
+          ModellingRule: Optional
+        - Name: ImageBottomMargin
+          Id: g=acd7e46e5e31d47ba013f061fa429844
+          Type: BaseDataVariableType
+          DataType: Size
+          ModellingRule: Optional
+        - Name: LeftMargin
+          Id: g=42e33cac2723e931c44b8f6b61ccf2e5
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 4.0
+        - Name: TopMargin
+          Id: g=8bf6e58486ddde43c05a6db9ecc350c4
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 4.0
+        - Name: RightMargin
+          Id: g=cd2d10d6793c479ee11459bd199a6101
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 4.0
+        - Name: BottomMargin
+          Id: g=887682837305539efee193d39a9f89c5
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 4.0
+        - Name: DynamicColor
+          Id: g=b1c430e2e2dd2b782da5cb5694db69e1
+          Type: BaseDataVariableType
+          DataType: Color
+          ModellingRule: Optional
+          Value: "#ffffff"
+      - Name: LeftMargin
+        Id: g=6e56e5e4f016a411d718a794ebc7b0d4
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 18.0
+      - Name: Enabled
+        Id: g=dc023c94f9505ab5eea4f3fc749c9027
+        Type: BaseDataVariableType
+        DataType: Boolean
+        Value: true
+      - Name: Visible
+        Id: g=17cbfa3276c13404fd68a20f8d88b699
+        Type: BaseDataVariableType
+        DataType: Boolean
+        Value: true
+        Children:
+        - Name: ExpressionEvaluator1
+          Id: g=69769af5ae5244dd8739ae0190ac21d8
+          Type: ExpressionEvaluator
+          Children:
+          - Name: Expression
+            Id: g=a2e3a21d73b7ca6f587b356475666941
+            Type: BaseDataVariableType
+            DataType: String
+            ReferenceType: HasParameter
+            ModellingRule: Optional
+            Value: "{0}==1"
+          - Name: ns=9;Source0
+            Id: g=fa047149d1560ed66c778b68a4a0aff9
+            Type: BaseDataVariableType
+            DataType: BaseDataType
+            ReferenceType: HasSource
+            Children:
+            - Name: DynamicLink
+              Id: g=712b6b2bd9124d446cc0e0f2f746caf6
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "../../../../../Symbol Shape"
+      - Name: ns=11;GridLayoutProperties
+        Id: g=3e66d5de368cd77afa7b5aefb11a8941
+        Type: GridLayoutProperties
+        DisplayName: {"NamespaceIndex":11,"TextId":"GridLayoutPropertiesDisplayName"}
+        Children:
+        - Name: ColumnStart
+          Id: g=6042e27dd19d6b6fce1da9a47df43da5
+          Type: BaseDataVariableType
+          DataType: Int32
+          ModellingRule: Optional
+        - Name: RowStart
+          Id: g=afb2aadfeb7c88be687ee7e15bd9dcd8
+          Type: BaseDataVariableType
+          DataType: Int32
+          ModellingRule: Optional
+  - Name: Text
+    Id: g=48c1875d149e6a67285f98c89541de22
+    Type: Label
+    Children:
+    - Name: Text
+      Id: g=8aeb8a40b1549b82e83de5da10c5cd2c
+      Type: BaseDataVariableType
+      DataType: LocalizedText
+      Children:
+      - Name: DynamicLink
+        Id: g=aa7f6f6d0eecbd1ebe90245f63feffcc
+        Type: DynamicLink
+        DataType: NodePath
+        Value: "../../MessageText"
+    - Name: LeftMargin
+      Id: g=64418e1c8368975c922e80150d490cac
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 68.0
+    - Name: TopMargin
+      Id: g=2917ab4e2f9478e0a2a5ee506b424aa0
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 18.0
+    - Name: HorizontalAlignment
+      Id: g=9c76f2c828d922ba0006593dcaa66b10
+      Type: BaseVariableType
+      DataType: HorizontalAlignment
+      ModellingRule: Optional
+      Value: 3
+    - Name: VerticalAlignment
+      Id: g=664eebdbbe80d8bc6deab1f546825cae
+      Type: BaseVariableType
+      DataType: VerticalAlignment
+      ModellingRule: Optional
+      Value: 3
+    - Name: RightMargin
+      Id: g=f7b61d6e326ee5a7f44c642133d22651
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 18.0
+    - Name: BottomMargin
+      Id: g=0c9b42ab33b1e1451be3bf89b4214411
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 18.0
+    - Name: ns=11;GridLayoutProperties
+      Id: g=2cb82740efc3b15d2eecbccd326dd01c
+      Type: GridLayoutProperties
+      DisplayName: {"NamespaceIndex":11,"TextId":"GridLayoutPropertiesDisplayName"}
+      Children:
+      - Name: ColumnStart
+        Id: g=ea4f71fa84285f89931d47eae69f75d7
+        Type: BaseDataVariableType
+        DataType: Int32
+        ModellingRule: Optional
+        Value: 1
+      - Name: RowSpan
+        Id: g=56708d26e8024cb956ad1ff1433c9a2a
+        Type: BaseDataVariableType
+        DataType: Int32
+        ModellingRule: Optional
+        Value: 1
+    - Name: Style
+      Id: g=efae426fa019a41bad7c738d17170bce
+      Type: BaseDataVariableType
+      DataType: String
+      ModellingRule: Optional
+      Value: "20px"
+    - Name: WordWrap
+      Id: g=178bcf233ec257388936e928853580b2
+      Type: BaseDataVariableType
+      DataType: Boolean
+      ModellingRule: Optional
+      Value: true
+    - Name: Elide
+      Id: g=5e508299c956ac0cccf9d150cc7d8b38
+      Type: BaseDataVariableType
+      DataType: ElideEnum
+      ModellingRule: Optional
+      Value: 3
+    - Name: TextVerticalAlignment
+      Id: g=04e063372f2f104c672c1dc6f2c775ec
+      Type: BaseVariableType
+      DataType: TextVerticalAlignment
+      ModellingRule: Optional
+      Value: 1
+    - Name: TextColor
+      Id: g=930f1c4bc249d83ae64050e57ef9caf5
+      Type: BaseDataVariableType
+      DataType: Color
+      ModellingRule: Optional
+      Value: "#000000"
+  - Name: VerticalAlignment
+    Id: g=001950a5664565de153ca4fc7282b14b
+    Type: BaseVariableType
+    DataType: VerticalAlignment
+    ModellingRule: Optional
+  - Name: Width
+    Id: g=9a037c01cf0909c90aa8cd540dfa3361
+    Type: BaseVariableType
+    DataType: Size
+    ModellingRule: Optional
+    Value: 240.0
+  - Name: Height
+    Id: g=4236d50c39615a692976d5b9850d57cb
+    Type: BaseVariableType
+    DataType: Size
+    ModellingRule: Optional
+    Value: 68.0
+  - Name: MessageText
+    Id: g=ab28743157358f119da4bc4998c59209
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "This is a test"

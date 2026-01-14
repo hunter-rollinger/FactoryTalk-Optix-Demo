@@ -1,5 +1,5 @@
 Name: Popups
-Id: g=f8b71cb1a8cbac81b222b21159c5843a
+Id: g=42f6cc1630bcab4a5f80ed4b8c29e9af
 Type: FolderType
 Children:
 - Name: AlarmPopup
@@ -1539,251 +1539,6 @@ Children:
         DataType: VerticalAlignment
         ModellingRule: Optional
         Value: 3
-    - Name: Recipe Information
-      Id: g=c67672e033d0b2f905752f7f1e38d943
-      Type: Shift_StatisticDisplay
-      Children:
-      - Name: Label Font Color
-        Id: g=009242a61ca1a5ffe8f1f3ace3491884
-        Type: BaseDataVariableType
-        DataType: Color
-        Children:
-        - Name: DynamicLink
-          Id: g=12835d534291a8ba91a218f905bc4440
-          Type: DynamicLink
-          DataType: NodePath
-          Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Light Grey/Light Grey 100"
-      - Name: VerticalLayout
-        Id: g=3256845bdac3ff3e91806e874a8c738a
-        Type: ColumnLayout
-        Children:
-        - Name: Header
-          Id: g=f5f6dee1101a51a2800a46e987d978c5
-          Type: Label
-          Children:
-          - Name: Text
-            Id: g=83fed2d1aed987212e947ddb55cc55c3
-            Type: BaseDataVariableType
-            DataType: LocalizedText
-            Children:
-            - Name: DynamicLink
-              Id: g=f5d448694f5ea2386a57fd6dc6fe051a
-              Type: DynamicLink
-              DataType: NodePath
-              Value: "../../../Label Text"
-          - Name: TextColor
-            Id: g=4357fdb6af54266ad35a597e0c05d907
-            Type: BaseDataVariableType
-            DataType: Color
-            Value: "#000000"
-            Children:
-            - Name: DynamicLink
-              Id: g=0f5462eaa01e85064a864299da359972
-              Type: DynamicLink
-              DataType: NodePath
-              Value: "../../../Label Font Color"
-          - Name: FontSize
-            Id: g=b7ab1ee059f363133970ba28a2dff0c1
-            Type: BaseDataVariableType
-            DataType: Size
-            Value: -1.0
-            Children:
-            - Name: DynamicLink
-              Id: g=2be1e0f9c65a1389988d49f7e6ea1736
-              Type: DynamicLink
-              DataType: NodePath
-              Value: "../../../Label Font Size"
-        - Name: Content
-          Id: g=82d8d5a1b9582d0bd3703754e71bb165
-          Type: EditableLabel
-          Children:
-          - Name: Text
-            Id: g=629c08f5d86f78b4cc04d6092b2d8f0c
-            Type: BaseDataVariableType
-            DataType: LocalizedText
-            Children:
-            - Name: DynamicLink
-              Id: g=8aad3a617800c9f79ed267466f36c4f1
-              Type: DynamicLink
-              DataType: NodePath
-              Value: "../../../Value Text"
-          - Name: FontSize
-            Id: g=91dd8dbc3a5125f6803d0e02dad6b20c
-            Type: BaseDataVariableType
-            DataType: Size
-            Value: -1.0
-            Children:
-            - Name: DynamicLink
-              Id: g=9d5a95d3c1b1d1d735fe5ba738f75cb9
-              Type: DynamicLink
-              DataType: NodePath
-              Value: "../../../Value Font Size"
-          - Name: TextColor
-            Id: g=b94e06c644f0f785363552929c2b9059
-            Type: BaseDataVariableType
-            DataType: Color
-            Value: "#000000"
-            Children:
-            - Name: DynamicLink
-              Id: g=01018eb12fb8ebd6ecef03e5afac157e
-              Type: DynamicLink
-              DataType: NodePath
-              Value: "../../../Value Font Color"
-          - Name: Enabled
-            Id: g=b43ebe8500a16793087a8fe6a4bd7f0b
-            Type: BaseDataVariableType
-            DataType: Boolean
-            Value: true
-          - Name: Editable
-            Id: g=f09c0a2768dee66b3f233b926719b570
-            Type: BaseDataVariableType
-            DataType: Boolean
-            Value: true
-            Children:
-            - Name: DynamicLink
-              Id: g=3fe6b349801030e9240e1db672dfb169
-              Type: DynamicLink
-              DataType: NodePath
-              Value: "../../../Editable"
-          - Name: Elide
-            Id: g=410e81fe89777f7d0bf50d6639da35b0
-            Type: BaseDataVariableType
-            DataType: ElideEnum
-            ModellingRule: Optional
-            Value: 3
-          - Name: TopMargin
-            Id: g=6b01e3868eb34866bfdfa91060b2eb70
-            Type: BaseVariableType
-            DataType: Size
-            ModellingRule: Optional
-            Value: 5.0
-      - Name: Value Font Color
-        Id: g=1bfe893732819f4fcb62ecca09600c15
-        Type: BaseDataVariableType
-        DataType: Color
-        Children:
-        - Name: DynamicLink
-          Id: g=21224799cdae3f26a7df3229109a5501
-          Type: DynamicLink
-          DataType: NodePath
-          Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Light Grey/Light Grey 100"
-      - Name: Label Font Size
-        Id: g=846ef83dbcbf2d2ccc4968cc488fd9c8
-        Type: BaseDataVariableType
-        DataType: Int32
-        Value: 26
-      - Name: Value Font Size
-        Id: g=f761acf9b2681cebd5630499a4d97f58
-        Type: BaseDataVariableType
-        DataType: Int32
-        Value: 53
-      - Name: Label Text
-        Id: g=e1094107e6fc483bde8be55de49a9510
-        Type: BaseDataVariableType
-        DataType: String
-        Value: "Header"
-        Children:
-        - Name: StringFormatter1
-          Id: g=660e449e4484ce78f58c28c9bc8b9a32
-          Type: StringFormatter
-          Children:
-          - Name: Format
-            Id: g=30d46a1c32c06ae6f24ca98af8e86384
-            Type: BaseDataVariableType
-            DataType: LocalizedText
-            ReferenceType: HasParameter
-            ModellingRule: Optional
-            Value: {"LocaleId":"en-US","Text":"{0,0:u}"}
-          - Name: ns=9;Source0
-            Id: g=2bc544de335bffdc06b601a55feb1452
-            Type: BaseDataVariableType
-            DataType: BaseDataType
-            ReferenceType: HasSource
-            Children:
-            - Name: StringFormatter1
-              Id: g=74e3ca11843db404594a2fe36d13be9f
-              Type: StringFormatter
-              Children:
-              - Name: Format
-                Id: g=b5134ac39284c8b80c5fcf361415369b
-                Type: BaseDataVariableType
-                DataType: LocalizedText
-                ReferenceType: HasParameter
-                ModellingRule: Optional
-                Value: {"NamespaceIndex":36,"TextId":"Recipe Name"}
-      - Name: Value Text
-        Id: g=c56e48343871d941c2cf143dc82c526e
-        Type: BaseDataVariableType
-        DataType: String
-        Value: "Value"
-        Children:
-        - Name: StringFormatter1
-          Id: g=2d6c301acf54ad078fc91e3022dde32b
-          Type: StringFormatter
-          Children:
-          - Name: Format
-            Id: g=60a1d578e05118ad37cc0a859326b65e
-            Type: BaseDataVariableType
-            DataType: LocalizedText
-            ReferenceType: HasParameter
-            ModellingRule: Optional
-            Value: {"LocaleId":"en-US","Text":"{0,0:u}"}
-          - Name: ns=9;Source0
-            Id: g=7fc877cd84afada7a479bcb279409b0f
-            Type: BaseDataVariableType
-            DataType: BaseDataType
-            ReferenceType: HasSource
-            Children:
-            - Name: DynamicLink
-              Id: g=78c949d3b8b7d9e8cbcc4c83fe5648eb
-              Type: DynamicLink
-              DataType: NodePath
-              Value: "/Objects/OptimateDemoProject/Model/Internal/Current Recipe/Recipe Name"
-              Children:
-              - Name: Mode
-                Id: g=911d59844619268f96c51c33fb2862ce
-                Type: BaseVariableType
-                DataType: DynamicLinkMode
-                ModellingRule: Optional
-                Value: 2
-          - Name: Mode
-            Id: g=3a2240493ae31ceb5ed5008632808480
-            Type: PropertyType
-            DataType: DynamicLinkMode
-            ReferenceType: HasComponent
-            ModellingRule: Optional
-            Value: 2
-      - Name: LeftMargin
-        Id: g=bd027207933a16dadc55b01c8e944745
-        Type: BaseVariableType
-        DataType: Size
-        ModellingRule: Optional
-        Value: 66.0
-      - Name: TopMargin
-        Id: g=01ef698cbf69d0aab571a2ec3c586d81
-        Type: BaseVariableType
-        DataType: Size
-        ModellingRule: Optional
-        Value: 212.0
-      - Name: Editable
-        Id: g=62e1f60e51858b6963bbbeb36c324550
-        Type: BaseDataVariableType
-        DataType: Boolean
-      - Name: Height
-        Id: g=e0e4e99700d57b5d21b148d02c4cfd2d
-        Type: BaseVariableType
-        DataType: Size
-        ModellingRule: Optional
-        Value: 178.0
-      - Name: Width
-        Id: g=b81a2a4f2c6981f2607197b31fd90c57
-        Type: BaseVariableType
-        DataType: Size
-        ModellingRule: Optional
-        Value: 450.0
-      - Name: VirtualKeyboardAttachedProperties
-        Id: g=56ccd17cfdb6adf89a12c09c68e1c4ef
-        Type: VirtualKeyboardAttachedProperties
     - Name: FillMode
       Id: g=8a5adffc10f09aa57d5a04480f177762
       Type: BaseDataVariableType
@@ -1795,775 +1550,1220 @@ Children:
       DataType: Boolean
       ModellingRule: Optional
       Value: true
-    - Name: PackML
-      Id: g=7f214525c2f0fd6e3c7f608e44bcd1de
+    - Name: Recipe Information
+      Id: g=cab7fc1ac88aa6754d676b96bc7017a1
       Type: Shift_StatisticDisplay
       Children:
       - Name: Label Font Color
-        Id: g=870393f06cf5385a9c52a41d6f3cd69d
+        Id: g=a20b628e90f6e34ca7eda5213ea817fa
         Type: BaseDataVariableType
         DataType: Color
         Children:
         - Name: DynamicLink
-          Id: g=b32a73250dad64555e4508c437eda332
+          Id: g=5d03fdc6198e11404b225adfe3533c9d
           Type: DynamicLink
           DataType: NodePath
           Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Light Grey/Light Grey 100"
       - Name: VerticalLayout
-        Id: g=ea39404af44ced14068e497cc8827c65
+        Id: g=929c78a7847c8c9f6cb26dac5127ce68
         Type: ColumnLayout
         Children:
         - Name: Header
-          Id: g=b1e9c299e7b2ef1e1f5ee56cc680abf3
+          Id: g=b3d7b35af8fee23733477316d9a31159
           Type: Label
           Children:
           - Name: Text
-            Id: g=65f6165f3bbc3cfce20084cab670f821
+            Id: g=a9f3da3bd746d39ffe60090938d79358
             Type: BaseDataVariableType
             DataType: LocalizedText
             Children:
             - Name: DynamicLink
-              Id: g=c6f6b04a4281348a98aa110632099edf
+              Id: g=19500e11bfdcbce8af781a995d76d5de
               Type: DynamicLink
               DataType: NodePath
               Value: "../../../Label Text"
           - Name: TextColor
-            Id: g=df3980ec87490c1867bb0deff882b2c1
+            Id: g=bdd14aa86b7106a0e837e639b29b0bfb
             Type: BaseDataVariableType
             DataType: Color
             Value: "#000000"
             Children:
             - Name: DynamicLink
-              Id: g=d5e3991fed4a081b835a7028512e63cb
+              Id: g=0733a7deb5db76874b5972428dfac380
               Type: DynamicLink
               DataType: NodePath
               Value: "../../../Label Font Color"
           - Name: FontSize
-            Id: g=9762241d5aec7c8985d4ae8dad6db786
+            Id: g=1332e7b1a4d0506d4d5f5d9d86c4e0dc
             Type: BaseDataVariableType
             DataType: Size
             Value: -1.0
             Children:
             - Name: DynamicLink
-              Id: g=61ea8a450f121d513ec02cef6a734cd1
+              Id: g=6ad89f1be602366be68f936c02777347
               Type: DynamicLink
               DataType: NodePath
               Value: "../../../Label Font Size"
         - Name: Content
-          Id: g=a791fcefff0da70c3f07e2dfa763eb70
+          Id: g=a07b38f229baa11f97a380d417ffff38
           Type: EditableLabel
           Children:
           - Name: Text
-            Id: g=853ac4a7a48a66b4c1dad404e1952fc4
+            Id: g=fcaa4ea1ea62563a017d95e27d2d9f90
             Type: BaseDataVariableType
             DataType: LocalizedText
             Children:
             - Name: DynamicLink
-              Id: g=0f01dc310e3704919e7cf975373771ba
+              Id: g=46f957ea73217ebbe55df657ae52d5f1
               Type: DynamicLink
               DataType: NodePath
               Value: "../../../Value Text"
           - Name: FontSize
-            Id: g=f5482598ec6e3a4ad4e1b0bb1ed8ce0d
+            Id: g=ea20d2584eaac72a6f8fd6064c8c0952
             Type: BaseDataVariableType
             DataType: Size
             Value: -1.0
             Children:
             - Name: DynamicLink
-              Id: g=d11c97ac436a67077867179e4a4eaaaa
+              Id: g=51507b39923b9d8df2458dbf3a31fbb8
               Type: DynamicLink
               DataType: NodePath
               Value: "../../../Value Font Size"
           - Name: TextColor
-            Id: g=01d0f3108523807966cb2f83cc0dc99b
+            Id: g=4a834228f8aca386e6feb375d20738c9
             Type: BaseDataVariableType
             DataType: Color
             Value: "#000000"
             Children:
             - Name: DynamicLink
-              Id: g=efe90c79293856ddbd6254299d645896
+              Id: g=951f86541eb0ddfdf877d4b302206652
               Type: DynamicLink
               DataType: NodePath
               Value: "../../../Value Font Color"
           - Name: Enabled
-            Id: g=71c55fabfbb776cee88077487d513d0a
+            Id: g=8afb693620bd90250f4b825d0b080e5e
             Type: BaseDataVariableType
             DataType: Boolean
             Value: true
           - Name: Editable
-            Id: g=72c1400218675261cb6b701267d0bc88
+            Id: g=b828bb28fb9ac57de65bbee4f7865bb1
             Type: BaseDataVariableType
             DataType: Boolean
             Value: true
             Children:
             - Name: DynamicLink
-              Id: g=c4de700fcf99a5eb68a0e82802d3389e
+              Id: g=0e2781f20988844dfe64a2000a478efa
               Type: DynamicLink
               DataType: NodePath
               Value: "../../../Editable"
+          - Name: Elide
+            Id: g=f93238733683ea0318566dd14020b0b2
+            Type: BaseDataVariableType
+            DataType: ElideEnum
+            ModellingRule: Optional
+            Value: 3
+          - Name: TopMargin
+            Id: g=53370e83693751d2e52f1a027262d948
+            Type: BaseVariableType
+            DataType: Size
+            ModellingRule: Optional
+            Value: 5.0
+        - Name: VerticalAlignment
+          Id: g=5e874c4ec5697ca489990694c5808152
+          Type: BaseVariableType
+          DataType: VerticalAlignment
+          ModellingRule: Optional
+          Value: 3
+        - Name: HorizontalAlignment
+          Id: g=03e4df4f2b4d849816121366d9575e92
+          Type: BaseVariableType
+          DataType: HorizontalAlignment
+          ModellingRule: Optional
+          Value: 3
+        - Name: Width
+          Id: g=71a907c5e405051f1399c48953f14b52
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: -1.0
       - Name: Value Font Color
-        Id: g=a28c4b66c897e80e584bc23f74b341cd
+        Id: g=ed89b4b4cb6ac287a302923b0a4ae20b
         Type: BaseDataVariableType
         DataType: Color
         Children:
         - Name: DynamicLink
-          Id: g=65d7441c9913231c3496c84b146c5311
+          Id: g=c6e1935942cec8097620687635136d3a
           Type: DynamicLink
           DataType: NodePath
           Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Light Grey/Light Grey 100"
       - Name: Label Font Size
-        Id: g=1ed388ed3a0219264b8a9c171bdfee06
+        Id: g=55638e08d12555b789e1fe6da736c3e4
         Type: BaseDataVariableType
         DataType: Int32
         Value: 26
       - Name: Value Font Size
-        Id: g=19738f0f4af90af2131b63cf44ae82fd
+        Id: g=3b834d12ef32d3bc07ecc156a8aad993
         Type: BaseDataVariableType
         DataType: Int32
         Value: 53
       - Name: Label Text
-        Id: g=7a5fccc753a95cfa71c8a588738260ff
+        Id: g=c3110cbc8b3e035cadac4a5a191c5344
         Type: BaseDataVariableType
         DataType: String
         Value: "Header"
         Children:
         - Name: StringFormatter1
-          Id: g=5a0d045a20ae630247bbd2d26259cafc
+          Id: g=b387b36cc18cb567a2cf388041b35744
           Type: StringFormatter
           Children:
           - Name: Format
-            Id: g=8ff9f46fb7d72e071e2bc567942dfa56
-            Type: BaseDataVariableType
-            DataType: LocalizedText
-            ReferenceType: HasParameter
-            ModellingRule: Optional
-            Value: {"LocaleId":"en-US","Text":"{0,0:u} / {1,0:u}"}
-          - Name: ns=9;Source0
-            Id: g=d03c9ebfc2b38c91cf9a7fc61590045f
-            Type: BaseDataVariableType
-            DataType: BaseDataType
-            ReferenceType: HasSource
-            Children:
-            - Name: StringFormatter1
-              Id: g=52007093537148e86a821c432dd1c0fc
-              Type: StringFormatter
-              Children:
-              - Name: Format
-                Id: g=1db776b89f598274085a504d115f2bc5
-                Type: BaseDataVariableType
-                DataType: LocalizedText
-                ReferenceType: HasParameter
-                ModellingRule: Optional
-                Value: {"NamespaceIndex":36,"TextId":"Mode"}
-          - Name: ns=9;Source1
-            Id: g=992f385e86cbf65022c883cf4e2bd457
-            Type: BaseDataVariableType
-            DataType: BaseDataType
-            ReferenceType: HasSource
-            Children:
-            - Name: StringFormatter1
-              Id: g=1ba48c396732ba3ed4b9ac6d727bd5cb
-              Type: StringFormatter
-              Children:
-              - Name: Format
-                Id: g=99122a23f398439d5a4f3783f529c569
-                Type: BaseDataVariableType
-                DataType: LocalizedText
-                ReferenceType: HasParameter
-                ModellingRule: Optional
-                Value: {"NamespaceIndex":36,"TextId":"State"}
-      - Name: Value Text
-        Id: g=1a219aecca37fa332aec672df5cb8c5a
-        Type: BaseDataVariableType
-        DataType: String
-        Value: "Value"
-        Children:
-        - Name: StringFormatter1
-          Id: g=e7a02fa5d1e32a81d0a6523536193a95
-          Type: StringFormatter
-          Children:
-          - Name: Format
-            Id: g=828f0fd23dc0f8d32ce5859127aaaab8
-            Type: BaseDataVariableType
-            DataType: LocalizedText
-            ReferenceType: HasParameter
-            ModellingRule: Optional
-            Value: {"LocaleId":"en-US","Text":"{0} / {1}"}
-          - Name: ns=9;Source0
-            Id: g=9f13e5b1e68b5e5f43cd4e348bacbbda
-            Type: BaseDataVariableType
-            DataType: BaseDataType
-            ReferenceType: HasSource
-            Children:
-            - Name: DynamicLink
-              Id: g=8b8ef9a91b41778179cbe67a3f1fb495
-              Type: DynamicLink
-              DataType: NodePath
-              Value: "/Objects/OptimateDemoProject/Converters/PackML Mode Text"
-          - Name: ns=9;Source1
-            Id: g=ef6083adad4d85fc5a060d6c5224dee3
-            Type: BaseDataVariableType
-            DataType: BaseDataType
-            ReferenceType: HasSource
-            Children:
-            - Name: DynamicLink
-              Id: g=2054e4e09f1cc0041b6f4507a5107726
-              Type: DynamicLink
-              DataType: NodePath
-              Value: "/Objects/OptimateDemoProject/Converters/PackML State Text"
-      - Name: Editable
-        Id: g=f5a0dd102ff14b86bdf49ded7ec27ce6
-        Type: BaseDataVariableType
-        DataType: Boolean
-      - Name: LeftMargin
-        Id: g=235bdaf428467aba8c8c29bd17b5710d
-        Type: BaseVariableType
-        DataType: Size
-        ModellingRule: Optional
-        Value: 66.0
-      - Name: TopMargin
-        Id: g=ac532337619f7a7992a1aba3bf7f2f26
-        Type: BaseVariableType
-        DataType: Size
-        ModellingRule: Optional
-        Value: 538.0
-      - Name: Height
-        Id: g=1a9e5ccd7f608c8e2982354dd3720445
-        Type: BaseVariableType
-        DataType: Size
-        ModellingRule: Optional
-        Value: 109.0
-      - Name: Width
-        Id: g=a60e6c1968d2245700672c6e88bb8b57
-        Type: BaseVariableType
-        DataType: Size
-        ModellingRule: Optional
-        Value: 450.0
-      - Name: VirtualKeyboardAttachedProperties
-        Id: g=e9af3ebdf7bdc223805639e60acccc8a
-        Type: VirtualKeyboardAttachedProperties
-    - Name: GoodItems
-      Id: g=09b5a603d7e39c40fdce843e5fb5384b
-      Type: Shift_StatisticDisplay
-      Children:
-      - Name: Label Font Color
-        Id: g=0d4cd6f529bb599cfd3e8e065c78e6e3
-        Type: BaseDataVariableType
-        DataType: Color
-        Children:
-        - Name: DynamicLink
-          Id: g=11f2b0aa0a497db3288c4175304277e6
-          Type: DynamicLink
-          DataType: NodePath
-          Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Light Grey/Light Grey 100"
-      - Name: VerticalLayout
-        Id: g=bb8b35f1458614461c1bee8be4b32c1f
-        Type: ColumnLayout
-        Children:
-        - Name: Header
-          Id: g=64c361cfe2655a7390740866ce2d8705
-          Type: Label
-          Children:
-          - Name: Text
-            Id: g=152681eb644c20d18911234786d9158c
-            Type: BaseDataVariableType
-            DataType: LocalizedText
-            Children:
-            - Name: DynamicLink
-              Id: g=70cf510fa8910fe35af30c4c4e0a95c7
-              Type: DynamicLink
-              DataType: NodePath
-              Value: "../../../Label Text"
-          - Name: TextColor
-            Id: g=fbaddf8257a8f0ddb9ab30ac0e25bc2d
-            Type: BaseDataVariableType
-            DataType: Color
-            Value: "#000000"
-            Children:
-            - Name: DynamicLink
-              Id: g=93fb36ed5d8c3589d08730dc07ab1d46
-              Type: DynamicLink
-              DataType: NodePath
-              Value: "../../../Label Font Color"
-          - Name: FontSize
-            Id: g=0de2167a365d0bafb1ff228d20754655
-            Type: BaseDataVariableType
-            DataType: Size
-            Value: -1.0
-            Children:
-            - Name: DynamicLink
-              Id: g=524501e2b191faa03a94cf57090273c0
-              Type: DynamicLink
-              DataType: NodePath
-              Value: "../../../Label Font Size"
-        - Name: Content
-          Id: g=7a470cb635c348007320876d0024bb80
-          Type: EditableLabel
-          Children:
-          - Name: Text
-            Id: g=a3bdaaf0abbe0a18bff80565cf0decfa
-            Type: BaseDataVariableType
-            DataType: LocalizedText
-            Children:
-            - Name: DynamicLink
-              Id: g=10a08c319d0a99cf3a0186c0a23f7d94
-              Type: DynamicLink
-              DataType: NodePath
-              Value: "../../../Value Text"
-          - Name: FontSize
-            Id: g=ef0c781575c1430703b54d2595147807
-            Type: BaseDataVariableType
-            DataType: Size
-            Value: -1.0
-            Children:
-            - Name: DynamicLink
-              Id: g=2fb7936f6642e11e69be5f2b742e34e4
-              Type: DynamicLink
-              DataType: NodePath
-              Value: "../../../Value Font Size"
-          - Name: TextColor
-            Id: g=321bfe0f3ee3e29a76e98842b2cc0fc3
-            Type: BaseDataVariableType
-            DataType: Color
-            Value: "#000000"
-            Children:
-            - Name: DynamicLink
-              Id: g=c1014a90553633e5618a22e08259a268
-              Type: DynamicLink
-              DataType: NodePath
-              Value: "../../../Value Font Color"
-          - Name: Enabled
-            Id: g=c3208bb8dd87bbdad4dd494f9d32e2ed
-            Type: BaseDataVariableType
-            DataType: Boolean
-            Value: true
-          - Name: Editable
-            Id: g=a68476d6b960b5bdc0b2b1f77fca7d64
-            Type: BaseDataVariableType
-            DataType: Boolean
-            Value: true
-            Children:
-            - Name: DynamicLink
-              Id: g=32af61ed8e770f786369e9661a8f284a
-              Type: DynamicLink
-              DataType: NodePath
-              Value: "../../../Editable"
-      - Name: Value Font Color
-        Id: g=c319760c1424759908c99ba753ff97e3
-        Type: BaseDataVariableType
-        DataType: Color
-        Children:
-        - Name: DynamicLink
-          Id: g=51de28b7ec6d1fa3a4295528ad5ad299
-          Type: DynamicLink
-          DataType: NodePath
-          Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Light Grey/Light Grey 100"
-      - Name: Label Font Size
-        Id: g=4241aa3b420d116a2f41d07a19756bf6
-        Type: BaseDataVariableType
-        DataType: Int32
-        Value: 26
-      - Name: Value Font Size
-        Id: g=379518bc418fae0ecd8edd2dd4e88588
-        Type: BaseDataVariableType
-        DataType: Int32
-        Value: 96
-      - Name: Label Text
-        Id: g=5f6bdd92e04e0dfaa368064389f612ee
-        Type: BaseDataVariableType
-        DataType: String
-        Value: "Header"
-        Children:
-        - Name: StringFormatter1
-          Id: g=1153cdc3cabb321a63f87987dacfb04d
-          Type: StringFormatter
-          Children:
-          - Name: Format
-            Id: g=0cb73220645d8e689aa183aef4f72c09
+            Id: g=ce3fad2af2b0372fb457c61aa728ffa1
             Type: BaseDataVariableType
             DataType: LocalizedText
             ReferenceType: HasParameter
             ModellingRule: Optional
             Value: {"LocaleId":"en-US","Text":"{0,0:u}"}
           - Name: ns=9;Source0
-            Id: g=bc5535e055259e007e4ce1e227b05b25
+            Id: g=9ef666ec4800eb42fd1e46e659f4a43e
             Type: BaseDataVariableType
             DataType: BaseDataType
             ReferenceType: HasSource
             Children:
             - Name: StringFormatter1
-              Id: g=9244d5db6310ecc3b7cc4fac75cdbd2c
+              Id: g=2e3b5a8832749c69a24ab04784b56ce3
               Type: StringFormatter
               Children:
               - Name: Format
-                Id: g=960a23309f939f95824f7c34bbdaf693
+                Id: g=e86df6724ec7e02838b5aa94fe2c5ec9
+                Type: BaseDataVariableType
+                DataType: LocalizedText
+                ReferenceType: HasParameter
+                ModellingRule: Optional
+                Value: {"NamespaceIndex":36,"TextId":"Recipe Name"}
+      - Name: Value Text
+        Id: g=f118965adae4ec17ac9cc49f4882218a
+        Type: BaseDataVariableType
+        DataType: String
+        Value: "Value"
+        Children:
+        - Name: StringFormatter1
+          Id: g=b3601682d9eb68454d2f80bda421d00e
+          Type: StringFormatter
+          Children:
+          - Name: Format
+            Id: g=ed82fa245222a7ad1ec23e0241b70176
+            Type: BaseDataVariableType
+            DataType: LocalizedText
+            ReferenceType: HasParameter
+            ModellingRule: Optional
+            Value: {"LocaleId":"en-US","Text":"{0,0:u}"}
+          - Name: ns=9;Source0
+            Id: g=3536b3f8b93f7ca3ec00cebc07aa6488
+            Type: BaseDataVariableType
+            DataType: BaseDataType
+            ReferenceType: HasSource
+            Children:
+            - Name: DynamicLink
+              Id: g=8ee8775f2d4cbdea5be97190fdf97e2b
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "/Objects/OptimateDemoProject/Model/Internal/Current Recipe/Recipe Name"
+              Children:
+              - Name: Mode
+                Id: g=f2d22734d25faad2e5794b1b69a15d31
+                Type: BaseVariableType
+                DataType: DynamicLinkMode
+                ModellingRule: Optional
+                Value: 2
+          - Name: Mode
+            Id: g=ab6ba5031379530a83d7e8c4120b6dcc
+            Type: PropertyType
+            DataType: DynamicLinkMode
+            ReferenceType: HasComponent
+            ModellingRule: Optional
+            Value: 2
+      - Name: LeftMargin
+        Id: g=e96f28a12246a731ca991dc91c6e9dd8
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: -1324.0
+      - Name: TopMargin
+        Id: g=fbaf13330deaf9a69bd3b7b003232eb8
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: -478.0
+      - Name: Editable
+        Id: g=3aaf50f151d84200b740984012ac58d7
+        Type: BaseDataVariableType
+        DataType: Boolean
+      - Name: Height
+        Id: g=05d3e176a1b79ba846b3e34ed76610e9
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 178.0
+      - Name: Width
+        Id: g=7724444fdf7d8a29029e8e2ad92351c0
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 464.0
+      - Name: VirtualKeyboardAttachedProperties
+        Id: g=cc6f8b8ac9bf22a9543932443c421caa
+        Type: VirtualKeyboardAttachedProperties
+      - Name: HorizontalAlignment
+        Id: g=7232045de2f4cee9a3deb9458f4d4a88
+        Type: BaseVariableType
+        DataType: HorizontalAlignment
+        ModellingRule: Optional
+        Value: 2
+      - Name: VerticalAlignment
+        Id: g=1843db5fe18e7f0226fe004ece5ba44d
+        Type: BaseVariableType
+        DataType: VerticalAlignment
+        ModellingRule: Optional
+        Value: 2
+      - Name: RightMargin
+        Id: g=1f7234262bc5fc7f520fdf2719504de2
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+      - Name: BottomMargin
+        Id: g=821e87e70817ae0ff895c1adffaa1f2d
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+      - Name: OriginalWidth
+        Id: g=7617d61628dbc318cb38da4eddf04f8e
+        Type: BaseDataVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 464.0
+      - Name: OriginalHeight
+        Id: g=0d98fc968180f794610af9c4194ab757
+        Type: BaseDataVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 178.0
+    - Name: PackML
+      Id: g=515f9a55cf86122fbb0bb551187de7b2
+      Type: Shift_StatisticDisplay
+      Children:
+      - Name: Label Font Color
+        Id: g=52e61ae0338dc64868c7380bc6f71df3
+        Type: BaseDataVariableType
+        DataType: Color
+        Children:
+        - Name: DynamicLink
+          Id: g=e7e8f4d8547067c88a1348ac40223f9a
+          Type: DynamicLink
+          DataType: NodePath
+          Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Light Grey/Light Grey 100"
+      - Name: VerticalLayout
+        Id: g=37f0738cddc3586b001cd31f927261b1
+        Type: ColumnLayout
+        Children:
+        - Name: Header
+          Id: g=0a9e5110cccf767b03f2b91c09e7518f
+          Type: Label
+          Children:
+          - Name: Text
+            Id: g=fddda1e878c6c632d1ad87d7dd54d0fb
+            Type: BaseDataVariableType
+            DataType: LocalizedText
+            Children:
+            - Name: DynamicLink
+              Id: g=b59df3e51b7ace98ca32ab27e7c3a1c7
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "../../../Label Text"
+          - Name: TextColor
+            Id: g=1e70787dbd727cad80e6e64ae1547cbd
+            Type: BaseDataVariableType
+            DataType: Color
+            Value: "#000000"
+            Children:
+            - Name: DynamicLink
+              Id: g=10516cbcd3e4bae903ba14fc34818bed
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "../../../Label Font Color"
+          - Name: FontSize
+            Id: g=dca7fcc653f1d5b77c090a43cfb4cd4a
+            Type: BaseDataVariableType
+            DataType: Size
+            Value: -1.0
+            Children:
+            - Name: DynamicLink
+              Id: g=5835d59c67fe48fbe19d6a5b1e32d06c
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "../../../Label Font Size"
+          - Name: HorizontalAlignment
+            Id: g=f44d85c11e2ee502666e51cef6f6202f
+            Type: BaseVariableType
+            DataType: HorizontalAlignment
+            ModellingRule: Optional
+            Value: 3
+        - Name: Content
+          Id: g=39aa9ef2702a4d9e731843608d510692
+          Type: EditableLabel
+          Children:
+          - Name: Text
+            Id: g=68d51942108e44135bd1a0b5595764e4
+            Type: BaseDataVariableType
+            DataType: LocalizedText
+            Children:
+            - Name: DynamicLink
+              Id: g=3db8e2e0d69f0aa2d84b4b9dc2fe5436
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "../../../Value Text"
+          - Name: FontSize
+            Id: g=c16a398ead48205dd5059ea6c0180999
+            Type: BaseDataVariableType
+            DataType: Size
+            Value: -1.0
+            Children:
+            - Name: DynamicLink
+              Id: g=bf6977aa30ac7802627fceb9226fb8de
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "../../../Value Font Size"
+          - Name: TextColor
+            Id: g=fc61105a4af08364fe793d6fadf91714
+            Type: BaseDataVariableType
+            DataType: Color
+            Value: "#000000"
+            Children:
+            - Name: DynamicLink
+              Id: g=06a0ee575154f404bb2f0b15bc8abcc3
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "../../../Value Font Color"
+          - Name: Enabled
+            Id: g=d097e2e35c59fb81ca05bf2b0724b26e
+            Type: BaseDataVariableType
+            DataType: Boolean
+            Value: true
+          - Name: Editable
+            Id: g=603843e8fb36ddf63723ec43bf7e8311
+            Type: BaseDataVariableType
+            DataType: Boolean
+            Value: true
+            Children:
+            - Name: DynamicLink
+              Id: g=6844388a92b86b52a7cca6e582ceb083
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "../../../Editable"
+          - Name: HorizontalAlignment
+            Id: g=e6cd13690403196c5756ecaff47b9f3f
+            Type: BaseVariableType
+            DataType: HorizontalAlignment
+            ModellingRule: Optional
+            Value: 3
+          - Name: Width
+            Id: g=70835976fbe30f7fdd213a6ae175e7d6
+            Type: BaseVariableType
+            DataType: Size
+            ModellingRule: Optional
+            Value: -1.0
+        - Name: Wrap
+          Id: g=3886fe84056ad961e6cf64f6e87609bc
+          Type: BaseDataVariableType
+          DataType: Boolean
+          ModellingRule: Optional
+        - Name: ContentAlignment
+          Id: g=6896854f3d3d5a442717ab48c258dbb2
+          Type: BaseVariableType
+          DataType: ContentVerticalAlignment
+          ModellingRule: Optional
+        - Name: HorizontalAlignment
+          Id: g=74ddf431e0cedd204d2bb03a4ba6468f
+          Type: BaseVariableType
+          DataType: HorizontalAlignment
+          ModellingRule: Optional
+          Value: 3
+        - Name: Width
+          Id: g=e1ce9d328728cad5fa790bf856f48182
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: -1.0
+      - Name: Value Font Color
+        Id: g=17f1367e060b0860653dbccb930bf3a4
+        Type: BaseDataVariableType
+        DataType: Color
+        Children:
+        - Name: DynamicLink
+          Id: g=eecc2256ddccae40c90a0386704ce3bf
+          Type: DynamicLink
+          DataType: NodePath
+          Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Light Grey/Light Grey 100"
+      - Name: Label Font Size
+        Id: g=8f29e84ad42870141bce2957d69d10ed
+        Type: BaseDataVariableType
+        DataType: Int32
+        Value: 26
+      - Name: Value Font Size
+        Id: g=2d7d052bfa9ec907c10a28be1091deb3
+        Type: BaseDataVariableType
+        DataType: Int32
+        Value: 53
+      - Name: Label Text
+        Id: g=da17b2a158826369c18c48f9eeb583aa
+        Type: BaseDataVariableType
+        DataType: String
+        Value: "Header"
+        Children:
+        - Name: StringFormatter1
+          Id: g=28e9b928b5c751320f12ed18a65d964d
+          Type: StringFormatter
+          Children:
+          - Name: Format
+            Id: g=8db966493a426e8aff8c39f1f821bba4
+            Type: BaseDataVariableType
+            DataType: LocalizedText
+            ReferenceType: HasParameter
+            ModellingRule: Optional
+            Value: {"LocaleId":"en-US","Text":"{0,0:u} / {1,0:u}"}
+          - Name: ns=9;Source0
+            Id: g=95dc9818c593557d2dff234475aaa7cc
+            Type: BaseDataVariableType
+            DataType: BaseDataType
+            ReferenceType: HasSource
+            Children:
+            - Name: StringFormatter1
+              Id: g=e81fcdb289aea74dc94e4020e762a42b
+              Type: StringFormatter
+              Children:
+              - Name: Format
+                Id: g=8610e3f706bedb5271aab627b5acab9e
+                Type: BaseDataVariableType
+                DataType: LocalizedText
+                ReferenceType: HasParameter
+                ModellingRule: Optional
+                Value: {"NamespaceIndex":36,"TextId":"Mode"}
+          - Name: ns=9;Source1
+            Id: g=852afc8f8ce0ecb07176e49f13f9bb1c
+            Type: BaseDataVariableType
+            DataType: BaseDataType
+            ReferenceType: HasSource
+            Children:
+            - Name: StringFormatter1
+              Id: g=ad164a15f70984ea05732e31ea1dfe6f
+              Type: StringFormatter
+              Children:
+              - Name: Format
+                Id: g=d3e77be3b5fb0daca9ca52c6de2e8c3a
+                Type: BaseDataVariableType
+                DataType: LocalizedText
+                ReferenceType: HasParameter
+                ModellingRule: Optional
+                Value: {"NamespaceIndex":36,"TextId":"State"}
+      - Name: Value Text
+        Id: g=3cace6a64ccabc3e28df5f111f922adf
+        Type: BaseDataVariableType
+        DataType: String
+        Value: "Value"
+        Children:
+        - Name: StringFormatter1
+          Id: g=a73acaa892314f043b275597f3fdf02d
+          Type: StringFormatter
+          Children:
+          - Name: Format
+            Id: g=20a69e20db67f853c115ba8e6023c49b
+            Type: BaseDataVariableType
+            DataType: LocalizedText
+            ReferenceType: HasParameter
+            ModellingRule: Optional
+            Value: {"LocaleId":"en-US","Text":"{0} / {1}"}
+          - Name: ns=9;Source0
+            Id: g=1527c9816be17ef748b64192f78e93e1
+            Type: BaseDataVariableType
+            DataType: BaseDataType
+            ReferenceType: HasSource
+            Children:
+            - Name: DynamicLink
+              Id: g=e2f02dbbec0c55dff99afae2959f83bb
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "/Objects/OptimateDemoProject/Converters/PackML Mode Text"
+          - Name: ns=9;Source1
+            Id: g=a4e4f16b01e71975ff09fcbccd81dbc3
+            Type: BaseDataVariableType
+            DataType: BaseDataType
+            ReferenceType: HasSource
+            Children:
+            - Name: DynamicLink
+              Id: g=c8bbd06e6bd0f766fb4e0e239b5b2f67
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "/Objects/OptimateDemoProject/Converters/PackML State Text"
+      - Name: Editable
+        Id: g=144b9b6a304a0f11cdb245dac191cc58
+        Type: BaseDataVariableType
+        DataType: Boolean
+      - Name: LeftMargin
+        Id: g=95b1090e962d2e6a10857cd55be58a87
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: -1338.0
+      - Name: TopMargin
+        Id: g=4f492548ea0f13dff90f70899a7537bb
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 104.0
+      - Name: Height
+        Id: g=0e3e558f744ed3d83f886bbaa765fe7a
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 109.0
+      - Name: Width
+        Id: g=7f4b17c8917d50197658d28f1e44148c
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 452.0
+      - Name: VirtualKeyboardAttachedProperties
+        Id: g=3070c5524a32b05635bb9a5f71d55c6a
+        Type: VirtualKeyboardAttachedProperties
+      - Name: HorizontalAlignment
+        Id: g=ffc3da81bab086b4c4459b099f88d00a
+        Type: BaseVariableType
+        DataType: HorizontalAlignment
+        ModellingRule: Optional
+        Value: 2
+      - Name: VerticalAlignment
+        Id: g=21a9f72b9d03c7d4b29c7315af1023df
+        Type: BaseVariableType
+        DataType: VerticalAlignment
+        ModellingRule: Optional
+        Value: 2
+      - Name: RightMargin
+        Id: g=87aa34384f14662d1e8357fc008d57d3
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+      - Name: BottomMargin
+        Id: g=48d80e99fe052d2c2f541f44ddc2b336
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+      - Name: OriginalWidth
+        Id: g=9273c155f86b9dbd11fcf80d5f76f9a5
+        Type: BaseDataVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 452.0
+      - Name: OriginalHeight
+        Id: g=01ea8666acb0f39fc0ceca973c521d2a
+        Type: BaseDataVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 109.0
+    - Name: GoodItems
+      Id: g=66c7b529c31258d53272e009a9e669c3
+      Type: Shift_StatisticDisplay
+      Children:
+      - Name: Label Font Color
+        Id: g=8731eeebfaaeb0a3e356e4dac51bce93
+        Type: BaseDataVariableType
+        DataType: Color
+        Children:
+        - Name: DynamicLink
+          Id: g=7f5bba13fab2e74828f5313a8b442fbe
+          Type: DynamicLink
+          DataType: NodePath
+          Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Light Grey/Light Grey 100"
+      - Name: VerticalLayout
+        Id: g=c3675fcbbf8fc5c814370421f9e99ad7
+        Type: ColumnLayout
+        Children:
+        - Name: Header
+          Id: g=e5967cde553afa48f9d9d2c119c60608
+          Type: Label
+          Children:
+          - Name: Text
+            Id: g=152503f0c7ee52caac96d5e4e501e561
+            Type: BaseDataVariableType
+            DataType: LocalizedText
+            Children:
+            - Name: DynamicLink
+              Id: g=86f6478286ae863c192f0949ee1b5cdb
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "../../../Label Text"
+          - Name: TextColor
+            Id: g=ef5759d98bd78b8d97606bf3c18aba96
+            Type: BaseDataVariableType
+            DataType: Color
+            Value: "#000000"
+            Children:
+            - Name: DynamicLink
+              Id: g=b91e51c1f3e502f5e97a8869cfe5acf2
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "../../../Label Font Color"
+          - Name: FontSize
+            Id: g=e24d7c78535fca5c3bf708dce842cade
+            Type: BaseDataVariableType
+            DataType: Size
+            Value: -1.0
+            Children:
+            - Name: DynamicLink
+              Id: g=ef6928f4e9b80bed27f5a5a1c81f7cdb
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "../../../Label Font Size"
+        - Name: Content
+          Id: g=16497cae1623be88195b21cdc29d0e42
+          Type: EditableLabel
+          Children:
+          - Name: Text
+            Id: g=bdbb38a7fb609540fcb946db23f83392
+            Type: BaseDataVariableType
+            DataType: LocalizedText
+            Children:
+            - Name: DynamicLink
+              Id: g=e3479bcb557b97925a94c64f459eee44
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "../../../Value Text"
+          - Name: FontSize
+            Id: g=307d56fcd05f9bc9bbcf9b582d08c691
+            Type: BaseDataVariableType
+            DataType: Size
+            Value: -1.0
+            Children:
+            - Name: DynamicLink
+              Id: g=a91674afac691115a2c1e2e24e06ae63
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "../../../Value Font Size"
+          - Name: TextColor
+            Id: g=57b786af974f6a4d1cc1e0e68b6059e3
+            Type: BaseDataVariableType
+            DataType: Color
+            Value: "#000000"
+            Children:
+            - Name: DynamicLink
+              Id: g=26746042e83b1573ef94a40fa932c383
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "../../../Value Font Color"
+          - Name: Enabled
+            Id: g=ac24eade61720083e82e0be476b71147
+            Type: BaseDataVariableType
+            DataType: Boolean
+            Value: true
+          - Name: Editable
+            Id: g=28759a187acefe84e7e3557e554d160f
+            Type: BaseDataVariableType
+            DataType: Boolean
+            Value: true
+            Children:
+            - Name: DynamicLink
+              Id: g=9dd59534ff39a11a5799d6b3ea753fba
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "../../../Editable"
+        - Name: HorizontalAlignment
+          Id: g=408a7cc4e816855ad00ebf9879059676
+          Type: BaseVariableType
+          DataType: HorizontalAlignment
+          ModellingRule: Optional
+          Value: 3
+        - Name: Width
+          Id: g=aa4bffcaefdbd3c8d375a728be6418d2
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: -1.0
+      - Name: Value Font Color
+        Id: g=9ffcab0473c20d868e1af51797bc8804
+        Type: BaseDataVariableType
+        DataType: Color
+        Children:
+        - Name: DynamicLink
+          Id: g=cf5eaea9619c6abe2a9821d9a1526a03
+          Type: DynamicLink
+          DataType: NodePath
+          Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Light Grey/Light Grey 100"
+      - Name: Label Font Size
+        Id: g=cdd65578622e3e29d9661e841d709b9d
+        Type: BaseDataVariableType
+        DataType: Int32
+        Value: 26
+      - Name: Value Font Size
+        Id: g=48722d722e07a90e5bd3ad05b5be27a1
+        Type: BaseDataVariableType
+        DataType: Int32
+        Value: 96
+      - Name: Label Text
+        Id: g=7bb747577dcc31e09562327f6c90029a
+        Type: BaseDataVariableType
+        DataType: String
+        Value: "Header"
+        Children:
+        - Name: StringFormatter1
+          Id: g=30f08b1f911372b0cba1d002450d5165
+          Type: StringFormatter
+          Children:
+          - Name: Format
+            Id: g=085072048e5918de83517b766dd7ca2b
+            Type: BaseDataVariableType
+            DataType: LocalizedText
+            ReferenceType: HasParameter
+            ModellingRule: Optional
+            Value: {"LocaleId":"en-US","Text":"{0,0:u}"}
+          - Name: ns=9;Source0
+            Id: g=ce4caeb9ed56753818bd5e631cba1fef
+            Type: BaseDataVariableType
+            DataType: BaseDataType
+            ReferenceType: HasSource
+            Children:
+            - Name: StringFormatter1
+              Id: g=73c967e84e9675ce2c6a210393a72400
+              Type: StringFormatter
+              Children:
+              - Name: Format
+                Id: g=2b46e8a1c9eafeb417f0c6a47fc7328e
                 Type: BaseDataVariableType
                 DataType: LocalizedText
                 ReferenceType: HasParameter
                 ModellingRule: Optional
                 Value: {"NamespaceIndex":36,"TextId":"Items Good"}
       - Name: Value Text
-        Id: g=2a87be9fcf3b979b4b8de489d2882415
+        Id: g=58e0d8d317b64f0e349bd21734d73ca5
         Type: BaseDataVariableType
         DataType: String
         Value: "Value"
         Children:
         - Name: DynamicLink
-          Id: g=61ac12f71578f6d4901acaa508393c6b
+          Id: g=16ef8e77e15a461a0e27350be37b8da5
           Type: DynamicLink
           DataType: NodePath
           Value: "/Objects/OptimateDemoProject/Model/Internal/Shift Report Variables/Items Good"
           Children:
           - Name: Mode
-            Id: g=bb7ba44e8cfb79aac45b928c93e86a2b
+            Id: g=b444cf7744e193121278344efeee05ce
             Type: BaseVariableType
             DataType: DynamicLinkMode
             ModellingRule: Optional
             Value: 2
       - Name: Editable
-        Id: g=e99e44fc532fa4ff284132110e856e7e
+        Id: g=e357a18242d42f856b30ea9d8dd8f8be
         Type: BaseDataVariableType
         DataType: Boolean
       - Name: LeftMargin
-        Id: g=f6b699155aa2387a22a2ca94bc707986
+        Id: g=164dd8666433aa29009d2eb93ee37215
         Type: BaseVariableType
         DataType: Size
         ModellingRule: Optional
-        Value: 1064.0
+        Value: 1272.0
       - Name: TopMargin
-        Id: g=4bf1d6c077b49bf372d15fa4d7aad21e
+        Id: g=f55a75edd6be1861179f13fdf237b713
         Type: BaseVariableType
         DataType: Size
         ModellingRule: Optional
-        Value: 212.0
+        Value: -478.0
       - Name: HorizontalAlignment
-        Id: g=be784f9c81625d31d32d68174ca52335
+        Id: g=8ec6d1ead39ac19c25afd1dd57070b04
         Type: BaseVariableType
         DataType: HorizontalAlignment
         ModellingRule: Optional
-        Value: 1
+        Value: 2
       - Name: Width
-        Id: g=d964f5ade23d21dd29d418870984115a
+        Id: g=bb8388d4edda63a65f3645ffbbecdf5e
         Type: BaseVariableType
         DataType: Size
         ModellingRule: Optional
-        Value: 450.0
+        Value: 383.0
       - Name: Height
-        Id: g=ed963e7b881da8c866285d5c4fa5a4f7
+        Id: g=cbabcc10438a7041aea9ac0ba0bc424a
         Type: BaseVariableType
         DataType: Size
         ModellingRule: Optional
-        Value: 178.0
+        Value: 197.0
       - Name: RightMargin
-        Id: g=550a79e775456590c4564b09d3bdbd5c
+        Id: g=0cd2b93925915f70fbcd3bfddecb40c0
         Type: BaseVariableType
         DataType: Size
         ModellingRule: Optional
-        Value: 66.0
       - Name: VirtualKeyboardAttachedProperties
-        Id: g=cbd030f8cd450d3173dfd1acabdf318f
+        Id: g=3b6bee37f27851ae9be3b25827344878
         Type: VirtualKeyboardAttachedProperties
+      - Name: VerticalAlignment
+        Id: g=a99126fe9e42a57f4ab440570696e2d5
+        Type: BaseVariableType
+        DataType: VerticalAlignment
+        ModellingRule: Optional
+        Value: 2
+      - Name: BottomMargin
+        Id: g=cbe14f620d67ce23f2d4e3039fd95ddf
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+      - Name: OriginalWidth
+        Id: g=a192bee76cda54eee20172a2991a7014
+        Type: BaseDataVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 383.0
+      - Name: OriginalHeight
+        Id: g=74b4fe6465479ecfb2a8753408498a68
+        Type: BaseDataVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 197.0
     - Name: Position_Speed
-      Id: g=61c63a997886a44791cd9a51785c8f6c
+      Id: g=b2e65ee80a76070e314652c294ed90fd
       Type: Shift_StatisticDisplay
       Children:
       - Name: Label Font Color
-        Id: g=4e98cf4815ae4a0cacf427db9e2aaae3
+        Id: g=0e708631549ce76ea4c71e804ed8c8bb
         Type: BaseDataVariableType
         DataType: Color
         Children:
         - Name: DynamicLink
-          Id: g=a8e55fad3485b66bc022a3d4d62dbce4
+          Id: g=c9feb968eaded7cee058b9e6e44f1af1
           Type: DynamicLink
           DataType: NodePath
           Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Light Grey/Light Grey 100"
       - Name: VerticalLayout
-        Id: g=ec604d31dc5a006985feb802189d5440
+        Id: g=51cc470c63ed84a3d2d3a0a8d09f3417
         Type: ColumnLayout
         Children:
         - Name: Header
-          Id: g=2c3a374286000639a7ee5745e908ed6d
+          Id: g=acc5acd7cd9d5b71c37600f70f6eef14
           Type: Label
           Children:
           - Name: Text
-            Id: g=84b784795c37821b699c6d08fcd7903d
+            Id: g=463c6e3e7526092f2b3563c371444dad
             Type: BaseDataVariableType
             DataType: LocalizedText
             Children:
             - Name: DynamicLink
-              Id: g=f25193de4165c7dcc1bf7c7dfa47e9c1
+              Id: g=a8714dfcdf27a1815f85e553e41ecbd1
               Type: DynamicLink
               DataType: NodePath
               Value: "../../../Label Text"
           - Name: TextColor
-            Id: g=ccf2685da7350ba3e4c3ceb02fbb5747
+            Id: g=8a851d4ba0bb7a10ddac12b8c6a3f5a6
             Type: BaseDataVariableType
             DataType: Color
             Value: "#000000"
             Children:
             - Name: DynamicLink
-              Id: g=5fa61b8b6ca7d6e3c32c2db78822ce91
+              Id: g=e8b004bfc48c546d2fcba1faa12aefc0
               Type: DynamicLink
               DataType: NodePath
               Value: "../../../Label Font Color"
           - Name: FontSize
-            Id: g=a4b0bcaa11ddf86a81df290314189c25
+            Id: g=fc67fa264c0a4cfe2ca8814b16b31cff
             Type: BaseDataVariableType
             DataType: Size
             Value: -1.0
             Children:
             - Name: DynamicLink
-              Id: g=0d3a01cba5f20c7183af3c4121067f9e
+              Id: g=3ca244013ceec01885a0999200135581
               Type: DynamicLink
               DataType: NodePath
               Value: "../../../Label Font Size"
         - Name: Content
-          Id: g=cc5a116cda4b6f1ab3525f8a19a3da42
+          Id: g=9d6e84b8b464732f0be2f41961a10156
           Type: EditableLabel
           Children:
           - Name: Text
-            Id: g=b67e80584e349fe62ef26c48b40c9ee6
+            Id: g=8be63b4bfc6ab19bc2449aa6892ce61d
             Type: BaseDataVariableType
             DataType: LocalizedText
             Children:
             - Name: DynamicLink
-              Id: g=b06e171378e5dd805921092b7b292671
+              Id: g=74ccc6b3e8a155d86b0037b17feff426
               Type: DynamicLink
               DataType: NodePath
               Value: "../../../Value Text"
           - Name: FontSize
-            Id: g=ca71a849f858b3a0b43814af2bee8788
+            Id: g=28a55cafd946abaf611fddaf2c1dfb37
             Type: BaseDataVariableType
             DataType: Size
             Value: -1.0
             Children:
             - Name: DynamicLink
-              Id: g=1f52dea7ff90e85b026b2f500327e28c
+              Id: g=0c02d26bbc4a6aad9d5efdf0138893f4
               Type: DynamicLink
               DataType: NodePath
               Value: "../../../Value Font Size"
           - Name: TextColor
-            Id: g=3f0a1447d8ba4cec3b9c2416a66c0d78
+            Id: g=64773f8e35b82de1b543cc093415d226
             Type: BaseDataVariableType
             DataType: Color
             Value: "#000000"
             Children:
             - Name: DynamicLink
-              Id: g=c6eb372cf2bb3015940e67c651acf19c
+              Id: g=4374ff80e3297a1d5565d9e939f2220a
               Type: DynamicLink
               DataType: NodePath
               Value: "../../../Value Font Color"
           - Name: Enabled
-            Id: g=81d8972fdd2c1ce0b34ee96c8ca24ada
+            Id: g=0864ba4a9bb0d269f8c6f2fa50d2b87e
             Type: BaseDataVariableType
             DataType: Boolean
             Value: true
           - Name: Editable
-            Id: g=6dd4f10d95be0a446dab4a859d58af66
+            Id: g=647ecf315420ae54884e72126bf82a34
             Type: BaseDataVariableType
             DataType: Boolean
             Value: true
             Children:
             - Name: DynamicLink
-              Id: g=a7dcbb82ea721966837bb35b71de7f13
+              Id: g=695db14e425af0f1872c7f13dd79159c
               Type: DynamicLink
               DataType: NodePath
               Value: "../../../Editable"
+        - Name: HorizontalAlignment
+          Id: g=dc4cc4fad249a093af3759a0e571349a
+          Type: BaseVariableType
+          DataType: HorizontalAlignment
+          ModellingRule: Optional
+          Value: 3
+        - Name: VerticalAlignment
+          Id: g=da52983dc035a06cdaf5c603cfdc2b37
+          Type: BaseVariableType
+          DataType: VerticalAlignment
+          ModellingRule: Optional
+          Value: 3
+        - Name: Width
+          Id: g=52dc2a16cc9df7f8b451311d6686e7b2
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: -1.0
       - Name: Value Font Color
-        Id: g=77e1dbd049fd890d3bdf80be4826c7f4
+        Id: g=c4f146a6bff9a22f6e4c7319ec9678ec
         Type: BaseDataVariableType
         DataType: Color
         Children:
         - Name: DynamicLink
-          Id: g=921907d7e58401577b750a878ea17b86
+          Id: g=c0675812358a0524e01815d3a55818af
           Type: DynamicLink
           DataType: NodePath
           Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Light Grey/Light Grey 100"
       - Name: Label Font Size
-        Id: g=c2718214ad1045be8229d49564f8793e
+        Id: g=c46c1a37090a6f11d7ed557cd15afa51
         Type: BaseDataVariableType
         DataType: Int32
         Value: 26
       - Name: Value Font Size
-        Id: g=fac2b57cc73fc94f216b958b78312dce
+        Id: g=b46b186fceb20d29259dc305c8d1482d
         Type: BaseDataVariableType
         DataType: Int32
         Value: 96
       - Name: Label Text
-        Id: g=c6fc1aa6eb307091077fca0ba7381c4b
+        Id: g=ce205d2e1e9e367d64a0c4a0edb47101
         Type: BaseDataVariableType
         DataType: String
         Value: "Header"
         Children:
         - Name: ConditionalConverter1
-          Id: g=01819da34ef1d81e5860d9ae4696c1bd
+          Id: g=f92849257bb1f89159e8c2d7857fef1b
           Type: ConditionalConverter
           Children:
           - Name: Condition
-            Id: g=38fcb6b4e5bfc73e550f9c8143df4fa1
+            Id: g=2c69910cd05f8458b74e8256f6e0bf6c
             Type: BaseDataVariableType
             DataType: Boolean
             ReferenceType: HasSource
             Children:
             - Name: ExpressionEvaluator1
-              Id: g=e96ee6112625c885e932985cebd037f5
+              Id: g=6b35d3f8929c24e31dc5efcbbfaaa237
               Type: ExpressionEvaluator
               Children:
               - Name: Expression
-                Id: g=6092d7eb815fdf72083d803eb5f32ce5
+                Id: g=53f873679e5d8d470ba8957f4b2a81ba
                 Type: BaseDataVariableType
                 DataType: String
                 ReferenceType: HasParameter
                 ModellingRule: Optional
                 Value: "{0}>0"
               - Name: ns=9;Source0
-                Id: g=5e86be48f7b64baacb87a5284d674425
+                Id: g=c14aa2da434f33089de3e031693d6dc8
                 Type: BaseDataVariableType
                 DataType: BaseDataType
                 ReferenceType: HasSource
                 Children:
                 - Name: DynamicLink
-                  Id: g=7fa65232f62b23c800db783b85533924
+                  Id: g=0679589d507c3d7a3f49744cef47128d
                   Type: DynamicLink
                   DataType: NodePath
                   Value: "/Objects/OptimateDemoProject/Model/PLC Link Required/Machine Info/Current Speed"
           - Name: TrueValue
-            Id: g=431ede215571d73780c3ef7225246421
+            Id: g=b4ec858ae31f62ac2045846393b0f2c2
             Type: BaseDataVariableType
             DataType: String
             ReferenceType: HasParameter
             Children:
             - Name: StringFormatter1
-              Id: g=667a389dcdda58ac98871403005a8979
+              Id: g=02b48a7c8aedca3ea99efef9f9e22f1e
               Type: StringFormatter
               Children:
               - Name: Format
-                Id: g=f214e1813011064ffa2a2558560d78d2
+                Id: g=850d6132d1ab82d5398839407612defc
                 Type: BaseDataVariableType
                 DataType: LocalizedText
                 ReferenceType: HasParameter
                 ModellingRule: Optional
                 Value: {"NamespaceIndex":36,"TextId":"Current Speed"}
           - Name: FalseValue
-            Id: g=c9a2ec5282c8190548a711a5f06c7481
+            Id: g=bea319619a75a1f04e726eeb06b6d704
             Type: BaseDataVariableType
             DataType: String
             ReferenceType: HasParameter
             Children:
             - Name: StringFormatter1
-              Id: g=a167151d091414572dc73a2ba41d5aeb
+              Id: g=a7b56d8442532515e454f5ec009fbe4a
               Type: StringFormatter
               Children:
               - Name: Format
-                Id: g=af52c20fd2bcc080c2ec8f7c99b1a2cd
+                Id: g=aad87e7c8fbeff9b6119ff3ec80b3a28
                 Type: BaseDataVariableType
                 DataType: LocalizedText
                 ReferenceType: HasParameter
                 ModellingRule: Optional
                 Value: {"NamespaceIndex":36,"TextId":"Current Position"}
       - Name: Value Text
-        Id: g=249c87f9ed26c92e6ff68580d7e53b20
+        Id: g=71d3d5e4e71b54943ac9c8c013a589c1
         Type: BaseDataVariableType
         DataType: String
         Value: "Value"
         Children:
         - Name: ConditionalConverter1
-          Id: g=291d1efd7b1b01adaee5d20b81ba1a16
+          Id: g=bb01fb26307529f8cc0b6688a3d1a36e
           Type: ConditionalConverter
           Children:
           - Name: Condition
-            Id: g=b3212b3fb7054a92e47c1ba17137078b
+            Id: g=90153c074567424882aa413307274534
             Type: BaseDataVariableType
             DataType: Boolean
             ReferenceType: HasSource
             Children:
             - Name: ExpressionEvaluator1
-              Id: g=3ecf793acd0b60645a54ee3dcf78ee20
+              Id: g=59e361178f7d5e6be25b6bc60ff15461
               Type: ExpressionEvaluator
               Children:
               - Name: Expression
-                Id: g=aac9f360cd40d061f401a46fdf9363e3
+                Id: g=2c335a3c1e356ea3fcae1838aeed19c1
                 Type: BaseDataVariableType
                 DataType: String
                 ReferenceType: HasParameter
                 ModellingRule: Optional
                 Value: "{0}>0"
               - Name: ns=9;Source0
-                Id: g=6c08a0bb4a0896ee38b29b2992151c02
+                Id: g=f70cea4de381fb142c5b0611a3e279a7
                 Type: BaseDataVariableType
                 DataType: BaseDataType
                 ReferenceType: HasSource
                 Children:
                 - Name: DynamicLink
-                  Id: g=4328322372291f47d5cc33f2402ca1af
+                  Id: g=16f5eb25a39cd8a9c4ce61b353a56613
                   Type: DynamicLink
                   DataType: NodePath
                   Value: "/Objects/OptimateDemoProject/Model/PLC Link Required/Machine Info/Current Speed"
           - Name: TrueValue
-            Id: g=9bccf95a2f0fc49c46d9b1bd693cea93
+            Id: g=ea559f6020132a2e598aa7506681cdc5
             Type: BaseDataVariableType
             DataType: String
             ReferenceType: HasParameter
             Children:
             - Name: DynamicLink
-              Id: g=04fdfb4456dec39bc46c26055a4cf31d
+              Id: g=b8a33994913f7dbd4d2b0c80af239918
               Type: DynamicLink
               DataType: NodePath
               Value: "/Objects/OptimateDemoProject/Model/PLC Link Required/Machine Info/Current Speed"
           - Name: FalseValue
-            Id: g=7bfd8a08ff3ff2d50472b022f2eb1181
+            Id: g=d8d5b63a751b9beb5c9d728953c01b88
             Type: BaseDataVariableType
             DataType: String
             ReferenceType: HasParameter
             Children:
             - Name: DynamicLink
-              Id: g=51486723fc5860394a28688c79f99c53
+              Id: g=fc40bcb7f92ac6176e2e479e20e62b7c
               Type: DynamicLink
               DataType: NodePath
               Value: "/Objects/OptimateDemoProject/Model/PLC Link Required/Machine Info/Current Position"
       - Name: Editable
-        Id: g=7866a822ac08157be346b904dbae7493
+        Id: g=707663f26f2aeeaeba51d37180be807b
         Type: BaseDataVariableType
         DataType: Boolean
       - Name: LeftMargin
-        Id: g=70e415a0c5153a9276fb2af9957e9d13
+        Id: g=9da73a5f4b90c5a5e0604b4f1e8757f6
         Type: BaseVariableType
         DataType: Size
         ModellingRule: Optional
-        Value: 1214.0
+        Value: 1218.0
       - Name: TopMargin
-        Id: g=2efae42432a10be66fa410ab23604e03
+        Id: g=f03588e3b396dbfa643aae1533da02e7
         Type: BaseVariableType
         DataType: Size
         ModellingRule: Optional
-        Value: 522.0
+        Value: 142.0
       - Name: HorizontalAlignment
-        Id: g=d19c9fb0640faff7df60c42cdcf7a30e
+        Id: g=594414b48df2c8301df4f5976e3059d9
         Type: BaseVariableType
         DataType: HorizontalAlignment
         ModellingRule: Optional
-        Value: 1
+        Value: 2
       - Name: RightMargin
-        Id: g=cbbbcd4a7f7157fd60dcfeb17356e0ae
+        Id: g=1f31388c9fb7a9001b29fa9be9abb731
         Type: BaseVariableType
         DataType: Size
         ModellingRule: Optional
-        Value: 66.0
       - Name: Height
-        Id: g=c1c6dae877ff334cc672a540db523f1e
+        Id: g=844f4777fc8b9dba4eb84d70b8741b7c
         Type: BaseVariableType
         DataType: Size
         ModellingRule: Optional
-        Value: 178.0
+        Value: 197.0
       - Name: Width
-        Id: g=9cd719753440d916e67e28cffb457a9d
+        Id: g=d092b2381e40f0566f132c05db9a8195
         Type: BaseVariableType
         DataType: Size
         ModellingRule: Optional
-        Value: 450.0
+        Value: 330.0
       - Name: VirtualKeyboardAttachedProperties
-        Id: g=fb733e5a8675686fb368f267221b8cbd
+        Id: g=c94da18566f1f91f122958a24ebd207f
         Type: VirtualKeyboardAttachedProperties
+      - Name: VerticalAlignment
+        Id: g=2f6eb4fbed633297515114bad37a6689
+        Type: BaseVariableType
+        DataType: VerticalAlignment
+        ModellingRule: Optional
+        Value: 2
+      - Name: BottomMargin
+        Id: g=94d865fe64db059a4c07041306f1b950
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+      - Name: OriginalHeight
+        Id: g=f24b39a9c223bd9bb1384217cf8fe47a
+        Type: BaseDataVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 197.0
+      - Name: OriginalWidth
+        Id: g=7549f212b7bcab339fbb839c68839c0b
+        Type: BaseDataVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 330.0
     - Name: Image
       Id: g=8bd173cad7d98901194d7c005df87bf2
       Type: MultiStateImage

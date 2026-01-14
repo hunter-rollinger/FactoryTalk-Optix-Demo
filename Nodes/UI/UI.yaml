@@ -730,73 +730,6 @@ Children:
             DataType: Size
             ModellingRule: Optional
             Value: 300.0
-          - Name: Burger_Content
-            Id: g=4d04f971a8e0263f788e88225ef5be41
-            Type: PanelLoader
-            Children:
-            - Name: Panel
-              Id: g=9cbf2e38f6a9e885541cd0b1a48fc248
-              Type: NodePointer
-              DataType: NodeId
-              Children:
-              - Name: Kind
-                Id: g=487de05adfd2609a00fe02ca4c40b3d9
-                Type: PropertyType
-                DataType: NodeId
-                Value: "/Types/ObjectTypes/BaseObjectType/BaseUIObject/Item/Container"
-            - Name: CurrentPanel
-              Id: g=3ee601993020698566d8b5b77e6ab654
-              Type: NodePointer
-              DataType: NodeId
-              AccessLevel: Read
-              Children:
-              - Name: Kind
-                Id: g=3b3dc30eefb80b056ecf8bfb9bde3e29
-                Type: PropertyType
-                DataType: NodeId
-                Value: "/Types/ObjectTypes/BaseObjectType/BaseUIObject/Item"
-            - Class: Reference
-              Target: ns=11;i=478
-              Direction: Forward
-            - Name: Width
-              Id: g=0781309acd552d4f4361fb9d2a95b5e1
-              Type: BaseVariableType
-              DataType: Size
-              ModellingRule: Optional
-              Value: 300.0
-            - Name: Height
-              Id: g=ac95444bef8399ae84d14f2cd09c75ba
-              Type: BaseVariableType
-              DataType: Size
-              ModellingRule: Optional
-              Value: 300.0
-            - Name: LeftMargin
-              Id: g=da432431e955f9cda277dd1b6bf83675
-              Type: BaseVariableType
-              DataType: Size
-              ModellingRule: Optional
-            - Name: TopMargin
-              Id: g=67443d7f7770f722c0e9852753fcd375
-              Type: BaseVariableType
-              DataType: Size
-              ModellingRule: Optional
-            - Name: HorizontalAlignment
-              Id: g=6ac6a98d7a80b569368f2e15d289961d
-              Type: BaseVariableType
-              DataType: HorizontalAlignment
-              ModellingRule: Optional
-              Value: 3
-            - Name: VerticalAlignment
-              Id: g=4a941c4a925abfa7f242c06e38bb8266
-              Type: BaseVariableType
-              DataType: VerticalAlignment
-              ModellingRule: Optional
-              Value: 3
-            - Name: BottomMargin
-              Id: g=1b6713d45536ae3b1210b713269024e6
-              Type: BaseVariableType
-              DataType: Size
-              ModellingRule: Optional
           - Name: HorizontalAlignment
             Id: g=e2fe3ff708082b22a1205855620dbf79
             Type: BaseVariableType
@@ -831,6 +764,113 @@ Children:
             DataType: Size
             ModellingRule: Optional
             Value: 1.0
+          - Name: Scale
+            Id: g=9c909478314b6226ab3b6ed0719eeaef
+            Type: ScaleLayout
+            Children:
+            - Name: OriginalWidth
+              Id: g=4008a9b82c0bf2278e325efb717b11a5
+              Type: BaseDataVariableType
+              DataType: Size
+              ModellingRule: Optional
+              Value: 1864.0
+            - Name: OriginalHeight
+              Id: g=63219ebd11a5bc651bd7b140657010ce
+              Type: BaseDataVariableType
+              DataType: Size
+              ModellingRule: Optional
+              Value: 807.0
+            - Name: HorizontalAlignment
+              Id: g=6ef3b9765d22788024cbf72b3286a9f0
+              Type: BaseVariableType
+              DataType: HorizontalAlignment
+              ModellingRule: Optional
+              Value: 3
+            - Name: VerticalAlignment
+              Id: g=d97ab3c5f8a853b4eaa9fee67ee503c9
+              Type: BaseVariableType
+              DataType: VerticalAlignment
+              ModellingRule: Optional
+              Value: 3
+            - Name: FontScaling
+              Id: g=176b597a4bfcc128baf556460eebe6c9
+              Type: BaseDataVariableType
+              DataType: Boolean
+              ModellingRule: Optional
+              Value: true
+            - Name: Burger_Content
+              Id: g=4d04f971a8e0263f788e88225ef5be41
+              Type: PanelLoader
+              Children:
+              - Name: Panel
+                Id: g=9cbf2e38f6a9e885541cd0b1a48fc248
+                Type: NodePointer
+                DataType: NodeId
+                Children:
+                - Name: Kind
+                  Id: g=487de05adfd2609a00fe02ca4c40b3d9
+                  Type: PropertyType
+                  DataType: NodeId
+                  Value: "/Types/ObjectTypes/BaseObjectType/BaseUIObject/Item/Container"
+              - Name: CurrentPanel
+                Id: g=3ee601993020698566d8b5b77e6ab654
+                Type: NodePointer
+                DataType: NodeId
+                AccessLevel: Read
+                Children:
+                - Name: Kind
+                  Id: g=3b3dc30eefb80b056ecf8bfb9bde3e29
+                  Type: PropertyType
+                  DataType: NodeId
+                  Value: "/Types/ObjectTypes/BaseObjectType/BaseUIObject/Item"
+              - Class: Reference
+                Target: ns=11;i=478
+                Direction: Forward
+              - Name: Width
+                Id: g=0781309acd552d4f4361fb9d2a95b5e1
+                Type: BaseVariableType
+                DataType: Size
+                ModellingRule: Optional
+                Value: 300.0
+              - Name: Height
+                Id: g=ac95444bef8399ae84d14f2cd09c75ba
+                Type: BaseVariableType
+                DataType: Size
+                ModellingRule: Optional
+                Value: 300.0
+              - Name: LeftMargin
+                Id: g=da432431e955f9cda277dd1b6bf83675
+                Type: BaseVariableType
+                DataType: Size
+                ModellingRule: Optional
+              - Name: TopMargin
+                Id: g=67443d7f7770f722c0e9852753fcd375
+                Type: BaseVariableType
+                DataType: Size
+                ModellingRule: Optional
+              - Name: HorizontalAlignment
+                Id: g=6ac6a98d7a80b569368f2e15d289961d
+                Type: BaseVariableType
+                DataType: HorizontalAlignment
+                ModellingRule: Optional
+                Value: 3
+              - Name: VerticalAlignment
+                Id: g=4a941c4a925abfa7f242c06e38bb8266
+                Type: BaseVariableType
+                DataType: VerticalAlignment
+                ModellingRule: Optional
+                Value: 3
+              - Name: BottomMargin
+                Id: g=1b6713d45536ae3b1210b713269024e6
+                Type: BaseVariableType
+                DataType: Size
+                ModellingRule: Optional
+            - Name: FillMode
+              Id: g=d5004ba32c46e296f13d959c892c5872
+              Type: BaseDataVariableType
+              DataType: FillModeEnum
+              ModellingRule: Optional
+              Value: 1
           - Name: QuickInfo
             Id: g=fd8875403161b6e435fc98aac8939782
             Type: QuickInfo
@@ -1104,7 +1144,7 @@ Children:
           Id: g=2fba4c427b88ffaa0afb0600b997150d
           Type: NodePointer
           DataType: NodeId
-          Value: "/Objects/OptimateDemoProject/UI/Main Screens/Production/Production_Menu_Bar"
+          Value: "/Objects/OptimateDemoProject/UI/Screens/Production/Production_Menu_Bar"
           Children:
           - Name: Kind
             Id: g=4688e711a68c74e53c64759172a1baf4
@@ -1224,74 +1264,6 @@ Children:
             DataType: Size
             ModellingRule: Optional
             Value: 300.0
-          - Name: Standard_Content
-            Id: g=9e4577a0dcfdf50cb045bf3fc30dd5d5
-            Type: PanelLoader
-            Children:
-            - Name: Panel
-              Id: g=f340421663d69a592c2ccb9cda30a1db
-              Type: NodePointer
-              DataType: NodeId
-              Value: "/Objects/OptimateDemoProject/UI/Main Screens/Production/Production_Home"
-              Children:
-              - Name: Kind
-                Id: g=dff1cdd885fd8ef2be738d0106781fcd
-                Type: PropertyType
-                DataType: NodeId
-                Value: "/Types/ObjectTypes/BaseObjectType/BaseUIObject/Item/Container"
-            - Name: CurrentPanel
-              Id: g=8064b998141aced4c2931e89cbd7d274
-              Type: NodePointer
-              DataType: NodeId
-              AccessLevel: Read
-              Children:
-              - Name: Kind
-                Id: g=756d298ef834d19b4d9b7da170c4c645
-                Type: PropertyType
-                DataType: NodeId
-                Value: "/Types/ObjectTypes/BaseObjectType/BaseUIObject/Item"
-            - Class: Reference
-              Target: ns=11;i=478
-              Direction: Forward
-            - Name: Width
-              Id: g=988222851ff4005cddf9786914414aeb
-              Type: BaseVariableType
-              DataType: Size
-              ModellingRule: Optional
-              Value: 300.0
-            - Name: Height
-              Id: g=5e869101abe03f6e7f22ee2f8f98f28f
-              Type: BaseVariableType
-              DataType: Size
-              ModellingRule: Optional
-              Value: 300.0
-            - Name: LeftMargin
-              Id: g=b387241b0c5449adc125f9e79c301cfc
-              Type: BaseVariableType
-              DataType: Size
-              ModellingRule: Optional
-            - Name: TopMargin
-              Id: g=3787a65109f09e7b22143ddd06cf11cb
-              Type: BaseVariableType
-              DataType: Size
-              ModellingRule: Optional
-            - Name: HorizontalAlignment
-              Id: g=2c8e98b6dc8d00cc5d08c5e1c2704ff0
-              Type: BaseVariableType
-              DataType: HorizontalAlignment
-              ModellingRule: Optional
-              Value: 3
-            - Name: VerticalAlignment
-              Id: g=b35694f851493eda9d1cfe2ca2d7a464
-              Type: BaseVariableType
-              DataType: VerticalAlignment
-              ModellingRule: Optional
-              Value: 3
-            - Name: BottomMargin
-              Id: g=24a96bb76c51275ffd87e4a6afb167c3
-              Type: BaseVariableType
-              DataType: Size
-              ModellingRule: Optional
           - Name: HorizontalAlignment
             Id: g=c181cceca795ef107cd46e115c7b8043
             Type: BaseVariableType
@@ -1326,6 +1298,114 @@ Children:
             DataType: Size
             ModellingRule: Optional
             Value: 1.0
+          - Name: Scale
+            Id: g=abfef4683b11cd431b101e04725f5aa6
+            Type: ScaleLayout
+            Children:
+            - Name: OriginalWidth
+              Id: g=285052c5fcfc8fa2712b98033c72038d
+              Type: BaseDataVariableType
+              DataType: Size
+              ModellingRule: Optional
+              Value: 1864.0
+            - Name: OriginalHeight
+              Id: g=0e3ff11f3c81037300b1949428d93e49
+              Type: BaseDataVariableType
+              DataType: Size
+              ModellingRule: Optional
+              Value: 745.0
+            - Name: Standard_Content
+              Id: g=9e4577a0dcfdf50cb045bf3fc30dd5d5
+              Type: PanelLoader
+              Children:
+              - Name: Panel
+                Id: g=f340421663d69a592c2ccb9cda30a1db
+                Type: NodePointer
+                DataType: NodeId
+                Value: "/Objects/OptimateDemoProject/UI/Screens/Production/Production_Home"
+                Children:
+                - Name: Kind
+                  Id: g=dff1cdd885fd8ef2be738d0106781fcd
+                  Type: PropertyType
+                  DataType: NodeId
+                  Value: "/Types/ObjectTypes/BaseObjectType/BaseUIObject/Item/Container"
+              - Name: CurrentPanel
+                Id: g=8064b998141aced4c2931e89cbd7d274
+                Type: NodePointer
+                DataType: NodeId
+                AccessLevel: Read
+                Children:
+                - Name: Kind
+                  Id: g=756d298ef834d19b4d9b7da170c4c645
+                  Type: PropertyType
+                  DataType: NodeId
+                  Value: "/Types/ObjectTypes/BaseObjectType/BaseUIObject/Item"
+              - Class: Reference
+                Target: ns=11;i=478
+                Direction: Forward
+              - Name: Width
+                Id: g=988222851ff4005cddf9786914414aeb
+                Type: BaseVariableType
+                DataType: Size
+                ModellingRule: Optional
+                Value: 300.0
+              - Name: Height
+                Id: g=5e869101abe03f6e7f22ee2f8f98f28f
+                Type: BaseVariableType
+                DataType: Size
+                ModellingRule: Optional
+                Value: 300.0
+              - Name: LeftMargin
+                Id: g=b387241b0c5449adc125f9e79c301cfc
+                Type: BaseVariableType
+                DataType: Size
+                ModellingRule: Optional
+              - Name: TopMargin
+                Id: g=3787a65109f09e7b22143ddd06cf11cb
+                Type: BaseVariableType
+                DataType: Size
+                ModellingRule: Optional
+              - Name: HorizontalAlignment
+                Id: g=2c8e98b6dc8d00cc5d08c5e1c2704ff0
+                Type: BaseVariableType
+                DataType: HorizontalAlignment
+                ModellingRule: Optional
+                Value: 3
+              - Name: VerticalAlignment
+                Id: g=b35694f851493eda9d1cfe2ca2d7a464
+                Type: BaseVariableType
+                DataType: VerticalAlignment
+                ModellingRule: Optional
+                Value: 3
+              - Name: BottomMargin
+                Id: g=24a96bb76c51275ffd87e4a6afb167c3
+                Type: BaseVariableType
+                DataType: Size
+                ModellingRule: Optional
+            - Name: HorizontalAlignment
+              Id: g=9820c4e9987c47dd009db6b2e40f2224
+              Type: BaseVariableType
+              DataType: HorizontalAlignment
+              ModellingRule: Optional
+              Value: 3
+            - Name: VerticalAlignment
+              Id: g=ec646a4c6952c1452a7b7152dec2b851
+              Type: BaseVariableType
+              DataType: VerticalAlignment
+              ModellingRule: Optional
+              Value: 3
+            - Name: FontScaling
+              Id: g=0d1cc4d3968e20ec79e64a5e21f55b9b
+              Type: BaseDataVariableType
+              DataType: Boolean
+              ModellingRule: Optional
+              Value: true
+            - Name: FillMode
+              Id: g=4b6f184118d1038d0ff485863f027e04
+              Type: BaseDataVariableType
+              DataType: FillModeEnum
+              ModellingRule: Optional
+              Value: 1
           - Name: QuickInfo
             Id: g=b60af873ad7aa2a043164edb564c1052
             Type: QuickInfo
@@ -1745,7 +1825,7 @@ Children:
                                 Id: g=f0d394311fa2ea68e549f5b72b7fadb5
                                 Type: DynamicLink
                                 DataType: NodePath
-                                Value: "/Objects/OptimateDemoProject/UI/Main Screens/Burger/BurgerMenu"
+                                Value: "/Objects/OptimateDemoProject/UI/Screens/Burger/BurgerMenu"
                     - Name: AliasNode
                       Id: g=793cdce27ea09d62b51cea283fd4cc0c
                       Type: BaseDataVariableType
@@ -1828,7 +1908,7 @@ Children:
                         Id: g=177b79301d905eb8327753b06a07d401
                         Type: DynamicLink
                         DataType: NodePath
-                        Value: "/Objects/OptimateDemoProject/UI/Main Screens/Burger/BurgerMenu@NodeId"
+                        Value: "/Objects/OptimateDemoProject/UI/Screens/Burger/BurgerMenu@NodeId"
                 - Name: TrueValue
                   Id: g=c35dca9358f4d6a8551d546ee80bc0d8
                   Type: BaseDataVariableType
@@ -1918,7 +1998,7 @@ Children:
                       Id: g=a05aee694afc5ffd618325a38e2f75ec
                       Type: BaseDataVariableType
                       DataType: NodeId
-                      Value: "/Objects/OptimateDemoProject/UI/Main Screens/Production/Production_Home"
+                      Value: "/Objects/OptimateDemoProject/UI/Screens/Production/Production_Home"
                     - Name: AliasNode
                       Id: g=8f852ec1c35f30e8ca14a3f68de5958c
                       Type: BaseDataVariableType
@@ -2005,7 +2085,7 @@ Children:
                       Id: g=581e51c6bd0280bd6422c0224cc90ca5
                       Type: BaseDataVariableType
                       DataType: NodeId
-                      Value: "/Objects/OptimateDemoProject/UI/Main Screens/Production/Production_Menu_Bar"
+                      Value: "/Objects/OptimateDemoProject/UI/Screens/Production/Production_Menu_Bar"
                     - Name: AliasNode
                       Id: g=c9f7165f81600448d1e28427cf67e3d7
                       Type: BaseDataVariableType
@@ -2178,7 +2258,7 @@ Children:
                       Id: g=52e22e148bfe0f33f7ab7aac2676edec
                       Type: BaseDataVariableType
                       DataType: NodeId
-                      Value: "/Objects/OptimateDemoProject/UI/Main Screens/Manual/Manual_Home"
+                      Value: "/Objects/OptimateDemoProject/UI/Screens/Manual/Manual_Home"
                     - Name: AliasNode
                       Id: g=ba26b7e986a51643a0e8bf2e2d83a83b
                       Type: BaseDataVariableType
@@ -2265,7 +2345,7 @@ Children:
                       Id: g=079670c4f427454561f21a4c1075c46a
                       Type: BaseDataVariableType
                       DataType: NodeId
-                      Value: "/Objects/OptimateDemoProject/UI/Main Screens/Manual/Manual_Menu_Bar"
+                      Value: "/Objects/OptimateDemoProject/UI/Screens/Manual/Manual_Menu_Bar"
                     - Name: AliasNode
                       Id: g=bcc09db6634895ca536c223ed7642805
                       Type: BaseDataVariableType
@@ -2438,7 +2518,7 @@ Children:
                       Id: g=e861ac18f3783645829468b0b2635cbb
                       Type: BaseDataVariableType
                       DataType: NodeId
-                      Value: "/Objects/OptimateDemoProject/UI/Main Screens/Maintenance/Maintenance_Home"
+                      Value: "/Objects/OptimateDemoProject/UI/Screens/Maintenance/Maintenance_Home"
                     - Name: AliasNode
                       Id: g=12f69ce731cb08f12287a956b8b44eaf
                       Type: BaseDataVariableType
@@ -2525,7 +2605,7 @@ Children:
                       Id: g=664cf032911517d21a79ca9cc5a70cb9
                       Type: BaseDataVariableType
                       DataType: NodeId
-                      Value: "/Objects/OptimateDemoProject/UI/Main Screens/Maintenance/Maintenance_Menu_Bar"
+                      Value: "/Objects/OptimateDemoProject/UI/Screens/Maintenance/Maintenance_Menu_Bar"
                     - Name: AliasNode
                       Id: g=a2af49974b136a6d8d2febd0a8ca8493
                       Type: BaseDataVariableType
@@ -2698,7 +2778,7 @@ Children:
                       Id: g=bbde0bf6a18614382630913bb1e4398d
                       Type: BaseDataVariableType
                       DataType: NodeId
-                      Value: "/Objects/OptimateDemoProject/UI/Main Screens/Changeover/Changeover_Main"
+                      Value: "/Objects/OptimateDemoProject/UI/Screens/Changeover/Changeover_Main"
                     - Name: AliasNode
                       Id: g=63b512696b5cdf8a0378cce7fb1be455
                       Type: BaseDataVariableType
@@ -2785,7 +2865,7 @@ Children:
                       Id: g=d14bdc06495a5d4b64a7b022d6a1d889
                       Type: BaseDataVariableType
                       DataType: NodeId
-                      Value: "/Objects/OptimateDemoProject/UI/Main Screens/Changeover/Changeover_Menu_Bar"
+                      Value: "/Objects/OptimateDemoProject/UI/Screens/Changeover/Changeover_Menu_Bar"
                     - Name: AliasNode
                       Id: g=6879fe98639f010bbb16e55509cedadc
                       Type: BaseDataVariableType
@@ -3938,7 +4018,6 @@ Children:
             DataType: Boolean
             AccessLevel: Read
 - File: Stylesheets/Stylesheets.yaml
-- File: Template_Screens/Template_Screens.yaml
-- File: Widgets/Widgets.yaml
-- File: Main_Screens/Main_Screens.yaml
+- File: Screens/Screens.yaml
 - File: Keyboards/Keyboards.yaml
+- File: Widgets/Widgets.yaml

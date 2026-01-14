@@ -865,6 +865,25 @@ Children:
     - Name: Default
       Id: g=4e90b53270f941c83c3caa0b81347252
       Type: NavigationPanelStyle
+      Children:
+      - Name: TabSpacing
+        Id: g=ac8417877d9f98f71a41ed6739292719
+        Type: BaseDataVariableType
+        DataType: Size
+        Value: 3.0
+      - Name: FontSize
+        Id: g=63b937809ade25a658db32830c1db929
+        Type: BaseDataVariableType
+        DataType: Size
+        Value: 20.0
+      - Name: Radius
+        Id: g=d11db02b195bf0c410ebe9228fb9767f
+        Type: BaseDataVariableType
+        DataType: Size
+      - Name: TabPadding
+        Id: g=b4a71146508d14e0483518452289c6ae
+        Type: BaseDataVariableType
+        DataType: Size
   - Name: ChartStyles
     Id: g=191fb4820c4ade0fc9ce2f602b5c21c9
     Type: BaseObjectType
@@ -1127,6 +1146,39 @@ Children:
         Type: BaseDataVariableType
         DataType: FontWeightEnum
         Value: 700
+    - Name: 20px
+      Id: g=b25b34c3fe99869d2c2f05cfddd02dd4
+      Type: LabelStyle
+      Children:
+      - Name: FontSize
+        Id: g=a2e0c85da14cac9de6a9e132ac50d299
+        Type: BaseDataVariableType
+        DataType: Size
+        Value: 20.0
+      - Name: Radius
+        Id: g=a5d4682eb32f28dcbce668e063594b79
+        Type: BaseDataVariableType
+        DataType: Size
+    - Name: 30px Blue
+      Id: g=65384e84e8207faf4ff85f91dc857f27
+      Type: LabelStyle
+      Children:
+      - Name: TextColor
+        Id: g=59f203591b3a9602cbde7b7c0cba93c5
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#000000"
+        Children:
+        - Name: DynamicLink
+          Id: g=0b5339a15aa0528a2c5086ce6e69092e
+          Type: DynamicLink
+          DataType: NodePath
+          Value: "../../../neutral"
+      - Name: FontSize
+        Id: g=bfe1dd07dbf760ad53d0f23a01903987
+        Type: BaseDataVariableType
+        DataType: Size
+        Value: 30.0
   - Name: RadioButtonStyles
     Id: g=e89c1a7add813ddb1a285557b1614624
     Type: BaseObjectType

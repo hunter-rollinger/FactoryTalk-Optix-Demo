@@ -4,7 +4,7 @@ Type: FolderType
 Children:
 - Name: Switch_OnOff
   Id: g=9b66f86cd575f4a3d7a39343c3049636
-  Supertype: Panel
+  Supertype: ScaleLayout
   ReferenceType: HasComponent
   Children:
   - Name: Width
@@ -295,17 +295,69 @@ Children:
     Type: BaseDataVariableType
     DataType: Boolean
     Value: true
-  - Name: Visible
-    Id: g=0f1ebb8048e821b060db4ddd73f28a8a
+  - Name: OriginalWidth
+    Id: g=55b7f27bda0dafe47925bfb3f980b04a
+    Type: BaseDataVariableType
+    DataType: Size
+    ModellingRule: Optional
+    Value: 105.0
+  - Name: OriginalHeight
+    Id: g=b0d5a8ec130e2edf4827b7111eda49b8
+    Type: BaseDataVariableType
+    DataType: Size
+    ModellingRule: Optional
+    Value: 42.0
+  - Name: HorizontalAlignment
+    Id: g=349e6337d00f69f60bb6b55c988f71f9
+    Type: BaseVariableType
+    DataType: HorizontalAlignment
+    ModellingRule: Optional
+    Value: 2
+  - Name: VerticalAlignment
+    Id: g=c69404b0639db444aa5e30f55686ca9d
+    Type: BaseVariableType
+    DataType: VerticalAlignment
+    ModellingRule: Optional
+    Value: 2
+  - Name: FontScaling
+    Id: g=0183d698ac9946ee33c197c1f148526a
     Type: BaseDataVariableType
     DataType: Boolean
     ModellingRule: Optional
     Value: true
+  - Name: FillMode
+    Id: g=044020390767ca0583dfd81b165cbe0e
+    Type: BaseDataVariableType
+    DataType: FillModeEnum
+    ModellingRule: Optional
 - Name: Switch_OnOff_Label
   Id: g=0dc195e2b4c44f0289d0a11878992489
-  Supertype: Panel
+  Supertype: ScaleLayout
   ReferenceType: HasComponent
   Children:
+  - Name: Width
+    Id: g=ead5a4aa69dd7e2ea15abb2acf7d30b8
+    Type: BaseVariableType
+    DataType: Size
+    ModellingRule: Optional
+    Value: 180.0
+  - Name: Height
+    Id: g=a0402927a2d82da9e5358dea1c3543c2
+    Type: BaseVariableType
+    DataType: Size
+    ModellingRule: Optional
+    Value: 42.0
+  - Name: HorizontalAlignment
+    Id: g=4446bb4746a88e8f9a373f9ec5cffd43
+    Type: BaseVariableType
+    DataType: HorizontalAlignment
+    ModellingRule: Optional
+    Value: 3
+  - Name: VerticalAlignment
+    Id: g=ae4d88ac312c3d30824b7bd08baee391
+    Type: BaseVariableType
+    DataType: VerticalAlignment
+    ModellingRule: Optional
   - Name: Toggle
     Id: g=083b2e790c15162ec58d7a58d4120c65
     Type: BaseDataVariableType
@@ -325,24 +377,6 @@ Children:
     Type: BaseDataVariableType
     DataType: Boolean
     Value: true
-  - Name: Visible
-    Id: g=c91eb3d3dec3743ebe1bec52c98cddc3
-    Type: BaseDataVariableType
-    DataType: Boolean
-    ModellingRule: Optional
-    Value: true
-  - Name: HorizontalAlignment
-    Id: g=4446bb4746a88e8f9a373f9ec5cffd43
-    Type: BaseVariableType
-    DataType: HorizontalAlignment
-    ModellingRule: Optional
-    Value: 3
-  - Name: VerticalAlignment
-    Id: g=ae4d88ac312c3d30824b7bd08baee391
-    Type: BaseVariableType
-    DataType: VerticalAlignment
-    ModellingRule: Optional
-    Value: 3
   - Name: Label
     Id: g=fcd0505381ae8e9891c00918bba761e6
     Type: BaseDataVariableType
@@ -646,23 +680,52 @@ Children:
       DataType: VerticalAlignment
       ModellingRule: Optional
       Value: 3
-  - Name: Width
-    Id: g=ead5a4aa69dd7e2ea15abb2acf7d30b8
-    Type: BaseVariableType
+  - Name: OriginalWidth
+    Id: g=2007b1a5de474bd89ca39b70a14ab7c4
+    Type: BaseDataVariableType
     DataType: Size
     ModellingRule: Optional
     Value: 180.0
+  - Name: OriginalHeight
+    Id: g=44e21a455041c8a3f8d1e30bb51bdc7a
+    Type: BaseDataVariableType
+    DataType: Size
+    ModellingRule: Optional
+    Value: 42.0
+  - Name: FontScaling
+    Id: g=5199f6d78e80ade1c3a55cbeae316f3c
+    Type: BaseDataVariableType
+    DataType: Boolean
+    ModellingRule: Optional
+    Value: true
+- Name: Switch_OnOff_Label_Indicator
+  Id: g=a5fbb402e02c8f20ff8051ce068df2fe
+  Supertype: ScaleLayout
+  ReferenceType: HasComponent
+  Children:
+  - Name: Width
+    Id: g=3af1868321b3bb06bff6f68adfb9b67c
+    Type: BaseVariableType
+    DataType: Size
+    ModellingRule: Optional
+    Value: 240.0
   - Name: Height
-    Id: g=a0402927a2d82da9e5358dea1c3543c2
+    Id: g=5988a03a6e2cd5edffe6ffa7b9b37ea4
     Type: BaseVariableType
     DataType: Size
     ModellingRule: Optional
     Value: 42.0
-- Name: Switch_OnOff_LabelIndicator
-  Id: g=a5fbb402e02c8f20ff8051ce068df2fe
-  Supertype: Panel
-  ReferenceType: HasComponent
-  Children:
+  - Name: HorizontalAlignment
+    Id: g=3bcf194091eef45dbb86a52d8ca97132
+    Type: BaseVariableType
+    DataType: HorizontalAlignment
+    ModellingRule: Optional
+    Value: 3
+  - Name: VerticalAlignment
+    Id: g=39d6344e2667d482f9e007b59ec3c6d3
+    Type: BaseVariableType
+    DataType: VerticalAlignment
+    ModellingRule: Optional
   - Name: Toggle
     Id: g=dce2a536da370ecd6cd02c20a9b72abf
     Type: BaseDataVariableType
@@ -682,24 +745,6 @@ Children:
     Type: BaseDataVariableType
     DataType: Boolean
     Value: true
-  - Name: Visible
-    Id: g=8c7d6342568806176ee8f335be3bc1e5
-    Type: BaseDataVariableType
-    DataType: Boolean
-    ModellingRule: Optional
-    Value: true
-  - Name: HorizontalAlignment
-    Id: g=3bcf194091eef45dbb86a52d8ca97132
-    Type: BaseVariableType
-    DataType: HorizontalAlignment
-    ModellingRule: Optional
-    Value: 3
-  - Name: VerticalAlignment
-    Id: g=39d6344e2667d482f9e007b59ec3c6d3
-    Type: BaseVariableType
-    DataType: VerticalAlignment
-    ModellingRule: Optional
-    Value: 3
   - Name: Label
     Id: g=8967e8a0258838cb60d085ce5f3e5443
     Type: BaseDataVariableType
@@ -1020,7 +1065,7 @@ Children:
           Children:
           - Name: IndicatorColors1
             Id: g=6d3a6f6a453505c867c38d63dc6a43b2
-            Type: IndicatorColors
+            Type: Colors
             Children:
             - Name: Source
               Id: g=3501230ba4cc8e4071bba7714e5a9fa0
@@ -1064,7 +1109,7 @@ Children:
                   Id: g=0b45150cbb41f2033bf16f1fff122e66
                   Type: BaseDataVariableType
                   DataType: Int16
-                  Value: 4
+                  Value: 2
                 - Name: Value
                   Id: g=95e7be7c64a750e40eb241f6719a0afc
                   Type: BaseDataVariableType
@@ -1083,7 +1128,7 @@ Children:
                   Id: g=aee238a596ca9a04dc0be785ec0961f1
                   Type: BaseDataVariableType
                   DataType: Int16
-                  Value: 2
+                  Value: 3
                 - Name: Value
                   Id: g=810291074eaaffc61d6a2b0f37f06843
                   Type: BaseDataVariableType
@@ -1102,8 +1147,8 @@ Children:
                   Id: g=205d122c0eea6955f6a3b2f2a94460a8
                   Type: BaseDataVariableType
                   DataType: Int16
-                  Value: 5
-                - Name: ns=9;Value
+                  Value: 4
+                - Name: Value
                   Id: g=f0700176e36a8bf90e4ffdb106613895
                   Type: BaseDataVariableType
                   DataType: Color
@@ -1121,7 +1166,7 @@ Children:
                   Id: g=0b2e0405640ffc9fb6163fe9402bc53b
                   Type: BaseDataVariableType
                   DataType: Int16
-                  Value: 3
+                  Value: 5
                 - Name: Value
                   Id: g=be082ac420efc8ab5ca58b936be8573e
                   Type: BaseDataVariableType
@@ -1132,11 +1177,24 @@ Children:
                     Type: DynamicLink
                     DataType: NodePath
                     Value: "/Objects/OptimateDemoProject/UI/Stylesheets/Jones/dark grey 2"
+              - Name: Pair1
+                Id: g=3c6bb4c5d87934b2031c34efb2b6ce68
+                Type: ValueMapPair
+                Children:
+                - Name: Key
+                  Id: g=2999adeac93fc89eb1b92b275823b8d7
+                  Type: BaseDataVariableType
+                  DataType: Int16
+                  Value: 6
+                - Name: Value
+                  Id: g=a4595e6a996e4e92555ecab2db4dcf2a
+                  Type: BaseDataVariableType
+                  DataType: Color
       - Name: IndicatorColor
         Id: g=aab2e481d3581420315a07e68de52d0a
         Type: BaseDataVariableType
         DataType: 'Multi-State Indicator Colors'
-        Value: 1
+        Value: 5
         Children:
         - Name: DynamicLink
           Id: g=bea8ab893d676635fd6dd705afd2f559
@@ -1161,7 +1219,7 @@ Children:
           Children:
           - Name: IndicatorSymbol1
             Id: g=ac18c6592b237e6582cb4687ae42e09a
-            Type: IndicatorSymbol
+            Type: Symbols
             Children:
             - Name: Source
               Id: g=1849678a0ba72b8dda23d42ced975804
@@ -1200,7 +1258,7 @@ Children:
                   Id: g=38f24a198b2929695e1bdd780f638827
                   Type: BaseDataVariableType
                   DataType: Int16
-                  Value: 3
+                  Value: 2
                 - Name: Value
                   Id: g=2e2ca1b4e64ec7d4e06f905e49d3a4e5
                   Type: BaseDataVariableType
@@ -1214,7 +1272,7 @@ Children:
                   Id: g=46da334ae63430afa33415efc947e9ee
                   Type: BaseDataVariableType
                   DataType: Int16
-                  Value: 4
+                  Value: 3
                 - Name: Value
                   Id: g=6fccdb71dd0eb8be41faf9b2dbf998e6
                   Type: BaseDataVariableType
@@ -1228,7 +1286,7 @@ Children:
                   Id: g=7ecbd38de5ca8187b2a2a8917138512c
                   Type: BaseDataVariableType
                   DataType: Int16
-                  Value: 5
+                  Value: 4
                 - Name: Value
                   Id: g=5eca29a5c71c2be021f831fea6a8aa56
                   Type: BaseDataVariableType
@@ -1242,7 +1300,7 @@ Children:
                   Id: g=196f2aab5b53043dc0ca259797d5e2d4
                   Type: BaseDataVariableType
                   DataType: Int16
-                  Value: 6
+                  Value: 5
                 - Name: Value
                   Id: g=27116db82d1d218a1ce756723188caaa
                   Type: BaseDataVariableType
@@ -1256,7 +1314,7 @@ Children:
                   Id: g=11e316731defe35378f65142737f6b29
                   Type: BaseDataVariableType
                   DataType: Int16
-                  Value: 7
+                  Value: 6
                 - Name: Value
                   Id: g=e379f332d1b23362ceb3e8870f3df123
                   Type: BaseDataVariableType
@@ -1270,7 +1328,7 @@ Children:
                   Id: g=8ef892f879a574dc78e9d8889314a2bd
                   Type: BaseDataVariableType
                   DataType: Int16
-                  Value: 8
+                  Value: 7
                 - Name: Value
                   Id: g=b8c7ba3754d0df1dc349d5abd338058e
                   Type: BaseDataVariableType
@@ -1284,8 +1342,8 @@ Children:
                   Id: g=095f5351c9d31a7233aabec2c401b478
                   Type: BaseDataVariableType
                   DataType: Int16
-                  Value: 2
-                - Name: ns=9;Value
+                  Value: 8
+                - Name: Value
                   Id: g=fd3be33d9a2d628e71dc83955698a4c1
                   Type: BaseDataVariableType
                   DataType: ResourceUri
@@ -1304,11 +1362,24 @@ Children:
                   Type: BaseDataVariableType
                   DataType: ResourceUri
                   Value: "ns=36;%PROJECTDIR%/Graphics/Coesia - Library/indicator items/exclaim.svg"
+              - Name: Pair10
+                Id: g=abf7bc6a56c786497d53bc9f61023b92
+                Type: ValueMapPair
+                Children:
+                - Name: Key
+                  Id: g=2edb76f08ad2494f265f7f8a422d7436
+                  Type: BaseDataVariableType
+                  DataType: Int16
+                  Value: 10
+                - Name: Value
+                  Id: g=875b36a24544850c30d77bfc62f85a78
+                  Type: BaseDataVariableType
+                  DataType: ResourceUri
       - Name: IndicatorSymbol
         Id: g=16fd5199be5ba827d8813336fcc7bd73
         Type: BaseDataVariableType
         DataType: 'Multi-State Indicator Symbols'
-        Value: 1
+        Value: 2
         Children:
         - Name: DynamicLink
           Id: g=851347f4f7146b745f9f6dce85154d3d
@@ -1410,18 +1481,6 @@ Children:
       DataType: Size
       ModellingRule: Optional
       Value: 10.0
-  - Name: Width
-    Id: g=3af1868321b3bb06bff6f68adfb9b67c
-    Type: BaseVariableType
-    DataType: Size
-    ModellingRule: Optional
-    Value: 240.0
-  - Name: Height
-    Id: g=5988a03a6e2cd5edffe6ffa7b9b37ea4
-    Type: BaseVariableType
-    DataType: Size
-    ModellingRule: Optional
-    Value: 42.0
   - Name: IndicatorColor
     Id: g=9a82456dfa11615717a642ed8b43aae0
     Type: BaseDataVariableType
@@ -1436,3 +1495,21 @@ Children:
     Id: g=16de553554f2cf09c07880f00e75b09a
     Type: BaseDataVariableType
     DataType: Boolean
+  - Name: OriginalWidth
+    Id: g=b417ca2138d5d3e8d042ac6e23cf86ea
+    Type: BaseDataVariableType
+    DataType: Size
+    ModellingRule: Optional
+    Value: 240.0
+  - Name: OriginalHeight
+    Id: g=25f23c49bf86bc02b54eae4e4d6095b8
+    Type: BaseDataVariableType
+    DataType: Size
+    ModellingRule: Optional
+    Value: 42.0
+  - Name: FontScaling
+    Id: g=d4f2b5a5b1fe4d5bb8eac3c40c3c6b37
+    Type: BaseDataVariableType
+    DataType: Boolean
+    ModellingRule: Optional
+    Value: true

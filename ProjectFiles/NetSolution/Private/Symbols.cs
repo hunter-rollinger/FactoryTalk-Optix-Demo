@@ -6,7 +6,7 @@ using UAManagedCore;
 //-------------------------------------------
 
 [MapType(NamespaceUri = "OptimateDemoProject", Guid = "5568c1728c246268e044fc1f217996c8")]
-public class IndicatorSymbol : FTOptix.CoreBase.ValueMapConverter
+public class Symbols : FTOptix.CoreBase.ValueMapConverter
 {
 #region Children properties
     //-------------------------------------------
