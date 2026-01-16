@@ -1,3 +1,466 @@
 Name: Reports
 Id: g=2b614d179cdf416dd639ea0107984f43
 Type: ReportsCategoryFolder
+Children:
+- Name: StyleSheet1
+  Id: g=154f6701e09dfb84b09a5554a8d9a81b
+  Type: ReportStyleSheet
+  Children:
+  - Name: ButtonStyles
+    Id: g=e7d1bd0a286114e38b23c6b419a59cec
+    Type: BaseObjectType
+    Children:
+    - Name: Default
+      Id: g=38ee5ba5e9c89ad5f65f7d2acdf3b2b8
+      Type: ButtonStyle
+    - Name: Accent
+      Id: g=e68682829fc4fcbb71f5307b73e2272d
+      Type: ButtonStyle
+      Children:
+      - Name: Color
+        Id: g=9c6211d84c6399c6a0a794700b219b75
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#0fafff"
+      - Name: TextColor
+        Id: g=693b48274fe0fc3f83610310b4532f97
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#ffffff"
+      - Name: BorderColor
+        Id: g=39695a32fd021144c41c29b7a865ea65
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#075982"
+    - Name: BorderedRectangular
+      Id: g=aa74c27f2df78885f2db73ff105ddcbb
+      Type: ButtonStyle
+      Children:
+      - Name: Color
+        Id: g=8bf733ef4fcd51a7df05dbfa490c5f9a
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#0fafff"
+      - Name: TextColor
+        Id: g=dcff3c9585b2690dec83feff09f126dc
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#ffffff"
+      - Name: BorderColor
+        Id: g=8c6b6a243704ee127747506b14b0991e
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#e4e4e4"
+      - Name: BorderWidth
+        Id: g=73f0d21aa7d8e12c83d4b4ff63af8a2d
+        Type: BaseDataVariableType
+        DataType: Size
+        Value: 5.0
+    - Name: BorderedCircular
+      Id: g=043989cb773e672cabd8019abaef6441
+      Type: ButtonStyle
+      Children:
+      - Name: Color
+        Id: g=99f826a16771a6284ab47394007f2411
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#0fafff"
+      - Name: TextColor
+        Id: g=df7e5fb83cd7a82392bb010bcb7c8ee5
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#ffffff"
+      - Name: BorderColor
+        Id: g=77fadb7a6d205b3b877931e3e51b55b3
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#e4e4e4"
+      - Name: BorderWidth
+        Id: g=6b4329c99cc8e557cf74cf7be589a084
+        Type: BaseDataVariableType
+        DataType: Size
+        Value: 5.0
+      - Name: Radius
+        Id: g=9160b1022f9bef7f3e486e36eeb06993
+        Type: BaseDataVariableType
+        DataType: Size
+        Value: -1.0
+    - Name: Emergency
+      Id: g=645f96bc0adb48bdd5a2a5df07199045
+      Type: ButtonStyle
+      Children:
+      - Name: Color
+        Id: g=fd22a69697707cd494624ffa03a227ac
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#eb001b"
+      - Name: TextColor
+        Id: g=44b067e9546d694b62491c9a76a3a559
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#ffffff"
+      - Name: BorderColor
+        Id: g=7ac8382feab92713962795a7eb51bcf1
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#f8e71c"
+      - Name: BorderWidth
+        Id: g=81dc4b7b5fd3fa0dcb447a3376dfa2e5
+        Type: BaseDataVariableType
+        DataType: Size
+        Value: 5.0
+      - Name: Radius
+        Id: g=82da6210e3cc05e2ec917c2ab9666aad
+        Type: BaseDataVariableType
+        DataType: Size
+        Value: -1.0
+    - Name: Transparent
+      Id: g=9a1810f33129342772cca593c54a272c
+      Type: ButtonStyle
+      Children:
+      - Name: Color
+        Id: g=92049c362d3bcf3b7b5fe968fe4e1ec2
+        Type: BaseDataVariableType
+        DataType: Color
+      - Name: BorderColor
+        Id: g=d5861b3e7e923ae9fffb239e61924877
+        Type: BaseDataVariableType
+        DataType: Color
+      - Name: BorderWidth
+        Id: g=030ee1f40a3ce0efd076593822f84796
+        Type: BaseDataVariableType
+        DataType: Size
+  - Name: InputBoxStyles
+    Id: g=7b7c056caa900d9c1b4c565ba2dca0f4
+    Type: BaseObjectType
+    Children:
+    - Name: Default
+      Id: g=77639be5bd76838f97bb69254a9bc1d1
+      Type: InputBoxStyle
+  - Name: SwitchStyles
+    Id: g=9ca8d5a1217e0310b06a1662568f8596
+    Type: BaseObjectType
+    Children:
+    - Name: Default
+      Id: g=8f39cd73004811871028b073cd4ba4ca
+      Type: SwitchStyle
+  - Name: GaugeStyles
+    Id: g=83bd852f44d00aae2f8c867af90c70f3
+    Type: BaseObjectType
+    Children:
+    - Name: Default
+      Id: g=9bcd4a03b54e927ea8ebb1064f202ac0
+      Type: GaugeStyle
+  - Name: NavigationPanelStyles
+    Id: g=0a6eb886368b8f9700ae06616d7b4b29
+    Type: BaseObjectType
+    Children:
+    - Name: Default
+      Id: g=52bbefee43b8118df5da7abdaae8378f
+      Type: NavigationPanelStyle
+  - Name: ChartStyles
+    Id: g=8ad1646a34e10b6b7110f219f3e0d2e3
+    Type: BaseObjectType
+    Children:
+    - Name: Default
+      Id: g=1ff22967a3a47cf5b6ae5ebe383fedef
+      Type: ChartStyle
+  - Name: DataListStyles
+    Id: g=10475a0fe7d799baf0c3ed871310177e
+    Type: BaseObjectType
+    Children:
+    - Name: Default
+      Id: g=d4dc7f93d2b06a8cdeb441a7b0923800
+      Type: DataListStyle
+  - Name: ToolTipStyles
+    Id: g=4069fa83a1c409895d3c9ab109c2d389
+    Type: BaseObjectType
+    Children:
+    - Name: Default
+      Id: g=aa3ad97c25d2eecdea9ff2e97ff28246
+      Type: ToolTipStyle
+  - Name: ScrollBarStyles
+    Id: g=310cafe49eb4ec7f3f3a729ddacdb759
+    Type: BaseObjectType
+    Children:
+    - Name: Default
+      Id: g=c1ad59a3c9133b20bfc107b12197c763
+      Type: ScrollBarStyle
+  - Name: AccordionStyles
+    Id: g=72bebecc096f5601a188ed4b744b5871
+    Type: BaseObjectType
+    Children:
+    - Name: Default
+      Id: g=a7508012bf46f7a64ce762294362e32a
+      Type: AccordionStyle
+  - Name: PieChartStyles
+    Id: g=a16b25ba4e8a498ff0081c8cb3d3da61
+    Type: BaseObjectType
+    Children:
+    - Name: Default
+      Id: g=3af03060c52b85474aa1c720875d5f04
+      Type: PieChartStyle
+  - Name: HistogramChartStyles
+    Id: g=ddb3206f7a2b74548a7a50d002a84e48
+    Type: BaseObjectType
+    Children:
+    - Name: Default
+      Id: g=67b07579b485da55b1115610530bfabd
+      Type: HistogramChartStyle
+  - Name: LabelStyles
+    Id: g=0bb456b392daf1995ba0486fdfca99b1
+    Type: BaseObjectType
+    Children:
+    - Name: Default
+      Id: g=814597eadc62bfbc784b71e6857c6773
+      Type: LabelStyle
+  - Name: RadioButtonStyles
+    Id: g=c328d4d4f04c3396d25f779c6b4817d2
+    Type: BaseObjectType
+    Children:
+    - Name: Default
+      Id: g=fe5771b2a277b20adff15c04b1582649
+      Type: RadioButtonStyle
+  - Name: CheckBoxStyles
+    Id: g=3a1cf9c2672ff8ba2e493dc18e591715
+    Type: BaseObjectType
+    Children:
+    - Name: Default
+      Id: g=321b8b14576f141b875e62f0055442b9
+      Type: CheckBoxStyle
+  - Name: RectangleStyles
+    Id: g=b9a1776659fa25f9f96159636baeb54e
+    Type: BaseObjectType
+    Children:
+    - Name: Default
+      Id: g=1c7d3fdb11e5c2ee4d7b5979ffc76b43
+      Type: RectangleStyle
+      Children:
+      - Name: BorderThickness
+        Id: g=375b684ef01ee570515fa75375c9f2cb
+        Type: BaseDataVariableType
+        DataType: Size
+        Value: 1.0
+  - Name: ScreenStyles
+    Id: g=5c22222b76c68b7f3b9d4ba5a358f944
+    Type: BaseObjectType
+    Children:
+    - Name: Default
+      Id: g=bf1cf9ee84cd61c74098f3b20febcbdc
+      Type: ScreenStyle
+- Name: Reports1
+  Id: g=8feeec0a2cf7f7ddf577838053ec8954
+  Type: Report
+  ReferenceType: HasComponent
+  Children:
+  - Name: PageSize
+    Id: g=431a847240405dad5027fe9784cae110
+    Type: BaseDataVariableType
+    DataType: PageSize
+    Value: 2
+  - Name: PageWidth
+    Id: g=770211bac7d72b92e01e28cb4355dd0d
+    Type: BaseDataVariableType
+    DataType: Size
+    Value: 210.0
+    Children:
+    - Name: EngineeringUnits
+      Id: g=31e2ec44d6cfeb02339ef7bca152b5e7
+      Type: EUInformationType
+      DataType: EUInformation
+      Children:
+      - Name: UnitId
+        Id: g=24df83fbcdfe3e56c7b1a3d4bccdbc96
+        Type: BaseDataVariableType
+        DataType: Int32
+        AccessLevel: Read
+        Value: 5066068
+      - Name: DisplayName
+        Id: g=72da7109f2049d262911cf78484f2208
+        Type: BaseDataVariableType
+        DataType: LocalizedText
+      - Name: Description
+        Id: g=a623b5b2892ae976815ddc29acaa8fd5
+        Type: BaseDataVariableType
+        DataType: LocalizedText
+  - Name: PageHeight
+    Id: g=2fdc4c1bbe687ffb626c487a0f935c8e
+    Type: BaseDataVariableType
+    DataType: Size
+    Value: 297.0
+    Children:
+    - Name: EngineeringUnits
+      Id: g=b7cf5ebbe1aa720e2afa296550163dbf
+      Type: EUInformationType
+      DataType: EUInformation
+      Children:
+      - Name: UnitId
+        Id: g=98bde99105999db3fed93b402d2c874d
+        Type: BaseDataVariableType
+        DataType: Int32
+        AccessLevel: Read
+        Value: 5066068
+      - Name: DisplayName
+        Id: g=0656f26a94be8cb999635a93bd7ff2d8
+        Type: BaseDataVariableType
+        DataType: LocalizedText
+      - Name: Description
+        Id: g=1b0e8211654b65746910cb1c45c685fc
+        Type: BaseDataVariableType
+        DataType: LocalizedText
+  - Name: StyleSheet
+    Id: g=35a1ea4cedea047cba68cbc5704fecd8
+    Type: NodePointer
+    DataType: NodeId
+    Value: "/Objects/OptimateDemoProject/Reports/StyleSheet1"
+    Children:
+    - Name: Kind
+      Id: g=ae2536ebc26839f7886269bd342e619d
+      Type: PropertyType
+      DataType: NodeId
+      Value: "/Types/ObjectTypes/BaseObjectType/StyleSheet/ReportStyleSheet"
+  - Name: PageCount
+    Id: g=08726ed85521729dea185d832e9eb7d3
+    Type: BaseDataVariableType
+    DataType: String
+    AccessLevel: Read
+    Value: "{page_count}"
+  - Name: PageNumber
+    Id: g=7c805e9337510104087d96e51ce15fa7
+    Type: BaseDataVariableType
+    DataType: String
+    AccessLevel: Read
+    Value: "{page_number}"
+  - Name: PrintDateTime
+    Id: g=48269a342457fe536ec9f45b566a67de
+    Type: BaseDataVariableType
+    DataType: DateTime
+    AccessLevel: Read
+  - Name: Header
+    Id: g=3b94c405125bd87c973d1a20cef9908f
+    Type: Panel
+    Children:
+    - Name: Height
+      Id: g=192003d5442084a9d336336f31daf00d
+      Type: BaseDataVariableType
+      DataType: Size
+      Value: 20.0
+      Children:
+      - Name: EngineeringUnits
+        Id: g=f7eeccd022eeaab7bf778848616aa985
+        Type: EUInformationType
+        DataType: EUInformation
+        Children:
+        - Name: UnitId
+          Id: g=d79cc3a5acc9feb2522b67fe5a813819
+          Type: BaseDataVariableType
+          DataType: Int32
+          AccessLevel: Read
+          Value: 5066068
+        - Name: DisplayName
+          Id: g=a761b260e3789f6834a373e5eaede342
+          Type: BaseDataVariableType
+          DataType: LocalizedText
+        - Name: Description
+          Id: g=8f7fbaee64f793b58567ab1059c3a8d8
+          Type: BaseDataVariableType
+          DataType: LocalizedText
+  - Name: Sections
+    Id: g=406bdea5f348748ab761d9d1b63f0fbf
+    Type: ReportColumnLayout
+    Children:
+    - Name: PanelSection1
+      Id: g=92d9e6f57764fcdd5b9ce67a5995a9fa
+      Type: PanelSection
+      Children:
+      - Name: Height
+        Id: g=711532ea97a1684da16b65b0e1fed73b
+        Type: BaseDataVariableType
+        DataType: Size
+        Value: 30.0
+        Children:
+        - Name: EngineeringUnits
+          Id: g=9cefe517981a76312b417f4838140a72
+          Type: EUInformationType
+          DataType: EUInformation
+          Children:
+          - Name: UnitId
+            Id: g=5f6686a84b91bbd3e71d5e9da77a767b
+            Type: BaseDataVariableType
+            DataType: Int32
+            AccessLevel: Read
+            Value: 5066068
+          - Name: DisplayName
+            Id: g=cadfb3db52e87f94c3221404de54f19e
+            Type: BaseDataVariableType
+            DataType: LocalizedText
+          - Name: Description
+            Id: g=e64a2163c84dd15a6d70963b3e413106
+            Type: BaseDataVariableType
+            DataType: LocalizedText
+  - Name: Footer
+    Id: g=2abe50a035bd59974157afee1017cf58
+    Type: Panel
+    Children:
+    - Name: Height
+      Id: g=ae08b515460bda8647d94ea3512cc9f8
+      Type: BaseDataVariableType
+      DataType: Size
+      Value: 20.0
+      Children:
+      - Name: EngineeringUnits
+        Id: g=61cbf465c5458a74690085cfa23af303
+        Type: EUInformationType
+        DataType: EUInformation
+        Children:
+        - Name: UnitId
+          Id: g=a6c37ae94b8a48add725f842ecbb195d
+          Type: BaseDataVariableType
+          DataType: Int32
+          AccessLevel: Read
+          Value: 5066068
+        - Name: DisplayName
+          Id: g=09c97b92672f85b0dbc6877f43b68612
+          Type: BaseDataVariableType
+          DataType: LocalizedText
+        - Name: Description
+          Id: g=67945c0001924e919ddd355a6f17c80e
+          Type: BaseDataVariableType
+          DataType: LocalizedText
+    - Name: Label1
+      Id: g=31a3c7e0c9cd17343dccaabf98ac18ea
+      Type: ReportLabel
+      Children:
+      - Name: Width
+        Id: g=9a2d02eca0dc6fb3b9de66e0ebcbca42
+        Type: BaseDataVariableType
+        DataType: Size
+        Value: 20.0
+        Children:
+        - Name: EngineeringUnits
+          Id: g=3b1c0fd627847bf37f315ee5ec85c560
+          Type: EUInformationType
+          DataType: EUInformation
+          Children:
+          - Name: UnitId
+            Id: g=a843f0968991ca50d82777c48dd4a070
+            Type: BaseDataVariableType
+            DataType: Int32
+            AccessLevel: Read
+            Value: 5066068
+          - Name: DisplayName
+            Id: g=ca0aad6d43a63fe9a47e7d5857bc8af0
+            Type: BaseDataVariableType
+            DataType: LocalizedText
+          - Name: Description
+            Id: g=32430b718307a2fb9a5d1e87ffb021c4
+            Type: BaseDataVariableType
+            DataType: LocalizedText
+      - Name: Text
+        Id: g=678f9084d2269429bc1ac30d4c30a1b8
+        Type: BaseDataVariableType
+        DataType: LocalizedText
+        Value: {"LocaleId":"en-US","Text":"Label1"}
+  - Class: Reference
+    Target: ns=41;i=16
+    Direction: Forward

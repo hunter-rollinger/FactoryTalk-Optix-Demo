@@ -8,99 +8,6 @@ Children:
   DisplayName: {"NamespaceIndex":36,"TextId":"Overview"}
   ReferenceType: HasComponent
   Children:
-  - Name: ScaleLayout
-    Id: g=31c9647952a33bb6174bf29b048a0bd1
-    Type: ScaleLayout
-    Children:
-    - Name: OriginalWidth
-      Id: g=14a38af17ec4f385b3350f0ab92c41f5
-      Type: BaseDataVariableType
-      DataType: Size
-      ModellingRule: Optional
-      Value: 300.0
-    - Name: OriginalHeight
-      Id: g=08dcdf869bfbbdc7ff61e96defa3d913
-      Type: BaseDataVariableType
-      DataType: Size
-      ModellingRule: Optional
-      Value: 300.0
-    - Name: HorizontalAlignment
-      Id: g=4348994c4d35049c562499ec729ef491
-      Type: BaseVariableType
-      DataType: HorizontalAlignment
-      ModellingRule: Optional
-      Value: 3
-    - Name: VerticalAlignment
-      Id: g=d1642f17f840525dc608a49ae3115b44
-      Type: BaseVariableType
-      DataType: VerticalAlignment
-      ModellingRule: Optional
-      Value: 3
-    - Name: Image1
-      Id: g=e357d0b1a89095eb4576deabad64ef82
-      Type: Image
-      Children:
-      - Name: Path
-        Id: g=7514571d2f71cfc34439742d2ff951de
-        Type: BaseDataVariableType
-        DataType: ResourceUri
-        Value: "ns=36;%PROJECTDIR%/Graphics/Jones/MBE Overview Flipped.png"
-      - Name: Width
-        Id: g=0432c50124bb4126edbd6c97abd81ca6
-        Type: BaseVariableType
-        DataType: Size
-        ModellingRule: Optional
-        Value: 50.0
-      - Name: Height
-        Id: g=aa9c847f2ced7c8a56170f5a4d0f9389
-        Type: BaseVariableType
-        DataType: Size
-        ModellingRule: Optional
-        Value: 50.0
-      - Name: ImageLeftMargin
-        Id: g=25edf80d75f35ab7e89232cea39b18d9
-        Type: BaseDataVariableType
-        DataType: Size
-        ModellingRule: Optional
-      - Name: ImageTopMargin
-        Id: g=692d8ca7a1908b9106a7d940a7c59928
-        Type: BaseDataVariableType
-        DataType: Size
-        ModellingRule: Optional
-      - Name: ImageRightMargin
-        Id: g=8b5ebda35d8db0aa62bf6fdb5c7332e4
-        Type: BaseDataVariableType
-        DataType: Size
-        ModellingRule: Optional
-      - Name: ImageBottomMargin
-        Id: g=b10eee0a48880dedcb0eda7ed105f16d
-        Type: BaseDataVariableType
-        DataType: Size
-        ModellingRule: Optional
-      - Name: HorizontalAlignment
-        Id: g=a6ecf3a9129cdcf30e6391ea5a06d328
-        Type: BaseVariableType
-        DataType: HorizontalAlignment
-        ModellingRule: Optional
-        Value: 3
-      - Name: VerticalAlignment
-        Id: g=f4352dc146d2e0af3e678cdc1d0daef7
-        Type: BaseVariableType
-        DataType: VerticalAlignment
-        ModellingRule: Optional
-        Value: 3
-    - Name: FillMode
-      Id: g=52edbdd24f39922f50e0c60eb9c1331f
-      Type: BaseDataVariableType
-      DataType: FillModeEnum
-      ModellingRule: Optional
-      Value: 1
-    - Name: FontScaling
-      Id: g=7218d154f79cb04d820377361340d320
-      Type: BaseDataVariableType
-      DataType: Boolean
-      ModellingRule: Optional
-      Value: true
   - Name: Width
     Id: g=078f9a6a0f310312e85efd611df50499
     Type: BaseVariableType
@@ -111,13 +18,100 @@ Children:
     Id: g=033619ed3bbf7389cc8949efaf6cbadd
     Type: BaseDataVariableType
     DataType: Color
-    Value: "#ffffff"
     Children:
     - Name: DynamicLink
-      Id: g=d26814555acbb53a07ef93ab31e85540
+      Id: g=b02593de67ada0289127def7b0738a81
       Type: DynamicLink
       DataType: NodePath
-      Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Light Grey/Light Grey 100"
+      Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Light Grey 1"
+  - Name: Overview SVG
+    Id: g=6aab1e24934808421d7b11214b3f3f4b
+    Type: AdvancedSVGImage
+    Children:
+    - Name: SVGElementProperties
+      Id: g=4c2d2cd24b628be7ae99f78a7aaca676
+      Type: BaseObjectType
+    - Name: Path
+      Id: g=bd894a374c30f2c4d71f364889a75fae
+      Type: BaseDataVariableType
+      DataType: ResourceUri
+      Value: "ns=36;%PROJECTDIR%/Graphics/MBE/Overview - MBE.svg"
+    - Class: Reference
+      Target: ns=11;i=1360
+      Direction: Forward
+    - Name: Width
+      Id: g=5669441523f7d4cc0268012647903d7f
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 50.0
+    - Name: Height
+      Id: g=e639a99ec00f6b6c82f5d3a117bccc93
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 50.0
+    - Name: HorizontalAlignment
+      Id: g=59af0ee521eb3810e45e4f8e6e0a56e4
+      Type: BaseVariableType
+      DataType: HorizontalAlignment
+      ModellingRule: Optional
+      Value: 3
+    - Name: VerticalAlignment
+      Id: g=b5b0b93669245248f48ce52514211739
+      Type: BaseVariableType
+      DataType: VerticalAlignment
+      ModellingRule: Optional
+      Value: 3
+    - Name: LeftMargin
+      Id: g=f873c376d75805e92edd811b4cfea21f
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 10.0
+    - Name: TopMargin
+      Id: g=5f6a3e6eb3861e8ff5181ad34203560d
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 10.0
+    - Name: RightMargin
+      Id: g=aabb31e9401f66148f6ea55df1a5749f
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 10.0
+    - Name: BottomMargin
+      Id: g=986bb73221b51e846929a57964cdd634
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 10.0
+    - Name: FillMode
+      Id: g=13191f7f334761d96cc92ce4327e110c
+      Type: BaseDataVariableType
+      DataType: FillModeEnum
+      ModellingRule: Optional
+    - Name: Rotation
+      Id: g=391b59726c6286dc4309c6147fd2275b
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+    - Name: ColorizationMode
+      Id: g=2ef5e7bc8d36ddce0e3c788cf4ec4eb2
+      Type: BaseDataVariableType
+      DataType: ColorizationModeEnum
+      ModellingRule: Optional
+    - Name: MoveTarget
+      Id: g=5b961c7968c9c9a42ea84965d1b3aa4e
+      Type: NodePointer
+      DataType: NodeId
+      Children:
+      - Name: Kind
+        Id: g=c307712813cde6c6b912f8a365728462
+        Type: PropertyType
+        DataType: NodeId
+        Value: "/Types/ObjectTypes/BaseObjectType/BaseUIObject/Item/Container"
 - Name: Size_Config
   Id: g=08d34bf0ea4cd7697032169a9cdbca08
   Supertype: Screen

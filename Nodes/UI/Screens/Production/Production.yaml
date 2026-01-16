@@ -27,7 +27,7 @@ Children:
       Id: g=cf555ee81fb250d67c74fa7d1267cea2
       Type: DynamicLink
       DataType: NodePath
-      Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Light Grey/Light Grey 360"
+      Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Light Grey 4"
   - Name: LH_RH
     Id: g=f054eec8a2967df3212a3071cabb8095
     Type: RowLayout
@@ -135,54 +135,9 @@ Children:
           Value: "Default"
       - Name: Production_Statistics
         Id: g=057c4bcc10b7eb7748e86052fcda7164
-        Type: Production_Statistics
+        Type: Production_Statistics_Chart
         Children:
-        - Name: Percentage
-          Id: g=3d52b4e2f58d60a24f0a3f90fdbba12d
-          Type: Label
-          Children:
-          - Name: Text
-            Id: g=ed3738b0f4caeeb0a3b0c71d9c0887c0
-            Type: BaseDataVariableType
-            DataType: LocalizedText
-            Children:
-            - Name: StringFormatter1
-              Id: g=c41d073dd4dff858784b3f7448a38096
-              Type: StringFormatter
-              Children:
-              - Name: Source0
-                Id: g=e2d70b4ebd6fdff719be76899cfb1f09
-                Type: BaseDataVariableType
-                DataType: BaseDataType
-                ReferenceType: HasSource
-                Children:
-                - Name: ExpressionEvaluator1
-                  Id: g=fcf66ca98f2a71789cd1d1f46b783f9e
-                  Type: ExpressionEvaluator
-                  Children:
-                  - Name: Source0
-                    Id: g=f1ed29bbe6ce9c9cb654f89096edba02
-                    Type: BaseDataVariableType
-                    DataType: BaseDataType
-                    ReferenceType: HasSource
-                    Children:
-                    - Name: DynamicLink
-                      Id: g=86ae459aee1ef8c216097d771a07c2ce
-                      Type: DynamicLink
-                      DataType: NodePath
-                      Value: "../../../../../../Good_Value"
-                  - Name: Source1
-                    Id: g=18c0f28003f6b07fec244384cc3ebb9a
-                    Type: BaseDataVariableType
-                    DataType: BaseDataType
-                    ReferenceType: HasSource
-                    Children:
-                    - Name: DynamicLink
-                      Id: g=9e4c752c2ff1e38d4c6c507dd2c6ca29
-                      Type: DynamicLink
-                      DataType: NodePath
-                      Value: "../../../../../../Bad_Value"
-        - Name: Good_Value
+        - Name: Inner_Value
           Id: g=b61dfbdf4a01fa8bce4f2e92fbdd2199
           Type: BaseDataVariableType
           DataType: Float
@@ -199,7 +154,7 @@ Children:
               DataType: DynamicLinkMode
               ModellingRule: Optional
               Value: 2
-        - Name: Bad_Value
+        - Name: Outer_Value
           Id: g=9798949ce18938ce5ad8f87dc7f91280
           Type: BaseDataVariableType
           DataType: Float
@@ -272,27 +227,142 @@ Children:
             Id: g=4627b6bea1c4bf019d8a30a14195ccc8
             Type: BaseDataVariableType
             DataType: String
-        - Name: GoodVars
-          Id: g=cb5a7da610e747e17cc3615769f325ac
-          Type: BaseDataVariableType
-          DataType: NodeId
-        - Name: BadVars
-          Id: g=06acbc2644f047065d60e3e878cb670e
-          Type: BaseDataVariableType
-          DataType: NodeId
         - Name: ProductionStatisticsChart_NetLogic
           Id: g=449e181f33f21ab8e6b0c5911413f1be
           Type: NetLogic
+        - Name: Percentage
+          Id: g=feb56926ca6e37e8cf979ea0496000ed
+          Type: Label
+          Children:
+          - Name: Text
+            Id: g=12afa208f7828bec16a223068cd40abd
+            Type: BaseDataVariableType
+            DataType: LocalizedText
+            Children:
+            - Name: DynamicLink
+              Id: g=0a73de9ee062a8dd6e238cf3d647bce7
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "../../Percent"
+          - Name: TextColor
+            Id: g=850e6489a93eead3d48fe7c70df00b60
+            Type: BaseDataVariableType
+            DataType: Color
+            Value: "#000000"
+            Children:
+            - Name: DynamicLink
+              Id: g=67700647802c27333c909b161c0537f3
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "../../Font_Color"
+          - Name: FontSize
+            Id: g=b1a19054163f76265754d16d9fda27d5
+            Type: BaseDataVariableType
+            DataType: Size
+            Value: 96.0
+            Children:
+            - Name: DynamicLink
+              Id: g=596232388f2a3a38d7e308a1d20add29
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "../../Font_Size"
+        - Name: Inner_Color
+          Id: g=2dc9bd45116f5cac8341dce3d1e9569d
+          Type: BaseDataVariableType
+          DataType: Color
+          Children:
+          - Name: DynamicLink
+            Id: g=be233f983dcfad780d22623744f58df8
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Info - Blue"
+        - Name: Outer_Color
+          Id: g=18e16f1919e1b7945bd00d785829eb67
+          Type: BaseDataVariableType
+          DataType: Color
+          Children:
+          - Name: DynamicLink
+            Id: g=326532d439a7b0693fad27578443e2ba
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Error - Red"
+        - Name: Inner_Background_Color
+          Id: g=1bab97db61a4af773caa3d06539b987e
+          Type: BaseDataVariableType
+          DataType: Color
+          Children:
+          - Name: DynamicLink
+            Id: g=392e47f9aba5c697820f07e6863d2594
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Light Grey 4"
+        - Name: Outer_Background_Color
+          Id: g=8b29e5ef23a8ecd4324016a0498404fa
+          Type: BaseDataVariableType
+          DataType: Color
+          Children:
+          - Name: DynamicLink
+            Id: g=f4f5a07e4d03dfdc1753ba7ae75e9a65
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Light Grey 4"
         - Name: Font_Size
-          Id: g=cf8f19acf764717ed95997b8753d9de1
+          Id: g=1ebd21aab9c0dae67e1970acfd256b3c
           Type: BaseDataVariableType
           DataType: Int32
           Value: 96
-        - Name: Percent_Precision
-          Id: g=b20446bcf6208f3e3b1841c9d0b76244
+        - Name: Font_Color
+          Id: g=9afdb5c740b793befa31f79180c64eb0
           Type: BaseDataVariableType
-          DataType: Int32
-          Value: 1
+          DataType: Color
+          Children:
+          - Name: DynamicLink
+            Id: g=8fdfc2039eb124dcc8d3fba90b8bcb99
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Dark Grey 6"
+        - Name: Percent
+          Id: g=6525bee782b9fb778aee7c93252837d4
+          Type: BaseDataVariableType
+          DataType: String
+          Value: "0"
+          Children:
+          - Name: StringFormatter1
+            Id: g=8dd15dbca8a4c9b99e608038cb0a5e80
+            Type: StringFormatter
+            Children:
+            - Name: Source0
+              Id: g=7058ece6ade49e404a6e342411ce4308
+              Type: BaseDataVariableType
+              DataType: BaseDataType
+              ReferenceType: HasSource
+              Children:
+              - Name: ExpressionEvaluator1
+                Id: g=e25966f471ac000b13c4265f816bc007
+                Type: ExpressionEvaluator
+                Children:
+                - Name: Source0
+                  Id: g=fabd15abd7947e242ca05ba0283018ea
+                  Type: BaseDataVariableType
+                  DataType: BaseDataType
+                  ReferenceType: HasSource
+                  Children:
+                  - Name: DynamicLink
+                    Id: g=b6b4bef2619867196bbe3c117ee4c142
+                    Type: DynamicLink
+                    DataType: NodePath
+                    Value: "../../../../../Inner_Value"
+                - Name: Source1
+                  Id: g=d96f90988cbe5e8f949de623dae537ba
+                  Type: BaseDataVariableType
+                  DataType: BaseDataType
+                  ReferenceType: HasSource
+                  Children:
+                  - Name: DynamicLink
+                    Id: g=f6a3c119fefbd68ed8bd9892c8b34356
+                    Type: DynamicLink
+                    DataType: NodePath
+                    Value: "../../../../../Outer_Value"
       - Name: Items_Good
         Id: g=be8e69aa7a2bf8b96edba3cb207b8bc9
         Type: Shift_StatisticDisplay
@@ -306,7 +376,7 @@ Children:
             Id: g=625eb61ad43028d30a061ebd26f8cd4f
             Type: DynamicLink
             DataType: NodePath
-            Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Dark Grey/Dark Grey 600"
+            Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Dark Grey 6"
         - Name: VerticalLayout
           Id: g=86eccde76516fffb5e3d2ebab6afb157
           Type: ColumnLayout
@@ -414,7 +484,7 @@ Children:
             Id: g=82b92614170fa26b7dd4fd8fce179f6c
             Type: DynamicLink
             DataType: NodePath
-            Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Status/Neutral, Message"
+            Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Info - Blue"
         - Name: Label Font Size
           Id: g=4a39911e6748702e941ef430f0d85362
           Type: BaseDataVariableType
@@ -521,7 +591,7 @@ Children:
             Id: g=8eea036892ff8b5328a6469fa94cea86
             Type: DynamicLink
             DataType: NodePath
-            Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Dark Grey/Dark Grey 600"
+            Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Dark Grey 6"
         - Name: VerticalLayout
           Id: g=574c5b21a3c1ac2b06d6b3bb42ed2751
           Type: ColumnLayout
@@ -623,7 +693,7 @@ Children:
             Id: g=3bf4504937d3b7295cec06cdb497cf8c
             Type: DynamicLink
             DataType: NodePath
-            Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Status/Wrong, Bad, Error"
+            Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Error - Red"
         - Name: Label Font Size
           Id: g=cea02e70d7b02910d3f6f40aa52675a3
           Type: BaseDataVariableType
@@ -736,7 +806,7 @@ Children:
             Id: g=53d6b8800d32e9e3d9c01ddbf11e565c
             Type: DynamicLink
             DataType: NodePath
-            Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Dark Grey/Dark Grey 600"
+            Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Dark Grey 6"
         - Name: VerticalLayout
           Id: g=ae93a36b977c230e60fefcf405cb59ec
           Type: ColumnLayout
@@ -838,7 +908,7 @@ Children:
             Id: g=f58b578229c8d2f9d3d679b3c01ae9d7
             Type: DynamicLink
             DataType: NodePath
-            Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Status/Neutral, Message"
+            Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Info - Blue"
         - Name: Label Font Size
           Id: g=bdf783cfe5d399a896b95a8d562bf6d3
           Type: BaseDataVariableType
@@ -1144,119 +1214,392 @@ Children:
             DataType: Color
             ModellingRule: Optional
             Value: "#000000"
-        - Name: Time Tracking
-          Id: g=3a315a5208dd2e44e00d253e288c384e
-          Type: Statistics_Circular_Percent
+        - Name: Production_Time_Chart1
+          Id: g=8355e9ec96f0d1ff7e1a912d60689fc6
+          Type: Production_Time_Chart
           Children:
-          - Name: PieChart
-            Id: g=5fcd67881dc7d312e80f1d95497e1667
-            Type: PieChart
+          - Name: ProductionTimeChart_Webpage
+            Id: g=a2e1a9874de91c992e7d6ed262c4ca84
+            Type: WebBrowser
             Children:
-            - Name: Model
-              Id: g=8328ad5afcd49acb3fbd4685f8a9a93e
-              Type: NodePointer
-              DataType: NodeId
-              Children:
-              - Name: ItemKind
-                Id: g=fc3f26296d704368b0dc06e107aa41bc
-                Type: PropertyType
-                DataType: NodeId
-                Value: "/Types/DataTypes/BaseDataType/Number/Integer/Int32"
-              - Name: Kind
-                Id: g=ba37f3e549de81b75f346a7562c2b317
-                Type: PropertyType
-                DataType: NodeId
-              - Name: DynamicLink
-                Id: g=26e5baf03ccce2a14f1a0de548fa40f1
-                Type: DynamicLink
-                DataType: NodePath
-                Value: "/Objects/OptimateDemoProject/Model/Widget Folders/Time Tracking Chart@NodeId"
-            - Name: Label
-              Id: g=5ad27ec8c447f3b91abfda07913161d8
+            - Name: URL
+              Id: g=525216b2b8a491bb4367614f477093e9
+              Type: BaseDataVariableType
+              DataType: ResourceUri
+              Value: "ns=36;%PROJECTDIR%/eCharts/Production Time Chart/chart.html"
+            - Class: Reference
+              Target: ns=11;i=354
+              Direction: Forward
+            - Class: Reference
+              Target: ns=11;i=356
+              Direction: Forward
+            - Class: Reference
+              Target: ns=11;i=358
+              Direction: Forward
+            - Name: CustomHeaders
+              Id: g=50c45879aa51bb830429c31e2ad9a223
+              Type: BaseDataVariableType
+              DataType: String
+          - Name: ProductionTimeChart_NetLogic
+            Id: g=bf3bdf15b05e4b4c2edac8509f1e64ac
+            Type: NetLogic
+          - Name: Percentage
+            Id: g=67b726e27f21aebf76ba51d94344177c
+            Type: Label
+            Children:
+            - Name: Text
+              Id: g=4f773a3dff826f704058b229b3b0f4a4
               Type: BaseDataVariableType
               DataType: LocalizedText
-            - Name: Value
-              Id: g=a6d20d7b56c9965831eb9ce90824307b
-              Type: BaseDataVariableType
-              DataType: Double
-              Value: "NaN"
               Children:
               - Name: DynamicLink
-                Id: g=60e9d3c53cadd7973879c69b4d90822c
+                Id: g=723c31508d5de12cce065aac53ad6bf1
                 Type: DynamicLink
                 DataType: NodePath
-                Value: "{Item}@Value"
-            - Class: Reference
-              Target: ns=11;i=1104
-              Direction: Forward
-            - Name: Item
-              Id: g=0abd97d64d7cb192a798751894d634b8
-              Type: Alias
-              DataType: NodeId
+                Value: "../../Percent"
+            - Name: TextColor
+              Id: g=c89a7d06cbc71a998a202e8563c22ee0
+              Type: BaseDataVariableType
+              DataType: Color
+              Value: "#000000"
               Children:
-              - Name: Kind
-                Id: g=76f40de79093e938cddfa6bd3b1acc77
-                Type: PropertyType
-                DataType: NodeId
-                Value: "/Types/DataTypes/BaseDataType/Number/Integer/Int32"
-          - Name: Percentage
-            Id: g=20925d9584e905a9c20988bba101425c
-            Type: BaseDataVariableType
-            DataType: Float
-            Value: 52.25
+              - Name: DynamicLink
+                Id: g=63a2dc8cd3e2e6f5eafe3b31436de72e
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "../../Font_Color"
+            - Name: FontSize
+              Id: g=c27d1f221592fc67f038726f7911299c
+              Type: BaseDataVariableType
+              DataType: Size
+              Value: 96.0
+              Children:
+              - Name: DynamicLink
+                Id: g=c23c000734874f177645a8505a59a379
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "../../Font_Size"
           - Name: LeftMargin
-            Id: g=1b98f8260d59a976b8a11d63b04e088f
+            Id: g=a6aa313d95c707263732508221e11c4a
             Type: BaseVariableType
             DataType: Size
             ModellingRule: Optional
             Value: 180.0
           - Name: TopMargin
-            Id: g=ea1cd3b8ecde0faeeb06db4099852f9f
+            Id: g=1958e68fdb2748db60686b830b0093db
             Type: BaseVariableType
             DataType: Size
             ModellingRule: Optional
             Value: 64.0
-          - Name: Height
-            Id: g=b08b5c7d393f8b104b0a7e543c7a9acb
-            Type: BaseVariableType
-            DataType: Size
-            ModellingRule: Optional
-            Value: 275.0
           - Name: Width
-            Id: g=49adc357e7c46cbfdc6ba85535c87acd
+            Id: g=c90ffb0076dbfe41d4595bf0bd8e5c71
             Type: BaseVariableType
             DataType: Size
             ModellingRule: Optional
             Value: 275.0
-          - Name: PercentDisplay
-            Id: g=cbd3aefefb6a94e79bbba277e7005f32
-            Type: Label
-            Children:
-            - Name: Text
-              Id: g=fbc837136a8e7d4f41d95e92700326fb
-              Type: BaseDataVariableType
-              DataType: LocalizedText
-              Children:
-              - Name: StringFormatter1
-                Id: g=1e71d3134fa31e6a0e9527f4f518a382
-                Type: StringFormatter
-                Children:
-                - Name: Source0
-                  Id: g=e699e96a91bc32213cef1dac6ed9ef6c
-                  Type: BaseDataVariableType
-                  DataType: BaseDataType
-                  ReferenceType: HasSource
-                  Children:
-                  - Name: DynamicLink
-                    Id: g=ad5dfb9b878932358698e0e6ff39aaba
-                    Type: DynamicLink
-                    DataType: NodePath
-                    Value: "../../../../Percentage"
-          - Name: DataFolder
-            Id: g=ebaa8683f21e67584727e09ef079b4cc
+          - Name: Height
+            Id: g=9762ac30fe7fe61295d704505725f45f
+            Type: BaseVariableType
+            DataType: Size
+            ModellingRule: Optional
+            Value: 275.0
+          - Name: Values
+            Id: g=379b472404eb16f6a2d59d2b7e4d6658
             Type: BaseDataVariableType
-            DataType: NodeId
-            Value: "/Objects/OptimateDemoProject/Model/Widget Folders/Time Tracking Chart"
+            DataType: Int32
+            ValueRank: OneDimension
+            ArrayDimensions: [10]
+            Children:
+            - Name: DynamicLink_0
+              Id: g=cb46de7474dc575286ea4594cacce6b7
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "/Objects/OptimateDemoProject/Model/Internal/Shift Report Variables/Machine Run Time"
+              Children:
+              - Name: Mode
+                Id: g=d2685ca12435de2d09ba65a946f71d40
+                Type: BaseVariableType
+                DataType: DynamicLinkMode
+                ModellingRule: Optional
+                Value: 2
+              - Name: ParentElementAccess
+                Id: g=2d3834ec9d5ba60f7b432c2a37de9d9c
+                Type: BaseVariableType
+                DataType: ElementAccess
+                Value: 
+                 {
+                  "TypeId": {
+                   "Id": 313,
+                   "Namespace": 1
+                  },
+                  "Body": {
+                   "ArrayIndex": [0],
+                   "FieldIndexes": []
+                  }
+                 }
+            - Name: DynamicLink_1
+              Id: g=f613928068306e7bb55d9a69d2b258b6
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "/Objects/OptimateDemoProject/Model/Internal/Shift Report Variables/Outside Stop Time"
+              Children:
+              - Name: Mode
+                Id: g=cef76c81e01ae24f4f291d25b0e65caa
+                Type: BaseVariableType
+                DataType: DynamicLinkMode
+                ModellingRule: Optional
+                Value: 2
+              - Name: ParentElementAccess
+                Id: g=126745617a6a9850ab486983608bc2fa
+                Type: BaseVariableType
+                DataType: ElementAccess
+                Value: 
+                 {
+                  "TypeId": {
+                   "Id": 313,
+                   "Namespace": 1
+                  },
+                  "Body": {
+                   "ArrayIndex": [1],
+                   "FieldIndexes": []
+                  }
+                 }
+            - Name: DynamicLink_2
+              Id: g=183605ed00699cba29314dd3eabf3339
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "/Objects/OptimateDemoProject/Model/Internal/Shift Report Variables/Operator Stop Time"
+              Children:
+              - Name: Mode
+                Id: g=5d38586e8d8de996fd30db8754cc87f2
+                Type: BaseVariableType
+                DataType: DynamicLinkMode
+                ModellingRule: Optional
+                Value: 2
+              - Name: ParentElementAccess
+                Id: g=58505ccbb03a6b5be90ad802af9c9e85
+                Type: BaseVariableType
+                DataType: ElementAccess
+                Value: 
+                 {
+                  "TypeId": {
+                   "Id": 313,
+                   "Namespace": 1
+                  },
+                  "Body": {
+                   "ArrayIndex": [2],
+                   "FieldIndexes": []
+                  }
+                 }
+            - Name: DynamicLink_3
+              Id: g=1cdb795d578062dbc15c1e3b54c9ad76
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "/Objects/OptimateDemoProject/Model/Internal/Shift Report Variables/Alarm Stop Time"
+              Children:
+              - Name: Mode
+                Id: g=5c6c0cd82e52d548b6ed9ba514c20a2d
+                Type: BaseVariableType
+                DataType: DynamicLinkMode
+                ModellingRule: Optional
+                Value: 2
+              - Name: ParentElementAccess
+                Id: g=1ffe7534f1dbb8530b2ef638765a37fa
+                Type: BaseVariableType
+                DataType: ElementAccess
+                Value: 
+                 {
+                  "TypeId": {
+                   "Id": 313,
+                   "Namespace": 1
+                  },
+                  "Body": {
+                   "ArrayIndex": [3],
+                   "FieldIndexes": []
+                  }
+                 }
+          - Name: Colors
+            Id: g=f04bf3231313ed1b029922492fa03284
+            Type: BaseDataVariableType
+            DataType: Color
+            ValueRank: OneDimension
+            ArrayDimensions: [10]
+            Children:
+            - Name: DynamicLink_0
+              Id: g=d85b17c53838f5ed0aafac2214e9d53a
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Info - Blue"
+              Children:
+              - Name: Mode
+                Id: g=8b0633cd85da7f36f49d9ed17be9fe2e
+                Type: BaseVariableType
+                DataType: DynamicLinkMode
+                ModellingRule: Optional
+                Value: 2
+              - Name: ParentElementAccess
+                Id: g=46843eb11c47fb2539f095dceeb04307
+                Type: BaseVariableType
+                DataType: ElementAccess
+                Value: 
+                 {
+                  "TypeId": {
+                   "Id": 313,
+                   "Namespace": 1
+                  },
+                  "Body": {
+                   "ArrayIndex": [0],
+                   "FieldIndexes": []
+                  }
+                 }
+            - Name: DynamicLink_1
+              Id: g=1c2246eebc1bdb9fed68334817113da7
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Light Grey 8"
+              Children:
+              - Name: Mode
+                Id: g=0aff1f240e5cd11fb9bad86f25250521
+                Type: BaseVariableType
+                DataType: DynamicLinkMode
+                ModellingRule: Optional
+                Value: 2
+              - Name: ParentElementAccess
+                Id: g=d3e617c753dbb0b17cc0930605d112f2
+                Type: BaseVariableType
+                DataType: ElementAccess
+                Value: 
+                 {
+                  "TypeId": {
+                   "Id": 313,
+                   "Namespace": 1
+                  },
+                  "Body": {
+                   "ArrayIndex": [1],
+                   "FieldIndexes": []
+                  }
+                 }
+            - Name: DynamicLink_2
+              Id: g=17b094d92218599845979a5d7cff5a3f
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Warning - Orange"
+              Children:
+              - Name: Mode
+                Id: g=5ffbe895a445e5555d746b06e63035a5
+                Type: BaseVariableType
+                DataType: DynamicLinkMode
+                ModellingRule: Optional
+                Value: 2
+              - Name: ParentElementAccess
+                Id: g=1bad8e1b01eb2ac070c678c5fda1928d
+                Type: BaseVariableType
+                DataType: ElementAccess
+                Value: 
+                 {
+                  "TypeId": {
+                   "Id": 313,
+                   "Namespace": 1
+                  },
+                  "Body": {
+                   "ArrayIndex": [2],
+                   "FieldIndexes": []
+                  }
+                 }
+            - Name: DynamicLink_3
+              Id: g=6434bc38f58e724971723d47d4fd12cb
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Error - Red"
+              Children:
+              - Name: Mode
+                Id: g=08c5ecf2532cbe6a58cc28209344b349
+                Type: BaseVariableType
+                DataType: DynamicLinkMode
+                ModellingRule: Optional
+                Value: 2
+              - Name: ParentElementAccess
+                Id: g=d5dbefb2adee5a2d22a01357dc3aadf2
+                Type: BaseVariableType
+                DataType: ElementAccess
+                Value: 
+                 {
+                  "TypeId": {
+                   "Id": 313,
+                   "Namespace": 1
+                  },
+                  "Body": {
+                   "ArrayIndex": [3],
+                   "FieldIndexes": []
+                  }
+                 }
+          - Name: Background_Color
+            Id: g=4c3778a88b4d597a18faef5859ff82ea
+            Type: BaseDataVariableType
+            DataType: Color
+            Children:
+            - Name: DynamicLink
+              Id: g=ba5ea0d97119595fe6dc641804e666ca
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Info - Blue"
+          - Name: Font_Size
+            Id: g=02ce036e5d02c7437f76739bdc4f5390
+            Type: BaseDataVariableType
+            DataType: Int32
+            Value: 96
+          - Name: Font_Color
+            Id: g=ed4378bc9343c80bf21641b040897ab1
+            Type: BaseDataVariableType
+            DataType: Color
+            Children:
+            - Name: DynamicLink
+              Id: g=1e92a049cc706df37b706b3dab317744
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Dark Grey 6"
+          - Name: Percent
+            Id: g=8353b2c7eddf4ad3d7e41c498046948f
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "0"
+            Children:
+            - Name: StringFormatter1
+              Id: g=60db40b5eee487234457c151f3d15628
+              Type: StringFormatter
+              Children:
+              - Name: Source0
+                Id: g=440475bc4b61ea41285557c67407168b
+                Type: BaseDataVariableType
+                DataType: BaseDataType
+                ReferenceType: HasSource
+                Children:
+                - Name: ExpressionEvaluator1
+                  Id: g=9bd30f20c61c9259f0757ca6fe6b0874
+                  Type: ExpressionEvaluator
+                  Children:
+                  - Name: Source0
+                    Id: g=daf644f7365329ff5179774e5026278b
+                    Type: BaseDataVariableType
+                    DataType: BaseDataType
+                    ReferenceType: HasSource
+                    Children:
+                    - Name: DynamicLink
+                      Id: g=dece563d1e2a3a5dad43fa4569af6713
+                      Type: DynamicLink
+                      DataType: NodePath
+                      Value: "../../../../../Values[0]"
+                  - Name: Source1
+                    Id: g=17e57eef16ead3de2fd57f29f37b40b8
+                    Type: BaseDataVariableType
+                    DataType: BaseDataType
+                    ReferenceType: HasSource
+                    Children:
+                    - Name: DynamicLink
+                      Id: g=138d5da067b73bae5dc2e6db4b782cb2
+                      Type: DynamicLink
+                      DataType: NodePath
+                      Value: "../../../../../Values[3]"
         - Name: Run Time
           Id: g=dd50bb5420b3ad0fbb6fa9c86f4e485d
           Type: Shift_TimeDisplay
@@ -1270,7 +1613,7 @@ Children:
               Id: g=a15152f28fd63612115bb6cb3ea70634
               Type: DynamicLink
               DataType: NodePath
-              Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Dark Grey/Dark Grey 600"
+              Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Dark Grey 6"
           - Name: VerticalLayout
             Id: g=b7478db36ab60ce28a324666b4f8db77
             Type: ColumnLayout
@@ -1356,7 +1699,7 @@ Children:
               Id: g=6f071ddc887d76a32a72f8071a89a963
               Type: DynamicLink
               DataType: NodePath
-              Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Dark Grey/Dark Grey 600"
+              Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Dark Grey 6"
           - Name: Label Font Size
             Id: g=f21a0b6087cfbf4bf9aa5939f82fdfba
             Type: BaseDataVariableType
@@ -1434,6 +1777,11 @@ Children:
                 Type: DynamicLink
                 DataType: NodePath
                 Value: "../../Indicator Color"
+            - Name: BorderColor
+              Id: g=5c82c1e30277a7c07fa1ef6f7e12aa03
+              Type: BaseDataVariableType
+              DataType: Color
+              Value: "#000000"
           - Name: Indicator Color
             Id: g=43c9eddd3e48089113eb001df25518e8
             Type: BaseDataVariableType
@@ -1443,7 +1791,7 @@ Children:
               Id: g=2509cc9dd5d81dfedc00fddce76d0424
               Type: DynamicLink
               DataType: NodePath
-              Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Status/Neutral, Message"
+              Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Info - Blue"
           - Name: TopMargin
             Id: g=ee210d0d267613deb88b0de3132bd062
             Type: BaseVariableType
@@ -1469,7 +1817,7 @@ Children:
               Id: g=2595a2f9a2214f9c6310acbf7ccb1302
               Type: DynamicLink
               DataType: NodePath
-              Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Dark Grey/Dark Grey 600"
+              Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Dark Grey 6"
           - Name: VerticalLayout
             Id: g=e9adc8d60e8d3642df1dcfd7a3156e2a
             Type: ColumnLayout
@@ -1555,7 +1903,7 @@ Children:
               Id: g=454c1affd31189d356ab16d5a42f726e
               Type: DynamicLink
               DataType: NodePath
-              Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Dark Grey/Dark Grey 600"
+              Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Dark Grey 6"
           - Name: Label Font Size
             Id: g=de9de047431a2789a1fb618542f423a2
             Type: BaseDataVariableType
@@ -1633,6 +1981,11 @@ Children:
                 Type: DynamicLink
                 DataType: NodePath
                 Value: "../../Indicator Color"
+            - Name: BorderColor
+              Id: g=91ceb26fa71ecc6f17e373668eb7fca8
+              Type: BaseDataVariableType
+              DataType: Color
+              Value: "#000000"
           - Name: Indicator Color
             Id: g=9ed58ea93db48ee5a588f592e80931a2
             Type: BaseDataVariableType
@@ -1642,7 +1995,7 @@ Children:
               Id: g=1d5aadb3f3e6287d53207ea5ccd87077
               Type: DynamicLink
               DataType: NodePath
-              Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Dark Grey/Dark Grey 50"
+              Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Light Grey 8"
           - Name: TopMargin
             Id: g=dfc82673d545a63d2b9334b25a638f3e
             Type: BaseVariableType
@@ -1668,7 +2021,7 @@ Children:
               Id: g=f52066d08ef2ed9fd0129a67c5326518
               Type: DynamicLink
               DataType: NodePath
-              Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Dark Grey/Dark Grey 600"
+              Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Dark Grey 6"
           - Name: VerticalLayout
             Id: g=6c2bd0dd3b1b49598b7580e0ac45b73b
             Type: ColumnLayout
@@ -1754,7 +2107,7 @@ Children:
               Id: g=3ce7ce7605702b8720a29ceead53ee22
               Type: DynamicLink
               DataType: NodePath
-              Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Dark Grey/Dark Grey 600"
+              Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Dark Grey 6"
           - Name: Label Font Size
             Id: g=ff13b8a0946296e44c72b7c875d21bed
             Type: BaseDataVariableType
@@ -1832,6 +2185,11 @@ Children:
                 Type: DynamicLink
                 DataType: NodePath
                 Value: "../../Indicator Color"
+            - Name: BorderColor
+              Id: g=d28ae33dd3f5489e607d1a68c9ef1403
+              Type: BaseDataVariableType
+              DataType: Color
+              Value: "#000000"
           - Name: Indicator Color
             Id: g=2d890e5e4df2ec02347b8535ce9e8858
             Type: BaseDataVariableType
@@ -1841,7 +2199,7 @@ Children:
               Id: g=1e3ffa7e8c8fbea454c8a374b0550fe6
               Type: DynamicLink
               DataType: NodePath
-              Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Status/Warning"
+              Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Warning - Orange"
           - Name: TopMargin
             Id: g=91510959da24d8e8e1d7415f88255fa4
             Type: BaseVariableType
@@ -1867,7 +2225,7 @@ Children:
               Id: g=9daac5c144700eeb28f38bc1c2b24701
               Type: DynamicLink
               DataType: NodePath
-              Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Dark Grey/Dark Grey 600"
+              Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Dark Grey 6"
           - Name: VerticalLayout
             Id: g=b7336a9c0c32a8bb88ac79393f6c9c1f
             Type: ColumnLayout
@@ -1953,7 +2311,7 @@ Children:
               Id: g=63a56df4397f71c187aaf9ccd8dc97b0
               Type: DynamicLink
               DataType: NodePath
-              Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Dark Grey/Dark Grey 600"
+              Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Dark Grey 6"
           - Name: Label Font Size
             Id: g=a82bb7a6d3ccc4953355776c8de56126
             Type: BaseDataVariableType
@@ -2031,6 +2389,11 @@ Children:
                 Type: DynamicLink
                 DataType: NodePath
                 Value: "../../Indicator Color"
+            - Name: BorderColor
+              Id: g=27797ea45ddd5799d9bf6e5c8bb6b0f9
+              Type: BaseDataVariableType
+              DataType: Color
+              Value: "#000000"
           - Name: Indicator Color
             Id: g=7c58ff835d60b764ed72eae80f91f587
             Type: BaseDataVariableType
@@ -2040,7 +2403,7 @@ Children:
               Id: g=c81fd94c2811b2590e95b90ea7ce2a90
               Type: DynamicLink
               DataType: NodePath
-              Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Status/Wrong, Bad, Error"
+              Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Error - Red"
           - Name: TopMargin
             Id: g=ff6ed84dd682a99cd63b20dd9ae2bc1c
             Type: BaseVariableType
@@ -2499,7 +2862,7 @@ Children:
                                 Id: g=7e285dbdcff47cd182c67574b86842ac
                                 Type: DynamicLink
                                 DataType: NodePath
-                                Value: "/Objects/OptimateDemoProject/UI/Stylesheets/Jones/good"
+                                Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Good - Green"
                           - Name: Pair4
                             Id: g=3bb3482ca99e241982942a47f41f3569
                             Type: ValueMapPair
@@ -2518,7 +2881,7 @@ Children:
                                 Id: g=e36cf890cf9fc216ab13541895c9e267
                                 Type: DynamicLink
                                 DataType: NodePath
-                                Value: "/Objects/OptimateDemoProject/UI/Stylesheets/Jones/neutral"
+                                Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Info - Blue"
                           - Name: Pair5
                             Id: g=4404d41dbd2ffa6a4e5b312b61432356
                             Type: ValueMapPair
@@ -2537,7 +2900,7 @@ Children:
                                 Id: g=502f55e17246f47aeeafe39f3eac9983
                                 Type: DynamicLink
                                 DataType: NodePath
-                                Value: "/Objects/OptimateDemoProject/UI/Stylesheets/Jones/warning"
+                                Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Warning - Orange"
                           - Name: Pair
                             Id: g=8fa47438b9066cc7fd6b2c9dcbdbb7c1
                             Type: ValueMapPair
@@ -2556,7 +2919,7 @@ Children:
                                 Id: g=1212a52da434158524c70c977ed781a0
                                 Type: DynamicLink
                                 DataType: NodePath
-                                Value: "/Objects/OptimateDemoProject/UI/Stylesheets/Jones/error"
+                                Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Error - Red"
                           - Name: Pair6
                             Id: g=401ce2af2f5af24a0f7a5c1204c971ae
                             Type: ValueMapPair
@@ -2575,7 +2938,7 @@ Children:
                                 Id: g=63300911442a4ac8be981a292d3a063e
                                 Type: DynamicLink
                                 DataType: NodePath
-                                Value: "/Objects/OptimateDemoProject/UI/Stylesheets/Jones/dark grey 2"
+                                Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Dark Grey 2"
                           - Name: Pair1
                             Id: g=e09df639607aae2ef5d74b5ea6834c9c
                             Type: ValueMapPair
@@ -3147,7 +3510,7 @@ Children:
                                 Id: g=095fd4042bd20bbe13d4e478b4646c63
                                 Type: DynamicLink
                                 DataType: NodePath
-                                Value: "/Objects/OptimateDemoProject/UI/Stylesheets/Jones/good"
+                                Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Good - Green"
                           - Name: Pair4
                             Id: g=4fbb6e46203cab2d60a979fc1494f0c3
                             Type: ValueMapPair
@@ -3166,7 +3529,7 @@ Children:
                                 Id: g=0497a264c0170f3b70e9e63bf27438e0
                                 Type: DynamicLink
                                 DataType: NodePath
-                                Value: "/Objects/OptimateDemoProject/UI/Stylesheets/Jones/neutral"
+                                Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Info - Blue"
                           - Name: Pair5
                             Id: g=1dd33b4d11300020a8c191507b5d245a
                             Type: ValueMapPair
@@ -3185,7 +3548,7 @@ Children:
                                 Id: g=56bde93a8a8d40efc3499d70a4e644ed
                                 Type: DynamicLink
                                 DataType: NodePath
-                                Value: "/Objects/OptimateDemoProject/UI/Stylesheets/Jones/warning"
+                                Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Warning - Orange"
                           - Name: Pair
                             Id: g=b2b92fcff2a2e2ff6dc4eeb30d0b408c
                             Type: ValueMapPair
@@ -3204,7 +3567,7 @@ Children:
                                 Id: g=752e236f7115b2f31ea036c176f0e1ed
                                 Type: DynamicLink
                                 DataType: NodePath
-                                Value: "/Objects/OptimateDemoProject/UI/Stylesheets/Jones/error"
+                                Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Error - Red"
                           - Name: Pair6
                             Id: g=160abfb998a231532e2ef25f780444b8
                             Type: ValueMapPair
@@ -3223,7 +3586,7 @@ Children:
                                 Id: g=1bb5b6cba1198180b3382cf7b871a7f5
                                 Type: DynamicLink
                                 DataType: NodePath
-                                Value: "/Objects/OptimateDemoProject/UI/Stylesheets/Jones/dark grey 2"
+                                Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Dark Grey 2"
                           - Name: Pair1
                             Id: g=2fa2e631a28033b9bdb80279a323206a
                             Type: ValueMapPair
@@ -3701,7 +4064,7 @@ Children:
       Id: g=f8a493cd7fbb2c4ae20df7b0543077c8
       Type: DynamicLink
       DataType: NodePath
-      Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Light Grey/Light Grey 650"
+      Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Light Grey 6"
   - Name: Rectangle1
     Id: g=1788d22b2a470dae7131456c36071610
     Type: Rectangle
@@ -3716,7 +4079,7 @@ Children:
         Id: g=5774f5d658ef0c99cc5528b20f097415
         Type: DynamicLink
         DataType: NodePath
-        Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Light Grey/Light Grey 330"
+        Value: "../../../../HMI_Project/Light Grey 4"
   - Name: Rectangle2
     Id: g=b79a0bd379e66a06aef0fb3e3ac94714
     Type: Rectangle
@@ -3745,7 +4108,7 @@ Children:
         Id: g=c81b6529a1c7af87ad250c5cd66537f6
         Type: DynamicLink
         DataType: NodePath
-        Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Light Grey/Light Grey 650"
+        Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Light Grey 6"
     - Name: LeftMargin
       Id: g=b18cf6d36aea7442d3b127cbc5258b8f
       Type: BaseVariableType
@@ -3876,7 +4239,7 @@ Children:
                 Id: g=9dc129314bdd6de215dd03fae310a4ba
                 Type: DynamicLink
                 DataType: NodePath
-                Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Light Grey/Light Grey 100"
+                Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Light Grey 1"
             - Name: Source3
               Id: g=e30dc07d15c4531c98677d73e8de1e8d
               Type: BaseDataVariableType
@@ -3887,7 +4250,7 @@ Children:
                 Id: g=f31c3810d5ccc82ccd3d3b72e4bbaf8e
                 Type: DynamicLink
                 DataType: NodePath
-                Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Status/Neutral, Message"
+                Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Info - Blue"
       - Name: Label
         Id: g=355001c7826abf2306640adf98513d17
         Type: Label
@@ -3949,7 +4312,7 @@ Children:
                 Id: g=d62401ba901c9be8543349c817ae93a4
                 Type: DynamicLink
                 DataType: NodePath
-                Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Dark Grey/Dark Grey 600"
+                Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Dark Grey 6"
             - Name: Source3
               Id: g=f5361f42b91417c448eefbc22d4c56a5
               Type: BaseDataVariableType
@@ -3957,10 +4320,10 @@ Children:
               ReferenceType: HasSource
               Children:
               - Name: DynamicLink
-                Id: g=fecfc18924eb77a2a701fa4290c11640
+                Id: g=2aa883168d95043ff4eeb3ecce2d4987
                 Type: DynamicLink
                 DataType: NodePath
-                Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Light Grey/Light Grey 100"
+                Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Light Grey 1"
       - Name: Image
         Id: g=fd89b1fcfaa7334b7d95b7c52c3940f3
         Type: Image
@@ -4192,7 +4555,7 @@ Children:
                 Id: g=b6b469ef38128b0a23d52811af9fbb4c
                 Type: DynamicLink
                 DataType: NodePath
-                Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Light Grey/Light Grey 100"
+                Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Light Grey 1"
             - Name: Source3
               Id: g=0cabd339c7713fd70f004f218f25c840
               Type: BaseDataVariableType
@@ -4203,7 +4566,7 @@ Children:
                 Id: g=a814774939485dcd1c556dffdda71b85
                 Type: DynamicLink
                 DataType: NodePath
-                Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Status/Neutral, Message"
+                Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Info - Blue"
       - Name: Label
         Id: g=3476be34cfdb60f676580eccb08749ed
         Type: Label
@@ -4265,7 +4628,7 @@ Children:
                 Id: g=9862731cfe1842d2af9678afba717fca
                 Type: DynamicLink
                 DataType: NodePath
-                Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Dark Grey/Dark Grey 600"
+                Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Dark Grey 6"
             - Name: Source3
               Id: g=8ab5229700dd5fbdf8a1393684c3a17f
               Type: BaseDataVariableType
@@ -4273,10 +4636,10 @@ Children:
               ReferenceType: HasSource
               Children:
               - Name: DynamicLink
-                Id: g=f23b4766eb409e6144ba56d08c9bfb86
+                Id: g=c9e727ebe3e913a8f2ec6047478f9dc4
                 Type: DynamicLink
                 DataType: NodePath
-                Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Light Grey/Light Grey 100"
+                Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Light Grey 1"
       - Name: Image
         Id: g=39613092713d32097ef41fa1cd625612
         Type: Image
@@ -4508,7 +4871,7 @@ Children:
                 Id: g=66c67c5ab1bb44adbf7932292856ae55
                 Type: DynamicLink
                 DataType: NodePath
-                Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Light Grey/Light Grey 100"
+                Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Light Grey 1"
             - Name: Source3
               Id: g=fbc0a7c0e50a959e3d98e4c9ff545201
               Type: BaseDataVariableType
@@ -4519,7 +4882,7 @@ Children:
                 Id: g=f266434ebb05d0116583e38e9b042216
                 Type: DynamicLink
                 DataType: NodePath
-                Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Status/Neutral, Message"
+                Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Info - Blue"
       - Name: Label
         Id: g=3497fdf6376998a42de75f8f1ee19072
         Type: Label
@@ -4581,7 +4944,7 @@ Children:
                 Id: g=14f4e54dae23fe28a5159ecf5a9fb3a7
                 Type: DynamicLink
                 DataType: NodePath
-                Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Dark Grey/Dark Grey 600"
+                Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Dark Grey 6"
             - Name: Source3
               Id: g=f671534e5569f1f039bfd8fe335678c9
               Type: BaseDataVariableType
@@ -4589,10 +4952,10 @@ Children:
               ReferenceType: HasSource
               Children:
               - Name: DynamicLink
-                Id: g=aaf776824a2ca38521062afa911406fc
+                Id: g=cbda8c4490e018333582480472c661e0
                 Type: DynamicLink
                 DataType: NodePath
-                Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Light Grey/Light Grey 100"
+                Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Light Grey 1"
       - Name: Image
         Id: g=e0ce8cf3cd0cbd5778554d085cdb6594
         Type: Image
@@ -4824,7 +5187,7 @@ Children:
                 Id: g=b6bece22d063eebbad2961c38e3a6edd
                 Type: DynamicLink
                 DataType: NodePath
-                Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Light Grey/Light Grey 100"
+                Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Light Grey 1"
             - Name: Source3
               Id: g=c079f3d817ce8ccb48749ae02355eae0
               Type: BaseDataVariableType
@@ -4835,7 +5198,7 @@ Children:
                 Id: g=81534de1b37e0b27474fbe49fd497027
                 Type: DynamicLink
                 DataType: NodePath
-                Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Status/Neutral, Message"
+                Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Info - Blue"
       - Name: Label
         Id: g=0495d32c39d1b0ad96dfe207b63697a8
         Type: Label
@@ -4897,7 +5260,7 @@ Children:
                 Id: g=89c94debb822e4433b125ce72dc19f16
                 Type: DynamicLink
                 DataType: NodePath
-                Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Dark Grey/Dark Grey 600"
+                Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Dark Grey 6"
             - Name: Source3
               Id: g=0bc842f98b055d9da23b0b2628ec4a5b
               Type: BaseDataVariableType
@@ -4905,10 +5268,10 @@ Children:
               ReferenceType: HasSource
               Children:
               - Name: DynamicLink
-                Id: g=6f83aad1c2c9ea8a72d331d4026ae93f
+                Id: g=c18f1749a5dc2557b9837d32c065260b
                 Type: DynamicLink
                 DataType: NodePath
-                Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Light Grey/Light Grey 100"
+                Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Light Grey 1"
       - Name: Image
         Id: g=df68702e93541f5fe67f55535870ccd6
         Type: Image
@@ -5140,7 +5503,7 @@ Children:
                 Id: g=e8e899ff09298d3602177d21af181027
                 Type: DynamicLink
                 DataType: NodePath
-                Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Light Grey/Light Grey 100"
+                Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Light Grey 1"
             - Name: Source3
               Id: g=83de75b971ba3129964c891b2f44d9c3
               Type: BaseDataVariableType
@@ -5151,7 +5514,7 @@ Children:
                 Id: g=e7a60c2c0973e64904881ffdfc318418
                 Type: DynamicLink
                 DataType: NodePath
-                Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Status/Neutral, Message"
+                Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Info - Blue"
       - Name: Label
         Id: g=54768848e6a975ef09fff28c42dfce4e
         Type: Label
@@ -5213,7 +5576,7 @@ Children:
                 Id: g=30f12748e31c4b58db16878725dde6ba
                 Type: DynamicLink
                 DataType: NodePath
-                Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Dark Grey/Dark Grey 600"
+                Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Dark Grey 6"
             - Name: Source3
               Id: g=6f06a3f3b009cc1ae3413b453a10026b
               Type: BaseDataVariableType
@@ -5221,10 +5584,10 @@ Children:
               ReferenceType: HasSource
               Children:
               - Name: DynamicLink
-                Id: g=86d98ef104a6f535ed948970f0de0669
+                Id: g=81a74a6287d5f4c7a59dca765645a5bd
                 Type: DynamicLink
                 DataType: NodePath
-                Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Light Grey/Light Grey 100"
+                Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Light Grey 1"
       - Name: Image
         Id: g=7cafc8187fee0c73e637cf43fbbff7bd
         Type: Image
@@ -5456,7 +5819,7 @@ Children:
                 Id: g=90befe7ffc5851f218f1a408e451053e
                 Type: DynamicLink
                 DataType: NodePath
-                Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Light Grey/Light Grey 100"
+                Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Light Grey 1"
             - Name: Source3
               Id: g=18c5e569aee7273c9893d10ca7f54969
               Type: BaseDataVariableType
@@ -5467,7 +5830,7 @@ Children:
                 Id: g=ccca689cb7a83bc38cc8cc39dd8af85d
                 Type: DynamicLink
                 DataType: NodePath
-                Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Status/Neutral, Message"
+                Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Info - Blue"
       - Name: Label
         Id: g=ef35520544c1280558829b44679cdad2
         Type: Label
@@ -5529,7 +5892,7 @@ Children:
                 Id: g=b2f50197612c551f15f93bcaca466640
                 Type: DynamicLink
                 DataType: NodePath
-                Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Dark Grey/Dark Grey 600"
+                Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Dark Grey 6"
             - Name: Source3
               Id: g=bd260e0e12b15b7c4e52c3aaa3b6710b
               Type: BaseDataVariableType
@@ -5537,10 +5900,10 @@ Children:
               ReferenceType: HasSource
               Children:
               - Name: DynamicLink
-                Id: g=e0364c02442d8b2a98f5fd5516e12ee7
+                Id: g=eb97dc8a258568b7426b2c1cf6dd6b5b
                 Type: DynamicLink
                 DataType: NodePath
-                Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Light Grey/Light Grey 100"
+                Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Light Grey 1"
       - Name: Image
         Id: g=6dc55eefea1cb70741f421cc7c650458
         Type: Image
@@ -5772,7 +6135,7 @@ Children:
                 Id: g=f0a1447ab9835ccf7c833f7220282513
                 Type: DynamicLink
                 DataType: NodePath
-                Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Light Grey/Light Grey 100"
+                Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Light Grey 1"
             - Name: Source3
               Id: g=fe5ef38ec9669dfc7cce23e6a0500e92
               Type: BaseDataVariableType
@@ -5783,7 +6146,7 @@ Children:
                 Id: g=078880e5054983718a1bebda402919b1
                 Type: DynamicLink
                 DataType: NodePath
-                Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Status/Neutral, Message"
+                Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Info - Blue"
       - Name: Label
         Id: g=3f709aba6b23a962ee5421ac93cfaf7f
         Type: Label
@@ -5845,7 +6208,7 @@ Children:
                 Id: g=817f765fb646a9de303b1ddc1359c802
                 Type: DynamicLink
                 DataType: NodePath
-                Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Dark Grey/Dark Grey 600"
+                Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Dark Grey 6"
             - Name: Source3
               Id: g=ebb7c8da6546f546cfd32c5994d26073
               Type: BaseDataVariableType
@@ -5853,10 +6216,10 @@ Children:
               ReferenceType: HasSource
               Children:
               - Name: DynamicLink
-                Id: g=531376bf4c36c1c5257533767787a437
+                Id: g=3cfb5113da711a57a51ed115d6b1b698
                 Type: DynamicLink
                 DataType: NodePath
-                Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Light Grey/Light Grey 100"
+                Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Light Grey 1"
       - Name: Image
         Id: g=1ff66714558aa3c9f7af5d825fb8d6bd
         Type: Image
@@ -6143,7 +6506,7 @@ Children:
                         Id: g=4d66910401ff492fbcd4be51ac2bad2b
                         Type: DynamicLink
                         DataType: NodePath
-                        Value: "/Objects/OptimateDemoProject/UI/Stylesheets/Jones/good"
+                        Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Good - Green"
                   - Name: Pair4
                     Id: g=68f8c27d594481aa8abd153f4e2142fc
                     Type: ValueMapPair
@@ -6162,7 +6525,7 @@ Children:
                         Id: g=e6af365ac585df1cd3d173f8c8517e2f
                         Type: DynamicLink
                         DataType: NodePath
-                        Value: "/Objects/OptimateDemoProject/UI/Stylesheets/Jones/neutral"
+                        Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Info - Blue"
                   - Name: Pair5
                     Id: g=763d1ec1c8fdc7a5b9b766944e72c453
                     Type: ValueMapPair
@@ -6181,7 +6544,7 @@ Children:
                         Id: g=ad83513cc4f7ab05465d2f8f99902aef
                         Type: DynamicLink
                         DataType: NodePath
-                        Value: "/Objects/OptimateDemoProject/UI/Stylesheets/Jones/warning"
+                        Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Warning - Orange"
                   - Name: Pair
                     Id: g=d98eb41ba51bd68c36a5e9dbdd5126fc
                     Type: ValueMapPair
@@ -6200,7 +6563,7 @@ Children:
                         Id: g=f34e52b2695be34d31cf0358ffab42a0
                         Type: DynamicLink
                         DataType: NodePath
-                        Value: "/Objects/OptimateDemoProject/UI/Stylesheets/Jones/error"
+                        Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Error - Red"
                   - Name: Pair6
                     Id: g=60bd005629098054df5c33883aaf7940
                     Type: ValueMapPair
@@ -6219,7 +6582,7 @@ Children:
                         Id: g=5ba741080308a9ae83b259ffcccd6fd5
                         Type: DynamicLink
                         DataType: NodePath
-                        Value: "/Objects/OptimateDemoProject/UI/Stylesheets/Jones/dark grey 2"
+                        Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Dark Grey 2"
                   - Name: Pair1
                     Id: g=02c6d8a07f0f02d9e6534b233787bf06
                     Type: ValueMapPair
@@ -6301,7 +6664,7 @@ Children:
                               Id: g=e38732feb28e9d8e1125b90b4870e642
                               Type: DynamicLink
                               DataType: NodePath
-                              Value: "/Objects/OptimateDemoProject/UI/Stylesheets/Jones/good"
+                              Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Good - Green"
                         - Name: Pair4
                           Id: g=11ed3536f4704025e292861e71c35d53
                           Type: ValueMapPair
@@ -6320,7 +6683,7 @@ Children:
                               Id: g=66d37eddbbf833ef2675e9264aa74c63
                               Type: DynamicLink
                               DataType: NodePath
-                              Value: "/Objects/OptimateDemoProject/UI/Stylesheets/Jones/neutral"
+                              Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Info - Blue"
                         - Name: Pair5
                           Id: g=a2c55bcfde2836f7d51ba78d9213590f
                           Type: ValueMapPair
@@ -6339,7 +6702,7 @@ Children:
                               Id: g=8c6dae61980a25e82a163cfa02c7daa3
                               Type: DynamicLink
                               DataType: NodePath
-                              Value: "/Objects/OptimateDemoProject/UI/Stylesheets/Jones/warning"
+                              Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Warning - Orange"
                         - Name: Pair
                           Id: g=2f7e275ebe3f096d521686940f5263b1
                           Type: ValueMapPair
@@ -6358,7 +6721,7 @@ Children:
                               Id: g=ab98a4a7bb52c273504ff594aad5bc3b
                               Type: DynamicLink
                               DataType: NodePath
-                              Value: "/Objects/OptimateDemoProject/UI/Stylesheets/Jones/error"
+                              Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Error - Red"
                         - Name: Pair6
                           Id: g=b6277d013d2a7dc16593353905b961de
                           Type: ValueMapPair
@@ -6377,7 +6740,7 @@ Children:
                               Id: g=3ac7a03f4841a0e2433a204140c3be79
                               Type: DynamicLink
                               DataType: NodePath
-                              Value: "/Objects/OptimateDemoProject/UI/Stylesheets/Jones/dark grey 2"
+                              Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Dark Grey 2"
                         - Name: Pair1
                           Id: g=ac6ad976042fc1d4b6eaa65fd2060ba0
                           Type: ValueMapPair
@@ -6642,7 +7005,7 @@ Children:
                           Id: g=da0c7edda2585cfa0bfdcecb789f02b3
                           Type: DynamicLink
                           DataType: NodePath
-                          Value: "/Objects/OptimateDemoProject/UI/Stylesheets/Jones/good"
+                          Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Good - Green"
                     - Name: Pair4
                       Id: g=c372f249e99b045577895978c6d87668
                       Type: ValueMapPair
@@ -6661,7 +7024,7 @@ Children:
                           Id: g=14aa1a1b69a5eb9291259e8d3d467c17
                           Type: DynamicLink
                           DataType: NodePath
-                          Value: "/Objects/OptimateDemoProject/UI/Stylesheets/Jones/neutral"
+                          Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Info - Blue"
                     - Name: Pair5
                       Id: g=6faf98f6bf152f4e1db152ff22273b57
                       Type: ValueMapPair
@@ -6680,7 +7043,7 @@ Children:
                           Id: g=beea8bc6c8414496b37aa7b0592553b9
                           Type: DynamicLink
                           DataType: NodePath
-                          Value: "/Objects/OptimateDemoProject/UI/Stylesheets/Jones/warning"
+                          Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Warning - Orange"
                     - Name: Pair
                       Id: g=c2dcaab2ff16f1c37c5c1dd066cad3f1
                       Type: ValueMapPair
@@ -6699,7 +7062,7 @@ Children:
                           Id: g=b295ea2a17ce1b29d65d040ee562373d
                           Type: DynamicLink
                           DataType: NodePath
-                          Value: "/Objects/OptimateDemoProject/UI/Stylesheets/Jones/error"
+                          Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Error - Red"
                     - Name: Pair6
                       Id: g=e2c957cb2ea7868b766884706736580d
                       Type: ValueMapPair
@@ -6718,7 +7081,7 @@ Children:
                           Id: g=d3ae40646135e0e0eaee859b8f816cf6
                           Type: DynamicLink
                           DataType: NodePath
-                          Value: "/Objects/OptimateDemoProject/UI/Stylesheets/Jones/dark grey 2"
+                          Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Dark Grey 2"
                     - Name: Pair1
                       Id: g=ec6924205c04728d0450b40899906325
                       Type: ValueMapPair
@@ -6970,7 +7333,7 @@ Children:
                           Id: g=e21efff21121c5a31abc7e4ce50baa92
                           Type: DynamicLink
                           DataType: NodePath
-                          Value: "/Objects/OptimateDemoProject/UI/Stylesheets/Jones/good"
+                          Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Good - Green"
                     - Name: Pair4
                       Id: g=825079982c30c0491c098bc48897dd8f
                       Type: ValueMapPair
@@ -6989,7 +7352,7 @@ Children:
                           Id: g=9a7bfcddfdd30e03c5b95377c7d091a5
                           Type: DynamicLink
                           DataType: NodePath
-                          Value: "/Objects/OptimateDemoProject/UI/Stylesheets/Jones/neutral"
+                          Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Info - Blue"
                     - Name: Pair5
                       Id: g=c1d285e0d8e35820c3913c1bd651cae1
                       Type: ValueMapPair
@@ -7008,7 +7371,7 @@ Children:
                           Id: g=ce015e823031b0a261dc4476f7b434cd
                           Type: DynamicLink
                           DataType: NodePath
-                          Value: "/Objects/OptimateDemoProject/UI/Stylesheets/Jones/warning"
+                          Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Warning - Orange"
                     - Name: Pair
                       Id: g=d0738f2af2ebf84a51b048feeaaf26c5
                       Type: ValueMapPair
@@ -7027,7 +7390,7 @@ Children:
                           Id: g=dba910662ea387ade0525585e9044c02
                           Type: DynamicLink
                           DataType: NodePath
-                          Value: "/Objects/OptimateDemoProject/UI/Stylesheets/Jones/error"
+                          Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Error - Red"
                     - Name: Pair6
                       Id: g=25ac5875864c76c5d4bfd000c1369b0a
                       Type: ValueMapPair
@@ -7046,7 +7409,7 @@ Children:
                           Id: g=e24904ccd146dc1bcd288a1832be8044
                           Type: DynamicLink
                           DataType: NodePath
-                          Value: "/Objects/OptimateDemoProject/UI/Stylesheets/Jones/dark grey 2"
+                          Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Dark Grey 2"
                     - Name: Pair1
                       Id: g=d505335771393f3014f3a9ffd326ed85
                       Type: ValueMapPair

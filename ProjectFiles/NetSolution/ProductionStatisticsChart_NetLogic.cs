@@ -1,89 +1,100 @@
 #region Using directives
 using System;
 using UAManagedCore;
-using OpcUa = UAManagedCore.OpcUa;
 using FTOptix.UI;
-using FTOptix.HMIProject;
 using FTOptix.NetLogic;
-using FTOptix.NativeUI;
-using FTOptix.WebUI;
-using FTOptix.CoreBase;
-using FTOptix.Alarm;
-using FTOptix.Recipe;
-using FTOptix.DataLogger;
-using FTOptix.Store;
-using FTOptix.InfluxDBStoreLocal;
-using FTOptix.SQLiteStore;
-using FTOptix.RAEtherNetIP;
-using FTOptix.Retentivity;
-using FTOptix.OPCUAServer;
-using FTOptix.InfluxDBStore;
-using FTOptix.CommunicationDriver;
 using FTOptix.Core;
 using System.IO;
-using FTOptix.TwinCAT;
+using System.Diagnostics;
 #endregion
 
 public class ProductionStatisticsChart_NetLogic : BaseNetLogic
 {
-    public override void Start()
-    {
-        projectPath = (ResourceUri.FromProjectRelativePath("").Uri);
-        folderSeparator = Path.DirectorySeparatorChar.ToString();
-        templatePath = projectPath + folderSeparator + "eCharts" + folderSeparator + "Production Info Chart" + folderSeparator + "Template-data.js";
-        filePath = projectPath + folderSeparator + "eCharts" + folderSeparator + "Production Info Chart" + folderSeparator + "data.js";
+	public override void Start()
+	{
+		Debugger.Launch();
 
-        Log.Info("ProductionStatisticsChart_NetLogic", "Project path: " + projectPath);
-        Log.Info("ProductionStatisticsChart_NetLogic", "Template path: " + templatePath);
-        Log.Info("ProductionStatisticsChart_NetLogic", "File path: " + filePath);
+		projectPath = ResourceUri.FromProjectRelativePath("").Uri;
+		chartFolder = Path.Combine(projectPath, "eCharts", "Production Info Chart");
+		sourcePath = Path.Combine(chartFolder, "source-chart.js");
+		destPath = Path.Combine(chartFolder, "data.js");
+	
+		Log.Verbose2("ProductionStatisticsChart_NetLogic", "Data file path: " + destPath);
 
-        PeriodicTask RefreshChart = new(UpdateChart, TimeSpan.FromSeconds(3), LogicObject);
+		PeriodicTask RefreshChart = new(UpdateChart, TimeSpan.FromSeconds(10), LogicObject);
 
-        goodValue = LogicObject.Owner.GetVariable("Good_Value");
-        badValue = LogicObject.Owner.GetVariable("Bad_Value");
-        percentPrecision = LogicObject.Owner.GetVariable("Percent_Precision");
-        fontSize = LogicObject.Owner.GetVariable("Font_Size");
+		innerValue = LogicObject.Owner.GetVariable("Inner_Value");
+		innerColor = LogicObject.Owner.GetVariable("Inner_Color");
+		innerBackground = LogicObject.Owner.GetVariable("Inner_Background_Color");
+		outerValue = LogicObject.Owner.GetVariable("Outer_Value");
+		outerColor = LogicObject.Owner.GetVariable("Outer_Color");
+		outerBackground = LogicObject.Owner.GetVariable("Outer_Background_Color");
 
-        goodValue.VariableChange += VariableChangeEvent;
-        badValue.VariableChange += VariableChangeEvent;
+		innerValue.VariableChange += VariableChangeEvent;
+		outerValue.VariableChange += VariableChangeEvent;
+	
+		UpdateChart();
+	}
+	public override void Stop()
+	{
+		innerValue.VariableChange -= VariableChangeEvent;
+		outerValue.VariableChange -= VariableChangeEvent;
+	}
 
-        UpdateChart();
-    }
-    public override void Stop()
-    {
-        goodValue.VariableChange -= VariableChangeEvent;
-        badValue.VariableChange -= VariableChangeEvent;
-    }
+	private void VariableChangeEvent(object sender, VariableChangeEventArgs e)
+	{
+		UpdateChart();
+	}
 
-    private void VariableChangeEvent(object sender, VariableChangeEventArgs e)
-    {
-        UpdateChart();
-    }
+	public void UpdateChart()
+	{
+		// Read template page content
+		string text = File.ReadAllText(sourcePath);
 
-    public void UpdateChart()
-    {
-        // Read template page content
-        string text = File.ReadAllText(templatePath);
+		text = text.Replace("$1", innerValue.Value);
+		text = text.Replace("$2", DecimalToHex(innerColor.Value, false, true));
+		text = text.Replace("$3", DecimalToHex(innerBackground.Value, false, true));
+		Log.Verbose1("ProductionStatisticsChart_NetLogic", $"Updating Chart Outer Circle:   ${innerValue.Value}   ${DecimalToHex(innerColor.Value, false, true)}   ${DecimalToHex(innerBackground.Value, false, true)}");
 
-        text = text.Replace("$1", goodValue.Value);
-        text = text.Replace("$2", badValue.Value);
-        text = text.Replace("$3", fontSize.Value);
-        text = text.Replace("$4", percentPrecision.Value);
+		text = text.Replace("$4", outerValue.Value);
+		text = text.Replace("$5", DecimalToHex(outerColor.Value, false, true));
+		text = text.Replace("$6", DecimalToHex(outerBackground.Value, false, true));
+		Log.Verbose1("ProductionStatisticsChart_NetLogic", $"Updating Chart Outer Circle:   ${outerValue.Value}   ${DecimalToHex(outerColor.Value, false, true)}   ${DecimalToHex(outerBackground.Value, false, true)}");
 
-        // Write to file
-        File.WriteAllText(filePath, text);
+		// Write to file
+		File.WriteAllText(destPath, text);
 
-        // Refresh WebBrowser page
-        Owner.Get<WebBrowser>("ProductionStatisticsChart_Webpage").Refresh();
-        Log.Info("ProductionStatisticsChart_NetLogic", "Chart updated with Good Value: " + goodValue.Value + ", Bad Value: " + badValue.Value);
-    }
+		// Refresh WebBrowser page
+		Owner.Get<WebBrowser>("ProductionStatisticsChart_Webpage").Refresh();
+	}
 
-    private string projectPath;
-    private string folderSeparator;
-    private string templatePath;
-    private string filePath;
-    private IUAVariable goodValue;
-    private IUAVariable badValue;
-    private IUAVariable percentPrecision;
-    private IUAVariable fontSize;
+	public static string DecimalToHex(uint input, bool argb = false, bool rgba = false)
+	{
+		// input from optix is always argb
+		byte a = (byte)((input >> 24) & 0xFF);
+		byte r = (byte)((input >> 16) & 0xFF);
+		byte g = (byte)((input >> 8) & 0xFF);
+		byte b = (byte)(input & 0xFF);
+
+		if (argb) { return $"#{a:X2}{r:X2}{g:X2}{b:X2}"; }
+		else if (rgba) { return $"#{r:X2}{g:X2}{b:X2}{a:X2}"; }
+		else { return $"#{r:X2}{g:X2}{b:X2}"; }
+	}
+
+	// windows variables
+	private string projectPath;
+	private string chartFolder;
+	private string sourcePath;
+	private string destPath;
+
+	// internal variables
+
+
+	// optix variables
+	private IUAVariable innerValue;
+	private IUAVariable innerColor;
+	private IUAVariable innerBackground;
+	private IUAVariable outerValue;
+	private IUAVariable outerColor;
+	private IUAVariable outerBackground;
 }

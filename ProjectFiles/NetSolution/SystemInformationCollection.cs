@@ -12,6 +12,7 @@ using FTOptix.InfluxDBStoreLocal;
 using FTOptix.InfluxDBStore;
 using FTOptix.EventLogger;
 using FTOptix.TwinCAT;
+using FTOptix.Report;
 #endregion
 
 public class SystemInformationCollection : BaseNetLogic

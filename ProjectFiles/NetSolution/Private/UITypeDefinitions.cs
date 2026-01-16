@@ -40,11 +40,6 @@ public class Changeover_Menu_Bar : Menu_Bar
 {
 }
 
-[MapType(NamespaceUri = "OptimateDemoProject", Guid = "0642b30a582e14c745079c727f361ad1")]
-public class BasicSpaceButton : FTOptix.UI.VirtualKeyboardSymbolButton
-{
-}
-
 [MapType(NamespaceUri = "OptimateDemoProject", Guid = "08231cb9559a2a842103718567e83555")]
 public class Template_Screen : FTOptix.UI.Screen
 {
@@ -95,8 +90,8 @@ public class Production_Home : FTOptix.UI.Screen
 {
 }
 
-[MapType(NamespaceUri = "OptimateDemoProject", Guid = "afe8c1007efe65520600fb60a7fbb519")]
-public class Production_Transport : FTOptix.UI.Screen
+[MapType(NamespaceUri = "OptimateDemoProject", Guid = "58ccd3f928ca16d11e2c4e46da8ec1cb")]
+public class Production_Transfer : Template_Screen
 {
 }
 
@@ -105,8 +100,8 @@ public class Position_Dispaly : FTOptix.UI.RowLayout
 {
 }
 
-[MapType(NamespaceUri = "OptimateDemoProject", Guid = "58ccd3f928ca16d11e2c4e46da8ec1cb")]
-public class Production_Transfer : Template_Screen
+[MapType(NamespaceUri = "OptimateDemoProject", Guid = "afe8c1007efe65520600fb60a7fbb519")]
+public class Production_Transport : FTOptix.UI.Screen
 {
 }
 
@@ -231,7 +226,7 @@ public class Menu_Button : FTOptix.UI.ScaleLayout
 }
 
 [MapType(NamespaceUri = "OptimateDemoProject", Guid = "1ef550eee5815cb7b8839139305121a8")]
-public class Production_Statistics : FTOptix.UI.ScaleLayout
+public class Production_Statistics_Chart : FTOptix.UI.ScaleLayout
 {
 }
 
@@ -270,7 +265,17 @@ public class BasicSymbolVerticalButton : FTOptix.UI.VirtualKeyboardSymbolButton
 {
 }
 
+[MapType(NamespaceUri = "OptimateDemoProject", Guid = "0642b30a582e14c745079c727f361ad1")]
+public class BasicSpaceButton : FTOptix.UI.VirtualKeyboardSymbolButton
+{
+}
+
 [MapType(NamespaceUri = "OptimateDemoProject", Guid = "cf246b9bd07567ff4a53fa5a9a230801")]
 public class BasicSwitchPushButton : FTOptix.UI.Button
+{
+}
+
+[MapType(NamespaceUri = "OptimateDemoProject", Guid = "551813fd361d4f22706e13275666b4ff")]
+public class Production_Time_Chart : FTOptix.UI.ScaleLayout
 {
 }

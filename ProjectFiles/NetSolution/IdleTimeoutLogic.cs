@@ -29,6 +29,7 @@ using FTOptix.EdgeAppPlatform;
 using FTOptix.MQTTClient;
 using System.Runtime.CompilerServices;
 using FTOptix.TwinCAT;
+using FTOptix.Report;
 #endregion
 
 public class IdleTimeoutLogic : BaseNetLogic

@@ -37,7 +37,7 @@ Children:
           Id: g=52ca9b8e723d472b60194bfad2fe3c5a
           Type: DynamicLink
           DataType: NodePath
-          Value: "../../../../HMI_Project/Dark Grey/Dark Grey 100"
+          Value: "../../../../HMI_Project/Dark Grey 1"
       - Name: TextColor
         Id: g=23590e56ab0f8264bd89bfe759e2e189
         Type: BaseDataVariableType
@@ -52,7 +52,7 @@ Children:
           Id: g=350770fbdcb6d0716826839a9cd7ece5
           Type: DynamicLink
           DataType: NodePath
-          Value: "../../../../HMI_Project/Dark Grey/Dark Grey 300"
+          Value: "../../../../HMI_Project/Dark Grey 3"
       - Name: Color
         Id: g=de85c73acad7ee88f7a981baed14fb0f
         Type: BaseDataVariableType
@@ -63,7 +63,7 @@ Children:
           Id: g=923fe2831a4666a41b55e52db7705a38
           Type: DynamicLink
           DataType: NodePath
-          Value: "../../../../HMI_Project/Dark Grey/Dark Grey 300"
+          Value: "../../../../HMI_Project/Dark Grey 3"
       - Name: FocusBorderColor
         Id: g=69f99adc0a640cfac044f30ea5450018
         Type: BaseDataVariableType
@@ -73,7 +73,7 @@ Children:
           Id: g=c5e0edc03283f2e41d890ec979723bc1
           Type: DynamicLink
           DataType: NodePath
-          Value: "../../../../HMI_Project/Dark Grey/Dark Grey 100"
+          Value: "../../../../HMI_Project/Dark Grey 1"
       - Name: SpacingPercent
         Id: g=739856b6caff306a3168eaa06fee7ef9
         Type: BaseDataVariableType
@@ -106,7 +106,7 @@ Children:
           Id: g=3e0c3de31af115fd7e666d6d22b5af1c
           Type: DynamicLink
           DataType: NodePath
-          Value: "../../../../HMI_Project/Dark Grey/Dark Grey 100"
+          Value: "../../../../HMI_Project/Dark Grey 1"
       - Name: FontSize
         Id: g=70380ce0893e45f246722f51dec835c8
         Type: BaseDataVariableType
@@ -127,11 +127,32 @@ Children:
         DataType: Color
         Value: "#464646"
         Children:
-        - Name: DynamicLink
-          Id: g=add6a533b158f49011ee6f215da3192f
-          Type: DynamicLink
-          DataType: NodePath
-          Value: "../../../../HMI_Project/Status/Neutral 50"
+        - Name: Color_Transparency1
+          Id: g=e61553afeabfb9cd2ad928240d4cc85a
+          Type: Color_Transparency
+          Children:
+          - Name: Sourcecolor
+            Id: g=38db33fbf7e79048c028aa7233aaa45e
+            Type: BaseDataVariableType
+            DataType: BaseDataType
+            ReferenceType: HasSource
+            Children:
+            - Name: DynamicLink
+              Id: g=72e936f6436c5c9df53fe1ecfb8bb856
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "../../../../../../HMI_Project/Info - Blue"
+          - Name: Sourcetransparency
+            Id: g=967464a292ef4ce84feac67e41189119
+            Type: BaseDataVariableType
+            DataType: BaseDataType
+            ReferenceType: HasSource
+            Children:
+            - Name: DynamicLink
+              Id: g=5220eb59708fa3806d875524ef199aa8
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "../../../../../../Transparency/t50"
       - Name: Radius
         Id: g=6442aed3abaa61d401333f63f35612c9
         Type: BaseDataVariableType
@@ -236,7 +257,13 @@ Children:
         Id: g=b1980c63d8284e04a2b4bf61d0cce634
         Type: BaseDataVariableType
         DataType: Color
-        Value: "#6d91b6"
+        Value: "#00000600"
+        Children:
+        - Name: DynamicLink
+          Id: g=95ccbef38a5ccf54e31e113795fbc6d7
+          Type: DynamicLink
+          DataType: NodePath
+          Value: "../../../../HMI_Project/Info - Blue"
       - Name: FocusBorderColor
         Id: g=bf78d3963c11cace335da9081bc8f490
         Type: BaseDataVariableType
@@ -384,6 +411,12 @@ Children:
         Type: BaseDataVariableType
         DataType: Color
         Value: "#6d91b6"
+        Children:
+        - Name: DynamicLink
+          Id: g=d0fc84b232a25a7a3f17101e21541f8e
+          Type: DynamicLink
+          DataType: NodePath
+          Value: "../../../../HMI_Project/Info - Blue"
       - Name: BorderWidth
         Id: g=cb77e9826fa3e5c13b06b687cedb3aa5
         Type: BaseDataVariableType
@@ -445,6 +478,12 @@ Children:
         Type: BaseDataVariableType
         DataType: Color
         Value: "#6d91b6"
+        Children:
+        - Name: DynamicLink
+          Id: g=4dd1809809ba2d1efd750b0fdaf50e8a
+          Type: DynamicLink
+          DataType: NodePath
+          Value: "../../../../HMI_Project/Info - Blue"
       - Name: BorderColor
         Id: g=bf1206696b57d3a4292d1a6d777c3fe9
         Type: BaseDataVariableType
@@ -524,6 +563,12 @@ Children:
         Type: BaseDataVariableType
         DataType: Color
         Value: "#6d91b6"
+        Children:
+        - Name: DynamicLink
+          Id: g=8ae40675723e4feae6bba29931e28e39
+          Type: DynamicLink
+          DataType: NodePath
+          Value: "../../../../HMI_Project/Info - Blue"
       - Name: Color
         Id: g=9bbc887a36b15e79de3947a9696a8cfd
         Type: BaseDataVariableType
@@ -562,6 +607,17 @@ Children:
         Type: BaseDataVariableType
         DataType: Color
         Value: "#ffffff"
+      - Name: FocusBorderColor
+        Id: g=efa3b26571dd7b719bcb9402babb4133
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#000000"
+        Children:
+        - Name: DynamicLink
+          Id: g=da3a9083240c34dd409d34268f70bf26
+          Type: DynamicLink
+          DataType: NodePath
+          Value: "../../../../HMI_Project/Info - Blue"
     - Name: Slim
       Id: g=1135563bc587f6dd4997f7f4e5e13159
       Type: ButtonStyle
@@ -597,6 +653,29 @@ Children:
     - Name: Default
       Id: g=3ad3929a8871fc12e4b6dd90c3694714
       Type: InputBoxStyle
+      Children:
+      - Name: FocusBorderColor
+        Id: g=204a2cdc8c9eb7925ada171122f455f9
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#000000"
+        Children:
+        - Name: DynamicLink
+          Id: g=4daf0d2b616d60a36340924665ee89ee
+          Type: DynamicLink
+          DataType: NodePath
+          Value: "../../../../HMI_Project/Info - Blue"
+      - Name: SelectionColor
+        Id: g=7fa8878cace2f1404b0f45d8c91f043d
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#cfcfcf"
+        Children:
+        - Name: DynamicLink
+          Id: g=59f5f40966da84719a7e4b4432cedc8f
+          Type: DynamicLink
+          DataType: NodePath
+          Value: "../../../../HMI_Project/Info - Blue"
     - Name: NumericEntry
       Id: g=e2f28468f3f307d31b81effe6622e7dc
       Type: InputBoxStyle
@@ -611,9 +690,54 @@ Children:
         Type: BaseDataVariableType
         DataType: Size
         Value: 24.0
+      - Name: FocusBorderColor
+        Id: g=e92a220436f17c6c107c0e6e061dc3e8
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#6d91b6"
+        Children:
+        - Name: DynamicLink
+          Id: g=f0afc7c64042c57d95086e7539aa289c
+          Type: DynamicLink
+          DataType: NodePath
+          Value: "../../../../HMI_Project/Info - Blue"
+      - Name: SelectionColor
+        Id: g=e1bea2c845492dc4a8947694cfca80e0
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#cfcfcf"
+        Children:
+        - Name: DynamicLink
+          Id: g=5030f97e9bdb3797cad65777df68274b
+          Type: DynamicLink
+          DataType: NodePath
+          Value: "../../../../HMI_Project/Info - Blue"
     - Name: StringEntry
       Id: g=5026f655da45f9b95278a5bad6aa6427
       Type: InputBoxStyle
+      Children:
+      - Name: FocusBorderColor
+        Id: g=4a9d53bd46973883df08f7c3c62c95f9
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#000000"
+        Children:
+        - Name: DynamicLink
+          Id: g=6e8c59730623ac6c77f07fd869588950
+          Type: DynamicLink
+          DataType: NodePath
+          Value: "../../../../HMI_Project/Info - Blue"
+      - Name: SelectionColor
+        Id: g=a56c434d63f2617ca5bf7c3e19985d25
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#cfcfcf"
+        Children:
+        - Name: DynamicLink
+          Id: g=e01b579077e66085211ca53405cf8cc6
+          Type: DynamicLink
+          DataType: NodePath
+          Value: "../../../../HMI_Project/Info - Blue"
     - Name: StatisticDisplay
       Id: g=449bc12973e6f322d67729d821db3202
       Type: InputBoxStyle
@@ -633,6 +757,12 @@ Children:
         Type: BaseDataVariableType
         DataType: Color
         Value: "#e9e9e9"
+        Children:
+        - Name: DynamicLink
+          Id: g=4df88fa480c690b0872eba26a119be2e
+          Type: DynamicLink
+          DataType: NodePath
+          Value: "../../../../HMI_Project/Light Grey 4"
       - Name: SelectionTextColor
         Id: g=f43aad5392eb26ea6a236d91d6050f71
         Type: BaseDataVariableType
@@ -647,11 +777,28 @@ Children:
         Type: BaseDataVariableType
         DataType: Color
         Value: "#e9e9e9"
+        Children:
+        - Name: DynamicLink
+          Id: g=ddba10b82d0d368f8a06cef29b35df23
+          Type: DynamicLink
+          DataType: NodePath
+          Value: "../../../../HMI_Project/Light Grey 4"
       - Name: PlaceHolderColor
         Id: g=470fc8de0977dcccc5e44ed35eef4098
         Type: BaseDataVariableType
         DataType: Color
         Value: "#cfcfcf00"
+      - Name: SelectionColor
+        Id: g=8a7b17f13bd16c6963046ea08995a5c6
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#cfcfcf"
+        Children:
+        - Name: DynamicLink
+          Id: g=c26f79e6c0e08426814b77ce5f6e212f
+          Type: DynamicLink
+          DataType: NodePath
+          Value: "../../../../HMI_Project/Info - Blue"
   - Name: SwitchStyles
     Id: g=eb26228026de9feb32aa218442d09a82
     Type: BaseObjectType
@@ -728,7 +875,7 @@ Children:
           Id: g=719c2a210a8a43afbd158432050d2e0b
           Type: DynamicLink
           DataType: NodePath
-          Value: "../../../../HMI_Project/Status/Wrong, Bad, Error"
+          Value: "../../../../HMI_Project/Error - Red"
       - Name: BorderWidth
         Id: g=3dc6d94a36f1136d3c64ac7a46b25403
         Type: BaseDataVariableType
@@ -757,7 +904,6 @@ Children:
         Id: g=714e02898b12fb3cc0b535285a9ec931
         Type: BaseDataVariableType
         DataType: Color
-        Value: "#e9e9e900"
       - Name: Radius
         Id: g=753d1d83c12893a96a5550b8babf6ee0
         Type: BaseDataVariableType
@@ -785,7 +931,7 @@ Children:
           Id: g=081dc47765e2705af22d731fcb8153e0
           Type: DynamicLink
           DataType: NodePath
-          Value: "../../../../HMI_Project/Light Grey/Light Grey 330"
+          Value: "../../../../HMI_Project/Light Grey 4"
     - Name: Production Statistics Inner Ring
       Id: g=87e0b132158dc54715ab02106a4c5502
       Type: GaugeStyle
@@ -800,7 +946,7 @@ Children:
           Id: g=4b07ea4ba4986f900e7f94e4fa7b7fc6
           Type: DynamicLink
           DataType: NodePath
-          Value: "../../../../HMI_Project/Status/Neutral, Message"
+          Value: "../../../../HMI_Project/Info - Blue"
       - Name: BorderWidth
         Id: g=c2c61fea3034f3344cee71bf30405786
         Type: BaseDataVariableType
@@ -829,7 +975,6 @@ Children:
         Id: g=68203ac85cd3661a241ebc298ca7b602
         Type: BaseDataVariableType
         DataType: Color
-        Value: "#e9e9e900"
       - Name: Radius
         Id: g=5b72a28dcc2297b13090440423999fe0
         Type: BaseDataVariableType
@@ -851,13 +996,12 @@ Children:
         Id: g=57e2974e16d062796c7f6712880d913c
         Type: BaseDataVariableType
         DataType: Color
-        Value: "#000000"
         Children:
         - Name: DynamicLink
-          Id: g=9ec08b58f37176ed3fe5f447817f494e
+          Id: g=d4d87360c3d58f64b2319dc083b2a922
           Type: DynamicLink
           DataType: NodePath
-          Value: "../../../../HMI_Project/Light Grey/Light Grey 330"
+          Value: "../../../../HMI_Project/Light Grey 4"
   - Name: NavigationPanelStyles
     Id: g=ec7b704050c767655454d6f263779cfc
     Type: BaseObjectType
@@ -955,6 +1099,35 @@ Children:
         Id: g=7cb407ccdc0a30073a8e374759e19517
         Type: BaseDataVariableType
         DataType: Size
+    - Name: AutoHideDefault
+      Id: g=7f21fa48e954d45e7078341d63ce2e3a
+      Type: ScrollBarStyle
+      Children:
+      - Name: HandleColor
+        Id: g=b4e9efc0d1a384c707a8bf26bb1c4711
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#999999"
+      - Name: Size
+        Id: g=a6f04d4b70f98674f602e807b2e72a33
+        Type: BaseDataVariableType
+        DataType: Size
+        Value: 20.0
+      - Name: BackgroundColor
+        Id: g=f9fa494e40d838be091d500b01183df0
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#ffffff"
+      - Name: AutoHide
+        Id: g=ad3464bd9ced3c4700c4ba00d65ff992
+        Type: BaseDataVariableType
+        DataType: Boolean
+        Value: true
+      - Name: ShowButtons
+        Id: g=008c87d712a74ccbde21b5fc5b89acf4
+        Type: BaseDataVariableType
+        DataType: Boolean
+        Value: true
   - Name: AccordionStyles
     Id: g=8255630f72b1ce7abc66d6a8d7971f43
     Type: BaseObjectType
@@ -1173,7 +1346,7 @@ Children:
           Id: g=0b5339a15aa0528a2c5086ce6e69092e
           Type: DynamicLink
           DataType: NodePath
-          Value: "../../../neutral"
+          Value: "../../../../HMI_Project/Info - Blue"
       - Name: FontSize
         Id: g=bfe1dd07dbf760ad53d0f23a01903987
         Type: BaseDataVariableType
@@ -1217,6 +1390,12 @@ Children:
     Type: BaseDataVariableType
     DataType: Color
     Value: "#6d91b6"
+    Children:
+    - Name: DynamicLink
+      Id: g=aa7c62e187e870460b84dc8c2b5e8515
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "../../HMI_Project/Info - Blue"
   - Name: DataInputBackgroundColor
     Id: g=8db876ab14656a4355eded25a3fe8a43
     Type: BaseDataVariableType
@@ -1237,6 +1416,12 @@ Children:
     Type: BaseDataVariableType
     DataType: Color
     Value: "#6d91b6"
+    Children:
+    - Name: DynamicLink
+      Id: g=198882861cb8b715e0222fe5a2de2c54
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "../../HMI_Project/Info - Blue"
   - Name: DisabledOpacity
     Id: g=036f82501163ce23eea298ff799e3a7b
     Type: BaseDataVariableType
@@ -1272,7 +1457,7 @@ Children:
           Id: g=f21f22fcbf006b05d6e44a5f6c3bd663
           Type: DynamicLink
           DataType: NodePath
-          Value: "../../../../HMI_Project/Light Grey/Light Grey 360"
+          Value: "../../../../HMI_Project/Light Grey 4"
     - Name: Invisible
       Id: g=546c41f9fdddf02d820a83d92f806f3e
       Type: RectangleStyle
@@ -1344,6 +1529,12 @@ Children:
     Type: BaseDataVariableType
     DataType: Color
     Value: "#e9e9e9"
+    Children:
+    - Name: DynamicLink
+      Id: g=c214097e60de855e45e272ef79a084fd
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "../../HMI_Project/Light Grey 4"
   - Name: InteractiveColor
     Id: g=c05ca8421d12ee6edec68f4cb0c77197
     Type: BaseDataVariableType
@@ -1362,146 +1553,6 @@ Children:
     Type: BaseDataVariableType
     DataType: Float
     Value: 0.15000000596046448
-  - Name: error
-    Id: g=a192d86c63e26ba3e80ff54ebe0637f6
-    Type: BaseDataVariableType
-    DataType: Color
-    Value: "#cc0036"
-  - Name: warning
-    Id: g=689cc12b7416cb76fd93d4d179b18d8a
-    Type: BaseDataVariableType
-    DataType: Color
-    Value: "#ff9900"
-  - Name: good
-    Id: g=df120489839d9330e3bbfe01f76ac957
-    Type: BaseDataVariableType
-    DataType: Color
-    Value: "#23af72"
-  - Name: neutral
-    Id: g=741c4c308f3244d66c5bdbd01ffb9843
-    Type: BaseDataVariableType
-    DataType: Color
-    Value: "#6d91b6"
-  - Name: disabled
-    Id: g=b467699c0eb61efc6316cfa743455335
-    Type: BaseDataVariableType
-    DataType: Color
-    Value: "#979797"
-  - Name: production
-    Id: g=9985ddceff8a7c163bcb871f02064875
-    Type: BaseDataVariableType
-    DataType: Color
-    Value: "#66ae76"
-  - Name: manual
-    Id: g=0f77f98cc205e56d081b8daf9b033ab8
-    Type: BaseDataVariableType
-    DataType: Color
-    Value: "#aa3ebc"
-  - Name: washing
-    Id: g=ba17c411e2e63fe7e2909434445e8da1
-    Type: BaseDataVariableType
-    DataType: Color
-    Value: "#5592ba"
-  - Name: lavender
-    Id: g=b2c9a10bc86fd82874eb0d6ec62e579d
-    Type: BaseDataVariableType
-    DataType: Color
-    Value: "#9540bf"
-  - Name: dark purple
-    Id: g=cbdf51537cf58bdc68ad0058f32d0068
-    Type: BaseDataVariableType
-    DataType: Color
-    Value: "#1f0a5c"
-  - Name: purple
-    Id: g=7e21561129cf9e05d942cb6c86f2a19e
-    Type: BaseDataVariableType
-    DataType: Color
-    Value: "#402673"
-  - Name: indigo
-    Id: g=d2833ce857fd4150db902be849d144df
-    Type: BaseDataVariableType
-    DataType: Color
-    Value: "#105593"
-  - Name: seablue
-    Id: g=fdcb2d4f60a43790c31dd380d5286fae
-    Type: BaseDataVariableType
-    DataType: Color
-    Value: "#0d78a5"
-  - Name: skyblue
-    Id: g=dc15a1c96402ee055d89183b1ec85544
-    Type: BaseDataVariableType
-    DataType: Color
-    Value: "#33b2cc"
-  - Name: teal
-    Id: g=a1a6e027c8ec182d7a6e3c9d484fed58
-    Type: BaseDataVariableType
-    DataType: Color
-    Value: "#5ebab2"
-  - Name: dark blue
-    Id: g=ce28406a1e2d7348b3081c7abf1231a0
-    Type: BaseDataVariableType
-    DataType: Color
-    Value: "#5a6c7f"
-  - Name: light grey 1
-    Id: g=7d2b45ca1c928648732b43a7da093283
-    Type: BaseDataVariableType
-    DataType: Color
-    Value: "#ffffff"
-  - Name: light grey 2
-    Id: g=42047d386b22aec915d718f0a4584c6b
-    Type: BaseDataVariableType
-    DataType: Color
-    Value: "#f7f7f7"
-  - Name: light grey 3
-    Id: g=221777eccf606f637ec7a798844f8d9d
-    Type: BaseDataVariableType
-    DataType: Color
-    Value: "#f1f1f1"
-  - Name: light grey 4
-    Id: g=672b411d8498e3e217ae02ebfd99b133
-    Type: BaseDataVariableType
-    DataType: Color
-    Value: "#e9e9e9"
-  - Name: light grey 5
-    Id: g=a846e71b668b7825e031e88824f29067
-    Type: BaseDataVariableType
-    DataType: Color
-    Value: "#d9d9d9"
-  - Name: light grey 7
-    Id: g=71de20bd20c3e07d5dbcf2f5a1edadf3
-    Type: BaseDataVariableType
-    DataType: Color
-    Value: "#b1b1b1"
-  - Name: dark grey 1
-    Id: g=370c5aebf354df2049ee9a2142507710
-    Type: BaseDataVariableType
-    DataType: Color
-    Value: "#8a8a8a"
-  - Name: dark grey 2
-    Id: g=5a2f7b4c1d9eecc92ab1024282109055
-    Type: BaseDataVariableType
-    DataType: Color
-    Value: "#6d6e70"
-  - Name: dark grey 3
-    Id: g=dfa49cbcd457dee0a3b4918af9629b03
-    Type: BaseDataVariableType
-    DataType: Color
-    Value: "#555555"
-  - Name: dark grey 4
-    Id: g=c3697832587ca0da1d1e51976ba07002
-    Type: BaseDataVariableType
-    DataType: Color
-    Value: "#404040"
-  - Name: dark grey 5
-    Id: g=268facdcafaed3793d35b62b29d13708
-    Type: BaseDataVariableType
-    DataType: Color
-    Value: "#333333"
-  - Name: dark grey 6
-    Id: g=a863b0a9e3631ef7ece360664019ed2c
-    Type: BaseDataVariableType
-    DataType: Color
-    Value: "#000000"
 - Name: Default
   Id: g=2bfafe0e38e56cb13f52ae9ce5918ec9
   Type: StyleSheet
@@ -1630,6 +1681,650 @@ Children:
         Id: g=32db5e60e0b4cf262c183e915f9d5781
         Type: BaseDataVariableType
         DataType: Size
+    - Name: Tab
+      Id: g=8f562c4d3cc390c277381d2546347937
+      Type: ButtonStyle
+      ReferenceType: HasOrderedComponent
+    - Name: Burger
+      Id: g=6f8b246ca62f0dec25d166bc17679646
+      Type: ButtonStyle
+      ReferenceType: HasOrderedComponent
+    - Name: BottomBar
+      Id: g=6ef556eb51659125779da4487eae496f
+      Type: ButtonStyle
+      ReferenceType: HasOrderedComponent
+    - Name: TopBarButtons
+      Id: g=4f237f2927090a0ed6f140a641966afc
+      Type: ButtonStyle
+      ReferenceType: HasOrderedComponent
+      Children:
+      - Name: BorderColor
+        Id: g=697956e7397c76121f6d1fa1f474b00c
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#404040"
+        Children:
+        - Name: DynamicLink
+          Id: g=48663b7d6119a8aac5cabb7afae79874
+          Type: DynamicLink
+          DataType: NodePath
+          Value: "../../../../HMI_Project/Dark Grey 1"
+      - Name: TextColor
+        Id: g=c97a8bb2ab58d8a0a4f01bcb5a77a2df
+        Type: BaseDataVariableType
+        DataType: Color
+      - Name: PressedColor
+        Id: g=ed68c4a807ed07e7c51c4f5f767729ca
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#555555"
+        Children:
+        - Name: DynamicLink
+          Id: g=87e12dd589548d61a4a311504a97ba9f
+          Type: DynamicLink
+          DataType: NodePath
+          Value: "../../../../HMI_Project/Dark Grey 3"
+      - Name: Color
+        Id: g=be1ce9e1924e5c7afca58d53baab2cd1
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#555555"
+        Children:
+        - Name: DynamicLink
+          Id: g=68695bd9e859a752dee3ba98709a75bb
+          Type: DynamicLink
+          DataType: NodePath
+          Value: "../../../../HMI_Project/Dark Grey 3"
+      - Name: FocusBorderColor
+        Id: g=8341f22c3dc7516019862eb92fd02c00
+        Type: BaseDataVariableType
+        DataType: Color
+        Children:
+        - Name: DynamicLink
+          Id: g=eb501f2c918aa88964ae1948faa1c716
+          Type: DynamicLink
+          DataType: NodePath
+          Value: "../../../../HMI_Project/Dark Grey 1"
+      - Name: SpacingPercent
+        Id: g=25fe4de1794d1c224d70766d2508c507
+        Type: BaseDataVariableType
+        DataType: Float
+      - Name: VerticalPaddingPercent
+        Id: g=ae0a9f675cd1cb4ea7b1c0966d7accac
+        Type: BaseDataVariableType
+        DataType: Float
+      - Name: HorizontalPaddingPercent
+        Id: g=d7058e166754a5beb2de72a56759eaf8
+        Type: BaseDataVariableType
+        DataType: Float
+      - Name: Radius
+        Id: g=7a312cb1221a94333e33abffab548997
+        Type: BaseDataVariableType
+        DataType: Size
+        Value: 8.0
+      - Name: BorderWidth
+        Id: g=02b6fc80761e51653c485df56b1932d8
+        Type: BaseDataVariableType
+        DataType: Size
+        Value: 3.0
+      - Name: PressedBorderColor
+        Id: g=2ef09b0e2472aea0c796b1b1009ced59
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#000000"
+        Children:
+        - Name: DynamicLink
+          Id: g=36560bcbb81cc18145c84e054859b0f5
+          Type: DynamicLink
+          DataType: NodePath
+          Value: "../../../../HMI_Project/Dark Grey 1"
+      - Name: FontSize
+        Id: g=9e125cfd4cd094aa7520fc8e5ca58b3b
+        Type: BaseDataVariableType
+        DataType: Size
+        Value: 1.0
+    - Name: BottomNavButtons
+      Id: g=9eafea94bb18d82f96d4410e973652ae
+      Type: ButtonStyle
+      ReferenceType: HasOrderedComponent
+      Children:
+      - Name: Color
+        Id: g=2615e06408131199d9b83940ba855b22
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#464646"
+      - Name: PressedColor
+        Id: g=efc1da86102f859d2c82b0227b29da97
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#464646"
+        Children:
+        - Name: Color_Transparency1
+          Id: g=6093003ef99f6ee94ce42a94338cd075
+          Type: Color_Transparency
+          Children:
+          - Name: Sourcecolor
+            Id: g=079598246327e736b2a196cef12ba04e
+            Type: BaseDataVariableType
+            DataType: BaseDataType
+            ReferenceType: HasSource
+            Children:
+            - Name: DynamicLink
+              Id: g=a3389cb61d82caad8ff5ccdff0694fba
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "../../../../../../HMI_Project/Info - Blue"
+          - Name: Sourcetransparency
+            Id: g=ee16d70aca641c3bc0793c4ddae1b40b
+            Type: BaseDataVariableType
+            DataType: BaseDataType
+            ReferenceType: HasSource
+            Children:
+            - Name: DynamicLink
+              Id: g=3fb4ebff4f5b194bfe923dfdaeec46f3
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "../../../../../../Transparency/t50"
+      - Name: Radius
+        Id: g=0f608e53d75b9d399914d025678e39b4
+        Type: BaseDataVariableType
+        DataType: Size
+      - Name: BorderWidth
+        Id: g=287ff96fb33be516dab80ef64a382b81
+        Type: BaseDataVariableType
+        DataType: Size
+        Value: 2.0
+      - Name: PressedBorderColor
+        Id: g=e366b9b6a756afd7e8fbc58f729db49f
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#000000"
+      - Name: BorderColor
+        Id: g=9451d4a7a3935e47c044312a6e33ef94
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#000000"
+      - Name: TextColor
+        Id: g=9a2943b36f1a4d24830fa74dd87e4586
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#ffffff"
+      - Name: FocusBorderColor
+        Id: g=3063f0c050da27574e60f148395c6f27
+        Type: BaseDataVariableType
+        DataType: Color
+      - Name: PressedTextColor
+        Id: g=ed980d33b6b768e82c7ce8c6aa12b0f6
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#ffffff"
+      - Name: FontFamily
+        Id: g=f8bdd1f36ed8acfab1b89c7ab3888e09
+        Type: BaseDataVariableType
+        DataType: Font
+        Value: "Roboto Condensed"
+      - Name: HorizontalPaddingPercent
+        Id: g=701fa07551b71abacd3d9c5b52c2bfda
+        Type: BaseDataVariableType
+        DataType: Float
+      - Name: VerticalPaddingPercent
+        Id: g=5b904379f106db2f6cf17bc656f9074f
+        Type: BaseDataVariableType
+        DataType: Float
+      - Name: SpacingPercent
+        Id: g=6ed6e7432156ffc7081c9d63e842a83b
+        Type: BaseDataVariableType
+        DataType: Float
+      - Name: IconUsesTextColor
+        Id: g=546b68291fd389f25ae7030dd86217a6
+        Type: BaseDataVariableType
+        DataType: Boolean
+      - Name: FontSize
+        Id: g=b07013ff5876c2ebbd43327ff2e1ab1a
+        Type: BaseDataVariableType
+        DataType: Size
+        Value: 20.0
+    - Name: MenuButton
+      Id: g=1428591ca4e7c1a851838b3e8f2adecd
+      Type: ButtonStyle
+      ReferenceType: HasOrderedComponent
+      Children:
+      - Name: Color
+        Id: g=0509d04058b4ca50ebe76d21ce1b8b44
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#ffffff"
+      - Name: BorderColor
+        Id: g=a52739716296b76f4308c2b9c78b08cf
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#000000"
+      - Name: BorderWidth
+        Id: g=78fc5171163e2dc38c52183225d27317
+        Type: BaseDataVariableType
+        DataType: Size
+        Value: 2.0
+      - Name: Radius
+        Id: g=29dbccc6ac2a74fb322c237bff9c25d8
+        Type: BaseDataVariableType
+        DataType: Size
+        Value: 8.0
+      - Name: FontSize
+        Id: g=bdb55179a02287da1494b56de653252c
+        Type: BaseDataVariableType
+        DataType: Size
+        Value: 11.0
+      - Name: HorizontalPaddingPercent
+        Id: g=8733b3d062c111d36887c34c0e39299c
+        Type: BaseDataVariableType
+        DataType: Float
+      - Name: VerticalPaddingPercent
+        Id: g=3f68faba973311bdc908c461bc1533c3
+        Type: BaseDataVariableType
+        DataType: Float
+      - Name: SpacingPercent
+        Id: g=092f1dfad5d6bc0df4e19618b9887612
+        Type: BaseDataVariableType
+        DataType: Float
+      - Name: PressedTextColor
+        Id: g=ae7d3ffc3ab02ed450e9380a12b09aa8
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#00000600"
+        Children:
+        - Name: DynamicLink
+          Id: g=a11ee9800cfdec7fceae83847b4aa500
+          Type: DynamicLink
+          DataType: NodePath
+          Value: "../../../../HMI_Project/Info - Blue"
+      - Name: FocusBorderColor
+        Id: g=5e0f77defa5b0f1fd5e26d48cb61b9c2
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#000000"
+      - Name: TextColor
+        Id: g=862733d63a8d9c43741fd7fd82eeb440
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#000000"
+      - Name: PressedBorderColor
+        Id: g=06b733d7acaec3d4aad5791f72113499
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#000000"
+    - Name: Invisible
+      Id: g=1784b1622b529a31b6f2546b6634e2b6
+      Type: ButtonStyle
+      ReferenceType: HasOrderedComponent
+      Children:
+      - Name: Color
+        Id: g=a5ad8e6bb3609e3567f1d20527360cab
+        Type: BaseDataVariableType
+        DataType: Color
+      - Name: BorderColor
+        Id: g=4e0dbb4b9f93d77866302d33bea958a3
+        Type: BaseDataVariableType
+        DataType: Color
+      - Name: TextColor
+        Id: g=508977255624a2d6774f1d2776c097af
+        Type: BaseDataVariableType
+        DataType: Color
+      - Name: FocusBorderColor
+        Id: g=e2337d75e08ec391f67246bf27326a1d
+        Type: BaseDataVariableType
+        DataType: Color
+      - Name: HorizontalPaddingPercent
+        Id: g=65ea8258f17a84174a63350d8ec31581
+        Type: BaseDataVariableType
+        DataType: Float
+      - Name: VerticalPaddingPercent
+        Id: g=69997ab5970a4752712e6a73febee99b
+        Type: BaseDataVariableType
+        DataType: Float
+      - Name: SpacingPercent
+        Id: g=d1f287663c03ec66443e1423a07d9798
+        Type: BaseDataVariableType
+        DataType: Float
+      - Name: IconUsesTextColor
+        Id: g=5d0fd243280c1966fbbc28bef77c7749
+        Type: BaseDataVariableType
+        DataType: Boolean
+        Value: true
+      - Name: FontFamily
+        Id: g=dd9238e7c3011bd863dd713138c27baa
+        Type: BaseDataVariableType
+        DataType: Font
+      - Name: Radius
+        Id: g=1243863ed71752eaaf99862366ac616c
+        Type: BaseDataVariableType
+        DataType: Size
+      - Name: BorderWidth
+        Id: g=c5ac91a345a275c22f5ef7068047f8a4
+        Type: BaseDataVariableType
+        DataType: Size
+      - Name: FontSize
+        Id: g=5848ed4c379bed344c5d81a342ac580e
+        Type: BaseDataVariableType
+        DataType: Size
+        Value: 1.0
+      - Name: FontItalic
+        Id: g=83061560ddae32caf41c958909f83440
+        Type: BaseDataVariableType
+        DataType: Boolean
+    - Name: KeyboardButton
+      Id: g=4010df5acece561057c6e62883626c51
+      Type: ButtonStyle
+      ReferenceType: HasOrderedComponent
+      Children:
+      - Name: Color
+        Id: g=e76a43379eb3377bd3656ceb55bb3bb0
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#faf7f7"
+      - Name: BorderWidth
+        Id: g=95fad246ac9ff959b0d65e6312b18142
+        Type: BaseDataVariableType
+        DataType: Size
+        Value: 2.0
+      - Name: TextColor
+        Id: g=760316cfed0d32399d9de27e7bb0a882
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#333333"
+      - Name: PressedColor
+        Id: g=99f090f9520be122fb37a9c6f8208aba
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#faf7f7"
+      - Name: PressedTextColor
+        Id: g=be21a7ed9f3614a27afa9135e1d99fa5
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#333333"
+      - Name: FontFamily
+        Id: g=1ab41878cb66870067d452a9fa3d1273
+        Type: BaseDataVariableType
+        DataType: Font
+        Value: "Roboto Condensed"
+      - Name: FontSize
+        Id: g=fe43b7192ab57ab21518ea38c4462eef
+        Type: BaseDataVariableType
+        DataType: Size
+        Value: 20.0
+      - Name: Radius
+        Id: g=1814d3a36511bcca549920282bed7ed1
+        Type: BaseDataVariableType
+        DataType: Size
+        Value: 12.0
+      - Name: HorizontalPaddingPercent
+        Id: g=51d1973e055dda889c223b3d3091d7b1
+        Type: BaseDataVariableType
+        DataType: Float
+      - Name: VerticalPaddingPercent
+        Id: g=f6cf5f18e1d81ae1c97fb0e4ed358a12
+        Type: BaseDataVariableType
+        DataType: Float
+      - Name: SpacingPercent
+        Id: g=f12e2e5aa82ad363eec9194cc914e34a
+        Type: BaseDataVariableType
+        DataType: Float
+      - Name: FontWeight
+        Id: g=975684c72a1e680c9d506521ce0a731f
+        Type: BaseDataVariableType
+        DataType: FontWeightEnum
+        Value: 700
+      - Name: FontItalic
+        Id: g=de50df177aefd7e2548a651b7ee12044
+        Type: BaseDataVariableType
+        DataType: Boolean
+    - Name: Selected
+      Id: g=f4ceb137c0d825b2a7c51d76a0730c24
+      Type: ButtonStyle
+      ReferenceType: HasOrderedComponent
+      Children:
+      - Name: Color
+        Id: g=89adb78b4eb2d0a81add60743650525b
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#6d91b6"
+        Children:
+        - Name: DynamicLink
+          Id: g=c0a7770f8babe506238b6e5e61ad2a4e
+          Type: DynamicLink
+          DataType: NodePath
+          Value: "../../../../HMI_Project/Info - Blue"
+      - Name: BorderWidth
+        Id: g=91180a2221773be88bbc6a9a34ac6cb7
+        Type: BaseDataVariableType
+        DataType: Size
+        Value: 2.0
+      - Name: TextColor
+        Id: g=88f953aaa6ffcc6852587acfdab6f82e
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#ffffff"
+      - Name: PressedColor
+        Id: g=8b673836386f0e4914c22fc3cec4c27c
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#faf7f7"
+      - Name: PressedTextColor
+        Id: g=43a54fc988a806a5db902a547a7d80be
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#333333"
+      - Name: FontFamily
+        Id: g=4071ece0cab21e47a97a51abc7e549b9
+        Type: BaseDataVariableType
+        DataType: Font
+        Value: "Roboto Condensed"
+      - Name: FontSize
+        Id: g=2ddcb42060a56380ea2de584be24f425
+        Type: BaseDataVariableType
+        DataType: Size
+        Value: 20.0
+      - Name: Radius
+        Id: g=2dfaae8aba15c69b5d89ed229c57afab
+        Type: BaseDataVariableType
+        DataType: Size
+        Value: 12.0
+      - Name: HorizontalPaddingPercent
+        Id: g=fad20a0e3610eac27d8ad99d3dbe16af
+        Type: BaseDataVariableType
+        DataType: Float
+      - Name: VerticalPaddingPercent
+        Id: g=1f70a7cfc41ad4612524d7c632100645
+        Type: BaseDataVariableType
+        DataType: Float
+      - Name: SpacingPercent
+        Id: g=c85090f4138d3c652909cbcb19192d1c
+        Type: BaseDataVariableType
+        DataType: Float
+      - Name: FontWeight
+        Id: g=2e93b96a8b5ad817204522afb7b64cef
+        Type: BaseDataVariableType
+        DataType: FontWeightEnum
+        Value: 700
+      - Name: FontItalic
+        Id: g=e9ff088aa019371a4b574abbb9630669
+        Type: BaseDataVariableType
+        DataType: Boolean
+      - Name: FocusBorderColor
+        Id: g=1b3ea434428d5a54aeb75838d49a506b
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#6d91b6"
+        Children:
+        - Name: DynamicLink
+          Id: g=ab255da2bfdd4a3337ab348efbfb7487
+          Type: DynamicLink
+          DataType: NodePath
+          Value: "../../../../HMI_Project/Info - Blue"
+      - Name: BorderColor
+        Id: g=061c8ea1b3da1e1dc342b014cdc406d9
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#000000"
+    - Name: Round KBD
+      Id: g=fa9a8533313edc25cda324481aae28fe
+      Type: ButtonStyle
+      ReferenceType: HasOrderedComponent
+      Children:
+      - Name: BorderWidth
+        Id: g=783bec69589e268248472f0a69c9147a
+        Type: BaseDataVariableType
+        DataType: Size
+        Value: 2.0
+      - Name: TextColor
+        Id: g=1449bede092a7a215d16f2cc4f01a381
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#333333"
+      - Name: PressedColor
+        Id: g=b46e643ca0d83fc07547cfc3aa97a991
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#faf7f7"
+      - Name: PressedTextColor
+        Id: g=33e9dad750b809857171db4f23e06852
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#333333"
+      - Name: FontFamily
+        Id: g=78b6d815a995b163d8db7e938a099eb9
+        Type: BaseDataVariableType
+        DataType: Font
+        Value: "Roboto Condensed"
+      - Name: FontSize
+        Id: g=885fc55fb98dd064d13ac2518c1eaa24
+        Type: BaseDataVariableType
+        DataType: Size
+        Value: 20.0
+      - Name: Radius
+        Id: g=e08ff9eac273aadfe9b3649146119f34
+        Type: BaseDataVariableType
+        DataType: Size
+        Value: 4096.0
+      - Name: HorizontalPaddingPercent
+        Id: g=3b0ca0788e0849253a6a963fd4b0a70d
+        Type: BaseDataVariableType
+        DataType: Float
+      - Name: VerticalPaddingPercent
+        Id: g=303c2f0cd6921e0c4e1458c032e0c9fd
+        Type: BaseDataVariableType
+        DataType: Float
+      - Name: SpacingPercent
+        Id: g=e152618bbc903ee27a0a9dfabc38e4f8
+        Type: BaseDataVariableType
+        DataType: Float
+      - Name: FontWeight
+        Id: g=df1968dac71577a3a59dd269b52c9a0e
+        Type: BaseDataVariableType
+        DataType: FontWeightEnum
+        Value: 700
+      - Name: FontItalic
+        Id: g=c2626b3a0685599bd7f754d478b9c4ff
+        Type: BaseDataVariableType
+        DataType: Boolean
+      - Name: Color
+        Id: g=230fed3627ecd90604c4970379c89aab
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#faf7f7"
+    - Name: Standard
+      Id: g=fff12905197a533a53234345f9ec16a4
+      Type: ButtonStyle
+      ReferenceType: HasOrderedComponent
+      Children:
+      - Name: PressedColor
+        Id: g=d7fece60fce6065d8c5903367b6ba44e
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#6d91b6"
+        Children:
+        - Name: DynamicLink
+          Id: g=de6f25bafaf59a5ebfe0ac56e64854ca
+          Type: DynamicLink
+          DataType: NodePath
+          Value: "../../../../HMI_Project/Info - Blue"
+      - Name: Color
+        Id: g=5e398e891a94d583f377683b262ef4a8
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#fafafa"
+      - Name: FontWeight
+        Id: g=b475facc5862a3c9924314098690bf66
+        Type: BaseDataVariableType
+        DataType: FontWeightEnum
+        Value: 700
+      - Name: FontSize
+        Id: g=6fdbd2aebd17c6a090048cf5e0fe9162
+        Type: BaseDataVariableType
+        DataType: Size
+        Value: 20.0
+      - Name: SpacingPercent
+        Id: g=f13e85d0dd31c5e0b4f5eccfeeaa22c8
+        Type: BaseDataVariableType
+        DataType: Float
+      - Name: Radius
+        Id: g=fb36f3d152940a5552f884edf282d4b5
+        Type: BaseDataVariableType
+        DataType: Size
+        Value: 8.0
+      - Name: BorderWidth
+        Id: g=83d77795e1b2417fff3f3e1dd5ed0ae8
+        Type: BaseDataVariableType
+        DataType: Size
+        Value: 3.0
+      - Name: IconUsesTextColor
+        Id: g=094832cfa282070d47520ce1023e812f
+        Type: BaseDataVariableType
+        DataType: Boolean
+      - Name: PressedTextColor
+        Id: g=d64671ef5fbb8e2115e5b1ab9f4c35e1
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#ffffff"
+      - Name: FocusBorderColor
+        Id: g=a49b9a16c4fbaf6f1aed89e59b1a4a75
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#000000"
+        Children:
+        - Name: DynamicLink
+          Id: g=e27db524bf2060a4788c909f1ba1ae5d
+          Type: DynamicLink
+          DataType: NodePath
+          Value: "../../../../HMI_Project/Info - Blue"
+    - Name: Slim
+      Id: g=23833a4db6e17820a08d05fc6797db25
+      Type: ButtonStyle
+      ReferenceType: HasOrderedComponent
+      Children:
+      - Name: BorderWidth
+        Id: g=5b13f26d29c6d17de6b2846cfce41884
+        Type: BaseDataVariableType
+        DataType: Size
+        Value: 1.0
+      - Name: Radius
+        Id: g=8f5f49883411ffcc253a0e5387e170a9
+        Type: BaseDataVariableType
+        DataType: Size
+        Value: 4096.0
+      - Name: SpacingPercent
+        Id: g=64b4bd916a867389a55b6d580f06a152
+        Type: BaseDataVariableType
+        DataType: Float
+      - Name: Color
+        Id: g=a1cbe7463acdf827239f3698ad77ffc0
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#ffffff"
+      - Name: FocusBorderColor
+        Id: g=0ba707bf8cad5545715e0d058f1b1107
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#6d91b600"
   - Name: InputBoxStyles
     Id: g=8263bdc700fcd2d4d2bef1b436bf4c8b
     Type: BaseObjectType
@@ -1637,6 +2332,132 @@ Children:
     - Name: Default
       Id: g=c78480773961ce662b42050eff46b6cc
       Type: InputBoxStyle
+    - Name: NumericEntry
+      Id: g=df4a782b7d543e8c084f398694bf8066
+      Type: InputBoxStyle
+      ReferenceType: HasOrderedComponent
+      Children:
+      - Name: BorderColor
+        Id: g=1d008968a47d1b8fe05b3849f503e7ce
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#000000"
+      - Name: FontSize
+        Id: g=a0893227f51a62dc30482c89c55d57bc
+        Type: BaseDataVariableType
+        DataType: Size
+        Value: 24.0
+      - Name: FocusBorderColor
+        Id: g=8ec87052e4e7a9eb5c01dec170f18fba
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#6d91b6"
+        Children:
+        - Name: DynamicLink
+          Id: g=850b8cd1e4c822006ecfd8df8c0433a4
+          Type: DynamicLink
+          DataType: NodePath
+          Value: "../../../../HMI_Project/Info - Blue"
+      - Name: SelectionColor
+        Id: g=2186087d35e202db9a0ef33fb6aa615f
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#cfcfcf"
+        Children:
+        - Name: DynamicLink
+          Id: g=b01803f1225a42e889924cfb14a7c51b
+          Type: DynamicLink
+          DataType: NodePath
+          Value: "../../../../HMI_Project/Info - Blue"
+    - Name: StringEntry
+      Id: g=2dcff25470003da5a31822ea99cf3dcd
+      Type: InputBoxStyle
+      ReferenceType: HasOrderedComponent
+      Children:
+      - Name: FocusBorderColor
+        Id: g=d87e9dae66a01d80e4abf5b3ac00e3b0
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#000000"
+        Children:
+        - Name: DynamicLink
+          Id: g=5d95a02e32fd6b0e6aa3d3e04594ead8
+          Type: DynamicLink
+          DataType: NodePath
+          Value: "../../../../HMI_Project/Info - Blue"
+      - Name: SelectionColor
+        Id: g=31998acd2ec773baee5f89caed2a34f7
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#cfcfcf"
+        Children:
+        - Name: DynamicLink
+          Id: g=e41b8aac3532bbd21f4f34f3ff52e367
+          Type: DynamicLink
+          DataType: NodePath
+          Value: "../../../../HMI_Project/Info - Blue"
+    - Name: StatisticDisplay
+      Id: g=13fc5696c7e022e3d87251c88276f304
+      Type: InputBoxStyle
+      ReferenceType: HasOrderedComponent
+      Children:
+      - Name: Radius
+        Id: g=442befdf8f64043213448579ccbb7698
+        Type: BaseDataVariableType
+        DataType: Size
+        Value: 10.0
+      - Name: BorderWidth
+        Id: g=fa54c26b5c24f3d65c9d520727d15efc
+        Type: BaseDataVariableType
+        DataType: Size
+        Value: 3.0
+      - Name: BorderColor
+        Id: g=67ae0e738bbdb60adea80f98100e0f7c
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#e9e9e9"
+        Children:
+        - Name: DynamicLink
+          Id: g=6756d9ebd3be037574ef1da298e96b40
+          Type: DynamicLink
+          DataType: NodePath
+          Value: "../../../../HMI_Project/Light Grey 4"
+      - Name: SelectionTextColor
+        Id: g=880f01e3226e7879d8810e1882f47e21
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#000000"
+      - Name: FontFamily
+        Id: g=09fe918e0e669c4ddcdef87d5c6d4c75
+        Type: BaseDataVariableType
+        DataType: Font
+      - Name: FocusBorderColor
+        Id: g=554ad114b091cc36b0e6715df47f9e1d
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#e9e9e9"
+        Children:
+        - Name: DynamicLink
+          Id: g=d2b30d4554963312d43474fcde26d766
+          Type: DynamicLink
+          DataType: NodePath
+          Value: "../../../../HMI_Project/Light Grey 4"
+      - Name: PlaceHolderColor
+        Id: g=77fc6506508087061acbeb4fef1a7ce3
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#cfcfcf00"
+      - Name: SelectionColor
+        Id: g=82c96fbbc243c2217d90ac19fc39f6d3
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#cfcfcf"
+        Children:
+        - Name: DynamicLink
+          Id: g=afad9e6f32104387bc38d6bb699882e8
+          Type: DynamicLink
+          DataType: NodePath
+          Value: "../../../../HMI_Project/Info - Blue"
   - Name: SwitchStyles
     Id: g=7eb227405bd0ea09f328ec3f7965d62e
     Type: BaseObjectType
@@ -1644,6 +2465,50 @@ Children:
     - Name: Default
       Id: g=90abc479bc1f47de24655e746c94887b
       Type: SwitchStyle
+    - Name: OnOff
+      Id: g=977b05d3ecad958091a3e0a9d84028b2
+      Type: SwitchStyle
+      ReferenceType: HasOrderedComponent
+      Children:
+      - Name: BackgroundColor
+        Id: g=609ec2d7dcf0cd044b3c3d098b228897
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#b2b2b2"
+      - Name: BorderColor
+        Id: g=43e3e30e9c57e79b2df4d388eaef9a07
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#000000"
+      - Name: BorderWidth
+        Id: g=f90c4d3a101c8b75d08e942417cf36f1
+        Type: BaseDataVariableType
+        DataType: Size
+        Value: 3.0
+      - Name: TextColor
+        Id: g=3dc73b78a324dd1dfeb4959ba2604a0e
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#ffffff"
+      - Name: FontWeight
+        Id: g=718f392f6f4f2643e8dacb2d99f51851
+        Type: BaseDataVariableType
+        DataType: FontWeightEnum
+        Value: 700
+      - Name: FontSize
+        Id: g=3d3e06e468cc2a09ab32411e1e1796a0
+        Type: BaseDataVariableType
+        DataType: Size
+        Value: 24.0
+      - Name: HandleColor
+        Id: g=ed1bdbfe3241a7e87b3d241ffa5e9e2b
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#fafafa"
+    - Name: EnableDisable
+      Id: g=78c783289fafc2d925f79d72f226325f
+      Type: SwitchStyle
+      ReferenceType: HasOrderedComponent
   - Name: GaugeStyles
     Id: g=4d77fa1b881e7f8677ca34a4ed74c7d4
     Type: BaseObjectType
@@ -1651,6 +2516,149 @@ Children:
     - Name: Default
       Id: g=e2f05208a8bfeb639d478eb3901bcf8a
       Type: GaugeStyle
+    - Name: Production Statistics Outer Ring
+      Id: g=f561bf95e31ce73f62f76123b58d15e7
+      Type: GaugeStyle
+      ReferenceType: HasOrderedComponent
+      Children:
+      - Name: ForegroundColor
+        Id: g=71e5b60a39dc6bd4abd31ef8fc2a23c9
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#000000"
+        Children:
+        - Name: DynamicLink
+          Id: g=d41d12f3a31fb8ea0b658863a0304ddb
+          Type: DynamicLink
+          DataType: NodePath
+          Value: "../../../../HMI_Project/Error - Red"
+      - Name: BorderWidth
+        Id: g=943629f8db509a41cafcb539506613f9
+        Type: BaseDataVariableType
+        DataType: Size
+      - Name: BorderColor
+        Id: g=fd9a4b99138b6135f8425f7b04688cc0
+        Type: BaseDataVariableType
+        DataType: Color
+      - Name: TextColor
+        Id: g=f0ed59b4d6b58d68ff8a94b816ee712a
+        Type: BaseDataVariableType
+        DataType: Color
+      - Name: FontFamily
+        Id: g=cc100c73e54729b6730220c4f8405e14
+        Type: BaseDataVariableType
+        DataType: Font
+      - Name: HandleColor
+        Id: g=1cff5bfe272a9af91b1e38b1021cecc3
+        Type: BaseDataVariableType
+        DataType: Color
+      - Name: HandleBorderColor
+        Id: g=2824193a7a5355b85e4547d39626d6a5
+        Type: BaseDataVariableType
+        DataType: Color
+      - Name: ToolTipBackgroundColor
+        Id: g=ea2d75463a74554f6a0e7a06cf9b872b
+        Type: BaseDataVariableType
+        DataType: Color
+      - Name: Radius
+        Id: g=324a0956a6268ddb81dcbd72bf5311d3
+        Type: BaseDataVariableType
+        DataType: Size
+      - Name: HandleSize
+        Id: g=e6857dc584eda8b6eb3207ca5eae9f34
+        Type: BaseDataVariableType
+        DataType: Size
+      - Name: HandleBorderWidth
+        Id: g=421cc131f620ec481106e349068b1b67
+        Type: BaseDataVariableType
+        DataType: Size
+      - Name: FontSize
+        Id: g=86742b4ad3b4bd17b43f31ff6c7487fb
+        Type: BaseDataVariableType
+        DataType: Size
+        Value: 1.0
+      - Name: BackgroundColor
+        Id: g=43eb6ea6b726672bad9e4ad75c4a3486
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#000000"
+        Children:
+        - Name: DynamicLink
+          Id: g=d39c8a4b6757d2714a44c7951e859e1e
+          Type: DynamicLink
+          DataType: NodePath
+          Value: "../../../../HMI_Project/Light Grey 4"
+    - Name: Production Statistics Inner Ring
+      Id: g=0c6da89d9e67682ee70d0d27e3144391
+      Type: GaugeStyle
+      ReferenceType: HasOrderedComponent
+      Children:
+      - Name: ForegroundColor
+        Id: g=fe81025d60ff03a6878e20aa49b9a8df
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#000000"
+        Children:
+        - Name: DynamicLink
+          Id: g=b007711734d5f70b30fe93ba62fd4653
+          Type: DynamicLink
+          DataType: NodePath
+          Value: "../../../../HMI_Project/Info - Blue"
+      - Name: BorderWidth
+        Id: g=8474db6f74ea51b9a44cc2101ef50450
+        Type: BaseDataVariableType
+        DataType: Size
+      - Name: BorderColor
+        Id: g=bb9383690765986ae4f214a527426cbb
+        Type: BaseDataVariableType
+        DataType: Color
+      - Name: TextColor
+        Id: g=2e21ea98f8a62123e1f0e317a684a588
+        Type: BaseDataVariableType
+        DataType: Color
+      - Name: FontFamily
+        Id: g=93900e0a1ae00ae7e3425c0078a38f17
+        Type: BaseDataVariableType
+        DataType: Font
+      - Name: HandleColor
+        Id: g=78a13cbdb540635d6df326216ee9a417
+        Type: BaseDataVariableType
+        DataType: Color
+      - Name: HandleBorderColor
+        Id: g=cde738c45e7f77087761d89e0a3298d3
+        Type: BaseDataVariableType
+        DataType: Color
+      - Name: ToolTipBackgroundColor
+        Id: g=33ed3e9d169131622ab5f7846c8cc78c
+        Type: BaseDataVariableType
+        DataType: Color
+      - Name: Radius
+        Id: g=9b58bf7a2bb6ee497e36e6f862505b2f
+        Type: BaseDataVariableType
+        DataType: Size
+      - Name: HandleSize
+        Id: g=eb23a14294159b8b1023561dacf18b11
+        Type: BaseDataVariableType
+        DataType: Size
+      - Name: HandleBorderWidth
+        Id: g=0a54241d90feff4cbdd2a43f75cfa193
+        Type: BaseDataVariableType
+        DataType: Size
+      - Name: FontSize
+        Id: g=8ce182e70930baf02694187161af3aa7
+        Type: BaseDataVariableType
+        DataType: Size
+        Value: 1.0
+      - Name: BackgroundColor
+        Id: g=f3bce14e214678185432246a93ebe445
+        Type: BaseDataVariableType
+        DataType: Color
+        Children:
+        - Name: DynamicLink
+          Id: g=0f0f1ef2e8176791f8c646ae86edc4fd
+          Type: DynamicLink
+          DataType: NodePath
+          Value: "../../../../HMI_Project/Light Grey 4"
   - Name: NavigationPanelStyles
     Id: g=870c2704256399789fa4df5fc3c5afb9
     Type: BaseObjectType
@@ -1686,6 +2694,36 @@ Children:
     - Name: Default
       Id: g=032a0e0eb1c57a84e6a07434cbbdebe0
       Type: ScrollBarStyle
+    - Name: AutoHideDefault
+      Id: g=8a97db7a557989484907d707d71892e0
+      Type: ScrollBarStyle
+      ReferenceType: HasOrderedComponent
+      Children:
+      - Name: HandleColor
+        Id: g=993c98f43f069a1fcbfd9020ad9d7975
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#999999"
+      - Name: Size
+        Id: g=bfc80e4bf2aca74c32722f0d6672e152
+        Type: BaseDataVariableType
+        DataType: Size
+        Value: 20.0
+      - Name: BackgroundColor
+        Id: g=d1fbd36ccc7b5d96190a381138ad415d
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#ffffff"
+      - Name: AutoHide
+        Id: g=cfa3f88e35a61169c0acc6ed8ba2a33e
+        Type: BaseDataVariableType
+        DataType: Boolean
+        Value: true
+      - Name: ShowButtons
+        Id: g=fb4633e2ec67d29ed7c4e60e1e1e79cb
+        Type: BaseDataVariableType
+        DataType: Boolean
+        Value: true
   - Name: AccordionStyles
     Id: g=204d88a463f07805fb0369a49f8f4e50
     Type: BaseObjectType
@@ -1700,6 +2738,63 @@ Children:
     - Name: Default
       Id: g=3a6e34bc2c0e6cab8f2a8f2ca48a1ef3
       Type: PieChartStyle
+    - Name: StatisticPieChart
+      Id: g=1096958cbfd38460c92deda3dccb1e57
+      Type: PieChartStyle
+      ReferenceType: HasOrderedComponent
+      Children:
+      - Name: TextColor
+        Id: g=3becf29b882ebfff6d4a228315adc193
+        Type: BaseDataVariableType
+        DataType: Color
+      - Name: FontSize
+        Id: g=c94fc44a420c49747f792f6c61d3b729
+        Type: BaseDataVariableType
+        DataType: Size
+        Value: 1.0
+      - Name: HoleSizePercent
+        Id: g=812c3a8e140fa3af5b9af43a8e1aeea4
+        Type: BaseDataVariableType
+        DataType: Percentage
+        Value: 90.0
+    - Name: ProductionStatisticsOuter
+      Id: g=3d402080dea4a888982cfb957ece7696
+      Type: PieChartStyle
+      ReferenceType: HasOrderedComponent
+      Children:
+      - Name: TextColor
+        Id: g=0ab4f212ddc809d2fb46048c37106ef6
+        Type: BaseDataVariableType
+        DataType: Color
+      - Name: FontSize
+        Id: g=a0c55508a12390297e13f931cda25ffa
+        Type: BaseDataVariableType
+        DataType: Size
+        Value: 1.0
+      - Name: HoleSizePercent
+        Id: g=2a8621910252e3697b612a7689efd798
+        Type: BaseDataVariableType
+        DataType: Percentage
+        Value: 95.0
+    - Name: ProductionStatisticsInner
+      Id: g=3ff52a07ea437dbe4739d517ccd125cf
+      Type: PieChartStyle
+      ReferenceType: HasOrderedComponent
+      Children:
+      - Name: TextColor
+        Id: g=732deb85a5cc98c64286ac0b4a03470f
+        Type: BaseDataVariableType
+        DataType: Color
+      - Name: FontSize
+        Id: g=d6feba659cbf35b450feeea52f01cbf9
+        Type: BaseDataVariableType
+        DataType: Size
+        Value: 1.0
+      - Name: HoleSizePercent
+        Id: g=2393c4e78cad7d4149a6687f07f65faf
+        Type: BaseDataVariableType
+        DataType: Percentage
+        Value: 90.0
   - Name: HistogramChartStyles
     Id: g=e22b596f631118454004671a6fc48570
     Type: BaseObjectType
@@ -1714,6 +2809,132 @@ Children:
     - Name: Default
       Id: g=93c0d7f4d4244bfb09b9a43241ab630d
       Type: LabelStyle
+    - Name: MenuBar
+      Id: g=d760122b90fa8474c6b96f1b252c244a
+      Type: LabelStyle
+      ReferenceType: HasOrderedComponent
+      Children:
+      - Name: FontSize
+        Id: g=835c496d34f79b81b375adbc9e93fbc7
+        Type: BaseDataVariableType
+        DataType: Size
+        Value: 11.0
+      - Name: FontFamily
+        Id: g=6ef1f1340a267ca0f623c5403595ebe6
+        Type: BaseDataVariableType
+        DataType: Font
+        Value: "Roboto Condensed"
+      - Name: Radius
+        Id: g=c9c7aad38f64e08739bdadecad2394f1
+        Type: BaseDataVariableType
+        DataType: Size
+    - Name: AlarmBanner
+      Id: g=5a478899b0cc3ed263edaab55f5a1851
+      Type: LabelStyle
+      ReferenceType: HasOrderedComponent
+    - Name: Background
+      Id: g=36bd5f85286b59e266e2f767c5987062
+      Type: LabelStyle
+      ReferenceType: HasOrderedComponent
+      Children:
+      - Name: BackgroundColor
+        Id: g=3f5fad96a077204a41f2021b0bde84a4
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#ffffff"
+    - Name: TextInputMimic
+      Id: g=296e097fa6b185d17d68fb1f7768a275
+      Type: LabelStyle
+      ReferenceType: HasOrderedComponent
+      Children:
+      - Name: FontSize
+        Id: g=dda22f304b34fcef808d6e9751b339ef
+        Type: BaseDataVariableType
+        DataType: Size
+        Value: 18.0
+      - Name: BackgroundColor
+        Id: g=8e65fce9e8d7deeaed197e7bd9bd011f
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#ffffff"
+    - Name: StandardControlLabel
+      Id: g=023df03c71576034004dbfa59cf0c7c7
+      Type: LabelStyle
+      ReferenceType: HasOrderedComponent
+      Children:
+      - Name: FontSize
+        Id: g=2647c08d0d9552893d658242a4960dcb
+        Type: BaseDataVariableType
+        DataType: Size
+        Value: 20.0
+      - Name: Radius
+        Id: g=cfa811eb4ed258db65b9452ed5736124
+        Type: BaseDataVariableType
+        DataType: Size
+    - Name: CustomButtons
+      Id: g=f7cf29f7b57afd2e1ba05e7d9a112247
+      Type: LabelStyle
+      ReferenceType: HasOrderedComponent
+      Children:
+      - Name: TextColor
+        Id: g=e2a3e81ac23fafca89d6fcdfc673857a
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#ffffff"
+      - Name: FontSize
+        Id: g=80d78a308fcb18b7261a03778c52975a
+        Type: BaseDataVariableType
+        DataType: Size
+        Value: 20.0
+      - Name: Radius
+        Id: g=30dedaa1b7ab766c417b5245597e82fe
+        Type: BaseDataVariableType
+        DataType: Size
+      - Name: FontFamily
+        Id: g=44a18c06559371b8f4ddef07bb86fcf6
+        Type: BaseDataVariableType
+        DataType: Font
+        Value: "Roboto Condensed"
+      - Name: FontWeight
+        Id: g=18f71dbcc183b172b97126bcdc72f948
+        Type: BaseDataVariableType
+        DataType: FontWeightEnum
+        Value: 700
+    - Name: 20px
+      Id: g=574de01b9a9c78624e542cb19c40b378
+      Type: LabelStyle
+      ReferenceType: HasOrderedComponent
+      Children:
+      - Name: FontSize
+        Id: g=cab2b58144cfc32b208d0b1b4051717b
+        Type: BaseDataVariableType
+        DataType: Size
+        Value: 20.0
+      - Name: Radius
+        Id: g=a58686917b49bc892c9cb22975438e36
+        Type: BaseDataVariableType
+        DataType: Size
+    - Name: 30px Blue
+      Id: g=512382145c8fcfc7b3e863f45adb3984
+      Type: LabelStyle
+      ReferenceType: HasOrderedComponent
+      Children:
+      - Name: TextColor
+        Id: g=5d278822ddc082ea571963c82d4ef59d
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#000000"
+        Children:
+        - Name: DynamicLink
+          Id: g=95938bee18074a355944dae5bde6f270
+          Type: DynamicLink
+          DataType: NodePath
+          Value: "../../../../HMI_Project/Info - Blue"
+      - Name: FontSize
+        Id: g=45b357c3b8256fc38775b750c3e35dc3
+        Type: BaseDataVariableType
+        DataType: Size
+        Value: 30.0
   - Name: RadioButtonStyles
     Id: g=e8a4f053c69ac49534c4c0be9e165f53
     Type: BaseObjectType
@@ -1745,6 +2966,43 @@ Children:
         Type: BaseDataVariableType
         DataType: Size
         Value: 1.0
+    - Name: Background
+      Id: g=f35c3ca2972e9bbbbe58e7770b38ce02
+      Type: RectangleStyle
+      ReferenceType: HasOrderedComponent
+      Children:
+      - Name: BorderThickness
+        Id: g=d9f0fe01aeac0c3d993be3ab16f56561
+        Type: BaseDataVariableType
+        DataType: Size
+        Value: 1.0
+      - Name: BorderColor
+        Id: g=70e33338ff6ca6d19d7d6e9c8a510074
+        Type: BaseDataVariableType
+        DataType: Color
+        Children:
+        - Name: DynamicLink
+          Id: g=4825698dfd77de8c9c4349ca8cf89372
+          Type: DynamicLink
+          DataType: NodePath
+          Value: "../../../../HMI_Project/Light Grey 4"
+    - Name: Invisible
+      Id: g=c03f12c1b430a39d14c6e69263e7fc13
+      Type: RectangleStyle
+      ReferenceType: HasOrderedComponent
+      Children:
+      - Name: BorderThickness
+        Id: g=c9d78eff7522e358d0ce70b9267942ea
+        Type: BaseDataVariableType
+        DataType: Size
+      - Name: FillColor
+        Id: g=32539a2d94b43a569745072b212d9a9a
+        Type: BaseDataVariableType
+        DataType: Color
+      - Name: BorderColor
+        Id: g=cdd277114e927281478a14a34fcfea78
+        Type: BaseDataVariableType
+        DataType: Color
   - Name: ScreenStyles
     Id: g=f5fd418d970209ccea51abb274fb594f
     Type: BaseObjectType
@@ -1752,3 +3010,18 @@ Children:
     - Name: Default
       Id: g=f24e93fca67393e108671a0e60d8a230
       Type: ScreenStyle
+    - Name: WhiteBackground
+      Id: g=d82b6fb335ea160a0030b3353847b975
+      Type: ScreenStyle
+      ReferenceType: HasOrderedComponent
+      Children:
+      - Name: BackgroundColor
+        Id: g=dca00b9f69c8803c3eeaeafb1ab484eb
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#ffffff"
+      - Name: BorderColor
+        Id: g=c7661d77f703c8862aea3b7ef7fc7dff
+        Type: BaseDataVariableType
+        DataType: Color
+- File: Transparency/Transparency.yaml

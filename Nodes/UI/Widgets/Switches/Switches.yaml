@@ -330,6 +330,7 @@ Children:
     Type: BaseDataVariableType
     DataType: FillModeEnum
     ModellingRule: Optional
+    Value: 1
 - Name: Switch_OnOff_Label
   Id: g=0dc195e2b4c44f0289d0a11878992489
   Supertype: ScaleLayout
@@ -698,6 +699,12 @@ Children:
     DataType: Boolean
     ModellingRule: Optional
     Value: true
+  - Name: FillMode
+    Id: g=34874360d222cb4b7eaa10355ac03cad
+    Type: BaseDataVariableType
+    DataType: FillModeEnum
+    ModellingRule: Optional
+    Value: 1
 - Name: Switch_OnOff_Label_Indicator
   Id: g=a5fbb402e02c8f20ff8051ce068df2fe
   Supertype: ScaleLayout
@@ -1100,7 +1107,7 @@ Children:
                     Id: g=a660b0bd5b7dee1458fdf2cd3ef2b758
                     Type: DynamicLink
                     DataType: NodePath
-                    Value: "/Objects/OptimateDemoProject/UI/Stylesheets/Jones/good"
+                    Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Good - Green"
               - Name: Pair4
                 Id: g=0c1efc795885fef767aa262a28a325d6
                 Type: ValueMapPair
@@ -1119,7 +1126,7 @@ Children:
                     Id: g=0aed5e7f1cb8232252fa622664f89acd
                     Type: DynamicLink
                     DataType: NodePath
-                    Value: "/Objects/OptimateDemoProject/UI/Stylesheets/Jones/neutral"
+                    Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Info - Blue"
               - Name: Pair5
                 Id: g=06641450e6256044520640b75656fdcf
                 Type: ValueMapPair
@@ -1138,7 +1145,7 @@ Children:
                     Id: g=c174bd72008730d43f320623405942e5
                     Type: DynamicLink
                     DataType: NodePath
-                    Value: "/Objects/OptimateDemoProject/UI/Stylesheets/Jones/warning"
+                    Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Warning - Orange"
               - Name: Pair
                 Id: g=c3e08f2660798092198166f14c1c6dca
                 Type: ValueMapPair
@@ -1157,7 +1164,7 @@ Children:
                     Id: g=324b2d8a4142c29413fd9813de058ca7
                     Type: DynamicLink
                     DataType: NodePath
-                    Value: "/Objects/OptimateDemoProject/UI/Stylesheets/Jones/error"
+                    Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Error - Red"
               - Name: Pair6
                 Id: g=9a201f53d39bd7f7c7a7bb6b168e41e8
                 Type: ValueMapPair
@@ -1176,7 +1183,7 @@ Children:
                     Id: g=02ffb848e95492d4a6708fe6abfadad5
                     Type: DynamicLink
                     DataType: NodePath
-                    Value: "/Objects/OptimateDemoProject/UI/Stylesheets/Jones/dark grey 2"
+                    Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Dark Grey 2"
               - Name: Pair1
                 Id: g=3c6bb4c5d87934b2031c34efb2b6ce68
                 Type: ValueMapPair
@@ -1513,3 +1520,9 @@ Children:
     DataType: Boolean
     ModellingRule: Optional
     Value: true
+  - Name: FillMode
+    Id: g=4dfdbecf15866bd3793be75d5722a0e6
+    Type: BaseDataVariableType
+    DataType: FillModeEnum
+    ModellingRule: Optional
+    Value: 1
