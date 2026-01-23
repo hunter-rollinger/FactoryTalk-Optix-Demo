@@ -60,13 +60,13 @@ public class Bottom_Bar : FTOptix.UI.Screen
 {
 }
 
-[MapType(NamespaceUri = "OptimateDemoProject", Guid = "d13f2f6fe136a32b8ce6472de8c91cef")]
-public class Menu_Bar : FTOptix.UI.Screen
+[MapType(NamespaceUri = "OptimateDemoProject", Guid = "b1abb62c23e1a3ad51c9fa4612b5cfb8")]
+public class BasicSymbolHorizontalButton : FTOptix.UI.VirtualKeyboardSymbolButton
 {
 }
 
-[MapType(NamespaceUri = "OptimateDemoProject", Guid = "b1abb62c23e1a3ad51c9fa4612b5cfb8")]
-public class BasicSymbolHorizontalButton : FTOptix.UI.VirtualKeyboardSymbolButton
+[MapType(NamespaceUri = "OptimateDemoProject", Guid = "d13f2f6fe136a32b8ce6472de8c91cef")]
+public class Menu_Bar : FTOptix.UI.Screen
 {
 }
 
@@ -255,6 +255,11 @@ public class Switch_OnOff_Label : FTOptix.UI.ScaleLayout
 {
 }
 
+[MapType(NamespaceUri = "OptimateDemoProject", Guid = "551813fd361d4f22706e13275666b4ff")]
+public class Production_Time_Chart : FTOptix.UI.ScaleLayout
+{
+}
+
 [MapType(NamespaceUri = "OptimateDemoProject", Guid = "8f7adae455ee882c98f8cccf4970ac99")]
 public class NumbersAndSymbols1 : FTOptix.UI.Panel
 {
@@ -272,10 +277,5 @@ public class BasicSpaceButton : FTOptix.UI.VirtualKeyboardSymbolButton
 
 [MapType(NamespaceUri = "OptimateDemoProject", Guid = "cf246b9bd07567ff4a53fa5a9a230801")]
 public class BasicSwitchPushButton : FTOptix.UI.Button
-{
-}
-
-[MapType(NamespaceUri = "OptimateDemoProject", Guid = "551813fd361d4f22706e13275666b4ff")]
-public class Production_Time_Chart : FTOptix.UI.ScaleLayout
 {
 }

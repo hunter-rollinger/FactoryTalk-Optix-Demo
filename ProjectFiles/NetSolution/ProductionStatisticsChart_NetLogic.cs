@@ -12,7 +12,7 @@ public class ProductionStatisticsChart_NetLogic : BaseNetLogic
 {
 	public override void Start()
 	{
-		Debugger.Launch();
+		// Debugger.Launch();
 
 		projectPath = ResourceUri.FromProjectRelativePath("").Uri;
 		chartFolder = Path.Combine(projectPath, "eCharts", "Production Info Chart");
@@ -51,14 +51,14 @@ public class ProductionStatisticsChart_NetLogic : BaseNetLogic
 		// Read template page content
 		string text = File.ReadAllText(sourcePath);
 
-		text = text.Replace("$1", innerValue.Value);
-		text = text.Replace("$2", DecimalToHex(innerColor.Value, false, true));
-		text = text.Replace("$3", DecimalToHex(innerBackground.Value, false, true));
+		text = text.Replace("$1$", innerValue.Value);
+		text = text.Replace("$2$", DecimalToHex(innerColor.Value, false, true));
+		text = text.Replace("$3$", DecimalToHex(innerBackground.Value, false, true));
 		Log.Verbose1("ProductionStatisticsChart_NetLogic", $"Updating Chart Outer Circle:   ${innerValue.Value}   ${DecimalToHex(innerColor.Value, false, true)}   ${DecimalToHex(innerBackground.Value, false, true)}");
 
-		text = text.Replace("$4", outerValue.Value);
-		text = text.Replace("$5", DecimalToHex(outerColor.Value, false, true));
-		text = text.Replace("$6", DecimalToHex(outerBackground.Value, false, true));
+		text = text.Replace("$4$", outerValue.Value);
+		text = text.Replace("$5$", DecimalToHex(outerColor.Value, false, true));
+		text = text.Replace("$6$", DecimalToHex(outerBackground.Value, false, true));
 		Log.Verbose1("ProductionStatisticsChart_NetLogic", $"Updating Chart Outer Circle:   ${outerValue.Value}   ${DecimalToHex(outerColor.Value, false, true)}   ${DecimalToHex(outerBackground.Value, false, true)}");
 
 		// Write to file

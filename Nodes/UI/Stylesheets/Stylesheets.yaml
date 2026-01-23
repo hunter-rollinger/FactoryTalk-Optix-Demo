@@ -1028,6 +1028,17 @@ Children:
         Id: g=b4a71146508d14e0483518452289c6ae
         Type: BaseDataVariableType
         DataType: Size
+      - Name: InactiveColor
+        Id: g=ef33a95deb470fc6dd5bfbd664201405
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#e4e4e4"
+        Children:
+        - Name: DynamicLink
+          Id: g=644def1ec7e75b00b554bb8fc67dc515
+          Type: DynamicLink
+          DataType: NodePath
+          Value: "../../../../HMI_Project/Light Grey 4"
   - Name: ChartStyles
     Id: g=191fb4820c4ade0fc9ce2f602b5c21c9
     Type: BaseObjectType

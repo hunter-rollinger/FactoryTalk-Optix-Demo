@@ -34,8 +34,8 @@ namespace OptimateDemoProject
         public static readonly NodeId Statistics_Circular_Percent = new NodeId(namespaceIndex, new Guid("3d530c91a212e5780324b245b1219f8e"));
         public static readonly NodeId DigitalFeedbackCounterDatatype = new NodeId(namespaceIndex, new Guid("4a84ae9a0006f33b7fb9f23c79b0e367"));
         public static readonly NodeId Bottom_Bar = new NodeId(namespaceIndex, new Guid("e8bfc05e8af718ec2d81156bdd9521aa"));
-        public static readonly NodeId Menu_Bar = new NodeId(namespaceIndex, new Guid("d13f2f6fe136a32b8ce6472de8c91cef"));
         public static readonly NodeId BasicSymbolHorizontalButton = new NodeId(namespaceIndex, new Guid("b1abb62c23e1a3ad51c9fa4612b5cfb8"));
+        public static readonly NodeId Menu_Bar = new NodeId(namespaceIndex, new Guid("d13f2f6fe136a32b8ce6472de8c91cef"));
         public static readonly NodeId Menu_Bar_Burger = new NodeId(namespaceIndex, new Guid("580e0ef61a787ee1db29ef9bf19422c1"));
         public static readonly NodeId Empty = new NodeId(namespaceIndex, new Guid("c8b3cd8f931c33ed8b2c01b7f05167ba"));
         public static readonly NodeId BurgerMenu = new NodeId(namespaceIndex, new Guid("c89e7739efa5fb2f892bde11a2aa6b17"));
@@ -73,11 +73,11 @@ namespace OptimateDemoProject
         public static readonly NodeId BasicTextButton = new NodeId(namespaceIndex, new Guid("476258d414b27f90d6dd4bf7c8b37129"));
         public static readonly NodeId Multi_State_Indicator = new NodeId(namespaceIndex, new Guid("224c34cc61384d476566fc8fbc37b72f"));
         public static readonly NodeId Switch_OnOff_Label = new NodeId(namespaceIndex, new Guid("0dc195e2b4c44f0289d0a11878992489"));
+        public static readonly NodeId Production_Time_Chart = new NodeId(namespaceIndex, new Guid("551813fd361d4f22706e13275666b4ff"));
         public static readonly NodeId NumbersAndSymbols1 = new NodeId(namespaceIndex, new Guid("8f7adae455ee882c98f8cccf4970ac99"));
         public static readonly NodeId BasicSymbolVerticalButton = new NodeId(namespaceIndex, new Guid("450e1e9381613f4b71607ddf16020ebb"));
         public static readonly NodeId BasicSpaceButton = new NodeId(namespaceIndex, new Guid("0642b30a582e14c745079c727f361ad1"));
         public static readonly NodeId BasicSwitchPushButton = new NodeId(namespaceIndex, new Guid("cf246b9bd07567ff4a53fa5a9a230801"));
-        public static readonly NodeId Production_Time_Chart = new NodeId(namespaceIndex, new Guid("551813fd361d4f22706e13275666b4ff"));
     }
 
     public static class VariableTypes

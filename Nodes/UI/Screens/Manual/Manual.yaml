@@ -169,16 +169,21 @@ Children:
     Type: Rectangle
     Children:
     - Name: BorderColor
-      Id: g=5cd952ce57cb2fe0f458d6b9dbeb2a0e
+      Id: g=eb17aa8164d82af09446105fbdf760f8
       Type: BaseDataVariableType
       DataType: Color
-      Value: "#e5e5e5"
+      Value: "#000000"
+    - Name: FillColor
+      Id: g=353019b01cba6603eaf44e7917a8dc74
+      Type: BaseDataVariableType
+      DataType: Color
+      Value: "#ffffff"
       Children:
       - Name: DynamicLink
-        Id: g=68512664a767cfe97487ad008eaec122
+        Id: g=5dd8b5f05b9dda4e0156e3621d32bf11
         Type: DynamicLink
         DataType: NodePath
-        Value: "../../../../HMI_Project/Light Grey 4"
+        Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Light Grey 1"
   - Name: Rectangle2
     Id: g=153c2ca3f068ea56e21da24b7528b974
     Type: Rectangle
@@ -285,56 +290,56 @@ Children:
         Type: Rectangle
         Children:
         - Name: FillColor
-          Id: g=ac0a682513da7a80cde530ff734b897e
+          Id: g=edb79730215f4545135e84012037c404
           Type: BaseDataVariableType
           DataType: Color
           Value: "#ffffff"
           Children:
           - Name: ExpressionEvaluator1
-            Id: g=fef3044c193e116144d5b96ad620d46a
+            Id: g=560882a0ad4a81023944915f33a66c4d
             Type: ExpressionEvaluator
             Children:
             - Name: Source0
-              Id: g=4086fb06febd46c115e7f66f6d8f79ab
+              Id: g=da11382454b3492648a6610cad39ea75
               Type: BaseDataVariableType
               DataType: BaseDataType
               ReferenceType: HasSource
               Children:
               - Name: DynamicLink
-                Id: g=5cde9ab1c4f30e6d1b5b5fc6fc8cc614
+                Id: g=558a830b9d26707d10a49a3976144a47
                 Type: DynamicLink
                 DataType: NodePath
                 Value: "{Standard_Content}/Panel@NodeId"
             - Name: Source1
-              Id: g=0fbb9a42f8bf0b70610939c2161258a6
+              Id: g=9955a81c3702a9d9c6647afc9c544e9e
               Type: BaseDataVariableType
               DataType: BaseDataType
               ReferenceType: HasSource
               Children:
               - Name: DynamicLink
-                Id: g=b808cab4b3203cac40fe0b80951258b3
+                Id: g=11badf879396c6ab5339f404ab0e4f30
                 Type: DynamicLink
                 DataType: NodePath
-                Value: "/Objects/OptimateDemoProject/UI/Screens/Manual/Manual_Home@NodeId"
+                Value: "../../../../Screen@NodeId"
             - Name: Source2
-              Id: g=2b44213865ae46563a3b0e4a8e9d38b2
+              Id: g=6fa291a9ddd6e74e6f286bedc954f656
               Type: BaseDataVariableType
               DataType: BaseDataType
               ReferenceType: HasSource
               Children:
               - Name: DynamicLink
-                Id: g=393229e80a20b0b12a9dbce0df1c1f4c
+                Id: g=d2eea24ec66de9fdf604c542351af0ea
                 Type: DynamicLink
                 DataType: NodePath
                 Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Light Grey 1"
             - Name: Source3
-              Id: g=a17a5a9e94ea7f44921eb3569e9f4314
+              Id: g=0f85c3e8903f4a337463e3f747c03c81
               Type: BaseDataVariableType
               DataType: BaseDataType
               ReferenceType: HasSource
               Children:
               - Name: DynamicLink
-                Id: g=1262a7fb525f9727066c7b86fad85a0d
+                Id: g=7106ca43cf7e9275ce85382998043849
                 Type: DynamicLink
                 DataType: NodePath
                 Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Info - Blue"
@@ -601,56 +606,56 @@ Children:
         Type: Rectangle
         Children:
         - Name: FillColor
-          Id: g=4b4a9bf45ae6e4b4b317337d1ba2027b
+          Id: g=9a5c0b5e401c403ccef46f325f492fae
           Type: BaseDataVariableType
           DataType: Color
           Value: "#ffffff"
           Children:
           - Name: ExpressionEvaluator1
-            Id: g=c4fae7c6198e3131da9e28d0892dacc3
+            Id: g=aa644f3a20176498644445172aa3f1d9
             Type: ExpressionEvaluator
             Children:
             - Name: Source0
-              Id: g=0bd595ad52dcd522e4f98ed1248ea780
+              Id: g=bf3778d303a81dd1b9ce2b014e8a5167
               Type: BaseDataVariableType
               DataType: BaseDataType
               ReferenceType: HasSource
               Children:
               - Name: DynamicLink
-                Id: g=aa612792124ffc0b86f3c31149f2358e
+                Id: g=4d0ccd0041036808995de5a750e5c4cc
                 Type: DynamicLink
                 DataType: NodePath
                 Value: "{Standard_Content}/Panel@NodeId"
             - Name: Source1
-              Id: g=ee5a114ed33ff58fc93755e8e3de9cca
+              Id: g=1d479e812f04e5579d2278b4ef47cdf1
               Type: BaseDataVariableType
               DataType: BaseDataType
               ReferenceType: HasSource
               Children:
               - Name: DynamicLink
-                Id: g=b9a8bbf8aa474ab772cb2e550a39689b
+                Id: g=08d5cbbf1535a6d5181f14c2b89a0254
                 Type: DynamicLink
                 DataType: NodePath
-                Value: "/Objects/OptimateDemoProject/UI/Screens/Other/Overview@NodeId"
+                Value: "../../../../Screen@NodeId"
             - Name: Source2
-              Id: g=f85b8d6816f2de423cc6646a4993c7c0
+              Id: g=bbff8634dbe5422131cda62f624402b9
               Type: BaseDataVariableType
               DataType: BaseDataType
               ReferenceType: HasSource
               Children:
               - Name: DynamicLink
-                Id: g=f80bcc46f0d6c7df4a99d9843a434a18
+                Id: g=d73e23d47a7d2e57b8e506c3aab19f51
                 Type: DynamicLink
                 DataType: NodePath
                 Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Light Grey 1"
             - Name: Source3
-              Id: g=1df08301d3fb6cdeb9007c4e837e36f5
+              Id: g=07578c01a47d4b75da599de3f3b9c7e7
               Type: BaseDataVariableType
               DataType: BaseDataType
               ReferenceType: HasSource
               Children:
               - Name: DynamicLink
-                Id: g=f49039078878103a45db39508e46210f
+                Id: g=e44dc2e5363498b2a2816d0a227d0fd3
                 Type: DynamicLink
                 DataType: NodePath
                 Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Info - Blue"
@@ -917,56 +922,56 @@ Children:
         Type: Rectangle
         Children:
         - Name: FillColor
-          Id: g=54b15f726841973b8ba1e95c5f07af64
+          Id: g=0c6eafff84d0ee70d146b9c1e89f728f
           Type: BaseDataVariableType
           DataType: Color
           Value: "#ffffff"
           Children:
           - Name: ExpressionEvaluator1
-            Id: g=582c1b0f7c8c20021b7edca972c7ec47
+            Id: g=16ea7aba44a13e753a7f94592aa53350
             Type: ExpressionEvaluator
             Children:
             - Name: Source0
-              Id: g=83e29a8cd4ef2b2ecea0a46af40fb0d8
+              Id: g=4c4656601e07a4d684747a3332f59a9b
               Type: BaseDataVariableType
               DataType: BaseDataType
               ReferenceType: HasSource
               Children:
               - Name: DynamicLink
-                Id: g=73bb8b343b4fdf32b88195c8b99da754
+                Id: g=3531ed528ea6e707e5ce666b9c876560
                 Type: DynamicLink
                 DataType: NodePath
                 Value: "{Standard_Content}/Panel@NodeId"
             - Name: Source1
-              Id: g=e4a72ec74d335aa4dc0fd9f94576eee0
+              Id: g=28a40a2294c028252b840f22ac3d5b69
               Type: BaseDataVariableType
               DataType: BaseDataType
               ReferenceType: HasSource
               Children:
               - Name: DynamicLink
-                Id: g=6a0b6e76d46f0f319b05ab511a14a679
+                Id: g=be15dc18dc638085557ae98ff933dc26
                 Type: DynamicLink
                 DataType: NodePath
-                Value: "/Objects/OptimateDemoProject/UI/Screens/Other/Overview@NodeId"
+                Value: "../../../../Screen@NodeId"
             - Name: Source2
-              Id: g=bc636b9ca05b2398080168ff86960eb2
+              Id: g=dde9a57467e27e9c2de1bb0afe3bf0e3
               Type: BaseDataVariableType
               DataType: BaseDataType
               ReferenceType: HasSource
               Children:
               - Name: DynamicLink
-                Id: g=47a74224c1c1c5efa6ca67c527141ed7
+                Id: g=2ccb87cdce2c3c2c71bf5dc0853518a0
                 Type: DynamicLink
                 DataType: NodePath
                 Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Light Grey 1"
             - Name: Source3
-              Id: g=54a7e6b7ab4e8c807d25690a64bad0c4
+              Id: g=23a18ae0ed94efcaef56e9551f411f08
               Type: BaseDataVariableType
               DataType: BaseDataType
               ReferenceType: HasSource
               Children:
               - Name: DynamicLink
-                Id: g=006f9b3cd898a8b970e197a37370a16c
+                Id: g=ccca0805712f07ca45506e51a6fa632c
                 Type: DynamicLink
                 DataType: NodePath
                 Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Info - Blue"
@@ -1233,56 +1238,56 @@ Children:
         Type: Rectangle
         Children:
         - Name: FillColor
-          Id: g=1b2292777f954231a818c987da8deffb
+          Id: g=ba8300e78e7584191e58108e8e607225
           Type: BaseDataVariableType
           DataType: Color
           Value: "#ffffff"
           Children:
           - Name: ExpressionEvaluator1
-            Id: g=525d5e0328ef54ba7606151eb68184e2
+            Id: g=92363b07ba6f563ccb403ba307ce1e8a
             Type: ExpressionEvaluator
             Children:
             - Name: Source0
-              Id: g=76bf3322bbb17a35e4cbcc899db1c8e4
+              Id: g=d6a2892133afac4e67f3cae4113e72ce
               Type: BaseDataVariableType
               DataType: BaseDataType
               ReferenceType: HasSource
               Children:
               - Name: DynamicLink
-                Id: g=c52a00f010eda50a300ed5ac91a2828a
+                Id: g=cc7fc92b23cb3b07cccca783e49ee045
                 Type: DynamicLink
                 DataType: NodePath
                 Value: "{Standard_Content}/Panel@NodeId"
             - Name: Source1
-              Id: g=74476946160c27f76deabe2a02386016
+              Id: g=e253e39866313088c7ba6cae06bfaaf9
               Type: BaseDataVariableType
               DataType: BaseDataType
               ReferenceType: HasSource
               Children:
               - Name: DynamicLink
-                Id: g=30babd4a7aec36f8b16656eaed35ff67
+                Id: g=348fdfa8eb290e503f5af7c44cf955d8
                 Type: DynamicLink
                 DataType: NodePath
-                Value: "/Objects/OptimateDemoProject/UI/Screens/Other/Overview@NodeId"
+                Value: "../../../../Screen@NodeId"
             - Name: Source2
-              Id: g=460ccae14598a916ff5e5c156abc53ee
+              Id: g=808a27f1293879fc0f1a31e6545e1e02
               Type: BaseDataVariableType
               DataType: BaseDataType
               ReferenceType: HasSource
               Children:
               - Name: DynamicLink
-                Id: g=8fc5b3308160322d0e78ce6506331b4c
+                Id: g=30cb2af9e51242e51cd48c12b1f6e498
                 Type: DynamicLink
                 DataType: NodePath
                 Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Light Grey 1"
             - Name: Source3
-              Id: g=59279539184677d10a368f24e9831986
+              Id: g=155f91153e2c97dce813b14f77a35d2c
               Type: BaseDataVariableType
               DataType: BaseDataType
               ReferenceType: HasSource
               Children:
               - Name: DynamicLink
-                Id: g=c76bcc36d511e1619f3db7b358926266
+                Id: g=e222b8c68e505580a799c531b1b01e06
                 Type: DynamicLink
                 DataType: NodePath
                 Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Info - Blue"
@@ -1549,56 +1554,56 @@ Children:
         Type: Rectangle
         Children:
         - Name: FillColor
-          Id: g=ba198c3b52a15b48ceb3a9940d6414f3
+          Id: g=d75ee7be4862c7540be338a197f96927
           Type: BaseDataVariableType
           DataType: Color
           Value: "#ffffff"
           Children:
           - Name: ExpressionEvaluator1
-            Id: g=acf4d2e1613183a8070e47f2bb241657
+            Id: g=63a2a8d27b1cf78621cb3d52b2640353
             Type: ExpressionEvaluator
             Children:
             - Name: Source0
-              Id: g=e204352bf69521b57abe88cb51217a39
+              Id: g=a09e7317d6a5f0952ff0f1709c14a290
               Type: BaseDataVariableType
               DataType: BaseDataType
               ReferenceType: HasSource
               Children:
               - Name: DynamicLink
-                Id: g=19858e733f620b88a0b6ab98cf5cc920
+                Id: g=8d8c3d5c372875e1f8bbed724075fa2e
                 Type: DynamicLink
                 DataType: NodePath
                 Value: "{Standard_Content}/Panel@NodeId"
             - Name: Source1
-              Id: g=05a516adac69b2f076bc5b51b3d55ac3
+              Id: g=5c690240e69e0940d956b44696569fd0
               Type: BaseDataVariableType
               DataType: BaseDataType
               ReferenceType: HasSource
               Children:
               - Name: DynamicLink
-                Id: g=ddb48a0241b2a43926851d2a5eaa63a6
+                Id: g=d3b33061a9f400905e863df5c6d55eb1
                 Type: DynamicLink
                 DataType: NodePath
-                Value: "/Objects/OptimateDemoProject/UI/Screens/Other/Overview@NodeId"
+                Value: "../../../../Screen@NodeId"
             - Name: Source2
-              Id: g=36bc2bff06dbd4645abf61f3ccdab413
+              Id: g=dff67278249a4fb138431c2609b8a043
               Type: BaseDataVariableType
               DataType: BaseDataType
               ReferenceType: HasSource
               Children:
               - Name: DynamicLink
-                Id: g=32674190f09924b16151d3f4d197ba10
+                Id: g=d4af708a0ed7bce524ac45b7d8a70cb7
                 Type: DynamicLink
                 DataType: NodePath
                 Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Light Grey 1"
             - Name: Source3
-              Id: g=bce22ea550a6ffa1552a4d5a4e94b15f
+              Id: g=8c7e7d3d4ae21cca23164fb8e6dd9f7f
               Type: BaseDataVariableType
               DataType: BaseDataType
               ReferenceType: HasSource
               Children:
               - Name: DynamicLink
-                Id: g=230e8a6a6c6fbd2ae76c55561c89e01b
+                Id: g=d765ec146ae6df797f9e1080a4736000
                 Type: DynamicLink
                 DataType: NodePath
                 Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Info - Blue"
@@ -1865,56 +1870,56 @@ Children:
         Type: Rectangle
         Children:
         - Name: FillColor
-          Id: g=3b1b8db35384cef6f417208b64e83a78
+          Id: g=0769ed18d1c11422b7f2fde7e6fc47bb
           Type: BaseDataVariableType
           DataType: Color
           Value: "#ffffff"
           Children:
           - Name: ExpressionEvaluator1
-            Id: g=30815a7bb754e7386ef41d88cb8974e3
+            Id: g=681d60d93171dbc8a177ad72c55f8a2b
             Type: ExpressionEvaluator
             Children:
             - Name: Source0
-              Id: g=f1f1fe1139527df93b308908b1f5e30d
+              Id: g=1e458a4ebb7fd846d9347f711dec3255
               Type: BaseDataVariableType
               DataType: BaseDataType
               ReferenceType: HasSource
               Children:
               - Name: DynamicLink
-                Id: g=ffc4c2a141925935d04c82a5e2c498d3
+                Id: g=a7da5d0c61ebc5251f93afb4503e67ae
                 Type: DynamicLink
                 DataType: NodePath
                 Value: "{Standard_Content}/Panel@NodeId"
             - Name: Source1
-              Id: g=81c2d281ab08aefbf92d7ab3cb0deccb
+              Id: g=045bb3e7430620146f86734b618f95ff
               Type: BaseDataVariableType
               DataType: BaseDataType
               ReferenceType: HasSource
               Children:
               - Name: DynamicLink
-                Id: g=35f5e368d6dae2b031dfbb1ca80da02d
+                Id: g=f15603dd8ee0b805abf9cd63edf2f527
                 Type: DynamicLink
                 DataType: NodePath
-                Value: "/Objects/OptimateDemoProject/UI/Screens/Other/Overview@NodeId"
+                Value: "../../../../Screen@NodeId"
             - Name: Source2
-              Id: g=21de3b6002db9d6b2520575bbfd56db1
+              Id: g=5392f928a4b6dbcd88eb21edd9f57920
               Type: BaseDataVariableType
               DataType: BaseDataType
               ReferenceType: HasSource
               Children:
               - Name: DynamicLink
-                Id: g=a13ba62114274c8a77d3f3bb554de5c3
+                Id: g=699098896ec36ce697d52b024b1a0e74
                 Type: DynamicLink
                 DataType: NodePath
                 Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Light Grey 1"
             - Name: Source3
-              Id: g=09754f3da87273fa557786fab81a52ee
+              Id: g=d41f2dc262618031fce6fdfab39fac7b
               Type: BaseDataVariableType
               DataType: BaseDataType
               ReferenceType: HasSource
               Children:
               - Name: DynamicLink
-                Id: g=343b96f4b7fa07f55ff394465e2e8c61
+                Id: g=29ed8d20d752a63d8c2ed05d5a05bbe3
                 Type: DynamicLink
                 DataType: NodePath
                 Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Info - Blue"
@@ -2181,56 +2186,56 @@ Children:
         Type: Rectangle
         Children:
         - Name: FillColor
-          Id: g=d32442d79e8ff6a454dbdb9cb4e6ff3a
+          Id: g=c00a2cfa029b805e8db544da89ff1f7d
           Type: BaseDataVariableType
           DataType: Color
           Value: "#ffffff"
           Children:
           - Name: ExpressionEvaluator1
-            Id: g=e360fd01762391de6dc979eea20e7f81
+            Id: g=f39491f0926d3c62804139a5999c7966
             Type: ExpressionEvaluator
             Children:
             - Name: Source0
-              Id: g=ed6b70478e9cd09e07279784e5fa70c0
+              Id: g=2f4b27acb5a98b0a8d96f62b81053f13
               Type: BaseDataVariableType
               DataType: BaseDataType
               ReferenceType: HasSource
               Children:
               - Name: DynamicLink
-                Id: g=8375600f5af65e46792e677bf6d35e24
+                Id: g=b38f3c05291649d45d28184718a866b8
                 Type: DynamicLink
                 DataType: NodePath
                 Value: "{Standard_Content}/Panel@NodeId"
             - Name: Source1
-              Id: g=73eb5b52eab5d48758db46dff3d1532b
+              Id: g=b6cbc4a49d35bae79754898c729e9536
               Type: BaseDataVariableType
               DataType: BaseDataType
               ReferenceType: HasSource
               Children:
               - Name: DynamicLink
-                Id: g=4d4b6635c8f9cb548f959987c95582c6
+                Id: g=9a51df99a1848ec776000865aa99a18e
                 Type: DynamicLink
                 DataType: NodePath
-                Value: "/Objects/OptimateDemoProject/UI/Screens/Other/Overview@NodeId"
+                Value: "../../../../Screen@NodeId"
             - Name: Source2
-              Id: g=a211c2c6790a2215f9fd4d4441f45ffa
+              Id: g=a663603effa2de2a544670071668b50a
               Type: BaseDataVariableType
               DataType: BaseDataType
               ReferenceType: HasSource
               Children:
               - Name: DynamicLink
-                Id: g=0e0f86ee0cde7ac437bca3c3ad78dd62
+                Id: g=22777698c4131dcc7ac6d97cb50e6d8a
                 Type: DynamicLink
                 DataType: NodePath
                 Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Light Grey 1"
             - Name: Source3
-              Id: g=ef76557cc8de53f10e9dc7211641c4eb
+              Id: g=e8311854fcf7c0f75c8b5d1e3c7dc425
               Type: BaseDataVariableType
               DataType: BaseDataType
               ReferenceType: HasSource
               Children:
               - Name: DynamicLink
-                Id: g=222a6445c1ec4b41082a81c86f7a0e1c
+                Id: g=99c74293d84193058fbf1858d2584fde
                 Type: DynamicLink
                 DataType: NodePath
                 Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Info - Blue"
@@ -2497,56 +2502,56 @@ Children:
         Type: Rectangle
         Children:
         - Name: FillColor
-          Id: g=9da91806fa324463ff91cf457084f976
+          Id: g=78d9b95d051fe1043a8d687eb0201e52
           Type: BaseDataVariableType
           DataType: Color
           Value: "#ffffff"
           Children:
           - Name: ExpressionEvaluator1
-            Id: g=1bbb3b2c3b1ad0722f9c2ff9b216721d
+            Id: g=123eeb6f7e296e57bce16d5e19663f54
             Type: ExpressionEvaluator
             Children:
             - Name: Source0
-              Id: g=cf5d673bbfe2e624a1995378685caf2d
+              Id: g=34fd11213de713f86df978cb45823010
               Type: BaseDataVariableType
               DataType: BaseDataType
               ReferenceType: HasSource
               Children:
               - Name: DynamicLink
-                Id: g=774c73efd1d8fd1319a1c3c21458f5df
+                Id: g=fcd7e7e07c0ebf1630d3937ac567e960
                 Type: DynamicLink
                 DataType: NodePath
                 Value: "{Standard_Content}/Panel@NodeId"
             - Name: Source1
-              Id: g=01811e7b82fa6d6c589bf4c4a7df6703
+              Id: g=6cb86aab84165e5ef05472de8b8bc81a
               Type: BaseDataVariableType
               DataType: BaseDataType
               ReferenceType: HasSource
               Children:
               - Name: DynamicLink
-                Id: g=7b759d62ad6cde73c0df270cf3f3b870
+                Id: g=e922bd64cbb15080a7712ca25886d7c5
                 Type: DynamicLink
                 DataType: NodePath
-                Value: "/Objects/OptimateDemoProject/UI/Screens/Other/Overview@NodeId"
+                Value: "../../../../Screen@NodeId"
             - Name: Source2
-              Id: g=84410fc8295d833d0efff13f1afbe943
+              Id: g=53113e060d68dee36dc3412d17f55a45
               Type: BaseDataVariableType
               DataType: BaseDataType
               ReferenceType: HasSource
               Children:
               - Name: DynamicLink
-                Id: g=0a02c9d402cc6383e32f441355c2bf1c
+                Id: g=8bf8e8f861819cbaa4d30cd6122bc5dc
                 Type: DynamicLink
                 DataType: NodePath
                 Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Light Grey 1"
             - Name: Source3
-              Id: g=c3f02a6f51b4bb79b6eb1b85678b7c98
+              Id: g=e6e0879800a7420816d5e5261cf55f84
               Type: BaseDataVariableType
               DataType: BaseDataType
               ReferenceType: HasSource
               Children:
               - Name: DynamicLink
-                Id: g=a71175c49edfa704a5517235a427f80b
+                Id: g=e1dd8292f6e2ecb87f1ffe2874b38d7c
                 Type: DynamicLink
                 DataType: NodePath
                 Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Info - Blue"

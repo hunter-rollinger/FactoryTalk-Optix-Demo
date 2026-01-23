@@ -68,6 +68,8 @@ Children:
 - Name: AlarmConfiguration
   Id: g=1ce0b54283c5f85ca5a4471d3c04bda0
   Type: PropertyGroup
+- File: DesignTime_NetLogic/DesignTime_NetLogic.yaml
+- File: RunTime_NetLogic/RunTime_NetLogic.yaml
 - File: UI/UI.yaml
 - File: Model/Model.yaml
 - File: Converters/Converters.yaml
@@ -75,7 +77,6 @@ Children:
 - File: Recipes/Recipes.yaml
 - File: Loggers/Loggers.yaml
 - File: DataStores/DataStores.yaml
-- File: NetLogic/NetLogic.yaml
 - File: CommDrivers/CommDrivers.yaml
 - File: Translations/Translations.yaml
 - File: Security/Security.yaml
@@ -84,17 +85,6 @@ Children:
 - File: Retentivity/Retentivity.yaml
 - File: AlarmTypes/AlarmTypes.yaml
 - File: OPCUA/OPCUA.yaml
-- Name: RecipeSchemaTesting
-  Id: g=cb1fdd24a0aaf487520f18dc6e8da329
-  Type: Alias
-  DataType: NodeId
-  Value: "/Objects/OptimateDemoProject/Recipes/RecipeSchemaTesting/EditModel"
-  Children:
-  - Name: Kind
-    Id: g=e1c54b03ff2bd053bbb31750ef49a895
-    Type: PropertyType
-    DataType: NodeId
-    Value: "/Objects/OptimateDemoProject/Recipes/RecipeSchemaTesting/EditModel"
 - Name: RecipeSchema
   Id: g=60a2ca78e5e00bce4a1fafd582001d1a
   Type: Alias

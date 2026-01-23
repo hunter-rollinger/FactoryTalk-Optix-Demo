@@ -1755,10 +1755,10 @@ Children:
       Value: "#e5e5e5"
       Children:
       - Name: DynamicLink
-        Id: g=ef22c533d99e647c76d266b3be2c5b82
+        Id: g=88c36b8c256fd973c9f4286f55b0a00b
         Type: DynamicLink
         DataType: NodePath
-        Value: "../../../../HMI_Project/Light Grey 4"
+        Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Light Grey 4"
     - Name: Background
       Id: g=9690d2d8f23e9dba08b6482b8eebdd8d
       Type: Panel
@@ -1771,7 +1771,7 @@ Children:
           Id: g=8c9285ecb9565b165065cf931dfbc067
           Type: BaseDataVariableType
           DataType: Color
-          Value: "#555555"
+          Value: "#333333"
           Children:
           - Name: DynamicLink
             Id: g=35e645467aa2c911fc363f0075127068
@@ -1786,7 +1786,7 @@ Children:
           Id: g=b35b783ed8515e4ce9c6151a6df6a50b
           Type: BaseDataVariableType
           DataType: Color
-          Value: "#555555"
+          Value: "#333333"
           Children:
           - Name: DynamicLink
             Id: g=33090c0497f17958bfeb4058cf5521f7
@@ -1801,7 +1801,7 @@ Children:
           Id: g=38d1d2c9e0402d433f59a19ad9299575
           Type: BaseDataVariableType
           DataType: Color
-          Value: "#555555"
+          Value: "#333333"
           Children:
           - Name: DynamicLink
             Id: g=dee5bdb8a4dd759759f1eaae1f2316ea
@@ -1822,7 +1822,7 @@ Children:
             Id: g=678851c57d3770588a47d651d42fea01
             Type: DynamicLink
             DataType: NodePath
-            Value: "../../../../HMI_Project/Light Grey 4"
+            Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Light Grey 4"
     - Name: BottomBarLayout
       Id: g=4994648b0bbe849f46fa21b7d9ae2277
       Type: RowLayout
@@ -1835,7 +1835,7 @@ Children:
           Id: g=5f2e8186fb4ed7c633416b2e6f005ce9
           Type: BaseDataVariableType
           DataType: Color
-          Value: "#555555"
+          Value: "#333333"
           Children:
           - Name: DynamicLink
             Id: g=24534b25f6a909b8d226ab213576b09e
@@ -3174,7 +3174,7 @@ Children:
           Id: g=c28ebad418a89b315e98e78d2f7a8189
           Type: BaseDataVariableType
           DataType: Color
-          Value: "#555555"
+          Value: "#333333"
           Children:
           - Name: DynamicLink
             Id: g=c3cd74ef7a49129088da38f38367326f
@@ -3304,17 +3304,6 @@ Children:
     Id: g=9395c5644f5c92e948f0429bc83a8945
     Type: Top_Bar
     Children:
-    - Name: BackgroundColor
-      Id: g=65d4cf8ac468593a0726966c3cc5274c
-      Type: BaseDataVariableType
-      DataType: Color
-      Value: "#333333"
-      Children:
-      - Name: DynamicLink
-        Id: g=9f38e567cba842cd462efefc75b135e4
-        Type: DynamicLink
-        DataType: NodePath
-        Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Dark Grey 5"
     - Name: HorizontalLayout
       Id: g=f83f62ec9e51b6e31d622e3c794e7092
       Type: RowLayout
@@ -3719,7 +3708,7 @@ Children:
               Id: g=f3d8865749ec54f7fc9b8517348afcf7
               Type: DynamicLink
               DataType: NodePath
-              Value: "/Objects/OptimateDemoProject/NetLogic/CustomAlarming/CurrentDisplayedAlarm/Message"
+              Value: "/Objects/OptimateDemoProject/RunTime NetLogic/CustomAlarming/CurrentDisplayedAlarm/Message"
           - Name: Visible
             Id: g=4e60b074ac9892a19c3feeeee6aa677d
             Type: BaseDataVariableType
@@ -3740,7 +3729,7 @@ Children:
                   Id: g=3e72cb0f73d9e255381db5d31afbea64
                   Type: DynamicLink
                   DataType: NodePath
-                  Value: "/Objects/OptimateDemoProject/NetLogic/CustomAlarming/AlarmCount"
+                  Value: "/Objects/OptimateDemoProject/RunTime NetLogic/CustomAlarming/AlarmCount"
           - Name: ImagePath
             Id: g=1134b297693250aa3500115ddd7ca985
             Type: BaseDataVariableType
@@ -3760,7 +3749,7 @@ Children:
                   Id: g=2d04127c7c551ded457705299abf9f7b
                   Type: DynamicLink
                   DataType: NodePath
-                  Value: "/Objects/OptimateDemoProject/NetLogic/CustomAlarming/CurrentDisplayedAlarm/Severity"
+                  Value: "/Objects/OptimateDemoProject/RunTime NetLogic/CustomAlarming/CurrentDisplayedAlarm/Severity"
           - Name: TextColor
             Id: g=1cfedcc7253e77aeeec630444c22ac2a
             Type: BaseDataVariableType
@@ -4089,7 +4078,7 @@ Children:
                 Id: g=ae9b9529f5eb4a1af9b8e7f69d2acd7a
                 Type: DynamicLink
                 DataType: NodePath
-                Value: "/Objects/OptimateDemoProject/NetLogic/System Information Collection/Short Date"
+                Value: "/Objects/OptimateDemoProject/RunTime NetLogic/System Information Collection/Short Date"
             - Name: TextColor
               Id: g=9e6cd89929b4a273b814007a009d45e8
               Type: BaseDataVariableType
@@ -4114,7 +4103,7 @@ Children:
                 Id: g=c1b5616500957e022fd6b9028f166567
                 Type: DynamicLink
                 DataType: NodePath
-                Value: "/Objects/OptimateDemoProject/NetLogic/System Information Collection/Short Time"
+                Value: "/Objects/OptimateDemoProject/RunTime NetLogic/System Information Collection/Short Time"
             - Name: TextColor
               Id: g=f9aa829be880a0b2f74578642a2029bb
               Type: BaseDataVariableType
@@ -4157,6 +4146,22 @@ Children:
             Type: BaseDataVariableType
             DataType: Boolean
             AccessLevel: Read
+    - Name: ns=11;GridLayoutProperties
+      Id: g=0e2301bbb24f4215b625fe322e64ad48
+      Type: GridLayoutProperties
+      ModellingRule: None
+      DisplayName: {"NamespaceIndex":11,"TextId":"GridLayoutPropertiesDisplayName"}
+    - Name: BackgroundColor
+      Id: g=64e81cad5752b6e8d737de44c01c4a3c
+      Type: BaseDataVariableType
+      DataType: Color
+      Value: "#333333"
+      Children:
+      - Name: DynamicLink
+        Id: g=f2447e7e50fb43eb060c2f0456bc810b
+        Type: DynamicLink
+        DataType: NodePath
+        Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Dark Grey 5"
 - File: Stylesheets/Stylesheets.yaml
 - File: Screens/Screens.yaml
 - File: Keyboards/Keyboards.yaml

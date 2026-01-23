@@ -24,17 +24,6 @@ Children:
     DataType: Size
     ModellingRule: Optional
     Value: 68.0
-  - Name: BackgroundColor
-    Id: g=183f86ba9dcce49bac2a53ffe0a4fc9f
-    Type: BaseDataVariableType
-    DataType: Color
-    Value: "#333333"
-    Children:
-    - Name: DynamicLink
-      Id: g=df02e318e4e7b365a5d52bed78a4ef57
-      Type: DynamicLink
-      DataType: NodePath
-      Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Dark Grey 5"
   - Name: HorizontalLayout
     Id: g=72612a852d3206d65d047f0f341b7ca9
     Type: RowLayout
@@ -669,7 +658,7 @@ Children:
             Id: g=116b9dc2618613d70ad6d4af8f769b63
             Type: DynamicLink
             DataType: NodePath
-            Value: "/Objects/OptimateDemoProject/NetLogic/CustomAlarming/CurrentDisplayedAlarm/Message"
+            Value: "/Objects/OptimateDemoProject/RunTime NetLogic/CustomAlarming/CurrentDisplayedAlarm/Message"
         - Name: ImagePosition
           Id: g=a4c40d56e805a7a39125f46761bc04a7
           Type: BaseDataVariableType
@@ -715,7 +704,7 @@ Children:
                 Id: g=b9ff93c8e46503cd71cae0f9b8b5d7bd
                 Type: DynamicLink
                 DataType: NodePath
-                Value: "/Objects/OptimateDemoProject/NetLogic/CustomAlarming/AlarmCount"
+                Value: "/Objects/OptimateDemoProject/RunTime NetLogic/CustomAlarming/AlarmCount"
         - Name: HorizontalAlignment
           Id: g=d87b9446300211a1677d8262ba9ef370
           Type: BaseVariableType
@@ -815,7 +804,7 @@ Children:
                 Id: g=ae6c01a35355e5300a65b970e4f444d0
                 Type: DynamicLink
                 DataType: NodePath
-                Value: "/Objects/OptimateDemoProject/NetLogic/CustomAlarming/CurrentDisplayedAlarm/Severity"
+                Value: "/Objects/OptimateDemoProject/RunTime NetLogic/CustomAlarming/CurrentDisplayedAlarm/Severity"
             - Name: ns=9;Pairs
               Id: g=3c654d69909d9faa395b3cf309e67116
               Type: BaseObjectType
@@ -2506,7 +2495,7 @@ Children:
               Id: g=900a3d1c6a7e64c849ba0355dae046ac
               Type: DynamicLink
               DataType: NodePath
-              Value: "/Objects/OptimateDemoProject/NetLogic/System Information Collection/Short Date"
+              Value: "/Objects/OptimateDemoProject/RunTime NetLogic/System Information Collection/Short Date"
           - Name: HorizontalAlignment
             Id: g=c26549f6d9f7a3ce2fbcc21016db3fa7
             Type: BaseVariableType
@@ -2617,7 +2606,7 @@ Children:
               Id: g=ec4141a6652834ee5a4a6bec07fcde72
               Type: DynamicLink
               DataType: NodePath
-              Value: "/Objects/OptimateDemoProject/NetLogic/System Information Collection/Short Time"
+              Value: "/Objects/OptimateDemoProject/RunTime NetLogic/System Information Collection/Short Time"
           - Name: HorizontalAlignment
             Id: g=16e15f982f20c389c6640d333d9e53ff
             Type: BaseVariableType
@@ -2959,6 +2948,17 @@ Children:
         Type: BaseVariableType
         DataType: Size
         ModellingRule: Optional
+  - Name: BackgroundColor
+    Id: g=780b802ce41c7403e1b76ce98028bbf6
+    Type: BaseDataVariableType
+    DataType: Color
+    Value: "#333333"
+    Children:
+    - Name: DynamicLink
+      Id: g=e7883c59a48cc7219c1ad83f5d93e1f7
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Dark Grey 5"
 - Name: Bottom_Bar
   Id: g=e8bfc05e8af718ec2d81156bdd9521aa
   Supertype: Screen
@@ -2992,7 +2992,7 @@ Children:
       Id: g=2b2f9f5541edb2e13f1135ba46b96205
       Type: DynamicLink
       DataType: NodePath
-      Value: "../../../../HMI_Project/Light Grey 4"
+      Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Light Grey 4"
   - Name: Background
     Id: g=44294c6948ff70b4c8039cf7eb02be5d
     Type: Panel
@@ -3240,7 +3240,7 @@ Children:
           Id: g=4d70992ccab734dac003471f9ae07802
           Type: DynamicLink
           DataType: NodePath
-          Value: "../../../../HMI_Project/Light Grey 4"
+          Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Light Grey 4"
       - Name: CornerRadius
         Id: g=0e1139aa8df2bd6d801840b7018de558
         Type: BaseDataVariableType
@@ -5373,16 +5373,21 @@ Children:
       ModellingRule: Optional
       Value: 1
     - Name: BorderColor
-      Id: g=8152e3bb8c6ec4b9678ff8d0b211dbfd
+      Id: g=c6e5ced98eab3d21c489f6bfb84bc3fa
       Type: BaseDataVariableType
       DataType: Color
-      Value: "#e5e5e5"
+      Value: "#000000"
+    - Name: FillColor
+      Id: g=a60b4f5d522bcb3a6fc680de20272d18
+      Type: BaseDataVariableType
+      DataType: Color
+      Value: "#ffffff"
       Children:
       - Name: DynamicLink
-        Id: g=25a7a2ea3ec1f015edaa2b7a8eafb20c
+        Id: g=a444388b22d7f77e816c55642e4ab8aa
         Type: DynamicLink
         DataType: NodePath
-        Value: "../../../../HMI_Project/Light Grey 4"
+        Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Light Grey 1"
   - Name: Rectangle2
     Id: g=689f9cca447884b68f36516ba7e39a0c
     Type: Rectangle
@@ -5511,17 +5516,17 @@ Children:
       DataType: VerticalAlignment
       ModellingRule: Optional
       Value: 1
-    - Name: BorderColor
-      Id: g=62d14e954f91df7bb1527a543a21a3d5
+    - Name: FillColor
+      Id: g=ee257e6357ecf8f326fb27c0fd0dd15e
       Type: BaseDataVariableType
       DataType: Color
-      Value: "#e5e5e5"
+      Value: "#ffffff"
       Children:
       - Name: DynamicLink
-        Id: g=9cc96ca5dade1d8650de52d004ebcefd
+        Id: g=1d26fc90a0fd88662db32fa74a412585
         Type: DynamicLink
         DataType: NodePath
-        Value: "../../../../HMI_Project/Light Grey 4"
+        Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Light Grey 1"
   - Name: Rectangle2
     Id: g=ca46c9f82a3d0fa6083c0a59328053e3
     Type: Rectangle

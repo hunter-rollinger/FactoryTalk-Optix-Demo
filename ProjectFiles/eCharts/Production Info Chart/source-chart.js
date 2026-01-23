@@ -16,29 +16,29 @@ option = {
 		clockwise: true,
 		startAngle: 90,
 		endAngle: 450,
-		minAngle: 0,
+		minAngle: 5,
 		padAngle: 0,
 		stillShowZeroSum: true,
 		silent: true,
 		showEmptyCircle: true,
-		emptyCircleStyle: { color: '$3' },
+		emptyCircleStyle: { color: '$3$' },
 		label: { show: false },
 		emphasis: { disabled: true },
 		select: { disabled: true },
 		radius: ['79%', '89%'],
 		data: [{
-			value: $1,
+			value: $1$,
 			itemStyle: {
-				color: '$2',
-				borderColor: '$3',
+				color: '$2$',
+				borderColor: '$3$',
 				borderWidth: 5
 			}
 		},
 		{
-			value: $4,
+			value: $4$,
 			itemStyle: {
-				color: '$3',
-				borderColor: '$3',
+				color: '$3$',
+				borderColor: '$3$',
 				borderWidth: 5
 			}
 		}]
@@ -51,29 +51,29 @@ option = {
 		selectedMode: false,
 		startAngle: 90,
 		endAngle: 450,
-		minAngle: 0,
+		minAngle: 5,
 		padAngle: 0,
 		stillShowZeroSum: true,
 		silent: true,
 		showEmptyCircle: true,
-		emptyCircleStyle: { color: '$6' },
+		emptyCircleStyle: { color: '$6$' },
 		label: { show: false },
 		emphasis: { disabled: true },
 		select: { disabled: true },
 		radius: ['94%', '99%'],
 		data: [{
-			value: $4,
+			value: $4$,
 			itemStyle: {
-				color: '$5',
-				borderColor: '$6',
+				color: '$5$',
+				borderColor: '$6$',
 				borderWidth: 5
 			}
 		},
 		{
-			value: $1,
+			value: $1$,
 			itemStyle: {
-				color: '$6',
-				borderColor: '$6',
+				color: '$6$',
+				borderColor: '$6$',
 				borderWidth: 5
 			}
 		}]

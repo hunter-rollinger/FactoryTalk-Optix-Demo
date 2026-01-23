@@ -336,63 +336,63 @@ Children:
       ModellingRule: Optional
       Value: 8.0
     - Name: FillColor
-      Id: g=2d446f159e5dd4ea33058b0ceafdb044
+      Id: g=069e6ba7ae4a47237035ba370589e421
       Type: BaseDataVariableType
       DataType: Color
       Value: "#ffffff"
       Children:
       - Name: ExpressionEvaluator1
-        Id: g=864ba4c0b71369b43a754c51dfee02b5
+        Id: g=d83907629984a3677129ffe727751dc8
         Type: ExpressionEvaluator
         Children:
         - Name: Expression
-          Id: g=be8f5d16791c5fbdfb4e0679dc3e5c14
+          Id: g=7ec4582e2f67a37967ef67dcc600b0d8
           Type: BaseDataVariableType
           DataType: String
           ReferenceType: HasParameter
           ModellingRule: Optional
           Value: "if({0}!={1},{2},{3})"
         - Name: ns=9;Source0
-          Id: g=818b3bc84ca1ec4835aa7d819781b85b
+          Id: g=353818c47480bb6ba39d3fb93d539141
           Type: BaseDataVariableType
           DataType: BaseDataType
           ReferenceType: HasSource
           Children:
           - Name: DynamicLink
-            Id: g=dec154bb06535802072b5d8e940718fb
+            Id: g=a9ae3032c71edb9ae1b1dbf1813c7743
             Type: DynamicLink
             DataType: NodePath
             Value: "{Standard_Content}/Panel@NodeId"
         - Name: ns=9;Source1
-          Id: g=e5ae38129673d1c63bb60ad9862a8212
+          Id: g=5f754fa6854249e5ef3d4f8b11480864
           Type: BaseDataVariableType
           DataType: BaseDataType
           ReferenceType: HasSource
           Children:
           - Name: DynamicLink
-            Id: g=a6f916de564923c571ac72de0d9a43a1
+            Id: g=f4add6fa48764926e31c66a760c8e4a9
             Type: DynamicLink
             DataType: NodePath
             Value: "../../../../Screen@NodeId"
         - Name: ns=9;Source2
-          Id: g=78f85307bdf16b3929bb1c0e4ef57b43
+          Id: g=24361625fd6846595cbaab40711c2ff0
           Type: BaseDataVariableType
           DataType: BaseDataType
           ReferenceType: HasSource
           Children:
           - Name: DynamicLink
-            Id: g=eae6375b32d7d99661f37111870f2b91
+            Id: g=36eae38b52566cb3e048fefb6db924e5
             Type: DynamicLink
             DataType: NodePath
             Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Light Grey 1"
         - Name: ns=9;Source3
-          Id: g=da3d9892d94290aed37a5f64aee7d169
+          Id: g=0968f33b247d73ffa72392f9d1ac1e6d
           Type: BaseDataVariableType
           DataType: BaseDataType
           ReferenceType: HasSource
           Children:
           - Name: DynamicLink
-            Id: g=7d597031111dfc5feb424edfac3fc860
+            Id: g=f8fa8f97b651b1d4eea1083907c6e1c7
             Type: DynamicLink
             DataType: NodePath
             Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Info - Blue"

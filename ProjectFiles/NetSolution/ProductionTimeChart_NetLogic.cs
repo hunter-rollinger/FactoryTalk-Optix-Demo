@@ -16,7 +16,7 @@ public class ProductionTimeChart_NetLogic : BaseNetLogic
 		// Debugger.Launch();
 
 		projectPath = ResourceUri.FromProjectRelativePath("").Uri;
-		chartFolder = Path.Combine(projectPath, "eCharts", "Production Info Chart");
+		chartFolder = Path.Combine(projectPath, "eCharts", "Production Time Chart");
 		sourcePath = Path.Combine(chartFolder, "source-chart.js");
 		destPath = Path.Combine(chartFolder, "data.js");
 
@@ -28,9 +28,11 @@ public class ProductionTimeChart_NetLogic : BaseNetLogic
 		values = (int[])values_optix.Value.Value;
 		values_optix.VariableChange += VariableChangeEvent;
 
-		colors_optix = LogicObject.Owner.GetVariable("Values");
+		colors_optix = LogicObject.Owner.GetVariable("Colors");
 		colors = (uint[])colors_optix.Value.Value;
 		colors_optix.VariableChange += VariableChangeEvent;
+
+		backgroundColor = LogicObject.Owner.GetVariable("Background_Color");
 
 		UpdateChart();
 	}
@@ -52,10 +54,19 @@ public class ProductionTimeChart_NetLogic : BaseNetLogic
 
 		for (int i = 0; i < values.Length; i++)
 		{
-			text = text.Replace($"${i + 1}", values[i].ToString());
-			text = text.Replace($"${i + 10}", DecimalToHex(colors[i], false, true));
-			Log.Verbose1("ProductionTimeChart_NetLogic", $"Updating Chart Segment ${i + 1}:   " + values[i].ToString() + "   " + DecimalToHex(colors[i], false, true));
+			int value = values[i];
+			string color = DecimalToHex(colors[i], false, true);
+			if (value <= 0 && color.Contains("#00000000")) {
+				text = text.Replace($"${i}$", "");
+			} else {
+				text = text.Replace($"${i}$", "value: $value, itemStyle: {color: '$color', borderColor: '$bg$', borderWidth: 3 }");
+				text = text.Replace("$value", value.ToString());
+				text = text.Replace("$color", color);
+				Log.Verbose1("ProductionTimeChart_NetLogic", $"Updating Chart Segment ${i}:   " + values[i].ToString() + "   " + DecimalToHex(colors[i], false, true));
+			}
 		}
+
+		text = text.Replace("$bg$", DecimalToHex(backgroundColor.Value, false, true));
 
 		// Write to file
 		File.WriteAllText(destPath, text);
@@ -90,4 +101,5 @@ public class ProductionTimeChart_NetLogic : BaseNetLogic
 	// optix variables
 	private IUAVariable values_optix;
 	private IUAVariable colors_optix;
+	private IUAVariable backgroundColor;
 }
