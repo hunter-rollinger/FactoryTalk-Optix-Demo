@@ -29,6 +29,11 @@ public class SetColors : BaseNetLogic
 
 		var projectNodesWithDynamicLinks = projectNodes.Where(node => node.Refs.GetVariable(FTOptix.CoreBase.ReferenceTypes.HasDynamicLink) != null);
 		var linksWithColorVariablesCount = 0;
+		var reject_badResolvedLink = 0;
+		var reject_noDynamicLink = 0;
+		var reject_notAColorVariable = 0;
+		var reject_colorNotInFolder = 0;
+		var reject_noVariableToModify = 0;
 
 		try {
 			colorFolderNodeId = (NodeId)LogicObject.GetVariable("ColorReferenceFolder").Value.Value;
@@ -40,7 +45,7 @@ public class SetColors : BaseNetLogic
 			foreach (var node in EnumerateDescendants(colorFolder)) {
 				if (node is IUAVariable variable) {
 					if (variable.DataType == FTOptix.Core.DataTypes.Color) {
-						colors.Add((uint)variable.Value.Value);
+						colors.Add(variable.NodeId);
 					}
 				}
 			}
@@ -53,50 +58,66 @@ public class SetColors : BaseNetLogic
 		foreach (IUANode nodeWithDynamicLink in projectNodesWithDynamicLinks) {
 			// Check if the current node has a dynamic link
 			IUAVariable dynamicLinkVariable = nodeWithDynamicLink.Refs.GetVariable(FTOptix.CoreBase.ReferenceTypes.HasDynamicLink);
-			if (dynamicLinkVariable == null) { continue; };
+			if (dynamicLinkVariable == null) {
+				Log.Verbose2("FindAndSetColorVariables", $"The node {Log.Node(nodeWithDynamicLink)} does not have a dynamic link. Skipping...");
+				reject_noDynamicLink++;
+				continue;
+			};
 
 			// Retrieve and Resolve the path of the dynamic link
 			string dynamicLinkPath = (string)dynamicLinkVariable.Value;
 			var targetVariable = LogicObject.Context.ResolvePath(nodeWithDynamicLink, dynamicLinkPath);	// unsure if used
 
-			// skip if dynamic link is null
-			if (targetVariable.ResolvedNode == null) { continue; }
+			// skip if resolved link is null
+			if (targetVariable.ResolvedNode == null) {
+				Log.Verbose1("FindAndSetColorVariables", $"The dynamic link at node {Log.Node(nodeWithDynamicLink)} could not be resolved. Skipping...");
+				reject_badResolvedLink++;
+				continue;
+			}
 
-			// get the nodeid, item, and current color.
-			NodeId propertyNodeId = nodeWithDynamicLink.NodeId;
-			IUANode nodeToModify = InformationModel.Get(propertyNodeId);
+			if ((nodeWithDynamicLink as IUAVariable).DataType != FTOptix.Core.DataTypes.Color) {
+				Log.Verbose1("FindAndSetColorVariables", $"The node at dynamic link {Log.Node(nodeWithDynamicLink)} is not a color variable. Skipping...");
+				reject_notAColorVariable++;
+				continue;
+			}; 
 
-			if ((nodeToModify as IUAVariable).DataType != FTOptix.Core.DataTypes.Color) { continue; }; 
-
-			string propertyPath = Log.Node(nodeToModify);
+			string propertyPath = Log.Node(nodeWithDynamicLink);
 			IUAVariable variableToModify = null;
-			uint currentColor = 0;
+			NodeId currentColor = null;
 			
 			try {
-				currentColor = (uint)(nodeToModify as IUAVariable).Value.Value;
-				variableToModify = (IUAVariable)nodeToModify;
-			} catch {
-				Log.Error("FindAndSetColorVariables", $"Error encountered when obtaining the property information for: {propertyPath}");
+				currentColor = targetVariable.ResolvedNode.NodeId;
+				variableToModify = (IUAVariable)nodeWithDynamicLink;
+			} catch (Exception e) {
+				Log.Error("FindAndSetColorVariables", $"Error encountered when obtaining the property information for: {propertyPath}: {e}");
 			}
 
 			// skip if current color is not in the list or if variable to modify is null
-			if (!colors.Contains(currentColor)) { continue; }
-			if (null == variableToModify) { continue; }
-			if (variableToModify.DataType != FTOptix.Core.DataTypes.Color) { continue; }
+			if (!colors.Contains(currentColor)) {
+				Log.Warning("FindAndSetColorVariables", $"The color at dynamic link {propertyPath} is not in the designated color folder: {colorFolderPath}. Skipping...");
+				reject_colorNotInFolder++;
+				continue;
+			}
+			if (null == variableToModify) {
+				Log.Warning("FindAndSetColorVariables", $"No variable to modify at dynamic link {propertyPath}. Skipping...");
+				reject_noVariableToModify++;
+				continue;
+			}
 
-			// log the dynamic link and associated color. the color is always the last in the dynamic link path item.
-			string colorFromDynamicLink = dynamicLinkPath.Split('/').Last();
-			string colorPath = $"{colorFolderPath}/{colorFromDynamicLink}";
+			try {
+				uint newColor = (uint)((IUAVariable)targetVariable.ResolvedNode).Value.Value;
+				variableToModify.SetValue(newColor);
 
-			IUAVariable colorNode = (IUAVariable)Project.Current.Get(colorPath);
-			uint newColor = (uint)colorNode.Value.Value;
-			variableToModify.SetValue(newColor);
-
-			// colorNode.Value.Value = newColor;	// not doable because value.value is readonly
-			Log.Verbose2("FindAndSetColorVariables", $"Changing color from {currentColor} to {newColor} at dynamic link {propertyPath}");
-			linksWithColorVariablesCount++;
+				Log.Verbose2("FindAndSetColorVariables", $"Changing color from {(nodeWithDynamicLink as IUAVariable).Value.Value} to {newColor} at dynamic link {propertyPath}");
+				linksWithColorVariablesCount++;
+			} catch (Exception e) { Log.Error("FindAndSetColorVariables", $"Unexpected exception caught: ${e}"); }
 		}
 		Log.Info("FindAndSetColorVariables", $"Search completed. Found and updated {linksWithColorVariablesCount} color variables based on dynamic links.");
+		Log.Info("FindAndSetColorVariables", $"Rejected {reject_noDynamicLink} nodes without dynamic links.");
+		Log.Info("FindAndSetColorVariables", $"Rejected {reject_badResolvedLink} nodes with bad resolved links.");
+		Log.Info("FindAndSetColorVariables", $"Rejected {reject_notAColorVariable} nodes that are not color variables.");
+		Log.Info("FindAndSetColorVariables", $"Rejected {reject_colorNotInFolder} nodes with colors not in the designated color folder: {colorFolderPath}.");
+		Log.Info("FindAndSetColorVariables", $"Rejected {reject_noVariableToModify} nodes with no variable to modify.");
 	}
 
 	private IEnumerable<IUANode> EnumerateDescendants(IUANode root) {
@@ -110,7 +131,7 @@ public class SetColors : BaseNetLogic
 
 	private string colorFolderPath;
 	private NodeId colorFolderNodeId;
-	private HashSet<uint> colors = [];
+	private HashSet<NodeId> colors = [];
 	private IUANode colorFolder;
 	private LongRunningTask myTask;
 }
