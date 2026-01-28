@@ -2932,6 +2932,160 @@ Children:
           DataType: Size
           ModellingRule: Optional
           Value: 32.0
+        - Name: MouseClickEventHandler1
+          Id: g=47500db694ae96c4f392e51ff98b8e49
+          Type: EventHandler
+          Children:
+          - Name: ListenEventType
+            Id: g=2185a132c82e213b9932fe902785fca8
+            Type: PropertyType
+            DataType: NodeId
+            Value: "/Types/EventTypes/BaseEventType/MouseEvent/MouseClickEvent"
+          - Name: MethodsToCall
+            Id: g=150ecf384f00b87f24ec6cfb1f8a5fdc
+            Type: BaseObjectType
+            Children:
+            - Name: MethodContainer1
+              Id: g=2d8a41657f3bf924713296971e4042ad
+              Type: BaseObjectType
+              Children:
+              - Name: ns=9;ObjectPointer
+                Id: g=8739de13a730dc04d354f22cc7819b1d
+                Type: NodePointer
+                DataType: NodeId
+                Children:
+                - Name: Kind
+                  Id: g=ee9e9b48c94035adb28da16c337dc2bf
+                  Type: PropertyType
+                  DataType: NodeId
+                  Value: "/Types/ObjectTypes/BaseObjectType"
+                - Name: DynamicLink
+                  Id: g=7bb3eff32ed96719ebfc5bbfe2b18e91
+                  Type: DynamicLink
+                  DataType: NodePath
+                  Value: "{Debug_Menu}@NodeId"
+                  Children:
+                  - Name: Mode
+                    Id: g=444fb8f8dc0aff00108b10a5372f5bfd
+                    Type: BaseVariableType
+                    DataType: DynamicLinkMode
+                    ModellingRule: Optional
+                    Value: 2
+              - Name: ns=9;Method
+                Id: g=fa6c69c114ad64ac88d5712a4cef13cc
+                Type: BaseDataVariableType
+                DataType: String
+                Value: "ChangePanel"
+              - Name: InputArguments
+                Id: g=1877c1ad6771e6dd913d73356e6d221e
+                Type: BaseObjectType
+                Children:
+                - Name: NewPanel
+                  Id: g=ac3f74f905adff76d3bbed895430eb93
+                  Type: BaseDataVariableType
+                  DataType: NodeId
+                  Description: {"NamespaceIndex":11,"TextId":"ChangePanelNewPanelDescription"}
+                  Value: "/Objects/OptimateDemoProject/UI/Screens/Debugging/Debug_Menu"
+                  Children:
+                  - Name: ConditionalConverter1
+                    Id: g=b0607661c2eb700216ace73276945350
+                    Type: ConditionalConverter
+                    Children:
+                    - Name: Condition
+                      Id: g=7b687046935b6c7cdc5763c1f1cdb4ff
+                      Type: BaseDataVariableType
+                      DataType: Boolean
+                      ReferenceType: HasSource
+                      Children:
+                      - Name: ExpressionEvaluator1
+                        Id: g=e5b51b0c73f168bc66429517a0ece65f
+                        Type: ExpressionEvaluator
+                        Children:
+                        - Name: Expression
+                          Id: g=88cdc49c958072e70c0cbac722930cda
+                          Type: BaseDataVariableType
+                          DataType: String
+                          ReferenceType: HasParameter
+                          ModellingRule: Optional
+                          Value: "{0}=={1}"
+                        - Name: ns=9;Source0
+                          Id: g=4cfc72d6b8dc7281b91d61d91b95b5bf
+                          Type: BaseDataVariableType
+                          DataType: BaseDataType
+                          ReferenceType: HasSource
+                          Children:
+                          - Name: DynamicLink
+                            Id: g=01d9eff1bbf81c87667e6a952338e8fd
+                            Type: DynamicLink
+                            DataType: NodePath
+                            Value: "{Debug_Menu}/Panel@NodeId"
+                        - Name: ns=9;Source1
+                          Id: g=e53ab535d66fed6973c737e1ca862741
+                          Type: BaseDataVariableType
+                          DataType: BaseDataType
+                          ReferenceType: HasSource
+                          Children:
+                          - Name: DynamicLink
+                            Id: g=6d5158520523e1b36682b3d28e91bfc1
+                            Type: DynamicLink
+                            DataType: NodePath
+                            Value: "/Objects/OptimateDemoProject/UI/Screens/Debugging/Debug_Menu"
+                    - Name: TrueValue
+                      Id: g=38e653121daeb206908fa0708f238a7b
+                      Type: BaseDataVariableType
+                      DataType: NodeId
+                      ReferenceType: HasParameter
+                      ModellingRule: Optional
+                      Value: "/Objects/OptimateDemoProject/UI/Screens/Base Screens/Empty"
+                    - Name: FalseValue
+                      Id: g=fa1997045a4718b8fa2805af80851f5e
+                      Type: BaseDataVariableType
+                      DataType: NodeId
+                      ReferenceType: HasParameter
+                      ModellingRule: Optional
+                      Value: "/Objects/OptimateDemoProject/UI/Screens/Debugging/Debug_Menu"
+                - Name: AliasNode
+                  Id: g=e9b7a9e1cb77f1ef90ffac1599b2fcff
+                  Type: BaseDataVariableType
+                  DataType: NodeId
+                  Description: {"NamespaceIndex":11,"TextId":"ChangePanelAliasNodeDescription"}
+                  ValueRank: ScalarOrOneDimension
+          - Name: EventArguments
+            Id: g=0e095f8f4e8d981f87555b4570212c55
+            Type: MouseClickEvent
+            Children:
+            - Name: EventId
+              Id: g=e5c38fb390a54a25be28e0863dd69085
+              Type: PropertyType
+              DataType: ByteString
+            - Name: EventType
+              Id: g=b49d4bdc9324d77dd183d90a4b51b1bc
+              Type: PropertyType
+              DataType: NodeId
+            - Name: SourceNode
+              Id: g=179a0b6664ad61d46a54eea0859be593
+              Type: PropertyType
+              DataType: NodeId
+            - Name: SourceName
+              Id: g=4add266537f3638b5f0670d60970a888
+              Type: PropertyType
+              DataType: String
+            - Name: Time
+              Id: g=d0a18b34448a83208f29fa83eab26e6f
+              Type: PropertyType
+              DataType: UtcTime
+            - Name: ReceiveTime
+              Id: g=a5f7e9eb64e54b50552a652d89aa7c49
+              Type: PropertyType
+              DataType: UtcTime
+            - Name: Message
+              Id: g=d1fcab4a0e2c40a50b20197c00af9353
+              Type: PropertyType
+              DataType: LocalizedText
+            - Name: Severity
+              Id: g=8e3b28a61224c42423971de5320cbbc4
+              Type: PropertyType
+              DataType: UInt16
       - Name: VerticalAlignment
         Id: g=b0b754601c2753e32f75a54e98f13748
         Type: BaseVariableType

@@ -13,6 +13,8 @@ using FTOptix.InfluxDBStore;
 using FTOptix.EventLogger;
 using FTOptix.TwinCAT;
 using FTOptix.Report;
+using FTOptix.RecipeX;
+using FTOptix.SerialPort;
 #endregion
 
 public class SystemInformationCollection : BaseNetLogic

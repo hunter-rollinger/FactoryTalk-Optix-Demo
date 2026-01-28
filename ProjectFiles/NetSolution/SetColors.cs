@@ -10,6 +10,8 @@ using System.Linq;
 using System.Runtime.CompilerServices;
 using UAManagedCore;
 using UAManagedCore.OpcUa;
+using FTOptix.RecipeX;
+using FTOptix.SerialPort;
 #endregion
 
 public class SetColors : BaseNetLogic

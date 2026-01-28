@@ -6,6 +6,8 @@ using FTOptix.NetLogic;
 using FTOptix.Core;
 using System.IO;
 using System.Diagnostics;
+using FTOptix.RecipeX;
+using FTOptix.SerialPort;
 #endregion
 
 public class ProductionStatisticsChart_NetLogic : BaseNetLogic

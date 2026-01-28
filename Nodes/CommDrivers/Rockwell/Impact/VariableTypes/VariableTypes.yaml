@@ -4,7 +4,7 @@ Type: FolderType
 Children:
 - Name: UDT_PLS_Cam
   Id: g=dcde0cb8c042687ef497529dd87234c6
-  Supertype: TagStructure
+  Supertype: RAEtherNetIPTagStructure
   DataType: UDT_PLS_Cam
   ValueRank: Any
   Children:
@@ -128,9 +128,18 @@ Children:
       Type: BaseDataVariableType
       DataType: String
       Value: "Cam_5_Off"
+  - Name: SymbolName
+    Id: g=4637bcf7bc3db71956b1fb0352e3ecef
+    Type: BaseDataVariableType
+    DataType: String
+  - Name: BlockRead
+    Id: g=a59c77bac82dc5cc5047651204da6b6d
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Value: true
 - Name: UDT_TIME
   Id: g=6595f9d33077ad3f377ca796ba06e865
-  Supertype: TagStructure
+  Supertype: RAEtherNetIPTagStructure
   DataType: UDT_TIME
   ValueRank: Any
   Children:
@@ -204,9 +213,18 @@ Children:
       Type: BaseDataVariableType
       DataType: String
       Value: "Microsecond"
+  - Name: SymbolName
+    Id: g=3c4b86f322b674c0f684ad73be27f6ea
+    Type: BaseDataVariableType
+    DataType: String
+  - Name: BlockRead
+    Id: g=20e8e930be7784df356a1ce45519d5ec
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Value: true
 - Name: PackML_Status
   Id: g=460000052c6d67a90511e630a73b1414
-  Supertype: TagStructure
+  Supertype: RAEtherNetIPTagStructure
   DataType: PackML_Status
   ValueRank: Any
   Children:
@@ -275,6 +293,15 @@ Children:
         Type: BaseDataVariableType
         DataType: String
         Value: "Starved"
+    - Name: SymbolName
+      Id: g=a9abc7b1ba31b9af70950db1cc634788
+      Type: BaseDataVariableType
+      DataType: String
+    - Name: BlockRead
+      Id: g=c1f097b78c75f97f967aa6bb61871672
+      Type: BaseDataVariableType
+      DataType: Boolean
+      Value: true
   - Name: HeartbeatOUT
     Id: g=cf95e3e5c89e252fef020e8b6ee19c38
     Type: RAEtherNetIPTag
@@ -285,9 +312,18 @@ Children:
       Type: BaseDataVariableType
       DataType: String
       Value: "HeartbeatOUT"
+  - Name: SymbolName
+    Id: g=bdd86adc13b1ee38458714ebab05c28f
+    Type: BaseDataVariableType
+    DataType: String
+  - Name: BlockRead
+    Id: g=5e6a5d1d35a87d49a8e535596f81bc03
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Value: true
 - Name: Equpiment_Interlock
   Id: g=2c7187ba7bd822cc3aa3465f41f3a697
-  Supertype: TagStructure
+  Supertype: RAEtherNetIPTagStructure
   DataType: Equpiment_Interlock
   ValueRank: Any
   Children:
@@ -311,9 +347,18 @@ Children:
       Type: BaseDataVariableType
       DataType: String
       Value: "Starved"
+  - Name: SymbolName
+    Id: g=dcd86cad607bd67675a72c743d50ec29
+    Type: BaseDataVariableType
+    DataType: String
+  - Name: BlockRead
+    Id: g=623f0d2df33e01074f30ca6f5fbe4e6f
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Value: true
 - Name: UDT_Size
   Id: g=bf48b32334dff357f8567bbe51a67341
-  Supertype: TagStructure
+  Supertype: RAEtherNetIPTagStructure
   DataType: UDT_Size
   ValueRank: Any
   Children:
@@ -442,6 +487,15 @@ Children:
         Type: BaseDataVariableType
         DataType: String
         Value: "Cam_5_Off"
+    - Name: SymbolName
+      Id: g=52b957c4ea32ddc0eb36330a87521f18
+      Type: BaseDataVariableType
+      DataType: String
+    - Name: BlockRead
+      Id: g=2b91ac07b92524132fd81ea2b966577c
+      Type: BaseDataVariableType
+      DataType: Boolean
+      Value: true
   - Name: GlueCam02
     Id: g=b9390b61bf57dc6068329b81853d7ae7
     Type: UDT_PLS_Cam
@@ -567,6 +621,15 @@ Children:
         Type: BaseDataVariableType
         DataType: String
         Value: "Cam_5_Off"
+    - Name: SymbolName
+      Id: g=a00c011720cb3cb64f1f7efdc5512758
+      Type: BaseDataVariableType
+      DataType: String
+    - Name: BlockRead
+      Id: g=f220b541eacfc640a7b211f970c34a41
+      Type: BaseDataVariableType
+      DataType: Boolean
+      Value: true
   - Name: GlueCam03
     Id: g=ef9d5533185d1312b06217d7c00a9981
     Type: UDT_PLS_Cam
@@ -692,6 +755,15 @@ Children:
         Type: BaseDataVariableType
         DataType: String
         Value: "Cam_5_Off"
+    - Name: SymbolName
+      Id: g=d2f79cad407d0f395283f6aca15ffc4b
+      Type: BaseDataVariableType
+      DataType: String
+    - Name: BlockRead
+      Id: g=bf37de8e63e5f181d9924e42015a383d
+      Type: BaseDataVariableType
+      DataType: Boolean
+      Value: true
   - Name: GlueCam04
     Id: g=4341003960625f2fb410f44d560cc962
     Type: UDT_PLS_Cam
@@ -817,6 +889,15 @@ Children:
         Type: BaseDataVariableType
         DataType: String
         Value: "Cam_5_Off"
+    - Name: SymbolName
+      Id: g=19f8733a497bdacbc636661526018a08
+      Type: BaseDataVariableType
+      DataType: String
+    - Name: BlockRead
+      Id: g=320dc360e2d3258268d6b487066d4315
+      Type: BaseDataVariableType
+      DataType: Boolean
+      Value: true
   - Name: GlueCam05
     Id: g=da6c4c556c29bec0c30f1271086746e5
     Type: UDT_PLS_Cam
@@ -942,6 +1023,15 @@ Children:
         Type: BaseDataVariableType
         DataType: String
         Value: "Cam_5_Off"
+    - Name: SymbolName
+      Id: g=70dd74adac13241740c4137be0dd5105
+      Type: BaseDataVariableType
+      DataType: String
+    - Name: BlockRead
+      Id: g=4649bd6b9741bc5e1fd928b8a107efed
+      Type: BaseDataVariableType
+      DataType: Boolean
+      Value: true
   - Name: GlueCam06
     Id: g=56002d4cf7dfbda2f3a51b24688f2cb8
     Type: UDT_PLS_Cam
@@ -1067,6 +1157,15 @@ Children:
         Type: BaseDataVariableType
         DataType: String
         Value: "Cam_5_Off"
+    - Name: SymbolName
+      Id: g=dddeb2522fcf316f5ff8f01a624ff800
+      Type: BaseDataVariableType
+      DataType: String
+    - Name: BlockRead
+      Id: g=39e2acf81f2c3e24f87e3f3da6c664ed
+      Type: BaseDataVariableType
+      DataType: Boolean
+      Value: true
   - Name: GlueCam07
     Id: g=748a7c315b396b03f6d2f9ce133f123c
     Type: UDT_PLS_Cam
@@ -1192,6 +1291,15 @@ Children:
         Type: BaseDataVariableType
         DataType: String
         Value: "Cam_5_Off"
+    - Name: SymbolName
+      Id: g=13872d9683ea3ffe5c535d9009aaebf5
+      Type: BaseDataVariableType
+      DataType: String
+    - Name: BlockRead
+      Id: g=0875e5d95237a070a516a6a884ed7512
+      Type: BaseDataVariableType
+      DataType: Boolean
+      Value: true
   - Name: GlueCam08
     Id: g=d82c8191463e3e5a9c100ee1f1e2e3f4
     Type: UDT_PLS_Cam
@@ -1317,6 +1425,15 @@ Children:
         Type: BaseDataVariableType
         DataType: String
         Value: "Cam_5_Off"
+    - Name: SymbolName
+      Id: g=8f3fdbd887d4720ba274c8025d9021da
+      Type: BaseDataVariableType
+      DataType: String
+    - Name: BlockRead
+      Id: g=632b5515adab79a04c93cb5327766dee
+      Type: BaseDataVariableType
+      DataType: Boolean
+      Value: true
   - Name: TimingCam01
     Id: g=b6a529a643b012a3be324a8518c68239
     Type: UDT_PLS_Cam
@@ -1442,6 +1559,15 @@ Children:
         Type: BaseDataVariableType
         DataType: String
         Value: "Cam_5_Off"
+    - Name: SymbolName
+      Id: g=bd0feb3f67ea38636581ba6c05e872e1
+      Type: BaseDataVariableType
+      DataType: String
+    - Name: BlockRead
+      Id: g=ff5a0351b62979924f780cf59c1d6f8a
+      Type: BaseDataVariableType
+      DataType: Boolean
+      Value: true
   - Name: TimingCam02
     Id: g=3582f05daf585805b6325cd8e90a131f
     Type: UDT_PLS_Cam
@@ -1567,6 +1693,15 @@ Children:
         Type: BaseDataVariableType
         DataType: String
         Value: "Cam_5_Off"
+    - Name: SymbolName
+      Id: g=9d59320f8bcbf5f7b99001356bec7124
+      Type: BaseDataVariableType
+      DataType: String
+    - Name: BlockRead
+      Id: g=5f8f3407fdc6e2b3a79ca5f6b0c93158
+      Type: BaseDataVariableType
+      DataType: Boolean
+      Value: true
   - Name: TimingCam03
     Id: g=3221e966a617649e838143a0a1b6eae2
     Type: UDT_PLS_Cam
@@ -1692,6 +1827,15 @@ Children:
         Type: BaseDataVariableType
         DataType: String
         Value: "Cam_5_Off"
+    - Name: SymbolName
+      Id: g=1ef5033152ec8637f4dc859a8f40d29e
+      Type: BaseDataVariableType
+      DataType: String
+    - Name: BlockRead
+      Id: g=85e7a6afd06a13980c69ea499d4b45f7
+      Type: BaseDataVariableType
+      DataType: Boolean
+      Value: true
   - Name: TimingCam04
     Id: g=9c0cf5cf3f1b615c57d324044b77589f
     Type: UDT_PLS_Cam
@@ -1817,6 +1961,15 @@ Children:
         Type: BaseDataVariableType
         DataType: String
         Value: "Cam_5_Off"
+    - Name: SymbolName
+      Id: g=c6c64aca3265eacd891266f85893f4f9
+      Type: BaseDataVariableType
+      DataType: String
+    - Name: BlockRead
+      Id: g=ea882d7f6349f11e1bfe200cf7af82d5
+      Type: BaseDataVariableType
+      DataType: Boolean
+      Value: true
   - Name: TimingCam05
     Id: g=d05013b5b834239f1f140d21b9c62ea9
     Type: UDT_PLS_Cam
@@ -1942,6 +2095,15 @@ Children:
         Type: BaseDataVariableType
         DataType: String
         Value: "Cam_5_Off"
+    - Name: SymbolName
+      Id: g=d374d52ecdfd888ed97f018db76fac64
+      Type: BaseDataVariableType
+      DataType: String
+    - Name: BlockRead
+      Id: g=f8e278c4a2c193c338c9a2e7b0bcc5bd
+      Type: BaseDataVariableType
+      DataType: Boolean
+      Value: true
   - Name: TimingCam06
     Id: g=08541cbfc77c87679f5c6b5679799dbe
     Type: UDT_PLS_Cam
@@ -2067,6 +2229,15 @@ Children:
         Type: BaseDataVariableType
         DataType: String
         Value: "Cam_5_Off"
+    - Name: SymbolName
+      Id: g=353a35c5149c3607f9ae6a6c19d5c119
+      Type: BaseDataVariableType
+      DataType: String
+    - Name: BlockRead
+      Id: g=39fbcd65a48dc711360f11eb46c937e4
+      Type: BaseDataVariableType
+      DataType: Boolean
+      Value: true
   - Name: TimingCam07
     Id: g=6d2570b0ec621c8f6adf3d0918f14e24
     Type: UDT_PLS_Cam
@@ -2192,6 +2363,15 @@ Children:
         Type: BaseDataVariableType
         DataType: String
         Value: "Cam_5_Off"
+    - Name: SymbolName
+      Id: g=acbd928772914c1cdeddeedf9dea8099
+      Type: BaseDataVariableType
+      DataType: String
+    - Name: BlockRead
+      Id: g=3a57da5a4a5680a1c0605eef5007363a
+      Type: BaseDataVariableType
+      DataType: Boolean
+      Value: true
   - Name: TimingCam08
     Id: g=b521f54dc8fa860478d4cf46f576b223
     Type: UDT_PLS_Cam
@@ -2317,6 +2497,15 @@ Children:
         Type: BaseDataVariableType
         DataType: String
         Value: "Cam_5_Off"
+    - Name: SymbolName
+      Id: g=e3bcc80905093b96fb38a368554192fd
+      Type: BaseDataVariableType
+      DataType: String
+    - Name: BlockRead
+      Id: g=027288ec662eab185e0c07d558a5cc93
+      Type: BaseDataVariableType
+      DataType: Boolean
+      Value: true
   - Name: TimingCam09
     Id: g=878deaca5172f1adca85d138865edd0e
     Type: UDT_PLS_Cam
@@ -2442,6 +2631,15 @@ Children:
         Type: BaseDataVariableType
         DataType: String
         Value: "Cam_5_Off"
+    - Name: SymbolName
+      Id: g=5bbe597062f3df8a985cb3b11606a395
+      Type: BaseDataVariableType
+      DataType: String
+    - Name: BlockRead
+      Id: g=a699d757d03637145888127ad0301957
+      Type: BaseDataVariableType
+      DataType: Boolean
+      Value: true
   - Name: TimingCam10
     Id: g=4e17dc4976b8901e667d353874da7292
     Type: UDT_PLS_Cam
@@ -2567,6 +2765,15 @@ Children:
         Type: BaseDataVariableType
         DataType: String
         Value: "Cam_5_Off"
+    - Name: SymbolName
+      Id: g=6f05c6609ff986ffd2b7dd822c71a604
+      Type: BaseDataVariableType
+      DataType: String
+    - Name: BlockRead
+      Id: g=802919862989d33de5e0ce1c142409c1
+      Type: BaseDataVariableType
+      DataType: Boolean
+      Value: true
   - Name: TimingCam11
     Id: g=da7ce4116b2f4ecc03f074722597c7b1
     Type: UDT_PLS_Cam
@@ -2692,6 +2899,15 @@ Children:
         Type: BaseDataVariableType
         DataType: String
         Value: "Cam_5_Off"
+    - Name: SymbolName
+      Id: g=d55ba3f410558eebbc0b4339ad1caee7
+      Type: BaseDataVariableType
+      DataType: String
+    - Name: BlockRead
+      Id: g=fcc13f065393141ec46848f47a808c51
+      Type: BaseDataVariableType
+      DataType: Boolean
+      Value: true
   - Name: TimingCam12
     Id: g=82b60e4eef5f692a3e4f0a3c290eec0b
     Type: UDT_PLS_Cam
@@ -2817,6 +3033,15 @@ Children:
         Type: BaseDataVariableType
         DataType: String
         Value: "Cam_5_Off"
+    - Name: SymbolName
+      Id: g=865661595e156305065408e33c51c40d
+      Type: BaseDataVariableType
+      DataType: String
+    - Name: BlockRead
+      Id: g=c6e38338b8184b2f86012188ad7fe797
+      Type: BaseDataVariableType
+      DataType: Boolean
+      Value: true
   - Name: TimingCam13
     Id: g=cfceea1b55289a9a12e13c39a3eee0bb
     Type: UDT_PLS_Cam
@@ -2942,6 +3167,15 @@ Children:
         Type: BaseDataVariableType
         DataType: String
         Value: "Cam_5_Off"
+    - Name: SymbolName
+      Id: g=dcd36883227c8948df71b75cb410384c
+      Type: BaseDataVariableType
+      DataType: String
+    - Name: BlockRead
+      Id: g=b02680c109b1390acd640f52d1e9db81
+      Type: BaseDataVariableType
+      DataType: Boolean
+      Value: true
   - Name: TimingCam14
     Id: g=97f897dc4b658522bb1dfef1bcd241ca
     Type: UDT_PLS_Cam
@@ -3067,6 +3301,15 @@ Children:
         Type: BaseDataVariableType
         DataType: String
         Value: "Cam_5_Off"
+    - Name: SymbolName
+      Id: g=43353ace1d1b0b99446bf0566ee91d80
+      Type: BaseDataVariableType
+      DataType: String
+    - Name: BlockRead
+      Id: g=5c92690efba6008fbe3faf583fe97fc7
+      Type: BaseDataVariableType
+      DataType: Boolean
+      Value: true
   - Name: TimingCam15
     Id: g=eee2ab6268b8aa78df37234ef12a290d
     Type: UDT_PLS_Cam
@@ -3192,6 +3435,15 @@ Children:
         Type: BaseDataVariableType
         DataType: String
         Value: "Cam_5_Off"
+    - Name: SymbolName
+      Id: g=97d4c0f72a44603fbd14d81dcac8e227
+      Type: BaseDataVariableType
+      DataType: String
+    - Name: BlockRead
+      Id: g=7904edd05876aa9fd7a125f125dda657
+      Type: BaseDataVariableType
+      DataType: Boolean
+      Value: true
   - Name: TimingCam16
     Id: g=d089ab5a6e9a1fe76ba5ddd7992a1072
     Type: UDT_PLS_Cam
@@ -3317,6 +3569,15 @@ Children:
         Type: BaseDataVariableType
         DataType: String
         Value: "Cam_5_Off"
+    - Name: SymbolName
+      Id: g=8677bae01a79c80bbff28046799c32ad
+      Type: BaseDataVariableType
+      DataType: String
+    - Name: BlockRead
+      Id: g=0cf9b8ea5747f5e9aa4c3c5c69aab753
+      Type: BaseDataVariableType
+      DataType: Boolean
+      Value: true
   - Name: TimingCam17
     Id: g=326d061914b0ed586a60855c3f9f95dc
     Type: UDT_PLS_Cam
@@ -3442,6 +3703,15 @@ Children:
         Type: BaseDataVariableType
         DataType: String
         Value: "Cam_5_Off"
+    - Name: SymbolName
+      Id: g=65559376599e8da9aa57f245980df743
+      Type: BaseDataVariableType
+      DataType: String
+    - Name: BlockRead
+      Id: g=c2cb5e4465d07cae15d6511eb1f0df9f
+      Type: BaseDataVariableType
+      DataType: Boolean
+      Value: true
   - Name: TimingCam18
     Id: g=91857d3aac37c603c0800e3c5f4d04aa
     Type: UDT_PLS_Cam
@@ -3567,6 +3837,15 @@ Children:
         Type: BaseDataVariableType
         DataType: String
         Value: "Cam_5_Off"
+    - Name: SymbolName
+      Id: g=2d1fd587fe14ea9d444c9b30255a4213
+      Type: BaseDataVariableType
+      DataType: String
+    - Name: BlockRead
+      Id: g=a51e922d4f07c2a95cf62842221110ba
+      Type: BaseDataVariableType
+      DataType: Boolean
+      Value: true
   - Name: TimingCam19
     Id: g=804c344ab9dacf3e401cf5ae730d10a4
     Type: UDT_PLS_Cam
@@ -3692,6 +3971,15 @@ Children:
         Type: BaseDataVariableType
         DataType: String
         Value: "Cam_5_Off"
+    - Name: SymbolName
+      Id: g=e82a6e70cb835b70725cbf6362357488
+      Type: BaseDataVariableType
+      DataType: String
+    - Name: BlockRead
+      Id: g=d5b28c78b0183798824ffac551cb7a7a
+      Type: BaseDataVariableType
+      DataType: Boolean
+      Value: true
   - Name: TimingCam20
     Id: g=0cd314ce4bc2202058867b2036a2be4d
     Type: UDT_PLS_Cam
@@ -3817,6 +4105,15 @@ Children:
         Type: BaseDataVariableType
         DataType: String
         Value: "Cam_5_Off"
+    - Name: SymbolName
+      Id: g=8e3e14e96dda2b5f2781e9dc7e3266f8
+      Type: BaseDataVariableType
+      DataType: String
+    - Name: BlockRead
+      Id: g=fea40357d1b9388c04fe1977b43123d5
+      Type: BaseDataVariableType
+      DataType: Boolean
+      Value: true
   - Name: TimingCam21
     Id: g=e4dcaa2b9f5b4e26e08afd05195763a3
     Type: UDT_PLS_Cam
@@ -3942,6 +4239,15 @@ Children:
         Type: BaseDataVariableType
         DataType: String
         Value: "Cam_5_Off"
+    - Name: SymbolName
+      Id: g=31fb78329462ec178a96d1feed3647bf
+      Type: BaseDataVariableType
+      DataType: String
+    - Name: BlockRead
+      Id: g=2c4bee9f1bfc28cd19d3082d275d3991
+      Type: BaseDataVariableType
+      DataType: Boolean
+      Value: true
   - Name: TimingCam22
     Id: g=2850ec751ac5f0c76e7dbaf0a35981f7
     Type: UDT_PLS_Cam
@@ -4067,6 +4373,15 @@ Children:
         Type: BaseDataVariableType
         DataType: String
         Value: "Cam_5_Off"
+    - Name: SymbolName
+      Id: g=b0df6c984613d93318addd4c9b1b3461
+      Type: BaseDataVariableType
+      DataType: String
+    - Name: BlockRead
+      Id: g=5beb70b77c2e5b0dec5fb797f0b4d1f5
+      Type: BaseDataVariableType
+      DataType: Boolean
+      Value: true
   - Name: Axis02LeadingLugThickness
     Id: g=544c9b9415d49dd0161a8c3dbfbc8241
     Type: RAEtherNetIPTag
@@ -5389,3 +5704,12 @@ Children:
       Type: BaseDataVariableType
       DataType: String
       Value: "I160_MissingCartonCheck_ShiftRegisterSta"
+  - Name: SymbolName
+    Id: g=5aa765f4209d9f6ae27cd024b0a9ac32
+    Type: BaseDataVariableType
+    DataType: String
+  - Name: BlockRead
+    Id: g=76cdb3f0c54614fdc7511784e38147eb
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Value: true

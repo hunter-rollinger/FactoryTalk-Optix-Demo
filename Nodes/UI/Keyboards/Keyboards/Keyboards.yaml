@@ -1080,6 +1080,33 @@ Children:
       DataType: Size
       ModellingRule: Optional
       Value: 20.0
+  - Name: EURange
+    Id: g=fb485a343ab7a14582ee0a658fd0537c
+    Type: NodePointer
+    DataType: NodeId
+    AccessLevel: Read
+    Children:
+    - Name: Kind
+      Id: g=9e0c2dfdfa1c1c912c0cf7791be81979
+      Type: PropertyType
+      DataType: NodeId
+      Value: "/Types/VariableTypes/BaseVariableType/PropertyType/RangeType"
+  - Name: EngineeringUnit
+    Id: g=86119b70c12739baaecd438fd2aa98e6
+    Type: NodePointer
+    DataType: NodeId
+    AccessLevel: Read
+    Children:
+    - Name: Kind
+      Id: g=3dbb60cc968139d904521ec6ae124fab
+      Type: PropertyType
+      DataType: NodeId
+      Value: "/Types/VariableTypes/BaseVariableType/PropertyType/EUInformationType"
+  - Name: TargetVariable
+    Id: g=4c6ef2fdf0069cc0e7c33142a550debf
+    Type: BaseDataVariableType
+    DataType: NodeId
+    AccessLevel: Read
 - Name: Numeric
   Id: g=4579fdf18bdfdaa64772eba31d350d66
   Supertype: VirtualKeyboardPanel
@@ -1728,6 +1755,33 @@ Children:
     DataType: String
     ModellingRule: Optional
     Value: "Numeric_Preedit"
+  - Name: EURange
+    Id: g=513fd30c7f23876d4370fdca970e0e0c
+    Type: NodePointer
+    DataType: NodeId
+    AccessLevel: Read
+    Children:
+    - Name: Kind
+      Id: g=0646f6c7d4851b9b2eaaf22323535464
+      Type: PropertyType
+      DataType: NodeId
+      Value: "/Types/VariableTypes/BaseVariableType/PropertyType/RangeType"
+  - Name: EngineeringUnit
+    Id: g=39591a37e8a17c3f5126144594444593
+    Type: NodePointer
+    DataType: NodeId
+    AccessLevel: Read
+    Children:
+    - Name: Kind
+      Id: g=54183ea3867dfa65feaeb306a76ebd85
+      Type: PropertyType
+      DataType: NodeId
+      Value: "/Types/VariableTypes/BaseVariableType/PropertyType/EUInformationType"
+  - Name: TargetVariable
+    Id: g=6cfd59a303ef40307d68fe8afd051eb1
+    Type: BaseDataVariableType
+    DataType: NodeId
+    AccessLevel: Read
 - File: AlphaNumeric_panels/AlphaNumeric_panels.yaml
 - File: Basic_keys/Basic_keys.yaml
 - Name: ns=19;LibraryReference

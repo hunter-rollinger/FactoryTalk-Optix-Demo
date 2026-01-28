@@ -2,57 +2,18 @@ Name: DataStores
 Id: g=efaadeccea5e9b22b86efd94820c92bb
 Type: DataStoresCategoryFolder
 Children:
-- Name: ShiftData
-  Id: g=1055b1cee08d4b0e1f0df64094bd296b
-  Type: InfluxDBStoreLocal
-  Description: {"LocaleId":"en-US","Text":"Retention Period of 1 Year"}
+- Name: RecipeData
+  Id: g=aef0eeb9752668683554c2381de9e346
+  Type: SQLiteStore
   Children:
-  - Name: RetentionPeriod
-    Id: g=f78553d91ce55976624cb47e61ea8d47
-    Type: BaseDataVariableType
-    DataType: Duration
-    Value: "365:00:00:00.0000000"
-  - Name: Username
-    Id: g=91d458c6d41f02ca2d2462787208076e
-    Type: BaseDataVariableType
-    DataType: Password
-    AccessLevel: Read
-    Value: "j5qquE5s"
-  - Name: Password
-    Id: g=5dae65ec03690261aa36dc05d4e6abdd
-    Type: BaseDataVariableType
-    DataType: Password
-    AccessLevel: Read
-    Value: "k0qAbigh9aevq1jS"
-  - Name: Token
-    Id: g=9c1730a5222ab6594a4b73ef7b6e3625
-    Type: BaseDataVariableType
-    DataType: Password
-    AccessLevel: Read
-    Value: "HsgWAOB154Kbl4M7UA7iZF0A"
-  - Name: Organization
-    Id: g=5b9336f391d0f4e7415eb16be2e82b00
-    Type: BaseDataVariableType
-    DataType: String
-    AccessLevel: Read
-    Value: "Rockwell"
-  - Name: Bucket
-    Id: g=bb5a1e2ffc4fbbc6c4654b1aef1675f5
-    Type: BaseDataVariableType
-    DataType: String
-    AccessLevel: Read
-    Value: "bucket"
   - Name: Tables
-    Id: g=e40d4f026c431b0b114112d6c211e195
+    Id: g=48f094d12f950723c6261504f115f865
     Type: BaseObjectType
     Children:
-    - Name: ShiftData
-      Id: g=9156e482e7f40609c8d342aa8cab2340
-      Type: LocalInfluxDBStoreTable
+    - Name: Recipes
+      Id: g=97cd4f5cabd2e7ab8a42522950935f02
+      Type: SQLiteStoreTable
       Children:
-      - Name: Tags
-        Id: g=89081096548ea5176d097fb31a44a13d
-        Type: BaseObjectType
       - Class: Reference
         Target: ns=15;i=12
         Direction: Forward
@@ -66,79 +27,309 @@ Children:
         Target: ns=15;i=20
         Direction: Forward
       - Name: Columns
-        Id: g=c155be1da88209078ea918d6f17b60b8
+        Id: g=73d590ae10f52c4408422ed1140ae7b7
         Type: BaseObjectType
         Children:
-        - Name: Timestamp
-          Id: g=c71b7c4ff43b21e5aef59facfe4b6ded
+        - Name: Id
+          Id: g=5606cf5d872e20172d4441fdfbdba89c
           Type: StoreColumn
-          DataType: UtcTime
-          Description: {"LocaleId":"en-US","Text":"referenced in netlogic"}
-        - Name: ItemsGood
-          Id: g=e21170229c15172673b34a658cf2e720
+          DataType: UInt32
+          Children:
+          - Name: PrimaryKey
+            Id: g=f687a9874a9959fb31f006ed3302760c
+            Type: BaseDataVariableType
+            DataType: Boolean
+            Value: true
+          - Name: AutoIncrement
+            Id: g=5b5b7a9a06f61e621d7eabe937acd74f
+            Type: BaseDataVariableType
+            DataType: Boolean
+            Value: true
+          - Name: Nullable
+            Id: g=aa19803b5c8395b151d0c9e661b61f23
+            Type: BaseDataVariableType
+            DataType: Boolean
+        - Name: Name
+          Id: g=ce836bfe23fd693cc1f26d52d02cce61
           Type: StoreColumn
-          DataType: Int32
-        - Name: ItemsBad
-          Id: g=7fe38794d31a1f1818d4fff544edfd11
+          DataType: String
+          Children:
+          - Name: Nullable
+            Id: g=0b767d7e9e4de17f812a933faccf0d74
+            Type: BaseDataVariableType
+            DataType: Boolean
+        - Name: Version
+          Id: g=1f10c2b827fe9d90b3a6a4d659494d19
           Type: StoreColumn
-          DataType: Int32
-        - Name: Machine Run Time
-          Id: g=415de9c4bb2f1df2ed66bc33be8bd291
+          DataType: String
+          Children:
+          - Name: Nullable
+            Id: g=1040ecdf3fcd1ebef45d38857cb9112a
+            Type: BaseDataVariableType
+            DataType: Boolean
+        - Name: RecipeSchemaName
+          Id: g=b75771870a3d0c066f754bca02eeeab6
           Type: StoreColumn
-          DataType: Int32
-          Description: {"LocaleId":"en-US","Text":"referenced in netlogic"}
-        - Name: Outside Stop Time
-          Id: g=94b6196337f8952a0daf9c4699a9d815
+          DataType: String
+          Children:
+          - Name: Nullable
+            Id: g=3744de704ab80ec08e6d9b8e036e40ae
+            Type: BaseDataVariableType
+            DataType: Boolean
+        - Name: RecipeSchemaNamespaceUri
+          Id: g=b9122d8fe7e0f14dd563cb1dfafa179c
           Type: StoreColumn
-          DataType: Int32
-          Description: {"LocaleId":"en-US","Text":"referenced in netlogic"}
-        - Name: Operator Stop Time
-          Id: g=cbb92f27152374cbf31f3cc883a933c4
-          Type: StoreColumn
-          DataType: Int32
-          Description: {"LocaleId":"en-US","Text":"referenced in netlogic"}
-        - Name: Alarm Stop Time
-          Id: g=77d21bbca17c4fbab488bc02ff938524
-          Type: StoreColumn
-          DataType: Int32
-          Description: {"LocaleId":"en-US","Text":"referenced in netlogic"}
-        - Name: LocalTimestamp
-          Id: g=87d02a6a32e716987c7da8c5cfe1b8e2
+          DataType: String
+          Children:
+          - Name: Nullable
+            Id: g=14c4144520d691619be4fd7b9c122db9
+            Type: BaseDataVariableType
+            DataType: Boolean
+        - Name: RecipeSchemaTimestamp
+          Id: g=5efe759f40ef4e6a3d0143f41fac0607
           Type: StoreColumn
           DataType: DateTime
-        - Name: Items Good
-          Id: g=e6d320984c138bd1a53bd7b38c521c75
+          Children:
+          - Name: Nullable
+            Id: g=ff171e57bbae757614e5ee559a4f8c1e
+            Type: BaseDataVariableType
+            DataType: Boolean
+        - Name: CreatedAt
+          Id: g=6e124cbbf80d0916ed2522a00c211abd
           Type: StoreColumn
-          DataType: Int32
-        - Name: Items Bad
-          Id: g=caa28b6bc8b29f2a96679ebefbc7b28a
+          DataType: DateTime
+          Children:
+          - Name: Nullable
+            Id: g=ab44e280afacfedf630b68eddd46f502
+            Type: BaseDataVariableType
+            DataType: Boolean
+        - Name: ModifiedAt
+          Id: g=3f69c2d131e12907063c0d0fa6bf3b38
           Type: StoreColumn
-          DataType: Int32
+          DataType: DateTime
+          Children:
+          - Name: Nullable
+            Id: g=41714f024e117724c79c678d54647982
+            Type: BaseDataVariableType
+            DataType: Boolean
+    - Name: RecipeItems
+      Id: g=a3651791d509ac7d16f522d4cd07a890
+      Type: SQLiteStoreTable
+      Children:
+      - Class: Reference
+        Target: ns=15;i=12
+        Direction: Forward
+      - Class: Reference
+        Target: ns=15;i=15
+        Direction: Forward
+      - Class: Reference
+        Target: ns=15;i=21
+        Direction: Forward
+      - Class: Reference
+        Target: ns=15;i=20
+        Direction: Forward
+      - Name: Columns
+        Id: g=8e9d035a7f8ca59f569b8c47f16ce17d
+        Type: BaseObjectType
+        Children:
+        - Name: Id
+          Id: g=d9f4ff0f9d0685987a9a4e25e4a3f932
+          Type: StoreColumn
+          DataType: UInt32
+          Children:
+          - Name: PrimaryKey
+            Id: g=21901f3051fe1d34344c40db0d60941e
+            Type: BaseDataVariableType
+            DataType: Boolean
+            Value: true
+          - Name: AutoIncrement
+            Id: g=737c7962ed470edba1820b130e57b96e
+            Type: BaseDataVariableType
+            DataType: Boolean
+            Value: true
+          - Name: Nullable
+            Id: g=d3f3894855a6a7e4b3033a029602e9d8
+            Type: BaseDataVariableType
+            DataType: Boolean
+        - Name: RecipeId
+          Id: g=61a1ac8da64994d09c1ffc0207d07c2a
+          Type: StoreColumn
+          DataType: UInt32
+          Children:
+          - Name: Nullable
+            Id: g=154ab0a16931073cac77514bc68db969
+            Type: BaseDataVariableType
+            DataType: Boolean
+        - Name: RelativeBrowsePath
+          Id: g=a3af598d0587b06cef190454f560f38e
+          Type: StoreColumn
+          DataType: String
+          Children:
+          - Name: Nullable
+            Id: g=d98c25ad8fc7b46d1a28e6cf15d1d436
+            Type: BaseDataVariableType
+            DataType: Boolean
+        - Name: TypeId
+          Id: g=07bed950cb3eb2067405b7e00ad78b61
+          Type: StoreColumn
+          DataType: String
+          Children:
+          - Name: Nullable
+            Id: g=40efc9f70b8bd1f3209d25fef312df92
+            Type: BaseDataVariableType
+            DataType: Boolean
+    - Name: RecipeDataItems
+      Id: g=6897f772d759b32b4cdaa746a6a6d07e
+      Type: SQLiteStoreTable
+      Children:
+      - Class: Reference
+        Target: ns=15;i=12
+        Direction: Forward
+      - Class: Reference
+        Target: ns=15;i=15
+        Direction: Forward
+      - Class: Reference
+        Target: ns=15;i=21
+        Direction: Forward
+      - Class: Reference
+        Target: ns=15;i=20
+        Direction: Forward
+      - Name: Columns
+        Id: g=a58b968a31de6859c76f7716b9355875
+        Type: BaseObjectType
+        Children:
+        - Name: Id
+          Id: g=1297748be03595418cf92abaa069ed99
+          Type: StoreColumn
+          DataType: UInt32
+          Children:
+          - Name: PrimaryKey
+            Id: g=377b0692d563dfb976a7cae9ea71bca5
+            Type: BaseDataVariableType
+            DataType: Boolean
+            Value: true
+          - Name: AutoIncrement
+            Id: g=01f2649b0d0d0bc3ed6e3d7c3dee3109
+            Type: BaseDataVariableType
+            DataType: Boolean
+            Value: true
+          - Name: Nullable
+            Id: g=0f3971cd61ba6536be29fc7d5a106f11
+            Type: BaseDataVariableType
+            DataType: Boolean
+        - Name: RecipeItemId
+          Id: g=2b095a8d44d4d78428cd5820358c4365
+          Type: StoreColumn
+          DataType: UInt32
+          Children:
+          - Name: Nullable
+            Id: g=3cc69ab9e5b523baabcf1bbafc5520f2
+            Type: BaseDataVariableType
+            DataType: Boolean
+        - Name: RelativeBrowsePath
+          Id: g=b7e5c5b5173ca612ba3bcc9d1c7d184b
+          Type: StoreColumn
+          DataType: String
+          Children:
+          - Name: Nullable
+            Id: g=74629377e49ffb98fe4b8007de9738f7
+            Type: BaseDataVariableType
+            DataType: Boolean
+        - Name: ElementAccess
+          Id: g=fcd6b7e081d010e4cc5290ad23b9ed87
+          Type: StoreColumn
+          DataType: String
+          Children:
+          - Name: Nullable
+            Id: g=ad902f40323890d11354cbb5cb5205fa
+            Type: BaseDataVariableType
+            DataType: Boolean
+        - Name: DataTypeId
+          Id: g=3c4202cc439f89962001e5b5d345c3ec
+          Type: StoreColumn
+          DataType: String
+          Children:
+          - Name: Nullable
+            Id: g=e356d52198084bc3fa135c2ece835b51
+            Type: BaseDataVariableType
+            DataType: Boolean
+        - Name: Value
+          Id: g=f47adcea428ff2695ea25d3218a8ffa6
+          Type: StoreColumn
+          DataType: String
+          Children:
+          - Name: Nullable
+            Id: g=9cd346c09c6963867017a4631a3a2c3c
+            Type: BaseDataVariableType
+            DataType: Boolean
+    - Name: RecipeMetadata_MachineRecipe
+      Id: g=f280aae03430dc0a7a8f0c4179908ead
+      Type: SQLiteStoreTable
+      Children:
+      - Class: Reference
+        Target: ns=15;i=12
+        Direction: Forward
+      - Class: Reference
+        Target: ns=15;i=15
+        Direction: Forward
+      - Class: Reference
+        Target: ns=15;i=21
+        Direction: Forward
+      - Class: Reference
+        Target: ns=15;i=20
+        Direction: Forward
+      - Name: Columns
+        Id: g=0ff596023aa75be9ba9f3860cadeceb6
+        Type: BaseObjectType
+        Children:
+        - Name: RecipeId
+          Id: g=379441d6845f8125b5a2427f94a26132
+          Type: StoreColumn
+          DataType: UInt32
+          Children:
+          - Name: PrimaryKey
+            Id: g=9a25d60a9f1c8a7b4c4e373eee27d167
+            Type: BaseDataVariableType
+            DataType: Boolean
+            Value: true
+          - Name: Nullable
+            Id: g=00ca62af78930e7ab126a1c84c4b6d06
+            Type: BaseDataVariableType
+            DataType: Boolean
+  - Class: Reference
+    Target: ns=29;i=30
+    Direction: Forward
+  - Class: Reference
+    Target: ns=29;i=33
+    Direction: Forward
   - Name: MaxColumnNameLength
-    Id: g=18cdb83cbb424f354a0fecb4aaa2a815
+    Id: g=6ad8120d5644afc5d617cfa08e15dad7
     Type: BaseDataVariableType
     DataType: UInt32
     AccessLevel: Read
   - Name: MaxColumnCount
-    Id: g=c893d7635d0266ce22c22b929ef28c95
+    Id: g=79c2897cf6f228a6fbf17cf75fc39b1c
     Type: BaseDataVariableType
     DataType: UInt32
     AccessLevel: Read
   - Name: DataTypeCompatibilityMap
-    Id: g=37f047c76f59b89494e948d11eac908a
+    Id: g=14f6035cb78a2635202c2d4262ebf5d8
     Type: BaseDataVariableType
     DataType: NodeId
     AccessLevel: Read
     ValueRank: OneOrMoreDimensions
     ArrayDimensions: [0,0]
   - Name: Status
-    Id: g=b7d3ca816e864fb98eb7ef5cbbf761f0
+    Id: g=8b15f1aa1e2a719b4962c2e84d0857a9
     Type: PropertyType
     DataType: StoreStatus
     AccessLevel: Read
     Value: 2
   - Class: Reference
     Target: ns=15;i=22
+    Direction: Forward
+  - Class: Reference
+    Target: ns=15;i=67
     Direction: Forward
   - Class: Reference
     Target: ns=15;i=6
@@ -170,7 +361,7 @@ Children:
   - Class: Reference
     Target: ns=15;i=59
     Direction: Forward
-- Name: RecipeData
+- Name: LegacyRecipeData
   Id: g=f9223efb3070446fa1893bd0ceefe0b1
   Type: SQLiteStore
   Children:
@@ -3748,6 +3939,134 @@ Children:
     Id: g=a4c1ac7d5bab5fb8438f1fe47fa04213
     Type: BaseDataVariableType
     DataType: Boolean
+  - Class: Reference
+    Target: ns=15;i=67
+    Direction: Forward
+- Name: ReportShiftData
+  Id: g=1106e2031b5705f06f03f80a451dabb2
+  Type: SQLiteStore
+  Children:
+  - Name: Tables
+    Id: g=51a7996e51a1ba924a4841a6d2544ff4
+    Type: BaseObjectType
+    Children:
+    - Name: ShiftData
+      Id: g=b112546e7749b19619993a528ae2b767
+      Type: SQLiteStoreTable
+      Children:
+      - Class: Reference
+        Target: ns=15;i=12
+        Direction: Forward
+      - Class: Reference
+        Target: ns=15;i=15
+        Direction: Forward
+      - Class: Reference
+        Target: ns=15;i=21
+        Direction: Forward
+      - Class: Reference
+        Target: ns=15;i=20
+        Direction: Forward
+      - Name: Columns
+        Id: g=651af7373ee14676f95967382ab69749
+        Type: BaseObjectType
+        Children:
+        - Name: Timestamp
+          Id: g=53eb09b1580a31e64a47cfde7e69680e
+          Type: StoreColumn
+          DataType: UtcTime
+        - Name: LocalTimestamp
+          Id: g=4acbd4749df6ea32c933d64a3004cade
+          Type: StoreColumn
+          DataType: DateTime
+        - Name: Items Good
+          Id: g=96e85e7b3ca635d59fd1eb081f8053ba
+          Type: StoreColumn
+          DataType: Int32
+        - Name: Items Bad
+          Id: g=ac8202e6b2dfe27f65b82c1ce9a4cfec
+          Type: StoreColumn
+          DataType: Int32
+        - Name: Machine Run Time
+          Id: g=4286d6f9ea93f8f3c9f68f2bbbe6c4d4
+          Type: StoreColumn
+          DataType: Int32
+        - Name: Outside Stop Time
+          Id: g=b3c2096cb8a8cbd5753f7a2780f0230b
+          Type: StoreColumn
+          DataType: Int32
+        - Name: Operator Stop Time
+          Id: g=cc7db42daadac6ab1672996ae6b3a4c3
+          Type: StoreColumn
+          DataType: Int32
+        - Name: Alarm Stop Time
+          Id: g=abdefb02cb0cdcaece7059c1d2c8aa27
+          Type: StoreColumn
+          DataType: Int32
+  - Class: Reference
+    Target: ns=29;i=30
+    Direction: Forward
+  - Class: Reference
+    Target: ns=29;i=33
+    Direction: Forward
+  - Name: MaxColumnNameLength
+    Id: g=f8ab8cb146dd85b0825495995895441a
+    Type: BaseDataVariableType
+    DataType: UInt32
+    AccessLevel: Read
+  - Name: MaxColumnCount
+    Id: g=0c8fb8fb727c5136243a4a0902c3497b
+    Type: BaseDataVariableType
+    DataType: UInt32
+    AccessLevel: Read
+  - Name: DataTypeCompatibilityMap
+    Id: g=35e89bcb2b493a81a5d7a0f4ece6ad2e
+    Type: BaseDataVariableType
+    DataType: NodeId
+    AccessLevel: Read
+    ValueRank: OneOrMoreDimensions
+    ArrayDimensions: [0,0]
+  - Name: Status
+    Id: g=6dc9f77348eb439e19dd6790ed23dba6
+    Type: PropertyType
+    DataType: StoreStatus
+    AccessLevel: Read
+    Value: 2
+  - Class: Reference
+    Target: ns=15;i=22
+    Direction: Forward
+  - Class: Reference
+    Target: ns=15;i=67
+    Direction: Forward
+  - Class: Reference
+    Target: ns=15;i=6
+    Direction: Forward
+  - Class: Reference
+    Target: ns=15;i=8
+    Direction: Forward
+  - Class: Reference
+    Target: ns=15;i=25
+    Direction: Forward
+  - Class: Reference
+    Target: ns=15;i=38
+    Direction: Forward
+  - Class: Reference
+    Target: ns=15;i=41
+    Direction: Forward
+  - Class: Reference
+    Target: ns=15;i=44
+    Direction: Forward
+  - Class: Reference
+    Target: ns=15;i=53
+    Direction: Forward
+  - Class: Reference
+    Target: ns=15;i=55
+    Direction: Forward
+  - Class: Reference
+    Target: ns=15;i=57
+    Direction: Forward
+  - Class: Reference
+    Target: ns=15;i=59
+    Direction: Forward
 - Name: VariablesToMonitor
   Id: g=d8b7668759169ce4ff5e900546d73c7e
   Type: SQLiteStore
@@ -3894,6 +4213,9 @@ Children:
   - Class: Reference
     Target: ns=15;i=59
     Direction: Forward
+  - Class: Reference
+    Target: ns=15;i=67
+    Direction: Forward
 - Name: Alarms
   Id: g=a2b8ad4e9b6e4fe0976d681596148183
   Type: SQLiteStore
@@ -4035,4 +4357,7 @@ Children:
     Direction: Forward
   - Class: Reference
     Target: ns=15;i=59
+    Direction: Forward
+  - Class: Reference
+    Target: ns=15;i=67
     Direction: Forward

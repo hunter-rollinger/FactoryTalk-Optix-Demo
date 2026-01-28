@@ -2,9 +2,9 @@ Name: Recipes
 Id: g=22b4e3059abe8cc23e85fd8bb464590a
 Type: RecipesCategoryFolder
 Children:
-- Name: RecipeSchema
+- Name: LegacyRecipeSchema
   Id: g=68d7733ff9504b2e1c2a1eff499cc1f0
-  Type: RecipeSchema
+  Type: ns=23;RecipeSchema
   Description: {"LocaleId":"en-US","Text":"Can be linked directly to PLC tag"}
   Children:
   - Name: Root
@@ -2297,7 +2297,7 @@ Children:
     Id: g=2ebfaf049718a373a230e1c09d91b163
     Type: NodePointer
     DataType: NodeId
-    Value: "/Objects/OptimateDemoProject/DataStores/RecipeData"
+    Value: "/Objects/OptimateDemoProject/DataStores/LegacyRecipeData"
     Children:
     - Name: Kind
       Id: g=af897e4b2b9c11f179e0c129fc573de5
@@ -4573,3 +4573,181 @@ Children:
     Type: BaseDataVariableType
     DataType: Duration
     Value: "0:00:00:10.0000000"
+- Name: MachineRecipe
+  Id: g=7065525cecf96b76c28a2b4d064aea4b
+  Type: ns=43;RecipeSchema
+  Children:
+  - Name: TargetNode
+    Id: g=0b8e5ba95bdaadf4a891a4060501de43
+    Type: NodePointer
+    DataType: NodeId
+    Children:
+    - Name: Kind
+      Id: g=0a74c03fe0cea60b85a5b9c507105b95
+      Type: PropertyType
+      DataType: NodeId
+  - Name: Store
+    Id: g=9c24054aa969d83cf8f8d07222b1d23a
+    Type: NodePointer
+    DataType: NodeId
+    Value: "/Objects/OptimateDemoProject/DataStores/RecipeData"
+    Children:
+    - Name: Kind
+      Id: g=8847be1f60a8a37f1ec7ec119acf739d
+      Type: PropertyType
+      DataType: NodeId
+      Value: "/Types/ObjectTypes/BaseObjectType/Store"
+  - Name: Status
+    Id: g=a979fdf5ba11c3bb9d9e6e5bd236d3eb
+    Type: BaseDataVariableType
+    DataType: RecipeSchemaStatus
+    AccessLevel: Read
+  - Name: Metadata
+    Id: g=c92de5c54c4af44d3f1b8d2dfe503972
+    Type: BaseObjectType
+  - Class: Reference
+    Target: ns=43;i=16
+    Direction: Forward
+  - Class: Reference
+    Target: ns=43;i=18
+    Direction: Forward
+  - Class: Reference
+    Target: ns=43;i=20
+    Direction: Forward
+  - Class: Reference
+    Target: ns=43;i=23
+    Direction: Forward
+  - Class: Reference
+    Target: ns=43;i=26
+    Direction: Forward
+  - Class: Reference
+    Target: ns=43;i=28
+    Direction: Forward
+  - Class: Reference
+    Target: ns=43;i=30
+    Direction: Forward
+  - Class: Reference
+    Target: ns=43;i=33
+    Direction: Forward
+  - Class: Reference
+    Target: ns=43;i=36
+    Direction: Forward
+  - Class: Reference
+    Target: ns=43;i=73
+    Direction: Forward
+  - Class: Reference
+    Target: ns=43;i=76
+    Direction: Forward
+  - Class: Reference
+    Target: ns=43;i=79
+    Direction: Forward
+  - Class: Reference
+    Target: ns=43;i=82
+    Direction: Forward
+  - Class: Reference
+    Target: ns=43;i=91
+    Direction: Forward
+  - Class: Reference
+    Target: ns=43;i=59
+    Direction: Forward
+  - Class: Reference
+    Target: ns=43;i=61
+    Direction: Forward
+  - Class: Reference
+    Target: ns=43;i=63
+    Direction: Forward
+  - Class: Reference
+    Target: ns=43;i=65
+    Direction: Forward
+  - Class: Reference
+    Target: ns=43;i=175
+    Direction: Forward
+- Name: VariableDebug_All
+  Id: g=6ec685f98f4e6994803c2205e4723ba1
+  Type: ns=43;RecipeSchema
+  Children:
+  - Name: TargetNode
+    Id: g=df04731d351737b736ed53771e028a32
+    Type: NodePointer
+    DataType: NodeId
+    Value: "/Objects/OptimateDemoProject/Model"
+    Children:
+    - Name: Kind
+      Id: g=95dfed2631dcd9e218ec44875c7dce07
+      Type: PropertyType
+      DataType: NodeId
+  - Name: Store
+    Id: g=7aa56fc2fd59435746038760023c85e6
+    Type: NodePointer
+    DataType: NodeId
+    Children:
+    - Name: Kind
+      Id: g=1bf1283133b317894e43eb40b4f1e9dd
+      Type: PropertyType
+      DataType: NodeId
+      Value: "/Types/ObjectTypes/BaseObjectType/Store"
+  - Name: Status
+    Id: g=385578c31f7ccdc98a70c010d3e9754f
+    Type: BaseDataVariableType
+    DataType: RecipeSchemaStatus
+    AccessLevel: Read
+  - Name: Metadata
+    Id: g=80bc5e1c91cd0d9b3df7c87e0fec7df9
+    Type: BaseObjectType
+  - Class: Reference
+    Target: ns=43;i=16
+    Direction: Forward
+  - Class: Reference
+    Target: ns=43;i=18
+    Direction: Forward
+  - Class: Reference
+    Target: ns=43;i=20
+    Direction: Forward
+  - Class: Reference
+    Target: ns=43;i=23
+    Direction: Forward
+  - Class: Reference
+    Target: ns=43;i=26
+    Direction: Forward
+  - Class: Reference
+    Target: ns=43;i=28
+    Direction: Forward
+  - Class: Reference
+    Target: ns=43;i=30
+    Direction: Forward
+  - Class: Reference
+    Target: ns=43;i=33
+    Direction: Forward
+  - Class: Reference
+    Target: ns=43;i=36
+    Direction: Forward
+  - Class: Reference
+    Target: ns=43;i=73
+    Direction: Forward
+  - Class: Reference
+    Target: ns=43;i=76
+    Direction: Forward
+  - Class: Reference
+    Target: ns=43;i=79
+    Direction: Forward
+  - Class: Reference
+    Target: ns=43;i=82
+    Direction: Forward
+  - Class: Reference
+    Target: ns=43;i=91
+    Direction: Forward
+  - Class: Reference
+    Target: ns=43;i=59
+    Direction: Forward
+  - Class: Reference
+    Target: ns=43;i=61
+    Direction: Forward
+  - Class: Reference
+    Target: ns=43;i=63
+    Direction: Forward
+  - Class: Reference
+    Target: ns=43;i=65
+    Direction: Forward
+  - Class: Reference
+    Target: ns=43;i=175
+    Direction: Forward

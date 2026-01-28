@@ -4,7 +4,7 @@ Type: FolderType
 Children:
 - Name: UDT_EventCfg
   Id: g=eb1d3fdde60a1b0607f38fadd523bb13
-  Supertype: TagStructure
+  Supertype: RAEtherNetIPTagStructure
   DataType: UDT_EventCfg
   ValueRank: Any
   Children:
@@ -50,3 +50,12 @@ Children:
       Type: BaseDataVariableType
       DataType: String
       Value: "Category"
+  - Name: SymbolName
+    Id: g=fcb9e6b7ec2a0bec053c3809e95e8781
+    Type: BaseDataVariableType
+    DataType: String
+  - Name: BlockRead
+    Id: g=9bb8d731d3019e5d01cfb185e9597b46
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Value: true

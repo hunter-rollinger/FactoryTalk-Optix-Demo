@@ -19,33 +19,3 @@ Children:
     Type: BaseDataVariableType
     DataType: NodeId
     Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project"
-- Name: SearchBrokenDynamicLinks
-  Id: g=9b6fcab2155ceac11df562e91b43facd
-  Type: NetLogic
-  WriteMask: BrowseName|DataType|Description|DisplayName|MinimumSamplingInterval|UserAccessLevel
-  Children:
-  - Name: BehaviourStartPriority
-    Id: g=26300b49040f3b55ad98d2dc0bf1b996
-    Type: BehaviourStartPriorityVariableType
-    DataType: Byte
-    Value: 180
-  - Class: Method
-    Name: FindBrokenDynamicLink
-    Id: g=534f8620fa025e36f796f79b09258040
-  - Name: ns=19;LibraryReference
-    Id: g=8b6f4a379d625108ad788fbdcfd3813b
-    Type: ObjectLibraryReference
-    DataType: ObjectLibraryReferenceDataType
-    Value: 
-     {
-      "TypeId": {
-       "Id": 72,
-       "Namespace": 19
-      },
-      "Body": {
-       "libraryGuid": "f0701375ee41467993d632db6a8fdaa5",
-       "objectGuid": "25e325b083d2fa318f2af235362f6365",
-       "objectVersion": 1,
-       "highestIgnoredVersion": 0
-      }
-     }

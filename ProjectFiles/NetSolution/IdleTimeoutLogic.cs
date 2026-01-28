@@ -30,6 +30,7 @@ using FTOptix.MQTTClient;
 using System.Runtime.CompilerServices;
 using FTOptix.TwinCAT;
 using FTOptix.Report;
+using FTOptix.RecipeX;
 #endregion
 
 public class IdleTimeoutLogic : BaseNetLogic

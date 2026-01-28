@@ -1,0 +1,540 @@
+Name: Testing
+Id: g=8ff21d9762f26b948c4dab99417c5ab6
+Type: FolderType
+Children:
+- Name: Alarm1
+  Id: g=db25b2a3aba2c89c2f4a261335e77bb1
+  Type: OptimateAlarm
+  Children:
+  - Class: Reference
+    Target: ns=25;i=81
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=82
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=83
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=130
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=135
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=132
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=146
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=148
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=150
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=152
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=154
+    Direction: Forward
+  - Name: NormalStateValue
+    Id: g=5f72c3b604fa9ef64e2fbb7c66710e9a
+    Type: BaseDataVariableType
+    DataType: Double
+  - Name: InputValue
+    Id: g=87f1443221e073e77d7ed1de61087b0e
+    Type: BaseDataVariableType
+    DataType: Double
+    Children:
+    - Name: DynamicLink
+      Id: g=854c5cda1198456a897db7ea4f97bc96
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "../../../../Model/Testing/TestAlarm1"
+  - Name: LastEvent
+    Id: g=10ae02e169bd22e4e89320c20dfe164d
+    Type: BaseDataVariableType
+    DataType: BaseDataType
+    ValueRank: OneDimension
+    ArrayDimensions: [0]
+  - Name: Help_Text
+    Id: g=1300709fcfc9a07e2260ac47a8a4a2bb
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "Test Alarm 1 Help Text"
+  - Name: Aux_Text
+    Id: g=25c80cba437b73d1084815346d64398e
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "Test Alarm 1 Auxiliary Text"
+  - Name: Image
+    Id: g=04e7da5e665974005502c24de4363c33
+    Type: BaseDataVariableType
+    DataType: ResourceUri
+    Value: "ns=36;%PROJECTDIR%/Graphics/Coesia - Library/Sliding Door Left.svg"
+  - Name: Overview
+    Id: g=8b1e8511c75797a0dbde9238a9462486
+    Type: BaseDataVariableType
+    DataType: ResourceUri
+    Value: "ns=36;%PROJECTDIR%/Graphics/Coesia - Library/Sliding Door Right.svg"
+  - Name: Message
+    Id: g=4ecaa4e5c63545c6600e775708ee33f6
+    Type: BaseDataVariableType
+    DataType: LocalizedText
+    Value: {"LocaleId":"en-US","Text":"Test Alarm 1"}
+  - Name: Active
+    Id: g=8cf252ca6b23391427940b3a272f3a90
+    Type: BaseDataVariableType
+    DataType: Boolean
+    AccessLevel: Read
+  - Name: Timestamp
+    Id: g=dad42661684adf8dc826b8446c0f6f19
+    Type: BaseDataVariableType
+    DataType: DateTime
+- Name: Alarm2
+  Id: g=7fa3216778564b47af05b58599a25b41
+  Type: OffNormalAlarmController
+  Children:
+  - Name: NormalStateValue
+    Id: g=47340466d4e9fb03fbee4e3fa45976f8
+    Type: BaseDataVariableType
+    DataType: Double
+  - Name: InputValue
+    Id: g=412a144160b793892fe30aa63406c148
+    Type: BaseDataVariableType
+    DataType: Double
+    Children:
+    - Name: DynamicLink
+      Id: g=0adca7346bc04883b2fbb5a5038e0371
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "/Objects/OptimateDemoProject/Model/Testing/TestAlarm2"
+  - Name: LastEvent
+    Id: g=278e748496902ac6ae96460d64d65833
+    Type: BaseDataVariableType
+    DataType: BaseDataType
+    ValueRank: OneDimension
+    ArrayDimensions: [0]
+  - Class: Reference
+    Target: ns=25;i=81
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=82
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=83
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=130
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=135
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=132
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=146
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=148
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=150
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=152
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=154
+    Direction: Forward
+  - Name: AutoAcknowledge
+    Id: g=9d71b484af9bdb3f0ed59276e7ba2b8a
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Value: true
+  - Name: AutoConfirm
+    Id: g=02109467dd9e07c9dade766e4c848fe3
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Value: true
+  - Name: Severity
+    Id: g=1c57748024e997c8c86310ef0e806940
+    Type: BaseDataVariableType
+    DataType: UInt16
+    Value: 1000
+  - Name: Message
+    Id: g=3a34e9711bb64be33bc4202d26185b46
+    Type: BaseDataVariableType
+    DataType: LocalizedText
+    Value: {"LocaleId":"en-US","Text":"TestAlarm2"}
+  - Name: MaxTimeShelved
+    Id: g=3da6f2b5492d11046246bc7dfad323fc
+    Type: BaseDataVariableType
+    DataType: Duration
+  - Name: PresetTimeShelved
+    Id: g=6c7d1c94511b9b484b52f9606fff4769
+    Type: BaseDataVariableType
+    DataType: Duration
+  - Name: LatchingEnabled
+    Id: g=ee0e354ab8d1ce29e6d5a8769029aad5
+    Type: BaseDataVariableType
+    DataType: Boolean
+- Name: Alarm3
+  Id: g=f3533349b8a54dc7a8b69b77d2439fda
+  Type: OffNormalAlarmController
+  Children:
+  - Name: NormalStateValue
+    Id: g=14b077fdb0c47c920591bdda32cd9d65
+    Type: BaseDataVariableType
+    DataType: Double
+  - Name: InputValue
+    Id: g=63aed57265f27aa1f861407fd238c684
+    Type: BaseDataVariableType
+    DataType: Double
+    Children:
+    - Name: DynamicLink
+      Id: g=73fbaad9a32a4f58b1d2eb4e31446aad
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "/Objects/OptimateDemoProject/Model/Testing/TestAlarm3"
+  - Name: LastEvent
+    Id: g=ca5853e1ad13423360e749c9d93926c2
+    Type: BaseDataVariableType
+    DataType: BaseDataType
+    ValueRank: OneDimension
+    ArrayDimensions: [0]
+  - Class: Reference
+    Target: ns=25;i=81
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=82
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=83
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=130
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=135
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=132
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=146
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=148
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=150
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=152
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=154
+    Direction: Forward
+  - Name: AutoAcknowledge
+    Id: g=d3770d68ccdbc86cd951f94da356049f
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Value: true
+  - Name: AutoConfirm
+    Id: g=645012ae7bddac5abe181b879191b744
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Value: true
+  - Name: Severity
+    Id: g=b2e56fa304e29bedd8d8572e5f762434
+    Type: BaseDataVariableType
+    DataType: UInt16
+    Value: 1000
+  - Name: Message
+    Id: g=037fb8a2de5ed789e926d149557ff62d
+    Type: BaseDataVariableType
+    DataType: LocalizedText
+    Value: {"LocaleId":"en-US","Text":"TestAlarm3"}
+  - Name: MaxTimeShelved
+    Id: g=c0f9e4e6c8e82ae74a02634eafe9c899
+    Type: BaseDataVariableType
+    DataType: Duration
+  - Name: PresetTimeShelved
+    Id: g=94da3996b2ddb18f08291e3c39ec6e8a
+    Type: BaseDataVariableType
+    DataType: Duration
+  - Name: LatchingEnabled
+    Id: g=0f21ff09f98dcac389606a3f86c24f6d
+    Type: BaseDataVariableType
+    DataType: Boolean
+- Name: Warning1
+  Id: g=bb66c00f4152c37cd54781894348088f
+  Type: OffNormalAlarmController
+  Children:
+  - Name: NormalStateValue
+    Id: g=97f9985a2de13f5d733c0bc0b022ffa9
+    Type: BaseDataVariableType
+    DataType: Double
+  - Name: InputValue
+    Id: g=2b5980b84400bbe5567137db5d3f43e1
+    Type: BaseDataVariableType
+    DataType: Double
+    Children:
+    - Name: DynamicLink
+      Id: g=2ef7b2fb42ddc7c17c83e5c11ab7ea89
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "/Objects/OptimateDemoProject/Model/Testing/TestWarning1"
+  - Name: LastEvent
+    Id: g=c730faee21613560db2822187acd78af
+    Type: BaseDataVariableType
+    DataType: BaseDataType
+    ValueRank: OneDimension
+    ArrayDimensions: [0]
+  - Class: Reference
+    Target: ns=25;i=81
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=82
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=83
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=130
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=135
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=132
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=146
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=148
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=150
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=152
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=154
+    Direction: Forward
+  - Name: AutoAcknowledge
+    Id: g=aa2a6db8498d5c8a659e829ece9d19a8
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Value: true
+  - Name: AutoConfirm
+    Id: g=d344ff9c81a754cab3f2eeb80b6bf968
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Value: true
+  - Name: Severity
+    Id: g=b21343195afe5e5d84991b5e0b7ce87b
+    Type: BaseDataVariableType
+    DataType: UInt16
+    Value: 100
+  - Name: Message
+    Id: g=c06b9a1611fea8582266269ed52a9c77
+    Type: BaseDataVariableType
+    DataType: LocalizedText
+    Value: {"LocaleId":"en-US","Text":"TestWarning1"}
+  - Name: MaxTimeShelved
+    Id: g=e99126301c89aaae84e4044ea7d07841
+    Type: BaseDataVariableType
+    DataType: Duration
+  - Name: PresetTimeShelved
+    Id: g=58a16985f96d06a0c4ab474d3b7d51c4
+    Type: BaseDataVariableType
+    DataType: Duration
+  - Name: LatchingEnabled
+    Id: g=912dcc5f487efebd5adf038c35c2c542
+    Type: BaseDataVariableType
+    DataType: Boolean
+- Name: Status1
+  Id: g=5e6adea1aaeab7042b87e613f5848a33
+  Type: OffNormalAlarmController
+  Children:
+  - Name: NormalStateValue
+    Id: g=fbbc896d9a6c5ff619d30708fe97c45a
+    Type: BaseDataVariableType
+    DataType: Double
+  - Name: InputValue
+    Id: g=4ef639d9106d5844f397b9d617225abd
+    Type: BaseDataVariableType
+    DataType: Double
+    Children:
+    - Name: DynamicLink
+      Id: g=2d15bf478138c399c5cc1a7894e4038d
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "/Objects/OptimateDemoProject/Model/Testing/TestStatus1"
+  - Name: LastEvent
+    Id: g=475de10807f579716e9aa0b18b3da342
+    Type: BaseDataVariableType
+    DataType: BaseDataType
+    ValueRank: OneDimension
+    ArrayDimensions: [0]
+  - Class: Reference
+    Target: ns=25;i=81
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=82
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=83
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=130
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=135
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=132
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=146
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=148
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=150
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=152
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=154
+    Direction: Forward
+  - Name: AutoAcknowledge
+    Id: g=c7b5a56218786fcceeec058081296c01
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Value: true
+  - Name: AutoConfirm
+    Id: g=4064ad40ac3bfe86fcfe7767df775da0
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Value: true
+  - Name: Severity
+    Id: g=98e9f53f89a15df3fd4c6855fe35b660
+    Type: BaseDataVariableType
+    DataType: UInt16
+    Value: 10
+  - Name: Message
+    Id: g=999984d4ad3f8f64821dc41523f203d5
+    Type: BaseDataVariableType
+    DataType: LocalizedText
+    Value: {"LocaleId":"en-US","Text":"TestStatus1"}
+  - Name: MaxTimeShelved
+    Id: g=b288facbb15949a803354dfa44107eb0
+    Type: BaseDataVariableType
+    DataType: Duration
+  - Name: PresetTimeShelved
+    Id: g=4c765322151aa3e90291f2bd839fa284
+    Type: BaseDataVariableType
+    DataType: Duration
+  - Name: LatchingEnabled
+    Id: g=72394407f8a544b4da2ebffa7e5a25aa
+    Type: BaseDataVariableType
+    DataType: Boolean
+- Name: Message1
+  Id: g=8d8d1dfdd504439b44fe01fa4cd12d39
+  Type: OffNormalAlarmController
+  Children:
+  - Name: NormalStateValue
+    Id: g=7442f34c349cf5fdacee4b0b8d7a070f
+    Type: BaseDataVariableType
+    DataType: Double
+  - Name: InputValue
+    Id: g=cfd9ca593802393602c1e38f27fe6ab5
+    Type: BaseDataVariableType
+    DataType: Double
+    Children:
+    - Name: DynamicLink
+      Id: g=091bcc49a4ab07855a9c9267d30edf30
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "/Objects/OptimateDemoProject/Model/Testing/TestMessage1"
+  - Name: LastEvent
+    Id: g=3a6c1070270b6ede31d7af23c51c4acd
+    Type: BaseDataVariableType
+    DataType: BaseDataType
+    ValueRank: OneDimension
+    ArrayDimensions: [0]
+  - Class: Reference
+    Target: ns=25;i=81
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=82
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=83
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=130
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=135
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=132
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=146
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=148
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=150
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=152
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=154
+    Direction: Forward
+  - Name: AutoAcknowledge
+    Id: g=d2d2b5c35398002f03bac164b109ab68
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Value: true
+  - Name: AutoConfirm
+    Id: g=4047e2bf9da6e224f776ecc4bd185784
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Value: true
+  - Name: Severity
+    Id: g=356193a366dcaad809f360550b09ead7
+    Type: BaseDataVariableType
+    DataType: UInt16
+    Value: 1
+  - Name: Message
+    Id: g=fe0465aaeaa4145932e95b73b3f316c9
+    Type: BaseDataVariableType
+    DataType: LocalizedText
+    Value: {"LocaleId":"en-US","Text":"TestMessage1"}
+  - Name: MaxTimeShelved
+    Id: g=710d6b64563afeface4436a9423106e3
+    Type: BaseDataVariableType
+    DataType: Duration
+  - Name: PresetTimeShelved
+    Id: g=e4fe412c8cbaac1120a63309e0451c53
+    Type: BaseDataVariableType
+    DataType: Duration
+  - Name: LatchingEnabled
+    Id: g=ffe82f34bfcb8e4ecc0f0b3754038fbd
+    Type: BaseDataVariableType
+    DataType: Boolean

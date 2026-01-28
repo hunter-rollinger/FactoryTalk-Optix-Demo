@@ -30,6 +30,7 @@ using FTOptix.System;
 using FTOptix.EdgeAppPlatform;
 using FTOptix.TwinCAT;
 using FTOptix.Report;
+using FTOptix.RecipeX;
 #endregion
 
 public class CustomAlarming : BaseNetLogic
