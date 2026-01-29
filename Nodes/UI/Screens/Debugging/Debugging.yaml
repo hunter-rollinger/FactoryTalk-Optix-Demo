@@ -2030,12 +2030,12 @@ Children:
         Id: g=781e3136a9b033aeeefa4b8911f945cb
         Type: BaseDataVariableType
         DataType: String
-        Value: "On"
+        Value: "TestAlarm2"
       - Name: Off Text
         Id: g=548e6dc3ca687df20891abb242f72c23
         Type: BaseDataVariableType
         DataType: String
-        Value: "Off"
+        Value: "TestAlarm2"
       - Name: off
         Id: g=f71fb4bd3a491a5b8f46b64484ca4562
         Type: Label
@@ -2183,12 +2183,12 @@ Children:
         Id: g=ea7580e559df064448c248bb2f6e828c
         Type: BaseDataVariableType
         DataType: String
-        Value: "On"
+        Value: "TestAlarm3"
       - Name: Off Text
         Id: g=7cd1102deba5c7cb8da5d238577a9c82
         Type: BaseDataVariableType
         DataType: String
-        Value: "Off"
+        Value: "TestAlarm3"
       - Name: off
         Id: g=2f0cab8b36425e5872c17369fed0f4f2
         Type: Label
@@ -2336,12 +2336,12 @@ Children:
         Id: g=295b4e4d1e5fb50bfac132877fc5421b
         Type: BaseDataVariableType
         DataType: String
-        Value: "On"
+        Value: "TestWarning1"
       - Name: Off Text
         Id: g=cfe76e9dc59d27aaec42249cf022538f
         Type: BaseDataVariableType
         DataType: String
-        Value: "Off"
+        Value: "TestWarning1"
       - Name: off
         Id: g=9deaa69579b92d1c4d34c133232c7649
         Type: Label
@@ -2489,12 +2489,12 @@ Children:
         Id: g=0db498c47693c419aefd148a52f62790
         Type: BaseDataVariableType
         DataType: String
-        Value: "On"
+        Value: "TestStatus1"
       - Name: Off Text
         Id: g=333b66ecf5c913bf11f35abf70e2ba53
         Type: BaseDataVariableType
         DataType: String
-        Value: "Off"
+        Value: "TestStatus1"
       - Name: off
         Id: g=0d9b8dab8c3a80eec2cbf9a7f0203296
         Type: Label
@@ -2642,12 +2642,12 @@ Children:
         Id: g=c2d58f2350fd30693454382a5b04af91
         Type: BaseDataVariableType
         DataType: String
-        Value: "On"
+        Value: "TestMessage1"
       - Name: Off Text
         Id: g=ce81cdea20247dc3fc8c632f6017f0fb
         Type: BaseDataVariableType
         DataType: String
-        Value: "Off"
+        Value: "TestMessage1"
       - Name: off
         Id: g=2b32eb003daa372ff80778a4ee921f29
         Type: Label
@@ -2701,6 +2701,159 @@ Children:
                 Value: "../../../../switch/Checked"
       - Name: Button Enabled
         Id: g=50d337d6349d3d8640c75769b4d6658b
+        Type: BaseDataVariableType
+        DataType: Boolean
+        Value: true
+    - Name: RotateAlarms
+      Id: g=ac57a6717e6748a940b82e14a24145dd
+      Type: Switch_OnOff
+      Children:
+      - Name: switch
+        Id: g=da26e5445fbb8da7d06d8bbaf4709adc
+        Type: Switch
+        Children:
+        - Name: Checked
+          Id: g=b1c35a9854e577f152235a024de8120e
+          Type: BaseDataVariableType
+          DataType: Boolean
+          Children:
+          - Name: DynamicLink
+            Id: g=1c237a75277eb96ac2569e6b4876c875
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "../../Toggle"
+        - Name: Enabled
+          Id: g=d4d5fc08adfce03904cbeb7835f6042d
+          Type: BaseDataVariableType
+          DataType: Boolean
+          Value: true
+          Children:
+          - Name: DynamicLink
+            Id: g=d9f000af2a489b8288892bc2339b9977
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "../../Button Enabled"
+      - Name: Toggle
+        Id: g=964df224e81c9dbc03d0081cb6a610cf
+        Type: BaseDataVariableType
+        DataType: Boolean
+        Children:
+        - Name: DynamicLink
+          Id: g=bfe2aadc4b64401af90810675d66584e
+          Type: DynamicLink
+          DataType: NodePath
+          Value: "/Objects/OptimateDemoProject/RunTime NetLogic/CustomAlarming/BannerRotation"
+          Children:
+          - Name: Mode
+            Id: g=1068ebb5253dcfaa115d9ec04b4f5e40
+            Type: BaseVariableType
+            DataType: DynamicLinkMode
+            ModellingRule: Optional
+            Value: 2
+      - Name: on
+        Id: g=2934d747f6e323719559eb83fc2a2588
+        Type: Label
+        Children:
+        - Name: Text
+          Id: g=49e36148621b70b77414ff984d015339
+          Type: BaseDataVariableType
+          DataType: LocalizedText
+          Children:
+          - Name: DynamicLink
+            Id: g=191fdc4c44a616630ec6e986f927e079
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "../../On Text"
+        - Name: TextColor
+          Id: g=9dda31b732fc31939081f4177cd648d8
+          Type: BaseDataVariableType
+          DataType: Color
+          Value: "#ffffff"
+        - Name: Enabled
+          Id: g=fe3766e70084d10a85c43b66ff4a2909
+          Type: BaseDataVariableType
+          DataType: Boolean
+          Value: true
+          Children:
+          - Name: DynamicLink
+            Id: g=75ca24f4ed8d3ab9164209707184f6dc
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "../../Button Enabled"
+        - Name: Visible
+          Id: g=431ff796dd9da5134e65a408476de736
+          Type: BaseDataVariableType
+          DataType: Boolean
+          Value: true
+          Children:
+          - Name: DynamicLink
+            Id: g=0bbdcb2734a200b963169684f211be6b
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "../../switch/Checked"
+      - Name: On Text
+        Id: g=673ede8f82a882707ed226e86f9e2113
+        Type: BaseDataVariableType
+        DataType: String
+        Value: "BannerRotation"
+      - Name: Off Text
+        Id: g=4c067e3f2d5787188b534b0c339868f8
+        Type: BaseDataVariableType
+        DataType: String
+        Value: "BannerRotation"
+      - Name: off
+        Id: g=0b406daaafe1ab1a94447628c87c5b9e
+        Type: Label
+        Children:
+        - Name: Text
+          Id: g=8f193237423903f583b97e67c2c3805d
+          Type: BaseDataVariableType
+          DataType: LocalizedText
+          Children:
+          - Name: DynamicLink
+            Id: g=336d6f2429f75bbe4f85f9fb05ed2ca5
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "../../Off Text"
+        - Name: TextColor
+          Id: g=25d73683bd0f80211a4848a3fd3f69a3
+          Type: BaseDataVariableType
+          DataType: Color
+          Value: "#ffffff"
+        - Name: Enabled
+          Id: g=60f98451466a91d32e20cfd19e46de7b
+          Type: BaseDataVariableType
+          DataType: Boolean
+          Value: true
+          Children:
+          - Name: DynamicLink
+            Id: g=3fd92d551631e44033a31a421bbc9fc9
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "../../Button Enabled"
+        - Name: Visible
+          Id: g=2f036e00ff489fffbc336aa3e3360662
+          Type: BaseDataVariableType
+          DataType: Boolean
+          Value: true
+          Children:
+          - Name: ExpressionEvaluator1
+            Id: g=e421196f6da012a91d818bf2db494b87
+            Type: ExpressionEvaluator
+            Children:
+            - Name: Source0
+              Id: g=78c340e823f553b530cb4b6d16ad3c96
+              Type: BaseDataVariableType
+              DataType: BaseDataType
+              ReferenceType: HasSource
+              Children:
+              - Name: DynamicLink
+                Id: g=ce7cffab9b4e57a18ea955130df3cf32
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "../../../../switch/Checked"
+      - Name: Button Enabled
+        Id: g=c46f6e859b11f2653b6bf303b77e316e
         Type: BaseDataVariableType
         DataType: Boolean
         Value: true

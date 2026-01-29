@@ -3645,159 +3645,6 @@ Children:
             DataType: Size
             ModellingRule: Optional
             Value: 32.0
-          - Name: MouseClickEventHandler2
-            Id: g=392899ef2950c53f502f478f134d92e2
-            Type: EventHandler
-            Children:
-            - Name: ListenEventType
-              Id: g=9750807cffda2a6b8cef2a1fb35f9ff4
-              Type: PropertyType
-              DataType: NodeId
-              Value: "/Types/EventTypes/BaseEventType/MouseEvent/MouseClickEvent"
-            - Name: MethodsToCall
-              Id: g=8c30d2c1c873829924cfb7a67e44006f
-              Type: BaseObjectType
-              Children:
-              - Name: MethodContainer1
-                Id: g=876d6f67f06bd6c6f57714f724c6ce0a
-                Type: BaseObjectType
-                Children:
-                - Name: ns=9;ObjectPointer
-                  Id: g=778d7d192095a485235460dbbd1e8839
-                  Type: NodePointer
-                  DataType: NodeId
-                  Children:
-                  - Name: Kind
-                    Id: g=61ec584a2a6278fe15a49f7d67fa841c
-                    Type: PropertyType
-                    DataType: NodeId
-                    Value: "/Types/ObjectTypes/BaseObjectType"
-                  - Name: DynamicLink
-                    Id: g=0313e70e604a1b4c0596c6bfc3177152
-                    Type: DynamicLink
-                    DataType: NodePath
-                    Value: "{BurgerMenu}@NodeId"
-                    Children:
-                    - Name: Mode
-                      Id: g=11d2978e1f01cec7494d436b5ee9cef2
-                      Type: BaseVariableType
-                      DataType: DynamicLinkMode
-                      ModellingRule: Optional
-                      Value: 2
-                - Name: ns=9;Method
-                  Id: g=d37017314a9e5048d62390771ddfa455
-                  Type: BaseDataVariableType
-                  DataType: String
-                  Value: "ChangePanel"
-                - Name: InputArguments
-                  Id: g=a91f79eca26c1bbc6cefff4abef19217
-                  Type: BaseObjectType
-                  Children:
-                  - Name: NewPanel
-                    Id: g=492715b8f4abd0569123f5b04fdbb334
-                    Type: BaseDataVariableType
-                    DataType: NodeId
-                    Description: {"NamespaceIndex":11,"TextId":"ChangePanelNewPanelDescription"}
-                    Children:
-                    - Name: ConditionalConverter1
-                      Id: g=6353ccba230adb3244466df81852840f
-                      Type: ConditionalConverter
-                      Children:
-                      - Name: Condition
-                        Id: g=7276a2bef6a360723706cdc9a5932e91
-                        Type: BaseDataVariableType
-                        DataType: Boolean
-                        ReferenceType: HasSource
-                        Children:
-                        - Name: ExpressionEvaluator1
-                          Id: g=602ade0a26551cea06b287c6c3d242ea
-                          Type: ExpressionEvaluator
-                          Children:
-                          - Name: Expression
-                            Id: g=aa3e51cb5791679a17f35b112dfc6b6b
-                            Type: BaseDataVariableType
-                            DataType: String
-                            ReferenceType: HasParameter
-                            ModellingRule: Optional
-                            Value: "{0}=={1}"
-                          - Name: ns=9;Source0
-                            Id: g=43afb2e04cf60f49da88bc7dc8283385
-                            Type: BaseDataVariableType
-                            DataType: BaseDataType
-                            ReferenceType: HasSource
-                            Children:
-                            - Name: DynamicLink
-                              Id: g=97df4dcc5950a4063636afa442eb0171
-                              Type: DynamicLink
-                              DataType: NodePath
-                              Value: "{BurgerMenu}/Panel@NodeId"
-                          - Name: ns=9;Source1
-                            Id: g=31a67cf3ce1825e49260dac1b895b43d
-                            Type: BaseDataVariableType
-                            DataType: BaseDataType
-                            ReferenceType: HasSource
-                            Children:
-                            - Name: DynamicLink
-                              Id: g=db33b024af4bd2f833afab144202cd1b
-                              Type: DynamicLink
-                              DataType: NodePath
-                              Value: "/Objects/OptimateDemoProject/UI/Screens/Burger/BurgerMenu"
-                      - Name: TrueValue
-                        Id: g=f77936f2c07ce73f4b94806365112b5e
-                        Type: BaseDataVariableType
-                        DataType: NodeId
-                        ReferenceType: HasParameter
-                        ModellingRule: Optional
-                        Value: "/Objects/OptimateDemoProject/UI/Screens/Base Screens/Empty"
-                      - Name: FalseValue
-                        Id: g=43c31674842ea017faec00148111b31c
-                        Type: BaseDataVariableType
-                        DataType: NodeId
-                        ReferenceType: HasParameter
-                        ModellingRule: Optional
-                        Value: "/Objects/OptimateDemoProject/UI/Screens/Burger/BurgerMenu"
-                  - Name: AliasNode
-                    Id: g=e485fe09e0eea29c88b39b4ff57577d7
-                    Type: BaseDataVariableType
-                    DataType: NodeId
-                    Description: {"NamespaceIndex":11,"TextId":"ChangePanelAliasNodeDescription"}
-                    ValueRank: ScalarOrOneDimension
-            - Name: EventArguments
-              Id: g=9b30759f614c08f909e499c568c59e8d
-              Type: MouseClickEvent
-              Children:
-              - Name: EventId
-                Id: g=6759a9f678879807fcb6211dc25db4f5
-                Type: PropertyType
-                DataType: ByteString
-              - Name: EventType
-                Id: g=affa2fff2bf94c17d1dd9c7d88635766
-                Type: PropertyType
-                DataType: NodeId
-              - Name: SourceNode
-                Id: g=ccbf5d85ce5bfc342dfe5ea6ac4d5471
-                Type: PropertyType
-                DataType: NodeId
-              - Name: SourceName
-                Id: g=f09ca875486a755dc0566d4a3d4a0ca5
-                Type: PropertyType
-                DataType: String
-              - Name: Time
-                Id: g=980baecbf303c001a1800ca9ac68d133
-                Type: PropertyType
-                DataType: UtcTime
-              - Name: ReceiveTime
-                Id: g=d508ae13502dfac900317a43157f4950
-                Type: PropertyType
-                DataType: UtcTime
-              - Name: Message
-                Id: g=f2be603dafd38b4ba8d1d47c0e77dabf
-                Type: PropertyType
-                DataType: LocalizedText
-              - Name: Severity
-                Id: g=c8315c3d328adedb69a4e8754afda15f
-                Type: PropertyType
-                DataType: UInt16
           - Name: BackgroundColor
             Id: g=31ef66ec540ff31605871ea274cf9ddd
             Type: BaseDataVariableType
@@ -3805,70 +3652,171 @@ Children:
             Value: "#e4e4e4"
             Children:
             - Name: ConditionalConverter1
-              Id: g=3a82e7b7cefa615cceea45a0bfddb571
+              Id: g=b721e98ddbf6232b48aa3c3c6168044e
               Type: ConditionalConverter
               Children:
               - Name: Condition
-                Id: g=988547fbf4002d36ef998afcbfa50a03
+                Id: g=cf094c647dba92b94b9361ad4080606b
                 Type: BaseDataVariableType
                 DataType: Boolean
                 ReferenceType: HasSource
                 Children:
                 - Name: ExpressionEvaluator1
-                  Id: g=bd2b335957e2bd86589d705dd9cabd22
+                  Id: g=2750a132ae284662ed446d02d09dca8f
                   Type: ExpressionEvaluator
                   Children:
                   - Name: Expression
-                    Id: g=606c50252bf66de7e6710611c3f1fcc7
+                    Id: g=12db024a26dcd55d12f28fc9fae5471f
                     Type: BaseDataVariableType
                     DataType: String
                     ReferenceType: HasParameter
                     ModellingRule: Optional
-                    Value: "{0}=={1}"
+                    Value: "{0}=={1}||{2}==1"
                   - Name: ns=9;Source0
-                    Id: g=dbfd51047b53b43aad02ceb028fc85e0
+                    Id: g=c2411aef67ac361df44769b9677ec7a6
                     Type: BaseDataVariableType
                     DataType: BaseDataType
                     ReferenceType: HasSource
                     Children:
                     - Name: DynamicLink
-                      Id: g=5d88d8b98e9d892b0114f5eca90a1c6f
+                      Id: g=a5a0ab3034998a47d5e2327c86d75655
                       Type: DynamicLink
                       DataType: NodePath
-                      Value: "{BurgerMenu}/Panel@NodeId"
+                      Value: "../../../../../../../Internal_Mode/ActiveMode"
                   - Name: ns=9;Source1
-                    Id: g=d6f6fc851500af8a00fff06ff3e0a4e6
+                    Id: g=60eae27b7e9b48c6af0382baf35109c8
                     Type: BaseDataVariableType
                     DataType: BaseDataType
                     ReferenceType: HasSource
                     Children:
                     - Name: DynamicLink
-                      Id: g=7007106ab94f053b7e998fadeacd57c2
+                      Id: g=cecbcd2020e30ba14fdce9ec714b948f
                       Type: DynamicLink
                       DataType: NodePath
-                      Value: "/Objects/OptimateDemoProject/UI/Screens/Burger/BurgerMenu@NodeId"
+                      Value: "../../../../../../../Internal_Mode/BurgerScreen"
+                  - Name: ns=9;Source2
+                    Id: g=9c1e4b9872a954f57f90921c809bb632
+                    Type: BaseDataVariableType
+                    DataType: BaseDataType
+                    ReferenceType: HasSource
+                    Children:
+                    - Name: DynamicLink
+                      Id: g=51799382556c4f78f853e2e643eaffc9
+                      Type: DynamicLink
+                      DataType: NodePath
+                      Value: "../../../../../../../../../MainMenuScreenVisibility"
               - Name: TrueValue
-                Id: g=14b70f31eaf01480d0a01f3886208093
+                Id: g=0b47c40e79a5033fc07f0af2cfe4b514
                 Type: BaseDataVariableType
                 DataType: Color
                 ReferenceType: HasParameter
                 Children:
                 - Name: DynamicLink
-                  Id: g=d2461ff9ed7a5be443e0e916aa74a18c
+                  Id: g=6f65507513a7c9611bf53aeda67e28ea
                   Type: DynamicLink
                   DataType: NodePath
                   Value: "/Objects/OptimateDemoProject/UI/Stylesheets/Jones/ButtonStyles/BottomNavButtons/PressedColor"
               - Name: FalseValue
-                Id: g=063146f8cd25962ba9fcc4162d37a942
+                Id: g=07008fec6767289c5e33043652627ea1
                 Type: BaseDataVariableType
                 DataType: Color
                 ReferenceType: HasParameter
                 Children:
                 - Name: DynamicLink
-                  Id: g=3834f2ba06f7bdc6abe2717f56c4a568
+                  Id: g=3ed986cb47d0540badbf8c41d17799cb
                   Type: DynamicLink
                   DataType: NodePath
                   Value: "/Objects/OptimateDemoProject/UI/Stylesheets/Jones/ButtonStyles/BottomNavButtons/Color"
+          - Name: MouseClickEventHandler1
+            Id: g=ade96222bde4df3683a3a560462fb903
+            Type: EventHandler
+            Children:
+            - Name: ListenEventType
+              Id: g=c0d49d216848ddc7179e7a90c24776ef
+              Type: PropertyType
+              DataType: NodeId
+              Value: "/Types/EventTypes/BaseEventType/MouseEvent/MouseClickEvent"
+            - Name: MethodsToCall
+              Id: g=5394784fac7675b619dcea22202b47a1
+              Type: BaseObjectType
+              Children:
+              - Name: MethodContainer1
+                Id: g=bf2ffaa81c78e055c42a1f01acb040ac
+                Type: BaseObjectType
+                Children:
+                - Name: ns=9;ObjectPointer
+                  Id: g=4401c20a243f01286ab00fa8bbdf0fb0
+                  Type: NodePointer
+                  DataType: NodeId
+                  Value: "/Objects/Commands/VariableCommands"
+                  Children:
+                  - Name: Kind
+                    Id: g=fb49acf4923a6501f9d9eb19a44fb7ea
+                    Type: PropertyType
+                    DataType: NodeId
+                    Value: "/Types/ObjectTypes/BaseObjectType"
+                - Name: ns=9;Method
+                  Id: g=809e2410fdb6e518e3575989edf3c5aa
+                  Type: BaseDataVariableType
+                  DataType: String
+                  Value: "Toggle"
+                - Name: InputArguments
+                  Id: g=3285a36447eebea73284a11294dce67a
+                  Type: BaseObjectType
+                  Children:
+                  - Name: VariableToModify
+                    Id: g=57dc9c8990f821d788e9be8b43b789b1
+                    Type: BaseDataVariableType
+                    DataType: VariablePointer
+                    Description: {"NamespaceIndex":9,"TextId":"ToggleVariableToModifyDescription"}
+                    Children:
+                    - Name: DynamicLink
+                      Id: g=9104a9782c0faf60e0b8208a68a3a18a
+                      Type: DynamicLink
+                      DataType: NodePath
+                      Value: "../../../../../../../../../MainMenuScreenVisibility@NodeId"
+                  - Name: ArrayIndex
+                    Id: g=0bf450bc7e25c4e7c0a5b7b9de2d6095
+                    Type: BaseDataVariableType
+                    DataType: UInt32
+                    Description: {"NamespaceIndex":9,"TextId":"ToggleArrayIndexDescription"}
+                    ValueRank: ScalarOrOneDimension
+            - Name: EventArguments
+              Id: g=aa9b11d523c6584aa6203c3a6bffcfd6
+              Type: MouseClickEvent
+              Children:
+              - Name: EventId
+                Id: g=e723c0d5aedb2c75c94bcae6e5ce92a2
+                Type: PropertyType
+                DataType: ByteString
+              - Name: EventType
+                Id: g=c15995fdeb137b7542f63b4ef711b975
+                Type: PropertyType
+                DataType: NodeId
+              - Name: SourceNode
+                Id: g=cd5b41de71bb7dc0bdc3258398c01adb
+                Type: PropertyType
+                DataType: NodeId
+              - Name: SourceName
+                Id: g=f33817c12659c0faaeb06fff784f8a58
+                Type: PropertyType
+                DataType: String
+              - Name: Time
+                Id: g=f0afd94b6e18223a02bb77332ebfdc23
+                Type: PropertyType
+                DataType: UtcTime
+              - Name: ReceiveTime
+                Id: g=d3a5724d5980073b68b169fe952fc946
+                Type: PropertyType
+                DataType: UtcTime
+              - Name: Message
+                Id: g=502c794eb6f55f067fc087592ab9fe87
+                Type: PropertyType
+                DataType: LocalizedText
+              - Name: Severity
+                Id: g=ee6fb152ff423360251b9da094ddcf40
+                Type: PropertyType
+                DataType: UInt16
         - Name: Production
           Id: g=e6a5051a7e1e4815c3343d0f6a6b7049
           Type: Button
@@ -5151,6 +5099,12 @@ Children:
                   Type: DynamicLink
                   DataType: NodePath
                   Value: "/Objects/OptimateDemoProject/UI/Stylesheets/Jones/ButtonStyles/BottomNavButtons/Color"
+          - Name: Visible
+            Id: g=f6b978621946ede0816c557064398f35
+            Type: BaseDataVariableType
+            DataType: Boolean
+            ModellingRule: Optional
+            Value: true
       - Name: Internal_Mode
         Id: g=5e2f830f02ae573d49636998804478ee
         Type: BaseObjectType
@@ -5182,6 +5136,10 @@ Children:
           DataType: Int32
           Description: {"LocaleId":"en-US","Text":"init to 1 since prod home is default"}
           Value: 1
+        - Name: BurgerScreen
+          Id: g=b6dea893906e10d1cee8f317f29e09b3
+          Type: BaseDataVariableType
+          DataType: Int32
     - Name: coesia logo
       Id: g=74c6a7afd5ad49b8023d3eef7d44cd72
       Type: Image
@@ -5450,6 +5408,10 @@ Children:
       DataType: Size
       ModellingRule: Optional
       Value: 20.0
+  - Name: MainMenuScreenVisibility
+    Id: g=a3b2fffc9fa2e0ed425c181e4c1a104d
+    Type: BaseDataVariableType
+    DataType: Boolean
 - Name: Menu_Bar
   Id: g=d13f2f6fe136a32b8ce6472de8c91cef
   Supertype: Screen
@@ -5755,6 +5717,114 @@ Children:
       Type: DynamicLink
       DataType: NodePath
       Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Light Grey 6"
+  - Name: BackArrow
+    Id: g=06a4d90e23a2f614789baf658ae1bb93
+    Type: Image
+    Children:
+    - Name: Path
+      Id: g=94410a945f09200ba7c4151c59c9896e
+      Type: BaseDataVariableType
+      DataType: ResourceUri
+      Value: "ns=36;%PROJECTDIR%/Graphics/Coesia - Library/General/32x32/prev.svg"
+    - Name: Width
+      Id: g=6d4589fc17a80a86bfdae0b339af2a3d
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 32.0
+    - Name: Height
+      Id: g=5b3d96078deee215ba2291d54b211b56
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 32.0
+    - Name: ImageLeftMargin
+      Id: g=4a8a8d8c4dd19263e389d7c8bb497923
+      Type: BaseDataVariableType
+      DataType: Size
+      ModellingRule: Optional
+    - Name: ImageTopMargin
+      Id: g=f4daaaed082393570e07919aa1475678
+      Type: BaseDataVariableType
+      DataType: Size
+      ModellingRule: Optional
+    - Name: LeftMargin
+      Id: g=3a12e5a590418e317db7134af43f4cad
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 20.0
+    - Name: TopMargin
+      Id: g=de211e55d274dd14f8a775c2dd3497e8
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 20.0
+  - Name: Text
+    Id: g=0f13b952dbf0c3a86563f738a9c17f59
+    Type: Label
+    Children:
+    - Name: Text
+      Id: g=d1294e9fa9c97b5989d1bf383a3d5d46
+      Type: BaseDataVariableType
+      DataType: LocalizedText
+      Children:
+      - Name: DynamicLink
+        Id: g=2707ae9f9801a90b3b7446f03be3841e
+        Type: DynamicLink
+        DataType: NodePath
+        Value: "../../BurgerMenuBarText"
+    - Name: LeftMargin
+      Id: g=0b661f8ccf79eea5a893c6812c2864df
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 62.0
+    - Name: TopMargin
+      Id: g=088e3282807809e434a71731703ccbfb
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 20.0
+    - Name: TextHorizontalAlignment
+      Id: g=073ff58f87c7deb88dd68171e7143341
+      Type: BaseVariableType
+      DataType: TextHorizontalAlignment
+      ModellingRule: Optional
+    - Name: TextVerticalAlignment
+      Id: g=81a1fd3c16f70c7b78540d628f030645
+      Type: BaseVariableType
+      DataType: TextVerticalAlignment
+      ModellingRule: Optional
+      Value: 1
+    - Name: Style
+      Id: g=9402d6a8a8ffb052dd71cb3efc0b989c
+      Type: BaseDataVariableType
+      DataType: String
+      ModellingRule: Optional
+      Value: "StandardControlLabel"
+    - Name: TextColor
+      Id: g=ace43926e3fb2c040076790e9a9e196f
+      Type: BaseDataVariableType
+      DataType: Color
+      Value: "#000000"
+      Children:
+      - Name: DynamicLink
+        Id: g=8c9420272fd08b8c6a2c86017ede1dc6
+        Type: DynamicLink
+        DataType: NodePath
+        Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Dark Grey 5"
+    - Name: Height
+      Id: g=ded6a0105d34f238eb634242223fd98b
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 32.0
+  - Name: BurgerMenuBarText
+    Id: g=346825a458a95050c85dccf9411317bd
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "Test"
 - Name: Empty
   Id: g=c8b3cd8f931c33ed8b2c01b7f05167ba
   Supertype: Screen
