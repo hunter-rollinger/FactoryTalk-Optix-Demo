@@ -265,6 +265,11 @@ public class Production_Time_Chart : FTOptix.UI.ScaleLayout
 {
 }
 
+[MapType(NamespaceUri = "OptimateDemoProject", Guid = "71cef6cb9448ed8eec272a74a2aac225")]
+public class AlarmGrid : FTOptix.UI.Panel
+{
+}
+
 [MapType(NamespaceUri = "OptimateDemoProject", Guid = "927cfa372c73f3452566064604ed4a4f")]
 public class Letters : FTOptix.UI.Panel
 {
@@ -302,10 +307,5 @@ public class BasicSpaceButton : FTOptix.UI.VirtualKeyboardSymbolButton
 
 [MapType(NamespaceUri = "OptimateDemoProject", Guid = "cf246b9bd07567ff4a53fa5a9a230801")]
 public class BasicSwitchPushButton : FTOptix.UI.Button
-{
-}
-
-[MapType(NamespaceUri = "OptimateDemoProject", Guid = "71cef6cb9448ed8eec272a74a2aac225")]
-public class AlarmGrid : FTOptix.UI.Panel
 {
 }

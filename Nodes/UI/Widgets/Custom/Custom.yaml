@@ -1,5 +1,4 @@
 Name: Custom
-Id: g=c99a3c8e27521449c6fddace319ca0d4
 Type: FolderType
 Children:
 - Name: DigitalFeedbackCounter
@@ -8,1240 +7,1009 @@ Children:
   ReferenceType: HasComponent
   Children:
   - Name: Width
-    Id: g=0ef713ad28dc0b1872f8de6c87fc06df
     Type: BaseVariableType
     DataType: Size
     ModellingRule: Optional
     Value: 268.0
   - Name: Height
-    Id: g=7562e2e4690b3b3ac5810e48ec5feabe
     Type: BaseVariableType
     DataType: Size
     ModellingRule: Optional
     Value: 162.0
   - Name: HorizontalAlignment
-    Id: g=a58fe23a51fb89ff8f412438b560e6de
     Type: BaseVariableType
     DataType: HorizontalAlignment
     ModellingRule: Optional
   - Name: Scalable
-    Id: g=3ded314c87b5e8ee86080119b51667da
     Type: ScaleLayout
     Children:
     - Name: OriginalWidth
-      Id: g=f168982829dcf493d9c775e62436a150
       Type: BaseDataVariableType
       DataType: Size
       ModellingRule: Optional
       Value: 268.0
     - Name: OriginalHeight
-      Id: g=2580ce4a8838431b4c313cfa93276660
       Type: BaseDataVariableType
       DataType: Size
       ModellingRule: Optional
       Value: 162.0
     - Name: HorizontalAlignment
-      Id: g=e0442608863d05b1f53de409bbec1fbf
       Type: BaseVariableType
       DataType: HorizontalAlignment
       ModellingRule: Optional
       Value: 3
     - Name: VerticalAlignment
-      Id: g=205cec6c2a781f9e860610e1792452d7
       Type: BaseVariableType
       DataType: VerticalAlignment
       ModellingRule: Optional
       Value: 3
     - Name: Rectangle1
-      Id: g=d4c2efcc0066cc6bd329f24d7a0332ca
       Type: Rectangle
       Children:
       - Name: Width
-        Id: g=78cb0c8d82f82ab86e4b20f40d71258c
         Type: BaseVariableType
         DataType: Size
         ModellingRule: Optional
         Value: 50.0
       - Name: Height
-        Id: g=9f7122e910f18e012ec3d4f7c96f6bec
         Type: BaseVariableType
         DataType: Size
         ModellingRule: Optional
         Value: 50.0
       - Name: HorizontalAlignment
-        Id: g=d62a3fd45a47b7b5c499374f9c5c79b9
         Type: BaseVariableType
         DataType: HorizontalAlignment
         ModellingRule: Optional
         Value: 3
       - Name: VerticalAlignment
-        Id: g=53cb6a476d3cbdd8411ab9dac2502725
         Type: BaseVariableType
         DataType: VerticalAlignment
         ModellingRule: Optional
         Value: 3
       - Name: BorderColor
-        Id: g=0cf7d2458e60558503fe9b49ddccc705
         Type: BaseDataVariableType
         DataType: Color
         Value: "#cc0036"
         Children:
         - Name: KeyValueConverter1
-          Id: g=0d4817144a83fd3dd9fd9bb62542cef1
           Type: ValueMapConverter
           Children:
           - Name: Source
-            Id: g=0d62f02c438adbe85e807e2cdaf6e890
             Type: BaseDataVariableType
             DataType: BaseDataType
             ReferenceType: HasSource
             Children:
             - Name: ConditionalConverter1
-              Id: g=4658b19446ac239c27d0799de8f4d6d7
               Type: ConditionalConverter
               Children:
               - Name: Condition
-                Id: g=5b31c1581b3925fadc7a81655e9c6c37
                 Type: BaseDataVariableType
                 DataType: Boolean
                 ReferenceType: HasSource
                 Children:
                 - Name: ExpressionEvaluator1
-                  Id: g=71fa61a5502529578b73e3f2045ba56d
                   Type: ExpressionEvaluator
                   Children:
                   - Name: Expression
-                    Id: g=dc1b347723e37652babd463cab5cb1db
                     Type: BaseDataVariableType
                     DataType: String
                     ReferenceType: HasParameter
                     ModellingRule: Optional
                     Value: "{#currentlySelected} == {#elementIndex}"
                   - Name: ns=9;SourcecurrentlySelected
-                    Id: g=d4a1d20b1803dcfa0afd1eb2b24a1da1
                     Type: BaseDataVariableType
                     DataType: BaseDataType
                     ReferenceType: HasSource
                     Children:
                     - Name: DynamicLink
-                      Id: g=7adb4a747e768c99fb3de9456920d5ff
                       Type: DynamicLink
                       DataType: NodePath
                       Value: "../../../../../../../../../IndexVariable"
                   - Name: ns=9;SourceelementIndex
-                    Id: g=6a3f235689c621202d0d935df4c69a2a
                     Type: BaseDataVariableType
                     DataType: BaseDataType
                     ReferenceType: HasSource
                     Children:
                     - Name: DynamicLink
-                      Id: g=7215fe1100c6dbf79175211a4c486794
                       Type: DynamicLink
                       DataType: NodePath
                       Value: "{DigitalFeedbackCounter}/CounterNumber"
               - Name: TrueValue
-                Id: g=7035e714076c180a6e3d176a106c7b6a
                 Type: BaseDataVariableType
                 DataType: Int32
                 ReferenceType: HasParameter
                 ModellingRule: Optional
                 Value: 1
               - Name: FalseValue
-                Id: g=1821468c67f2617e6a7de733cf2adcfa
                 Type: BaseDataVariableType
                 DataType: Int32
                 ReferenceType: HasParameter
                 Children:
                 - Name: ConditionalConverter1
-                  Id: g=6ec6e99d518242915bb70367148c9aec
                   Type: ConditionalConverter
                   Children:
                   - Name: Condition
-                    Id: g=9634a58d69d43a262153390547c5e29d
                     Type: BaseDataVariableType
                     DataType: Boolean
                     ReferenceType: HasSource
                     Children:
                     - Name: ExpressionEvaluator1
-                      Id: g=a5fa37a1c6259b38bda6a9b026aad931
                       Type: ExpressionEvaluator
                       Children:
                       - Name: Expression
-                        Id: g=8b9e74e7cf0f1bc21c0783b0c391002a
                         Type: BaseDataVariableType
                         DataType: String
                         ReferenceType: HasParameter
                         ModellingRule: Optional
                         Value: "{#error} == 1"
                       - Name: ns=9;Sourceerror
-                        Id: g=7195052dc1026ef8cc2944007eb590a1
                         Type: BaseDataVariableType
                         DataType: BaseDataType
                         ReferenceType: HasSource
                         Children:
                         - Name: DynamicLink
-                          Id: g=697cc36426aec504901e9ea8cb724cd0
                           Type: DynamicLink
                           DataType: NodePath
                           Value: "{DigitalFeedbackCounter}/PositionFault"
                   - Name: TrueValue
-                    Id: g=bb2fa519c752658ded3bfd53b92cb1c1
                     Type: BaseDataVariableType
                     DataType: Int32
                     ReferenceType: HasParameter
                     ModellingRule: Optional
                     Value: 2
                   - Name: FalseValue
-                    Id: g=e9b2b45c9449e63409b0f62847a9ad2d
                     Type: BaseDataVariableType
                     DataType: Int32
                     ReferenceType: HasParameter
                     Children:
                     - Name: ConditionalConverter1
-                      Id: g=d5ef78bc2f44c65467a17c090fcf13f7
                       Type: ConditionalConverter
                       Children:
                       - Name: Condition
-                        Id: g=3c795abaece7737d8e9013b22d21575b
                         Type: BaseDataVariableType
                         DataType: Boolean
                         ReferenceType: HasSource
                         Children:
                         - Name: ExpressionEvaluator1
-                          Id: g=fc6ef5f1ea323db73336ef89cdc83216
                           Type: ExpressionEvaluator
                           Children:
                           - Name: Expression
-                            Id: g=7ff918bb3c4b9184ea45a459a947f110
                             Type: BaseDataVariableType
                             DataType: String
                             ReferenceType: HasParameter
                             ModellingRule: Optional
                             Value: "{#good} == 0"
                           - Name: ns=9;Sourcegood
-                            Id: g=06df5bf2a3c84008618bbee0c6ee0e69
                             Type: BaseDataVariableType
                             DataType: BaseDataType
                             ReferenceType: HasSource
                             Children:
                             - Name: DynamicLink
-                              Id: g=a020401555682a1893fef06d0e0cc668
                               Type: DynamicLink
                               DataType: NodePath
                               Value: "{DigitalFeedbackCounter}/PositionFault@StatusCode"
                       - Name: TrueValue
-                        Id: g=ee0d4773a1b4f9015f71520a5bd3cac3
                         Type: BaseDataVariableType
                         DataType: Int32
                         ReferenceType: HasParameter
                         ModellingRule: Optional
                         Value: 3
                       - Name: FalseValue
-                        Id: g=5871828ba35db482fbdc635e98263c6b
                         Type: BaseDataVariableType
                         DataType: Int32
                         ReferenceType: HasParameter
                         ModellingRule: Optional
           - Name: ns=9;Pairs
-            Id: g=1168a769eb133a32ead6481b140107f2
             Type: BaseObjectType
             Children:
             - Name: Pair
-              Id: g=383292503a357334cf72abfd6b5a740d
               Type: ValueMapPair
               Children:
               - Name: Key
-                Id: g=65ef9a8d18d8d6c83dab648c7e4df333
                 Type: BaseDataVariableType
                 DataType: UInt32
               - Name: Value
-                Id: g=15119b279fb8a4da315b84067085f007
                 Type: BaseDataVariableType
                 DataType: Color
                 Value: "#e9e9e9"
             - Name: Pair1
-              Id: g=5ddf3ef8bddcb7863d7a5b8c045fe75d
               Type: ValueMapPair
               Children:
               - Name: Key
-                Id: g=404344c4c4f2c9e13c9a4b9c8848e12e
                 Type: BaseDataVariableType
                 DataType: UInt32
                 Value: 1
               - Name: Value
-                Id: g=47601cb79ef6efb945c3be6e0df4d015
                 Type: BaseDataVariableType
                 DataType: Color
                 Value: "#6d91b6"
             - Name: Pair2
-              Id: g=389412c7dd94db4ac36a9e776a69b50a
               Type: ValueMapPair
               Children:
               - Name: Key
-                Id: g=c5bccec0ea443534793e69e2528ac477
                 Type: BaseDataVariableType
                 DataType: UInt32
                 Value: 2
               - Name: Value
-                Id: g=3a63c08d6e656d809ea965c8c74a92c9
                 Type: BaseDataVariableType
                 DataType: Color
                 Value: "#cc0036"
             - Name: Pair3
-              Id: g=8649715b24a6819897336c3ca0e43f50
               Type: ValueMapPair
               Children:
               - Name: Key
-                Id: g=af0a37e18ab8727c32b3653a624bae78
                 Type: BaseDataVariableType
                 DataType: UInt32
                 Value: 3
               - Name: Value
-                Id: g=3a8118f47e92e2858448020f51687a62
                 Type: BaseDataVariableType
                 DataType: Color
                 Value: "#66ae76"
       - Name: FillColor
-        Id: g=38ead6216d4091a58dc46f2d5cd4f57b
         Type: BaseDataVariableType
         DataType: Color
         Value: "#cc003699"
         Children:
         - Name: KeyValueConverter1
-          Id: g=2e9fc2afb391e5f547c3394a97e99a23
           Type: ValueMapConverter
           Children:
           - Name: Source
-            Id: g=14097cfb02f9a19a2e238c255b0620df
             Type: BaseDataVariableType
             DataType: BaseDataType
             ReferenceType: HasSource
             Children:
             - Name: ConditionalConverter1
-              Id: g=4212d465e8360a539efecdadda2a548a
               Type: ConditionalConverter
               Children:
               - Name: Condition
-                Id: g=2be1f6b76eea8a09d9c3bf5e90713554
                 Type: BaseDataVariableType
                 DataType: Boolean
                 ReferenceType: HasSource
                 Children:
                 - Name: ExpressionEvaluator1
-                  Id: g=7916b8c52decc1fb5d3bdce7b699e36e
                   Type: ExpressionEvaluator
                   Children:
                   - Name: Expression
-                    Id: g=08565d277b80a05fb4b7020119a8cdc6
                     Type: BaseDataVariableType
                     DataType: String
                     ReferenceType: HasParameter
                     ModellingRule: Optional
                     Value: "{#currentlySelected} == {#elementIndex}"
                   - Name: ns=9;SourcecurrentlySelected
-                    Id: g=af2476aca524fe257ee14d06eb168092
                     Type: BaseDataVariableType
                     DataType: BaseDataType
                     ReferenceType: HasSource
                     Children:
                     - Name: DynamicLink
-                      Id: g=13457152184081c94f9a49a06abca303
                       Type: DynamicLink
                       DataType: NodePath
                       Value: "../../../../../../../../../IndexVariable"
                   - Name: ns=9;SourceelementIndex
-                    Id: g=bfe1edc432259e9ad052a23d87053178
                     Type: BaseDataVariableType
                     DataType: BaseDataType
                     ReferenceType: HasSource
                     Children:
                     - Name: DynamicLink
-                      Id: g=ef8c3fcbe53f1d6b080c874d14ea9b1f
                       Type: DynamicLink
                       DataType: NodePath
                       Value: "{DigitalFeedbackCounter}/CounterNumber"
               - Name: TrueValue
-                Id: g=659ca20a9bc0518a324f91ac86afb25e
                 Type: BaseDataVariableType
                 DataType: Int32
                 ReferenceType: HasParameter
                 ModellingRule: Optional
                 Value: 1
               - Name: FalseValue
-                Id: g=bb690d59a6f94ff8047248e6b80859c3
                 Type: BaseDataVariableType
                 DataType: Int32
                 ReferenceType: HasParameter
                 Children:
                 - Name: ConditionalConverter1
-                  Id: g=204c37a4a9f4e912502b7d15dab8b195
                   Type: ConditionalConverter
                   Children:
                   - Name: Condition
-                    Id: g=e39952c4d51fba18a9728de663226674
                     Type: BaseDataVariableType
                     DataType: Boolean
                     ReferenceType: HasSource
                     Children:
                     - Name: ExpressionEvaluator1
-                      Id: g=c24b37f1d8f5034afc3c704d60b6a847
                       Type: ExpressionEvaluator
                       Children:
                       - Name: Expression
-                        Id: g=2dfa491e3fd585d4e34b155dc722552c
                         Type: BaseDataVariableType
                         DataType: String
                         ReferenceType: HasParameter
                         ModellingRule: Optional
                         Value: "{#error} == 1"
                       - Name: ns=9;Sourceerror
-                        Id: g=a2714b53a44fd5f7b3659c04dcc82ce5
                         Type: BaseDataVariableType
                         DataType: BaseDataType
                         ReferenceType: HasSource
                         Children:
                         - Name: DynamicLink
-                          Id: g=5048cb34b02b9ab78ff86c5ea2cc8264
                           Type: DynamicLink
                           DataType: NodePath
                           Value: "{DigitalFeedbackCounter}/PositionFault"
                   - Name: TrueValue
-                    Id: g=59666157d779a8a71bf0141b3b5ffef9
                     Type: BaseDataVariableType
                     DataType: Int32
                     ReferenceType: HasParameter
                     ModellingRule: Optional
                     Value: 2
                   - Name: FalseValue
-                    Id: g=7e9e358a2122cb3f308bf12572b78d31
                     Type: BaseDataVariableType
                     DataType: Int32
                     ReferenceType: HasParameter
                     Children:
                     - Name: ConditionalConverter1
-                      Id: g=2349c15ba42fa704ffeea63507788a5e
                       Type: ConditionalConverter
                       Children:
                       - Name: Condition
-                        Id: g=44c5bd4ebec47aa66639d8cde78a8f35
                         Type: BaseDataVariableType
                         DataType: Boolean
                         ReferenceType: HasSource
                         Children:
                         - Name: ExpressionEvaluator1
-                          Id: g=a6b17bc26cf4552d5dd13f1b392df513
                           Type: ExpressionEvaluator
                           Children:
                           - Name: Expression
-                            Id: g=8bbe8c34745fa719d424b5173c08f7bf
                             Type: BaseDataVariableType
                             DataType: String
                             ReferenceType: HasParameter
                             ModellingRule: Optional
                             Value: "{#good} == 0"
                           - Name: ns=9;Sourcegood
-                            Id: g=3ce97295042de72919973727e7019557
                             Type: BaseDataVariableType
                             DataType: BaseDataType
                             ReferenceType: HasSource
                             Children:
                             - Name: DynamicLink
-                              Id: g=4bba9ea83272603a14c029019b6e9353
                               Type: DynamicLink
                               DataType: NodePath
                               Value: "{DigitalFeedbackCounter}/PositionFault@StatusCode"
                       - Name: TrueValue
-                        Id: g=abd8a8f810524d927f04a4bc20dff31c
                         Type: BaseDataVariableType
                         DataType: Int32
                         ReferenceType: HasParameter
                         ModellingRule: Optional
                         Value: 3
                       - Name: FalseValue
-                        Id: g=8a2cf8fa4eee946ab78d8812ac5583da
                         Type: BaseDataVariableType
                         DataType: Int32
                         ReferenceType: HasParameter
                         ModellingRule: Optional
           - Name: ns=9;Pairs
-            Id: g=6d22794458603763b613eb2b754a7b40
             Type: BaseObjectType
             Children:
             - Name: Pair
-              Id: g=b952a96fd7d8b6bafc3b748b53f14bf0
               Type: ValueMapPair
               Children:
               - Name: Key
-                Id: g=b13631f1a3bdb91e7c1c130a1ec54c7f
                 Type: BaseDataVariableType
                 DataType: UInt32
               - Name: Value
-                Id: g=ef13fd5df8331185daec779af804c107
                 Type: BaseDataVariableType
                 DataType: Color
                 Value: "#e9e9e999"
             - Name: Pair1
-              Id: g=4925e76e9fb090ad4b4ace7e5fd4739c
               Type: ValueMapPair
               Children:
               - Name: Key
-                Id: g=4ba2b6ca7603d4341b0a29ffc685ce2e
                 Type: BaseDataVariableType
                 DataType: UInt32
                 Value: 1
               - Name: Value
-                Id: g=a1ff786fd548955e1fdfb7ae9deb7e43
                 Type: BaseDataVariableType
                 DataType: Color
                 Value: "#6d91b699"
             - Name: Pair2
-              Id: g=9a100d67156578a9074f506a996c3d04
               Type: ValueMapPair
               Children:
               - Name: Key
-                Id: g=89d619877c97c55694c6883f94306e36
                 Type: BaseDataVariableType
                 DataType: UInt32
                 Value: 2
               - Name: Value
-                Id: g=82728f6c259295e4165baf3cd24c20c2
                 Type: BaseDataVariableType
                 DataType: Color
                 Value: "#cc003699"
             - Name: Pair3
-              Id: g=ebdb39da338fe47e6fc1f5e4f966f683
               Type: ValueMapPair
               Children:
               - Name: Key
-                Id: g=f1e9b8f1f8b7ad90181e594f0e76805f
                 Type: BaseDataVariableType
                 DataType: UInt32
                 Value: 3
               - Name: Value
-                Id: g=eac0cae2a3c144070f5a1ede7317e4f7
                 Type: BaseDataVariableType
                 DataType: Color
                 Value: "#66ae7699"
       - Name: CornerRadius
-        Id: g=bcf96e75b5196dcd093f503cc259379a
         Type: BaseDataVariableType
         DataType: Size
         ModellingRule: Optional
         Value: 8.0
       - Name: BorderThickness
-        Id: g=e23880fc03ef107cb5cf1f04fa95a5d3
         Type: BaseDataVariableType
         DataType: Size
         ModellingRule: Optional
         Value: 4.0
       - Name: Error
-        Id: g=176fc08e6b1e17195a88d0ad7a585f0f
         Type: Image
         Children:
         - Name: Path
-          Id: g=3ea04fca15548e5af654a5a1b75597c1
           Type: BaseDataVariableType
           DataType: ResourceUri
           Value: "ns=36;%PROJECTDIR%/Graphics/Coesia - Library/General/32x32/alarm-color.svg"
         - Name: Width
-          Id: g=cf322c7e7f97dd0898b7729cf9e9a073
           Type: BaseVariableType
           DataType: Size
           ModellingRule: Optional
           Value: 32.0
         - Name: Height
-          Id: g=0ba61e294d842a011b21e6a2a4e16f87
           Type: BaseVariableType
           DataType: Size
           ModellingRule: Optional
           Value: 32.0
         - Name: LeftMargin
-          Id: g=bf110a5d0c5f766dbc995b332ae14303
           Type: BaseVariableType
           DataType: Size
           ModellingRule: Optional
         - Name: TopMargin
-          Id: g=f67bdd83ad5438d9a4e8d48e940ea06b
           Type: BaseVariableType
           DataType: Size
           ModellingRule: Optional
           Value: 10.0
         - Name: HorizontalAlignment
-          Id: g=87109066c29735f8c673cd54ea1471a5
           Type: BaseVariableType
           DataType: HorizontalAlignment
           ModellingRule: Optional
           Value: 1
         - Name: RightMargin
-          Id: g=32d748691bb913c5042b7a3d74080029
           Type: BaseVariableType
           DataType: Size
           ModellingRule: Optional
           Value: 10.0
         - Name: Visible
-          Id: g=dafe16f8e42225f8500b403a0a9ebd15
           Type: BaseDataVariableType
           DataType: Boolean
           Value: true
           Children:
           - Name: DynamicLink
-            Id: g=6bb3a7418ec8a8e1a89de14ae276b19e
             Type: DynamicLink
             DataType: NodePath
             Value: "{DigitalFeedbackCounter}/PositionFault"
       - Name: CounterName
-        Id: g=3b5d3b3cf528948f40c0c7fc9359c0a5
         Type: Label
         Children:
         - Name: Text
-          Id: g=349676341891c9d8445b31c421668028
           Type: BaseDataVariableType
           DataType: LocalizedText
           Children:
           - Name: DynamicLink
-            Id: g=ef200ec89fadd9b829fb9af08f371ce4
             Type: DynamicLink
             DataType: NodePath
             Value: "{DigitalFeedbackCounter}/CounterName"
         - Name: LeftMargin
-          Id: g=4eadc9f47cb5ab3c8792ff4e5c84de47
           Type: BaseVariableType
           DataType: Size
           ModellingRule: Optional
           Value: 10.0
         - Name: TopMargin
-          Id: g=f1d30b1a96b8338b8b0a24cda57829fa
           Type: BaseVariableType
           DataType: Size
           ModellingRule: Optional
           Value: 10.0
         - Name: FontSize
-          Id: g=0cf796a667d7e67eda8910d93c7d5063
           Type: BaseDataVariableType
           DataType: Size
           ModellingRule: Optional
           Value: 20.0
         - Name: Width
-          Id: g=8d31a69d93cc5d44211f7093a841d56a
           Type: BaseVariableType
           DataType: Size
           ModellingRule: Optional
           Value: 200.0
         - Name: Height
-          Id: g=771b6df6ae7bca5d88f7e063c5e828b0
           Type: BaseVariableType
           DataType: Size
           ModellingRule: Optional
           Value: 100.0
         - Name: TextColor
-          Id: g=f6d784888d1604210b05de131a97d240
           Type: BaseDataVariableType
           DataType: Color
           Value: "#000000"
           Children:
           - Name: ConditionalConverter1
-            Id: g=e5b0e1f156aec816d4f4557299969be2
             Type: ConditionalConverter
             Children:
             - Name: Condition
-              Id: g=e75da47d98e6e4cc41f0d0c44341b896
               Type: BaseDataVariableType
               DataType: Boolean
               ReferenceType: HasSource
               Children:
               - Name: ExpressionEvaluator1
-                Id: g=98dfbf29c466f26bb034acc41af1e50e
                 Type: ExpressionEvaluator
                 Children:
                 - Name: Expression
-                  Id: g=35b04c26439d1ab2a0dfa21fba268841
                   Type: BaseDataVariableType
                   DataType: String
                   ReferenceType: HasParameter
                   ModellingRule: Optional
                   Value: "{#index} == {#selected}"
                 - Name: ns=9;Sourceindex
-                  Id: g=9506f1e8c14612e9b715baa8e687c02c
                   Type: BaseDataVariableType
                   DataType: BaseDataType
                   ReferenceType: HasSource
                   Children:
                   - Name: DynamicLink
-                    Id: g=5c6c4155043b6daa54ce2053b4ffae36
                     Type: DynamicLink
                     DataType: NodePath
                     Value: "{DigitalFeedbackCounter}/CounterNumber"
                 - Name: ns=9;Sourceselected
-                  Id: g=c456190f756fd1db40f0ea5d9e8116c8
                   Type: BaseDataVariableType
                   DataType: BaseDataType
                   ReferenceType: HasSource
                   Children:
                   - Name: DynamicLink
-                    Id: g=eac0b1e987e10f0680d64a822b3bb016
                     Type: DynamicLink
                     DataType: NodePath
                     Value: "../../../../../../../../IndexVariable"
             - Name: TrueValue
-              Id: g=7a5eb667b05bd756b6a484d2bfad1355
               Type: BaseDataVariableType
               DataType: Color
               ReferenceType: HasParameter
               ModellingRule: Optional
               Value: "#ffffff"
             - Name: FalseValue
-              Id: g=bb29b6a1f7937dbe2bc5c3f31a0ca930
               Type: BaseDataVariableType
               DataType: Color
               ReferenceType: HasParameter
               ModellingRule: Optional
               Value: "#000000"
       - Name: CounterNumber
-        Id: g=2dd36c52909ed4bc77769c5d078d11f0
         Type: Label
         Children:
         - Name: Text
-          Id: g=617054fde9ad0af3a0199ed869a0846d
           Type: BaseDataVariableType
           DataType: LocalizedText
           Children:
           - Name: DynamicLink
-            Id: g=1fffa947f98257f2ac0a874de520686d
             Type: DynamicLink
             DataType: NodePath
             Value: "{DigitalFeedbackCounter}/ActualPosition"
         - Name: LeftMargin
-          Id: g=1a478eb77afc541968dcd3c32780b5c5
           Type: BaseVariableType
           DataType: Size
           ModellingRule: Optional
           Value: 162.0
         - Name: TopMargin
-          Id: g=0480164365de1db1056e5eacf4fa2a2b
           Type: BaseVariableType
           DataType: Size
           ModellingRule: Optional
           Value: 115.0
         - Name: FontSize
-          Id: g=318312ff866c124eaa9b1ca1d105aa8a
           Type: BaseDataVariableType
           DataType: Size
           ModellingRule: Optional
           Value: 32.0
         - Name: TextHorizontalAlignment
-          Id: g=0f52dfc7c139d72fb85dc90880c3c8a2
           Type: BaseVariableType
           DataType: TextHorizontalAlignment
           ModellingRule: Optional
           Value: 2
         - Name: TextVerticalAlignment
-          Id: g=bd5413c3650ad33f2a9e783c5154de9b
           Type: BaseVariableType
           DataType: TextVerticalAlignment
           ModellingRule: Optional
           Value: 1
         - Name: HorizontalAlignment
-          Id: g=a6aa0f6dcdea4e38ad0859c3769b72f9
           Type: BaseVariableType
           DataType: HorizontalAlignment
           ModellingRule: Optional
           Value: 1
         - Name: VerticalAlignment
-          Id: g=6d1463d3032b76e60aa1414f7115c85c
           Type: BaseVariableType
           DataType: VerticalAlignment
           ModellingRule: Optional
           Value: 1
         - Name: RightMargin
-          Id: g=25011fe931846057499677a2a6bcf3f4
           Type: BaseVariableType
           DataType: Size
           ModellingRule: Optional
           Value: 10.0
         - Name: BottomMargin
-          Id: g=a06ef4da3b846aeaf10b50b150c749b3
           Type: BaseVariableType
           DataType: Size
           ModellingRule: Optional
           Value: 10.0
         - Name: Width
-          Id: g=97af8d383e9209970e0d7340c723f236
           Type: BaseVariableType
           DataType: Size
           ModellingRule: Optional
           Value: 120.0
         - Name: TextColor
-          Id: g=2c82a3ea4a2615b5c4c2808ac39033cf
           Type: BaseDataVariableType
           DataType: Color
           Value: "#000000"
           Children:
           - Name: ConditionalConverter1
-            Id: g=4013487d1da6211796dbcf54b38bb08b
             Type: ConditionalConverter
             Children:
             - Name: Condition
-              Id: g=973519b3d61c8a7719254e60e66edbd4
               Type: BaseDataVariableType
               DataType: Boolean
               ReferenceType: HasSource
               Children:
               - Name: ExpressionEvaluator1
-                Id: g=f1eb20af59587171c3024f4f507526db
                 Type: ExpressionEvaluator
                 Children:
                 - Name: Expression
-                  Id: g=5ec530c1a186e8ae6b067d5818899499
                   Type: BaseDataVariableType
                   DataType: String
                   ReferenceType: HasParameter
                   ModellingRule: Optional
                   Value: "{#index} == {#selected}"
                 - Name: ns=9;Sourceindex
-                  Id: g=58e4e6bb3ad36cfcdf4918f4b3879e09
                   Type: BaseDataVariableType
                   DataType: BaseDataType
                   ReferenceType: HasSource
                   Children:
                   - Name: DynamicLink
-                    Id: g=00b479bfbae7a3014e9e5db92484470c
                     Type: DynamicLink
                     DataType: NodePath
                     Value: "{DigitalFeedbackCounter}/CounterNumber"
                 - Name: ns=9;Sourceselected
-                  Id: g=01145b65d61d34d44026f89a7269d03a
                   Type: BaseDataVariableType
                   DataType: BaseDataType
                   ReferenceType: HasSource
                   Children:
                   - Name: DynamicLink
-                    Id: g=6e4ffe22c86590a253fa9af1a04fe044
                     Type: DynamicLink
                     DataType: NodePath
                     Value: "../../../../../../../../IndexVariable"
             - Name: TrueValue
-              Id: g=94dd958e49a42efa812669736f5dbbf3
               Type: BaseDataVariableType
               DataType: Color
               ReferenceType: HasParameter
               ModellingRule: Optional
               Value: "#ffffff"
             - Name: FalseValue
-              Id: g=d284c5fb8392966046c34a9ac8cf81fc
               Type: BaseDataVariableType
               DataType: Color
               ReferenceType: HasParameter
               ModellingRule: Optional
               Value: "#000000"
       - Name: CounterPosition
-        Id: g=bf87eee989b94757076939861f6770b3
         Type: Label
         Children:
         - Name: Text
-          Id: g=abc684ff2dc82f155a341c6c941cfc40
           Type: BaseDataVariableType
           DataType: LocalizedText
           Children:
           - Name: DynamicLink
-            Id: g=c227e9573dbdb8f2db17eeedfc381e11
             Type: DynamicLink
             DataType: NodePath
             Value: "{DigitalFeedbackCounter}/CounterNumber"
         - Name: LeftMargin
-          Id: g=a51019f15359692ffb005fff85341968
           Type: BaseVariableType
           DataType: Size
           ModellingRule: Optional
           Value: 10.0
         - Name: TopMargin
-          Id: g=40488f6634f80e37ff346901022a16df
           Type: BaseVariableType
           DataType: Size
           ModellingRule: Optional
           Value: 120.0
         - Name: FontSize
-          Id: g=e7b3a5845639faabff495d09b68cc6fe
           Type: BaseDataVariableType
           DataType: Size
           ModellingRule: Optional
           Value: 32.0
         - Name: TextHorizontalAlignment
-          Id: g=71a607bb0243bba42f18b604f28ef1f5
           Type: BaseVariableType
           DataType: TextHorizontalAlignment
           ModellingRule: Optional
         - Name: TextVerticalAlignment
-          Id: g=c8c0fc9112d83288fa95268b781006c5
           Type: BaseVariableType
           DataType: TextVerticalAlignment
           ModellingRule: Optional
           Value: 1
         - Name: HorizontalAlignment
-          Id: g=97b33c865695110dd13e9b28ca5f279b
           Type: BaseVariableType
           DataType: HorizontalAlignment
           ModellingRule: Optional
         - Name: VerticalAlignment
-          Id: g=f86c5f8f5997b719c8280b89383f1d9e
           Type: BaseVariableType
           DataType: VerticalAlignment
           ModellingRule: Optional
           Value: 1
         - Name: BottomMargin
-          Id: g=f682647139280e79020469472d1f2e44
           Type: BaseVariableType
           DataType: Size
           ModellingRule: Optional
           Value: 10.0
         - Name: Width
-          Id: g=9cd96695aeaaa25f2636c117bd0705ce
           Type: BaseVariableType
           DataType: Size
           ModellingRule: Optional
           Value: 120.0
         - Name: TextColor
-          Id: g=544e6b569aee72f7d83cf9d51997ceb0
           Type: BaseDataVariableType
           DataType: Color
           Value: "#000000"
           Children:
           - Name: ConditionalConverter1
-            Id: g=26c0c6d05e3919905e3bf061fcce8b8f
             Type: ConditionalConverter
             Children:
             - Name: Condition
-              Id: g=41cf1453c501015771ba268683398dcc
               Type: BaseDataVariableType
               DataType: Boolean
               ReferenceType: HasSource
               Children:
               - Name: ExpressionEvaluator1
-                Id: g=5abe3a279c8920a754022c92bf4d7c4d
                 Type: ExpressionEvaluator
                 Children:
                 - Name: Expression
-                  Id: g=9813bdd077903255c4e988ff28de2b61
                   Type: BaseDataVariableType
                   DataType: String
                   ReferenceType: HasParameter
                   ModellingRule: Optional
                   Value: "{#index} == {#selected}"
                 - Name: ns=9;Sourceindex
-                  Id: g=bd7a94850cdb6723b3f26022ba5bd38f
                   Type: BaseDataVariableType
                   DataType: BaseDataType
                   ReferenceType: HasSource
                   Children:
                   - Name: DynamicLink
-                    Id: g=c81f5b0198b3815b845c2be4838c3ede
                     Type: DynamicLink
                     DataType: NodePath
                     Value: "{DigitalFeedbackCounter}/CounterNumber"
                 - Name: ns=9;Sourceselected
-                  Id: g=c29443cf735723d013f0839c39d4f0be
                   Type: BaseDataVariableType
                   DataType: BaseDataType
                   ReferenceType: HasSource
                   Children:
                   - Name: DynamicLink
-                    Id: g=5eaec559d97e7f507a8fd63a3360403b
                     Type: DynamicLink
                     DataType: NodePath
                     Value: "../../../../../../../../IndexVariable"
             - Name: TrueValue
-              Id: g=a4a02be46d2c43f68abfe1e3e2529ed0
               Type: BaseDataVariableType
               DataType: Color
               ReferenceType: HasParameter
               ModellingRule: Optional
               Value: "#ffffff"
             - Name: FalseValue
-              Id: g=edab21bd1f734a139f02a7db7f1cc95f
               Type: BaseDataVariableType
               DataType: Color
               ReferenceType: HasParameter
               ModellingRule: Optional
               Value: "#000000"
     - Name: Button
-      Id: g=7b0bf805b9f4c50256bcf50f07489d3c
       Type: Button
       Children:
       - Name: Text
-        Id: g=0239a6930aeb930c2eb8c24d91e19fc6
         Type: BaseDataVariableType
         DataType: LocalizedText
         ModellingRule: Optional
         Value: {"LocaleId":"en-US","Text":""}
       - Name: BackgroundColor
-        Id: g=a5ac1d0a8107afcb254f0ea94f957bdf
         Type: BaseDataVariableType
         DataType: Color
         ModellingRule: Optional
       - Name: Style
-        Id: g=fb33f5eec2c680d5ceb4a5bbd3d6c201
         Type: BaseDataVariableType
         DataType: String
         ModellingRule: Optional
         Value: "Invisible"
       - Name: Width
-        Id: g=b5cbe47c6db8d6a8d309ed76937c255f
         Type: BaseVariableType
         DataType: Size
         ModellingRule: Optional
         Value: 256.0
       - Name: Height
-        Id: g=0a79aaccab21c82b4ffae0d198577ed4
         Type: BaseVariableType
         DataType: Size
         ModellingRule: Optional
         Value: 158.0
       - Name: HorizontalAlignment
-        Id: g=c9a509ed080b3571a74767496155e2a3
         Type: BaseVariableType
         DataType: HorizontalAlignment
         ModellingRule: Optional
         Value: 3
       - Name: VerticalAlignment
-        Id: g=3905b70d6759f83e2c0fa5e60af7de4f
         Type: BaseVariableType
         DataType: VerticalAlignment
         ModellingRule: Optional
         Value: 3
       - Name: TextColor
-        Id: g=ad64edf6748784d3fa80a297ab2491b7
         Type: BaseDataVariableType
         DataType: Color
         ModellingRule: Optional
       - Name: MouseClickEventHandler1
-        Id: g=2bbcdf6443e4345a97e497b6709a33d6
         Type: EventHandler
         Children:
         - Name: ListenEventType
-          Id: g=3ec460b14593ec91df16394d2a4fb0e9
           Type: PropertyType
           DataType: NodeId
           Value: "/Types/EventTypes/BaseEventType/MouseEvent/MouseClickEvent"
         - Name: MethodsToCall
-          Id: g=82e367d8d668d2753b9465a3aa6049c5
           Type: BaseObjectType
           Children:
           - Name: MethodContainer1
-            Id: g=c86a24b4a029302d237e504c211ddf58
             Type: BaseObjectType
             Children:
             - Name: ns=9;ObjectPointer
-              Id: g=74808f6ec471abff33f360316db6de0b
               Type: NodePointer
               DataType: NodeId
               Value: "/Objects/Commands/VariableCommands"
               Children:
               - Name: Kind
-                Id: g=7186cbad1a7138e26d8a948ac394e916
                 Type: PropertyType
                 DataType: NodeId
                 Value: "/Types/ObjectTypes/BaseObjectType"
             - Name: ns=9;Method
-              Id: g=f826d358df174426a05ddb6f4e601e76
               Type: BaseDataVariableType
               DataType: String
               Value: "Set"
             - Name: InputArguments
-              Id: g=ac4ec67f26ced04db0fa979627f8b1a9
               Type: BaseObjectType
               Children:
               - Name: VariableToModify
-                Id: g=0dd9f6a32c4dd21bc6cb3bc31e533f90
                 Type: BaseDataVariableType
                 DataType: VariablePointer
                 Description: {"NamespaceIndex":9,"TextId":"SetVariableToModifyDescription"}
                 Children:
                 - Name: DynamicLink
-                  Id: g=c76040e955b8112fe00a4ef893a7ffa1
                   Type: DynamicLink
                   DataType: NodePath
                   Value: "../../../../../../../IndexVariable@NodeId"
               - Name: Value
-                Id: g=37bb58f637ab334c4f64341a766d261a
                 Type: BaseDataVariableType
                 DataType: Int32
                 Description: {"NamespaceIndex":9,"TextId":"SetValueDescription"}
                 Children:
                 - Name: DynamicLink
-                  Id: g=100f8da2277f242e0a8341c53f0d68df
                   Type: DynamicLink
                   DataType: NodePath
                   Value: "{DigitalFeedbackCounter}/CounterNumber"
               - Name: ArrayIndex
-                Id: g=5b58f5c90903d9aadac37dbbec7e194e
                 Type: BaseDataVariableType
                 DataType: UInt32
                 Description: {"NamespaceIndex":9,"TextId":"SetArrayIndexDescription"}
                 ValueRank: ScalarOrOneDimension
           - Name: MethodContainer2
-            Id: g=2d79655938a71a320f9ec0cb0ebd57a7
             Type: BaseObjectType
             Children:
             - Name: ns=9;ObjectPointer
-              Id: g=4a6a200c7f063d44c651ada16412027c
               Type: NodePointer
               DataType: NodeId
               Value: "/Objects/Commands/VariableCommands"
               Children:
               - Name: Kind
-                Id: g=6850baae0df1a0500cd3e5e5e1926086
                 Type: PropertyType
                 DataType: NodeId
                 Value: "/Types/ObjectTypes/BaseObjectType"
             - Name: ns=9;Method
-              Id: g=4456c5be0f1fd16ced63f83b428ad34b
               Type: BaseDataVariableType
               DataType: String
               Value: "Set"
             - Name: InputArguments
-              Id: g=559ef9094bb83394b439b3d357dcd9fe
               Type: BaseObjectType
               Children:
               - Name: VariableToModify
-                Id: g=33835844d54f702058a27478ea60cee9
                 Type: BaseDataVariableType
                 DataType: VariablePointer
                 Description: {"NamespaceIndex":9,"TextId":"SetVariableToModifyDescription"}
                 Children:
                 - Name: DynamicLink
-                  Id: g=7d000a8cc19ea9f93d94877b7c9e7c5b
                   Type: DynamicLink
                   DataType: NodePath
                   Value: "{SelectedDigitalFeedbackCounter}@NodeId"
               - Name: Value
-                Id: g=fb75821ba146bd16618b7494f3181740
                 Type: BaseDataVariableType
                 DataType: BaseDataType
                 Description: {"NamespaceIndex":9,"TextId":"SetValueDescription"}
                 Children:
                 - Name: DynamicLink
-                  Id: g=56e9b89e1df4d1411c15293b092dd2ba
                   Type: DynamicLink
                   DataType: NodePath
                   Value: "{DigitalFeedbackCounter}"
               - Name: ArrayIndex
-                Id: g=ece71237778987e63609dfab2013a36e
                 Type: BaseDataVariableType
                 DataType: UInt32
                 Description: {"NamespaceIndex":9,"TextId":"SetArrayIndexDescription"}
                 ValueRank: ScalarOrOneDimension
           - Name: MethodContainer3
-            Id: g=48bde2342bf1868a3a15407c7ef12256
             Type: BaseObjectType
             Children:
             - Name: ns=9;ObjectPointer
-              Id: g=4bacf949ffd8f213943006097f6d736b
               Type: NodePointer
               DataType: NodeId
               Value: "/Objects/Commands/VariableCommands"
               Children:
               - Name: Kind
-                Id: g=f13e32469207c40884f3790f5eff4fb3
                 Type: PropertyType
                 DataType: NodeId
                 Value: "/Types/ObjectTypes/BaseObjectType"
               - Name: DynamicLink
-                Id: g=92c76a1cced57a32d706cc199183a16d
                 Type: DynamicLink
                 DataType: NodePath
                 Value: "{DigitalFeedbackCounter_RH_PL}@NodeId"
                 Children:
                 - Name: Mode
-                  Id: g=2fed80a1483407b1d8b682fa8860928d
                   Type: BaseVariableType
                   DataType: DynamicLinkMode
                   ModellingRule: Optional
                   Value: 2
             - Name: ns=9;Method
-              Id: g=df35d82478fefae7bb33a7ea2a14dcee
               Type: BaseDataVariableType
               DataType: String
               Value: "ChangePanel"
             - Name: InputArguments
-              Id: g=6bd0d3c94a27d2bfa892f233108939cd
               Type: BaseObjectType
               Children:
               - Name: NewPanel
-                Id: g=1e110944c5312a1968f9742ed093d8f1
                 Type: BaseDataVariableType
                 DataType: NodeId
                 Description: {"NamespaceIndex":11,"TextId":"ChangePanelNewPanelDescription"}
                 Value: "/Objects/OptimateDemoProject/UI/Screens/Half Screens/DigitalFeedbackCounter_RH"
                 Children:
                 - Name: DynamicLink
-                  Id: g=afe5f175e2d3b20a33c2582db4719709
                   Type: DynamicLink
                   DataType: NodePath
                   Value: "/Objects/OptimateDemoProject/UI/Screens/Half Screens/DigitalFeedbackCounter_RH@NodeId"
               - Name: AliasNode
-                Id: g=f1847bdc1c53aa6b48e71b0f3f34f929
                 Type: BaseDataVariableType
                 DataType: NodeId
                 Description: {"NamespaceIndex":11,"TextId":"ChangePanelAliasNodeDescription"}
                 ValueRank: ScalarOrOneDimension
                 Children:
                 - Name: DynamicLink
-                  Id: g=6bbdc38ade80a2bf1185a2fa749ab7ae
                   Type: DynamicLink
                   DataType: NodePath
                   Value: "{DigitalFeedbackCounter}@NodeId"
         - Name: EventArguments
-          Id: g=f3d015367336037c87582034468148fe
           Type: MouseClickEvent
           Children:
           - Name: EventId
-            Id: g=d9464a51b0d1a238a9c759baa64d087c
             Type: PropertyType
             DataType: ByteString
           - Name: EventType
-            Id: g=112d45d82068ac2addd28fcce7d6b19e
             Type: PropertyType
             DataType: NodeId
           - Name: SourceNode
-            Id: g=ed2a6064705dbbf3b7d76bd6c9cc55fb
             Type: PropertyType
             DataType: NodeId
           - Name: SourceName
-            Id: g=cedcfba5e53d8fcc73867465e6a6a785
             Type: PropertyType
             DataType: String
           - Name: Time
-            Id: g=963de7340e494bc7a51d7f8b813d0d29
             Type: PropertyType
             DataType: UtcTime
           - Name: ReceiveTime
-            Id: g=491ce056ad41334c9ec4aa92e282267d
             Type: PropertyType
             DataType: UtcTime
           - Name: Message
-            Id: g=9f81557fd60fe03687919a6390187898
             Type: PropertyType
             DataType: LocalizedText
           - Name: Severity
-            Id: g=6e3e72cf90f2f35424176a2931c1d1bd
             Type: PropertyType
             DataType: UInt16
   - Name: DigitalFeedbackCounter
-    Id: g=f76615536c23b632a7a1d955a9ddfd30
     Type: Alias
     DataType: NodeId
     Children:
     - Name: Kind
-      Id: g=522e8241557d31fe83c4765af88e6c46
       Type: PropertyType
       DataType: NodeId
       Value: "/Objects/OptimateDemoProject/Model/Custom Datatypes/DigitalFeedbackCounterDatatype"
   - Name: IndexVariable
-    Id: g=e21dfb4e365400bacd7453278570dd69
     Type: BaseDataVariableType
     DataType: Int32
     Description: {"LocaleId":"en-US","Text":"link to index variable"}
   - Name: ScreenToLoad
-    Id: g=720c5e1ce002ce922dde76d97182c836
     Type: BaseDataVariableType
     DataType: NodeId
     Value: "/Objects/OptimateDemoProject/UI/Screens/Half Screens/DigitalFeedbackCounter_RH"

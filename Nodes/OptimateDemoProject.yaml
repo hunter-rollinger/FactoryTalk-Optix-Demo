@@ -1,72 +1,57 @@
 Name: OptimateDemoProject
-Id: g=de4e3bde72f764854a42f450e72e301f
 Type: ProjectFolder
 Children:
 - Name: Localization
-  Id: g=dc1807b511161d3e357619a851bd73e0
   Type: PropertyGroup
   Children:
   - Name: Locales
-    Id: g=0c5b24b775304cc7ddfe46e49916a7be
     Type: BaseDataVariableType
     DataType: LocaleId
     ValueRank: OneDimension
     ArrayDimensions: [0]
     Value: ["en-US","it-IT","de-DE","es-ES"]
   - Name: LocaleFallbackList
-    Id: g=fe331a2f24e39ff090c35cc9d58df91b
     Type: BaseDataVariableType
     DataType: LocaleId
     ValueRank: OneDimension
     ArrayDimensions: [0]
     Value: ["en-US"]
   - Name: MeasurementSystemMap
-    Id: g=100777870dbea23c62b4d5518ed899d5
     Type: BaseDataVariableType
     DataType: MeasurementSystemMapItem
     ValueRank: OneDimension
     ArrayDimensions: [0]
 - Name: Authentication
-  Id: g=6b9740e8fdc479e6de2323311d5e84bd
   Type: PropertyGroup
   Children:
   - Name: DefaultUserFolder
-    Id: g=9d478b598af13100ceb469c197efded3
     Type: NodePointer
     DataType: NodeId
     Value: "/Objects/OptimateDemoProject/Security/Users"
     Children:
     - Name: Kind
-      Id: g=2ab0e9222401f8447d3367365f5d8058
       Type: PropertyType
       DataType: NodeId
       Value: "/Types/ObjectTypes/BaseObjectType/FolderType"
   - Name: AuthenticationMode
-    Id: g=30ce5ecabf12acacca0bc379d7053bf1
     Type: BaseDataVariableType
     DataType: AuthenticationMode
 - Name: PasswordPolicy
-  Id: g=3b922f9dc55e05eecb826d4a4e63c3c7
   Type: PasswordPolicy
   Children:
   - Name: MaximumPasswordAge
-    Id: g=4fb3dc04c45e6de83a5fb39af06710c5
     Type: BaseDataVariableType
     DataType: UInt16
   - Name: EnforcePasswordHistory
-    Id: g=02f66bc292795f4bca49c94d3dfd8d1b
     Type: BaseDataVariableType
     DataType: Byte
   - Name: MinimumPasswordAge
-    Id: g=96bb191716947b0769455b3002285b30
     Type: BaseDataVariableType
     DataType: UInt16
   - Name: MinimumPasswordLength
-    Id: g=cfbc0a434b192efe5f5ee5b49a46451d
     Type: BaseDataVariableType
     DataType: Byte
 - Name: AlarmConfiguration
-  Id: g=1ce0b54283c5f85ca5a4471d3c04bda0
   Type: PropertyGroup
 - File: DesignTime_NetLogic/DesignTime_NetLogic.yaml
 - File: RunTime_NetLogic/RunTime_NetLogic.yaml
@@ -86,14 +71,11 @@ Children:
 - File: AlarmTypes/AlarmTypes.yaml
 - File: OPCUA/OPCUA.yaml
 - Name: LegacyRecipeSchema
-  Id: g=60a2ca78e5e00bce4a1fafd582001d1a
   Type: Alias
   DataType: NodeId
   Children:
   - Name: Kind
-    Id: g=e31d5117cf6b8da69ef9193d1f792a1b
     Type: PropertyType
     DataType: NodeId
 - Name: RuntimeOptimization
-  Id: g=b53885e8cefa35b65bdc9c6c72973d4b
   Type: PropertyGroup

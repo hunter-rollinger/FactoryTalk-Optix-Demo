@@ -1,5 +1,4 @@
 Name: Custom Datatypes
-Id: g=962af5dbc6092af02aa858dad471846e
 Type: FolderType
 Children:
 - Name: DigitalFeedbackCounterDatatype
@@ -7,332 +6,260 @@ Children:
   Supertype: BaseObjectType
   Children:
   - Name: CounterNumber
-    Id: g=c5d7a48147670418b532eace5c6e0c6b
     Type: BaseDataVariableType
     DataType: Int32
     Children:
     - Name: ns=0;EURange
-      Id: g=b41247acdd7f0bda66e6f48eaef790c3
       Type: RangeType
       DataType: Range
       Children:
       - Name: Low
-        Id: g=a133efb9a0a3795f88dbe2732e66baad
         Type: BaseDataVariableType
         DataType: Double
       - Name: High
-        Id: g=4c2b2de58aa711240a463d9eb3b8a0c3
         Type: BaseDataVariableType
         DataType: Double
         Value: 1000.0
       - Name: Constrain
-        Id: g=6f091bc9d783c2d49e13073869ddc978
         Type: BaseDataVariableType
         DataType: Boolean
         ModellingRule: Optional
         Value: true
   - Name: ActualPosition
-    Id: g=c5fd3d1a6105312faeacb896a9e0402f
     Type: BaseDataVariableType
     DataType: Float
   - Name: CalibrationPosition
-    Id: g=8ea685f427b188e7157ab03a98ef1851
     Type: BaseDataVariableType
     DataType: Float
   - Name: Setpoint
-    Id: g=48f8a34aaa2e266bda861db53d5392c8
     Type: BaseDataVariableType
     DataType: Int32
   - Name: FaultBypass
-    Id: g=594faa428c4b9d64aaef25c4ec8964ce
     Type: BaseDataVariableType
     DataType: Boolean
   - Name: CalibrateCounter
-    Id: g=84f96da2c7420d4bbd6511f18a8d2ffc
     Type: BaseDataVariableType
     DataType: Boolean
   - Name: CalibrationValue
-    Id: g=24eda9d27850f99faf01f55048bed09a
     Type: BaseDataVariableType
     DataType: Float
   - Name: PositionDecimalPlaces
-    Id: g=0ca721fe4be7867ffae916d104cb7730
     Type: BaseDataVariableType
     DataType: SByte
   - Name: DisplayOrientation
-    Id: g=49dd98b03a505a4b1d91ff7fa1c09ddd
     Type: BaseDataVariableType
     DataType: Boolean
   - Name: SpindleDirection
-    Id: g=43d53ef60c2d15126fa41a3509b6abcf
     Type: BaseDataVariableType
     DataType: Boolean
   - Name: InPositionWindow
-    Id: g=272b0e45dafae2e0d4ace48bd4660082
     Type: BaseDataVariableType
     DataType: Float
   - Name: SpindlePitch
-    Id: g=d5a22d53a00674747adf73c7072d942f
     Type: BaseDataVariableType
     DataType: Float
   - Name: PositionFault
-    Id: g=be6848c3d1a46fcd85e3a55174e05662
     Type: BaseDataVariableType
     DataType: Boolean
   - Name: CounterName
-    Id: g=bc9b4ec1ad09201f06575391176f9fff
     Type: BaseDataVariableType
     DataType: String
     Value: "Unnamed Counter"
 - Name: DigitalFeedbackCounter1
-  Id: g=df5a19c62290c1674f38556a81e9f237
   Type: DigitalFeedbackCounterDatatype
   Children:
   - Name: CounterNumber
-    Id: g=e77192ebcb4e862d09b60f72826b7242
     Type: BaseDataVariableType
     DataType: Int32
     Value: 1
     Children:
     - Name: EURange
-      Id: g=1d06706bff9fff4504a7ac5cf67622cc
       Type: RangeType
       DataType: Range
       Children:
       - Name: Low
-        Id: g=f7fd349922f08c3e63a808336176923b
         Type: BaseDataVariableType
         DataType: Double
       - Name: High
-        Id: g=8120fd1ef418ea2656da2bdec93e3c8b
         Type: BaseDataVariableType
         DataType: Double
         Value: 1000.0
   - Name: ActualPosition
-    Id: g=44cb302af67b07c872ae2f5c9b71836a
     Type: BaseDataVariableType
     DataType: Float
     Value: 243.0
   - Name: CalibrationPosition
-    Id: g=8f6d2eb935156f72473727201a08722b
     Type: BaseDataVariableType
     DataType: Float
     Value: 26.0
   - Name: Setpoint
-    Id: g=dfabed198c2a8e02d634633eb6c18b1f
     Type: BaseDataVariableType
     DataType: Int32
     Value: 89
   - Name: FaultBypass
-    Id: g=aa7c6bdfbbbdc512d764543c0303619c
     Type: BaseDataVariableType
     DataType: Boolean
   - Name: CalibrateCounter
-    Id: g=d8350943b88c8075ec1da5287b458519
     Type: BaseDataVariableType
     DataType: Boolean
   - Name: CalibrationValue
-    Id: g=09ecf36aab111ac03f42bbc263955260
     Type: BaseDataVariableType
     DataType: Float
     Value: 231.0
   - Name: PositionDecimalPlaces
-    Id: g=89ea4e873d4eba57bcfcf5c7835b6025
     Type: BaseDataVariableType
     DataType: SByte
     Value: 2
   - Name: DisplayOrientation
-    Id: g=bddc6f25f76ce492edf8ede235d0261c
     Type: BaseDataVariableType
     DataType: Boolean
     Value: true
   - Name: SpindleDirection
-    Id: g=de571e3b296f9ce5a03ea6e3dbc90326
     Type: BaseDataVariableType
     DataType: Boolean
   - Name: InPositionWindow
-    Id: g=d7c4717282685d64d3909dfcf7cd8978
     Type: BaseDataVariableType
     DataType: Float
     Value: 0.009999999776482582
   - Name: SpindlePitch
-    Id: g=9a0cc68067a2cb506680f69260646c6c
     Type: BaseDataVariableType
     DataType: Float
   - Name: PositionFault
-    Id: g=23a96ae372c47603b2a078b7191406c4
     Type: BaseDataVariableType
     DataType: Boolean
   - Name: CounterName
-    Id: g=d43f69f574aef3c3d6959fc62f4ff1ae
     Type: BaseDataVariableType
     DataType: String
     Value: "Counter 1"
 - Name: DigitalFeedbackCounter2
-  Id: g=f2ff6379caa7682fb4e441416e59c27b
   Type: DigitalFeedbackCounterDatatype
   Children:
   - Name: CounterNumber
-    Id: g=67cccd9e25aa50175d94920da9f09a15
     Type: BaseDataVariableType
     DataType: Int32
     Value: 2
     Children:
     - Name: EURange
-      Id: g=c28c54f870ecd810f703ed0e333d31b2
       Type: RangeType
       DataType: Range
       Children:
       - Name: Low
-        Id: g=1f538e19840d0263742f628194fd51f3
         Type: BaseDataVariableType
         DataType: Double
       - Name: High
-        Id: g=aaaa6c967e3988d1d38604ff95e673c2
         Type: BaseDataVariableType
         DataType: Double
         Value: 1000.0
   - Name: ActualPosition
-    Id: g=a0a0fed910dcd0f8f44b28d632fae2ec
     Type: BaseDataVariableType
     DataType: Float
     Value: 251.0
   - Name: CalibrationPosition
-    Id: g=a917f6f83ed745b6d185ccfcaf093e8a
     Type: BaseDataVariableType
     DataType: Float
     Value: 36.0
   - Name: Setpoint
-    Id: g=cca496146db64425506c91dac09d7de9
     Type: BaseDataVariableType
     DataType: Int32
     Value: 67
   - Name: FaultBypass
-    Id: g=03ab2967cd9c619625842f8215adf404
     Type: BaseDataVariableType
     DataType: Boolean
   - Name: CalibrateCounter
-    Id: g=f7dc9d9b8210d9fda327ec519f7160b9
     Type: BaseDataVariableType
     DataType: Boolean
   - Name: CalibrationValue
-    Id: g=eb42f7e45079167d2a685852e3685372
     Type: BaseDataVariableType
     DataType: Float
     Value: 235.0
   - Name: PositionDecimalPlaces
-    Id: g=aaf000f4aeb2a48041360ef9c83aa35a
     Type: BaseDataVariableType
     DataType: SByte
     Value: 1
   - Name: DisplayOrientation
-    Id: g=27f33ef9ad1e24223c250cb4c7e262f7
     Type: BaseDataVariableType
     DataType: Boolean
     Value: true
   - Name: SpindleDirection
-    Id: g=c065fa63fa3662a255712f5ea916f7de
     Type: BaseDataVariableType
     DataType: Boolean
   - Name: InPositionWindow
-    Id: g=709f6abc4e1effc309476e57df9d116b
     Type: BaseDataVariableType
     DataType: Float
     Value: 0.03999999910593033
   - Name: SpindlePitch
-    Id: g=71e02b72d5975ae98c55860eaa498156
     Type: BaseDataVariableType
     DataType: Float
   - Name: PositionFault
-    Id: g=3584f2a59d09fcc3642bcfdcea7bd900
     Type: BaseDataVariableType
     DataType: Boolean
   - Name: CounterName
-    Id: g=e9c2d196eb5ed96e3a041c46c7ed4cca
     Type: BaseDataVariableType
     DataType: String
     Value: "Counter 2"
 - Name: DigitalFeedbackCounter3
-  Id: g=df1b69767bab5cce53c82f6b81fd122d
   Type: DigitalFeedbackCounterDatatype
   Children:
   - Name: CounterNumber
-    Id: g=d71bfe2a3a5a8d3f7810ba867201e1e9
     Type: BaseDataVariableType
     DataType: Int32
     Value: 3
     Children:
     - Name: EURange
-      Id: g=2ff84ac62e40aa527c2bfd51f237367b
       Type: RangeType
       DataType: Range
       Children:
       - Name: Low
-        Id: g=277ea9f9582763a0e1f3796947a13468
         Type: BaseDataVariableType
         DataType: Double
       - Name: High
-        Id: g=a63e05542a41df3f38c7335135fb5cd0
         Type: BaseDataVariableType
         DataType: Double
         Value: 1000.0
   - Name: ActualPosition
-    Id: g=8eda1b0cc82ad11c39c5375e3426a64b
     Type: BaseDataVariableType
     DataType: Float
     Value: 125.0
   - Name: CalibrationPosition
-    Id: g=b02bdd125f875cb0ea3cf615722edddc
     Type: BaseDataVariableType
     DataType: Float
     Value: 66.0
   - Name: Setpoint
-    Id: g=f91b4ec2ee2c947b92a49ecd555710f2
     Type: BaseDataVariableType
     DataType: Int32
     Value: 88
   - Name: FaultBypass
-    Id: g=0a0aa0c6dff74ebd1dbcb77533cb01bb
     Type: BaseDataVariableType
     DataType: Boolean
   - Name: CalibrateCounter
-    Id: g=5f00f60e2749c4f3f8eb8b39dc548af5
     Type: BaseDataVariableType
     DataType: Boolean
   - Name: CalibrationValue
-    Id: g=4aad785b63a666f7afbfd914162013cd
     Type: BaseDataVariableType
     DataType: Float
     Value: 62.0
   - Name: PositionDecimalPlaces
-    Id: g=054222ed017ce0151c68c4da4fb68e8a
     Type: BaseDataVariableType
     DataType: SByte
     Value: 1
   - Name: DisplayOrientation
-    Id: g=ed48eed019069592ab6fd05d907770ff
     Type: BaseDataVariableType
     DataType: Boolean
   - Name: SpindleDirection
-    Id: g=811beae639a014d5f73bff260bc6bce7
     Type: BaseDataVariableType
     DataType: Boolean
   - Name: InPositionWindow
-    Id: g=94415fccb23a187462c45c6206eca778
     Type: BaseDataVariableType
     DataType: Float
     Value: 0.10000000149011612
   - Name: SpindlePitch
-    Id: g=445c50aba1d916efa60ea3b7ca76c4f6
     Type: BaseDataVariableType
     DataType: Float
   - Name: PositionFault
-    Id: g=e715e59df486b316408044c8be5f4578
     Type: BaseDataVariableType
     DataType: Boolean
     Value: true
   - Name: CounterName
-    Id: g=d16eb226514e62a31c756ed18726a38e
     Type: BaseDataVariableType
     DataType: String
     Value: "Counter 3"

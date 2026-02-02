@@ -1,126 +1,100 @@
 Name: PLC Link Required
-Id: g=7120bdbf8ddc7acd3b5537c4a081b932
 Type: FolderType
 Children:
 - Name: Machine Info
-  Id: g=a4090e2f7ce8ef3a1eb4087f68023de6
   Type: BaseObjectType
   Children:
   - Name: Recipe Name
-    Id: g=d78f18acb2c074d92ae9e1b84d1e18c4
     Type: BaseDataVariableType
     DataType: String
     Value: "0"
   - Name: Recipe Speed
-    Id: g=83a406d2a84d8fca90466ae5276bd607
     Type: BaseDataVariableType
     DataType: Int32
   - Name: Recipe Number
-    Id: g=1e67b09f5b50052a2bf3dc5f2703fa2b
     Type: BaseDataVariableType
     DataType: Int32
   - Name: Recipe Description
-    Id: g=a6397f7af16b5ee2c4b32a7b57b6abc0
     Type: BaseDataVariableType
     DataType: String
     Value: "0"
   - Name: PackML State
-    Id: g=946fe6dc6f5f8a536eb119e2ac16c372
     Type: BaseDataVariableType
     DataType: Int32
     Children:
     - Name: DynamicLink
-      Id: g=6f8d73405366ca2d712661718297d257
       Type: DynamicLink
       DataType: NodePath
       Value: "../../../../CommDrivers/Rockwell/Impact/Tags/Controller Tags/PackML_STS/StateCurrent"
       Children:
       - Name: Mode
-        Id: g=5754ebc58caf757675b9e0b271f6a825
         Type: BaseVariableType
         DataType: DynamicLinkMode
         Value: 2
   - Name: PackML Mode
-    Id: g=594304a31789bf4aaa1c71b34dc13bf0
     Type: BaseDataVariableType
     DataType: Int32
     Children:
     - Name: DynamicLink
-      Id: g=1b67c795cae20a702a0bf06a0408a6e0
       Type: DynamicLink
       DataType: NodePath
       Value: "../../../../CommDrivers/Rockwell/Impact/Tags/Controller Tags/PackML_STS/UnitModeCurrent"
       Children:
       - Name: Mode
-        Id: g=a554d11b47dd0e7601b2ae13ea34fb7a
         Type: BaseVariableType
         DataType: DynamicLinkMode
         Value: 2
   - Name: Current Speed
-    Id: g=f3a684dec5a66308d49fd2e4e6ddfd19
     Type: BaseDataVariableType
     DataType: Int32
     Children:
     - Name: DynamicLink
-      Id: g=5314302ae86372be1293991340cedb05
       Type: DynamicLink
       DataType: NodePath
       Value: "../../../../CommDrivers/Rockwell/Impact/Tags/Controller Tags/OI_DintFromPLC[0]"
       Children:
       - Name: Mode
-        Id: g=0f4e93535fbb700fb1fb27bffce2b7ce
         Type: BaseVariableType
         DataType: DynamicLinkMode
         Value: 2
   - Name: Current Position
-    Id: g=05490a7ee118ff934b8fd6145779bcb4
     Type: BaseDataVariableType
     DataType: Int32
     Children:
     - Name: DynamicLink
-      Id: g=e560e77e8099a9328cc9b689c811e892
       Type: DynamicLink
       DataType: NodePath
       Value: "../../../../CommDrivers/Rockwell/Impact/Tags/Controller Tags/OI_DintFromPLC[34]"
       Children:
       - Name: Mode
-        Id: g=811f367face63f090970c5577f232723
         Type: BaseVariableType
         DataType: DynamicLinkMode
         Value: 2
 - Name: Time Tracking
-  Id: g=5f47781d62cc2ad2ddfdfdc593f71bf4
   Type: BaseObjectType
 - Name: Alarms
-  Id: g=1e6ca9289a981df74e122eb4e5942e40
   Type: BaseObjectType
 - Name: Warnings
-  Id: g=9b70bbb021a7d1410ed677d549fc526d
   Type: BaseObjectType
 - Name: AxisOutOfPositionPopup
-  Id: g=0d4d8108673e39d448e0a7474af3eedd
   Type: BaseObjectType
   Children:
   - Name: AxisCurrent
-    Id: g=a45f6be672827815fc93019188029d74
     Type: BaseDataVariableType
     DataType: Int32
     ValueRank: OneDimension
     ArrayDimensions: [10]
   - Name: AxisTarget
-    Id: g=9ad570d819a6988d1c594910c777c2c7
     Type: BaseDataVariableType
     DataType: Int32
     ValueRank: OneDimension
     ArrayDimensions: [10]
   - Name: AxisTolerance
-    Id: g=c2d12fe0a19f590eeea3a369b4537905
     Type: BaseDataVariableType
     DataType: Int32
     ValueRank: OneDimension
     ArrayDimensions: [10]
   - Name: AxisName
-    Id: g=d1ee013a702ef3442239e9036a424c2c
     Type: BaseDataVariableType
     DataType: String
     ValueRank: OneDimension

@@ -1,173 +1,138 @@
 Name: System Information Collection
-Id: g=7f454d5140e5c581b9592651501b0fe1
 Type: FolderType
 Children:
 - Name: SystemInformationCollection
-  Id: g=323f14835027a277db4d5b3ca1661b53
   Type: NetLogic
   Children:
   - Name: DateTime
-    Id: g=e143d5d212cfa2aa8639e4c5f578544b
     Type: BaseDataVariableType
     DataType: DateTime
     Children:
     - Name: Year
-      Id: g=28023c29cca5de58ffd6c2dbdcf6ce35
       Type: BaseDataVariableType
       DataType: Int32
     - Name: Month
-      Id: g=332e1a01a1138dc109a1217efdef8a28
       Type: BaseDataVariableType
       DataType: Int32
     - Name: Day
-      Id: g=4d006bded59e08d876050f95cb66e904
       Type: BaseDataVariableType
       DataType: Int32
     - Name: Hour
-      Id: g=5397cfb7c0bf6a34891ae1efe8f685b6
       Type: BaseDataVariableType
       DataType: Int32
     - Name: Minute
-      Id: g=4bce4e09d8cf92200ab5bb902e6e76d2
       Type: BaseDataVariableType
       DataType: Int32
     - Name: Second
-      Id: g=42b95f424ddbd58645f6355b20ac196c
       Type: BaseDataVariableType
       DataType: Int32
     - Name: Day Of Week
-      Id: g=e5b1a2f8cdfabe06714c34581d01b600
       Type: BaseDataVariableType
       DataType: String
       Value: "0"
     - Name: Day Of Year
-      Id: g=5fe435cb16ed13f7416377d429c61dee
       Type: BaseDataVariableType
       DataType: Int32
     - Name: Daylight Savings
-      Id: g=218174a9ad0242b12d7b19f363648921
       Type: BaseDataVariableType
       DataType: Boolean
   - Name: Hostname
-    Id: g=31e3d5d475731bb9105b9b241c6daf4f
     Type: BaseDataVariableType
     DataType: String
     Value: "0"
   - Name: OS Version
-    Id: g=6c668880904f3fe4cab7074d24164a94
     Type: BaseDataVariableType
     DataType: String
     Value: "0"
   - Name: OS User
-    Id: g=a8b5726122f82589105e4d557d6115f4
     Type: BaseDataVariableType
     DataType: String
     Value: "0"
 - Name: Short Date
-  Id: g=69d01575c3e82bea6b1b160c30ea1fac
   Type: BaseDataVariableType
   DataType: String
   Value: "Jan 1, 1601, 12:00:00 AM"
   Children:
   - Name: StringFormatter1
-    Id: g=9d2bd30dd27c8ec63744d4cafa6a7f15
     Type: StringFormatter
     Children:
     - Name: Format
-      Id: g=ca6ec7a61d7c9d3f2ac3f845f7412c03
       Type: BaseDataVariableType
       DataType: LocalizedText
       ReferenceType: HasParameter
       Value: {"LocaleId":"en-US","Text":"{0,0:p}"}
     - Name: ns=9;Source0
-      Id: g=2151cab2f96db0bebcd75cdf9e41e0b3
       Type: BaseDataVariableType
       DataType: BaseDataType
       ReferenceType: HasSource
       Children:
       - Name: DynamicLink
-        Id: g=f607aab3cd1afa3cb80ee136b90b7a91
         Type: DynamicLink
         DataType: NodePath
         Value: "../../../SystemInformationCollection/DateTime"
 - Name: Extended Date
-  Id: g=f09c357fc24bbb45a0f54f68d1b83dd2
   Type: BaseDataVariableType
   DataType: String
   Value: "Jan 1, 1601, 12:00:00 AM"
   Children:
   - Name: StringFormatter1
-    Id: g=43673f1df2ed3b5a265568073dd235e3
     Type: StringFormatter
     Children:
     - Name: Format
-      Id: g=9e736d79a5f47600e56ef5bed99d9d38
       Type: BaseDataVariableType
       DataType: LocalizedText
       ReferenceType: HasParameter
       Value: {"LocaleId":"en-US","Text":"{0,0:P}"}
     - Name: ns=9;Source0
-      Id: g=2a1ef7e59ffe682b85987875befe5736
       Type: BaseDataVariableType
       DataType: BaseDataType
       ReferenceType: HasSource
       Children:
       - Name: DynamicLink
-        Id: g=fd68ec73f673dc5eececbe5b2704ad33
         Type: DynamicLink
         DataType: NodePath
         Value: "../../../SystemInformationCollection/DateTime"
 - Name: Short Time
-  Id: g=164c6039b12e322bc6f669d7f3870c70
   Type: BaseDataVariableType
   DataType: String
   Value: "Jan 1, 1601, 12:00:00 AM"
   Children:
   - Name: StringFormatter1
-    Id: g=b71cab0db56369e261d72917cf0bc8b1
     Type: StringFormatter
     Children:
     - Name: Format
-      Id: g=c18bf217f06fde0bed5ad916308ba570
       Type: BaseDataVariableType
       DataType: LocalizedText
       ReferenceType: HasParameter
       Value: {"LocaleId":"en-US","Text":"{0,0:t}"}
     - Name: ns=9;Source0
-      Id: g=c78625097fdbdc1ef608abdfc54511e2
       Type: BaseDataVariableType
       DataType: BaseDataType
       ReferenceType: HasSource
       Children:
       - Name: DynamicLink
-        Id: g=eb820dbb0c6e1190ad2f24e9b33000bb
         Type: DynamicLink
         DataType: NodePath
         Value: "../../../SystemInformationCollection/DateTime"
 - Name: Extended Time
-  Id: g=a3900cde84641255ede8dba907dec696
   Type: BaseDataVariableType
   DataType: String
   Value: "Jan 1, 1601, 12:00:00 AM"
   Children:
   - Name: StringFormatter1
-    Id: g=ae2cb8e15ddea5948b5d07047ee0d6c7
     Type: StringFormatter
     Children:
     - Name: Format
-      Id: g=b5cc5f8b3eb82b1c323f1b9e16ddc9f3
       Type: BaseDataVariableType
       DataType: LocalizedText
       ReferenceType: HasParameter
       Value: {"LocaleId":"en-US","Text":"{0,0:T}"}
     - Name: ns=9;Source0
-      Id: g=2b739e38b41842cac731bcb9dbd596d4
       Type: BaseDataVariableType
       DataType: BaseDataType
       ReferenceType: HasSource
       Children:
       - Name: DynamicLink
-        Id: g=d5ec4279927243ec3fd214f933f444a8
         Type: DynamicLink
         DataType: NodePath
         Value: "../../../SystemInformationCollection/DateTime"

@@ -3,35 +3,28 @@ Id: g=5361a50eab84e99a97dfec004eb35562
 Type: TwinCATStation
 Children:
 - Name: MaximumJobSizeInBytes
-  Id: g=ceed47f7036658a34b3ac861d9423889
   Type: BaseDataVariableType
   DataType: UInt32
   Value: 2048
 - Name: RemoteAmsNetId
-  Id: g=eaeeafcb849cbca14caa6d69ee0117a6
   Type: BaseDataVariableType
   DataType: String
 - Name: AmsPort
-  Id: g=7f7e1a53848b869a02fd31c80f6436d8
   Type: BaseDataVariableType
   DataType: UInt16
   Value: 851
 - Name: Timeout
-  Id: g=4ae707939b1c190ef680dc3eae7aff2b
   Type: BaseDataVariableType
   DataType: Duration
   Value: "0:00:00:10.0000000"
 - Name: MaxAggregateRequest
-  Id: g=04dbd4da3f7a6b1818cc76f4814309bd
   Type: BaseDataVariableType
   DataType: UInt32
   Value: 500
 - Name: IpAddress
-  Id: g=7771a07084aea913e4d3dc1b3c7d4da9
   Type: BaseDataVariableType
   DataType: String
 - Name: OperationCode
-  Id: g=6f51286a8d8a1d05bb62cd2b05cfabe3
   Type: BaseDataVariableType
   DataType: CommunicationOperationCode
   AccessLevel: Read
@@ -55,12 +48,10 @@ Children:
   Direction: Forward
 - File: Tags/Tags.yaml
 - Name: Types
-  Id: g=3659b1deb93d718f468f8d4fcbe3eb79
   Type: FolderType
   Children:
   - File: DataTypes/DataTypes.yaml
   - File: VariableTypes/VariableTypes.yaml
 - Name: LocalAmsNetId
-  Id: g=0e73e0129ba126cd4d89109348ce2411
   Type: BaseDataVariableType
   DataType: String

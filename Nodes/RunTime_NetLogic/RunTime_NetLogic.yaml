@@ -1,67 +1,76 @@
 Name: RunTime NetLogic
-Id: g=1b3500833c68f60e30a8df6d09e87eb9
 Type: NetLogicCategoryFolder
 Children:
 - Name: CustomAlarming
-  Id: g=2dd11edd2df9a7d40954db52af59ed25
   Type: NetLogic
   Description: {"LocaleId":"en-US","Text":"Popup, Banner"}
   Children:
   - Name: StopAlarm
-    Id: g=9defd06ea3f2f2e23079dbce073f3512
     Type: NodePointer
     DataType: NodeId
     Description: {"LocaleId":"en-US","Text":"Popup"}
     Children:
     - Name: Kind
-      Id: g=322d3219877c99034670740f0b605f72
       Type: PropertyType
       DataType: NodeId
       Value: "/Objects/OptimateDemoProject/AlarmTypes/AlarmType_OptimateAlarm"
   - Name: LatestAlarm
-    Id: g=105f13d0b6e9be0aec3f735519c43c0c
     Type: NodePointer
     DataType: NodeId
     Description: {"LocaleId":"en-US","Text":"Popup"}
     Children:
     - Name: Kind
-      Id: g=89525084c3b96a8dd53f409ff5d2210a
       Type: PropertyType
       DataType: NodeId
       Value: "/Objects/OptimateDemoProject/AlarmTypes/AlarmType_OptimateAlarm"
   - Name: AlarmCount
-    Id: g=b1d37a7b5e1d427c6256c7862673c4b4
     Type: BaseDataVariableType
     DataType: Int32
     Description: {"LocaleId":"en-US","Text":"Banner"}
   - Name: CurrentDisplayedAlarm
-    Id: g=a00230eec6547eb3827267e08edc5cad
     Type: NodePointer
     DataType: NodeId
     Description: {"LocaleId":"en-US","Text":"Banner"}
     Children:
     - Name: Kind
-      Id: g=06399760beaf7c611f596dc2cd8ac845
       Type: PropertyType
       DataType: NodeId
       Value: "/Objects/OptimateDemoProject/AlarmTypes/AlarmType_OptimateAlarm"
     - Name: NodeClass
-      Id: g=4c95a68fb9aa22e573990b6250440a58
       Type: PropertyType
       DataType: NodePointerNodeClass
   - Name: CurrentDisplayedAlarmIndex
-    Id: g=d1c744dd0a2b558be563a5b75ec723b4
     Type: BaseDataVariableType
     DataType: Int32
     Description: {"LocaleId":"en-US","Text":"Banner"}
   - Name: RotationTime
-    Id: g=6ff232f14e43d9b5205bd9003a3c7bab
     Type: BaseDataVariableType
     DataType: Duration
     Description: {"LocaleId":"en-US","Text":"Banner"}
     Value: "0:00:00:03.0000000"
   - Name: BannerRotation
-    Id: g=08360a77642e4d01ad5da28403841b4a
     Type: BaseDataVariableType
     DataType: Boolean
 - File: System_Information_Collection/System_Information_Collection.yaml
+- Name: ConstrainedVariablesVerifier
+  Type: NetLogic
+  WriteMask: BrowseName|DataType|Description|DisplayName|MinimumSamplingInterval|UserAccessLevel
+  Children:
+  - Class: Method
+    Name: VerifyConstrainedVariablesAreInRange
+  - Name: ns=19;LibraryReference
+    Type: ObjectLibraryReference
+    DataType: ObjectLibraryReferenceDataType
+    Value: 
+     {
+      "TypeId": {
+       "Id": 72,
+       "Namespace": 19
+      },
+      "Body": {
+       "libraryGuid": "f0701375ee41467993d632db6a8fdaa5",
+       "objectGuid": "6ccf6d45ea5798a56de8338dfe7dde1b",
+       "objectVersion": 1,
+       "highestIgnoredVersion": 0
+      }
+     }

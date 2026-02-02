@@ -1,71 +1,56 @@
 Name: Retentivity
-Id: g=fec0f8a0336e3ea9fff75111fc850cf0
 Type: RetentivityCategoryFolder
 Children:
 - Name: Security
-  Id: g=6cd3b96fb81956897591bbd6a9d47094
   Type: RetentivityStorage
   Children:
   - Name: Nodes
-    Id: g=64f272c6fd50fd939985fbdc38a1eaa3
     Type: BaseObjectType
     Children:
     - Name: Node1
-      Id: g=19cba519f5101e86ac2eb44454ec0a9d
       Type: NodePointer
       DataType: NodeId
       Value: "/Objects/OptimateDemoProject/Security"
       Children:
       - Name: Kind
-        Id: g=4eeddbf7780bdf0a2e8d555eceabb6df
         Type: PropertyType
         DataType: NodeId
       - Name: NodeClass
-        Id: g=edeef31ed00cebe6d163b1ca35ae39d0
         Type: PropertyType
         DataType: NodePointerNodeClass
         Value: 2
   - Name: WriteDelay
-    Id: g=b7020920e00ccb2c6227675e254191c5
     Type: BaseDataVariableType
     DataType: Duration
     ReferenceType: HasProperty
   - Name: DeltaObserverEnabled
-    Id: g=b03162974a3b45d64693464aec104936
     Type: BaseDataVariableType
     DataType: Boolean
     ReferenceType: HasProperty
     Value: true
 - Name: Alarms
-  Id: g=8b0b37a30bd1bdf40361291c58e76bff
   Type: RetentivityStorage
   Children:
   - Name: Nodes
-    Id: g=d91dd140912e5f1feba5262fadaf98d7
     Type: BaseObjectType
     Children:
     - Name: Node1
-      Id: g=f296284adb7e9e8eca7b605189e8f6a2
       Type: NodePointer
       DataType: NodeId
       Value: "/Objects/OptimateDemoProject/Alarms"
       Children:
       - Name: Kind
-        Id: g=68349af8a035feb2be953eff36d7b87d
         Type: PropertyType
         DataType: NodeId
       - Name: NodeClass
-        Id: g=a0224391f72f6827bd5e4bae65df8a70
         Type: PropertyType
         DataType: NodePointerNodeClass
         Value: 2
   - Name: WriteDelay
-    Id: g=40f9d5b05d6faa830fbee4fce0b7ee29
     Type: BaseDataVariableType
     DataType: Duration
     ReferenceType: HasProperty
   - Name: DeltaObserverEnabled
-    Id: g=1b6761bf18708a79994db1ce63637470
     Type: BaseDataVariableType
     DataType: Boolean
     ReferenceType: HasProperty

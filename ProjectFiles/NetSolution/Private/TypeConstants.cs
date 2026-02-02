@@ -75,6 +75,7 @@ namespace OptimateDemoProject
         public static readonly NodeId Switch_OnOff_Label = new NodeId(namespaceIndex, new Guid("0dc195e2b4c44f0289d0a11878992489"));
         public static readonly NodeId Switch_OnOff_Label_Indicator = new NodeId(namespaceIndex, new Guid("a5fbb402e02c8f20ff8051ce068df2fe"));
         public static readonly NodeId Production_Time_Chart = new NodeId(namespaceIndex, new Guid("551813fd361d4f22706e13275666b4ff"));
+        public static readonly NodeId AlarmGrid = new NodeId(namespaceIndex, new Guid("71cef6cb9448ed8eec272a74a2aac225"));
         public static readonly NodeId Letters = new NodeId(namespaceIndex, new Guid("927cfa372c73f3452566064604ed4a4f"));
         public static readonly NodeId NumbersAndSymbols1 = new NodeId(namespaceIndex, new Guid("8f7adae455ee882c98f8cccf4970ac99"));
         public static readonly NodeId NumbersAndSymbols2 = new NodeId(namespaceIndex, new Guid("1375575e97413b9709eb9e79b00a8371"));
@@ -83,7 +84,6 @@ namespace OptimateDemoProject
         public static readonly NodeId BasicSymbolVerticalButton = new NodeId(namespaceIndex, new Guid("450e1e9381613f4b71607ddf16020ebb"));
         public static readonly NodeId BasicSpaceButton = new NodeId(namespaceIndex, new Guid("0642b30a582e14c745079c727f361ad1"));
         public static readonly NodeId BasicSwitchPushButton = new NodeId(namespaceIndex, new Guid("cf246b9bd07567ff4a53fa5a9a230801"));
-        public static readonly NodeId AlarmGrid = new NodeId(namespaceIndex, new Guid("71cef6cb9448ed8eec272a74a2aac225"));
     }
 
     public static class VariableTypes
