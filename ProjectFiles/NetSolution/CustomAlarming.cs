@@ -97,13 +97,15 @@ public class CustomAlarming : BaseNetLogic
     {
         var currentSessionActualLanguage = context.Sessions.CurrentSessionInfo.SessionObject.Children["ActualLanguage"];
 
-        sessionActualLanguageChangeObserver = new CallbackVariableChangeObserver(
+#pragma warning disable CS0618 // Type or member is obsolete
+		sessionActualLanguageChangeObserver = new CallbackVariableChangeObserver(
             (IUAVariable variable, UAValue newValue, UAValue oldValue, uint[] indexes, ulong senderId) =>
             {
                 RegisterObserverOnLocalizedAlarmsContainer(context);
             });
+#pragma warning restore CS0618 // Type or member is obsolete
 
-        sessionActualLanguageRegistration = currentSessionActualLanguage.RegisterEventObserver(
+		sessionActualLanguageRegistration = currentSessionActualLanguage.RegisterEventObserver(
             sessionActualLanguageChangeObserver, EventType.VariableValueChanged, affinityId);
     }
     private class RetainedAlarmsObjectObserver : IReferenceObserver

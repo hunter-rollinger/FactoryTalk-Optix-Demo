@@ -236,7 +236,7 @@ Children:
     Value: ["Header","Body"]
 - Name: Menu_Button
   Id: g=0b94ee30d7e8ef4f4d5b2c6d972b297e
-  Supertype: ScaleLayout
+  Supertype: Panel
   Description: {"LocaleId":"en-US","Text":"Standard_Content Panel Loader"}
   ReferenceType: HasComponent
   Children:
@@ -313,7 +313,7 @@ Children:
           - Name: DynamicLink
             Type: DynamicLink
             DataType: NodePath
-            Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Light Grey 1"
+            Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Light Grey 1 - ffffff - White"
         - Name: ns=9;Source3
           Type: BaseDataVariableType
           DataType: BaseDataType
@@ -322,7 +322,7 @@ Children:
           - Name: DynamicLink
             Type: DynamicLink
             DataType: NodePath
-            Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Info - Blue"
+            Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Selected - 6d91b6 - Info - Blue"
   - Name: Label
     Type: Label
     Children:
@@ -448,7 +448,7 @@ Children:
           - Name: DynamicLink
             Type: DynamicLink
             DataType: NodePath
-            Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Dark Grey 6"
+            Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Dark Grey 6 - 000000 - Black"
         - Name: ns=9;Source3
           Type: BaseDataVariableType
           DataType: BaseDataType
@@ -457,7 +457,7 @@ Children:
           - Name: DynamicLink
             Type: DynamicLink
             DataType: NodePath
-            Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Light Grey 1"
+            Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Light Grey 1 - ffffff - White"
   - Name: Image
     Type: Image
     Children:
@@ -693,16 +693,6 @@ Children:
     Type: BaseDataVariableType
     DataType: NodeId
     Description: {"LocaleId":"en-US","Text":"screen node id"}
-  - Name: OriginalWidth
-    Type: BaseDataVariableType
-    DataType: Size
-    ModellingRule: Optional
-    Value: 98.0
-  - Name: OriginalHeight
-    Type: BaseDataVariableType
-    DataType: Size
-    ModellingRule: Optional
-    Value: 98.0
 - Name: PackML_State_Mode_Indicator
   Id: g=7c800b75f0a9ce52bf7bacf8e45b97a8
   Supertype: Panel

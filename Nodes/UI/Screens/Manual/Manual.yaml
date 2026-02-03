@@ -124,7 +124,7 @@ Children:
     Value: "Default"
 - Name: Manual_Menu_Bar
   Id: g=c8cf544233f952c6618b110686caeab6
-  Supertype: Menu_Bar
+  Supertype: MenuBar
   ReferenceType: HasComponent
   Children:
   - Name: BackgroundColor
@@ -135,24 +135,1876 @@ Children:
     - Name: DynamicLink
       Type: DynamicLink
       DataType: NodePath
-      Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Light Grey 6"
-  - Name: Rectangle1
-    Type: Rectangle
+      Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Light Grey 6 - b6b6b6"
+  - Name: SeparatorContainer
+    Type: ColumnLayout
     Children:
-    - Name: BorderColor
-      Type: BaseDataVariableType
-      DataType: Color
-      Value: "#000000"
-    - Name: FillColor
-      Type: BaseDataVariableType
-      DataType: Color
-      Value: "#ffffff"
+    - Name: TopRectangle
+      Type: Rectangle
       Children:
-      - Name: DynamicLink
-        Type: DynamicLink
-        DataType: NodePath
-        Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Light Grey 1"
-  - Name: Rectangle2
+      - Name: ButtonContainer
+        Type: RowLayout
+        Children:
+        - Name: Prev
+          Type: Button
+        - Name: Next
+          Type: Button
+        - Name: 'Separator - Dark'
+          Type: Rectangle
+          Children:
+          - Name: FillColor
+            Type: BaseDataVariableType
+            DataType: Color
+            Value: "#6d6e70"
+            Children:
+            - Name: DynamicLink
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Dark Grey 2 - 6d6e70"
+        - Name: Home
+          Type: Menu_Button
+          Children:
+          - Name: Background
+            Type: Rectangle
+            Children:
+            - Name: FillColor
+              Type: BaseDataVariableType
+              DataType: Color
+              Value: "#ffffff"
+              Children:
+              - Name: ExpressionEvaluator1
+                Type: ExpressionEvaluator
+                Children:
+                - Name: Source0
+                  Type: BaseDataVariableType
+                  DataType: BaseDataType
+                  ReferenceType: HasSource
+                  Children:
+                  - Name: DynamicLink
+                    Type: DynamicLink
+                    DataType: NodePath
+                    Value: "{Standard_Content}/Panel@NodeId"
+                - Name: Source1
+                  Type: BaseDataVariableType
+                  DataType: BaseDataType
+                  ReferenceType: HasSource
+                  Children:
+                  - Name: DynamicLink
+                    Type: DynamicLink
+                    DataType: NodePath
+                    Value: "/Objects/OptimateDemoProject/UI/Screens/Manual/Manual_Home@NodeId"
+                - Name: Source2
+                  Type: BaseDataVariableType
+                  DataType: BaseDataType
+                  ReferenceType: HasSource
+                  Children:
+                  - Name: DynamicLink
+                    Type: DynamicLink
+                    DataType: NodePath
+                    Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Light Grey 1 - ffffff - White"
+                - Name: Source3
+                  Type: BaseDataVariableType
+                  DataType: BaseDataType
+                  ReferenceType: HasSource
+                  Children:
+                  - Name: DynamicLink
+                    Type: DynamicLink
+                    DataType: NodePath
+                    Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Selected - 6d91b6 - Info - Blue"
+          - Name: Label
+            Type: Label
+            Children:
+            - Name: Text
+              Type: BaseDataVariableType
+              DataType: LocalizedText
+              Children:
+              - Name: DynamicLink
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "../../Button Text"
+            - Name: TextColor
+              Type: BaseDataVariableType
+              DataType: Color
+              Value: "#000000"
+              Children:
+              - Name: ExpressionEvaluator1
+                Type: ExpressionEvaluator
+                Children:
+                - Name: Source0
+                  Type: BaseDataVariableType
+                  DataType: BaseDataType
+                  ReferenceType: HasSource
+                  Children:
+                  - Name: DynamicLink
+                    Type: DynamicLink
+                    DataType: NodePath
+                    Value: "{Standard_Content}/Panel@NodeId"
+                - Name: Source1
+                  Type: BaseDataVariableType
+                  DataType: BaseDataType
+                  ReferenceType: HasSource
+                  Children:
+                  - Name: DynamicLink
+                    Type: DynamicLink
+                    DataType: NodePath
+                    Value: "/Objects/OptimateDemoProject/UI/Screens/Manual/Manual_Home@NodeId"
+                - Name: Source2
+                  Type: BaseDataVariableType
+                  DataType: BaseDataType
+                  ReferenceType: HasSource
+                  Children:
+                  - Name: DynamicLink
+                    Type: DynamicLink
+                    DataType: NodePath
+                    Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Dark Grey 6 - 000000 - Black"
+                - Name: Source3
+                  Type: BaseDataVariableType
+                  DataType: BaseDataType
+                  ReferenceType: HasSource
+                  Children:
+                  - Name: DynamicLink
+                    Type: DynamicLink
+                    DataType: NodePath
+                    Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Light Grey 1 - ffffff - White"
+            - Name: FontSize
+              Type: BaseDataVariableType
+              DataType: Size
+              Value: 16.0
+          - Name: Image
+            Type: Image
+            Children:
+            - Name: Path
+              Type: BaseDataVariableType
+              DataType: ResourceUri
+              Children:
+              - Name: ExpressionEvaluator1
+                Type: ExpressionEvaluator
+                Children:
+                - Name: Source0
+                  Type: BaseDataVariableType
+                  DataType: BaseDataType
+                  ReferenceType: HasSource
+                  Children:
+                  - Name: DynamicLink
+                    Type: DynamicLink
+                    DataType: NodePath
+                    Value: "{Standard_Content}/Panel@NodeId"
+                - Name: Source1
+                  Type: BaseDataVariableType
+                  DataType: BaseDataType
+                  ReferenceType: HasSource
+                  Children:
+                  - Name: DynamicLink
+                    Type: DynamicLink
+                    DataType: NodePath
+                    Value: "/Objects/OptimateDemoProject/UI/Screens/Manual/Manual_Home@NodeId"
+                - Name: Source2
+                  Type: BaseDataVariableType
+                  DataType: BaseDataType
+                  ReferenceType: HasSource
+                  Children:
+                  - Name: DynamicLink
+                    Type: DynamicLink
+                    DataType: NodePath
+                    Value: "../../../../Selected Image"
+                - Name: Source3
+                  Type: BaseDataVariableType
+                  DataType: BaseDataType
+                  ReferenceType: HasSource
+                  Children:
+                  - Name: DynamicLink
+                    Type: DynamicLink
+                    DataType: NodePath
+                    Value: "../../../../Standard Image"
+          - Name: Button
+            Type: Button
+            Children:
+            - Name: Text
+              Type: BaseDataVariableType
+              DataType: LocalizedText
+            - Name: ImagePath
+              Type: BaseDataVariableType
+              DataType: ResourceUri
+            - Name: MouseClickEventHandler1
+              Type: EventHandler
+              Children:
+              - Name: ListenEventType
+                Type: PropertyType
+                DataType: NodeId
+                Value: "/Types/EventTypes/BaseEventType/MouseEvent/MouseClickEvent"
+              - Name: MethodsToCall
+                Type: BaseObjectType
+                Children:
+                - Name: MethodContainer1
+                  Type: BaseObjectType
+                  Children:
+                  - Name: ObjectPointer
+                    Type: NodePointer
+                    DataType: NodeId
+                    Children:
+                    - Name: Kind
+                      Type: PropertyType
+                      DataType: NodeId
+                      Value: "/Types/ObjectTypes/BaseObjectType"
+                    - Name: DynamicLink
+                      Type: DynamicLink
+                      DataType: NodePath
+                      Value: "{Standard_Content}@NodeId"
+                  - Name: Method
+                    Type: BaseDataVariableType
+                    DataType: String
+                    Value: "ChangePanel"
+                  - Name: InputArguments
+                    Type: BaseObjectType
+                    Children:
+                    - Name: NewPanel
+                      Type: BaseDataVariableType
+                      DataType: NodeId
+                      Children:
+                      - Name: DynamicLink
+                        Type: DynamicLink
+                        DataType: NodePath
+                        Value: "/Objects/OptimateDemoProject/UI/Screens/Manual/Manual_Home"
+                    - Name: AliasNode
+                      Type: BaseDataVariableType
+                      DataType: NodeId
+                      ValueRank: ScalarOrOneDimension
+              - Name: EventArguments
+                Type: MouseClickEvent
+                Children:
+                - Name: EventId
+                  Type: PropertyType
+                  DataType: ByteString
+                - Name: EventType
+                  Type: PropertyType
+                  DataType: NodeId
+                - Name: SourceNode
+                  Type: PropertyType
+                  DataType: NodeId
+                - Name: SourceName
+                  Type: PropertyType
+                  DataType: String
+                - Name: Time
+                  Type: PropertyType
+                  DataType: UtcTime
+                - Name: ReceiveTime
+                  Type: PropertyType
+                  DataType: UtcTime
+                - Name: Message
+                  Type: PropertyType
+                  DataType: LocalizedText
+                - Name: Severity
+                  Type: PropertyType
+                  DataType: UInt16
+          - Name: Button Text
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "Home"
+          - Name: Standard Image
+            Type: BaseDataVariableType
+            DataType: ResourceUri
+            Value: "ns=36;%PROJECTDIR%/Graphics/Coesia - Library/General/48x48/Home.svg"
+          - Name: Selected Image
+            Type: BaseDataVariableType
+            DataType: ResourceUri
+            Value: "ns=36;%PROJECTDIR%/Graphics/Coesia - Library/General/48x48/Home-1.svg"
+          - Name: Screen
+            Type: BaseDataVariableType
+            DataType: NodeId
+            Value: "/Objects/OptimateDemoProject/UI/Screens/Manual/Manual_Home"
+          - Name: HorizontalAlignment
+            Type: BaseVariableType
+            DataType: HorizontalAlignment
+            ModellingRule: Optional
+            Value: 2
+          - Name: VerticalAlignment
+            Type: BaseVariableType
+            DataType: VerticalAlignment
+            ModellingRule: Optional
+            Value: 2
+        - Name: Overview
+          Type: Menu_Button
+          Children:
+          - Name: Background
+            Type: Rectangle
+            Children:
+            - Name: FillColor
+              Type: BaseDataVariableType
+              DataType: Color
+              Value: "#ffffff"
+              Children:
+              - Name: ExpressionEvaluator1
+                Type: ExpressionEvaluator
+                Children:
+                - Name: Source0
+                  Type: BaseDataVariableType
+                  DataType: BaseDataType
+                  ReferenceType: HasSource
+                  Children:
+                  - Name: DynamicLink
+                    Type: DynamicLink
+                    DataType: NodePath
+                    Value: "{Standard_Content}/Panel@NodeId"
+                - Name: Source1
+                  Type: BaseDataVariableType
+                  DataType: BaseDataType
+                  ReferenceType: HasSource
+                  Children:
+                  - Name: DynamicLink
+                    Type: DynamicLink
+                    DataType: NodePath
+                    Value: "/Objects/OptimateDemoProject/UI/Screens/Other/Overview@NodeId"
+                - Name: Source2
+                  Type: BaseDataVariableType
+                  DataType: BaseDataType
+                  ReferenceType: HasSource
+                  Children:
+                  - Name: DynamicLink
+                    Type: DynamicLink
+                    DataType: NodePath
+                    Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Light Grey 1 - ffffff - White"
+                - Name: Source3
+                  Type: BaseDataVariableType
+                  DataType: BaseDataType
+                  ReferenceType: HasSource
+                  Children:
+                  - Name: DynamicLink
+                    Type: DynamicLink
+                    DataType: NodePath
+                    Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Selected - 6d91b6 - Info - Blue"
+          - Name: Label
+            Type: Label
+            Children:
+            - Name: Text
+              Type: BaseDataVariableType
+              DataType: LocalizedText
+              Children:
+              - Name: DynamicLink
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "../../Button Text"
+            - Name: TextColor
+              Type: BaseDataVariableType
+              DataType: Color
+              Value: "#000000"
+              Children:
+              - Name: ExpressionEvaluator1
+                Type: ExpressionEvaluator
+                Children:
+                - Name: Source0
+                  Type: BaseDataVariableType
+                  DataType: BaseDataType
+                  ReferenceType: HasSource
+                  Children:
+                  - Name: DynamicLink
+                    Type: DynamicLink
+                    DataType: NodePath
+                    Value: "{Standard_Content}/Panel@NodeId"
+                - Name: Source1
+                  Type: BaseDataVariableType
+                  DataType: BaseDataType
+                  ReferenceType: HasSource
+                  Children:
+                  - Name: DynamicLink
+                    Type: DynamicLink
+                    DataType: NodePath
+                    Value: "/Objects/OptimateDemoProject/UI/Screens/Other/Overview@NodeId"
+                - Name: Source2
+                  Type: BaseDataVariableType
+                  DataType: BaseDataType
+                  ReferenceType: HasSource
+                  Children:
+                  - Name: DynamicLink
+                    Type: DynamicLink
+                    DataType: NodePath
+                    Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Dark Grey 6 - 000000 - Black"
+                - Name: Source3
+                  Type: BaseDataVariableType
+                  DataType: BaseDataType
+                  ReferenceType: HasSource
+                  Children:
+                  - Name: DynamicLink
+                    Type: DynamicLink
+                    DataType: NodePath
+                    Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Light Grey 1 - ffffff - White"
+            - Name: FontSize
+              Type: BaseDataVariableType
+              DataType: Size
+              Value: 16.0
+          - Name: Image
+            Type: Image
+            Children:
+            - Name: Path
+              Type: BaseDataVariableType
+              DataType: ResourceUri
+              Children:
+              - Name: ExpressionEvaluator1
+                Type: ExpressionEvaluator
+                Children:
+                - Name: Source0
+                  Type: BaseDataVariableType
+                  DataType: BaseDataType
+                  ReferenceType: HasSource
+                  Children:
+                  - Name: DynamicLink
+                    Type: DynamicLink
+                    DataType: NodePath
+                    Value: "{Standard_Content}/Panel@NodeId"
+                - Name: Source1
+                  Type: BaseDataVariableType
+                  DataType: BaseDataType
+                  ReferenceType: HasSource
+                  Children:
+                  - Name: DynamicLink
+                    Type: DynamicLink
+                    DataType: NodePath
+                    Value: "/Objects/OptimateDemoProject/UI/Screens/Other/Overview@NodeId"
+                - Name: Source2
+                  Type: BaseDataVariableType
+                  DataType: BaseDataType
+                  ReferenceType: HasSource
+                  Children:
+                  - Name: DynamicLink
+                    Type: DynamicLink
+                    DataType: NodePath
+                    Value: "../../../../Selected Image"
+                - Name: Source3
+                  Type: BaseDataVariableType
+                  DataType: BaseDataType
+                  ReferenceType: HasSource
+                  Children:
+                  - Name: DynamicLink
+                    Type: DynamicLink
+                    DataType: NodePath
+                    Value: "../../../../Standard Image"
+          - Name: Button
+            Type: Button
+            Children:
+            - Name: Text
+              Type: BaseDataVariableType
+              DataType: LocalizedText
+            - Name: ImagePath
+              Type: BaseDataVariableType
+              DataType: ResourceUri
+            - Name: MouseClickEventHandler1
+              Type: EventHandler
+              Children:
+              - Name: ListenEventType
+                Type: PropertyType
+                DataType: NodeId
+                Value: "/Types/EventTypes/BaseEventType/MouseEvent/MouseClickEvent"
+              - Name: MethodsToCall
+                Type: BaseObjectType
+                Children:
+                - Name: MethodContainer1
+                  Type: BaseObjectType
+                  Children:
+                  - Name: ObjectPointer
+                    Type: NodePointer
+                    DataType: NodeId
+                    Children:
+                    - Name: Kind
+                      Type: PropertyType
+                      DataType: NodeId
+                      Value: "/Types/ObjectTypes/BaseObjectType"
+                    - Name: DynamicLink
+                      Type: DynamicLink
+                      DataType: NodePath
+                      Value: "{Standard_Content}@NodeId"
+                  - Name: Method
+                    Type: BaseDataVariableType
+                    DataType: String
+                    Value: "ChangePanel"
+                  - Name: InputArguments
+                    Type: BaseObjectType
+                    Children:
+                    - Name: NewPanel
+                      Type: BaseDataVariableType
+                      DataType: NodeId
+                      Children:
+                      - Name: DynamicLink
+                        Type: DynamicLink
+                        DataType: NodePath
+                        Value: "/Objects/OptimateDemoProject/UI/Screens/Other/Overview"
+                    - Name: AliasNode
+                      Type: BaseDataVariableType
+                      DataType: NodeId
+                      ValueRank: ScalarOrOneDimension
+              - Name: EventArguments
+                Type: MouseClickEvent
+                Children:
+                - Name: EventId
+                  Type: PropertyType
+                  DataType: ByteString
+                - Name: EventType
+                  Type: PropertyType
+                  DataType: NodeId
+                - Name: SourceNode
+                  Type: PropertyType
+                  DataType: NodeId
+                - Name: SourceName
+                  Type: PropertyType
+                  DataType: String
+                - Name: Time
+                  Type: PropertyType
+                  DataType: UtcTime
+                - Name: ReceiveTime
+                  Type: PropertyType
+                  DataType: UtcTime
+                - Name: Message
+                  Type: PropertyType
+                  DataType: LocalizedText
+                - Name: Severity
+                  Type: PropertyType
+                  DataType: UInt16
+          - Name: Button Text
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "Overview"
+          - Name: Standard Image
+            Type: BaseDataVariableType
+            DataType: ResourceUri
+            Value: "ns=36;%PROJECTDIR%/Graphics/Coesia - Library/General/48x48/Overview.svg"
+          - Name: Selected Image
+            Type: BaseDataVariableType
+            DataType: ResourceUri
+            Value: "ns=36;%PROJECTDIR%/Graphics/Coesia - Library/General/48x48/Overview-1.svg"
+          - Name: Screen
+            Type: BaseDataVariableType
+            DataType: NodeId
+            Value: "/Objects/OptimateDemoProject/UI/Screens/Other/Overview"
+          - Name: HorizontalAlignment
+            Type: BaseVariableType
+            DataType: HorizontalAlignment
+            ModellingRule: Optional
+            Value: 2
+          - Name: VerticalAlignment
+            Type: BaseVariableType
+            DataType: VerticalAlignment
+            ModellingRule: Optional
+            Value: 2
+        - Name: Transfer
+          Type: Menu_Button
+          Children:
+          - Name: Background
+            Type: Rectangle
+            Children:
+            - Name: FillColor
+              Type: BaseDataVariableType
+              DataType: Color
+              Value: "#ffffff"
+              Children:
+              - Name: ExpressionEvaluator1
+                Type: ExpressionEvaluator
+                Children:
+                - Name: Source0
+                  Type: BaseDataVariableType
+                  DataType: BaseDataType
+                  ReferenceType: HasSource
+                  Children:
+                  - Name: DynamicLink
+                    Type: DynamicLink
+                    DataType: NodePath
+                    Value: "{Standard_Content}/Panel@NodeId"
+                - Name: Source1
+                  Type: BaseDataVariableType
+                  DataType: BaseDataType
+                  ReferenceType: HasSource
+                  Children:
+                  - Name: DynamicLink
+                    Type: DynamicLink
+                    DataType: NodePath
+                    Value: "/Objects/OptimateDemoProject/UI/Screens/Other/Overview@NodeId"
+                - Name: Source2
+                  Type: BaseDataVariableType
+                  DataType: BaseDataType
+                  ReferenceType: HasSource
+                  Children:
+                  - Name: DynamicLink
+                    Type: DynamicLink
+                    DataType: NodePath
+                    Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Light Grey 1 - ffffff - White"
+                - Name: Source3
+                  Type: BaseDataVariableType
+                  DataType: BaseDataType
+                  ReferenceType: HasSource
+                  Children:
+                  - Name: DynamicLink
+                    Type: DynamicLink
+                    DataType: NodePath
+                    Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Selected - 6d91b6 - Info - Blue"
+          - Name: Label
+            Type: Label
+            Children:
+            - Name: Text
+              Type: BaseDataVariableType
+              DataType: LocalizedText
+              Children:
+              - Name: DynamicLink
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "../../Button Text"
+            - Name: TextColor
+              Type: BaseDataVariableType
+              DataType: Color
+              Value: "#000000"
+              Children:
+              - Name: ExpressionEvaluator1
+                Type: ExpressionEvaluator
+                Children:
+                - Name: Source0
+                  Type: BaseDataVariableType
+                  DataType: BaseDataType
+                  ReferenceType: HasSource
+                  Children:
+                  - Name: DynamicLink
+                    Type: DynamicLink
+                    DataType: NodePath
+                    Value: "{Standard_Content}/Panel@NodeId"
+                - Name: Source1
+                  Type: BaseDataVariableType
+                  DataType: BaseDataType
+                  ReferenceType: HasSource
+                  Children:
+                  - Name: DynamicLink
+                    Type: DynamicLink
+                    DataType: NodePath
+                    Value: "/Objects/OptimateDemoProject/UI/Screens/Other/Overview@NodeId"
+                - Name: Source2
+                  Type: BaseDataVariableType
+                  DataType: BaseDataType
+                  ReferenceType: HasSource
+                  Children:
+                  - Name: DynamicLink
+                    Type: DynamicLink
+                    DataType: NodePath
+                    Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Dark Grey 6 - 000000 - Black"
+                - Name: Source3
+                  Type: BaseDataVariableType
+                  DataType: BaseDataType
+                  ReferenceType: HasSource
+                  Children:
+                  - Name: DynamicLink
+                    Type: DynamicLink
+                    DataType: NodePath
+                    Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Light Grey 1 - ffffff - White"
+            - Name: FontSize
+              Type: BaseDataVariableType
+              DataType: Size
+              Value: 16.0
+          - Name: Image
+            Type: Image
+            Children:
+            - Name: Path
+              Type: BaseDataVariableType
+              DataType: ResourceUri
+              Children:
+              - Name: ExpressionEvaluator1
+                Type: ExpressionEvaluator
+                Children:
+                - Name: Source0
+                  Type: BaseDataVariableType
+                  DataType: BaseDataType
+                  ReferenceType: HasSource
+                  Children:
+                  - Name: DynamicLink
+                    Type: DynamicLink
+                    DataType: NodePath
+                    Value: "{Standard_Content}/Panel@NodeId"
+                - Name: Source1
+                  Type: BaseDataVariableType
+                  DataType: BaseDataType
+                  ReferenceType: HasSource
+                  Children:
+                  - Name: DynamicLink
+                    Type: DynamicLink
+                    DataType: NodePath
+                    Value: "/Objects/OptimateDemoProject/UI/Screens/Other/Overview@NodeId"
+                - Name: Source2
+                  Type: BaseDataVariableType
+                  DataType: BaseDataType
+                  ReferenceType: HasSource
+                  Children:
+                  - Name: DynamicLink
+                    Type: DynamicLink
+                    DataType: NodePath
+                    Value: "../../../../Selected Image"
+                - Name: Source3
+                  Type: BaseDataVariableType
+                  DataType: BaseDataType
+                  ReferenceType: HasSource
+                  Children:
+                  - Name: DynamicLink
+                    Type: DynamicLink
+                    DataType: NodePath
+                    Value: "../../../../Standard Image"
+          - Name: Button
+            Type: Button
+            Children:
+            - Name: Text
+              Type: BaseDataVariableType
+              DataType: LocalizedText
+            - Name: ImagePath
+              Type: BaseDataVariableType
+              DataType: ResourceUri
+            - Name: MouseClickEventHandler1
+              Type: EventHandler
+              Children:
+              - Name: ListenEventType
+                Type: PropertyType
+                DataType: NodeId
+                Value: "/Types/EventTypes/BaseEventType/MouseEvent/MouseClickEvent"
+              - Name: MethodsToCall
+                Type: BaseObjectType
+                Children:
+                - Name: MethodContainer1
+                  Type: BaseObjectType
+                  Children:
+                  - Name: ObjectPointer
+                    Type: NodePointer
+                    DataType: NodeId
+                    Children:
+                    - Name: Kind
+                      Type: PropertyType
+                      DataType: NodeId
+                      Value: "/Types/ObjectTypes/BaseObjectType"
+                    - Name: DynamicLink
+                      Type: DynamicLink
+                      DataType: NodePath
+                      Value: "{Standard_Content}@NodeId"
+                  - Name: Method
+                    Type: BaseDataVariableType
+                    DataType: String
+                    Value: "ChangePanel"
+                  - Name: InputArguments
+                    Type: BaseObjectType
+                    Children:
+                    - Name: NewPanel
+                      Type: BaseDataVariableType
+                      DataType: NodeId
+                      Children:
+                      - Name: DynamicLink
+                        Type: DynamicLink
+                        DataType: NodePath
+                        Value: "/Objects/OptimateDemoProject/UI/Screens/Other/Overview"
+                    - Name: AliasNode
+                      Type: BaseDataVariableType
+                      DataType: NodeId
+                      ValueRank: ScalarOrOneDimension
+              - Name: EventArguments
+                Type: MouseClickEvent
+                Children:
+                - Name: EventId
+                  Type: PropertyType
+                  DataType: ByteString
+                - Name: EventType
+                  Type: PropertyType
+                  DataType: NodeId
+                - Name: SourceNode
+                  Type: PropertyType
+                  DataType: NodeId
+                - Name: SourceName
+                  Type: PropertyType
+                  DataType: String
+                - Name: Time
+                  Type: PropertyType
+                  DataType: UtcTime
+                - Name: ReceiveTime
+                  Type: PropertyType
+                  DataType: UtcTime
+                - Name: Message
+                  Type: PropertyType
+                  DataType: LocalizedText
+                - Name: Severity
+                  Type: PropertyType
+                  DataType: UInt16
+          - Name: Button Text
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "Overview"
+          - Name: Standard Image
+            Type: BaseDataVariableType
+            DataType: ResourceUri
+            Value: "ns=36;%PROJECTDIR%/Graphics/Jones/mbe transfer black.svg"
+          - Name: Selected Image
+            Type: BaseDataVariableType
+            DataType: ResourceUri
+            Value: "ns=36;%PROJECTDIR%/Graphics/Jones/mbe transfer white.svg"
+          - Name: Screen
+            Type: BaseDataVariableType
+            DataType: NodeId
+            Value: "/Objects/OptimateDemoProject/UI/Screens/Other/Overview"
+          - Name: HorizontalAlignment
+            Type: BaseVariableType
+            DataType: HorizontalAlignment
+            ModellingRule: Optional
+            Value: 2
+          - Name: VerticalAlignment
+            Type: BaseVariableType
+            DataType: VerticalAlignment
+            ModellingRule: Optional
+            Value: 2
+        - Name: Carton Feed
+          Type: Menu_Button
+          Children:
+          - Name: Background
+            Type: Rectangle
+            Children:
+            - Name: FillColor
+              Type: BaseDataVariableType
+              DataType: Color
+              Value: "#ffffff"
+              Children:
+              - Name: ExpressionEvaluator1
+                Type: ExpressionEvaluator
+                Children:
+                - Name: Source0
+                  Type: BaseDataVariableType
+                  DataType: BaseDataType
+                  ReferenceType: HasSource
+                  Children:
+                  - Name: DynamicLink
+                    Type: DynamicLink
+                    DataType: NodePath
+                    Value: "{Standard_Content}/Panel@NodeId"
+                - Name: Source1
+                  Type: BaseDataVariableType
+                  DataType: BaseDataType
+                  ReferenceType: HasSource
+                  Children:
+                  - Name: DynamicLink
+                    Type: DynamicLink
+                    DataType: NodePath
+                    Value: "/Objects/OptimateDemoProject/UI/Screens/Other/Overview@NodeId"
+                - Name: Source2
+                  Type: BaseDataVariableType
+                  DataType: BaseDataType
+                  ReferenceType: HasSource
+                  Children:
+                  - Name: DynamicLink
+                    Type: DynamicLink
+                    DataType: NodePath
+                    Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Light Grey 1 - ffffff - White"
+                - Name: Source3
+                  Type: BaseDataVariableType
+                  DataType: BaseDataType
+                  ReferenceType: HasSource
+                  Children:
+                  - Name: DynamicLink
+                    Type: DynamicLink
+                    DataType: NodePath
+                    Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Selected - 6d91b6 - Info - Blue"
+          - Name: Label
+            Type: Label
+            Children:
+            - Name: Text
+              Type: BaseDataVariableType
+              DataType: LocalizedText
+              Children:
+              - Name: DynamicLink
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "../../Button Text"
+            - Name: TextColor
+              Type: BaseDataVariableType
+              DataType: Color
+              Value: "#000000"
+              Children:
+              - Name: ExpressionEvaluator1
+                Type: ExpressionEvaluator
+                Children:
+                - Name: Source0
+                  Type: BaseDataVariableType
+                  DataType: BaseDataType
+                  ReferenceType: HasSource
+                  Children:
+                  - Name: DynamicLink
+                    Type: DynamicLink
+                    DataType: NodePath
+                    Value: "{Standard_Content}/Panel@NodeId"
+                - Name: Source1
+                  Type: BaseDataVariableType
+                  DataType: BaseDataType
+                  ReferenceType: HasSource
+                  Children:
+                  - Name: DynamicLink
+                    Type: DynamicLink
+                    DataType: NodePath
+                    Value: "/Objects/OptimateDemoProject/UI/Screens/Other/Overview@NodeId"
+                - Name: Source2
+                  Type: BaseDataVariableType
+                  DataType: BaseDataType
+                  ReferenceType: HasSource
+                  Children:
+                  - Name: DynamicLink
+                    Type: DynamicLink
+                    DataType: NodePath
+                    Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Dark Grey 6 - 000000 - Black"
+                - Name: Source3
+                  Type: BaseDataVariableType
+                  DataType: BaseDataType
+                  ReferenceType: HasSource
+                  Children:
+                  - Name: DynamicLink
+                    Type: DynamicLink
+                    DataType: NodePath
+                    Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Light Grey 1 - ffffff - White"
+            - Name: FontSize
+              Type: BaseDataVariableType
+              DataType: Size
+              Value: 16.0
+          - Name: Image
+            Type: Image
+            Children:
+            - Name: Path
+              Type: BaseDataVariableType
+              DataType: ResourceUri
+              Children:
+              - Name: ExpressionEvaluator1
+                Type: ExpressionEvaluator
+                Children:
+                - Name: Source0
+                  Type: BaseDataVariableType
+                  DataType: BaseDataType
+                  ReferenceType: HasSource
+                  Children:
+                  - Name: DynamicLink
+                    Type: DynamicLink
+                    DataType: NodePath
+                    Value: "{Standard_Content}/Panel@NodeId"
+                - Name: Source1
+                  Type: BaseDataVariableType
+                  DataType: BaseDataType
+                  ReferenceType: HasSource
+                  Children:
+                  - Name: DynamicLink
+                    Type: DynamicLink
+                    DataType: NodePath
+                    Value: "/Objects/OptimateDemoProject/UI/Screens/Other/Overview@NodeId"
+                - Name: Source2
+                  Type: BaseDataVariableType
+                  DataType: BaseDataType
+                  ReferenceType: HasSource
+                  Children:
+                  - Name: DynamicLink
+                    Type: DynamicLink
+                    DataType: NodePath
+                    Value: "../../../../Selected Image"
+                - Name: Source3
+                  Type: BaseDataVariableType
+                  DataType: BaseDataType
+                  ReferenceType: HasSource
+                  Children:
+                  - Name: DynamicLink
+                    Type: DynamicLink
+                    DataType: NodePath
+                    Value: "../../../../Standard Image"
+          - Name: Button
+            Type: Button
+            Children:
+            - Name: Text
+              Type: BaseDataVariableType
+              DataType: LocalizedText
+            - Name: ImagePath
+              Type: BaseDataVariableType
+              DataType: ResourceUri
+            - Name: MouseClickEventHandler1
+              Type: EventHandler
+              Children:
+              - Name: ListenEventType
+                Type: PropertyType
+                DataType: NodeId
+                Value: "/Types/EventTypes/BaseEventType/MouseEvent/MouseClickEvent"
+              - Name: MethodsToCall
+                Type: BaseObjectType
+                Children:
+                - Name: MethodContainer1
+                  Type: BaseObjectType
+                  Children:
+                  - Name: ObjectPointer
+                    Type: NodePointer
+                    DataType: NodeId
+                    Children:
+                    - Name: Kind
+                      Type: PropertyType
+                      DataType: NodeId
+                      Value: "/Types/ObjectTypes/BaseObjectType"
+                    - Name: DynamicLink
+                      Type: DynamicLink
+                      DataType: NodePath
+                      Value: "{Standard_Content}@NodeId"
+                  - Name: Method
+                    Type: BaseDataVariableType
+                    DataType: String
+                    Value: "ChangePanel"
+                  - Name: InputArguments
+                    Type: BaseObjectType
+                    Children:
+                    - Name: NewPanel
+                      Type: BaseDataVariableType
+                      DataType: NodeId
+                      Children:
+                      - Name: DynamicLink
+                        Type: DynamicLink
+                        DataType: NodePath
+                        Value: "/Objects/OptimateDemoProject/UI/Screens/Other/Overview"
+                    - Name: AliasNode
+                      Type: BaseDataVariableType
+                      DataType: NodeId
+                      ValueRank: ScalarOrOneDimension
+              - Name: EventArguments
+                Type: MouseClickEvent
+                Children:
+                - Name: EventId
+                  Type: PropertyType
+                  DataType: ByteString
+                - Name: EventType
+                  Type: PropertyType
+                  DataType: NodeId
+                - Name: SourceNode
+                  Type: PropertyType
+                  DataType: NodeId
+                - Name: SourceName
+                  Type: PropertyType
+                  DataType: String
+                - Name: Time
+                  Type: PropertyType
+                  DataType: UtcTime
+                - Name: ReceiveTime
+                  Type: PropertyType
+                  DataType: UtcTime
+                - Name: Message
+                  Type: PropertyType
+                  DataType: LocalizedText
+                - Name: Severity
+                  Type: PropertyType
+                  DataType: UInt16
+          - Name: Button Text
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "Carton Feed"
+          - Name: Standard Image
+            Type: BaseDataVariableType
+            DataType: ResourceUri
+            Value: "ns=36;%PROJECTDIR%/Graphics/Coesia - Library/General/48x48/carton feed.svg"
+          - Name: Selected Image
+            Type: BaseDataVariableType
+            DataType: ResourceUri
+            Value: "ns=36;%PROJECTDIR%/Graphics/Coesia - Library/General/48x48/carton feed-1.svg"
+          - Name: Screen
+            Type: BaseDataVariableType
+            DataType: NodeId
+            Value: "/Objects/OptimateDemoProject/UI/Screens/Other/Overview"
+          - Name: HorizontalAlignment
+            Type: BaseVariableType
+            DataType: HorizontalAlignment
+            ModellingRule: Optional
+            Value: 2
+          - Name: VerticalAlignment
+            Type: BaseVariableType
+            DataType: VerticalAlignment
+            ModellingRule: Optional
+            Value: 2
+        - Name: Loading
+          Type: Menu_Button
+          Children:
+          - Name: Background
+            Type: Rectangle
+            Children:
+            - Name: FillColor
+              Type: BaseDataVariableType
+              DataType: Color
+              Value: "#ffffff"
+              Children:
+              - Name: ExpressionEvaluator1
+                Type: ExpressionEvaluator
+                Children:
+                - Name: Source0
+                  Type: BaseDataVariableType
+                  DataType: BaseDataType
+                  ReferenceType: HasSource
+                  Children:
+                  - Name: DynamicLink
+                    Type: DynamicLink
+                    DataType: NodePath
+                    Value: "{Standard_Content}/Panel@NodeId"
+                - Name: Source1
+                  Type: BaseDataVariableType
+                  DataType: BaseDataType
+                  ReferenceType: HasSource
+                  Children:
+                  - Name: DynamicLink
+                    Type: DynamicLink
+                    DataType: NodePath
+                    Value: "/Objects/OptimateDemoProject/UI/Screens/Other/Overview@NodeId"
+                - Name: Source2
+                  Type: BaseDataVariableType
+                  DataType: BaseDataType
+                  ReferenceType: HasSource
+                  Children:
+                  - Name: DynamicLink
+                    Type: DynamicLink
+                    DataType: NodePath
+                    Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Light Grey 1 - ffffff - White"
+                - Name: Source3
+                  Type: BaseDataVariableType
+                  DataType: BaseDataType
+                  ReferenceType: HasSource
+                  Children:
+                  - Name: DynamicLink
+                    Type: DynamicLink
+                    DataType: NodePath
+                    Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Selected - 6d91b6 - Info - Blue"
+          - Name: Label
+            Type: Label
+            Children:
+            - Name: Text
+              Type: BaseDataVariableType
+              DataType: LocalizedText
+              Children:
+              - Name: DynamicLink
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "../../Button Text"
+            - Name: TextColor
+              Type: BaseDataVariableType
+              DataType: Color
+              Value: "#000000"
+              Children:
+              - Name: ExpressionEvaluator1
+                Type: ExpressionEvaluator
+                Children:
+                - Name: Source0
+                  Type: BaseDataVariableType
+                  DataType: BaseDataType
+                  ReferenceType: HasSource
+                  Children:
+                  - Name: DynamicLink
+                    Type: DynamicLink
+                    DataType: NodePath
+                    Value: "{Standard_Content}/Panel@NodeId"
+                - Name: Source1
+                  Type: BaseDataVariableType
+                  DataType: BaseDataType
+                  ReferenceType: HasSource
+                  Children:
+                  - Name: DynamicLink
+                    Type: DynamicLink
+                    DataType: NodePath
+                    Value: "/Objects/OptimateDemoProject/UI/Screens/Other/Overview@NodeId"
+                - Name: Source2
+                  Type: BaseDataVariableType
+                  DataType: BaseDataType
+                  ReferenceType: HasSource
+                  Children:
+                  - Name: DynamicLink
+                    Type: DynamicLink
+                    DataType: NodePath
+                    Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Dark Grey 6 - 000000 - Black"
+                - Name: Source3
+                  Type: BaseDataVariableType
+                  DataType: BaseDataType
+                  ReferenceType: HasSource
+                  Children:
+                  - Name: DynamicLink
+                    Type: DynamicLink
+                    DataType: NodePath
+                    Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Light Grey 1 - ffffff - White"
+            - Name: FontSize
+              Type: BaseDataVariableType
+              DataType: Size
+              Value: 16.0
+          - Name: Image
+            Type: Image
+            Children:
+            - Name: Path
+              Type: BaseDataVariableType
+              DataType: ResourceUri
+              Children:
+              - Name: ExpressionEvaluator1
+                Type: ExpressionEvaluator
+                Children:
+                - Name: Source0
+                  Type: BaseDataVariableType
+                  DataType: BaseDataType
+                  ReferenceType: HasSource
+                  Children:
+                  - Name: DynamicLink
+                    Type: DynamicLink
+                    DataType: NodePath
+                    Value: "{Standard_Content}/Panel@NodeId"
+                - Name: Source1
+                  Type: BaseDataVariableType
+                  DataType: BaseDataType
+                  ReferenceType: HasSource
+                  Children:
+                  - Name: DynamicLink
+                    Type: DynamicLink
+                    DataType: NodePath
+                    Value: "/Objects/OptimateDemoProject/UI/Screens/Other/Overview@NodeId"
+                - Name: Source2
+                  Type: BaseDataVariableType
+                  DataType: BaseDataType
+                  ReferenceType: HasSource
+                  Children:
+                  - Name: DynamicLink
+                    Type: DynamicLink
+                    DataType: NodePath
+                    Value: "../../../../Selected Image"
+                - Name: Source3
+                  Type: BaseDataVariableType
+                  DataType: BaseDataType
+                  ReferenceType: HasSource
+                  Children:
+                  - Name: DynamicLink
+                    Type: DynamicLink
+                    DataType: NodePath
+                    Value: "../../../../Standard Image"
+          - Name: Button
+            Type: Button
+            Children:
+            - Name: Text
+              Type: BaseDataVariableType
+              DataType: LocalizedText
+            - Name: ImagePath
+              Type: BaseDataVariableType
+              DataType: ResourceUri
+            - Name: MouseClickEventHandler1
+              Type: EventHandler
+              Children:
+              - Name: ListenEventType
+                Type: PropertyType
+                DataType: NodeId
+                Value: "/Types/EventTypes/BaseEventType/MouseEvent/MouseClickEvent"
+              - Name: MethodsToCall
+                Type: BaseObjectType
+                Children:
+                - Name: MethodContainer1
+                  Type: BaseObjectType
+                  Children:
+                  - Name: ObjectPointer
+                    Type: NodePointer
+                    DataType: NodeId
+                    Children:
+                    - Name: Kind
+                      Type: PropertyType
+                      DataType: NodeId
+                      Value: "/Types/ObjectTypes/BaseObjectType"
+                    - Name: DynamicLink
+                      Type: DynamicLink
+                      DataType: NodePath
+                      Value: "{Standard_Content}@NodeId"
+                  - Name: Method
+                    Type: BaseDataVariableType
+                    DataType: String
+                    Value: "ChangePanel"
+                  - Name: InputArguments
+                    Type: BaseObjectType
+                    Children:
+                    - Name: NewPanel
+                      Type: BaseDataVariableType
+                      DataType: NodeId
+                      Children:
+                      - Name: DynamicLink
+                        Type: DynamicLink
+                        DataType: NodePath
+                        Value: "/Objects/OptimateDemoProject/UI/Screens/Other/Overview"
+                    - Name: AliasNode
+                      Type: BaseDataVariableType
+                      DataType: NodeId
+                      ValueRank: ScalarOrOneDimension
+              - Name: EventArguments
+                Type: MouseClickEvent
+                Children:
+                - Name: EventId
+                  Type: PropertyType
+                  DataType: ByteString
+                - Name: EventType
+                  Type: PropertyType
+                  DataType: NodeId
+                - Name: SourceNode
+                  Type: PropertyType
+                  DataType: NodeId
+                - Name: SourceName
+                  Type: PropertyType
+                  DataType: String
+                - Name: Time
+                  Type: PropertyType
+                  DataType: UtcTime
+                - Name: ReceiveTime
+                  Type: PropertyType
+                  DataType: UtcTime
+                - Name: Message
+                  Type: PropertyType
+                  DataType: LocalizedText
+                - Name: Severity
+                  Type: PropertyType
+                  DataType: UInt16
+          - Name: Button Text
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "Loading"
+          - Name: Standard Image
+            Type: BaseDataVariableType
+            DataType: ResourceUri
+            Value: "ns=36;%PROJECTDIR%/Graphics/Coesia - Library/General/48x48/load.svg"
+          - Name: Selected Image
+            Type: BaseDataVariableType
+            DataType: ResourceUri
+            Value: "ns=36;%PROJECTDIR%/Graphics/Coesia - Library/General/48x48/load-1.svg"
+          - Name: Screen
+            Type: BaseDataVariableType
+            DataType: NodeId
+            Value: "/Objects/OptimateDemoProject/UI/Screens/Other/Overview"
+          - Name: HorizontalAlignment
+            Type: BaseVariableType
+            DataType: HorizontalAlignment
+            ModellingRule: Optional
+            Value: 2
+          - Name: VerticalAlignment
+            Type: BaseVariableType
+            DataType: VerticalAlignment
+            ModellingRule: Optional
+            Value: 2
+        - Name: Transport
+          Type: Menu_Button
+          Children:
+          - Name: Background
+            Type: Rectangle
+            Children:
+            - Name: FillColor
+              Type: BaseDataVariableType
+              DataType: Color
+              Value: "#ffffff"
+              Children:
+              - Name: ExpressionEvaluator1
+                Type: ExpressionEvaluator
+                Children:
+                - Name: Source0
+                  Type: BaseDataVariableType
+                  DataType: BaseDataType
+                  ReferenceType: HasSource
+                  Children:
+                  - Name: DynamicLink
+                    Type: DynamicLink
+                    DataType: NodePath
+                    Value: "{Standard_Content}/Panel@NodeId"
+                - Name: Source1
+                  Type: BaseDataVariableType
+                  DataType: BaseDataType
+                  ReferenceType: HasSource
+                  Children:
+                  - Name: DynamicLink
+                    Type: DynamicLink
+                    DataType: NodePath
+                    Value: "/Objects/OptimateDemoProject/UI/Screens/Other/Overview@NodeId"
+                - Name: Source2
+                  Type: BaseDataVariableType
+                  DataType: BaseDataType
+                  ReferenceType: HasSource
+                  Children:
+                  - Name: DynamicLink
+                    Type: DynamicLink
+                    DataType: NodePath
+                    Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Light Grey 1 - ffffff - White"
+                - Name: Source3
+                  Type: BaseDataVariableType
+                  DataType: BaseDataType
+                  ReferenceType: HasSource
+                  Children:
+                  - Name: DynamicLink
+                    Type: DynamicLink
+                    DataType: NodePath
+                    Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Selected - 6d91b6 - Info - Blue"
+          - Name: Label
+            Type: Label
+            Children:
+            - Name: Text
+              Type: BaseDataVariableType
+              DataType: LocalizedText
+              Children:
+              - Name: DynamicLink
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "../../Button Text"
+            - Name: TextColor
+              Type: BaseDataVariableType
+              DataType: Color
+              Value: "#000000"
+              Children:
+              - Name: ExpressionEvaluator1
+                Type: ExpressionEvaluator
+                Children:
+                - Name: Source0
+                  Type: BaseDataVariableType
+                  DataType: BaseDataType
+                  ReferenceType: HasSource
+                  Children:
+                  - Name: DynamicLink
+                    Type: DynamicLink
+                    DataType: NodePath
+                    Value: "{Standard_Content}/Panel@NodeId"
+                - Name: Source1
+                  Type: BaseDataVariableType
+                  DataType: BaseDataType
+                  ReferenceType: HasSource
+                  Children:
+                  - Name: DynamicLink
+                    Type: DynamicLink
+                    DataType: NodePath
+                    Value: "/Objects/OptimateDemoProject/UI/Screens/Other/Overview@NodeId"
+                - Name: Source2
+                  Type: BaseDataVariableType
+                  DataType: BaseDataType
+                  ReferenceType: HasSource
+                  Children:
+                  - Name: DynamicLink
+                    Type: DynamicLink
+                    DataType: NodePath
+                    Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Dark Grey 6 - 000000 - Black"
+                - Name: Source3
+                  Type: BaseDataVariableType
+                  DataType: BaseDataType
+                  ReferenceType: HasSource
+                  Children:
+                  - Name: DynamicLink
+                    Type: DynamicLink
+                    DataType: NodePath
+                    Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Light Grey 1 - ffffff - White"
+            - Name: FontSize
+              Type: BaseDataVariableType
+              DataType: Size
+              Value: 16.0
+          - Name: Image
+            Type: Image
+            Children:
+            - Name: Path
+              Type: BaseDataVariableType
+              DataType: ResourceUri
+              Children:
+              - Name: ExpressionEvaluator1
+                Type: ExpressionEvaluator
+                Children:
+                - Name: Source0
+                  Type: BaseDataVariableType
+                  DataType: BaseDataType
+                  ReferenceType: HasSource
+                  Children:
+                  - Name: DynamicLink
+                    Type: DynamicLink
+                    DataType: NodePath
+                    Value: "{Standard_Content}/Panel@NodeId"
+                - Name: Source1
+                  Type: BaseDataVariableType
+                  DataType: BaseDataType
+                  ReferenceType: HasSource
+                  Children:
+                  - Name: DynamicLink
+                    Type: DynamicLink
+                    DataType: NodePath
+                    Value: "/Objects/OptimateDemoProject/UI/Screens/Other/Overview@NodeId"
+                - Name: Source2
+                  Type: BaseDataVariableType
+                  DataType: BaseDataType
+                  ReferenceType: HasSource
+                  Children:
+                  - Name: DynamicLink
+                    Type: DynamicLink
+                    DataType: NodePath
+                    Value: "../../../../Selected Image"
+                - Name: Source3
+                  Type: BaseDataVariableType
+                  DataType: BaseDataType
+                  ReferenceType: HasSource
+                  Children:
+                  - Name: DynamicLink
+                    Type: DynamicLink
+                    DataType: NodePath
+                    Value: "../../../../Standard Image"
+          - Name: Button
+            Type: Button
+            Children:
+            - Name: Text
+              Type: BaseDataVariableType
+              DataType: LocalizedText
+            - Name: ImagePath
+              Type: BaseDataVariableType
+              DataType: ResourceUri
+            - Name: MouseClickEventHandler1
+              Type: EventHandler
+              Children:
+              - Name: ListenEventType
+                Type: PropertyType
+                DataType: NodeId
+                Value: "/Types/EventTypes/BaseEventType/MouseEvent/MouseClickEvent"
+              - Name: MethodsToCall
+                Type: BaseObjectType
+                Children:
+                - Name: MethodContainer1
+                  Type: BaseObjectType
+                  Children:
+                  - Name: ObjectPointer
+                    Type: NodePointer
+                    DataType: NodeId
+                    Children:
+                    - Name: Kind
+                      Type: PropertyType
+                      DataType: NodeId
+                      Value: "/Types/ObjectTypes/BaseObjectType"
+                    - Name: DynamicLink
+                      Type: DynamicLink
+                      DataType: NodePath
+                      Value: "{Standard_Content}@NodeId"
+                  - Name: Method
+                    Type: BaseDataVariableType
+                    DataType: String
+                    Value: "ChangePanel"
+                  - Name: InputArguments
+                    Type: BaseObjectType
+                    Children:
+                    - Name: NewPanel
+                      Type: BaseDataVariableType
+                      DataType: NodeId
+                      Children:
+                      - Name: DynamicLink
+                        Type: DynamicLink
+                        DataType: NodePath
+                        Value: "/Objects/OptimateDemoProject/UI/Screens/Other/Overview"
+                    - Name: AliasNode
+                      Type: BaseDataVariableType
+                      DataType: NodeId
+                      ValueRank: ScalarOrOneDimension
+              - Name: EventArguments
+                Type: MouseClickEvent
+                Children:
+                - Name: EventId
+                  Type: PropertyType
+                  DataType: ByteString
+                - Name: EventType
+                  Type: PropertyType
+                  DataType: NodeId
+                - Name: SourceNode
+                  Type: PropertyType
+                  DataType: NodeId
+                - Name: SourceName
+                  Type: PropertyType
+                  DataType: String
+                - Name: Time
+                  Type: PropertyType
+                  DataType: UtcTime
+                - Name: ReceiveTime
+                  Type: PropertyType
+                  DataType: UtcTime
+                - Name: Message
+                  Type: PropertyType
+                  DataType: LocalizedText
+                - Name: Severity
+                  Type: PropertyType
+                  DataType: UInt16
+          - Name: Button Text
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "Transport"
+          - Name: Standard Image
+            Type: BaseDataVariableType
+            DataType: ResourceUri
+            Value: "ns=36;%PROJECTDIR%/Graphics/Coesia - Library/General/48x48/transport settings.svg"
+          - Name: Selected Image
+            Type: BaseDataVariableType
+            DataType: ResourceUri
+            Value: "ns=36;%PROJECTDIR%/Graphics/Coesia - Library/General/48x48/transport settings-1.svg"
+          - Name: Screen
+            Type: BaseDataVariableType
+            DataType: NodeId
+            Value: "/Objects/OptimateDemoProject/UI/Screens/Other/Overview"
+          - Name: HorizontalAlignment
+            Type: BaseVariableType
+            DataType: HorizontalAlignment
+            ModellingRule: Optional
+            Value: 2
+          - Name: VerticalAlignment
+            Type: BaseVariableType
+            DataType: VerticalAlignment
+            ModellingRule: Optional
+            Value: 2
+        - Name: Gluing
+          Type: Menu_Button
+          Children:
+          - Name: Background
+            Type: Rectangle
+            Children:
+            - Name: FillColor
+              Type: BaseDataVariableType
+              DataType: Color
+              Value: "#ffffff"
+              Children:
+              - Name: ExpressionEvaluator1
+                Type: ExpressionEvaluator
+                Children:
+                - Name: Source0
+                  Type: BaseDataVariableType
+                  DataType: BaseDataType
+                  ReferenceType: HasSource
+                  Children:
+                  - Name: DynamicLink
+                    Type: DynamicLink
+                    DataType: NodePath
+                    Value: "{Standard_Content}/Panel@NodeId"
+                - Name: Source1
+                  Type: BaseDataVariableType
+                  DataType: BaseDataType
+                  ReferenceType: HasSource
+                  Children:
+                  - Name: DynamicLink
+                    Type: DynamicLink
+                    DataType: NodePath
+                    Value: "/Objects/OptimateDemoProject/UI/Screens/Other/Overview@NodeId"
+                - Name: Source2
+                  Type: BaseDataVariableType
+                  DataType: BaseDataType
+                  ReferenceType: HasSource
+                  Children:
+                  - Name: DynamicLink
+                    Type: DynamicLink
+                    DataType: NodePath
+                    Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Light Grey 1 - ffffff - White"
+                - Name: Source3
+                  Type: BaseDataVariableType
+                  DataType: BaseDataType
+                  ReferenceType: HasSource
+                  Children:
+                  - Name: DynamicLink
+                    Type: DynamicLink
+                    DataType: NodePath
+                    Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Selected - 6d91b6 - Info - Blue"
+          - Name: Label
+            Type: Label
+            Children:
+            - Name: Text
+              Type: BaseDataVariableType
+              DataType: LocalizedText
+              Children:
+              - Name: DynamicLink
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "../../Button Text"
+            - Name: TextColor
+              Type: BaseDataVariableType
+              DataType: Color
+              Value: "#000000"
+              Children:
+              - Name: ExpressionEvaluator1
+                Type: ExpressionEvaluator
+                Children:
+                - Name: Source0
+                  Type: BaseDataVariableType
+                  DataType: BaseDataType
+                  ReferenceType: HasSource
+                  Children:
+                  - Name: DynamicLink
+                    Type: DynamicLink
+                    DataType: NodePath
+                    Value: "{Standard_Content}/Panel@NodeId"
+                - Name: Source1
+                  Type: BaseDataVariableType
+                  DataType: BaseDataType
+                  ReferenceType: HasSource
+                  Children:
+                  - Name: DynamicLink
+                    Type: DynamicLink
+                    DataType: NodePath
+                    Value: "/Objects/OptimateDemoProject/UI/Screens/Other/Overview@NodeId"
+                - Name: Source2
+                  Type: BaseDataVariableType
+                  DataType: BaseDataType
+                  ReferenceType: HasSource
+                  Children:
+                  - Name: DynamicLink
+                    Type: DynamicLink
+                    DataType: NodePath
+                    Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Dark Grey 6 - 000000 - Black"
+                - Name: Source3
+                  Type: BaseDataVariableType
+                  DataType: BaseDataType
+                  ReferenceType: HasSource
+                  Children:
+                  - Name: DynamicLink
+                    Type: DynamicLink
+                    DataType: NodePath
+                    Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Light Grey 1 - ffffff - White"
+            - Name: FontSize
+              Type: BaseDataVariableType
+              DataType: Size
+              Value: 16.0
+          - Name: Image
+            Type: Image
+            Children:
+            - Name: Path
+              Type: BaseDataVariableType
+              DataType: ResourceUri
+              Children:
+              - Name: ExpressionEvaluator1
+                Type: ExpressionEvaluator
+                Children:
+                - Name: Source0
+                  Type: BaseDataVariableType
+                  DataType: BaseDataType
+                  ReferenceType: HasSource
+                  Children:
+                  - Name: DynamicLink
+                    Type: DynamicLink
+                    DataType: NodePath
+                    Value: "{Standard_Content}/Panel@NodeId"
+                - Name: Source1
+                  Type: BaseDataVariableType
+                  DataType: BaseDataType
+                  ReferenceType: HasSource
+                  Children:
+                  - Name: DynamicLink
+                    Type: DynamicLink
+                    DataType: NodePath
+                    Value: "/Objects/OptimateDemoProject/UI/Screens/Other/Overview@NodeId"
+                - Name: Source2
+                  Type: BaseDataVariableType
+                  DataType: BaseDataType
+                  ReferenceType: HasSource
+                  Children:
+                  - Name: DynamicLink
+                    Type: DynamicLink
+                    DataType: NodePath
+                    Value: "../../../../Selected Image"
+                - Name: Source3
+                  Type: BaseDataVariableType
+                  DataType: BaseDataType
+                  ReferenceType: HasSource
+                  Children:
+                  - Name: DynamicLink
+                    Type: DynamicLink
+                    DataType: NodePath
+                    Value: "../../../../Standard Image"
+          - Name: Button
+            Type: Button
+            Children:
+            - Name: Text
+              Type: BaseDataVariableType
+              DataType: LocalizedText
+            - Name: ImagePath
+              Type: BaseDataVariableType
+              DataType: ResourceUri
+            - Name: MouseClickEventHandler1
+              Type: EventHandler
+              Children:
+              - Name: ListenEventType
+                Type: PropertyType
+                DataType: NodeId
+                Value: "/Types/EventTypes/BaseEventType/MouseEvent/MouseClickEvent"
+              - Name: MethodsToCall
+                Type: BaseObjectType
+                Children:
+                - Name: MethodContainer1
+                  Type: BaseObjectType
+                  Children:
+                  - Name: ObjectPointer
+                    Type: NodePointer
+                    DataType: NodeId
+                    Children:
+                    - Name: Kind
+                      Type: PropertyType
+                      DataType: NodeId
+                      Value: "/Types/ObjectTypes/BaseObjectType"
+                    - Name: DynamicLink
+                      Type: DynamicLink
+                      DataType: NodePath
+                      Value: "{Standard_Content}@NodeId"
+                  - Name: Method
+                    Type: BaseDataVariableType
+                    DataType: String
+                    Value: "ChangePanel"
+                  - Name: InputArguments
+                    Type: BaseObjectType
+                    Children:
+                    - Name: NewPanel
+                      Type: BaseDataVariableType
+                      DataType: NodeId
+                      Children:
+                      - Name: DynamicLink
+                        Type: DynamicLink
+                        DataType: NodePath
+                        Value: "/Objects/OptimateDemoProject/UI/Screens/Other/Overview"
+                    - Name: AliasNode
+                      Type: BaseDataVariableType
+                      DataType: NodeId
+                      ValueRank: ScalarOrOneDimension
+              - Name: EventArguments
+                Type: MouseClickEvent
+                Children:
+                - Name: EventId
+                  Type: PropertyType
+                  DataType: ByteString
+                - Name: EventType
+                  Type: PropertyType
+                  DataType: NodeId
+                - Name: SourceNode
+                  Type: PropertyType
+                  DataType: NodeId
+                - Name: SourceName
+                  Type: PropertyType
+                  DataType: String
+                - Name: Time
+                  Type: PropertyType
+                  DataType: UtcTime
+                - Name: ReceiveTime
+                  Type: PropertyType
+                  DataType: UtcTime
+                - Name: Message
+                  Type: PropertyType
+                  DataType: LocalizedText
+                - Name: Severity
+                  Type: PropertyType
+                  DataType: UInt16
+          - Name: Button Text
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "Gluing"
+          - Name: Standard Image
+            Type: BaseDataVariableType
+            DataType: ResourceUri
+            Value: "ns=36;%PROJECTDIR%/Graphics/Coesia - Library/General/48x48/gluing.svg"
+          - Name: Selected Image
+            Type: BaseDataVariableType
+            DataType: ResourceUri
+            Value: "ns=36;%PROJECTDIR%/Graphics/Coesia - Library/General/48x48/gluing-1.svg"
+          - Name: Screen
+            Type: BaseDataVariableType
+            DataType: NodeId
+            Value: "/Objects/OptimateDemoProject/UI/Screens/Other/Overview"
+          - Name: HorizontalAlignment
+            Type: BaseVariableType
+            DataType: HorizontalAlignment
+            ModellingRule: Optional
+            Value: 2
+          - Name: VerticalAlignment
+            Type: BaseVariableType
+            DataType: VerticalAlignment
+            ModellingRule: Optional
+            Value: 2
+    - Name: BottomRectangle
+      Type: Rectangle
+      Children:
+      - Name: BorderColor
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#000000"
+      - Name: FillColor
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#ffffff"
+        Children:
+        - Name: DynamicLink
+          Type: DynamicLink
+          DataType: NodePath
+          Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Light Grey 1 - ffffff - White"
+  - Name: Arrow
     Type: Rectangle
     Children:
     - Name: Width
@@ -174,2068 +2026,4 @@ Children:
       - Name: DynamicLink
         Type: DynamicLink
         DataType: NodePath
-        Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Light Grey 6"
-  - Name: HorizontalLayout
-    Type: RowLayout
-    Children:
-    - Name: Width
-      Type: BaseVariableType
-      DataType: Size
-      ModellingRule: Optional
-      Value: 50.0
-    - Name: Height
-      Type: BaseVariableType
-      DataType: Size
-      ModellingRule: Optional
-      Value: 50.0
-    - Name: HorizontalAlignment
-      Type: BaseVariableType
-      DataType: HorizontalAlignment
-      ModellingRule: Optional
-      Value: 3
-    - Name: VerticalAlignment
-      Type: BaseVariableType
-      DataType: VerticalAlignment
-      ModellingRule: Optional
-      Value: 3
-    - Name: BottomMargin
-      Type: BaseVariableType
-      DataType: Size
-      ModellingRule: Optional
-      Value: 40.0
-    - Name: Wrap
-      Type: BaseDataVariableType
-      DataType: Boolean
-      ModellingRule: Optional
-    - Name: HorizontalGap
-      Type: BaseDataVariableType
-      DataType: Size
-      ModellingRule: Optional
-      Value: 12.0
-    - Name: VerticalGap
-      Type: BaseDataVariableType
-      DataType: Size
-      ModellingRule: Optional
-    - Name: TopMargin
-      Type: BaseVariableType
-      DataType: Size
-      ModellingRule: Optional
-      Value: 16.0
-    - Name: RightMargin
-      Type: BaseVariableType
-      DataType: Size
-      ModellingRule: Optional
-      Value: 16.0
-    - Name: LeftMargin
-      Type: BaseVariableType
-      DataType: Size
-      ModellingRule: Optional
-      Value: 16.0
-    - Name: Home
-      Type: Menu_Button
-      Children:
-      - Name: Background
-        Type: Rectangle
-        Children:
-        - Name: FillColor
-          Type: BaseDataVariableType
-          DataType: Color
-          Value: "#ffffff"
-          Children:
-          - Name: ExpressionEvaluator1
-            Type: ExpressionEvaluator
-            Children:
-            - Name: Source0
-              Type: BaseDataVariableType
-              DataType: BaseDataType
-              ReferenceType: HasSource
-              Children:
-              - Name: DynamicLink
-                Type: DynamicLink
-                DataType: NodePath
-                Value: "{Standard_Content}/Panel@NodeId"
-            - Name: Source1
-              Type: BaseDataVariableType
-              DataType: BaseDataType
-              ReferenceType: HasSource
-              Children:
-              - Name: DynamicLink
-                Type: DynamicLink
-                DataType: NodePath
-                Value: "../../../../Screen@NodeId"
-            - Name: Source2
-              Type: BaseDataVariableType
-              DataType: BaseDataType
-              ReferenceType: HasSource
-              Children:
-              - Name: DynamicLink
-                Type: DynamicLink
-                DataType: NodePath
-                Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Light Grey 1"
-            - Name: Source3
-              Type: BaseDataVariableType
-              DataType: BaseDataType
-              ReferenceType: HasSource
-              Children:
-              - Name: DynamicLink
-                Type: DynamicLink
-                DataType: NodePath
-                Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Info - Blue"
-      - Name: Label
-        Type: Label
-        Children:
-        - Name: Text
-          Type: BaseDataVariableType
-          DataType: LocalizedText
-          Children:
-          - Name: DynamicLink
-            Type: DynamicLink
-            DataType: NodePath
-            Value: "../../Button Text"
-        - Name: TextColor
-          Type: BaseDataVariableType
-          DataType: Color
-          Value: "#000000"
-          Children:
-          - Name: ExpressionEvaluator1
-            Type: ExpressionEvaluator
-            Children:
-            - Name: Source0
-              Type: BaseDataVariableType
-              DataType: BaseDataType
-              ReferenceType: HasSource
-              Children:
-              - Name: DynamicLink
-                Type: DynamicLink
-                DataType: NodePath
-                Value: "{Standard_Content}/Panel@NodeId"
-            - Name: Source1
-              Type: BaseDataVariableType
-              DataType: BaseDataType
-              ReferenceType: HasSource
-              Children:
-              - Name: DynamicLink
-                Type: DynamicLink
-                DataType: NodePath
-                Value: "/Objects/OptimateDemoProject/UI/Screens/Manual/Manual_Home@NodeId"
-            - Name: Source2
-              Type: BaseDataVariableType
-              DataType: BaseDataType
-              ReferenceType: HasSource
-              Children:
-              - Name: DynamicLink
-                Type: DynamicLink
-                DataType: NodePath
-                Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Dark Grey 6"
-            - Name: Source3
-              Type: BaseDataVariableType
-              DataType: BaseDataType
-              ReferenceType: HasSource
-              Children:
-              - Name: DynamicLink
-                Type: DynamicLink
-                DataType: NodePath
-                Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Light Grey 1"
-        - Name: FontSize
-          Type: BaseDataVariableType
-          DataType: Size
-          Value: 16.0
-      - Name: Image
-        Type: Image
-        Children:
-        - Name: Path
-          Type: BaseDataVariableType
-          DataType: ResourceUri
-          Children:
-          - Name: ExpressionEvaluator1
-            Type: ExpressionEvaluator
-            Children:
-            - Name: Source0
-              Type: BaseDataVariableType
-              DataType: BaseDataType
-              ReferenceType: HasSource
-              Children:
-              - Name: DynamicLink
-                Type: DynamicLink
-                DataType: NodePath
-                Value: "{Standard_Content}/Panel@NodeId"
-            - Name: Source1
-              Type: BaseDataVariableType
-              DataType: BaseDataType
-              ReferenceType: HasSource
-              Children:
-              - Name: DynamicLink
-                Type: DynamicLink
-                DataType: NodePath
-                Value: "/Objects/OptimateDemoProject/UI/Screens/Manual/Manual_Home@NodeId"
-            - Name: Source2
-              Type: BaseDataVariableType
-              DataType: BaseDataType
-              ReferenceType: HasSource
-              Children:
-              - Name: DynamicLink
-                Type: DynamicLink
-                DataType: NodePath
-                Value: "../../../../Selected Image"
-            - Name: Source3
-              Type: BaseDataVariableType
-              DataType: BaseDataType
-              ReferenceType: HasSource
-              Children:
-              - Name: DynamicLink
-                Type: DynamicLink
-                DataType: NodePath
-                Value: "../../../../Standard Image"
-      - Name: Button
-        Type: Button
-        Children:
-        - Name: Text
-          Type: BaseDataVariableType
-          DataType: LocalizedText
-        - Name: ImagePath
-          Type: BaseDataVariableType
-          DataType: ResourceUri
-        - Name: MouseClickEventHandler1
-          Type: EventHandler
-          Children:
-          - Name: ListenEventType
-            Type: PropertyType
-            DataType: NodeId
-            Value: "/Types/EventTypes/BaseEventType/MouseEvent/MouseClickEvent"
-          - Name: MethodsToCall
-            Type: BaseObjectType
-            Children:
-            - Name: MethodContainer1
-              Type: BaseObjectType
-              Children:
-              - Name: ObjectPointer
-                Type: NodePointer
-                DataType: NodeId
-                Children:
-                - Name: Kind
-                  Type: PropertyType
-                  DataType: NodeId
-                  Value: "/Types/ObjectTypes/BaseObjectType"
-                - Name: DynamicLink
-                  Type: DynamicLink
-                  DataType: NodePath
-                  Value: "{Standard_Content}@NodeId"
-              - Name: Method
-                Type: BaseDataVariableType
-                DataType: String
-                Value: "ChangePanel"
-              - Name: InputArguments
-                Type: BaseObjectType
-                Children:
-                - Name: NewPanel
-                  Type: BaseDataVariableType
-                  DataType: NodeId
-                  Children:
-                  - Name: DynamicLink
-                    Type: DynamicLink
-                    DataType: NodePath
-                    Value: "/Objects/OptimateDemoProject/UI/Screens/Manual/Manual_Home"
-                - Name: AliasNode
-                  Type: BaseDataVariableType
-                  DataType: NodeId
-                  ValueRank: ScalarOrOneDimension
-          - Name: EventArguments
-            Type: MouseClickEvent
-            Children:
-            - Name: EventId
-              Type: PropertyType
-              DataType: ByteString
-            - Name: EventType
-              Type: PropertyType
-              DataType: NodeId
-            - Name: SourceNode
-              Type: PropertyType
-              DataType: NodeId
-            - Name: SourceName
-              Type: PropertyType
-              DataType: String
-            - Name: Time
-              Type: PropertyType
-              DataType: UtcTime
-            - Name: ReceiveTime
-              Type: PropertyType
-              DataType: UtcTime
-            - Name: Message
-              Type: PropertyType
-              DataType: LocalizedText
-            - Name: Severity
-              Type: PropertyType
-              DataType: UInt16
-      - Name: Button Text
-        Type: BaseDataVariableType
-        DataType: String
-        Value: "Home"
-      - Name: Standard Image
-        Type: BaseDataVariableType
-        DataType: ResourceUri
-        Value: "ns=36;%PROJECTDIR%/Graphics/Coesia - Library/General/48x48/Home.svg"
-      - Name: Selected Image
-        Type: BaseDataVariableType
-        DataType: ResourceUri
-        Value: "ns=36;%PROJECTDIR%/Graphics/Coesia - Library/General/48x48/Home-1.svg"
-      - Name: Screen
-        Type: BaseDataVariableType
-        DataType: NodeId
-        Value: "/Objects/OptimateDemoProject/UI/Screens/Manual/Manual_Home"
-    - Name: Overview
-      Type: Menu_Button
-      Children:
-      - Name: Background
-        Type: Rectangle
-        Children:
-        - Name: FillColor
-          Type: BaseDataVariableType
-          DataType: Color
-          Value: "#ffffff"
-          Children:
-          - Name: ExpressionEvaluator1
-            Type: ExpressionEvaluator
-            Children:
-            - Name: Source0
-              Type: BaseDataVariableType
-              DataType: BaseDataType
-              ReferenceType: HasSource
-              Children:
-              - Name: DynamicLink
-                Type: DynamicLink
-                DataType: NodePath
-                Value: "{Standard_Content}/Panel@NodeId"
-            - Name: Source1
-              Type: BaseDataVariableType
-              DataType: BaseDataType
-              ReferenceType: HasSource
-              Children:
-              - Name: DynamicLink
-                Type: DynamicLink
-                DataType: NodePath
-                Value: "../../../../Screen@NodeId"
-            - Name: Source2
-              Type: BaseDataVariableType
-              DataType: BaseDataType
-              ReferenceType: HasSource
-              Children:
-              - Name: DynamicLink
-                Type: DynamicLink
-                DataType: NodePath
-                Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Light Grey 1"
-            - Name: Source3
-              Type: BaseDataVariableType
-              DataType: BaseDataType
-              ReferenceType: HasSource
-              Children:
-              - Name: DynamicLink
-                Type: DynamicLink
-                DataType: NodePath
-                Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Info - Blue"
-      - Name: Label
-        Type: Label
-        Children:
-        - Name: Text
-          Type: BaseDataVariableType
-          DataType: LocalizedText
-          Children:
-          - Name: DynamicLink
-            Type: DynamicLink
-            DataType: NodePath
-            Value: "../../Button Text"
-        - Name: TextColor
-          Type: BaseDataVariableType
-          DataType: Color
-          Value: "#000000"
-          Children:
-          - Name: ExpressionEvaluator1
-            Type: ExpressionEvaluator
-            Children:
-            - Name: Source0
-              Type: BaseDataVariableType
-              DataType: BaseDataType
-              ReferenceType: HasSource
-              Children:
-              - Name: DynamicLink
-                Type: DynamicLink
-                DataType: NodePath
-                Value: "{Standard_Content}/Panel@NodeId"
-            - Name: Source1
-              Type: BaseDataVariableType
-              DataType: BaseDataType
-              ReferenceType: HasSource
-              Children:
-              - Name: DynamicLink
-                Type: DynamicLink
-                DataType: NodePath
-                Value: "/Objects/OptimateDemoProject/UI/Screens/Other/Overview@NodeId"
-            - Name: Source2
-              Type: BaseDataVariableType
-              DataType: BaseDataType
-              ReferenceType: HasSource
-              Children:
-              - Name: DynamicLink
-                Type: DynamicLink
-                DataType: NodePath
-                Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Dark Grey 6"
-            - Name: Source3
-              Type: BaseDataVariableType
-              DataType: BaseDataType
-              ReferenceType: HasSource
-              Children:
-              - Name: DynamicLink
-                Type: DynamicLink
-                DataType: NodePath
-                Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Light Grey 1"
-        - Name: FontSize
-          Type: BaseDataVariableType
-          DataType: Size
-          Value: 16.0
-      - Name: Image
-        Type: Image
-        Children:
-        - Name: Path
-          Type: BaseDataVariableType
-          DataType: ResourceUri
-          Children:
-          - Name: ExpressionEvaluator1
-            Type: ExpressionEvaluator
-            Children:
-            - Name: Source0
-              Type: BaseDataVariableType
-              DataType: BaseDataType
-              ReferenceType: HasSource
-              Children:
-              - Name: DynamicLink
-                Type: DynamicLink
-                DataType: NodePath
-                Value: "{Standard_Content}/Panel@NodeId"
-            - Name: Source1
-              Type: BaseDataVariableType
-              DataType: BaseDataType
-              ReferenceType: HasSource
-              Children:
-              - Name: DynamicLink
-                Type: DynamicLink
-                DataType: NodePath
-                Value: "/Objects/OptimateDemoProject/UI/Screens/Other/Overview@NodeId"
-            - Name: Source2
-              Type: BaseDataVariableType
-              DataType: BaseDataType
-              ReferenceType: HasSource
-              Children:
-              - Name: DynamicLink
-                Type: DynamicLink
-                DataType: NodePath
-                Value: "../../../../Selected Image"
-            - Name: Source3
-              Type: BaseDataVariableType
-              DataType: BaseDataType
-              ReferenceType: HasSource
-              Children:
-              - Name: DynamicLink
-                Type: DynamicLink
-                DataType: NodePath
-                Value: "../../../../Standard Image"
-      - Name: Button
-        Type: Button
-        Children:
-        - Name: Text
-          Type: BaseDataVariableType
-          DataType: LocalizedText
-        - Name: ImagePath
-          Type: BaseDataVariableType
-          DataType: ResourceUri
-        - Name: MouseClickEventHandler1
-          Type: EventHandler
-          Children:
-          - Name: ListenEventType
-            Type: PropertyType
-            DataType: NodeId
-            Value: "/Types/EventTypes/BaseEventType/MouseEvent/MouseClickEvent"
-          - Name: MethodsToCall
-            Type: BaseObjectType
-            Children:
-            - Name: MethodContainer1
-              Type: BaseObjectType
-              Children:
-              - Name: ObjectPointer
-                Type: NodePointer
-                DataType: NodeId
-                Children:
-                - Name: Kind
-                  Type: PropertyType
-                  DataType: NodeId
-                  Value: "/Types/ObjectTypes/BaseObjectType"
-                - Name: DynamicLink
-                  Type: DynamicLink
-                  DataType: NodePath
-                  Value: "{Standard_Content}@NodeId"
-              - Name: Method
-                Type: BaseDataVariableType
-                DataType: String
-                Value: "ChangePanel"
-              - Name: InputArguments
-                Type: BaseObjectType
-                Children:
-                - Name: NewPanel
-                  Type: BaseDataVariableType
-                  DataType: NodeId
-                  Children:
-                  - Name: DynamicLink
-                    Type: DynamicLink
-                    DataType: NodePath
-                    Value: "/Objects/OptimateDemoProject/UI/Screens/Other/Overview"
-                - Name: AliasNode
-                  Type: BaseDataVariableType
-                  DataType: NodeId
-                  ValueRank: ScalarOrOneDimension
-          - Name: EventArguments
-            Type: MouseClickEvent
-            Children:
-            - Name: EventId
-              Type: PropertyType
-              DataType: ByteString
-            - Name: EventType
-              Type: PropertyType
-              DataType: NodeId
-            - Name: SourceNode
-              Type: PropertyType
-              DataType: NodeId
-            - Name: SourceName
-              Type: PropertyType
-              DataType: String
-            - Name: Time
-              Type: PropertyType
-              DataType: UtcTime
-            - Name: ReceiveTime
-              Type: PropertyType
-              DataType: UtcTime
-            - Name: Message
-              Type: PropertyType
-              DataType: LocalizedText
-            - Name: Severity
-              Type: PropertyType
-              DataType: UInt16
-      - Name: Button Text
-        Type: BaseDataVariableType
-        DataType: String
-        Value: "Overview"
-      - Name: Standard Image
-        Type: BaseDataVariableType
-        DataType: ResourceUri
-        Value: "ns=36;%PROJECTDIR%/Graphics/Coesia - Library/General/48x48/Overview.svg"
-      - Name: Selected Image
-        Type: BaseDataVariableType
-        DataType: ResourceUri
-        Value: "ns=36;%PROJECTDIR%/Graphics/Coesia - Library/General/48x48/Overview-1.svg"
-      - Name: Screen
-        Type: BaseDataVariableType
-        DataType: NodeId
-        Value: "/Objects/OptimateDemoProject/UI/Screens/Other/Overview"
-    - Name: Transfer
-      Type: Menu_Button
-      Children:
-      - Name: Background
-        Type: Rectangle
-        Children:
-        - Name: FillColor
-          Type: BaseDataVariableType
-          DataType: Color
-          Value: "#ffffff"
-          Children:
-          - Name: ExpressionEvaluator1
-            Type: ExpressionEvaluator
-            Children:
-            - Name: Source0
-              Type: BaseDataVariableType
-              DataType: BaseDataType
-              ReferenceType: HasSource
-              Children:
-              - Name: DynamicLink
-                Type: DynamicLink
-                DataType: NodePath
-                Value: "{Standard_Content}/Panel@NodeId"
-            - Name: Source1
-              Type: BaseDataVariableType
-              DataType: BaseDataType
-              ReferenceType: HasSource
-              Children:
-              - Name: DynamicLink
-                Type: DynamicLink
-                DataType: NodePath
-                Value: "../../../../Screen@NodeId"
-            - Name: Source2
-              Type: BaseDataVariableType
-              DataType: BaseDataType
-              ReferenceType: HasSource
-              Children:
-              - Name: DynamicLink
-                Type: DynamicLink
-                DataType: NodePath
-                Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Light Grey 1"
-            - Name: Source3
-              Type: BaseDataVariableType
-              DataType: BaseDataType
-              ReferenceType: HasSource
-              Children:
-              - Name: DynamicLink
-                Type: DynamicLink
-                DataType: NodePath
-                Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Info - Blue"
-      - Name: Label
-        Type: Label
-        Children:
-        - Name: Text
-          Type: BaseDataVariableType
-          DataType: LocalizedText
-          Children:
-          - Name: DynamicLink
-            Type: DynamicLink
-            DataType: NodePath
-            Value: "../../Button Text"
-        - Name: TextColor
-          Type: BaseDataVariableType
-          DataType: Color
-          Value: "#000000"
-          Children:
-          - Name: ExpressionEvaluator1
-            Type: ExpressionEvaluator
-            Children:
-            - Name: Source0
-              Type: BaseDataVariableType
-              DataType: BaseDataType
-              ReferenceType: HasSource
-              Children:
-              - Name: DynamicLink
-                Type: DynamicLink
-                DataType: NodePath
-                Value: "{Standard_Content}/Panel@NodeId"
-            - Name: Source1
-              Type: BaseDataVariableType
-              DataType: BaseDataType
-              ReferenceType: HasSource
-              Children:
-              - Name: DynamicLink
-                Type: DynamicLink
-                DataType: NodePath
-                Value: "/Objects/OptimateDemoProject/UI/Screens/Other/Overview@NodeId"
-            - Name: Source2
-              Type: BaseDataVariableType
-              DataType: BaseDataType
-              ReferenceType: HasSource
-              Children:
-              - Name: DynamicLink
-                Type: DynamicLink
-                DataType: NodePath
-                Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Dark Grey 6"
-            - Name: Source3
-              Type: BaseDataVariableType
-              DataType: BaseDataType
-              ReferenceType: HasSource
-              Children:
-              - Name: DynamicLink
-                Type: DynamicLink
-                DataType: NodePath
-                Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Light Grey 1"
-        - Name: FontSize
-          Type: BaseDataVariableType
-          DataType: Size
-          Value: 16.0
-      - Name: Image
-        Type: Image
-        Children:
-        - Name: Path
-          Type: BaseDataVariableType
-          DataType: ResourceUri
-          Children:
-          - Name: ExpressionEvaluator1
-            Type: ExpressionEvaluator
-            Children:
-            - Name: Source0
-              Type: BaseDataVariableType
-              DataType: BaseDataType
-              ReferenceType: HasSource
-              Children:
-              - Name: DynamicLink
-                Type: DynamicLink
-                DataType: NodePath
-                Value: "{Standard_Content}/Panel@NodeId"
-            - Name: Source1
-              Type: BaseDataVariableType
-              DataType: BaseDataType
-              ReferenceType: HasSource
-              Children:
-              - Name: DynamicLink
-                Type: DynamicLink
-                DataType: NodePath
-                Value: "/Objects/OptimateDemoProject/UI/Screens/Other/Overview@NodeId"
-            - Name: Source2
-              Type: BaseDataVariableType
-              DataType: BaseDataType
-              ReferenceType: HasSource
-              Children:
-              - Name: DynamicLink
-                Type: DynamicLink
-                DataType: NodePath
-                Value: "../../../../Selected Image"
-            - Name: Source3
-              Type: BaseDataVariableType
-              DataType: BaseDataType
-              ReferenceType: HasSource
-              Children:
-              - Name: DynamicLink
-                Type: DynamicLink
-                DataType: NodePath
-                Value: "../../../../Standard Image"
-      - Name: Button
-        Type: Button
-        Children:
-        - Name: Text
-          Type: BaseDataVariableType
-          DataType: LocalizedText
-        - Name: ImagePath
-          Type: BaseDataVariableType
-          DataType: ResourceUri
-        - Name: MouseClickEventHandler1
-          Type: EventHandler
-          Children:
-          - Name: ListenEventType
-            Type: PropertyType
-            DataType: NodeId
-            Value: "/Types/EventTypes/BaseEventType/MouseEvent/MouseClickEvent"
-          - Name: MethodsToCall
-            Type: BaseObjectType
-            Children:
-            - Name: MethodContainer1
-              Type: BaseObjectType
-              Children:
-              - Name: ObjectPointer
-                Type: NodePointer
-                DataType: NodeId
-                Children:
-                - Name: Kind
-                  Type: PropertyType
-                  DataType: NodeId
-                  Value: "/Types/ObjectTypes/BaseObjectType"
-                - Name: DynamicLink
-                  Type: DynamicLink
-                  DataType: NodePath
-                  Value: "{Standard_Content}@NodeId"
-              - Name: Method
-                Type: BaseDataVariableType
-                DataType: String
-                Value: "ChangePanel"
-              - Name: InputArguments
-                Type: BaseObjectType
-                Children:
-                - Name: NewPanel
-                  Type: BaseDataVariableType
-                  DataType: NodeId
-                  Children:
-                  - Name: DynamicLink
-                    Type: DynamicLink
-                    DataType: NodePath
-                    Value: "/Objects/OptimateDemoProject/UI/Screens/Other/Overview"
-                - Name: AliasNode
-                  Type: BaseDataVariableType
-                  DataType: NodeId
-                  ValueRank: ScalarOrOneDimension
-          - Name: EventArguments
-            Type: MouseClickEvent
-            Children:
-            - Name: EventId
-              Type: PropertyType
-              DataType: ByteString
-            - Name: EventType
-              Type: PropertyType
-              DataType: NodeId
-            - Name: SourceNode
-              Type: PropertyType
-              DataType: NodeId
-            - Name: SourceName
-              Type: PropertyType
-              DataType: String
-            - Name: Time
-              Type: PropertyType
-              DataType: UtcTime
-            - Name: ReceiveTime
-              Type: PropertyType
-              DataType: UtcTime
-            - Name: Message
-              Type: PropertyType
-              DataType: LocalizedText
-            - Name: Severity
-              Type: PropertyType
-              DataType: UInt16
-      - Name: Button Text
-        Type: BaseDataVariableType
-        DataType: String
-        Value: "Overview"
-      - Name: Standard Image
-        Type: BaseDataVariableType
-        DataType: ResourceUri
-        Value: "ns=36;%PROJECTDIR%/Graphics/Jones/mbe transfer black.svg"
-      - Name: Selected Image
-        Type: BaseDataVariableType
-        DataType: ResourceUri
-        Value: "ns=36;%PROJECTDIR%/Graphics/Jones/mbe transfer white.svg"
-      - Name: Screen
-        Type: BaseDataVariableType
-        DataType: NodeId
-        Value: "/Objects/OptimateDemoProject/UI/Screens/Other/Overview"
-    - Name: Carton Feed
-      Type: Menu_Button
-      Children:
-      - Name: Background
-        Type: Rectangle
-        Children:
-        - Name: FillColor
-          Type: BaseDataVariableType
-          DataType: Color
-          Value: "#ffffff"
-          Children:
-          - Name: ExpressionEvaluator1
-            Type: ExpressionEvaluator
-            Children:
-            - Name: Source0
-              Type: BaseDataVariableType
-              DataType: BaseDataType
-              ReferenceType: HasSource
-              Children:
-              - Name: DynamicLink
-                Type: DynamicLink
-                DataType: NodePath
-                Value: "{Standard_Content}/Panel@NodeId"
-            - Name: Source1
-              Type: BaseDataVariableType
-              DataType: BaseDataType
-              ReferenceType: HasSource
-              Children:
-              - Name: DynamicLink
-                Type: DynamicLink
-                DataType: NodePath
-                Value: "../../../../Screen@NodeId"
-            - Name: Source2
-              Type: BaseDataVariableType
-              DataType: BaseDataType
-              ReferenceType: HasSource
-              Children:
-              - Name: DynamicLink
-                Type: DynamicLink
-                DataType: NodePath
-                Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Light Grey 1"
-            - Name: Source3
-              Type: BaseDataVariableType
-              DataType: BaseDataType
-              ReferenceType: HasSource
-              Children:
-              - Name: DynamicLink
-                Type: DynamicLink
-                DataType: NodePath
-                Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Info - Blue"
-      - Name: Label
-        Type: Label
-        Children:
-        - Name: Text
-          Type: BaseDataVariableType
-          DataType: LocalizedText
-          Children:
-          - Name: DynamicLink
-            Type: DynamicLink
-            DataType: NodePath
-            Value: "../../Button Text"
-        - Name: TextColor
-          Type: BaseDataVariableType
-          DataType: Color
-          Value: "#000000"
-          Children:
-          - Name: ExpressionEvaluator1
-            Type: ExpressionEvaluator
-            Children:
-            - Name: Source0
-              Type: BaseDataVariableType
-              DataType: BaseDataType
-              ReferenceType: HasSource
-              Children:
-              - Name: DynamicLink
-                Type: DynamicLink
-                DataType: NodePath
-                Value: "{Standard_Content}/Panel@NodeId"
-            - Name: Source1
-              Type: BaseDataVariableType
-              DataType: BaseDataType
-              ReferenceType: HasSource
-              Children:
-              - Name: DynamicLink
-                Type: DynamicLink
-                DataType: NodePath
-                Value: "/Objects/OptimateDemoProject/UI/Screens/Other/Overview@NodeId"
-            - Name: Source2
-              Type: BaseDataVariableType
-              DataType: BaseDataType
-              ReferenceType: HasSource
-              Children:
-              - Name: DynamicLink
-                Type: DynamicLink
-                DataType: NodePath
-                Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Dark Grey 6"
-            - Name: Source3
-              Type: BaseDataVariableType
-              DataType: BaseDataType
-              ReferenceType: HasSource
-              Children:
-              - Name: DynamicLink
-                Type: DynamicLink
-                DataType: NodePath
-                Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Light Grey 1"
-        - Name: FontSize
-          Type: BaseDataVariableType
-          DataType: Size
-          Value: 16.0
-      - Name: Image
-        Type: Image
-        Children:
-        - Name: Path
-          Type: BaseDataVariableType
-          DataType: ResourceUri
-          Children:
-          - Name: ExpressionEvaluator1
-            Type: ExpressionEvaluator
-            Children:
-            - Name: Source0
-              Type: BaseDataVariableType
-              DataType: BaseDataType
-              ReferenceType: HasSource
-              Children:
-              - Name: DynamicLink
-                Type: DynamicLink
-                DataType: NodePath
-                Value: "{Standard_Content}/Panel@NodeId"
-            - Name: Source1
-              Type: BaseDataVariableType
-              DataType: BaseDataType
-              ReferenceType: HasSource
-              Children:
-              - Name: DynamicLink
-                Type: DynamicLink
-                DataType: NodePath
-                Value: "/Objects/OptimateDemoProject/UI/Screens/Other/Overview@NodeId"
-            - Name: Source2
-              Type: BaseDataVariableType
-              DataType: BaseDataType
-              ReferenceType: HasSource
-              Children:
-              - Name: DynamicLink
-                Type: DynamicLink
-                DataType: NodePath
-                Value: "../../../../Selected Image"
-            - Name: Source3
-              Type: BaseDataVariableType
-              DataType: BaseDataType
-              ReferenceType: HasSource
-              Children:
-              - Name: DynamicLink
-                Type: DynamicLink
-                DataType: NodePath
-                Value: "../../../../Standard Image"
-      - Name: Button
-        Type: Button
-        Children:
-        - Name: Text
-          Type: BaseDataVariableType
-          DataType: LocalizedText
-        - Name: ImagePath
-          Type: BaseDataVariableType
-          DataType: ResourceUri
-        - Name: MouseClickEventHandler1
-          Type: EventHandler
-          Children:
-          - Name: ListenEventType
-            Type: PropertyType
-            DataType: NodeId
-            Value: "/Types/EventTypes/BaseEventType/MouseEvent/MouseClickEvent"
-          - Name: MethodsToCall
-            Type: BaseObjectType
-            Children:
-            - Name: MethodContainer1
-              Type: BaseObjectType
-              Children:
-              - Name: ObjectPointer
-                Type: NodePointer
-                DataType: NodeId
-                Children:
-                - Name: Kind
-                  Type: PropertyType
-                  DataType: NodeId
-                  Value: "/Types/ObjectTypes/BaseObjectType"
-                - Name: DynamicLink
-                  Type: DynamicLink
-                  DataType: NodePath
-                  Value: "{Standard_Content}@NodeId"
-              - Name: Method
-                Type: BaseDataVariableType
-                DataType: String
-                Value: "ChangePanel"
-              - Name: InputArguments
-                Type: BaseObjectType
-                Children:
-                - Name: NewPanel
-                  Type: BaseDataVariableType
-                  DataType: NodeId
-                  Children:
-                  - Name: DynamicLink
-                    Type: DynamicLink
-                    DataType: NodePath
-                    Value: "/Objects/OptimateDemoProject/UI/Screens/Other/Overview"
-                - Name: AliasNode
-                  Type: BaseDataVariableType
-                  DataType: NodeId
-                  ValueRank: ScalarOrOneDimension
-          - Name: EventArguments
-            Type: MouseClickEvent
-            Children:
-            - Name: EventId
-              Type: PropertyType
-              DataType: ByteString
-            - Name: EventType
-              Type: PropertyType
-              DataType: NodeId
-            - Name: SourceNode
-              Type: PropertyType
-              DataType: NodeId
-            - Name: SourceName
-              Type: PropertyType
-              DataType: String
-            - Name: Time
-              Type: PropertyType
-              DataType: UtcTime
-            - Name: ReceiveTime
-              Type: PropertyType
-              DataType: UtcTime
-            - Name: Message
-              Type: PropertyType
-              DataType: LocalizedText
-            - Name: Severity
-              Type: PropertyType
-              DataType: UInt16
-      - Name: Button Text
-        Type: BaseDataVariableType
-        DataType: String
-        Value: "Carton Feed"
-      - Name: Standard Image
-        Type: BaseDataVariableType
-        DataType: ResourceUri
-        Value: "ns=36;%PROJECTDIR%/Graphics/Coesia - Library/General/48x48/carton feed.svg"
-      - Name: Selected Image
-        Type: BaseDataVariableType
-        DataType: ResourceUri
-        Value: "ns=36;%PROJECTDIR%/Graphics/Coesia - Library/General/48x48/carton feed-1.svg"
-      - Name: Screen
-        Type: BaseDataVariableType
-        DataType: NodeId
-        Value: "/Objects/OptimateDemoProject/UI/Screens/Other/Overview"
-    - Name: Loading
-      Type: Menu_Button
-      Children:
-      - Name: Background
-        Type: Rectangle
-        Children:
-        - Name: FillColor
-          Type: BaseDataVariableType
-          DataType: Color
-          Value: "#ffffff"
-          Children:
-          - Name: ExpressionEvaluator1
-            Type: ExpressionEvaluator
-            Children:
-            - Name: Source0
-              Type: BaseDataVariableType
-              DataType: BaseDataType
-              ReferenceType: HasSource
-              Children:
-              - Name: DynamicLink
-                Type: DynamicLink
-                DataType: NodePath
-                Value: "{Standard_Content}/Panel@NodeId"
-            - Name: Source1
-              Type: BaseDataVariableType
-              DataType: BaseDataType
-              ReferenceType: HasSource
-              Children:
-              - Name: DynamicLink
-                Type: DynamicLink
-                DataType: NodePath
-                Value: "../../../../Screen@NodeId"
-            - Name: Source2
-              Type: BaseDataVariableType
-              DataType: BaseDataType
-              ReferenceType: HasSource
-              Children:
-              - Name: DynamicLink
-                Type: DynamicLink
-                DataType: NodePath
-                Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Light Grey 1"
-            - Name: Source3
-              Type: BaseDataVariableType
-              DataType: BaseDataType
-              ReferenceType: HasSource
-              Children:
-              - Name: DynamicLink
-                Type: DynamicLink
-                DataType: NodePath
-                Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Info - Blue"
-      - Name: Label
-        Type: Label
-        Children:
-        - Name: Text
-          Type: BaseDataVariableType
-          DataType: LocalizedText
-          Children:
-          - Name: DynamicLink
-            Type: DynamicLink
-            DataType: NodePath
-            Value: "../../Button Text"
-        - Name: TextColor
-          Type: BaseDataVariableType
-          DataType: Color
-          Value: "#000000"
-          Children:
-          - Name: ExpressionEvaluator1
-            Type: ExpressionEvaluator
-            Children:
-            - Name: Source0
-              Type: BaseDataVariableType
-              DataType: BaseDataType
-              ReferenceType: HasSource
-              Children:
-              - Name: DynamicLink
-                Type: DynamicLink
-                DataType: NodePath
-                Value: "{Standard_Content}/Panel@NodeId"
-            - Name: Source1
-              Type: BaseDataVariableType
-              DataType: BaseDataType
-              ReferenceType: HasSource
-              Children:
-              - Name: DynamicLink
-                Type: DynamicLink
-                DataType: NodePath
-                Value: "/Objects/OptimateDemoProject/UI/Screens/Other/Overview@NodeId"
-            - Name: Source2
-              Type: BaseDataVariableType
-              DataType: BaseDataType
-              ReferenceType: HasSource
-              Children:
-              - Name: DynamicLink
-                Type: DynamicLink
-                DataType: NodePath
-                Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Dark Grey 6"
-            - Name: Source3
-              Type: BaseDataVariableType
-              DataType: BaseDataType
-              ReferenceType: HasSource
-              Children:
-              - Name: DynamicLink
-                Type: DynamicLink
-                DataType: NodePath
-                Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Light Grey 1"
-        - Name: FontSize
-          Type: BaseDataVariableType
-          DataType: Size
-          Value: 16.0
-      - Name: Image
-        Type: Image
-        Children:
-        - Name: Path
-          Type: BaseDataVariableType
-          DataType: ResourceUri
-          Children:
-          - Name: ExpressionEvaluator1
-            Type: ExpressionEvaluator
-            Children:
-            - Name: Source0
-              Type: BaseDataVariableType
-              DataType: BaseDataType
-              ReferenceType: HasSource
-              Children:
-              - Name: DynamicLink
-                Type: DynamicLink
-                DataType: NodePath
-                Value: "{Standard_Content}/Panel@NodeId"
-            - Name: Source1
-              Type: BaseDataVariableType
-              DataType: BaseDataType
-              ReferenceType: HasSource
-              Children:
-              - Name: DynamicLink
-                Type: DynamicLink
-                DataType: NodePath
-                Value: "/Objects/OptimateDemoProject/UI/Screens/Other/Overview@NodeId"
-            - Name: Source2
-              Type: BaseDataVariableType
-              DataType: BaseDataType
-              ReferenceType: HasSource
-              Children:
-              - Name: DynamicLink
-                Type: DynamicLink
-                DataType: NodePath
-                Value: "../../../../Selected Image"
-            - Name: Source3
-              Type: BaseDataVariableType
-              DataType: BaseDataType
-              ReferenceType: HasSource
-              Children:
-              - Name: DynamicLink
-                Type: DynamicLink
-                DataType: NodePath
-                Value: "../../../../Standard Image"
-      - Name: Button
-        Type: Button
-        Children:
-        - Name: Text
-          Type: BaseDataVariableType
-          DataType: LocalizedText
-        - Name: ImagePath
-          Type: BaseDataVariableType
-          DataType: ResourceUri
-        - Name: MouseClickEventHandler1
-          Type: EventHandler
-          Children:
-          - Name: ListenEventType
-            Type: PropertyType
-            DataType: NodeId
-            Value: "/Types/EventTypes/BaseEventType/MouseEvent/MouseClickEvent"
-          - Name: MethodsToCall
-            Type: BaseObjectType
-            Children:
-            - Name: MethodContainer1
-              Type: BaseObjectType
-              Children:
-              - Name: ObjectPointer
-                Type: NodePointer
-                DataType: NodeId
-                Children:
-                - Name: Kind
-                  Type: PropertyType
-                  DataType: NodeId
-                  Value: "/Types/ObjectTypes/BaseObjectType"
-                - Name: DynamicLink
-                  Type: DynamicLink
-                  DataType: NodePath
-                  Value: "{Standard_Content}@NodeId"
-              - Name: Method
-                Type: BaseDataVariableType
-                DataType: String
-                Value: "ChangePanel"
-              - Name: InputArguments
-                Type: BaseObjectType
-                Children:
-                - Name: NewPanel
-                  Type: BaseDataVariableType
-                  DataType: NodeId
-                  Children:
-                  - Name: DynamicLink
-                    Type: DynamicLink
-                    DataType: NodePath
-                    Value: "/Objects/OptimateDemoProject/UI/Screens/Other/Overview"
-                - Name: AliasNode
-                  Type: BaseDataVariableType
-                  DataType: NodeId
-                  ValueRank: ScalarOrOneDimension
-          - Name: EventArguments
-            Type: MouseClickEvent
-            Children:
-            - Name: EventId
-              Type: PropertyType
-              DataType: ByteString
-            - Name: EventType
-              Type: PropertyType
-              DataType: NodeId
-            - Name: SourceNode
-              Type: PropertyType
-              DataType: NodeId
-            - Name: SourceName
-              Type: PropertyType
-              DataType: String
-            - Name: Time
-              Type: PropertyType
-              DataType: UtcTime
-            - Name: ReceiveTime
-              Type: PropertyType
-              DataType: UtcTime
-            - Name: Message
-              Type: PropertyType
-              DataType: LocalizedText
-            - Name: Severity
-              Type: PropertyType
-              DataType: UInt16
-      - Name: Button Text
-        Type: BaseDataVariableType
-        DataType: String
-        Value: "Loading"
-      - Name: Standard Image
-        Type: BaseDataVariableType
-        DataType: ResourceUri
-        Value: "ns=36;%PROJECTDIR%/Graphics/Coesia - Library/General/48x48/load.svg"
-      - Name: Selected Image
-        Type: BaseDataVariableType
-        DataType: ResourceUri
-        Value: "ns=36;%PROJECTDIR%/Graphics/Coesia - Library/General/48x48/load-1.svg"
-      - Name: Screen
-        Type: BaseDataVariableType
-        DataType: NodeId
-        Value: "/Objects/OptimateDemoProject/UI/Screens/Other/Overview"
-    - Name: Transport
-      Type: Menu_Button
-      Children:
-      - Name: Background
-        Type: Rectangle
-        Children:
-        - Name: FillColor
-          Type: BaseDataVariableType
-          DataType: Color
-          Value: "#ffffff"
-          Children:
-          - Name: ExpressionEvaluator1
-            Type: ExpressionEvaluator
-            Children:
-            - Name: Source0
-              Type: BaseDataVariableType
-              DataType: BaseDataType
-              ReferenceType: HasSource
-              Children:
-              - Name: DynamicLink
-                Type: DynamicLink
-                DataType: NodePath
-                Value: "{Standard_Content}/Panel@NodeId"
-            - Name: Source1
-              Type: BaseDataVariableType
-              DataType: BaseDataType
-              ReferenceType: HasSource
-              Children:
-              - Name: DynamicLink
-                Type: DynamicLink
-                DataType: NodePath
-                Value: "../../../../Screen@NodeId"
-            - Name: Source2
-              Type: BaseDataVariableType
-              DataType: BaseDataType
-              ReferenceType: HasSource
-              Children:
-              - Name: DynamicLink
-                Type: DynamicLink
-                DataType: NodePath
-                Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Light Grey 1"
-            - Name: Source3
-              Type: BaseDataVariableType
-              DataType: BaseDataType
-              ReferenceType: HasSource
-              Children:
-              - Name: DynamicLink
-                Type: DynamicLink
-                DataType: NodePath
-                Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Info - Blue"
-      - Name: Label
-        Type: Label
-        Children:
-        - Name: Text
-          Type: BaseDataVariableType
-          DataType: LocalizedText
-          Children:
-          - Name: DynamicLink
-            Type: DynamicLink
-            DataType: NodePath
-            Value: "../../Button Text"
-        - Name: TextColor
-          Type: BaseDataVariableType
-          DataType: Color
-          Value: "#000000"
-          Children:
-          - Name: ExpressionEvaluator1
-            Type: ExpressionEvaluator
-            Children:
-            - Name: Source0
-              Type: BaseDataVariableType
-              DataType: BaseDataType
-              ReferenceType: HasSource
-              Children:
-              - Name: DynamicLink
-                Type: DynamicLink
-                DataType: NodePath
-                Value: "{Standard_Content}/Panel@NodeId"
-            - Name: Source1
-              Type: BaseDataVariableType
-              DataType: BaseDataType
-              ReferenceType: HasSource
-              Children:
-              - Name: DynamicLink
-                Type: DynamicLink
-                DataType: NodePath
-                Value: "/Objects/OptimateDemoProject/UI/Screens/Other/Overview@NodeId"
-            - Name: Source2
-              Type: BaseDataVariableType
-              DataType: BaseDataType
-              ReferenceType: HasSource
-              Children:
-              - Name: DynamicLink
-                Type: DynamicLink
-                DataType: NodePath
-                Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Dark Grey 6"
-            - Name: Source3
-              Type: BaseDataVariableType
-              DataType: BaseDataType
-              ReferenceType: HasSource
-              Children:
-              - Name: DynamicLink
-                Type: DynamicLink
-                DataType: NodePath
-                Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Light Grey 1"
-        - Name: FontSize
-          Type: BaseDataVariableType
-          DataType: Size
-          Value: 16.0
-      - Name: Image
-        Type: Image
-        Children:
-        - Name: Path
-          Type: BaseDataVariableType
-          DataType: ResourceUri
-          Children:
-          - Name: ExpressionEvaluator1
-            Type: ExpressionEvaluator
-            Children:
-            - Name: Source0
-              Type: BaseDataVariableType
-              DataType: BaseDataType
-              ReferenceType: HasSource
-              Children:
-              - Name: DynamicLink
-                Type: DynamicLink
-                DataType: NodePath
-                Value: "{Standard_Content}/Panel@NodeId"
-            - Name: Source1
-              Type: BaseDataVariableType
-              DataType: BaseDataType
-              ReferenceType: HasSource
-              Children:
-              - Name: DynamicLink
-                Type: DynamicLink
-                DataType: NodePath
-                Value: "/Objects/OptimateDemoProject/UI/Screens/Other/Overview@NodeId"
-            - Name: Source2
-              Type: BaseDataVariableType
-              DataType: BaseDataType
-              ReferenceType: HasSource
-              Children:
-              - Name: DynamicLink
-                Type: DynamicLink
-                DataType: NodePath
-                Value: "../../../../Selected Image"
-            - Name: Source3
-              Type: BaseDataVariableType
-              DataType: BaseDataType
-              ReferenceType: HasSource
-              Children:
-              - Name: DynamicLink
-                Type: DynamicLink
-                DataType: NodePath
-                Value: "../../../../Standard Image"
-      - Name: Button
-        Type: Button
-        Children:
-        - Name: Text
-          Type: BaseDataVariableType
-          DataType: LocalizedText
-        - Name: ImagePath
-          Type: BaseDataVariableType
-          DataType: ResourceUri
-        - Name: MouseClickEventHandler1
-          Type: EventHandler
-          Children:
-          - Name: ListenEventType
-            Type: PropertyType
-            DataType: NodeId
-            Value: "/Types/EventTypes/BaseEventType/MouseEvent/MouseClickEvent"
-          - Name: MethodsToCall
-            Type: BaseObjectType
-            Children:
-            - Name: MethodContainer1
-              Type: BaseObjectType
-              Children:
-              - Name: ObjectPointer
-                Type: NodePointer
-                DataType: NodeId
-                Children:
-                - Name: Kind
-                  Type: PropertyType
-                  DataType: NodeId
-                  Value: "/Types/ObjectTypes/BaseObjectType"
-                - Name: DynamicLink
-                  Type: DynamicLink
-                  DataType: NodePath
-                  Value: "{Standard_Content}@NodeId"
-              - Name: Method
-                Type: BaseDataVariableType
-                DataType: String
-                Value: "ChangePanel"
-              - Name: InputArguments
-                Type: BaseObjectType
-                Children:
-                - Name: NewPanel
-                  Type: BaseDataVariableType
-                  DataType: NodeId
-                  Children:
-                  - Name: DynamicLink
-                    Type: DynamicLink
-                    DataType: NodePath
-                    Value: "/Objects/OptimateDemoProject/UI/Screens/Other/Overview"
-                - Name: AliasNode
-                  Type: BaseDataVariableType
-                  DataType: NodeId
-                  ValueRank: ScalarOrOneDimension
-          - Name: EventArguments
-            Type: MouseClickEvent
-            Children:
-            - Name: EventId
-              Type: PropertyType
-              DataType: ByteString
-            - Name: EventType
-              Type: PropertyType
-              DataType: NodeId
-            - Name: SourceNode
-              Type: PropertyType
-              DataType: NodeId
-            - Name: SourceName
-              Type: PropertyType
-              DataType: String
-            - Name: Time
-              Type: PropertyType
-              DataType: UtcTime
-            - Name: ReceiveTime
-              Type: PropertyType
-              DataType: UtcTime
-            - Name: Message
-              Type: PropertyType
-              DataType: LocalizedText
-            - Name: Severity
-              Type: PropertyType
-              DataType: UInt16
-      - Name: Button Text
-        Type: BaseDataVariableType
-        DataType: String
-        Value: "Transport"
-      - Name: Standard Image
-        Type: BaseDataVariableType
-        DataType: ResourceUri
-        Value: "ns=36;%PROJECTDIR%/Graphics/Coesia - Library/General/48x48/transport settings.svg"
-      - Name: Selected Image
-        Type: BaseDataVariableType
-        DataType: ResourceUri
-        Value: "ns=36;%PROJECTDIR%/Graphics/Coesia - Library/General/48x48/transport settings-1.svg"
-      - Name: Screen
-        Type: BaseDataVariableType
-        DataType: NodeId
-        Value: "/Objects/OptimateDemoProject/UI/Screens/Other/Overview"
-    - Name: Gluing
-      Type: Menu_Button
-      Children:
-      - Name: Background
-        Type: Rectangle
-        Children:
-        - Name: FillColor
-          Type: BaseDataVariableType
-          DataType: Color
-          Value: "#ffffff"
-          Children:
-          - Name: ExpressionEvaluator1
-            Type: ExpressionEvaluator
-            Children:
-            - Name: Source0
-              Type: BaseDataVariableType
-              DataType: BaseDataType
-              ReferenceType: HasSource
-              Children:
-              - Name: DynamicLink
-                Type: DynamicLink
-                DataType: NodePath
-                Value: "{Standard_Content}/Panel@NodeId"
-            - Name: Source1
-              Type: BaseDataVariableType
-              DataType: BaseDataType
-              ReferenceType: HasSource
-              Children:
-              - Name: DynamicLink
-                Type: DynamicLink
-                DataType: NodePath
-                Value: "../../../../Screen@NodeId"
-            - Name: Source2
-              Type: BaseDataVariableType
-              DataType: BaseDataType
-              ReferenceType: HasSource
-              Children:
-              - Name: DynamicLink
-                Type: DynamicLink
-                DataType: NodePath
-                Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Light Grey 1"
-            - Name: Source3
-              Type: BaseDataVariableType
-              DataType: BaseDataType
-              ReferenceType: HasSource
-              Children:
-              - Name: DynamicLink
-                Type: DynamicLink
-                DataType: NodePath
-                Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Info - Blue"
-      - Name: Label
-        Type: Label
-        Children:
-        - Name: Text
-          Type: BaseDataVariableType
-          DataType: LocalizedText
-          Children:
-          - Name: DynamicLink
-            Type: DynamicLink
-            DataType: NodePath
-            Value: "../../Button Text"
-        - Name: TextColor
-          Type: BaseDataVariableType
-          DataType: Color
-          Value: "#000000"
-          Children:
-          - Name: ExpressionEvaluator1
-            Type: ExpressionEvaluator
-            Children:
-            - Name: Source0
-              Type: BaseDataVariableType
-              DataType: BaseDataType
-              ReferenceType: HasSource
-              Children:
-              - Name: DynamicLink
-                Type: DynamicLink
-                DataType: NodePath
-                Value: "{Standard_Content}/Panel@NodeId"
-            - Name: Source1
-              Type: BaseDataVariableType
-              DataType: BaseDataType
-              ReferenceType: HasSource
-              Children:
-              - Name: DynamicLink
-                Type: DynamicLink
-                DataType: NodePath
-                Value: "/Objects/OptimateDemoProject/UI/Screens/Other/Overview@NodeId"
-            - Name: Source2
-              Type: BaseDataVariableType
-              DataType: BaseDataType
-              ReferenceType: HasSource
-              Children:
-              - Name: DynamicLink
-                Type: DynamicLink
-                DataType: NodePath
-                Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Dark Grey 6"
-            - Name: Source3
-              Type: BaseDataVariableType
-              DataType: BaseDataType
-              ReferenceType: HasSource
-              Children:
-              - Name: DynamicLink
-                Type: DynamicLink
-                DataType: NodePath
-                Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Light Grey 1"
-        - Name: FontSize
-          Type: BaseDataVariableType
-          DataType: Size
-          Value: 16.0
-      - Name: Image
-        Type: Image
-        Children:
-        - Name: Path
-          Type: BaseDataVariableType
-          DataType: ResourceUri
-          Children:
-          - Name: ExpressionEvaluator1
-            Type: ExpressionEvaluator
-            Children:
-            - Name: Source0
-              Type: BaseDataVariableType
-              DataType: BaseDataType
-              ReferenceType: HasSource
-              Children:
-              - Name: DynamicLink
-                Type: DynamicLink
-                DataType: NodePath
-                Value: "{Standard_Content}/Panel@NodeId"
-            - Name: Source1
-              Type: BaseDataVariableType
-              DataType: BaseDataType
-              ReferenceType: HasSource
-              Children:
-              - Name: DynamicLink
-                Type: DynamicLink
-                DataType: NodePath
-                Value: "/Objects/OptimateDemoProject/UI/Screens/Other/Overview@NodeId"
-            - Name: Source2
-              Type: BaseDataVariableType
-              DataType: BaseDataType
-              ReferenceType: HasSource
-              Children:
-              - Name: DynamicLink
-                Type: DynamicLink
-                DataType: NodePath
-                Value: "../../../../Selected Image"
-            - Name: Source3
-              Type: BaseDataVariableType
-              DataType: BaseDataType
-              ReferenceType: HasSource
-              Children:
-              - Name: DynamicLink
-                Type: DynamicLink
-                DataType: NodePath
-                Value: "../../../../Standard Image"
-      - Name: Button
-        Type: Button
-        Children:
-        - Name: Text
-          Type: BaseDataVariableType
-          DataType: LocalizedText
-        - Name: ImagePath
-          Type: BaseDataVariableType
-          DataType: ResourceUri
-        - Name: MouseClickEventHandler1
-          Type: EventHandler
-          Children:
-          - Name: ListenEventType
-            Type: PropertyType
-            DataType: NodeId
-            Value: "/Types/EventTypes/BaseEventType/MouseEvent/MouseClickEvent"
-          - Name: MethodsToCall
-            Type: BaseObjectType
-            Children:
-            - Name: MethodContainer1
-              Type: BaseObjectType
-              Children:
-              - Name: ObjectPointer
-                Type: NodePointer
-                DataType: NodeId
-                Children:
-                - Name: Kind
-                  Type: PropertyType
-                  DataType: NodeId
-                  Value: "/Types/ObjectTypes/BaseObjectType"
-                - Name: DynamicLink
-                  Type: DynamicLink
-                  DataType: NodePath
-                  Value: "{Standard_Content}@NodeId"
-              - Name: Method
-                Type: BaseDataVariableType
-                DataType: String
-                Value: "ChangePanel"
-              - Name: InputArguments
-                Type: BaseObjectType
-                Children:
-                - Name: NewPanel
-                  Type: BaseDataVariableType
-                  DataType: NodeId
-                  Children:
-                  - Name: DynamicLink
-                    Type: DynamicLink
-                    DataType: NodePath
-                    Value: "/Objects/OptimateDemoProject/UI/Screens/Other/Overview"
-                - Name: AliasNode
-                  Type: BaseDataVariableType
-                  DataType: NodeId
-                  ValueRank: ScalarOrOneDimension
-          - Name: EventArguments
-            Type: MouseClickEvent
-            Children:
-            - Name: EventId
-              Type: PropertyType
-              DataType: ByteString
-            - Name: EventType
-              Type: PropertyType
-              DataType: NodeId
-            - Name: SourceNode
-              Type: PropertyType
-              DataType: NodeId
-            - Name: SourceName
-              Type: PropertyType
-              DataType: String
-            - Name: Time
-              Type: PropertyType
-              DataType: UtcTime
-            - Name: ReceiveTime
-              Type: PropertyType
-              DataType: UtcTime
-            - Name: Message
-              Type: PropertyType
-              DataType: LocalizedText
-            - Name: Severity
-              Type: PropertyType
-              DataType: UInt16
-      - Name: Button Text
-        Type: BaseDataVariableType
-        DataType: String
-        Value: "Gluing"
-      - Name: Standard Image
-        Type: BaseDataVariableType
-        DataType: ResourceUri
-        Value: "ns=36;%PROJECTDIR%/Graphics/Coesia - Library/General/48x48/gluing.svg"
-      - Name: Selected Image
-        Type: BaseDataVariableType
-        DataType: ResourceUri
-        Value: "ns=36;%PROJECTDIR%/Graphics/Coesia - Library/General/48x48/gluing-1.svg"
-      - Name: Screen
-        Type: BaseDataVariableType
-        DataType: NodeId
-        Value: "/Objects/OptimateDemoProject/UI/Screens/Other/Overview"
-    - Name: Size Config
-      Type: Menu_Button
-      Children:
-      - Name: Background
-        Type: Rectangle
-        Children:
-        - Name: FillColor
-          Type: BaseDataVariableType
-          DataType: Color
-          Value: "#ffffff"
-          Children:
-          - Name: ExpressionEvaluator1
-            Type: ExpressionEvaluator
-            Children:
-            - Name: Source0
-              Type: BaseDataVariableType
-              DataType: BaseDataType
-              ReferenceType: HasSource
-              Children:
-              - Name: DynamicLink
-                Type: DynamicLink
-                DataType: NodePath
-                Value: "{Standard_Content}/Panel@NodeId"
-            - Name: Source1
-              Type: BaseDataVariableType
-              DataType: BaseDataType
-              ReferenceType: HasSource
-              Children:
-              - Name: DynamicLink
-                Type: DynamicLink
-                DataType: NodePath
-                Value: "../../../../Screen@NodeId"
-            - Name: Source2
-              Type: BaseDataVariableType
-              DataType: BaseDataType
-              ReferenceType: HasSource
-              Children:
-              - Name: DynamicLink
-                Type: DynamicLink
-                DataType: NodePath
-                Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Light Grey 1"
-            - Name: Source3
-              Type: BaseDataVariableType
-              DataType: BaseDataType
-              ReferenceType: HasSource
-              Children:
-              - Name: DynamicLink
-                Type: DynamicLink
-                DataType: NodePath
-                Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Info - Blue"
-      - Name: Label
-        Type: Label
-        Children:
-        - Name: Text
-          Type: BaseDataVariableType
-          DataType: LocalizedText
-          Children:
-          - Name: DynamicLink
-            Type: DynamicLink
-            DataType: NodePath
-            Value: "../../Button Text"
-        - Name: TextColor
-          Type: BaseDataVariableType
-          DataType: Color
-          Value: "#000000"
-          Children:
-          - Name: ExpressionEvaluator1
-            Type: ExpressionEvaluator
-            Children:
-            - Name: Source0
-              Type: BaseDataVariableType
-              DataType: BaseDataType
-              ReferenceType: HasSource
-              Children:
-              - Name: DynamicLink
-                Type: DynamicLink
-                DataType: NodePath
-                Value: "{Standard_Content}/Panel@NodeId"
-            - Name: Source1
-              Type: BaseDataVariableType
-              DataType: BaseDataType
-              ReferenceType: HasSource
-              Children:
-              - Name: DynamicLink
-                Type: DynamicLink
-                DataType: NodePath
-                Value: "/Objects/OptimateDemoProject/UI/Screens/Other/Overview@NodeId"
-            - Name: Source2
-              Type: BaseDataVariableType
-              DataType: BaseDataType
-              ReferenceType: HasSource
-              Children:
-              - Name: DynamicLink
-                Type: DynamicLink
-                DataType: NodePath
-                Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Dark Grey 6"
-            - Name: Source3
-              Type: BaseDataVariableType
-              DataType: BaseDataType
-              ReferenceType: HasSource
-              Children:
-              - Name: DynamicLink
-                Type: DynamicLink
-                DataType: NodePath
-                Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Light Grey 1"
-        - Name: FontSize
-          Type: BaseDataVariableType
-          DataType: Size
-          Value: 16.0
-      - Name: Image
-        Type: Image
-        Children:
-        - Name: Path
-          Type: BaseDataVariableType
-          DataType: ResourceUri
-          Children:
-          - Name: ExpressionEvaluator1
-            Type: ExpressionEvaluator
-            Children:
-            - Name: Source0
-              Type: BaseDataVariableType
-              DataType: BaseDataType
-              ReferenceType: HasSource
-              Children:
-              - Name: DynamicLink
-                Type: DynamicLink
-                DataType: NodePath
-                Value: "{Standard_Content}/Panel@NodeId"
-            - Name: Source1
-              Type: BaseDataVariableType
-              DataType: BaseDataType
-              ReferenceType: HasSource
-              Children:
-              - Name: DynamicLink
-                Type: DynamicLink
-                DataType: NodePath
-                Value: "/Objects/OptimateDemoProject/UI/Screens/Other/Overview@NodeId"
-            - Name: Source2
-              Type: BaseDataVariableType
-              DataType: BaseDataType
-              ReferenceType: HasSource
-              Children:
-              - Name: DynamicLink
-                Type: DynamicLink
-                DataType: NodePath
-                Value: "../../../../Selected Image"
-            - Name: Source3
-              Type: BaseDataVariableType
-              DataType: BaseDataType
-              ReferenceType: HasSource
-              Children:
-              - Name: DynamicLink
-                Type: DynamicLink
-                DataType: NodePath
-                Value: "../../../../Standard Image"
-      - Name: Button
-        Type: Button
-        Children:
-        - Name: Text
-          Type: BaseDataVariableType
-          DataType: LocalizedText
-        - Name: ImagePath
-          Type: BaseDataVariableType
-          DataType: ResourceUri
-        - Name: MouseClickEventHandler1
-          Type: EventHandler
-          Children:
-          - Name: ListenEventType
-            Type: PropertyType
-            DataType: NodeId
-            Value: "/Types/EventTypes/BaseEventType/MouseEvent/MouseClickEvent"
-          - Name: MethodsToCall
-            Type: BaseObjectType
-            Children:
-            - Name: MethodContainer1
-              Type: BaseObjectType
-              Children:
-              - Name: ObjectPointer
-                Type: NodePointer
-                DataType: NodeId
-                Children:
-                - Name: Kind
-                  Type: PropertyType
-                  DataType: NodeId
-                  Value: "/Types/ObjectTypes/BaseObjectType"
-                - Name: DynamicLink
-                  Type: DynamicLink
-                  DataType: NodePath
-                  Value: "{Standard_Content}@NodeId"
-              - Name: Method
-                Type: BaseDataVariableType
-                DataType: String
-                Value: "ChangePanel"
-              - Name: InputArguments
-                Type: BaseObjectType
-                Children:
-                - Name: NewPanel
-                  Type: BaseDataVariableType
-                  DataType: NodeId
-                  Children:
-                  - Name: DynamicLink
-                    Type: DynamicLink
-                    DataType: NodePath
-                    Value: "/Objects/OptimateDemoProject/UI/Screens/Other/Overview"
-                - Name: AliasNode
-                  Type: BaseDataVariableType
-                  DataType: NodeId
-                  ValueRank: ScalarOrOneDimension
-          - Name: EventArguments
-            Type: MouseClickEvent
-            Children:
-            - Name: EventId
-              Type: PropertyType
-              DataType: ByteString
-            - Name: EventType
-              Type: PropertyType
-              DataType: NodeId
-            - Name: SourceNode
-              Type: PropertyType
-              DataType: NodeId
-            - Name: SourceName
-              Type: PropertyType
-              DataType: String
-            - Name: Time
-              Type: PropertyType
-              DataType: UtcTime
-            - Name: ReceiveTime
-              Type: PropertyType
-              DataType: UtcTime
-            - Name: Message
-              Type: PropertyType
-              DataType: LocalizedText
-            - Name: Severity
-              Type: PropertyType
-              DataType: UInt16
-      - Name: Button Text
-        Type: BaseDataVariableType
-        DataType: String
-        Value: "Size Config"
-      - Name: Standard Image
-        Type: BaseDataVariableType
-        DataType: ResourceUri
-        Value: "ns=36;%PROJECTDIR%/Graphics/Jones/size config black.svg"
-      - Name: Selected Image
-        Type: BaseDataVariableType
-        DataType: ResourceUri
-        Value: "ns=36;%PROJECTDIR%/Graphics/Jones/size config white.svg"
-      - Name: Screen
-        Type: BaseDataVariableType
-        DataType: NodeId
-        Value: "/Objects/OptimateDemoProject/UI/Screens/Other/Overview"
+        Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Light Grey 6 - b6b6b6"

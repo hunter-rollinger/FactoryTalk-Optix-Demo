@@ -136,7 +136,7 @@ Children:
     Value: "WhiteBackground"
 - Name: Changeover_Menu_Bar
   Id: g=76be7b4d7c2c3a388907143a04718fdc
-  Supertype: Menu_Bar
+  Supertype: MenuBar
   ReferenceType: HasComponent
   Children:
   - Name: BackgroundColor
@@ -147,24 +147,97 @@ Children:
     - Name: DynamicLink
       Type: DynamicLink
       DataType: NodePath
-      Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Light Grey 6"
-  - Name: Rectangle1
-    Type: Rectangle
+      Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Light Grey 6 - b6b6b6"
+  - Name: SeparatorContainer
+    Type: ColumnLayout
     Children:
-    - Name: BorderColor
-      Type: BaseDataVariableType
-      DataType: Color
-      Value: "#000000"
-    - Name: FillColor
-      Type: BaseDataVariableType
-      DataType: Color
-      Value: "#ffffff"
+    - Name: TopRectangle
+      Type: Rectangle
       Children:
-      - Name: DynamicLink
-        Type: DynamicLink
-        DataType: NodePath
-        Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Light Grey 1"
-  - Name: Rectangle2
+      - Name: ButtonContainer
+        Type: RowLayout
+        Children:
+        - Name: Prev
+          Type: Button
+        - Name: Next
+          Type: Button
+        - Name: 'Separator - Dark'
+          Type: Rectangle
+          Children:
+          - Name: FillColor
+            Type: BaseDataVariableType
+            DataType: Color
+            Value: "#6d6e70"
+            Children:
+            - Name: DynamicLink
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Dark Grey 2 - 6d6e70"
+        - Name: MenuBarText
+          Type: Label
+          Children:
+          - Name: Text
+            Type: BaseDataVariableType
+            DataType: LocalizedText
+            Value: {"LocaleId":"en-US","Text":"Placeholder Text"}
+          - Name: LeftMargin
+            Type: BaseVariableType
+            DataType: Size
+            ModellingRule: Optional
+          - Name: TopMargin
+            Type: BaseVariableType
+            DataType: Size
+            ModellingRule: Optional
+          - Name: TextHorizontalAlignment
+            Type: BaseVariableType
+            DataType: TextHorizontalAlignment
+            ModellingRule: Optional
+          - Name: TextVerticalAlignment
+            Type: BaseVariableType
+            DataType: TextVerticalAlignment
+            ModellingRule: Optional
+            Value: 1
+          - Name: Style
+            Type: BaseDataVariableType
+            DataType: String
+            ModellingRule: Optional
+            Value: "MenuBarLargeLabel"
+          - Name: TextColor
+            Type: BaseDataVariableType
+            DataType: Color
+            Value: "#333333"
+            Children:
+            - Name: DynamicLink
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Dark Grey 5 - 333333"
+          - Name: Height
+            Type: BaseVariableType
+            DataType: Size
+            ModellingRule: Optional
+            Value: -1.0
+          - Name: VerticalAlignment
+            Type: BaseVariableType
+            DataType: VerticalAlignment
+            ModellingRule: Optional
+            Value: 2
+    - Name: BottomRectangle
+      Type: Rectangle
+      Children:
+      - Name: BorderColor
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#000000"
+      - Name: FillColor
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#ffffff"
+        Children:
+        - Name: DynamicLink
+          Type: DynamicLink
+          DataType: NodePath
+          Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Light Grey 1 - ffffff - White"
+  - Name: Arrow
     Type: Rectangle
     Children:
     - Name: Width
@@ -186,4 +259,4 @@ Children:
       - Name: DynamicLink
         Type: DynamicLink
         DataType: NodePath
-        Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Light Grey 6"
+        Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Light Grey 6 - b6b6b6"
