@@ -278,51 +278,59 @@ Children:
       DataType: Color
       Value: "#ffffff"
       Children:
-      - Name: ExpressionEvaluator1
-        Type: ExpressionEvaluator
+      - Name: ConditionalConverter1
+        Type: ConditionalConverter
         Children:
-        - Name: Expression
+        - Name: Condition
           Type: BaseDataVariableType
-          DataType: String
+          DataType: Boolean
+          ReferenceType: HasSource
+          Children:
+          - Name: ExpressionEvaluator1
+            Type: ExpressionEvaluator
+            Children:
+            - Name: Expression
+              Type: BaseDataVariableType
+              DataType: String
+              ReferenceType: HasParameter
+              ModellingRule: Optional
+              Value: "{#loadedScreen}=={#buttonScreen}"
+            - Name: ns=9;SourceloadedScreen
+              Type: BaseDataVariableType
+              DataType: BaseDataType
+              ReferenceType: HasSource
+              Children:
+              - Name: DynamicLink
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "{Standard_Content}/Panel@NodeId"
+            - Name: ns=9;SourcebuttonScreen
+              Type: BaseDataVariableType
+              DataType: BaseDataType
+              ReferenceType: HasSource
+              Children:
+              - Name: DynamicLink
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "../../../../../../Screen@NodeId"
+        - Name: TrueValue
+          Type: BaseDataVariableType
+          DataType: ResourceUri
           ReferenceType: HasParameter
-          ModellingRule: Optional
-          Value: "if({0}!={1},{2},{3})"
-        - Name: ns=9;Source0
-          Type: BaseDataVariableType
-          DataType: BaseDataType
-          ReferenceType: HasSource
-          Children:
-          - Name: DynamicLink
-            Type: DynamicLink
-            DataType: NodePath
-            Value: "{Standard_Content}/Panel@NodeId"
-        - Name: ns=9;Source1
-          Type: BaseDataVariableType
-          DataType: BaseDataType
-          ReferenceType: HasSource
-          Children:
-          - Name: DynamicLink
-            Type: DynamicLink
-            DataType: NodePath
-            Value: "../../../../Screen@NodeId"
-        - Name: ns=9;Source2
-          Type: BaseDataVariableType
-          DataType: BaseDataType
-          ReferenceType: HasSource
-          Children:
-          - Name: DynamicLink
-            Type: DynamicLink
-            DataType: NodePath
-            Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Light Grey 1 - ffffff - White"
-        - Name: ns=9;Source3
-          Type: BaseDataVariableType
-          DataType: BaseDataType
-          ReferenceType: HasSource
           Children:
           - Name: DynamicLink
             Type: DynamicLink
             DataType: NodePath
             Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Selected - 6d91b6 - Info - Blue"
+        - Name: FalseValue
+          Type: BaseDataVariableType
+          DataType: ResourceUri
+          ReferenceType: HasParameter
+          Children:
+          - Name: DynamicLink
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Light Grey 1 - ffffff - White"
   - Name: Label
     Type: Label
     Children:
@@ -413,51 +421,59 @@ Children:
       DataType: Color
       Value: "#000000"
       Children:
-      - Name: ExpressionEvaluator1
-        Type: ExpressionEvaluator
+      - Name: ConditionalConverter1
+        Type: ConditionalConverter
         Children:
-        - Name: Expression
+        - Name: Condition
           Type: BaseDataVariableType
-          DataType: String
+          DataType: Boolean
+          ReferenceType: HasSource
+          Children:
+          - Name: ExpressionEvaluator1
+            Type: ExpressionEvaluator
+            Children:
+            - Name: Expression
+              Type: BaseDataVariableType
+              DataType: String
+              ReferenceType: HasParameter
+              ModellingRule: Optional
+              Value: "{#loadedScreen}=={#buttonScreen}"
+            - Name: ns=9;SourceloadedScreen
+              Type: BaseDataVariableType
+              DataType: BaseDataType
+              ReferenceType: HasSource
+              Children:
+              - Name: DynamicLink
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "{Standard_Content}/Panel@NodeId"
+            - Name: ns=9;SourcebuttonScreen
+              Type: BaseDataVariableType
+              DataType: BaseDataType
+              ReferenceType: HasSource
+              Children:
+              - Name: DynamicLink
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "../../../../../../Screen@NodeId"
+        - Name: TrueValue
+          Type: BaseDataVariableType
+          DataType: ResourceUri
           ReferenceType: HasParameter
-          ModellingRule: Optional
-          Value: "if({0}!={1},{2},{3})"
-        - Name: ns=9;Source0
-          Type: BaseDataVariableType
-          DataType: BaseDataType
-          ReferenceType: HasSource
-          Children:
-          - Name: DynamicLink
-            Type: DynamicLink
-            DataType: NodePath
-            Value: "{Standard_Content}/Panel@NodeId"
-        - Name: ns=9;Source1
-          Type: BaseDataVariableType
-          DataType: BaseDataType
-          ReferenceType: HasSource
-          Children:
-          - Name: DynamicLink
-            Type: DynamicLink
-            DataType: NodePath
-            Value: "../../../../Screen@NodeId"
-        - Name: ns=9;Source2
-          Type: BaseDataVariableType
-          DataType: BaseDataType
-          ReferenceType: HasSource
-          Children:
-          - Name: DynamicLink
-            Type: DynamicLink
-            DataType: NodePath
-            Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Dark Grey 6 - 000000 - Black"
-        - Name: ns=9;Source3
-          Type: BaseDataVariableType
-          DataType: BaseDataType
-          ReferenceType: HasSource
           Children:
           - Name: DynamicLink
             Type: DynamicLink
             DataType: NodePath
             Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Light Grey 1 - ffffff - White"
+        - Name: FalseValue
+          Type: BaseDataVariableType
+          DataType: ResourceUri
+          ReferenceType: HasParameter
+          Children:
+          - Name: DynamicLink
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Dark Grey 6 - 000000 - Black"
   - Name: Image
     Type: Image
     Children:
@@ -465,46 +481,54 @@ Children:
       Type: BaseDataVariableType
       DataType: ResourceUri
       Children:
-      - Name: ExpressionEvaluator1
-        Type: ExpressionEvaluator
+      - Name: ConditionalConverter1
+        Type: ConditionalConverter
         Children:
-        - Name: Expression
+        - Name: Condition
           Type: BaseDataVariableType
-          DataType: String
+          DataType: Boolean
+          ReferenceType: HasSource
+          Children:
+          - Name: ExpressionEvaluator1
+            Type: ExpressionEvaluator
+            Children:
+            - Name: Expression
+              Type: BaseDataVariableType
+              DataType: String
+              ReferenceType: HasParameter
+              ModellingRule: Optional
+              Value: "{#loadedScreen}=={#buttonScreen}"
+            - Name: ns=9;SourceloadedScreen
+              Type: BaseDataVariableType
+              DataType: BaseDataType
+              ReferenceType: HasSource
+              Children:
+              - Name: DynamicLink
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "{Standard_Content}/Panel@NodeId"
+            - Name: ns=9;SourcebuttonScreen
+              Type: BaseDataVariableType
+              DataType: BaseDataType
+              ReferenceType: HasSource
+              Children:
+              - Name: DynamicLink
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "../../../../../../Screen@NodeId"
+        - Name: TrueValue
+          Type: BaseDataVariableType
+          DataType: ResourceUri
           ReferenceType: HasParameter
-          ModellingRule: Optional
-          Value: "if({0}=={1},{2},{3})"
-        - Name: ns=9;Source0
-          Type: BaseDataVariableType
-          DataType: BaseDataType
-          ReferenceType: HasSource
-          Children:
-          - Name: DynamicLink
-            Type: DynamicLink
-            DataType: NodePath
-            Value: "{Standard_Content}/Panel@NodeId"
-        - Name: ns=9;Source1
-          Type: BaseDataVariableType
-          DataType: BaseDataType
-          ReferenceType: HasSource
-          Children:
-          - Name: DynamicLink
-            Type: DynamicLink
-            DataType: NodePath
-            Value: "../../../../Screen@NodeId"
-        - Name: ns=9;Source2
-          Type: BaseDataVariableType
-          DataType: BaseDataType
-          ReferenceType: HasSource
           Children:
           - Name: DynamicLink
             Type: DynamicLink
             DataType: NodePath
             Value: "../../../../Selected Image"
-        - Name: ns=9;Source3
+        - Name: FalseValue
           Type: BaseDataVariableType
-          DataType: BaseDataType
-          ReferenceType: HasSource
+          DataType: ResourceUri
+          ReferenceType: HasParameter
           Children:
           - Name: DynamicLink
             Type: DynamicLink

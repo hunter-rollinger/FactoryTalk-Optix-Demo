@@ -1445,6 +1445,21 @@ Children:
     - Name: SimAlarm1
       Type: Switch_OnOff
       Children:
+      - Name: Toggle
+        Type: BaseDataVariableType
+        DataType: Boolean
+      - Name: On Text
+        Type: BaseDataVariableType
+        DataType: String
+        Value: "TestAlarm1"
+      - Name: Off Text
+        Type: BaseDataVariableType
+        DataType: String
+        Value: "TestAlarm1"
+      - Name: Button Enabled
+        Type: BaseDataVariableType
+        DataType: Boolean
+        Value: true
       - Name: switch
         Type: Switch
         Children:
@@ -1473,61 +1488,7 @@ Children:
           Type: BaseDataVariableType
           DataType: LocalizedText
           Value: {"LocaleId":"en-US","Text":""}
-      - Name: Toggle
-        Type: BaseDataVariableType
-        DataType: Boolean
-        Children:
-        - Name: DynamicLink
-          Type: DynamicLink
-          DataType: NodePath
-          Value: "/Objects/OptimateDemoProject/Model/Testing/TestAlarm1"
-          Children:
-          - Name: Mode
-            Type: BaseVariableType
-            DataType: DynamicLinkMode
-            ModellingRule: Optional
-            Value: 2
-      - Name: On Text
-        Type: BaseDataVariableType
-        DataType: String
-        Value: "TestAlarm1"
-      - Name: Off Text
-        Type: BaseDataVariableType
-        DataType: String
-        Value: "TestAlarm1"
-      - Name: Button Enabled
-        Type: BaseDataVariableType
-        DataType: Boolean
-        Value: true
-      - Name: on text
-        Type: Label
-        Children:
-        - Name: Text
-          Type: BaseDataVariableType
-          DataType: LocalizedText
-          Value: {"LocaleId":"en-US","Text":"Label1"}
-          Children:
-          - Name: StringFormatter1
-            Type: StringFormatter
-            Children:
-            - Name: Source0
-              Type: BaseDataVariableType
-              DataType: BaseDataType
-              ReferenceType: HasSource
-              Children:
-              - Name: DynamicLink
-                Type: DynamicLink
-                DataType: NodePath
-                Value: "../../../../On Text"
-        - Name: Visible
-          Type: BaseDataVariableType
-          DataType: Boolean
-          Children:
-          - Name: DynamicLink
-            Type: DynamicLink
-            DataType: NodePath
-            Value: "../../switch/Checked"
-      - Name: off text
+      - Name: off
         Type: Label
         Children:
         - Name: Text
@@ -1550,7 +1511,6 @@ Children:
         - Name: Visible
           Type: BaseDataVariableType
           DataType: Boolean
-          Value: true
           Children:
           - Name: ExpressionEvaluator1
             Type: ExpressionEvaluator
@@ -1564,9 +1524,53 @@ Children:
                 Type: DynamicLink
                 DataType: NodePath
                 Value: "../../../../switch/Checked"
+      - Name: on
+        Type: Label
+        Children:
+        - Name: Text
+          Type: BaseDataVariableType
+          DataType: LocalizedText
+          Value: {"LocaleId":"en-US","Text":"Label1"}
+          Children:
+          - Name: StringFormatter1
+            Type: StringFormatter
+            Children:
+            - Name: Source0
+              Type: BaseDataVariableType
+              DataType: BaseDataType
+              ReferenceType: HasSource
+              Children:
+              - Name: DynamicLink
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "../../../../On Text"
+        - Name: Visible
+          Type: BaseDataVariableType
+          DataType: Boolean
+          Value: true
+          Children:
+          - Name: DynamicLink
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "../../switch/Checked"
     - Name: SimAlarm2
       Type: Switch_OnOff
       Children:
+      - Name: Toggle
+        Type: BaseDataVariableType
+        DataType: Boolean
+      - Name: On Text
+        Type: BaseDataVariableType
+        DataType: String
+        Value: "TestAlarm2"
+      - Name: Off Text
+        Type: BaseDataVariableType
+        DataType: String
+        Value: "TestAlarm2"
+      - Name: Button Enabled
+        Type: BaseDataVariableType
+        DataType: Boolean
+        Value: true
       - Name: switch
         Type: Switch
         Children:
@@ -1595,61 +1599,7 @@ Children:
           Type: BaseDataVariableType
           DataType: LocalizedText
           Value: {"LocaleId":"en-US","Text":""}
-      - Name: Toggle
-        Type: BaseDataVariableType
-        DataType: Boolean
-        Children:
-        - Name: DynamicLink
-          Type: DynamicLink
-          DataType: NodePath
-          Value: "/Objects/OptimateDemoProject/Model/Testing/TestAlarm2"
-          Children:
-          - Name: Mode
-            Type: BaseVariableType
-            DataType: DynamicLinkMode
-            ModellingRule: Optional
-            Value: 2
-      - Name: On Text
-        Type: BaseDataVariableType
-        DataType: String
-        Value: "TestAlarm2"
-      - Name: Off Text
-        Type: BaseDataVariableType
-        DataType: String
-        Value: "TestAlarm2"
-      - Name: Button Enabled
-        Type: BaseDataVariableType
-        DataType: Boolean
-        Value: true
-      - Name: on text
-        Type: Label
-        Children:
-        - Name: Text
-          Type: BaseDataVariableType
-          DataType: LocalizedText
-          Value: {"LocaleId":"en-US","Text":"Label1"}
-          Children:
-          - Name: StringFormatter1
-            Type: StringFormatter
-            Children:
-            - Name: Source0
-              Type: BaseDataVariableType
-              DataType: BaseDataType
-              ReferenceType: HasSource
-              Children:
-              - Name: DynamicLink
-                Type: DynamicLink
-                DataType: NodePath
-                Value: "../../../../On Text"
-        - Name: Visible
-          Type: BaseDataVariableType
-          DataType: Boolean
-          Children:
-          - Name: DynamicLink
-            Type: DynamicLink
-            DataType: NodePath
-            Value: "../../switch/Checked"
-      - Name: off text
+      - Name: off
         Type: Label
         Children:
         - Name: Text
@@ -1672,7 +1622,6 @@ Children:
         - Name: Visible
           Type: BaseDataVariableType
           DataType: Boolean
-          Value: true
           Children:
           - Name: ExpressionEvaluator1
             Type: ExpressionEvaluator
@@ -1686,9 +1635,53 @@ Children:
                 Type: DynamicLink
                 DataType: NodePath
                 Value: "../../../../switch/Checked"
+      - Name: on
+        Type: Label
+        Children:
+        - Name: Text
+          Type: BaseDataVariableType
+          DataType: LocalizedText
+          Value: {"LocaleId":"en-US","Text":"Label1"}
+          Children:
+          - Name: StringFormatter1
+            Type: StringFormatter
+            Children:
+            - Name: Source0
+              Type: BaseDataVariableType
+              DataType: BaseDataType
+              ReferenceType: HasSource
+              Children:
+              - Name: DynamicLink
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "../../../../On Text"
+        - Name: Visible
+          Type: BaseDataVariableType
+          DataType: Boolean
+          Value: true
+          Children:
+          - Name: DynamicLink
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "../../switch/Checked"
     - Name: SimAlarm3
       Type: Switch_OnOff
       Children:
+      - Name: Toggle
+        Type: BaseDataVariableType
+        DataType: Boolean
+      - Name: On Text
+        Type: BaseDataVariableType
+        DataType: String
+        Value: "TestAlarm3"
+      - Name: Off Text
+        Type: BaseDataVariableType
+        DataType: String
+        Value: "TestAlarm3"
+      - Name: Button Enabled
+        Type: BaseDataVariableType
+        DataType: Boolean
+        Value: true
       - Name: switch
         Type: Switch
         Children:
@@ -1717,61 +1710,7 @@ Children:
           Type: BaseDataVariableType
           DataType: LocalizedText
           Value: {"LocaleId":"en-US","Text":""}
-      - Name: Toggle
-        Type: BaseDataVariableType
-        DataType: Boolean
-        Children:
-        - Name: DynamicLink
-          Type: DynamicLink
-          DataType: NodePath
-          Value: "/Objects/OptimateDemoProject/Model/Testing/TestAlarm3"
-          Children:
-          - Name: Mode
-            Type: BaseVariableType
-            DataType: DynamicLinkMode
-            ModellingRule: Optional
-            Value: 2
-      - Name: On Text
-        Type: BaseDataVariableType
-        DataType: String
-        Value: "TestAlarm3"
-      - Name: Off Text
-        Type: BaseDataVariableType
-        DataType: String
-        Value: "TestAlarm3"
-      - Name: Button Enabled
-        Type: BaseDataVariableType
-        DataType: Boolean
-        Value: true
-      - Name: on text
-        Type: Label
-        Children:
-        - Name: Text
-          Type: BaseDataVariableType
-          DataType: LocalizedText
-          Value: {"LocaleId":"en-US","Text":"Label1"}
-          Children:
-          - Name: StringFormatter1
-            Type: StringFormatter
-            Children:
-            - Name: Source0
-              Type: BaseDataVariableType
-              DataType: BaseDataType
-              ReferenceType: HasSource
-              Children:
-              - Name: DynamicLink
-                Type: DynamicLink
-                DataType: NodePath
-                Value: "../../../../On Text"
-        - Name: Visible
-          Type: BaseDataVariableType
-          DataType: Boolean
-          Children:
-          - Name: DynamicLink
-            Type: DynamicLink
-            DataType: NodePath
-            Value: "../../switch/Checked"
-      - Name: off text
+      - Name: off
         Type: Label
         Children:
         - Name: Text
@@ -1794,7 +1733,6 @@ Children:
         - Name: Visible
           Type: BaseDataVariableType
           DataType: Boolean
-          Value: true
           Children:
           - Name: ExpressionEvaluator1
             Type: ExpressionEvaluator
@@ -1808,9 +1746,53 @@ Children:
                 Type: DynamicLink
                 DataType: NodePath
                 Value: "../../../../switch/Checked"
+      - Name: on
+        Type: Label
+        Children:
+        - Name: Text
+          Type: BaseDataVariableType
+          DataType: LocalizedText
+          Value: {"LocaleId":"en-US","Text":"Label1"}
+          Children:
+          - Name: StringFormatter1
+            Type: StringFormatter
+            Children:
+            - Name: Source0
+              Type: BaseDataVariableType
+              DataType: BaseDataType
+              ReferenceType: HasSource
+              Children:
+              - Name: DynamicLink
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "../../../../On Text"
+        - Name: Visible
+          Type: BaseDataVariableType
+          DataType: Boolean
+          Value: true
+          Children:
+          - Name: DynamicLink
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "../../switch/Checked"
     - Name: SimWarning4
       Type: Switch_OnOff
       Children:
+      - Name: Toggle
+        Type: BaseDataVariableType
+        DataType: Boolean
+      - Name: On Text
+        Type: BaseDataVariableType
+        DataType: String
+        Value: "TestWarning1"
+      - Name: Off Text
+        Type: BaseDataVariableType
+        DataType: String
+        Value: "TestWarning1"
+      - Name: Button Enabled
+        Type: BaseDataVariableType
+        DataType: Boolean
+        Value: true
       - Name: switch
         Type: Switch
         Children:
@@ -1839,61 +1821,7 @@ Children:
           Type: BaseDataVariableType
           DataType: LocalizedText
           Value: {"LocaleId":"en-US","Text":""}
-      - Name: Toggle
-        Type: BaseDataVariableType
-        DataType: Boolean
-        Children:
-        - Name: DynamicLink
-          Type: DynamicLink
-          DataType: NodePath
-          Value: "/Objects/OptimateDemoProject/Model/Testing/TestWarning1"
-          Children:
-          - Name: Mode
-            Type: BaseVariableType
-            DataType: DynamicLinkMode
-            ModellingRule: Optional
-            Value: 2
-      - Name: On Text
-        Type: BaseDataVariableType
-        DataType: String
-        Value: "TestWarning1"
-      - Name: Off Text
-        Type: BaseDataVariableType
-        DataType: String
-        Value: "TestWarning1"
-      - Name: Button Enabled
-        Type: BaseDataVariableType
-        DataType: Boolean
-        Value: true
-      - Name: on text
-        Type: Label
-        Children:
-        - Name: Text
-          Type: BaseDataVariableType
-          DataType: LocalizedText
-          Value: {"LocaleId":"en-US","Text":"Label1"}
-          Children:
-          - Name: StringFormatter1
-            Type: StringFormatter
-            Children:
-            - Name: Source0
-              Type: BaseDataVariableType
-              DataType: BaseDataType
-              ReferenceType: HasSource
-              Children:
-              - Name: DynamicLink
-                Type: DynamicLink
-                DataType: NodePath
-                Value: "../../../../On Text"
-        - Name: Visible
-          Type: BaseDataVariableType
-          DataType: Boolean
-          Children:
-          - Name: DynamicLink
-            Type: DynamicLink
-            DataType: NodePath
-            Value: "../../switch/Checked"
-      - Name: off text
+      - Name: off
         Type: Label
         Children:
         - Name: Text
@@ -1916,7 +1844,6 @@ Children:
         - Name: Visible
           Type: BaseDataVariableType
           DataType: Boolean
-          Value: true
           Children:
           - Name: ExpressionEvaluator1
             Type: ExpressionEvaluator
@@ -1930,9 +1857,53 @@ Children:
                 Type: DynamicLink
                 DataType: NodePath
                 Value: "../../../../switch/Checked"
+      - Name: on
+        Type: Label
+        Children:
+        - Name: Text
+          Type: BaseDataVariableType
+          DataType: LocalizedText
+          Value: {"LocaleId":"en-US","Text":"Label1"}
+          Children:
+          - Name: StringFormatter1
+            Type: StringFormatter
+            Children:
+            - Name: Source0
+              Type: BaseDataVariableType
+              DataType: BaseDataType
+              ReferenceType: HasSource
+              Children:
+              - Name: DynamicLink
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "../../../../On Text"
+        - Name: Visible
+          Type: BaseDataVariableType
+          DataType: Boolean
+          Value: true
+          Children:
+          - Name: DynamicLink
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "../../switch/Checked"
     - Name: SimStatus5
       Type: Switch_OnOff
       Children:
+      - Name: Toggle
+        Type: BaseDataVariableType
+        DataType: Boolean
+      - Name: On Text
+        Type: BaseDataVariableType
+        DataType: String
+        Value: "TestStatus1"
+      - Name: Off Text
+        Type: BaseDataVariableType
+        DataType: String
+        Value: "TestStatus1"
+      - Name: Button Enabled
+        Type: BaseDataVariableType
+        DataType: Boolean
+        Value: true
       - Name: switch
         Type: Switch
         Children:
@@ -1961,61 +1932,7 @@ Children:
           Type: BaseDataVariableType
           DataType: LocalizedText
           Value: {"LocaleId":"en-US","Text":""}
-      - Name: Toggle
-        Type: BaseDataVariableType
-        DataType: Boolean
-        Children:
-        - Name: DynamicLink
-          Type: DynamicLink
-          DataType: NodePath
-          Value: "/Objects/OptimateDemoProject/Model/Testing/TestStatus1"
-          Children:
-          - Name: Mode
-            Type: BaseVariableType
-            DataType: DynamicLinkMode
-            ModellingRule: Optional
-            Value: 2
-      - Name: On Text
-        Type: BaseDataVariableType
-        DataType: String
-        Value: "TestStatus1"
-      - Name: Off Text
-        Type: BaseDataVariableType
-        DataType: String
-        Value: "TestStatus1"
-      - Name: Button Enabled
-        Type: BaseDataVariableType
-        DataType: Boolean
-        Value: true
-      - Name: on text
-        Type: Label
-        Children:
-        - Name: Text
-          Type: BaseDataVariableType
-          DataType: LocalizedText
-          Value: {"LocaleId":"en-US","Text":"Label1"}
-          Children:
-          - Name: StringFormatter1
-            Type: StringFormatter
-            Children:
-            - Name: Source0
-              Type: BaseDataVariableType
-              DataType: BaseDataType
-              ReferenceType: HasSource
-              Children:
-              - Name: DynamicLink
-                Type: DynamicLink
-                DataType: NodePath
-                Value: "../../../../On Text"
-        - Name: Visible
-          Type: BaseDataVariableType
-          DataType: Boolean
-          Children:
-          - Name: DynamicLink
-            Type: DynamicLink
-            DataType: NodePath
-            Value: "../../switch/Checked"
-      - Name: off text
+      - Name: off
         Type: Label
         Children:
         - Name: Text
@@ -2038,7 +1955,6 @@ Children:
         - Name: Visible
           Type: BaseDataVariableType
           DataType: Boolean
-          Value: true
           Children:
           - Name: ExpressionEvaluator1
             Type: ExpressionEvaluator
@@ -2052,9 +1968,53 @@ Children:
                 Type: DynamicLink
                 DataType: NodePath
                 Value: "../../../../switch/Checked"
+      - Name: on
+        Type: Label
+        Children:
+        - Name: Text
+          Type: BaseDataVariableType
+          DataType: LocalizedText
+          Value: {"LocaleId":"en-US","Text":"Label1"}
+          Children:
+          - Name: StringFormatter1
+            Type: StringFormatter
+            Children:
+            - Name: Source0
+              Type: BaseDataVariableType
+              DataType: BaseDataType
+              ReferenceType: HasSource
+              Children:
+              - Name: DynamicLink
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "../../../../On Text"
+        - Name: Visible
+          Type: BaseDataVariableType
+          DataType: Boolean
+          Value: true
+          Children:
+          - Name: DynamicLink
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "../../switch/Checked"
     - Name: SimMessage6
       Type: Switch_OnOff
       Children:
+      - Name: Toggle
+        Type: BaseDataVariableType
+        DataType: Boolean
+      - Name: On Text
+        Type: BaseDataVariableType
+        DataType: String
+        Value: "TestMessage1"
+      - Name: Off Text
+        Type: BaseDataVariableType
+        DataType: String
+        Value: "TestMessage1"
+      - Name: Button Enabled
+        Type: BaseDataVariableType
+        DataType: Boolean
+        Value: true
       - Name: switch
         Type: Switch
         Children:
@@ -2083,61 +2043,7 @@ Children:
           Type: BaseDataVariableType
           DataType: LocalizedText
           Value: {"LocaleId":"en-US","Text":""}
-      - Name: Toggle
-        Type: BaseDataVariableType
-        DataType: Boolean
-        Children:
-        - Name: DynamicLink
-          Type: DynamicLink
-          DataType: NodePath
-          Value: "/Objects/OptimateDemoProject/Model/Testing/TestMessage1"
-          Children:
-          - Name: Mode
-            Type: BaseVariableType
-            DataType: DynamicLinkMode
-            ModellingRule: Optional
-            Value: 2
-      - Name: On Text
-        Type: BaseDataVariableType
-        DataType: String
-        Value: "TestMessage1"
-      - Name: Off Text
-        Type: BaseDataVariableType
-        DataType: String
-        Value: "TestMessage1"
-      - Name: Button Enabled
-        Type: BaseDataVariableType
-        DataType: Boolean
-        Value: true
-      - Name: on text
-        Type: Label
-        Children:
-        - Name: Text
-          Type: BaseDataVariableType
-          DataType: LocalizedText
-          Value: {"LocaleId":"en-US","Text":"Label1"}
-          Children:
-          - Name: StringFormatter1
-            Type: StringFormatter
-            Children:
-            - Name: Source0
-              Type: BaseDataVariableType
-              DataType: BaseDataType
-              ReferenceType: HasSource
-              Children:
-              - Name: DynamicLink
-                Type: DynamicLink
-                DataType: NodePath
-                Value: "../../../../On Text"
-        - Name: Visible
-          Type: BaseDataVariableType
-          DataType: Boolean
-          Children:
-          - Name: DynamicLink
-            Type: DynamicLink
-            DataType: NodePath
-            Value: "../../switch/Checked"
-      - Name: off text
+      - Name: off
         Type: Label
         Children:
         - Name: Text
@@ -2160,7 +2066,6 @@ Children:
         - Name: Visible
           Type: BaseDataVariableType
           DataType: Boolean
-          Value: true
           Children:
           - Name: ExpressionEvaluator1
             Type: ExpressionEvaluator
@@ -2174,9 +2079,53 @@ Children:
                 Type: DynamicLink
                 DataType: NodePath
                 Value: "../../../../switch/Checked"
+      - Name: on
+        Type: Label
+        Children:
+        - Name: Text
+          Type: BaseDataVariableType
+          DataType: LocalizedText
+          Value: {"LocaleId":"en-US","Text":"Label1"}
+          Children:
+          - Name: StringFormatter1
+            Type: StringFormatter
+            Children:
+            - Name: Source0
+              Type: BaseDataVariableType
+              DataType: BaseDataType
+              ReferenceType: HasSource
+              Children:
+              - Name: DynamicLink
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "../../../../On Text"
+        - Name: Visible
+          Type: BaseDataVariableType
+          DataType: Boolean
+          Value: true
+          Children:
+          - Name: DynamicLink
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "../../switch/Checked"
     - Name: RotateAlarms
       Type: Switch_OnOff
       Children:
+      - Name: Toggle
+        Type: BaseDataVariableType
+        DataType: Boolean
+      - Name: On Text
+        Type: BaseDataVariableType
+        DataType: String
+        Value: "BannerRotation"
+      - Name: Off Text
+        Type: BaseDataVariableType
+        DataType: String
+        Value: "BannerRotation"
+      - Name: Button Enabled
+        Type: BaseDataVariableType
+        DataType: Boolean
+        Value: true
       - Name: switch
         Type: Switch
         Children:
@@ -2205,61 +2154,7 @@ Children:
           Type: BaseDataVariableType
           DataType: LocalizedText
           Value: {"LocaleId":"en-US","Text":""}
-      - Name: Toggle
-        Type: BaseDataVariableType
-        DataType: Boolean
-        Children:
-        - Name: DynamicLink
-          Type: DynamicLink
-          DataType: NodePath
-          Value: "/Objects/OptimateDemoProject/RunTime NetLogic/CustomAlarming/BannerRotation"
-          Children:
-          - Name: Mode
-            Type: BaseVariableType
-            DataType: DynamicLinkMode
-            ModellingRule: Optional
-            Value: 2
-      - Name: On Text
-        Type: BaseDataVariableType
-        DataType: String
-        Value: "BannerRotation"
-      - Name: Off Text
-        Type: BaseDataVariableType
-        DataType: String
-        Value: "BannerRotation"
-      - Name: Button Enabled
-        Type: BaseDataVariableType
-        DataType: Boolean
-        Value: true
-      - Name: on text
-        Type: Label
-        Children:
-        - Name: Text
-          Type: BaseDataVariableType
-          DataType: LocalizedText
-          Value: {"LocaleId":"en-US","Text":"Label1"}
-          Children:
-          - Name: StringFormatter1
-            Type: StringFormatter
-            Children:
-            - Name: Source0
-              Type: BaseDataVariableType
-              DataType: BaseDataType
-              ReferenceType: HasSource
-              Children:
-              - Name: DynamicLink
-                Type: DynamicLink
-                DataType: NodePath
-                Value: "../../../../On Text"
-        - Name: Visible
-          Type: BaseDataVariableType
-          DataType: Boolean
-          Children:
-          - Name: DynamicLink
-            Type: DynamicLink
-            DataType: NodePath
-            Value: "../../switch/Checked"
-      - Name: off text
+      - Name: off
         Type: Label
         Children:
         - Name: Text
@@ -2282,7 +2177,6 @@ Children:
         - Name: Visible
           Type: BaseDataVariableType
           DataType: Boolean
-          Value: true
           Children:
           - Name: ExpressionEvaluator1
             Type: ExpressionEvaluator
@@ -2296,6 +2190,35 @@ Children:
                 Type: DynamicLink
                 DataType: NodePath
                 Value: "../../../../switch/Checked"
+      - Name: on
+        Type: Label
+        Children:
+        - Name: Text
+          Type: BaseDataVariableType
+          DataType: LocalizedText
+          Value: {"LocaleId":"en-US","Text":"Label1"}
+          Children:
+          - Name: StringFormatter1
+            Type: StringFormatter
+            Children:
+            - Name: Source0
+              Type: BaseDataVariableType
+              DataType: BaseDataType
+              ReferenceType: HasSource
+              Children:
+              - Name: DynamicLink
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "../../../../On Text"
+        - Name: Visible
+          Type: BaseDataVariableType
+          DataType: Boolean
+          Value: true
+          Children:
+          - Name: DynamicLink
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "../../switch/Checked"
 - Name: Debug_SystemInfo
   Id: g=1c6ebda258b0ee76eec69cceef96868c
   Supertype: Screen

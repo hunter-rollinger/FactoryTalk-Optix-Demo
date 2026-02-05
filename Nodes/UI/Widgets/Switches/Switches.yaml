@@ -16,6 +16,51 @@ Children:
     DataType: Size
     ModellingRule: Optional
     Value: 42.0
+  - Name: Toggle
+    Type: BaseDataVariableType
+    DataType: Boolean
+  - Name: On Text
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "on"
+  - Name: Off Text
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "off"
+  - Name: Button Enabled
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Value: true
+  - Name: OriginalWidth
+    Type: BaseDataVariableType
+    DataType: Size
+    ModellingRule: Optional
+    Value: 105.0
+  - Name: OriginalHeight
+    Type: BaseDataVariableType
+    DataType: Size
+    ModellingRule: Optional
+    Value: 42.0
+  - Name: HorizontalAlignment
+    Type: BaseVariableType
+    DataType: HorizontalAlignment
+    ModellingRule: Optional
+    Value: 2
+  - Name: VerticalAlignment
+    Type: BaseVariableType
+    DataType: VerticalAlignment
+    ModellingRule: Optional
+    Value: 2
+  - Name: FontScaling
+    Type: BaseDataVariableType
+    DataType: Boolean
+    ModellingRule: Optional
+    Value: true
+  - Name: FillMode
+    Type: BaseDataVariableType
+    DataType: FillModeEnum
+    ModellingRule: Optional
+    Value: 1
   - Name: switch
     Type: Switch
     Children:
@@ -79,52 +124,7 @@ Children:
         Type: DynamicLink
         DataType: NodePath
         Value: "../../Button Enabled"
-  - Name: Toggle
-    Type: BaseDataVariableType
-    DataType: Boolean
-  - Name: On Text
-    Type: BaseDataVariableType
-    DataType: String
-    Value: "on"
-  - Name: Off Text
-    Type: BaseDataVariableType
-    DataType: String
-    Value: "off"
-  - Name: Button Enabled
-    Type: BaseDataVariableType
-    DataType: Boolean
-    Value: true
-  - Name: OriginalWidth
-    Type: BaseDataVariableType
-    DataType: Size
-    ModellingRule: Optional
-    Value: 105.0
-  - Name: OriginalHeight
-    Type: BaseDataVariableType
-    DataType: Size
-    ModellingRule: Optional
-    Value: 42.0
-  - Name: HorizontalAlignment
-    Type: BaseVariableType
-    DataType: HorizontalAlignment
-    ModellingRule: Optional
-    Value: 2
-  - Name: VerticalAlignment
-    Type: BaseVariableType
-    DataType: VerticalAlignment
-    ModellingRule: Optional
-    Value: 2
-  - Name: FontScaling
-    Type: BaseDataVariableType
-    DataType: Boolean
-    ModellingRule: Optional
-    Value: true
-  - Name: FillMode
-    Type: BaseDataVariableType
-    DataType: FillModeEnum
-    ModellingRule: Optional
-    Value: 1
-  - Name: on text
+  - Name: off
     Type: Label
     Children:
     - Name: Text
@@ -149,7 +149,7 @@ Children:
           - Name: DynamicLink
             Type: DynamicLink
             DataType: NodePath
-            Value: "../../../../On Text"
+            Value: "../../../../Off Text"
     - Name: Style
       Type: BaseDataVariableType
       DataType: String
@@ -198,10 +198,24 @@ Children:
       Type: BaseDataVariableType
       DataType: Boolean
       Children:
-      - Name: DynamicLink
-        Type: DynamicLink
-        DataType: NodePath
-        Value: "../../switch/Checked"
+      - Name: ExpressionEvaluator1
+        Type: ExpressionEvaluator
+        Children:
+        - Name: Expression
+          Type: BaseDataVariableType
+          DataType: String
+          ReferenceType: HasParameter
+          ModellingRule: Optional
+          Value: "!{0}"
+        - Name: ns=9;Source0
+          Type: BaseDataVariableType
+          DataType: BaseDataType
+          ReferenceType: HasSource
+          Children:
+          - Name: DynamicLink
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "../../../../switch/Checked"
     - Name: Enabled
       Type: BaseDataVariableType
       DataType: Boolean
@@ -211,7 +225,7 @@ Children:
       Type: BaseDataVariableType
       DataType: Boolean
       ModellingRule: Optional
-  - Name: off text
+  - Name: on
     Type: Label
     Children:
     - Name: Text
@@ -236,7 +250,7 @@ Children:
           - Name: DynamicLink
             Type: DynamicLink
             DataType: NodePath
-            Value: "../../../../Off Text"
+            Value: "../../../../On Text"
     - Name: Style
       Type: BaseDataVariableType
       DataType: String
@@ -287,26 +301,12 @@ Children:
       DataType: Boolean
       Value: true
       Children:
-      - Name: ExpressionEvaluator1
-        Type: ExpressionEvaluator
-        Children:
-        - Name: Expression
-          Type: BaseDataVariableType
-          DataType: String
-          ReferenceType: HasParameter
-          ModellingRule: Optional
-          Value: "!{0}"
-        - Name: ns=9;Source0
-          Type: BaseDataVariableType
-          DataType: BaseDataType
-          ReferenceType: HasSource
-          Children:
-          - Name: DynamicLink
-            Type: DynamicLink
-            DataType: NodePath
-            Value: "../../../../switch/Checked"
-- Name: Switch_OnOff_Label
-  Id: g=0dc195e2b4c44f0289d0a11878992489
+      - Name: DynamicLink
+        Type: DynamicLink
+        DataType: NodePath
+        Value: "../../switch/Checked"
+- Name: Switch_OnOff_Standard
+  Id: g=a5fbb402e02c8f20ff8051ce068df2fe
   Supertype: ScaleLayout
   ReferenceType: HasComponent
   Children:
@@ -314,7 +314,7 @@ Children:
     Type: BaseVariableType
     DataType: Size
     ModellingRule: Optional
-    Value: 180.0
+    Value: 240.0
   - Name: Height
     Type: BaseVariableType
     DataType: Size
@@ -329,6 +329,7 @@ Children:
     Type: BaseVariableType
     DataType: VerticalAlignment
     ModellingRule: Optional
+    Value: 2
   - Name: Toggle
     Type: BaseDataVariableType
     DataType: Boolean
@@ -372,7 +373,173 @@ Children:
       DataType: String
       ValueRank: OneDimension
       ArrayDimensions: [0]
-      Value: ["1fr","Auto"]
+      Value: ["Auto","Auto","3fr","Auto","Auto","Auto","Auto"]
+    - Name: Circle
+      Type: Ellipse
+      Children:
+      - Name: BorderThickness
+        Type: BaseDataVariableType
+        DataType: Size
+        ModellingRule: Optional
+      - Name: LeftMargin
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+      - Name: TopMargin
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+      - Name: Width
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 32.0
+      - Name: Height
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 32.0
+      - Name: HorizontalAlignment
+        Type: BaseVariableType
+        DataType: HorizontalAlignment
+        ModellingRule: Optional
+        Value: 2
+      - Name: VerticalAlignment
+        Type: BaseVariableType
+        DataType: VerticalAlignment
+        ModellingRule: Optional
+        Value: 2
+      - Name: FillColor
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#6d91b6"
+        Children:
+        - Name: DynamicLink
+          Type: DynamicLink
+          DataType: NodePath
+          Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Selected - 6d91b6 - Info - Blue"
+      - Name: Label
+        Type: Label
+        Children:
+        - Name: Text
+          Type: BaseDataVariableType
+          DataType: LocalizedText
+          Value: {"LocaleId":"en-US","Text":"1"}
+          Children:
+          - Name: DynamicLink
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "../../../../Pointer"
+        - Name: TextHorizontalAlignment
+          Type: BaseVariableType
+          DataType: TextHorizontalAlignment
+          ModellingRule: Optional
+          Value: 1
+        - Name: TextVerticalAlignment
+          Type: BaseVariableType
+          DataType: TextVerticalAlignment
+          ModellingRule: Optional
+          Value: 1
+        - Name: Style
+          Type: BaseDataVariableType
+          DataType: String
+          ModellingRule: Optional
+          Value: "PointerCircles"
+        - Name: HorizontalAlignment
+          Type: BaseVariableType
+          DataType: HorizontalAlignment
+          ModellingRule: Optional
+          Value: 3
+        - Name: VerticalAlignment
+          Type: BaseVariableType
+          DataType: VerticalAlignment
+          ModellingRule: Optional
+          Value: 3
+      - Name: Visible
+        Type: BaseDataVariableType
+        DataType: Boolean
+        Value: true
+        Children:
+        - Name: ExpressionEvaluator1
+          Type: ExpressionEvaluator
+          Children:
+          - Name: Expression
+            Type: BaseDataVariableType
+            DataType: String
+            ReferenceType: HasParameter
+            ModellingRule: Optional
+            Value: "!isempty({0})"
+          - Name: ns=9;Source0
+            Type: BaseDataVariableType
+            DataType: BaseDataType
+            ReferenceType: HasSource
+            Children:
+            - Name: DynamicLink
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "../../../../../Pointer"
+      - Name: ns=11;GridLayoutProperties
+        Type: GridLayoutProperties
+        DisplayName: {"NamespaceIndex":11,"TextId":"GridLayoutPropertiesDisplayName"}
+        Children:
+        - Name: ColumnStart
+          Type: BaseDataVariableType
+          DataType: Int32
+          ModellingRule: Optional
+    - Name: Spacer1
+      Type: Rectangle
+      Children:
+      - Name: Width
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 10.0
+      - Name: Height
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 20.0
+      - Name: LeftMargin
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+      - Name: TopMargin
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+      - Name: Style
+        Type: BaseDataVariableType
+        DataType: String
+        ModellingRule: Optional
+        Value: "Invisible"
+      - Name: VerticalAlignment
+        Type: BaseVariableType
+        DataType: VerticalAlignment
+        ModellingRule: Optional
+        Value: 3
+      - Name: HorizontalAlignment
+        Type: BaseVariableType
+        DataType: HorizontalAlignment
+        ModellingRule: Optional
+        Value: 2
+      - Name: Visible
+        Type: BaseDataVariableType
+        DataType: Boolean
+        Value: true
+        Children:
+        - Name: DynamicLink
+          Type: DynamicLink
+          DataType: NodePath
+          Value: "../../Circle/Visible"
+      - Name: ns=11;GridLayoutProperties
+        Type: GridLayoutProperties
+        DisplayName: {"NamespaceIndex":11,"TextId":"GridLayoutPropertiesDisplayName"}
+        Children:
+        - Name: ColumnStart
+          Type: BaseDataVariableType
+          DataType: Int32
+          ModellingRule: Optional
+          Value: 1
     - Name: Label
       Type: Label
       Children:
@@ -402,11 +569,12 @@ Children:
         Type: BaseVariableType
         DataType: VerticalAlignment
         ModellingRule: Optional
-        Value: 2
+        Value: 3
       - Name: HorizontalAlignment
         Type: BaseVariableType
         DataType: HorizontalAlignment
         ModellingRule: Optional
+        Value: 3
       - Name: Width
         Type: BaseVariableType
         DataType: Size
@@ -417,107 +585,30 @@ Children:
         DataType: String
         ModellingRule: Optional
         Value: "StandardControlLabel"
-    - Name: Switch_OnOff
-      Type: Switch_OnOff
-      Children:
-      - Name: switch
-        Type: Switch
-        Children:
-        - Name: Checked
-          Type: BaseDataVariableType
-          DataType: Boolean
-          Children:
-          - Name: DynamicLink
-            Type: DynamicLink
-            DataType: NodePath
-            Value: "../../Toggle"
-        - Name: Enabled
-          Type: BaseDataVariableType
-          DataType: Boolean
-          Value: true
-          Children:
-          - Name: DynamicLink
-            Type: DynamicLink
-            DataType: NodePath
-            Value: "../../Button Enabled"
-        - Name: CheckedText
-          Type: BaseDataVariableType
-          DataType: LocalizedText
-          Value: {"LocaleId":"en-US","Text":""}
-        - Name: UncheckedText
-          Type: BaseDataVariableType
-          DataType: LocalizedText
-          Value: {"LocaleId":"en-US","Text":""}
-      - Name: Toggle
-        Type: BaseDataVariableType
-        DataType: Boolean
-        Children:
-        - Name: DynamicLink
-          Type: DynamicLink
-          DataType: NodePath
-          Value: "../../../Toggle"
-          Children:
-          - Name: Mode
-            Type: BaseVariableType
-            DataType: DynamicLinkMode
-            ModellingRule: Optional
-            Value: 2
-      - Name: On Text
-        Type: BaseDataVariableType
-        DataType: String
-        Value: "on"
-        Children:
-        - Name: DynamicLink
-          Type: DynamicLink
-          DataType: NodePath
-          Value: "../../../On Text"
-          Children:
-          - Name: Mode
-            Type: BaseVariableType
-            DataType: DynamicLinkMode
-            ModellingRule: Optional
-            Value: 2
-      - Name: Off Text
-        Type: BaseDataVariableType
-        DataType: String
-        Value: "off"
-        Children:
-        - Name: DynamicLink
-          Type: DynamicLink
-          DataType: NodePath
-          Value: "../../../Off Text"
-          Children:
-          - Name: Mode
-            Type: BaseVariableType
-            DataType: DynamicLinkMode
-            ModellingRule: Optional
-            Value: 2
-      - Name: Button Enabled
+      - Name: Visible
         Type: BaseDataVariableType
         DataType: Boolean
         Value: true
         Children:
-        - Name: DynamicLink
-          Type: DynamicLink
-          DataType: NodePath
-          Value: "../../../Button Enabled"
+        - Name: ExpressionEvaluator1
+          Type: ExpressionEvaluator
           Children:
-          - Name: Mode
-            Type: BaseVariableType
-            DataType: DynamicLinkMode
+          - Name: Expression
+            Type: BaseDataVariableType
+            DataType: String
+            ReferenceType: HasParameter
             ModellingRule: Optional
-            Value: 2
-      - Name: VerticalAlignment
-        Type: BaseVariableType
-        DataType: VerticalAlignment
-        ModellingRule: Optional
-        Value: 2
-      - Name: HorizontalAlignment
-        Type: BaseVariableType
-        DataType: HorizontalAlignment
-        ModellingRule: Optional
-        Value: 1
-      - Name: RightMargin
+            Value: "!isempty({0})"
+          - Name: ns=9;Source0
+            Type: BaseDataVariableType
+            DataType: BaseDataType
+            ReferenceType: HasSource
+            Children:
+            - Name: DynamicLink
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "../../../../../Label"
+      - Name: LeftMargin
         Type: BaseVariableType
         DataType: Size
         ModellingRule: Optional
@@ -529,235 +620,86 @@ Children:
         Type: BaseVariableType
         DataType: Size
         ModellingRule: Optional
-      - Name: on text
-        Type: Label
+      - Name: ns=11;GridLayoutProperties
+        Type: GridLayoutProperties
+        DisplayName: {"NamespaceIndex":11,"TextId":"GridLayoutPropertiesDisplayName"}
         Children:
-        - Name: Text
+        - Name: ColumnStart
           Type: BaseDataVariableType
-          DataType: LocalizedText
-          Value: {"LocaleId":"en-US","Text":"Label1"}
-          Children:
-          - Name: StringFormatter1
-            Type: StringFormatter
-            Children:
-            - Name: Source0
-              Type: BaseDataVariableType
-              DataType: BaseDataType
-              ReferenceType: HasSource
-              Children:
-              - Name: DynamicLink
-                Type: DynamicLink
-                DataType: NodePath
-                Value: "../../../../On Text"
-        - Name: Visible
-          Type: BaseDataVariableType
-          DataType: Boolean
-          Children:
-          - Name: DynamicLink
-            Type: DynamicLink
-            DataType: NodePath
-            Value: "../../switch/Checked"
-      - Name: off text
-        Type: Label
-        Children:
-        - Name: Text
-          Type: BaseDataVariableType
-          DataType: LocalizedText
-          Value: {"LocaleId":"en-US","Text":"Label1"}
-          Children:
-          - Name: StringFormatter1
-            Type: StringFormatter
-            Children:
-            - Name: Source0
-              Type: BaseDataVariableType
-              DataType: BaseDataType
-              ReferenceType: HasSource
-              Children:
-              - Name: DynamicLink
-                Type: DynamicLink
-                DataType: NodePath
-                Value: "../../../../Off Text"
-        - Name: Visible
-          Type: BaseDataVariableType
-          DataType: Boolean
-          Value: true
-          Children:
-          - Name: ExpressionEvaluator1
-            Type: ExpressionEvaluator
-            Children:
-            - Name: Source0
-              Type: BaseDataVariableType
-              DataType: BaseDataType
-              ReferenceType: HasSource
-              Children:
-              - Name: DynamicLink
-                Type: DynamicLink
-                DataType: NodePath
-                Value: "../../../../switch/Checked"
-    - Name: HorizontalAlignment
-      Type: BaseVariableType
-      DataType: HorizontalAlignment
-      ModellingRule: Optional
-      Value: 3
-    - Name: VerticalAlignment
-      Type: BaseVariableType
-      DataType: VerticalAlignment
-      ModellingRule: Optional
-      Value: 3
-    - Name: HorizontalGap
-      Type: BaseDataVariableType
-      DataType: Size
-      ModellingRule: Optional
-      Value: 10.0
-  - Name: OriginalWidth
-    Type: BaseDataVariableType
-    DataType: Size
-    ModellingRule: Optional
-    Value: 180.0
-  - Name: OriginalHeight
-    Type: BaseDataVariableType
-    DataType: Size
-    ModellingRule: Optional
-    Value: 42.0
-  - Name: FontScaling
-    Type: BaseDataVariableType
-    DataType: Boolean
-    ModellingRule: Optional
-    Value: true
-  - Name: FillMode
-    Type: BaseDataVariableType
-    DataType: FillModeEnum
-    ModellingRule: Optional
-    Value: 1
-- Name: Switch_OnOff_Label_Indicator
-  Id: g=a5fbb402e02c8f20ff8051ce068df2fe
-  Supertype: ScaleLayout
-  ReferenceType: HasComponent
-  Children:
-  - Name: Width
-    Type: BaseVariableType
-    DataType: Size
-    ModellingRule: Optional
-    Value: 240.0
-  - Name: Height
-    Type: BaseVariableType
-    DataType: Size
-    ModellingRule: Optional
-    Value: 42.0
-  - Name: HorizontalAlignment
-    Type: BaseVariableType
-    DataType: HorizontalAlignment
-    ModellingRule: Optional
-    Value: 3
-  - Name: VerticalAlignment
-    Type: BaseVariableType
-    DataType: VerticalAlignment
-    ModellingRule: Optional
-  - Name: Toggle
-    Type: BaseDataVariableType
-    DataType: Boolean
-  - Name: On Text
-    Type: BaseDataVariableType
-    DataType: String
-    Value: "On"
-  - Name: Off Text
-    Type: BaseDataVariableType
-    DataType: String
-    Value: "Off"
-  - Name: Button Enabled
-    Type: BaseDataVariableType
-    DataType: Boolean
-    Value: true
-  - Name: Label
-    Type: BaseDataVariableType
-    DataType: String
-    Value: "Label"
-  - Name: GridLayout
-    Type: GridLayout
-    Children:
-    - Name: Width
-      Type: BaseVariableType
-      DataType: Size
-      ModellingRule: Optional
-      Value: 180.0
-    - Name: Height
-      Type: BaseVariableType
-      DataType: Size
-      ModellingRule: Optional
-      Value: 42.0
-    - Name: Rows
-      Type: BaseDataVariableType
-      DataType: String
-      ValueRank: OneDimension
-      ArrayDimensions: [0]
-      Value: ["1fr"]
-    - Name: Columns
-      Type: BaseDataVariableType
-      DataType: String
-      ValueRank: OneDimension
-      ArrayDimensions: [0]
-      Value: ["1fr","Auto","Auto"]
-    - Name: Label
-      Type: Label
-      Children:
-      - Name: Text
+          DataType: Int32
+          ModellingRule: Optional
+          Value: 2
+      - Name: WordWrap
         Type: BaseDataVariableType
-        DataType: LocalizedText
-        Children:
-        - Name: DynamicLink
-          Type: DynamicLink
-          DataType: NodePath
-          Value: "../../../Label"
-      - Name: VerticalAlignment
-        Type: BaseVariableType
-        DataType: VerticalAlignment
+        DataType: Boolean
         ModellingRule: Optional
-        Value: 2
-      - Name: HorizontalAlignment
+        Value: true
+      - Name: TextHorizontalAlignment
         Type: BaseVariableType
-        DataType: HorizontalAlignment
+        DataType: TextHorizontalAlignment
         ModellingRule: Optional
+      - Name: TextVerticalAlignment
+        Type: BaseVariableType
+        DataType: TextVerticalAlignment
+        ModellingRule: Optional
+        Value: 1
+    - Name: Spacer2
+      Type: Rectangle
+      Children:
       - Name: Width
         Type: BaseVariableType
         DataType: Size
         ModellingRule: Optional
-        Value: -1.0
+        Value: 10.0
+      - Name: Height
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 20.0
+      - Name: LeftMargin
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+      - Name: TopMargin
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
       - Name: Style
         Type: BaseDataVariableType
         DataType: String
         ModellingRule: Optional
-        Value: "StandardControlLabel"
+        Value: "Invisible"
+      - Name: VerticalAlignment
+        Type: BaseVariableType
+        DataType: VerticalAlignment
+        ModellingRule: Optional
+        Value: 3
+      - Name: HorizontalAlignment
+        Type: BaseVariableType
+        DataType: HorizontalAlignment
+        ModellingRule: Optional
+        Value: 2
+      - Name: Visible
+        Type: BaseDataVariableType
+        DataType: Boolean
+        Value: true
+        Children:
+        - Name: DynamicLink
+          Type: DynamicLink
+          DataType: NodePath
+          Value: "../../Label/Visible"
+      - Name: ns=11;GridLayoutProperties
+        Type: GridLayoutProperties
+        DisplayName: {"NamespaceIndex":11,"TextId":"GridLayoutPropertiesDisplayName"}
+        Children:
+        - Name: ColumnStart
+          Type: BaseDataVariableType
+          DataType: Int32
+          ModellingRule: Optional
+          Value: 3
     - Name: Switch_OnOff
       Type: Switch_OnOff
       Children:
-      - Name: switch
-        Type: Switch
-        Children:
-        - Name: Checked
-          Type: BaseDataVariableType
-          DataType: Boolean
-          Children:
-          - Name: DynamicLink
-            Type: DynamicLink
-            DataType: NodePath
-            Value: "../../Toggle"
-        - Name: Enabled
-          Type: BaseDataVariableType
-          DataType: Boolean
-          Value: true
-          Children:
-          - Name: DynamicLink
-            Type: DynamicLink
-            DataType: NodePath
-            Value: "../../Button Enabled"
-        - Name: CheckedText
-          Type: BaseDataVariableType
-          DataType: LocalizedText
-          Value: {"LocaleId":"en-US","Text":""}
-        - Name: UncheckedText
-          Type: BaseDataVariableType
-          DataType: LocalizedText
-          Value: {"LocaleId":"en-US","Text":""}
       - Name: Toggle
         Type: BaseDataVariableType
         DataType: Boolean
@@ -840,35 +782,35 @@ Children:
         Type: BaseVariableType
         DataType: Size
         ModellingRule: Optional
-      - Name: on text
-        Type: Label
+      - Name: switch
+        Type: Switch
         Children:
-        - Name: Text
-          Type: BaseDataVariableType
-          DataType: LocalizedText
-          Value: {"LocaleId":"en-US","Text":"Label1"}
-          Children:
-          - Name: StringFormatter1
-            Type: StringFormatter
-            Children:
-            - Name: Source0
-              Type: BaseDataVariableType
-              DataType: BaseDataType
-              ReferenceType: HasSource
-              Children:
-              - Name: DynamicLink
-                Type: DynamicLink
-                DataType: NodePath
-                Value: "../../../../On Text"
-        - Name: Visible
+        - Name: Checked
           Type: BaseDataVariableType
           DataType: Boolean
           Children:
           - Name: DynamicLink
             Type: DynamicLink
             DataType: NodePath
-            Value: "../../switch/Checked"
-      - Name: off text
+            Value: "../../Toggle"
+        - Name: Enabled
+          Type: BaseDataVariableType
+          DataType: Boolean
+          Value: true
+          Children:
+          - Name: DynamicLink
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "../../Button Enabled"
+        - Name: CheckedText
+          Type: BaseDataVariableType
+          DataType: LocalizedText
+          Value: {"LocaleId":"en-US","Text":""}
+        - Name: UncheckedText
+          Type: BaseDataVariableType
+          DataType: LocalizedText
+          Value: {"LocaleId":"en-US","Text":""}
+      - Name: off
         Type: Label
         Children:
         - Name: Text
@@ -891,7 +833,6 @@ Children:
         - Name: Visible
           Type: BaseDataVariableType
           DataType: Boolean
-          Value: true
           Children:
           - Name: ExpressionEvaluator1
             Type: ExpressionEvaluator
@@ -905,6 +846,44 @@ Children:
                 Type: DynamicLink
                 DataType: NodePath
                 Value: "../../../../switch/Checked"
+      - Name: on
+        Type: Label
+        Children:
+        - Name: Text
+          Type: BaseDataVariableType
+          DataType: LocalizedText
+          Value: {"LocaleId":"en-US","Text":"Label1"}
+          Children:
+          - Name: StringFormatter1
+            Type: StringFormatter
+            Children:
+            - Name: Source0
+              Type: BaseDataVariableType
+              DataType: BaseDataType
+              ReferenceType: HasSource
+              Children:
+              - Name: DynamicLink
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "../../../../On Text"
+        - Name: Visible
+          Type: BaseDataVariableType
+          DataType: Boolean
+          Value: true
+          Children:
+          - Name: DynamicLink
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "../../switch/Checked"
+      - Name: ns=11;GridLayoutProperties
+        Type: GridLayoutProperties
+        DisplayName: {"NamespaceIndex":11,"TextId":"GridLayoutPropertiesDisplayName"}
+        Children:
+        - Name: ColumnStart
+          Type: BaseDataVariableType
+          DataType: Int32
+          ModellingRule: Optional
+          Value: 4
     - Name: HorizontalAlignment
       Type: BaseVariableType
       DataType: HorizontalAlignment
@@ -914,7 +893,60 @@ Children:
       Type: BaseVariableType
       DataType: VerticalAlignment
       ModellingRule: Optional
-      Value: 3
+    - Name: Spacer3
+      Type: Rectangle
+      Children:
+      - Name: Width
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 10.0
+      - Name: Height
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 20.0
+      - Name: LeftMargin
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+      - Name: TopMargin
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+      - Name: Style
+        Type: BaseDataVariableType
+        DataType: String
+        ModellingRule: Optional
+        Value: "Invisible"
+      - Name: VerticalAlignment
+        Type: BaseVariableType
+        DataType: VerticalAlignment
+        ModellingRule: Optional
+        Value: 3
+      - Name: HorizontalAlignment
+        Type: BaseVariableType
+        DataType: HorizontalAlignment
+        ModellingRule: Optional
+        Value: 2
+      - Name: Visible
+        Type: BaseDataVariableType
+        DataType: Boolean
+        Value: true
+        Children:
+        - Name: DynamicLink
+          Type: DynamicLink
+          DataType: NodePath
+          Value: "../../Multi_State_Indicator/Visible"
+      - Name: ns=11;GridLayoutProperties
+        Type: GridLayoutProperties
+        DisplayName: {"NamespaceIndex":11,"TextId":"GridLayoutPropertiesDisplayName"}
+        Children:
+        - Name: ColumnStart
+          Type: BaseDataVariableType
+          DataType: Int32
+          ModellingRule: Optional
+          Value: 5
     - Name: Multi_State_Indicator
       Type: Multi_State_Indicator
       Children:
@@ -1206,6 +1238,28 @@ Children:
         Type: BaseDataVariableType
         DataType: Boolean
         Value: true
+        Children:
+        - Name: ExpressionEvaluator1
+          Type: ExpressionEvaluator
+          Children:
+          - Name: Source0
+            Type: BaseDataVariableType
+            DataType: BaseDataType
+            ReferenceType: HasSource
+            Children:
+            - Name: DynamicLink
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "../../../IndicatorColor"
+          - Name: Source1
+            Type: BaseDataVariableType
+            DataType: BaseDataType
+            ReferenceType: HasSource
+            Children:
+            - Name: DynamicLink
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "../../../IndicatorSymbol"
       - Name: Opacity
         Type: BaseVariableType
         DataType: Float
@@ -1259,11 +1313,47 @@ Children:
         Type: BaseVariableType
         DataType: Size
         ModellingRule: Optional
+      - Name: ns=11;GridLayoutProperties
+        Type: GridLayoutProperties
+        DisplayName: {"NamespaceIndex":11,"TextId":"GridLayoutPropertiesDisplayName"}
+        Children:
+        - Name: ColumnStart
+          Type: BaseDataVariableType
+          DataType: Int32
+          ModellingRule: Optional
+          Value: 6
     - Name: HorizontalGap
       Type: BaseDataVariableType
       DataType: Size
       ModellingRule: Optional
-      Value: 10.0
+    - Name: Label Column Setting
+      Type: BaseDataVariableType
+      DataType: String
+      Children:
+      - Name: ConditionalConverter1
+        Type: ConditionalConverter
+        Children:
+        - Name: Condition
+          Type: BaseDataVariableType
+          DataType: Boolean
+          ReferenceType: HasSource
+          Children:
+          - Name: DynamicLink
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "../../../Label/Visible"
+        - Name: TrueValue
+          Type: BaseDataVariableType
+          DataType: String
+          ReferenceType: HasParameter
+          ModellingRule: Optional
+          Value: "1fr"
+        - Name: FalseValue
+          Type: BaseDataVariableType
+          DataType: String
+          ReferenceType: HasParameter
+          ModellingRule: Optional
+          Value: "Auto"
   - Name: IndicatorColor
     Type: BaseDataVariableType
     DataType: 'Multi-State Indicator Colors'
@@ -1279,7 +1369,7 @@ Children:
     Type: BaseDataVariableType
     DataType: Size
     ModellingRule: Optional
-    Value: 240.0
+    Value: 1000.0
   - Name: OriginalHeight
     Type: BaseDataVariableType
     DataType: Size
@@ -1295,3 +1385,6 @@ Children:
     DataType: FillModeEnum
     ModellingRule: Optional
     Value: 1
+  - Name: Pointer
+    Type: BaseDataVariableType
+    DataType: String

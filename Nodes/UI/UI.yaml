@@ -154,7 +154,7 @@ Children:
   - Name: IPAddress
     Type: BaseDataVariableType
     DataType: String
-    Value: "127.0.0.1"
+    Value: "192.168.1.245"
   - Name: Port
     Type: BaseDataVariableType
     DataType: UInt16
@@ -282,7 +282,7 @@ Children:
   - Name: Hostname
     Type: BaseDataVariableType
     DataType: String
-    Value: "USCOEE-LP053"
+    Value: "USCOEE-LP056"
   - Name: MaxNumberOfConnections
     Type: BaseDataVariableType
     DataType: UInt32
@@ -547,7 +547,7 @@ Children:
       - Name: DynamicLink
         Type: DynamicLink
         DataType: NodePath
-        Value: "../../Standard_Content_Container/VerticalLayout/Main_Content_Container/HorizontalLayout/Scroll/Standard_Content@NodeId"
+        Value: "../../Standard_Content_Container/VerticalLayout/Main_Content_Container/HorizontalLayout/Scale/Standard_Content@NodeId"
         Children:
         - Name: Mode
           Type: BaseVariableType
@@ -811,44 +811,19 @@ Children:
             DataType: Size
             ModellingRule: Optional
             Value: 1.0
-          - Name: Scroll
-            Type: ScrollView
+          - Name: Scale
+            Type: ScaleLayout
             Children:
-            - Name: ContentWidth
+            - Name: OriginalWidth
               Type: BaseDataVariableType
-              DataType: Size
-              AccessLevel: Read
-            - Name: ContentHeight
-              Type: BaseDataVariableType
-              DataType: Size
-              AccessLevel: Read
-            - Name: ViewWidth
-              Type: BaseDataVariableType
-              DataType: Size
-              AccessLevel: Read
-            - Name: ViewHeight
-              Type: BaseDataVariableType
-              DataType: Size
-              AccessLevel: Read
-            - Name: ContentX
-              Type: BaseDataVariableType
-              DataType: Size
-            - Name: ContentY
-              Type: BaseDataVariableType
-              DataType: Size
-            - Class: Reference
-              Target: ns=11;i=1394
-              Direction: Forward
-            - Name: Width
-              Type: BaseVariableType
               DataType: Size
               ModellingRule: Optional
-              Value: 300.0
-            - Name: Height
-              Type: BaseVariableType
+              Value: 1864.0
+            - Name: OriginalHeight
+              Type: BaseDataVariableType
               DataType: Size
               ModellingRule: Optional
-              Value: 300.0
+              Value: 745.0
             - Name: HorizontalAlignment
               Type: BaseVariableType
               DataType: HorizontalAlignment
@@ -859,39 +834,15 @@ Children:
               DataType: VerticalAlignment
               ModellingRule: Optional
               Value: 3
-            - Name: Scale
-              Type: ScaleLayout
-              Children:
-              - Name: OriginalWidth
-                Type: BaseDataVariableType
-                DataType: Size
-                ModellingRule: Optional
-                Value: 1864.0
-              - Name: OriginalHeight
-                Type: BaseDataVariableType
-                DataType: Size
-                ModellingRule: Optional
-                Value: 745.0
-              - Name: HorizontalAlignment
-                Type: BaseVariableType
-                DataType: HorizontalAlignment
-                ModellingRule: Optional
-                Value: 3
-              - Name: VerticalAlignment
-                Type: BaseVariableType
-                DataType: VerticalAlignment
-                ModellingRule: Optional
-                Value: 3
-              - Name: FontScaling
-                Type: BaseDataVariableType
-                DataType: Boolean
-                ModellingRule: Optional
-                Value: true
-              - Name: FillMode
-                Type: BaseDataVariableType
-                DataType: FillModeEnum
-                ModellingRule: Optional
-                Value: 1
+            - Name: FontScaling
+              Type: BaseDataVariableType
+              DataType: Boolean
+              ModellingRule: Optional
+              Value: true
+            - Name: FillMode
+              Type: BaseDataVariableType
+              DataType: FillModeEnum
+              ModellingRule: Optional
             - Name: Standard_Content
               Type: PanelLoader
               Children:
@@ -920,12 +871,12 @@ Children:
                 Type: BaseVariableType
                 DataType: Size
                 ModellingRule: Optional
-                Value: 300.0
+                Value: -1.0
               - Name: Height
                 Type: BaseVariableType
                 DataType: Size
                 ModellingRule: Optional
-                Value: 300.0
+                Value: -1.0
               - Name: LeftMargin
                 Type: BaseVariableType
                 DataType: Size
@@ -3338,7 +3289,7 @@ Children:
     - Name: Trends
       Type: BaseDataVariableType
       DataType: NodeId
-      Value: "/Objects/OptimateDemoProject/UI/Screens/Base Screens/Empty"
+      Value: "/Objects/OptimateDemoProject/UI/Screens/Changeover/Changeover_Main"
     - Name: Reports
       Type: BaseDataVariableType
       DataType: NodeId

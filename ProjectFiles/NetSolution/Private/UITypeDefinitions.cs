@@ -60,6 +60,11 @@ public class Bottom_Bar : FTOptix.UI.Screen
 {
 }
 
+[MapType(NamespaceUri = "OptimateDemoProject", Guid = "551813fd361d4f22706e13275666b4ff")]
+public class Production_Time_Chart : FTOptix.UI.ScaleLayout
+{
+}
+
 [MapType(NamespaceUri = "OptimateDemoProject", Guid = "d13f2f6fe136a32b8ce6472de8c91cef")]
 public class MenuBar : FTOptix.UI.Screen
 {
@@ -101,7 +106,12 @@ public class Production_Home : FTOptix.UI.Screen
 }
 
 [MapType(NamespaceUri = "OptimateDemoProject", Guid = "58ccd3f928ca16d11e2c4e46da8ec1cb")]
-public class Production_Transfer : Template_Screen
+public class Production_Transfer : FTOptix.UI.Screen
+{
+}
+
+[MapType(NamespaceUri = "OptimateDemoProject", Guid = "128877343e9010472308ac577736c6b2")]
+public class Production_Bucker_Conveyor : FTOptix.UI.Screen
 {
 }
 
@@ -180,6 +190,11 @@ public class DigitalFeedbackCounter_RH : FTOptix.UI.Screen
 {
 }
 
+[MapType(NamespaceUri = "OptimateDemoProject", Guid = "c9f6f1e2dfa068cf4dbd2d0eb4556116")]
+public class NumericEntry_Cams : FTOptix.UI.ScaleLayout
+{
+}
+
 [MapType(NamespaceUri = "OptimateDemoProject", Guid = "024a29d60cbc2f26d0f2fc5a2d03dbe6")]
 public class Overview : FTOptix.UI.Screen
 {
@@ -240,23 +255,23 @@ public class Switch_OnOff : FTOptix.UI.ScaleLayout
 {
 }
 
+[MapType(NamespaceUri = "OptimateDemoProject", Guid = "a5fbb402e02c8f20ff8051ce068df2fe")]
+public class Switch_OnOff_Standard : FTOptix.UI.ScaleLayout
+{
+}
+
+[MapType(NamespaceUri = "OptimateDemoProject", Guid = "d5860f8beae913784e2010482aa70658")]
+public class NumericEntry_Standard : FTOptix.UI.ScaleLayout
+{
+}
+
 [MapType(NamespaceUri = "OptimateDemoProject", Guid = "e236c717a24ea0ad2c893375c5796915")]
 public class Button_Standard : FTOptix.UI.ScaleLayout
 {
 }
 
-[MapType(NamespaceUri = "OptimateDemoProject", Guid = "0dc195e2b4c44f0289d0a11878992489")]
-public class Switch_OnOff_Label : FTOptix.UI.ScaleLayout
-{
-}
-
-[MapType(NamespaceUri = "OptimateDemoProject", Guid = "a5fbb402e02c8f20ff8051ce068df2fe")]
-public class Switch_OnOff_Label_Indicator : FTOptix.UI.ScaleLayout
-{
-}
-
-[MapType(NamespaceUri = "OptimateDemoProject", Guid = "551813fd361d4f22706e13275666b4ff")]
-public class Production_Time_Chart : FTOptix.UI.ScaleLayout
+[MapType(NamespaceUri = "OptimateDemoProject", Guid = "4d31967c7e0e09833aa8493b4ec1e8e0")]
+public class CollapseMenu : FTOptix.UI.Panel
 {
 }
 
@@ -302,20 +317,5 @@ public class BasicSpaceButton : FTOptix.UI.VirtualKeyboardSymbolButton
 
 [MapType(NamespaceUri = "OptimateDemoProject", Guid = "cf246b9bd07567ff4a53fa5a9a230801")]
 public class BasicSwitchPushButton : FTOptix.UI.Button
-{
-}
-
-[MapType(NamespaceUri = "OptimateDemoProject", Guid = "4da7dad708dff68c70280db2185c26f7")]
-public class NumericEntry_Standard : FTOptix.UI.ScaleLayout
-{
-}
-
-[MapType(NamespaceUri = "OptimateDemoProject", Guid = "d5860f8beae913784e2010482aa70658")]
-public class NumericEntry_Standard_Label : FTOptix.UI.ScaleLayout
-{
-}
-
-[MapType(NamespaceUri = "OptimateDemoProject", Guid = "4d31967c7e0e09833aa8493b4ec1e8e0")]
-public class CollapseMenu : FTOptix.UI.Panel
 {
 }
