@@ -27,7 +27,6 @@ namespace OptimateDemoProject
         public static readonly NodeId OptimateWarning = new NodeId(namespaceIndex, new Guid("bb5928a79adae253341d86267f2f8c8d"));
         public static readonly NodeId QuickInfo = new NodeId(namespaceIndex, new Guid("c3faba5be628fa7a427c2ca5b781c244"));
         public static readonly NodeId OptimateStatus = new NodeId(namespaceIndex, new Guid("05e862619b891247738e0618931b3d0e"));
-        public static readonly NodeId Production_Gluing_Tab1 = new NodeId(namespaceIndex, new Guid("5e2453ca689a9453f97b22eb04c1ed6e"));
         public static readonly NodeId Production_Gluing = new NodeId(namespaceIndex, new Guid("10f9bf27a4ee2f8db8025b047c4ebf03"));
         public static readonly NodeId OptimateMessage = new NodeId(namespaceIndex, new Guid("598895e89105a56f1d85c90d08f46a7b"));
         public static readonly NodeId DigitalFeedbackCounter = new NodeId(namespaceIndex, new Guid("22a26780d82d299ba5c0b4ca6cae12e6"));
@@ -49,7 +48,6 @@ namespace OptimateDemoProject
         public static readonly NodeId Production_Carton_Feed = new NodeId(namespaceIndex, new Guid("a88f9a74802613aa6217382f70f1149a"));
         public static readonly NodeId Production_Transport = new NodeId(namespaceIndex, new Guid("afe8c1007efe65520600fb60a7fbb519"));
         public static readonly NodeId Production_Statistics_Chart = new NodeId(namespaceIndex, new Guid("1ef550eee5815cb7b8839139305121a8"));
-        public static readonly NodeId Production_Gluing_Tab2 = new NodeId(namespaceIndex, new Guid("5e6ed44f2c17b635d8c8fbb6ffb11cca"));
         public static readonly NodeId Manual_Home = new NodeId(namespaceIndex, new Guid("21bccd6e5654be28d7da9390b8c2c7f8"));
         public static readonly NodeId Shift_TimeDisplay = new NodeId(namespaceIndex, new Guid("4ea872f2353a3f587842ec89ff638fd1"));
         public static readonly NodeId Manual_Menu_Bar = new NodeId(namespaceIndex, new Guid("c8cf544233f952c6618b110686caeab6"));
@@ -75,7 +73,7 @@ namespace OptimateDemoProject
         public static readonly NodeId Switch_OnOff = new NodeId(namespaceIndex, new Guid("9b66f86cd575f4a3d7a39343c3049636"));
         public static readonly NodeId Switch_OnOff_Standard = new NodeId(namespaceIndex, new Guid("a5fbb402e02c8f20ff8051ce068df2fe"));
         public static readonly NodeId NumericEntry_Standard = new NodeId(namespaceIndex, new Guid("d5860f8beae913784e2010482aa70658"));
-        public static readonly NodeId Button_Standard = new NodeId(namespaceIndex, new Guid("e236c717a24ea0ad2c893375c5796915"));
+        public static readonly NodeId Button_Standard_DO_NOT_USE = new NodeId(namespaceIndex, new Guid("e236c717a24ea0ad2c893375c5796915"));
         public static readonly NodeId CollapseMenu = new NodeId(namespaceIndex, new Guid("4d31967c7e0e09833aa8493b4ec1e8e0"));
         public static readonly NodeId AlarmGrid = new NodeId(namespaceIndex, new Guid("71cef6cb9448ed8eec272a74a2aac225"));
         public static readonly NodeId Letters = new NodeId(namespaceIndex, new Guid("927cfa372c73f3452566064604ed4a4f"));
@@ -86,6 +84,13 @@ namespace OptimateDemoProject
         public static readonly NodeId BasicSymbolVerticalButton = new NodeId(namespaceIndex, new Guid("450e1e9381613f4b71607ddf16020ebb"));
         public static readonly NodeId BasicSpaceButton = new NodeId(namespaceIndex, new Guid("0642b30a582e14c745079c727f361ad1"));
         public static readonly NodeId BasicSwitchPushButton = new NodeId(namespaceIndex, new Guid("cf246b9bd07567ff4a53fa5a9a230801"));
+        public static readonly NodeId Maintenance_Transfer = new NodeId(namespaceIndex, new Guid("56849d712b23b9d657a4c3cc4898fb9f"));
+        public static readonly NodeId Maintenance_Bucket_Conveyor = new NodeId(namespaceIndex, new Guid("36b1ba8e91b07b245469e463634af40e"));
+        public static readonly NodeId Maintenance_Carton_Feed = new NodeId(namespaceIndex, new Guid("5273ef4521aba268c7a0bac2cb6fb8ef"));
+        public static readonly NodeId Maintenance_Loading = new NodeId(namespaceIndex, new Guid("4bab689b1bbc3287355556f28fb5d5e6"));
+        public static readonly NodeId Maintenance_Transport = new NodeId(namespaceIndex, new Guid("96488b600ae2d9b0a01e8d0af5eba557"));
+        public static readonly NodeId Maintenance_Gluing = new NodeId(namespaceIndex, new Guid("5135689cfd705c99b5a550b462b0a80e"));
+        public static readonly NodeId StatusButton = new NodeId(namespaceIndex, new Guid("95767f9bca361096e626572b50ab3afb"));
     }
 
     public static class VariableTypes

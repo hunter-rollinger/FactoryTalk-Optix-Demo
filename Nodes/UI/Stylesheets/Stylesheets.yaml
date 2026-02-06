@@ -523,7 +523,12 @@ Children:
       - Name: Color
         Type: BaseDataVariableType
         DataType: Color
-        Value: "#fafafa"
+        Value: "#f1f1f1"
+        Children:
+        - Name: DynamicLink
+          Type: DynamicLink
+          DataType: NodePath
+          Value: "../../../../HMI_Project/Light Grey 3 - f1f1f1"
       - Name: FontWeight
         Type: BaseDataVariableType
         DataType: FontWeightEnum
@@ -550,6 +555,11 @@ Children:
         Type: BaseDataVariableType
         DataType: Color
         Value: "#ffffff"
+        Children:
+        - Name: DynamicLink
+          Type: DynamicLink
+          DataType: NodePath
+          Value: "../../../../HMI_Project/Light Grey 1 - ffffff - White"
       - Name: FocusBorderColor
         Type: BaseDataVariableType
         DataType: Color
@@ -559,6 +569,33 @@ Children:
           Type: DynamicLink
           DataType: NodePath
           Value: "../../../../HMI_Project/Selected - 6d91b6 - Info - Blue"
+      - Name: BorderColor
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#000000"
+        Children:
+        - Name: DynamicLink
+          Type: DynamicLink
+          DataType: NodePath
+          Value: "../../../../HMI_Project/Dark Grey 6 - 000000 - Black"
+      - Name: TextColor
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#000000"
+        Children:
+        - Name: DynamicLink
+          Type: DynamicLink
+          DataType: NodePath
+          Value: "../../../../HMI_Project/Dark Grey 6 - 000000 - Black"
+      - Name: PressedBorderColor
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#000000"
+        Children:
+        - Name: DynamicLink
+          Type: DynamicLink
+          DataType: NodePath
+          Value: "../../../../HMI_Project/Dark Grey 6 - 000000 - Black"
     - Name: Slim
       Type: ButtonStyle
       Children:

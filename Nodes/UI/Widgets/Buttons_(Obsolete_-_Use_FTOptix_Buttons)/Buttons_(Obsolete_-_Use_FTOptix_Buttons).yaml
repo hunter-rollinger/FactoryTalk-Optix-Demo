@@ -1,7 +1,7 @@
 Name: 'Buttons (Obsolete - Use FTOptix Buttons)'
 Type: FolderType
 Children:
-- Name: Button_Standard
+- Name: Button_Standard_DO_NOT_USE
   Id: g=e236c717a24ea0ad2c893375c5796915
   Supertype: ScaleLayout
   ReferenceType: HasComponent
@@ -50,7 +50,7 @@ Children:
     DataType: FillModeEnum
     ModellingRule: Optional
     Value: 1
-  - Name: Button
+  - Name: StatusButton
     Type: Panel
     Children:
     - Name: Width
@@ -1305,3 +1305,124 @@ Children:
     Type: BaseDataVariableType
     DataType: Boolean
     ModellingRule: Optional
+- Name: StatusButton
+  Id: g=95767f9bca361096e626572b50ab3afb
+  Supertype: ScaleLayout
+  ReferenceType: HasComponent
+  Children:
+  - Name: OriginalWidth
+    Type: BaseDataVariableType
+    DataType: Size
+    ModellingRule: Optional
+    Value: 200.0
+  - Name: OriginalHeight
+    Type: BaseDataVariableType
+    DataType: Size
+    ModellingRule: Optional
+    Value: 42.0
+  - Name: button
+    Type: MomentaryButton
+    Children:
+    - Name: Active
+      Type: BaseDataVariableType
+      DataType: Boolean
+      AccessLevel: Read
+      Children:
+      - Name: DynamicLink
+        Type: DynamicLink
+        DataType: NodePath
+        Value: "../../VariableToModify"
+        Children:
+        - Name: Mode
+          Type: BaseVariableType
+          DataType: DynamicLinkMode
+          ModellingRule: Optional
+          Value: 2
+    - Name: Text
+      Type: BaseDataVariableType
+      DataType: LocalizedText
+      Children:
+      - Name: DynamicLink
+        Type: DynamicLink
+        DataType: NodePath
+        Value: "../../ButtonText"
+    - Name: Style
+      Type: BaseDataVariableType
+      DataType: String
+      Value: "Selected"
+      Children:
+      - Name: ConditionalConverter1
+        Type: ConditionalConverter
+        Children:
+        - Name: Condition
+          Type: BaseDataVariableType
+          DataType: Boolean
+          ReferenceType: HasSource
+          Children:
+          - Name: DynamicLink
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "../../../../StatusFeedback"
+        - Name: TrueValue
+          Type: BaseDataVariableType
+          DataType: String
+          ReferenceType: HasParameter
+          Children:
+          - Name: DynamicLink
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "/Objects/OptimateDemoProject/UI/Stylesheets/Jones/ButtonStyles/Selected@BrowseName"
+        - Name: FalseValue
+          Type: BaseDataVariableType
+          DataType: String
+          ReferenceType: HasParameter
+          Children:
+          - Name: DynamicLink
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "/Objects/OptimateDemoProject/UI/Stylesheets/Jones/ButtonStyles/Standard@BrowseName"
+    - Name: Width
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 200.0
+    - Name: Height
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 42.0
+    - Name: HorizontalAlignment
+      Type: BaseVariableType
+      DataType: HorizontalAlignment
+      ModellingRule: Optional
+      Value: 3
+    - Name: VerticalAlignment
+      Type: BaseVariableType
+      DataType: VerticalAlignment
+      ModellingRule: Optional
+      Value: 3
+  - Name: VerticalAlignment
+    Type: BaseVariableType
+    DataType: VerticalAlignment
+    ModellingRule: Optional
+    Value: 2
+  - Name: HorizontalAlignment
+    Type: BaseVariableType
+    DataType: HorizontalAlignment
+    ModellingRule: Optional
+    Value: 1
+  - Name: StatusFeedback
+    Type: BaseDataVariableType
+    DataType: Boolean
+  - Name: VariableToModify
+    Type: BaseDataVariableType
+    DataType: Boolean
+  - Name: FillMode
+    Type: BaseDataVariableType
+    DataType: FillModeEnum
+    ModellingRule: Optional
+    Value: 1
+  - Name: ButtonText
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "0"

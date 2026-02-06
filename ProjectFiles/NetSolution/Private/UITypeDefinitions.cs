@@ -35,11 +35,6 @@ public class QuickInfo : FTOptix.UI.Panel
 {
 }
 
-[MapType(NamespaceUri = "OptimateDemoProject", Guid = "5e2453ca689a9453f97b22eb04c1ed6e")]
-public class Production_Gluing_Tab1 : FTOptix.UI.Screen
-{
-}
-
 [MapType(NamespaceUri = "OptimateDemoProject", Guid = "10f9bf27a4ee2f8db8025b047c4ebf03")]
 public class Production_Gluing : FTOptix.UI.Screen
 {
@@ -132,11 +127,6 @@ public class Production_Transport : FTOptix.UI.Screen
 
 [MapType(NamespaceUri = "OptimateDemoProject", Guid = "1ef550eee5815cb7b8839139305121a8")]
 public class Production_Statistics_Chart : FTOptix.UI.ScaleLayout
-{
-}
-
-[MapType(NamespaceUri = "OptimateDemoProject", Guid = "5e6ed44f2c17b635d8c8fbb6ffb11cca")]
-public class Production_Gluing_Tab2 : FTOptix.UI.Screen
 {
 }
 
@@ -266,7 +256,7 @@ public class NumericEntry_Standard : FTOptix.UI.ScaleLayout
 }
 
 [MapType(NamespaceUri = "OptimateDemoProject", Guid = "e236c717a24ea0ad2c893375c5796915")]
-public class Button_Standard : FTOptix.UI.ScaleLayout
+public class Button_Standard_DO_NOT_USE : FTOptix.UI.ScaleLayout
 {
 }
 
@@ -317,5 +307,40 @@ public class BasicSpaceButton : FTOptix.UI.VirtualKeyboardSymbolButton
 
 [MapType(NamespaceUri = "OptimateDemoProject", Guid = "cf246b9bd07567ff4a53fa5a9a230801")]
 public class BasicSwitchPushButton : FTOptix.UI.Button
+{
+}
+
+[MapType(NamespaceUri = "OptimateDemoProject", Guid = "56849d712b23b9d657a4c3cc4898fb9f")]
+public class Maintenance_Transfer : FTOptix.UI.Screen
+{
+}
+
+[MapType(NamespaceUri = "OptimateDemoProject", Guid = "36b1ba8e91b07b245469e463634af40e")]
+public class Maintenance_Bucket_Conveyor : FTOptix.UI.Screen
+{
+}
+
+[MapType(NamespaceUri = "OptimateDemoProject", Guid = "5273ef4521aba268c7a0bac2cb6fb8ef")]
+public class Maintenance_Carton_Feed : FTOptix.UI.Screen
+{
+}
+
+[MapType(NamespaceUri = "OptimateDemoProject", Guid = "4bab689b1bbc3287355556f28fb5d5e6")]
+public class Maintenance_Loading : FTOptix.UI.Screen
+{
+}
+
+[MapType(NamespaceUri = "OptimateDemoProject", Guid = "96488b600ae2d9b0a01e8d0af5eba557")]
+public class Maintenance_Transport : FTOptix.UI.Screen
+{
+}
+
+[MapType(NamespaceUri = "OptimateDemoProject", Guid = "5135689cfd705c99b5a550b462b0a80e")]
+public class Maintenance_Gluing : FTOptix.UI.Screen
+{
+}
+
+[MapType(NamespaceUri = "OptimateDemoProject", Guid = "95767f9bca361096e626572b50ab3afb")]
+public class StatusButton : FTOptix.UI.ScaleLayout
 {
 }
