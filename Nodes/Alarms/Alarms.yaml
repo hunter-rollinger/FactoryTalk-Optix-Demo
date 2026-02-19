@@ -130,6 +130,12 @@ Children:
     Id: g=f80ae271cda38e93beba410c9b8ed498
     Type: BaseDataVariableType
     DataType: DateTime
+  - Name: Enabled
+    Id: g=95c22146e3ea862513506761d3e9ca84
+    Type: BaseDataVariableType
+    DataType: Boolean
+    ModellingRule: Optional
+    Value: true
 - Name: OptimateWarning
   Id: g=bb5928a79adae253341d86267f2f8c8d
   Supertype: OffNormalAlarmController
@@ -239,6 +245,12 @@ Children:
   - Class: Reference
     Type: GeneratesEvent
     Target: g=6560a3da9e3d0eea7647fbb81060cba2
+  - Name: Enabled
+    Id: g=7b58c5f77d72305ad751b5bc6777bd72
+    Type: BaseDataVariableType
+    DataType: Boolean
+    ModellingRule: Optional
+    Value: true
 - Name: OptimateStatus
   Id: g=05e862619b891247738e0618931b3d0e
   Supertype: OffNormalAlarmController
@@ -348,6 +360,12 @@ Children:
   - Class: Reference
     Type: GeneratesEvent
     Target: g=c2ca38a4c19da392aaa3d5751f2c6362
+  - Name: Enabled
+    Id: g=8c2cfad9db2df897fca155b42a36fc4d
+    Type: BaseDataVariableType
+    DataType: Boolean
+    ModellingRule: Optional
+    Value: true
 - Name: OptimateMessage
   Id: g=598895e89105a56f1d85c90d08f46a7b
   Supertype: OffNormalAlarmController
@@ -452,3 +470,9 @@ Children:
   - Class: Reference
     Type: GeneratesEvent
     Target: g=4a85c14492d2cdb01d3612a5412f1b98
+  - Name: Enabled
+    Id: g=46dee7f173899b70cd61896410b6c0e1
+    Type: BaseDataVariableType
+    DataType: Boolean
+    ModellingRule: Optional
+    Value: true

@@ -34,7 +34,7 @@ using FTOptix.RecipeX;
 using System.Diagnostics.CodeAnalysis;
 #endregion
 
-public class ScreenModeControl : BaseNetLogic
+public class ScreenControl : BaseNetLogic
 {
 	public override void Start() {
 		burgerMenuScreen = (BurgerMenu)InformationModel.Get((NodeId)LogicObject.GetVariable("BurgerMenuScreen").Value);
@@ -43,8 +43,21 @@ public class ScreenModeControl : BaseNetLogic
 		standarMenuBar = (PanelLoader)InformationModel.Get((NodeId)LogicObject.GetVariable("StandardMenuBar").Value);
 		standardQuickInfo = (PanelLoader)InformationModel.Get((NodeId)LogicObject.GetVariable("StandardQuickInfo").Value);
 		emptyPanel = (NodeId)LogicObject.GetVariable("EmptyScreen").Value;
-		standardContentContainer = (Rectangle)InformationModel.Get((NodeId)LogicObject.GetVariable("StandardContentContainer").Value);
 		bottomBarMode = LogicObject.GetVariable("BottomBarMode");
+		screenSizeIsNormal = LogicObject.GetVariable("ScreenSizeIsNormal");
+
+		Window applicationWindow = (Window)LogicObject.Owner;
+
+		windowHeightOut = LogicObject.GetVariable("WindowHeight");
+		windowHeightIn = applicationWindow.HeightVariable;
+		windowHeightOut.Value = windowHeightIn.Value;
+
+		windowWidthOut = LogicObject.GetVariable("WindowWidth");
+		windowWidthIn = applicationWindow.WidthVariable;
+		windowWidthOut.Value = windowWidthIn.Value;
+
+		windowHeightIn.VariableChange += WindowSizeChanged;
+		windowWidthIn.VariableChange += WindowSizeChanged;
 	}
 
 	[ExportMethod]
@@ -52,21 +65,6 @@ public class ScreenModeControl : BaseNetLogic
 		CloseAllOpen(); // close all open popups, menus, dialogs, etc.
 		if (panelToLoadNodeId == null || panelToLoadNodeId == emptyPanel || menuBarToLoad == null || menuBarToLoad == emptyPanel || modeToChangeTo == -1)
 			return;
-
-		var panelToLoad = InformationModel.Get(panelToLoadNodeId);
-		// easiest method thought of at the time to set the menu bar text since the screen loading is handled in netlogic already anyway
-		UAVariable MenuBarText = InformationModel.Get(menuBarToLoad).Get("MenuBarText") as UAVariable;    // check for textbox on menu bar
-		if (MenuBarText == null || MenuBarText.Value == null || MenuBarText.Value.Value == null) {
-			Log.Verbose1("ScreenModeControl", $"Could not retrieve MenuBarText item. If screen: {panelToLoad.BrowseName} is supposed to have screen text, fix this.");   // error if burgerMenuBarText variable is null
-		} else {
-			if (panelToLoad.DisplayName.HasTextId && (panelToLoad.DisplayName.TextId != "")) {
-				MenuBarText.Value = panelToLoad.DisplayName.TextId;   // set text on burger menu bar
-			} else if (panelToLoad.DisplayName.HasTextId && (panelToLoad.DisplayName.TextId != "")) {
-				MenuBarText.Value = panelToLoad.DisplayName.Text;     // set text on burger menu bar
-			} else {
-				Log.Warning("ScreenModeControl", $"Missing DisplayName on screen: {Log.Node(panelToLoad)}");   // warn if no display name is set
-			}
-		}
 		
 		standardContent.ChangePanel(panelToLoadNodeId);		// close standard content
 		standarMenuBar.ChangePanel(menuBarToLoad);			// close standard menu bar
@@ -98,12 +96,30 @@ public class ScreenModeControl : BaseNetLogic
 		return;
 	}
 
+	private void WindowSizeChanged(object sender, VariableChangeEventArgs e) {
+		Window applicationWindow = (Window)LogicObject.Owner;
+		windowHeightIn = applicationWindow.HeightVariable;
+		windowHeightOut.Value = windowHeightIn.Value;
+		windowWidthIn = applicationWindow.WidthVariable;
+		windowWidthOut.Value = windowWidthIn.Value;
+
+		if (windowWidthIn.Value >= 1920 && windowHeightIn.Value >= 1080) {
+			screenSizeIsNormal.Value = true;
+		} else {
+			screenSizeIsNormal.Value = false;
+		}
+	}
+
 	private BurgerMenu burgerMenuScreen;
 	private PanelLoader debugMenu;
 	private PanelLoader standardContent;
 	private PanelLoader standarMenuBar;
 	private PanelLoader standardQuickInfo;
 	private NodeId emptyPanel;
-	private Rectangle standardContentContainer;
 	private IUAVariable bottomBarMode;
+	private IUAVariable windowWidthIn;
+	private IUAVariable windowHeightIn;
+	private IUAVariable windowWidthOut;
+	private IUAVariable windowHeightOut;
+	private IUAVariable screenSizeIsNormal;
 }

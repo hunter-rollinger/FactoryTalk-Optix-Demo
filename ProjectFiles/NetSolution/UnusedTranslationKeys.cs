@@ -9,6 +9,7 @@ using System.Text;
 using System.IO;
 using FTOptix.Core;
 using System.Net.NetworkInformation;
+using FTOptix.SerialPort;
 #endregion
 
 public class UnusedTranslationKeys : BaseNetLogic

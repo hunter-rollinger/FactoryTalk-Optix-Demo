@@ -2,275 +2,6 @@ Name: Testing
 Id: g=8ff21d9762f26b948c4dab99417c5ab6
 Type: FolderType
 Children:
-- Name: Alarm1
-  Id: g=db25b2a3aba2c89c2f4a261335e77bb1
-  Type: OptimateAlarm
-  Children:
-  - Class: Reference
-    Target: ns=25;i=81
-    Direction: Forward
-  - Class: Reference
-    Target: ns=25;i=82
-    Direction: Forward
-  - Class: Reference
-    Target: ns=25;i=83
-    Direction: Forward
-  - Class: Reference
-    Target: ns=25;i=130
-    Direction: Forward
-  - Class: Reference
-    Target: ns=25;i=135
-    Direction: Forward
-  - Class: Reference
-    Target: ns=25;i=132
-    Direction: Forward
-  - Class: Reference
-    Target: ns=25;i=146
-    Direction: Forward
-  - Class: Reference
-    Target: ns=25;i=148
-    Direction: Forward
-  - Class: Reference
-    Target: ns=25;i=150
-    Direction: Forward
-  - Class: Reference
-    Target: ns=25;i=152
-    Direction: Forward
-  - Class: Reference
-    Target: ns=25;i=154
-    Direction: Forward
-  - Name: NormalStateValue
-    Id: g=5f72c3b604fa9ef64e2fbb7c66710e9a
-    Type: BaseDataVariableType
-    DataType: Double
-  - Name: InputValue
-    Id: g=87f1443221e073e77d7ed1de61087b0e
-    Type: BaseDataVariableType
-    DataType: Double
-    Children:
-    - Name: DynamicLink
-      Id: g=854c5cda1198456a897db7ea4f97bc96
-      Type: DynamicLink
-      DataType: NodePath
-      Value: "../../../../Model/Testing/TestAlarm1"
-  - Name: LastEvent
-    Id: g=10ae02e169bd22e4e89320c20dfe164d
-    Type: BaseDataVariableType
-    DataType: BaseDataType
-    ValueRank: OneDimension
-    ArrayDimensions: [0]
-  - Name: Help_Text
-    Id: g=1300709fcfc9a07e2260ac47a8a4a2bb
-    Type: BaseDataVariableType
-    DataType: String
-    Value: "Test Alarm 1 Help Text"
-  - Name: Aux_Text
-    Id: g=25c80cba437b73d1084815346d64398e
-    Type: BaseDataVariableType
-    DataType: String
-    Value: "Test Alarm 1 Auxiliary Text"
-  - Name: Image
-    Id: g=04e7da5e665974005502c24de4363c33
-    Type: BaseDataVariableType
-    DataType: ResourceUri
-    Value: "ns=36;%PROJECTDIR%/Graphics/Coesia - Library/Sliding Door Left.svg"
-  - Name: Overview
-    Id: g=8b1e8511c75797a0dbde9238a9462486
-    Type: BaseDataVariableType
-    DataType: ResourceUri
-    Value: "ns=36;%PROJECTDIR%/Graphics/Coesia - Library/Sliding Door Right.svg"
-  - Name: Message
-    Id: g=4ecaa4e5c63545c6600e775708ee33f6
-    Type: BaseDataVariableType
-    DataType: LocalizedText
-    Value: {"LocaleId":"en-US","Text":"Test Alarm 1"}
-  - Name: Active
-    Id: g=8cf252ca6b23391427940b3a272f3a90
-    Type: BaseDataVariableType
-    DataType: Boolean
-    AccessLevel: Read
-  - Name: Timestamp
-    Id: g=dad42661684adf8dc826b8446c0f6f19
-    Type: BaseDataVariableType
-    DataType: DateTime
-- Name: Alarm2
-  Id: g=7fa3216778564b47af05b58599a25b41
-  Type: OffNormalAlarmController
-  Children:
-  - Name: NormalStateValue
-    Id: g=47340466d4e9fb03fbee4e3fa45976f8
-    Type: BaseDataVariableType
-    DataType: Double
-  - Name: InputValue
-    Id: g=412a144160b793892fe30aa63406c148
-    Type: BaseDataVariableType
-    DataType: Double
-    Children:
-    - Name: DynamicLink
-      Id: g=0adca7346bc04883b2fbb5a5038e0371
-      Type: DynamicLink
-      DataType: NodePath
-      Value: "/Objects/OptimateDemoProject/Model/Testing/TestAlarm2"
-  - Name: LastEvent
-    Id: g=278e748496902ac6ae96460d64d65833
-    Type: BaseDataVariableType
-    DataType: BaseDataType
-    ValueRank: OneDimension
-    ArrayDimensions: [0]
-  - Class: Reference
-    Target: ns=25;i=81
-    Direction: Forward
-  - Class: Reference
-    Target: ns=25;i=82
-    Direction: Forward
-  - Class: Reference
-    Target: ns=25;i=83
-    Direction: Forward
-  - Class: Reference
-    Target: ns=25;i=130
-    Direction: Forward
-  - Class: Reference
-    Target: ns=25;i=135
-    Direction: Forward
-  - Class: Reference
-    Target: ns=25;i=132
-    Direction: Forward
-  - Class: Reference
-    Target: ns=25;i=146
-    Direction: Forward
-  - Class: Reference
-    Target: ns=25;i=148
-    Direction: Forward
-  - Class: Reference
-    Target: ns=25;i=150
-    Direction: Forward
-  - Class: Reference
-    Target: ns=25;i=152
-    Direction: Forward
-  - Class: Reference
-    Target: ns=25;i=154
-    Direction: Forward
-  - Name: AutoAcknowledge
-    Id: g=9d71b484af9bdb3f0ed59276e7ba2b8a
-    Type: BaseDataVariableType
-    DataType: Boolean
-    Value: true
-  - Name: AutoConfirm
-    Id: g=02109467dd9e07c9dade766e4c848fe3
-    Type: BaseDataVariableType
-    DataType: Boolean
-    Value: true
-  - Name: Severity
-    Id: g=1c57748024e997c8c86310ef0e806940
-    Type: BaseDataVariableType
-    DataType: UInt16
-    Value: 1000
-  - Name: Message
-    Id: g=3a34e9711bb64be33bc4202d26185b46
-    Type: BaseDataVariableType
-    DataType: LocalizedText
-    Value: {"LocaleId":"en-US","Text":"TestAlarm2"}
-  - Name: MaxTimeShelved
-    Id: g=3da6f2b5492d11046246bc7dfad323fc
-    Type: BaseDataVariableType
-    DataType: Duration
-  - Name: PresetTimeShelved
-    Id: g=6c7d1c94511b9b484b52f9606fff4769
-    Type: BaseDataVariableType
-    DataType: Duration
-  - Name: LatchingEnabled
-    Id: g=ee0e354ab8d1ce29e6d5a8769029aad5
-    Type: BaseDataVariableType
-    DataType: Boolean
-- Name: Alarm3
-  Id: g=f3533349b8a54dc7a8b69b77d2439fda
-  Type: OffNormalAlarmController
-  Children:
-  - Name: NormalStateValue
-    Id: g=14b077fdb0c47c920591bdda32cd9d65
-    Type: BaseDataVariableType
-    DataType: Double
-  - Name: InputValue
-    Id: g=63aed57265f27aa1f861407fd238c684
-    Type: BaseDataVariableType
-    DataType: Double
-    Children:
-    - Name: DynamicLink
-      Id: g=73fbaad9a32a4f58b1d2eb4e31446aad
-      Type: DynamicLink
-      DataType: NodePath
-      Value: "/Objects/OptimateDemoProject/Model/Testing/TestAlarm3"
-  - Name: LastEvent
-    Id: g=ca5853e1ad13423360e749c9d93926c2
-    Type: BaseDataVariableType
-    DataType: BaseDataType
-    ValueRank: OneDimension
-    ArrayDimensions: [0]
-  - Class: Reference
-    Target: ns=25;i=81
-    Direction: Forward
-  - Class: Reference
-    Target: ns=25;i=82
-    Direction: Forward
-  - Class: Reference
-    Target: ns=25;i=83
-    Direction: Forward
-  - Class: Reference
-    Target: ns=25;i=130
-    Direction: Forward
-  - Class: Reference
-    Target: ns=25;i=135
-    Direction: Forward
-  - Class: Reference
-    Target: ns=25;i=132
-    Direction: Forward
-  - Class: Reference
-    Target: ns=25;i=146
-    Direction: Forward
-  - Class: Reference
-    Target: ns=25;i=148
-    Direction: Forward
-  - Class: Reference
-    Target: ns=25;i=150
-    Direction: Forward
-  - Class: Reference
-    Target: ns=25;i=152
-    Direction: Forward
-  - Class: Reference
-    Target: ns=25;i=154
-    Direction: Forward
-  - Name: AutoAcknowledge
-    Id: g=d3770d68ccdbc86cd951f94da356049f
-    Type: BaseDataVariableType
-    DataType: Boolean
-    Value: true
-  - Name: AutoConfirm
-    Id: g=645012ae7bddac5abe181b879191b744
-    Type: BaseDataVariableType
-    DataType: Boolean
-    Value: true
-  - Name: Severity
-    Id: g=b2e56fa304e29bedd8d8572e5f762434
-    Type: BaseDataVariableType
-    DataType: UInt16
-    Value: 1000
-  - Name: Message
-    Id: g=037fb8a2de5ed789e926d149557ff62d
-    Type: BaseDataVariableType
-    DataType: LocalizedText
-    Value: {"LocaleId":"en-US","Text":"TestAlarm3"}
-  - Name: MaxTimeShelved
-    Id: g=c0f9e4e6c8e82ae74a02634eafe9c899
-    Type: BaseDataVariableType
-    DataType: Duration
-  - Name: PresetTimeShelved
-    Id: g=94da3996b2ddb18f08291e3c39ec6e8a
-    Type: BaseDataVariableType
-    DataType: Duration
-  - Name: LatchingEnabled
-    Id: g=0f21ff09f98dcac389606a3f86c24f6d
-    Type: BaseDataVariableType
-    DataType: Boolean
 - Name: Warning1
   Id: g=bb66c00f4152c37cd54781894348088f
   Type: OffNormalAlarmController
@@ -538,3 +269,276 @@ Children:
     Id: g=ffe82f34bfcb8e4ecc0f0b3754038fbd
     Type: BaseDataVariableType
     DataType: Boolean
+- Name: TestAlarm1
+  Id: g=4e071b4b39e6f2501c36c995f4ec1c60
+  Type: OptimateAlarm
+  Children:
+  - Class: Reference
+    Target: ns=25;i=81
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=82
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=83
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=130
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=135
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=132
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=146
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=148
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=150
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=152
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=154
+    Direction: Forward
+  - Name: NormalStateValue
+    Id: g=eca97a7e082ad6e4462da485cd71018b
+    Type: BaseDataVariableType
+    DataType: Double
+  - Name: InputValue
+    Id: g=34f6070a7fe58efe3e26171c8c97386e
+    Type: BaseDataVariableType
+    DataType: Double
+    Children:
+    - Name: DynamicLink
+      Id: g=e0498108930ad3b4a51a1d0ab33ce66c
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "../../../../Model/Testing/TestAlarm1"
+  - Name: LastEvent
+    Id: g=1c797947d10818bf0094ec995845b13a
+    Type: BaseDataVariableType
+    DataType: BaseDataType
+    ValueRank: OneDimension
+    ArrayDimensions: [0]
+  - Name: Help_Text
+    Id: g=acb65f1b840216fa6278192d0cbe5de5
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "Guard door is not completely closed.\\n - Close the guard door completely and reset machine."
+  - Name: Aux_Text
+    Id: g=466e0b4edfddb1b7d60d2526d9b33c17
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "40-GS3"
+  - Name: Image
+    Id: g=522010e4506a34e2b3eb9b7d0f1593f8
+    Type: BaseDataVariableType
+    DataType: ResourceUri
+    Value: "ns=36;%PROJECTDIR%/Graphics/Cartoning/GuardDoorT3.png"
+  - Name: Overview
+    Id: g=4460ae18298170217028c7b42c63283c
+    Type: BaseDataVariableType
+    DataType: ResourceUri
+    Value: "ns=36;%PROJECTDIR%/Graphics/Cartoning/OverviewPW.png"
+  - Name: Message
+    Id: g=706e0f6c3e872dfa003f3b79e2a2901e
+    Type: BaseDataVariableType
+    DataType: LocalizedText
+    Value: {"LocaleId":"en-US","Text":"Transfer Guard Door 3 Open or Unlocked"}
+  - Name: Active
+    Id: g=ca7e55e22eb1c70be2d7346e0e0bb662
+    Type: BaseDataVariableType
+    DataType: Boolean
+    AccessLevel: Read
+  - Name: Timestamp
+    Id: g=7018be8cc8a2c3df07e847e25ce941a5
+    Type: BaseDataVariableType
+    DataType: DateTime
+- Name: TestAlarm2
+  Id: g=ba1edae453ddecd8de170b5a17dcb7eb
+  Type: OptimateAlarm
+  Children:
+  - Class: Reference
+    Target: ns=25;i=81
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=82
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=83
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=130
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=135
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=132
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=146
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=148
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=150
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=152
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=154
+    Direction: Forward
+  - Name: NormalStateValue
+    Id: g=dfb8d3011b28ce27d9001ba3c6f689bd
+    Type: BaseDataVariableType
+    DataType: Double
+  - Name: InputValue
+    Id: g=60075f2c76eaf8c33bfdcc01ccbc9605
+    Type: BaseDataVariableType
+    DataType: Double
+    Children:
+    - Name: DynamicLink
+      Id: g=2316ff81dffb30aba90710957a4779a7
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "../../../../Model/Testing/TestAlarm2"
+  - Name: LastEvent
+    Id: g=5a9b79278c47930afeebd0d97e018046
+    Type: BaseDataVariableType
+    DataType: BaseDataType
+    ValueRank: OneDimension
+    ArrayDimensions: [0]
+  - Name: Help_Text
+    Id: g=7c6e2d5d40829bdbf627cd02a90ff242
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "Guard door is not completely closed.\\n - Close the guard door completely and reset machine."
+  - Name: Aux_Text
+    Id: g=f07cb9c7bb8894a296671721f6a28ac5
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "05-GS10"
+  - Name: Image
+    Id: g=cc462ad7a45cb04524a46c73d8124ca2
+    Type: BaseDataVariableType
+    DataType: ResourceUri
+    Value: "ns=36;%PROJECTDIR%/Graphics/Cartoning/GuardDoorC10.png"
+  - Name: Overview
+    Id: g=8182dace0ebd57315dc36969b3f06674
+    Type: BaseDataVariableType
+    DataType: ResourceUri
+    Value: "ns=36;%PROJECTDIR%/Graphics/Cartoning/OverviewTC.png"
+  - Name: Message
+    Id: g=ec879350d197751e19c5ce22e96d43f4
+    Type: BaseDataVariableType
+    DataType: LocalizedText
+    Value: {"LocaleId":"en-US","Text":"Cartoner Guard Door 10 Open or Unlocked"}
+  - Name: Active
+    Id: g=c398f469abf55db6b2fa2da9390912ee
+    Type: BaseDataVariableType
+    DataType: Boolean
+    AccessLevel: Read
+  - Name: Timestamp
+    Id: g=ccddaed8d677192af5c51a67590b25fa
+    Type: BaseDataVariableType
+    DataType: DateTime
+- Name: TestAlarm3
+  Id: g=8f80d60e5c43d37cb9c9741aa4ce819c
+  Type: OptimateAlarm
+  Children:
+  - Class: Reference
+    Target: ns=25;i=81
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=82
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=83
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=130
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=135
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=132
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=146
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=148
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=150
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=152
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=154
+    Direction: Forward
+  - Name: NormalStateValue
+    Id: g=7a4d12fe461f9f65fffc3f4b1748a6ef
+    Type: BaseDataVariableType
+    DataType: Double
+  - Name: InputValue
+    Id: g=85b6c6866ab744be6ef59a01963d076b
+    Type: BaseDataVariableType
+    DataType: Double
+    Children:
+    - Name: DynamicLink
+      Id: g=c0adc8f58dca8f2623aa8419fb9ff795
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "../../../../Model/Testing/TestAlarm3"
+  - Name: LastEvent
+    Id: g=618bd3e9b7aef56205dc2626b1919321
+    Type: BaseDataVariableType
+    DataType: BaseDataType
+    ValueRank: OneDimension
+    ArrayDimensions: [0]
+  - Name: Help_Text
+    Id: g=0eed674930aa268b2b318afebd54cda4
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "HMU not powered on.\\n - Power up HMU.\\n\\nInternal fault.\\n - Set to correct temperature and wait for the unit to heat glue."
+  - Name: Aux_Text
+    Id: g=e99cd2597a77ed83881b85fc3375068e
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "190-HMU1"
+  - Name: Image
+    Id: g=b2a7730884fcb5badab0870e78e15e21
+    Type: BaseDataVariableType
+    DataType: ResourceUri
+    Value: "ns=36;%PROJECTDIR%/Graphics/Cartoning/generic__hmu.png"
+  - Name: Overview
+    Id: g=feac89da9c9b6bb05f65ea1d0536ace2
+    Type: BaseDataVariableType
+    DataType: ResourceUri
+    Value: "ns=36;%PROJECTDIR%/Graphics/Cartoning/OverviewTL.png"
+  - Name: Message
+    Id: g=ef1228409866b6273e3342fe199a2c44
+    Type: BaseDataVariableType
+    DataType: LocalizedText
+    Value: {"LocaleId":"en-US","Text":"Hot Melt Unit Not Ready"}
+  - Name: Active
+    Id: g=0d376aa8a67d7ff93199b1fc32c9d166
+    Type: BaseDataVariableType
+    DataType: Boolean
+    AccessLevel: Read
+  - Name: Timestamp
+    Id: g=54784248dc367da454b9159ab7b71f81
+    Type: BaseDataVariableType
+    DataType: DateTime

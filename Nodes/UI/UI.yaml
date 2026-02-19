@@ -279,10 +279,6 @@ Children:
         Type: BaseDataVariableType
         DataType: Double
         Value: 1.0
-  - Name: Hostname
-    Type: BaseDataVariableType
-    DataType: String
-    Value: "USCOEE-LP056"
   - Name: MaxNumberOfConnections
     Type: BaseDataVariableType
     DataType: UInt32
@@ -428,12 +424,12 @@ Children:
     Type: BaseDataVariableType
     DataType: Size
     ModellingRule: Optional
-    Value: 1920.0
+    Value: 1280.0
   - Name: Height
     Type: BaseDataVariableType
     DataType: Size
     ModellingRule: Optional
-    Value: 1080.0
+    Value: 800.0
   - Name: Caption
     Type: BaseDataVariableType
     DataType: String
@@ -441,7 +437,11 @@ Children:
   - Name: FullScreen
     Type: BaseDataVariableType
     DataType: Boolean
-    ModellingRule: Optional
+    Children:
+    - Name: DynamicLink
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "{Session}/IsWeb"
   - Name: AlwaysOnTop
     Type: BaseDataVariableType
     DataType: Boolean
@@ -484,7 +484,7 @@ Children:
       Type: BaseDataVariableType
       DataType: Boolean
       Value: true
-  - Name: ScreenModeControl
+  - Name: ScreenControl
     Type: NetLogic
     Description: {"LocaleId":"en-US","Text":"include all panel loaders"}
     Children:
@@ -547,7 +547,7 @@ Children:
       - Name: DynamicLink
         Type: DynamicLink
         DataType: NodePath
-        Value: "../../Standard_Content_Container/VerticalLayout/Main_Content_Container/HorizontalLayout/Scale/Standard_Content@NodeId"
+        Value: "../../Standard_Content_Container/VerticalLayout/Main_Content_Container/HorizontalLayout/Standard_Content@NodeId"
         Children:
         - Name: Mode
           Type: BaseVariableType
@@ -622,6 +622,16 @@ Children:
         ValueRank: OneDimension
         ArrayDimensions: [0]
         Value: [{"TypeId":{"Id":296},"Body":{"Name":"panelToLoadNodeId","DataType":{"Id":17},"ValueRank":-1,"ArrayDimensions":[],"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}},{"TypeId":{"Id":296},"Body":{"Name":"menuBarToLoad","DataType":{"Id":17},"ValueRank":-1,"ArrayDimensions":[],"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}},{"TypeId":{"Id":296},"Body":{"Name":"modeToChangeTo","DataType":{"Id":6},"ValueRank":-1,"ArrayDimensions":[],"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}}]
+    - Name: WindowHeight
+      Type: BaseDataVariableType
+      DataType: Int16
+    - Name: WindowWidth
+      Type: BaseDataVariableType
+      DataType: Int16
+    - Name: ScreenSizeIsNormal
+      Type: BaseDataVariableType
+      DataType: Boolean
+      Description: {"LocaleId":"en-US","Text":"true if greater or equal to 1920x1080"}
   - Name: Standard_Content_Container
     Type: Rectangle
     Children:
@@ -811,19 +821,48 @@ Children:
             DataType: Size
             ModellingRule: Optional
             Value: 1.0
-          - Name: Scale
-            Type: ScaleLayout
+          - Name: Standard_Content
+            Type: PanelLoaderWithBack
             Children:
-            - Name: OriginalWidth
-              Type: BaseDataVariableType
+            - Class: Reference
+              Target: ns=11;i=478
+              Direction: Forward
+            - Name: Panel
+              Type: NodePointer
+              DataType: NodeId
+              Value: "/Objects/OptimateDemoProject/UI/Screens/Production/Production_Home"
+              Children:
+              - Name: Kind
+                Type: PropertyType
+                DataType: NodeId
+                Value: "/Types/ObjectTypes/BaseObjectType/BaseUIObject/Item/Container"
+            - Name: CurrentPanel
+              Type: NodePointer
+              DataType: NodeId
+              Children:
+              - Name: Kind
+                Type: PropertyType
+                DataType: NodeId
+                Value: "/Types/ObjectTypes/BaseObjectType/BaseUIObject/Item"
+            - Name: Width
+              Type: BaseVariableType
               DataType: Size
               ModellingRule: Optional
-              Value: 1864.0
-            - Name: OriginalHeight
-              Type: BaseDataVariableType
+              Value: -1.0
+            - Name: Height
+              Type: BaseVariableType
               DataType: Size
               ModellingRule: Optional
-              Value: 745.0
+              Value: -1.0
+            - Name: BackProvider
+              Type: NetLogic
+              Children:
+              - Class: Reference
+                Target: g=fd73289cc8ae6cf306a97b91dcdc1899
+                Direction: Forward
+              - Class: Reference
+                Target: g=834ccc3777b76a6b3cb77824402fe2a8
+                Direction: Forward
             - Name: HorizontalAlignment
               Type: BaseVariableType
               DataType: HorizontalAlignment
@@ -834,72 +873,6 @@ Children:
               DataType: VerticalAlignment
               ModellingRule: Optional
               Value: 3
-            - Name: FontScaling
-              Type: BaseDataVariableType
-              DataType: Boolean
-              ModellingRule: Optional
-              Value: true
-            - Name: FillMode
-              Type: BaseDataVariableType
-              DataType: FillModeEnum
-              ModellingRule: Optional
-              Value: 1
-            - Name: Standard_Content
-              Type: PanelLoader
-              Children:
-              - Name: Panel
-                Type: NodePointer
-                DataType: NodeId
-                Value: "/Objects/OptimateDemoProject/UI/Screens/Production/Production_Home"
-                Children:
-                - Name: Kind
-                  Type: PropertyType
-                  DataType: NodeId
-                  Value: "/Types/ObjectTypes/BaseObjectType/BaseUIObject/Item/Container"
-              - Name: CurrentPanel
-                Type: NodePointer
-                DataType: NodeId
-                AccessLevel: Read
-                Children:
-                - Name: Kind
-                  Type: PropertyType
-                  DataType: NodeId
-                  Value: "/Types/ObjectTypes/BaseObjectType/BaseUIObject/Item"
-              - Class: Reference
-                Target: ns=11;i=478
-                Direction: Forward
-              - Name: Width
-                Type: BaseVariableType
-                DataType: Size
-                ModellingRule: Optional
-                Value: -1.0
-              - Name: Height
-                Type: BaseVariableType
-                DataType: Size
-                ModellingRule: Optional
-                Value: -1.0
-              - Name: LeftMargin
-                Type: BaseVariableType
-                DataType: Size
-                ModellingRule: Optional
-              - Name: TopMargin
-                Type: BaseVariableType
-                DataType: Size
-                ModellingRule: Optional
-              - Name: HorizontalAlignment
-                Type: BaseVariableType
-                DataType: HorizontalAlignment
-                ModellingRule: Optional
-                Value: 3
-              - Name: VerticalAlignment
-                Type: BaseVariableType
-                DataType: VerticalAlignment
-                ModellingRule: Optional
-                Value: 3
-              - Name: BottomMargin
-                Type: BaseVariableType
-                DataType: Size
-                ModellingRule: Optional
           - Name: QuickInfo
             Type: QuickInfo
             Children:
@@ -1052,6 +1025,10 @@ Children:
             DataType: PanelLoaderAnimationTypeEnum
             ModellingRule: Optional
             Value: 2
+          - Name: RightMargin
+            Type: BaseVariableType
+            DataType: Size
+            ModellingRule: Optional
     - Name: FillColor
       Type: BaseDataVariableType
       DataType: Color
@@ -1391,7 +1368,7 @@ Children:
                     - Name: DynamicLink
                       Type: DynamicLink
                       DataType: NodePath
-                      Value: "../../../../../../../../../ScreenModeControl@NodeId"
+                      Value: "../../../../../../../../../ScreenControl@NodeId"
                   - Name: Method
                     Type: BaseDataVariableType
                     DataType: String
@@ -1535,7 +1512,7 @@ Children:
                     - Name: DynamicLink
                       Type: DynamicLink
                       DataType: NodePath
-                      Value: "../../../../../../../../../ScreenModeControl@NodeId"
+                      Value: "../../../../../../../../../ScreenControl@NodeId"
                   - Name: Method
                     Type: BaseDataVariableType
                     DataType: String
@@ -1679,7 +1656,7 @@ Children:
                     - Name: DynamicLink
                       Type: DynamicLink
                       DataType: NodePath
-                      Value: "../../../../../../../../../ScreenModeControl@NodeId"
+                      Value: "../../../../../../../../../ScreenControl@NodeId"
                   - Name: Method
                     Type: BaseDataVariableType
                     DataType: String
@@ -1823,7 +1800,7 @@ Children:
                     - Name: DynamicLink
                       Type: DynamicLink
                       DataType: NodePath
-                      Value: "../../../../../../../../../ScreenModeControl@NodeId"
+                      Value: "../../../../../../../../../ScreenControl@NodeId"
                   - Name: Method
                     Type: BaseDataVariableType
                     DataType: String
@@ -2009,16 +1986,7 @@ Children:
               - Name: DynamicLink
                 Type: DynamicLink
                 DataType: NodePath
-                Value: "/Objects/OptimateDemoProject/UI/Screens/Base Screens/Empty@NodeId"
-            - Name: Source1
-              Type: BaseDataVariableType
-              DataType: BaseDataType
-              ReferenceType: HasSource
-              Children:
-              - Name: DynamicLink
-                Type: DynamicLink
-                DataType: NodePath
-                Value: "../../../../../Trends@NodeId"
+                Value: "../../../../../Trends@Pointer"
         - Name: Height
           Type: BaseVariableType
           DataType: Size
@@ -2052,7 +2020,7 @@ Children:
                 - Name: DynamicLink
                   Type: DynamicLink
                   DataType: NodePath
-                  Value: "../../../../../../../../../ScreenModeControl@NodeId"
+                  Value: "{Window}/ScreenControl@NodeId"
               - Name: Method
                 Type: BaseDataVariableType
                 DataType: String
@@ -2067,7 +2035,7 @@ Children:
                   - Name: DynamicLink
                     Type: DynamicLink
                     DataType: NodePath
-                    Value: "../../../../../../Trends"
+                    Value: "../../../../../../../Trends@NodeId"
                 - Name: menuBarToLoad
                   Type: BaseDataVariableType
                   DataType: NodeId
@@ -2125,16 +2093,7 @@ Children:
               - Name: DynamicLink
                 Type: DynamicLink
                 DataType: NodePath
-                Value: "/Objects/OptimateDemoProject/UI/Screens/Base Screens/Empty@NodeId"
-            - Name: Source1
-              Type: BaseDataVariableType
-              DataType: BaseDataType
-              ReferenceType: HasSource
-              Children:
-              - Name: DynamicLink
-                Type: DynamicLink
-                DataType: NodePath
-                Value: "../../../../../Reports@NodeId"
+                Value: "../../../../../Reports@Pointer"
         - Name: Height
           Type: BaseVariableType
           DataType: Size
@@ -2168,7 +2127,7 @@ Children:
                 - Name: DynamicLink
                   Type: DynamicLink
                   DataType: NodePath
-                  Value: "../../../../../../../../../ScreenModeControl@NodeId"
+                  Value: "{Window}/ScreenControl@NodeId"
               - Name: Method
                 Type: BaseDataVariableType
                 DataType: String
@@ -2183,7 +2142,7 @@ Children:
                   - Name: DynamicLink
                     Type: DynamicLink
                     DataType: NodePath
-                    Value: "../../../../../../Reports"
+                    Value: "../../../../../../../Reports@NodeId"
                 - Name: menuBarToLoad
                   Type: BaseDataVariableType
                   DataType: NodeId
@@ -2241,16 +2200,7 @@ Children:
               - Name: DynamicLink
                 Type: DynamicLink
                 DataType: NodePath
-                Value: "/Objects/OptimateDemoProject/UI/Screens/Base Screens/Empty@NodeId"
-            - Name: Source1
-              Type: BaseDataVariableType
-              DataType: BaseDataType
-              ReferenceType: HasSource
-              Children:
-              - Name: DynamicLink
-                Type: DynamicLink
-                DataType: NodePath
-                Value: "../../../../../Manuals@NodeId"
+                Value: "../../../../../Manuals@Pointer"
         - Name: Height
           Type: BaseVariableType
           DataType: Size
@@ -2284,7 +2234,7 @@ Children:
                 - Name: DynamicLink
                   Type: DynamicLink
                   DataType: NodePath
-                  Value: "../../../../../../../../../ScreenModeControl@NodeId"
+                  Value: "{Window}/ScreenControl@NodeId"
               - Name: Method
                 Type: BaseDataVariableType
                 DataType: String
@@ -2299,7 +2249,7 @@ Children:
                   - Name: DynamicLink
                     Type: DynamicLink
                     DataType: NodePath
-                    Value: "../../../../../../Manuals"
+                    Value: "../../../../../../../Manuals@NodeId"
                 - Name: menuBarToLoad
                   Type: BaseDataVariableType
                   DataType: NodeId
@@ -2340,7 +2290,7 @@ Children:
         - Name: Text
           Type: BaseDataVariableType
           DataType: LocalizedText
-          Value: {"LocaleId":"en-US","Text":"Analysis"}
+          Value: {"LocaleId":"en-US","Text":"Anslysis"}
         - Name: Visible
           Type: BaseDataVariableType
           DataType: Boolean
@@ -2357,16 +2307,7 @@ Children:
               - Name: DynamicLink
                 Type: DynamicLink
                 DataType: NodePath
-                Value: "/Objects/OptimateDemoProject/UI/Screens/Base Screens/Empty@NodeId"
-            - Name: Source1
-              Type: BaseDataVariableType
-              DataType: BaseDataType
-              ReferenceType: HasSource
-              Children:
-              - Name: DynamicLink
-                Type: DynamicLink
-                DataType: NodePath
-                Value: "../../../../../Analysis@NodeId"
+                Value: "../../../../../Analysis@Pointer"
         - Name: Height
           Type: BaseVariableType
           DataType: Size
@@ -2400,7 +2341,7 @@ Children:
                 - Name: DynamicLink
                   Type: DynamicLink
                   DataType: NodePath
-                  Value: "../../../../../../../../../ScreenModeControl@NodeId"
+                  Value: "{Window}/ScreenControl@NodeId"
               - Name: Method
                 Type: BaseDataVariableType
                 DataType: String
@@ -2415,7 +2356,7 @@ Children:
                   - Name: DynamicLink
                     Type: DynamicLink
                     DataType: NodePath
-                    Value: "../../../../../../Analysis"
+                    Value: "../../../../../../../Analysis@NodeId"
                 - Name: menuBarToLoad
                   Type: BaseDataVariableType
                   DataType: NodeId
@@ -2473,16 +2414,7 @@ Children:
               - Name: DynamicLink
                 Type: DynamicLink
                 DataType: NodePath
-                Value: "/Objects/OptimateDemoProject/UI/Screens/Base Screens/Empty@NodeId"
-            - Name: Source1
-              Type: BaseDataVariableType
-              DataType: BaseDataType
-              ReferenceType: HasSource
-              Children:
-              - Name: DynamicLink
-                Type: DynamicLink
-                DataType: NodePath
-                Value: "../../../../../AlarmHistory@NodeId"
+                Value: "../../../../../AlarmHistory@Pointer"
         - Name: Height
           Type: BaseVariableType
           DataType: Size
@@ -2492,6 +2424,10 @@ Children:
             Type: DynamicLink
             DataType: NodePath
             Value: "../../../ButtonHeight"
+        - Name: BottomMargin
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
         - Name: MouseClickEventHandler1
           Type: EventHandler
           Children:
@@ -2516,7 +2452,7 @@ Children:
                 - Name: DynamicLink
                   Type: DynamicLink
                   DataType: NodePath
-                  Value: "../../../../../../../../../ScreenModeControl@NodeId"
+                  Value: "{Window}/ScreenControl@NodeId"
               - Name: Method
                 Type: BaseDataVariableType
                 DataType: String
@@ -2531,7 +2467,7 @@ Children:
                   - Name: DynamicLink
                     Type: DynamicLink
                     DataType: NodePath
-                    Value: "../../../../../../Alarm History"
+                    Value: "../../../../../../../AlarmHistory@NodeId"
                 - Name: menuBarToLoad
                   Type: BaseDataVariableType
                   DataType: NodeId
@@ -2589,16 +2525,7 @@ Children:
               - Name: DynamicLink
                 Type: DynamicLink
                 DataType: NodePath
-                Value: "/Objects/OptimateDemoProject/UI/Screens/Base Screens/Empty@NodeId"
-            - Name: Source1
-              Type: BaseDataVariableType
-              DataType: BaseDataType
-              ReferenceType: HasSource
-              Children:
-              - Name: DynamicLink
-                Type: DynamicLink
-                DataType: NodePath
-                Value: "../../../../../EventHistory@NodeId"
+                Value: "../../../../../EventHistory@Pointer"
         - Name: Height
           Type: BaseVariableType
           DataType: Size
@@ -2632,7 +2559,7 @@ Children:
                 - Name: DynamicLink
                   Type: DynamicLink
                   DataType: NodePath
-                  Value: "../../../../../../../../../ScreenModeControl@NodeId"
+                  Value: "{Window}/ScreenControl@NodeId"
               - Name: Method
                 Type: BaseDataVariableType
                 DataType: String
@@ -2647,7 +2574,7 @@ Children:
                   - Name: DynamicLink
                     Type: DynamicLink
                     DataType: NodePath
-                    Value: "../../../../../../Event History"
+                    Value: "../../../../../../../EventHistory@NodeId"
                 - Name: menuBarToLoad
                   Type: BaseDataVariableType
                   DataType: NodeId
@@ -2705,16 +2632,7 @@ Children:
               - Name: DynamicLink
                 Type: DynamicLink
                 DataType: NodePath
-                Value: "/Objects/OptimateDemoProject/UI/Screens/Base Screens/Empty@NodeId"
-            - Name: Source1
-              Type: BaseDataVariableType
-              DataType: BaseDataType
-              ReferenceType: HasSource
-              Children:
-              - Name: DynamicLink
-                Type: DynamicLink
-                DataType: NodePath
-                Value: "../../../../../RecipeManagement@NodeId"
+                Value: "../../../../../RecipeManagement@Pointer"
         - Name: Height
           Type: BaseVariableType
           DataType: Size
@@ -2748,7 +2666,7 @@ Children:
                 - Name: DynamicLink
                   Type: DynamicLink
                   DataType: NodePath
-                  Value: "../../../../../../../../../ScreenModeControl@NodeId"
+                  Value: "{Window}/ScreenControl@NodeId"
               - Name: Method
                 Type: BaseDataVariableType
                 DataType: String
@@ -2763,7 +2681,7 @@ Children:
                   - Name: DynamicLink
                     Type: DynamicLink
                     DataType: NodePath
-                    Value: "../../../../../../Recipe Management"
+                    Value: "../../../../../../../RecipeManagement@NodeId"
                 - Name: menuBarToLoad
                   Type: BaseDataVariableType
                   DataType: NodeId
@@ -2821,16 +2739,7 @@ Children:
               - Name: DynamicLink
                 Type: DynamicLink
                 DataType: NodePath
-                Value: "/Objects/OptimateDemoProject/UI/Screens/Base Screens/Empty@NodeId"
-            - Name: Source1
-              Type: BaseDataVariableType
-              DataType: BaseDataType
-              ReferenceType: HasSource
-              Children:
-              - Name: DynamicLink
-                Type: DynamicLink
-                DataType: NodePath
-                Value: "../../../../../UserManagement@NodeId"
+                Value: "../../../../../UserManagement@Pointer"
         - Name: Height
           Type: BaseVariableType
           DataType: Size
@@ -2864,7 +2773,7 @@ Children:
                 - Name: DynamicLink
                   Type: DynamicLink
                   DataType: NodePath
-                  Value: "../../../../../../../../../ScreenModeControl@NodeId"
+                  Value: "{Window}/ScreenControl@NodeId"
               - Name: Method
                 Type: BaseDataVariableType
                 DataType: String
@@ -2879,7 +2788,7 @@ Children:
                   - Name: DynamicLink
                     Type: DynamicLink
                     DataType: NodePath
-                    Value: "../../../../../../User Management"
+                    Value: "../../../../../../../UserManagement@NodeId"
                 - Name: menuBarToLoad
                   Type: BaseDataVariableType
                   DataType: NodeId
@@ -2937,16 +2846,7 @@ Children:
               - Name: DynamicLink
                 Type: DynamicLink
                 DataType: NodePath
-                Value: "/Objects/OptimateDemoProject/UI/Screens/Base Screens/Empty@NodeId"
-            - Name: Source1
-              Type: BaseDataVariableType
-              DataType: BaseDataType
-              ReferenceType: HasSource
-              Children:
-              - Name: DynamicLink
-                Type: DynamicLink
-                DataType: NodePath
-                Value: "../../../../../Diagnosis@NodeId"
+                Value: "../../../../../Diagnosis@Pointer"
         - Name: Height
           Type: BaseVariableType
           DataType: Size
@@ -2980,7 +2880,7 @@ Children:
                 - Name: DynamicLink
                   Type: DynamicLink
                   DataType: NodePath
-                  Value: "../../../../../../../../../ScreenModeControl@NodeId"
+                  Value: "{Window}/ScreenControl@NodeId"
               - Name: Method
                 Type: BaseDataVariableType
                 DataType: String
@@ -2995,7 +2895,7 @@ Children:
                   - Name: DynamicLink
                     Type: DynamicLink
                     DataType: NodePath
-                    Value: "../../../../../../Diagnosis"
+                    Value: "../../../../../../../Diagnosis@NodeId"
                 - Name: menuBarToLoad
                   Type: BaseDataVariableType
                   DataType: NodeId
@@ -3052,16 +2952,7 @@ Children:
               - Name: DynamicLink
                 Type: DynamicLink
                 DataType: NodePath
-                Value: "/Objects/OptimateDemoProject/UI/Screens/Base Screens/Empty@NodeId"
-            - Name: Source1
-              Type: BaseDataVariableType
-              DataType: BaseDataType
-              ReferenceType: HasSource
-              Children:
-              - Name: DynamicLink
-                Type: DynamicLink
-                DataType: NodePath
-                Value: "../../../../../GuidedProcedures@NodeId"
+                Value: "../../../../../GuidedProcedures@Pointer"
         - Name: Height
           Type: BaseVariableType
           DataType: Size
@@ -3095,7 +2986,7 @@ Children:
                 - Name: DynamicLink
                   Type: DynamicLink
                   DataType: NodePath
-                  Value: "../../../../../../../../../ScreenModeControl@NodeId"
+                  Value: "{Window}/ScreenControl@NodeId"
               - Name: Method
                 Type: BaseDataVariableType
                 DataType: String
@@ -3110,7 +3001,7 @@ Children:
                   - Name: DynamicLink
                     Type: DynamicLink
                     DataType: NodePath
-                    Value: "../../../../../../Guided Procedures"
+                    Value: "../../../../../../../GuidedProcedures@NodeId"
                 - Name: menuBarToLoad
                   Type: BaseDataVariableType
                   DataType: NodeId
@@ -3168,16 +3059,7 @@ Children:
               - Name: DynamicLink
                 Type: DynamicLink
                 DataType: NodePath
-                Value: "/Objects/OptimateDemoProject/UI/Screens/Base Screens/Empty@NodeId"
-            - Name: Source1
-              Type: BaseDataVariableType
-              DataType: BaseDataType
-              ReferenceType: HasSource
-              Children:
-              - Name: DynamicLink
-                Type: DynamicLink
-                DataType: NodePath
-                Value: "../../../../../MachineConfiguration@NodeId"
+                Value: "../../../../../MachineConfiguration@Pointer"
         - Name: Height
           Type: BaseVariableType
           DataType: Size
@@ -3211,7 +3093,7 @@ Children:
                 - Name: DynamicLink
                   Type: DynamicLink
                   DataType: NodePath
-                  Value: "../../../../../../../../../ScreenModeControl@NodeId"
+                  Value: "{Window}/ScreenControl@NodeId"
               - Name: Method
                 Type: BaseDataVariableType
                 DataType: String
@@ -3226,7 +3108,7 @@ Children:
                   - Name: DynamicLink
                     Type: DynamicLink
                     DataType: NodePath
-                    Value: "../../../../../../Machine Configuration"
+                    Value: "../../../../../../../MachineConfiguration@NodeId"
                 - Name: menuBarToLoad
                   Type: BaseDataVariableType
                   DataType: NodeId
@@ -3290,47 +3172,38 @@ Children:
     - Name: Trends
       Type: BaseDataVariableType
       DataType: NodeId
-      Value: "/Objects/OptimateDemoProject/UI/Screens/Changeover/Changeover_Main"
     - Name: Reports
       Type: BaseDataVariableType
       DataType: NodeId
-      Value: "/Objects/OptimateDemoProject/UI/Screens/Base Screens/Empty"
     - Name: Manuals
       Type: BaseDataVariableType
       DataType: NodeId
-      Value: "/Objects/OptimateDemoProject/UI/Screens/Base Screens/Empty"
     - Name: Analysis
       Type: BaseDataVariableType
       DataType: NodeId
-      Value: "/Objects/OptimateDemoProject/UI/Screens/Base Screens/Empty"
     - Name: AlarmHistory
       Type: BaseDataVariableType
       DataType: NodeId
-      Value: "/Objects/OptimateDemoProject/UI/Screens/Burger/Alarm History/AlarmGrid"
+      Value: "/Objects/OptimateDemoProject/UI/Screens/Burger/Alarm History/AlarmWidgets/AlarmManager"
     - Name: EventHistory
       Type: BaseDataVariableType
       DataType: NodeId
-      Value: "/Objects/OptimateDemoProject/UI/Screens/Base Screens/Empty"
+      Value: "/Objects/OptimateDemoProject/UI/Screens/Burger/Alarm History/AlarmWidgets/AlarmSummary"
     - Name: RecipeManagement
       Type: BaseDataVariableType
       DataType: NodeId
-      Value: "/Objects/OptimateDemoProject/UI/Screens/Base Screens/Empty"
     - Name: UserManagement
       Type: BaseDataVariableType
       DataType: NodeId
-      Value: "/Objects/OptimateDemoProject/UI/Screens/Base Screens/Empty"
     - Name: MachineConfiguration
       Type: BaseDataVariableType
       DataType: NodeId
-      Value: "/Objects/OptimateDemoProject/UI/Screens/Base Screens/Empty"
     - Name: Diagnosis
       Type: BaseDataVariableType
       DataType: NodeId
-      Value: "/Objects/OptimateDemoProject/UI/Screens/Base Screens/Empty"
     - Name: GuidedProcedures
       Type: BaseDataVariableType
       DataType: NodeId
-      Value: "/Objects/OptimateDemoProject/UI/Screens/Base Screens/Empty"
     - Name: Height
       Type: BaseVariableType
       DataType: Size
@@ -3462,7 +3335,7 @@ Children:
     - Name: ButtonHeight
       Type: BaseDataVariableType
       DataType: Int32
-      Value: 68
+      Value: 42
   - Name: Top_Bar
     Type: Top_Bar
     Children:

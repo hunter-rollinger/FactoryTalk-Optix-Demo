@@ -3,7 +3,7 @@ Type: FolderType
 Children:
 - Name: Production_Statistics_Chart
   Id: g=1ef550eee5815cb7b8839139305121a8
-  Supertype: ScaleLayout
+  Supertype: Panel
   ReferenceType: HasComponent
   Children:
   - Name: Width
@@ -24,25 +24,6 @@ Children:
     Type: BaseDataVariableType
     DataType: Float
     Description: {"LocaleId":"en-US","Text":"bad value"}
-  - Name: FillMode
-    Type: BaseDataVariableType
-    DataType: FillModeEnum
-    ModellingRule: Optional
-  - Name: FontScaling
-    Type: BaseDataVariableType
-    DataType: Boolean
-    ModellingRule: Optional
-    Value: true
-  - Name: OriginalWidth
-    Type: BaseDataVariableType
-    DataType: Size
-    ModellingRule: Optional
-    Value: 400.0
-  - Name: OriginalHeight
-    Type: BaseDataVariableType
-    DataType: Size
-    ModellingRule: Optional
-    Value: 400.0
   - Name: ProductionStatisticsChart_Webpage
     Type: WebBrowser
     Children:
@@ -288,7 +269,7 @@ Children:
               Value: "../../../../../Outer_Value"
 - Name: Production_Time_Chart
   Id: g=551813fd361d4f22706e13275666b4ff
-  Supertype: ScaleLayout
+  Supertype: Panel
   ReferenceType: HasComponent
   Children:
   - Name: Width
@@ -298,25 +279,6 @@ Children:
     Value: 400.0
   - Name: Height
     Type: BaseVariableType
-    DataType: Size
-    ModellingRule: Optional
-    Value: 400.0
-  - Name: FillMode
-    Type: BaseDataVariableType
-    DataType: FillModeEnum
-    ModellingRule: Optional
-  - Name: FontScaling
-    Type: BaseDataVariableType
-    DataType: Boolean
-    ModellingRule: Optional
-    Value: true
-  - Name: OriginalWidth
-    Type: BaseDataVariableType
-    DataType: Size
-    ModellingRule: Optional
-    Value: 400.0
-  - Name: OriginalHeight
-    Type: BaseDataVariableType
     DataType: Size
     ModellingRule: Optional
     Value: 400.0

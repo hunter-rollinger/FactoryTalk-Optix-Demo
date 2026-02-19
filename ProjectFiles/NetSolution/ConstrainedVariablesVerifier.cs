@@ -11,6 +11,7 @@ using FTOptix.OPCUAServer;
 using FTOptix.NativeUI;
 using FTOptix.NetLogic;
 using FTOptix.Core;
+using FTOptix.SerialPort;
 #endregion
 
 public class ConstrainedVariablesVerifier : BaseNetLogic

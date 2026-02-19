@@ -15,29 +15,33 @@ using FTOptix.TwinCAT;
 using FTOptix.Report;
 using FTOptix.RecipeX;
 using FTOptix.SerialPort;
+using FTOptix.UI;
 #endregion
 
 public class SystemInformationCollection : BaseNetLogic
 {
-    public override void Start()
-    {
+    public override void Start() {
         // machine information
         LogicObject.GetVariable("Hostname").Value = Environment.MachineName;
         LogicObject.GetVariable("OS Version").Value = Environment.OSVersion.VersionString;
         LogicObject.GetVariable("OS User").Value = Environment.UserName;
 
-        periodicTask = new PeriodicTask(UpdateSystemVariables, 1000, LogicObject);
-        periodicTask.Start();
-    }
+		secondTask = new PeriodicTask(UpdateSystemVariables, 1000, LogicObject);
+		secondTask.Start();
 
-    public override void Stop()
-    {
-        periodicTask.Dispose();
-        periodicTask = null;
-    }
+		minuteTask = new PeriodicTask(UpdateSystemVariables, 60000, LogicObject);
+		minuteTask.Start();
+	}
 
-    private void UpdateSystemVariables()
-    {
+    public override void Stop() {
+		secondTask.Dispose();
+		secondTask = null;
+
+		minuteTask.Dispose();
+		minuteTask = null;
+	}
+
+    private void UpdateSystemVariables() {
         // local date time
         DateTime localTime = DateTime.Now;
         LogicObject.GetVariable("DateTime").Value = localTime;
@@ -52,5 +56,6 @@ public class SystemInformationCollection : BaseNetLogic
         LogicObject.GetVariable("DateTime/Daylight Savings").Value = localTime.IsDaylightSavingTime();
     }
 
-    private PeriodicTask periodicTask;
+    private PeriodicTask secondTask;
+    private PeriodicTask minuteTask;
 }

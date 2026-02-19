@@ -3,7 +3,7 @@ Type: FolderType
 Children:
 - Name: Statistics_Circular_Percent
   Id: g=3d530c91a212e5780324b245b1219f8e
-  Supertype: ScaleLayout
+  Supertype: Panel
   ReferenceType: HasComponent
   Children:
   - Name: Width
@@ -188,28 +188,9 @@ Children:
   - Name: DataFolder
     Type: BaseDataVariableType
     DataType: NodeId
-  - Name: OriginalWidth
-    Type: BaseDataVariableType
-    DataType: Size
-    ModellingRule: Optional
-    Value: 214.0
-  - Name: OriginalHeight
-    Type: BaseDataVariableType
-    DataType: Size
-    ModellingRule: Optional
-    Value: 214.0
-  - Name: FillMode
-    Type: BaseDataVariableType
-    DataType: FillModeEnum
-    ModellingRule: Optional
-  - Name: FontScaling
-    Type: BaseDataVariableType
-    DataType: Boolean
-    ModellingRule: Optional
-    Value: true
 - Name: Shift_TimeDisplay
   Id: g=4ea872f2353a3f587842ec89ff638fd1
-  Supertype: ScaleLayout
+  Supertype: Panel
   ReferenceType: HasComponent
   Children:
   - Name: Width
@@ -491,21 +472,6 @@ Children:
         DataType: DynamicLinkMode
         ModellingRule: Optional
         Value: 2
-  - Name: OriginalWidth
-    Type: BaseDataVariableType
-    DataType: Size
-    ModellingRule: Optional
-    Value: 305.0
-  - Name: OriginalHeight
-    Type: BaseDataVariableType
-    DataType: Size
-    ModellingRule: Optional
-    Value: 57.0
-  - Name: FontScaling
-    Type: BaseDataVariableType
-    DataType: Boolean
-    ModellingRule: Optional
-    Value: true
 - Name: Position_Dispaly
   Id: g=216c0c2f4e5ed9b91680fcd43f42c553
   Supertype: RowLayout
@@ -560,7 +526,7 @@ Children:
       Type: BaseDataVariableType
       DataType: String
       ModellingRule: Optional
-      Value: "20px"
+      Value: "Default"
     - Name: LeftMargin
       Type: BaseVariableType
       DataType: Size
@@ -593,6 +559,11 @@ Children:
       DataType: VerticalAlignment
       ModellingRule: Optional
       Value: 2
+    - Name: FontSize
+      Type: BaseDataVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 20.0
   - Name: Position
     Type: Label
     Children:
@@ -665,6 +636,25 @@ Children:
       DataType: Size
       ModellingRule: Optional
       Value: -1.0
+    - Name: TextColor
+      Type: BaseDataVariableType
+      DataType: Color
+      Value: "#6d91b6"
+      Children:
+      - Name: DynamicLink
+        Type: DynamicLink
+        DataType: NodePath
+        Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Selected - 6d91b6 - Info - Blue"
+    - Name: FontWeight
+      Type: BaseDataVariableType
+      DataType: FontWeightEnum
+      ModellingRule: Optional
+      Value: 400
+    - Name: FontSize
+      Type: BaseDataVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 30.0
   - Name: LabelText
     Type: BaseDataVariableType
     DataType: String
@@ -679,7 +669,7 @@ Children:
     Value: 10.0
 - Name: Shift_StatisticDisplay
   Id: g=7233291c453535c0d739de933f626938
-  Supertype: ScaleLayout
+  Supertype: Panel
   ReferenceType: HasComponent
   Children:
   - Name: Width
@@ -948,18 +938,3 @@ Children:
       DataType: String
       ModellingRule: Optional
       Value: "Numeric"
-  - Name: OriginalWidth
-    Type: BaseDataVariableType
-    DataType: Size
-    ModellingRule: Optional
-    Value: 300.0
-  - Name: OriginalHeight
-    Type: BaseDataVariableType
-    DataType: Size
-    ModellingRule: Optional
-    Value: 122.0
-  - Name: FontScaling
-    Type: BaseDataVariableType
-    DataType: Boolean
-    ModellingRule: Optional
-    Value: true

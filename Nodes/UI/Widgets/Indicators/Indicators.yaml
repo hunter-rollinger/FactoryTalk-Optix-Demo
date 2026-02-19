@@ -3,9 +3,13 @@ Type: FolderType
 Children:
 - Name: Multi_State_Indicator
   Id: g=224c34cc61384d476566fc8fbc37b72f
-  Supertype: ScaleLayout
+  Supertype: Panel
   ReferenceType: HasComponent
   Children:
+  - Name: Visible
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Value: true
   - Name: Width
     Type: BaseVariableType
     DataType: Size
@@ -161,20 +165,33 @@ Children:
       Type: BaseDataVariableType
       DataType: Color
       ModellingRule: Optional
+    - Name: Visible
+      Type: BaseDataVariableType
+      DataType: Boolean
+      Value: true
+      Children:
+      - Name: ExpressionEvaluator1
+        Type: ExpressionEvaluator
+        Children:
+        - Name: Expression
+          Type: BaseDataVariableType
+          DataType: String
+          ReferenceType: HasParameter
+          ModellingRule: Optional
+          Value: "{0}!=0"
+        - Name: ns=9;Source0
+          Type: BaseDataVariableType
+          DataType: BaseDataType
+          ReferenceType: HasSource
+          Children:
+          - Name: DynamicLink
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "../../../../IndicatorColor"
   - Name: IndicatorColor
     Type: BaseDataVariableType
     DataType: 'Multi-State Indicator Colors'
-    Value: 5
-  - Name: OriginalWidth
-    Type: BaseDataVariableType
-    DataType: Size
-    ModellingRule: Optional
-    Value: 32.0
-  - Name: OriginalHeight
-    Type: BaseDataVariableType
-    DataType: Size
-    ModellingRule: Optional
-    Value: 32.0
+    Value: 3
   - Name: Indicator
     Type: Image
     Children:
@@ -370,39 +387,101 @@ Children:
       DataType: Size
       ModellingRule: Optional
       Value: 4.0
+    - Name: Visible
+      Type: BaseDataVariableType
+      DataType: Boolean
+      Value: true
+      Children:
+      - Name: ExpressionEvaluator1
+        Type: ExpressionEvaluator
+        Children:
+        - Name: Expression
+          Type: BaseDataVariableType
+          DataType: String
+          ReferenceType: HasParameter
+          ModellingRule: Optional
+          Value: "!{0}&&{1}!=0"
+        - Name: ns=9;Source0
+          Type: BaseDataVariableType
+          DataType: BaseDataType
+          ReferenceType: HasSource
+          Children:
+          - Name: DynamicLink
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "../../../../Label/Visible"
+        - Name: ns=9;Source1
+          Type: BaseDataVariableType
+          DataType: BaseDataType
+          ReferenceType: HasSource
+          Children:
+          - Name: DynamicLink
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "../../../../IndicatorSymbol"
   - Name: IndicatorSymbol
     Type: BaseDataVariableType
     DataType: 'Multi-State Indicator Symbols'
-    Value: 2
-  - Name: Visible
+    Value: 1
+  - Name: TextToDisplay
     Type: BaseDataVariableType
-    DataType: Boolean
-    Value: true
+    DataType: String
+  - Name: Label
+    Type: Label
     Children:
-    - Name: ExpressionEvaluator1
-      Type: ExpressionEvaluator
+    - Name: Text
+      Type: BaseDataVariableType
+      DataType: LocalizedText
       Children:
-      - Name: Expression
-        Type: BaseDataVariableType
-        DataType: String
-        ReferenceType: HasParameter
-        ModellingRule: Optional
-        Value: "{0}!=0&&{1}!=0"
-      - Name: ns=9;Source0
-        Type: BaseDataVariableType
-        DataType: BaseDataType
-        ReferenceType: HasSource
+      - Name: DynamicLink
+        Type: DynamicLink
+        DataType: NodePath
+        Value: "../../TextToDisplay"
+    - Name: HorizontalAlignment
+      Type: BaseVariableType
+      DataType: HorizontalAlignment
+      ModellingRule: Optional
+      Value: 3
+    - Name: VerticalAlignment
+      Type: BaseVariableType
+      DataType: VerticalAlignment
+      ModellingRule: Optional
+      Value: 3
+    - Name: TextHorizontalAlignment
+      Type: BaseVariableType
+      DataType: TextHorizontalAlignment
+      ModellingRule: Optional
+      Value: 1
+    - Name: TextVerticalAlignment
+      Type: BaseVariableType
+      DataType: TextVerticalAlignment
+      ModellingRule: Optional
+      Value: 1
+    - Name: Visible
+      Type: BaseDataVariableType
+      DataType: Boolean
+      Value: true
+      Children:
+      - Name: ExpressionEvaluator1
+        Type: ExpressionEvaluator
         Children:
-        - Name: DynamicLink
-          Type: DynamicLink
-          DataType: NodePath
-          Value: "../../../IndicatorColor"
-      - Name: ns=9;Source1
-        Type: BaseDataVariableType
-        DataType: BaseDataType
-        ReferenceType: HasSource
-        Children:
-        - Name: DynamicLink
-          Type: DynamicLink
-          DataType: NodePath
-          Value: "../../../IndicatorSymbol"
+        - Name: Expression
+          Type: BaseDataVariableType
+          DataType: String
+          ReferenceType: HasParameter
+          ModellingRule: Optional
+          Value: "!isempty({0})"
+        - Name: ns=9;Source0
+          Type: BaseDataVariableType
+          DataType: BaseDataType
+          ReferenceType: HasSource
+          Children:
+          - Name: DynamicLink
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "../../../../TextToDisplay"
+    - Name: Style
+      Type: BaseDataVariableType
+      DataType: String
+      ModellingRule: Optional
+      Value: "PointerCircles"

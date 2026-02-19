@@ -1,4 +1,4 @@
-Name: 'Buttons (Obsolete - Use FTOptix Buttons)'
+Name: Buttons
 Type: FolderType
 Children:
 - Name: Button_Standard_DO_NOT_USE
@@ -1307,19 +1307,19 @@ Children:
     ModellingRule: Optional
 - Name: StatusButton
   Id: g=95767f9bca361096e626572b50ab3afb
-  Supertype: ScaleLayout
+  Supertype: Panel
   ReferenceType: HasComponent
   Children:
-  - Name: OriginalWidth
-    Type: BaseDataVariableType
-    DataType: Size
+  - Name: HorizontalAlignment
+    Type: BaseVariableType
+    DataType: HorizontalAlignment
     ModellingRule: Optional
-    Value: 200.0
-  - Name: OriginalHeight
-    Type: BaseDataVariableType
-    DataType: Size
+    Value: 1
+  - Name: VerticalAlignment
+    Type: BaseVariableType
+    DataType: VerticalAlignment
     ModellingRule: Optional
-    Value: 42.0
+    Value: 2
   - Name: button
     Type: MomentaryButton
     Children:
@@ -1380,7 +1380,7 @@ Children:
           - Name: DynamicLink
             Type: DynamicLink
             DataType: NodePath
-            Value: "/Objects/OptimateDemoProject/UI/Stylesheets/Jones/ButtonStyles/Standard@BrowseName"
+            Value: "/Objects/OptimateDemoProject/UI/Stylesheets/Jones/ButtonStyles/Default Bold@BrowseName"
     - Name: Width
       Type: BaseVariableType
       DataType: Size
@@ -1401,27 +1401,12 @@ Children:
       DataType: VerticalAlignment
       ModellingRule: Optional
       Value: 3
-  - Name: VerticalAlignment
-    Type: BaseVariableType
-    DataType: VerticalAlignment
-    ModellingRule: Optional
-    Value: 2
-  - Name: HorizontalAlignment
-    Type: BaseVariableType
-    DataType: HorizontalAlignment
-    ModellingRule: Optional
-    Value: 1
   - Name: StatusFeedback
     Type: BaseDataVariableType
     DataType: Boolean
   - Name: VariableToModify
     Type: BaseDataVariableType
     DataType: Boolean
-  - Name: FillMode
-    Type: BaseDataVariableType
-    DataType: FillModeEnum
-    ModellingRule: Optional
-    Value: 1
   - Name: ButtonText
     Type: BaseDataVariableType
     DataType: String

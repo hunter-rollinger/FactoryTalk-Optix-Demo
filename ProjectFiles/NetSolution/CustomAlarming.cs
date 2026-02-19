@@ -31,6 +31,7 @@ using FTOptix.EdgeAppPlatform;
 using FTOptix.TwinCAT;
 using FTOptix.Report;
 using FTOptix.RecipeX;
+using System.Diagnostics;
 #endregion
 
 public class CustomAlarming : BaseNetLogic
@@ -295,6 +296,7 @@ public class CustomAlarming : BaseNetLogic
         }
         private void UpdateCurrentDisplayedAlarm()
         {
+            Debugger.Launch();
             List<int> alarmIDs = GetActiveAlarmIDs();
 
             if (retaiendAlarms.Count == 0)

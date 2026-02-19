@@ -109,6 +109,10 @@ Children:
     Id: g=dcbacaae6ebe76daaf03e80bfc074b37
     Type: BaseDataVariableType
     DataType: Boolean
+  - Name: Enabled
+    Id: g=50dfd699492b7c9f6da2ad963becf6d9
+    Type: BaseDataVariableType
+    DataType: Boolean
 - Name: PackML_Test
   Id: g=c044f52f0164e3b7ef9154d553f6d24e
   Type: OffNormalAlarmController
@@ -228,94 +232,7 @@ Children:
     Id: g=d07fb3805258274e3ec52f2ccdfb08b8
     Type: BaseDataVariableType
     DataType: Boolean
-- Name: TestAlarm1
-  Id: g=d765b39560436f3ac772912c5866f744
-  Type: OptimateAlarm
-  Children:
-  - Class: Reference
-    Target: ns=25;i=81
-    Direction: Forward
-  - Class: Reference
-    Target: ns=25;i=82
-    Direction: Forward
-  - Class: Reference
-    Target: ns=25;i=83
-    Direction: Forward
-  - Class: Reference
-    Target: ns=25;i=130
-    Direction: Forward
-  - Class: Reference
-    Target: ns=25;i=135
-    Direction: Forward
-  - Class: Reference
-    Target: ns=25;i=132
-    Direction: Forward
-  - Class: Reference
-    Target: ns=25;i=146
-    Direction: Forward
-  - Class: Reference
-    Target: ns=25;i=148
-    Direction: Forward
-  - Class: Reference
-    Target: ns=25;i=150
-    Direction: Forward
-  - Class: Reference
-    Target: ns=25;i=152
-    Direction: Forward
-  - Class: Reference
-    Target: ns=25;i=154
-    Direction: Forward
-  - Name: NormalStateValue
-    Id: g=4086465b42def86167ca1814f7218a0d
-    Type: BaseDataVariableType
-    DataType: Double
-  - Name: InputValue
-    Id: g=445372d5eb95cf5b42d6f46dee82111b
-    Type: BaseDataVariableType
-    DataType: Double
-    Children:
-    - Name: DynamicLink
-      Id: g=c7682c674404d3c9c3bfe20683f47e42
-      Type: DynamicLink
-      DataType: NodePath
-      Value: "../../../../Model/Testing/TestAlarm1"
-  - Name: LastEvent
-    Id: g=4036083b6c8ee1eb42db7bb8a08d7892
-    Type: BaseDataVariableType
-    DataType: BaseDataType
-    ValueRank: OneDimension
-    ArrayDimensions: [0]
-  - Name: Help_Text
-    Id: g=b1a101c30369cfaf7540b8fea1660318
-    Type: BaseDataVariableType
-    DataType: String
-    Value: "Test Alarm 1 Help Text"
-  - Name: Aux_Text
-    Id: g=0947aa2fce49a5ab5dab9feb55b957b2
-    Type: BaseDataVariableType
-    DataType: String
-    Value: "Test Alarm 1 Auxiliary Text"
-  - Name: Image
-    Id: g=f42ce4bfcedac767769daefbe5809400
-    Type: BaseDataVariableType
-    DataType: ResourceUri
-    Value: "ns=36;%PROJECTDIR%/Graphics/Coesia - Library/Sliding Door Left.svg"
-  - Name: Overview
-    Id: g=a7c77d71c1ad1cce421b673a3dfc02e4
-    Type: BaseDataVariableType
-    DataType: ResourceUri
-    Value: "ns=36;%PROJECTDIR%/Graphics/Coesia - Library/Sliding Door Right.svg"
-  - Name: Message
-    Id: g=39ffdfdc50764d342ac8492b36647d6f
-    Type: BaseDataVariableType
-    DataType: LocalizedText
-    Value: {"LocaleId":"en-US","Text":"Test Alarm 1"}
-  - Name: Active
-    Id: g=76636afcb49c83460e4ea837bd9ab2ee
+  - Name: Enabled
+    Id: g=5e018a19d36d23ea60ab7549a4a51d1c
     Type: BaseDataVariableType
     DataType: Boolean
-    AccessLevel: Read
-  - Name: Timestamp
-    Id: g=da1f76fbd90f9fd3fd1c5c2fb415afe1
-    Type: BaseDataVariableType
-    DataType: DateTime
