@@ -10,86 +10,181 @@ Children:
     Id: g=aca8f7ab7a0b292876804bbc54bd4a3c
     Type: BaseDataVariableType
     DataType: String
-    Value: "0"
+    Value: "Size 1"
   - Name: Recipe Speed
     Id: g=cf6fc6a20a21f493a1af7743348ffcbd
     Type: BaseDataVariableType
     DataType: Int32
+    Value: 120
   - Name: Recipe Number
     Id: g=5427c35c08dc65e2a967e15c8b0f420c
     Type: BaseDataVariableType
     DataType: Int32
+    Value: 1
   - Name: Recipe Description
     Id: g=a2287e89b0e0b5303d94ea969f553730
     Type: BaseDataVariableType
     DataType: String
-    Value: "0"
+    Value: "Single"
   - Name: PackML State
     Id: g=6729a146f229e20257da2ad52783a4e3
     Type: BaseDataVariableType
     DataType: Int32
-    Children:
-    - Name: DynamicLink
-      Id: g=653c59b86e31343d304600c7486e9225
-      Type: DynamicLink
-      DataType: NodePath
-      Value: "../../../../CommDrivers/Rockwell/S17693/Tags/Controller Tags/PackML_STS/StateCurrent"
-      Children:
-      - Name: Mode
-        Id: g=d1ba9402e7861cce599015a76d7e4c8a
-        Type: BaseVariableType
-        DataType: DynamicLinkMode
-        Value: 2
+    Value: 9
   - Name: PackML Mode
     Id: g=18c0750f1bfc210c6d9e07df6ad89b7a
     Type: BaseDataVariableType
     DataType: Int32
-    Children:
-    - Name: DynamicLink
-      Id: g=260712f5f3ef97ed639efe1d1751808b
-      Type: DynamicLink
-      DataType: NodePath
-      Value: "../../../../CommDrivers/Rockwell/S17693/Tags/Controller Tags/PackML_STS/UnitModeCurrent"
-      Children:
-      - Name: Mode
-        Id: g=ae554fd31b58d5b120d490bb31952510
-        Type: BaseVariableType
-        DataType: DynamicLinkMode
-        Value: 2
+    Value: 1
   - Name: Current Speed
     Id: g=756950837453b87a50a2920d70a8b2ac
     Type: BaseDataVariableType
     DataType: Int32
-    Children:
-    - Name: DynamicLink
-      Id: g=91df4a1bcc07411429e4f1843f7d9810
-      Type: DynamicLink
-      DataType: NodePath
-      Value: "../../../../CommDrivers/Rockwell/S17693/Tags/Controller Tags/OI_DintFromPLC[0]"
-      Children:
-      - Name: Mode
-        Id: g=975652012fb00d079c9c961bc72e24e9
-        Type: BaseVariableType
-        DataType: DynamicLinkMode
-        Value: 2
   - Name: Current Position
     Id: g=abb53e7ae661b941a056e0b2680f54bc
     Type: BaseDataVariableType
     DataType: Int32
-    Children:
-    - Name: DynamicLink
-      Id: g=363e7094de3decbad85c71eb4d0b8eea
-      Type: DynamicLink
-      DataType: NodePath
-      Value: "../../../../CommDrivers/Rockwell/S17693/Tags/Controller Tags/OI_DintFromPLC[34]"
-      Children:
-      - Name: Mode
-        Id: g=23e330a8a6788a6e1b5fbc922ded4d3c
-        Type: BaseVariableType
-        DataType: DynamicLinkMode
-        Value: 2
-- Name: Time Tracking
+    Value: 275
+- Name: Shift Data
   Id: g=dac3ee3dc7b2ad488bb12a13ddb3eac7
+  Type: BaseObjectType
+  Children:
+  - Name: Good Out
+    Id: g=21806abf48ddd802caf7b92bb7383299
+    Type: BaseDataVariableType
+    DataType: Int32
+    Value: 61435
+  - Name: Bad Out
+    Id: g=5ef393f64488080859ddc3ce90466593
+    Type: BaseDataVariableType
+    DataType: Int32
+    Value: 9432
+  - Name: AlarmTime
+    Id: g=62a860183082d243d799ca06807a4af5
+    Type: BaseDataVariableType
+    DataType: Int32
+    Value: 9735
+  - Name: OperatorTime
+    Id: g=b79f464a7750ff15c0581dfb782750dd
+    Type: BaseDataVariableType
+    DataType: Int32
+    Value: 4572
+  - Name: RunTime
+    Id: g=1ae588bcde7349a75dabab4ffc51a85e
+    Type: BaseDataVariableType
+    DataType: Int32
+    Value: 28523
+  - Name: OutsideStopTime
+    Id: g=d10d23b4086075a8ceaf144d68494841
+    Type: BaseDataVariableType
+    DataType: Int32
+    Value: 6564
+  - Name: AlarmTimeFormatted
+    Id: g=c8ec95b29bc5668270ea6bc1c283caf0
+    Type: BaseDataVariableType
+    DataType: Duration
+    Children:
+    - Name: ExpressionEvaluator1
+      Id: g=03a9792392aa8232ca78563f6cb079ad
+      Type: ExpressionEvaluator
+      Children:
+      - Name: Expression
+        Id: g=7bab6c734be5805157a7c07f0ef63802
+        Type: BaseDataVariableType
+        DataType: String
+        ReferenceType: HasParameter
+        Value: "{0}*1000"
+      - Name: ns=9;Source0
+        Id: g=00f21268fcd14ea2b92bf4cc47d135bd
+        Type: BaseDataVariableType
+        DataType: BaseDataType
+        ReferenceType: HasSource
+        Children:
+        - Name: DynamicLink
+          Id: g=1c7530aa651de2b6d3bfb17f06897aa9
+          Type: DynamicLink
+          DataType: NodePath
+          Value: "../../../AlarmTime"
+  - Name: OperatorTimeFormatted
+    Id: g=a8d4c74b1ac4edac4fca97ca3a6a8d3d
+    Type: BaseDataVariableType
+    DataType: Duration
+    Children:
+    - Name: ExpressionEvaluator1
+      Id: g=9420dcc6815be2266abbcb71b9e51cd3
+      Type: ExpressionEvaluator
+      Children:
+      - Name: Expression
+        Id: g=17be7c209a25a3910fdf59e5ea7a86ae
+        Type: BaseDataVariableType
+        DataType: String
+        ReferenceType: HasParameter
+        Value: "{0}*1000"
+      - Name: ns=9;Source0
+        Id: g=7aef6cedafaf00735491ca5d7001e832
+        Type: BaseDataVariableType
+        DataType: BaseDataType
+        ReferenceType: HasSource
+        Children:
+        - Name: DynamicLink
+          Id: g=1e02cba5f78334af2ebf58e5f3b6f284
+          Type: DynamicLink
+          DataType: NodePath
+          Value: "../../../OperatorTime"
+  - Name: RunTimeFormatted
+    Id: g=34f64bd87e05b8e7155d070a10ac0969
+    Type: BaseDataVariableType
+    DataType: Duration
+    Children:
+    - Name: ExpressionEvaluator1
+      Id: g=ff514fdec993c1419f2a9d95de20bcf7
+      Type: ExpressionEvaluator
+      Children:
+      - Name: Expression
+        Id: g=02402a8b994871e71dd700ff3317fc07
+        Type: BaseDataVariableType
+        DataType: String
+        ReferenceType: HasParameter
+        Value: "{0}*1000"
+      - Name: ns=9;Source0
+        Id: g=0df35b5e6b30098096ab11b7ea2721eb
+        Type: BaseDataVariableType
+        DataType: BaseDataType
+        ReferenceType: HasSource
+        Children:
+        - Name: DynamicLink
+          Id: g=598cc3febbf29543aad999accb8a7b22
+          Type: DynamicLink
+          DataType: NodePath
+          Value: "../../../RunTime"
+  - Name: OutsideStopTimeFormatted
+    Id: g=6feec0661300f2d1a69f1d9db2958f63
+    Type: BaseDataVariableType
+    DataType: Duration
+    Children:
+    - Name: ExpressionEvaluator1
+      Id: g=23b6f9d53745081d42d9c72fb78c4189
+      Type: ExpressionEvaluator
+      Children:
+      - Name: Expression
+        Id: g=183270b4444bc9a419e7c410e9eedcff
+        Type: BaseDataVariableType
+        DataType: String
+        ReferenceType: HasParameter
+        Value: "{0}*1000"
+      - Name: ns=9;Source0
+        Id: g=1c0c8559d866e4290b69ec3c34de3be6
+        Type: BaseDataVariableType
+        DataType: BaseDataType
+        ReferenceType: HasSource
+        Children:
+        - Name: DynamicLink
+          Id: g=9675fc4cd44fecc8431067ec7476100d
+          Type: DynamicLink
+          DataType: NodePath
+          Value: "../../../OutsideStopTime"
+- Name: Reject Data
+  Id: g=1bb601a16fa2e1cb4f3cf246f6691eed
   Type: BaseObjectType
 - Name: Alarms
   Id: g=16da6749e9906086716b9e2ac4fc36c5

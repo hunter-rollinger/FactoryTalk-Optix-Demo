@@ -46,10 +46,10 @@ namespace OptimateDemoProject
         public static readonly NodeId Production_Home = new NodeId(namespaceIndex, new Guid("507f1eeb7dc2b29bd3f1fee927d5f928"));
         public static readonly NodeId Maintenance_Carton_Feed = new NodeId(namespaceIndex, new Guid("5273ef4521aba268c7a0bac2cb6fb8ef"));
         public static readonly NodeId Production_Transfer = new NodeId(namespaceIndex, new Guid("58ccd3f928ca16d11e2c4e46da8ec1cb"));
-        public static readonly NodeId Production_Bucker_Conveyor = new NodeId(namespaceIndex, new Guid("128877343e9010472308ac577736c6b2"));
+        public static readonly NodeId Production_Bucket_Conveyor = new NodeId(namespaceIndex, new Guid("128877343e9010472308ac577736c6b2"));
         public static readonly NodeId Production_Carton_Feed = new NodeId(namespaceIndex, new Guid("a88f9a74802613aa6217382f70f1149a"));
         public static readonly NodeId Production_Transport = new NodeId(namespaceIndex, new Guid("afe8c1007efe65520600fb60a7fbb519"));
-        public static readonly NodeId Shift_TimeDisplay = new NodeId(namespaceIndex, new Guid("4ea872f2353a3f587842ec89ff638fd1"));
+        public static readonly NodeId Shift_TimeDisplay_Normal = new NodeId(namespaceIndex, new Guid("4ea872f2353a3f587842ec89ff638fd1"));
         public static readonly NodeId Manual_Home = new NodeId(namespaceIndex, new Guid("21bccd6e5654be28d7da9390b8c2c7f8"));
         public static readonly NodeId Maintenance_Transport = new NodeId(namespaceIndex, new Guid("96488b600ae2d9b0a01e8d0af5eba557"));
         public static readonly NodeId Manual_Menu_Bar = new NodeId(namespaceIndex, new Guid("c8cf544233f952c6618b110686caeab6"));
@@ -81,6 +81,7 @@ namespace OptimateDemoProject
         public static readonly NodeId AlphaNumeric_Simple = new NodeId(namespaceIndex, new Guid("cb5fcd2f528fd22475ed541049f4e7e2"));
         public static readonly NodeId AlphaNumeric = new NodeId(namespaceIndex, new Guid("ac3f76e888a5e3fdd2691155ca1fc8f6"));
         public static readonly NodeId Numeric = new NodeId(namespaceIndex, new Guid("4579fdf18bdfdaa64772eba31d350d66"));
+        public static readonly NodeId Shift_TimeDisplay_Long = new NodeId(namespaceIndex, new Guid("a44d5c3ebfc72194a1490007d8657d3a"));
         public static readonly NodeId PackML_State_Mode_Indicator = new NodeId(namespaceIndex, new Guid("7c800b75f0a9ce52bf7bacf8e45b97a8"));
         public static readonly NodeId Statistics_Circular_Percent_DEPRECATED_USE_ECHART = new NodeId(namespaceIndex, new Guid("3d530c91a212e5780324b245b1219f8e"));
         public static readonly NodeId Position_Dispaly = new NodeId(namespaceIndex, new Guid("216c0c2f4e5ed9b91680fcd43f42c553"));

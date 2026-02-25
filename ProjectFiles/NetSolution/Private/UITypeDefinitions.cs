@@ -116,7 +116,7 @@ public class Production_Transfer : FTOptix.UI.Screen
 }
 
 [MapType(NamespaceUri = "OptimateDemoProject", Guid = "128877343e9010472308ac577736c6b2")]
-public class Production_Bucker_Conveyor : FTOptix.UI.Screen
+public class Production_Bucket_Conveyor : FTOptix.UI.Screen
 {
 }
 
@@ -131,7 +131,7 @@ public class Production_Transport : FTOptix.UI.Screen
 }
 
 [MapType(NamespaceUri = "OptimateDemoProject", Guid = "4ea872f2353a3f587842ec89ff638fd1")]
-public class Shift_TimeDisplay : FTOptix.UI.Panel
+public class Shift_TimeDisplay_Normal : FTOptix.UI.Panel
 {
 }
 
@@ -287,6 +287,11 @@ public class AlphaNumeric : FTOptix.UI.VirtualKeyboardPanel
 
 [MapType(NamespaceUri = "OptimateDemoProject", Guid = "4579fdf18bdfdaa64772eba31d350d66")]
 public class Numeric : FTOptix.UI.VirtualKeyboardPanel
+{
+}
+
+[MapType(NamespaceUri = "OptimateDemoProject", Guid = "a44d5c3ebfc72194a1490007d8657d3a")]
+public class Shift_TimeDisplay_Long : FTOptix.UI.Panel
 {
 }
 

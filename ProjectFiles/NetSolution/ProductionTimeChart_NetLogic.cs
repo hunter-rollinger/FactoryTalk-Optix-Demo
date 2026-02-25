@@ -17,8 +17,6 @@ public class ProductionTimeChart_NetLogic : BaseNetLogic
 {
 	public override void Start()
 	{
-		// Debugger.Launch();
-
 		projectPath = ResourceUri.FromProjectRelativePath("").Uri;
 		chartFolder = Path.Combine(projectPath, "eCharts", "Production Time Chart");
 		sourcePath = Path.Combine(chartFolder, "source-chart.js");
@@ -29,12 +27,10 @@ public class ProductionTimeChart_NetLogic : BaseNetLogic
 		PeriodicTask RefreshChart = new(UpdateChart, TimeSpan.FromSeconds(10), LogicObject);
 
 		values_optix = LogicObject.Owner.GetVariable("Values");
-		values = (int[])values_optix.Value.Value;
 		values_optix.VariableChange += VariableChangeEvent;
 
 		colors_optix = LogicObject.Owner.GetVariable("Colors");
 		colors = (uint[])colors_optix.Value.Value;
-		colors_optix.VariableChange += VariableChangeEvent;
 
 		backgroundColor = LogicObject.Owner.GetVariable("Background_Color");
 
@@ -43,7 +39,6 @@ public class ProductionTimeChart_NetLogic : BaseNetLogic
 	public override void Stop()
 	{
 		values_optix.VariableChange -= VariableChangeEvent;
-		colors_optix.VariableChange -= VariableChangeEvent;
 	}
 
 	private void VariableChangeEvent(object sender, VariableChangeEventArgs e)
@@ -55,6 +50,8 @@ public class ProductionTimeChart_NetLogic : BaseNetLogic
 	{
 		// Read template page content
 		string text = File.ReadAllText(sourcePath);
+
+		values = (int[])values_optix.Value.Value;
 
 		for (int i = 0; i < values.Length; i++)
 		{

@@ -4681,6 +4681,109 @@ Children:
         - Name: ToggleList
           Id: g=6fbcc0451021e7f38d753034ff4dce8c
           Type: Button
+          Children:
+          - Name: MouseClickEventHandler1
+            Id: g=52ff47687781a97841b1513b82e9d1ce
+            Type: EventHandler
+            Children:
+            - Name: ListenEventType
+              Id: g=6c0323b64648e6c6cfecc494e3029499
+              Type: PropertyType
+              DataType: NodeId
+              Value: "/Types/EventTypes/BaseEventType/MouseEvent/MouseClickEvent"
+            - Name: MethodsToCall
+              Id: g=d9e5138a069d588ef6b55912ee4b53a7
+              Type: BaseObjectType
+              Children:
+              - Name: MethodContainer1
+                Id: g=ad2343bcac1c4872898c189f27cf689a
+                Type: BaseObjectType
+                Children:
+                - Name: ObjectPointer
+                  Id: g=871fdbd844fb36a2d8914d53ac5d4023
+                  Type: NodePointer
+                  DataType: NodeId
+                  Value: "/Objects/Commands/UICommands"
+                  Children:
+                  - Name: Kind
+                    Id: g=a10e45fc8510fd1d4bf6f6c89b095d68
+                    Type: PropertyType
+                    DataType: NodeId
+                    Value: "/Types/ObjectTypes/BaseObjectType"
+                - Name: Method
+                  Id: g=fb48cb30eb9fdbbd5acda6ef47024f45
+                  Type: BaseDataVariableType
+                  DataType: String
+                  Value: "OpenDialog"
+                - Name: InputArguments
+                  Id: g=06751b06a4490a26c1a6172281538a27
+                  Type: BaseObjectType
+                  Children:
+                  - Name: Dialog
+                    Id: g=b7219ab235ff1d027078fd7d9583f630
+                    Type: BaseDataVariableType
+                    DataType: NodeId
+                    Value: "/Objects/OptimateDemoProject/UI/Screens/Popups/AlarmPopup"
+                  - Name: AliasNode
+                    Id: g=e5c4c51e977d9f6d9b2bbadf5a8c767f
+                    Type: BaseDataVariableType
+                    DataType: NodeId
+                    ValueRank: ScalarOrOneDimension
+                    Value: "/Objects/OptimateDemoProject/Alarms/Testing/TestAlarm1"
+                  - Name: ParentItem
+                    Id: g=efc9c57aea79bbdad54c14dc81f286b6
+                    Type: BaseDataVariableType
+                    DataType: NodeId
+                    Children:
+                    - Name: DynamicLink
+                      Id: g=e8552cc3c9fa8dd37972a81cf9193d5d
+                      Type: DynamicLink
+                      DataType: NodePath
+                      Value: "../../../../..@NodeId"
+                - Name: OutputArguments
+                  Id: g=bc921ba96267b9ad5f907ea69c1f02a0
+                  Type: BaseObjectType
+                  Children:
+                  - Name: DialogNodeId
+                    Id: g=4cec25efd8495f8899c19fc8221b38f7
+                    Type: BaseDataVariableType
+                    DataType: NodeId
+            - Name: EventArguments
+              Id: g=78268f795780b8c6ca8313d8257a028b
+              Type: MouseClickEvent
+              Children:
+              - Name: EventId
+                Id: g=db26821c5bab722a258e85ab47290fb8
+                Type: PropertyType
+                DataType: ByteString
+              - Name: EventType
+                Id: g=2cec569d4945a87c5fba18d2c770e80f
+                Type: PropertyType
+                DataType: NodeId
+              - Name: SourceNode
+                Id: g=688cf1168d184f14188bf86f5f8e7871
+                Type: PropertyType
+                DataType: NodeId
+              - Name: SourceName
+                Id: g=cb53ce0cf31d77bbfad6923af1202afd
+                Type: PropertyType
+                DataType: String
+              - Name: Time
+                Id: g=a87ef46fc767b676274ca35a2d35afce
+                Type: PropertyType
+                DataType: UtcTime
+              - Name: ReceiveTime
+                Id: g=e5807eff734c51377fc877e51cc26336
+                Type: PropertyType
+                DataType: UtcTime
+              - Name: Message
+                Id: g=b77d67111c2d1995335d727c2ca807f7
+                Type: PropertyType
+                DataType: LocalizedText
+              - Name: Severity
+                Id: g=deb48c9da664dc5d4d2357de8fbdd7d6
+                Type: PropertyType
+                DataType: UInt16
       - Name: Separator2
         Id: g=9ebdaae260c3d2560dd351b940034889
         Type: Rectangle
@@ -4700,201 +4803,96 @@ Children:
         Id: g=520d7396b7130fdcb14ec67054511c38
         Type: Panel
         Children:
-        - Name: grid
-          Id: g=8921d65fa05270379cd436a628784a31
-          Type: GridLayout
-          Children:
-          - Name: Rows
-            Id: g=6ee95e9dcadcd972e8bff18d34e1a5c4
-            Type: BaseDataVariableType
-            DataType: String
-            ValueRank: OneDimension
-            ArrayDimensions: [0]
-            Value: ["1fr","1fr"]
-          - Name: Columns
-            Id: g=d85984772a655378d029810026c3c338
-            Type: BaseDataVariableType
-            DataType: String
-            ValueRank: OneDimension
-            ArrayDimensions: [0]
-            Value: ["Auto","Auto","Auto"]
-          - Name: Position Text
-            Id: g=7d11a8e8984f244eeac3908ebfb6e403
-            Type: Label
-            Children:
-            - Name: Text
-              Id: g=09082875bb82378f178222d59c602190
-              Type: BaseDataVariableType
-              DataType: LocalizedText
-              Value: {"NamespaceIndex":36,"TextId":"Position"}
-            - Name: TextColor
-              Id: g=1f4b9847a15917768b7bd147f8aea84f
-              Type: BaseDataVariableType
-              DataType: Color
-              Value: "#ffffff"
-              Children:
-              - Name: DynamicLink
-                Id: g=6fbcc7c771685d21316229075ba44190
-                Type: DynamicLink
-                DataType: NodePath
-                Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Light Grey 1 - ffffff - White"
-            - Name: Visible
-              Id: g=2e64ee5f9ce9199a85e8432c28465312
-              Type: BaseDataVariableType
-              DataType: Boolean
-              Value: true
-              Children:
-              - Name: DynamicLink
-                Id: g=2f2e14cc032167af2f7571eb5de66fcf
-                Type: DynamicLink
-                DataType: NodePath
-                Value: "{Window}/ScreenControl/ScreenSizeIsNormal"
-          - Name: Machine Position
-            Id: g=3b9940a9a279d0cb9228bad444c88f68
-            Type: Label
-            Children:
-            - Name: Text
-              Id: g=c6014e42826cce2c4d6baf7db01e5e9b
-              Type: BaseDataVariableType
-              DataType: LocalizedText
-              Children:
-              - Name: StringFormatter1
-                Id: g=4b4cbeef44ee8451fb7919ac5945708e
-                Type: StringFormatter
-                Children:
-                - Name: Source0
-                  Id: g=a40c821074bad70120bacee5a36fcfb8
-                  Type: BaseDataVariableType
-                  DataType: BaseDataType
-                  ReferenceType: HasSource
-                  Children:
-                  - Name: DynamicLink
-                    Id: g=1e05dbba11533d82ef9a2014d7c54b5c
-                    Type: DynamicLink
-                    DataType: NodePath
-                    Value: "/Objects/OptimateDemoProject/Model/PLC Link Required/Machine Info/Current Position@Value"
-            - Name: TextColor
-              Id: g=f7aed1b5f7974b3555a8e5cc38ce89e5
-              Type: BaseDataVariableType
-              DataType: Color
-              Value: "#ffffff"
-              Children:
-              - Name: DynamicLink
-                Id: g=1e4a7e17fa9048bf4d7c87a5402efdd4
-                Type: DynamicLink
-                DataType: NodePath
-                Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Light Grey 1 - ffffff - White"
-            - Name: GridLayoutProperties
-              Id: g=e11556e8db53fe62cce33d821504458c
-              Type: GridLayoutProperties
-          - Name: Position Label
-            Id: g=984a4323ac2b819b0b95b0a2bd0b76ab
-            Type: Label
-            Children:
-            - Name: Text
-              Id: g=6b31b813932cedacc0f6c640676a1028
-              Type: BaseDataVariableType
-              DataType: LocalizedText
-              Value: {"LocaleId":"en-US","Text":"DEG"}
-            - Name: TextColor
-              Id: g=f0e96551f98f0ca85eb2b94e432e5286
-              Type: BaseDataVariableType
-              DataType: Color
-              Value: "#ffffff"
-              Children:
-              - Name: DynamicLink
-                Id: g=1cc102925f158db844bf697f2cd7d239
-                Type: DynamicLink
-                DataType: NodePath
-                Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Light Grey 1 - ffffff - White"
-            - Name: GridLayoutProperties
-              Id: g=9207b7b2bd381b2d433f2e0e4eb0b8cf
-              Type: GridLayoutProperties
-          - Name: Speed Text
-            Id: g=f26871139a0afbd111597051110416c3
-            Type: Label
-            Children:
-            - Name: Text
-              Id: g=b9a9be1c54ea20304d5da969300d2b59
-              Type: BaseDataVariableType
-              DataType: LocalizedText
-              Value: {"NamespaceIndex":36,"TextId":"Speed"}
-            - Name: TextColor
-              Id: g=dee92d77472e986f54764900567f6496
-              Type: BaseDataVariableType
-              DataType: Color
-              Value: "#ffffff"
-              Children:
-              - Name: DynamicLink
-                Id: g=4b8c87a6a78740b4a5790c8b27c21986
-                Type: DynamicLink
-                DataType: NodePath
-                Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Light Grey 1 - ffffff - White"
-            - Name: Visible
-              Id: g=2d30dd0aad187fb358fbb52af00ad043
-              Type: BaseDataVariableType
-              DataType: Boolean
-              Value: true
-              Children:
-              - Name: DynamicLink
-                Id: g=5ecb3bf8a243421dde0855b14c7f39ef
-                Type: DynamicLink
-                DataType: NodePath
-                Value: "{Window}/ScreenControl/ScreenSizeIsNormal"
-          - Name: Machine Speed
-            Id: g=21235de91c1262120ae5ff0bc5f54559
-            Type: Label
-            Children:
-            - Name: Text
-              Id: g=cdd42d16a37a60497cdb101bae55a891
-              Type: BaseDataVariableType
-              DataType: LocalizedText
-              Children:
-              - Name: DynamicLink
-                Id: g=70e11b6d06b607f96ac31b97fd796db1
-                Type: DynamicLink
-                DataType: NodePath
-                Value: "/Objects/OptimateDemoProject/Model/PLC Link Required/Machine Info/Current Speed"
-            - Name: TextColor
-              Id: g=aaaad65561372404d7b144bfdc4b9811
-              Type: BaseDataVariableType
-              DataType: Color
-              Value: "#ffffff"
-              Children:
-              - Name: DynamicLink
-                Id: g=d16e5c2704f262aa5c50a31792e8afdb
-                Type: DynamicLink
-                DataType: NodePath
-                Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Light Grey 1 - ffffff - White"
-            - Name: GridLayoutProperties
-              Id: g=0e54aebca71736ba08736d533827356c
-              Type: GridLayoutProperties
-          - Name: Speed Label
-            Id: g=efd43ef8ca7df1c876f002a206ab910d
-            Type: Label
-            Children:
-            - Name: Text
-              Id: g=3de53851fea0ef87934ffed0fab67217
-              Type: BaseDataVariableType
-              DataType: LocalizedText
-              Value: {"LocaleId":"en-US","Text":"CPM"}
-            - Name: TextColor
-              Id: g=85f190c8c79f2028542892dfd9427ebf
-              Type: BaseDataVariableType
-              DataType: Color
-              Value: "#ffffff"
-              Children:
-              - Name: DynamicLink
-                Id: g=ba865281ad284c7eb6ee8368f1bf64c3
-                Type: DynamicLink
-                DataType: NodePath
-                Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Light Grey 1 - ffffff - White"
-            - Name: GridLayoutProperties
-              Id: g=16839746571a2a2be477aaa3d27178b6
-              Type: GridLayoutProperties
         - Name: JumpToMachineInfo
           Id: g=bb84130fac6769e2b61bcf6e122d7b02
           Type: Button
+        - Name: Label1
+          Id: g=bc124d918a346e31d41b00e99b4a6761
+          Type: Label
+          Children:
+          - Name: TextColor
+            Id: g=1193bb94dbf0e0a7097e05ba24eb6564
+            Type: BaseDataVariableType
+            DataType: Color
+            Value: "#ffffff"
+            Children:
+            - Name: DynamicLink
+              Id: g=71af039942abcdbd8f7d498b5117a086
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Light Grey 1 - ffffff - White"
+          - Name: Text
+            Id: g=c915817cd0356fd754e9802556d7e1d0
+            Type: BaseDataVariableType
+            DataType: LocalizedText
+            Children:
+            - Name: ConditionalConverter1
+              Id: g=d0eb0117b4c925857448699a0e331fe0
+              Type: ConditionalConverter
+              Children:
+              - Name: Condition
+                Id: g=3226c090f8db6a08b77be4ef4b0e0a45
+                Type: BaseDataVariableType
+                DataType: Boolean
+                ReferenceType: HasSource
+                Children:
+                - Name: ExpressionEvaluator1
+                  Id: g=2a39c43e9b26f5833e30793f88f4abec
+                  Type: ExpressionEvaluator
+                  Children:
+                  - Name: Sourcecurrent_speed
+                    Id: g=3edb00943e20337537a187792ba5e3ce
+                    Type: BaseDataVariableType
+                    DataType: BaseDataType
+                    ReferenceType: HasSource
+                    Children:
+                    - Name: DynamicLink
+                      Id: g=2be939efe0a4cd4990e4333c261c0267
+                      Type: DynamicLink
+                      DataType: NodePath
+                      Value: "/Objects/OptimateDemoProject/Model/PLC Link Required/Machine Info/Current Speed"
+              - Name: TrueValue
+                Id: g=1dbc2bfd30bf4d353804614931f95f9e
+                Type: BaseDataVariableType
+                DataType: LocalizedText
+                ReferenceType: HasParameter
+                Children:
+                - Name: StringFormatter1
+                  Id: g=931580fae3a12fd42d29e545b94f4474
+                  Type: StringFormatter
+                  Children:
+                  - Name: Source0
+                    Id: g=94778e6048bbd603e30584cab273d1f4
+                    Type: BaseDataVariableType
+                    DataType: BaseDataType
+                    ReferenceType: HasSource
+                    Children:
+                    - Name: DynamicLink
+                      Id: g=0a5261ff9e586c40fab9f6d6d7af3fb8
+                      Type: DynamicLink
+                      DataType: NodePath
+                      Value: "/Objects/OptimateDemoProject/Model/PLC Link Required/Machine Info/Current Position"
+              - Name: FalseValue
+                Id: g=4c2b3952fe2cc819fc4d8946f2aeb6f8
+                Type: BaseDataVariableType
+                DataType: LocalizedText
+                ReferenceType: HasParameter
+                Children:
+                - Name: StringFormatter1
+                  Id: g=0a1018d1f05f69f8263af733762a9f03
+                  Type: StringFormatter
+                  Children:
+                  - Name: Source0
+                    Id: g=bf9f98ba64c280e56dd5c1281d7b93ef
+                    Type: BaseDataVariableType
+                    DataType: BaseDataType
+                    ReferenceType: HasSource
+                    Children:
+                    - Name: DynamicLink
+                      Id: g=33a1100880a8c96454c2d0aada8a8e6a
+                      Type: DynamicLink
+                      DataType: NodePath
+                      Value: "/Objects/OptimateDemoProject/Model/PLC Link Required/Machine Info/Current Speed"
       - Name: Separator3
         Id: g=940d5faf5e5c7281f5e62074ce3f4f98
         Type: Rectangle
@@ -4938,111 +4936,36 @@ Children:
               Type: DynamicLink
               DataType: NodePath
               Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Dark Grey 4 - 404040"
-        - Name: size info
-          Id: g=52a569e7f08a694b5baf396440cac40f
-          Type: ColumnLayout
+        - Name: size name
+          Id: g=8cfae4df783fc0b220849bacd9ffa4bf
+          Type: Label
           Children:
+          - Name: Text
+            Id: g=0861720e1c57377162f534284f93cf01
+            Type: BaseDataVariableType
+            DataType: LocalizedText
+            Children:
+            - Name: DynamicLink
+              Id: g=b6cfb296d2ded09d9c3e5da70a97f887
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "/Objects/OptimateDemoProject/Model/PLC Link Required/Machine Info/Recipe Name"
+          - Name: TextColor
+            Id: g=40348208d52aa90337185903e6909451
+            Type: BaseDataVariableType
+            DataType: Color
+            Value: "#ffffff"
+            Children:
+            - Name: DynamicLink
+              Id: g=3f31e7cd8616edff3eccb628851491ca
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Light Grey 1 - ffffff - White"
           - Name: Width
-            Id: g=d0846b1145fc8fa43dcea97037c15e2c
+            Id: g=0b41e19aea5f4f565d6b28b8538c6b7a
             Type: BaseVariableType
             DataType: Size
-            Value: -1.0
-            Children:
-            - Name: ConditionalConverter1
-              Id: g=c1ebbcb117de2601c8f8aaa7f5843e6a
-              Type: ConditionalConverter
-              Children:
-              - Name: Condition
-                Id: g=f5a0db5b102033308ebfc23d8206be9a
-                Type: BaseDataVariableType
-                DataType: Boolean
-                ReferenceType: HasSource
-                Children:
-                - Name: DynamicLink
-                  Id: g=24e3e44a2466f8cab99e34168b727947
-                  Type: DynamicLink
-                  DataType: NodePath
-                  Value: "{Window}/ScreenControl/ScreenSizeIsNormal"
-          - Name: size
-            Id: g=0cd574b454a96d99f43d93ed1a6ec240
-            Type: Label
-            Children:
-            - Name: Text
-              Id: g=51aeb7c513c6b0b2616f4485b69d93e3
-              Type: BaseDataVariableType
-              DataType: LocalizedText
-              Children:
-              - Name: StringFormatter1
-                Id: g=ee26141cb92179a380574ccd67d62238
-                Type: StringFormatter
-                Children:
-                - Name: Source0
-                  Id: g=ecbcfab19b8cb58e3374e74419b4fe32
-                  Type: BaseDataVariableType
-                  DataType: BaseDataType
-                  ReferenceType: HasSource
-                  Children:
-                  - Name: ConditionalConverter1
-                    Id: g=09bca45c9c7acd97f3fb1d17d5048caa
-                    Type: ConditionalConverter
-                    Children:
-                    - Name: Condition
-                      Id: g=52fa98f3d1201d9381b2ccd6c73df781
-                      Type: BaseDataVariableType
-                      DataType: Boolean
-                      ReferenceType: HasSource
-                      Children:
-                      - Name: DynamicLink
-                        Id: g=288c2c0be207fbdb40ac74c69deebd93
-                        Type: DynamicLink
-                        DataType: NodePath
-                        Value: "{Window}/ScreenControl/ScreenSizeIsNormal"
-            - Name: Width
-              Id: g=37418f039bbe1191bc38b26a58772315
-              Type: BaseVariableType
-              DataType: Size
-              Value: -1.0
-            - Name: TextColor
-              Id: g=378bd138aacf84ba6e35cd595e3b7f33
-              Type: BaseDataVariableType
-              DataType: Color
-              Value: "#ffffff"
-              Children:
-              - Name: DynamicLink
-                Id: g=89bceeba3027170b2cf365920037a06b
-                Type: DynamicLink
-                DataType: NodePath
-                Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Light Grey 1 - ffffff - White"
-          - Name: size name
-            Id: g=8cfae4df783fc0b220849bacd9ffa4bf
-            Type: Label
-            Children:
-            - Name: Text
-              Id: g=0861720e1c57377162f534284f93cf01
-              Type: BaseDataVariableType
-              DataType: LocalizedText
-              Children:
-              - Name: DynamicLink
-                Id: g=e571979f52e893b962807932a9e59c83
-                Type: DynamicLink
-                DataType: NodePath
-                Value: "/Objects/OptimateDemoProject/Model/PLC Link Required/Machine Info/Recipe Name"
-            - Name: TextColor
-              Id: g=40348208d52aa90337185903e6909451
-              Type: BaseDataVariableType
-              DataType: Color
-              Value: "#ffffff"
-              Children:
-              - Name: DynamicLink
-                Id: g=3f31e7cd8616edff3eccb628851491ca
-                Type: DynamicLink
-                DataType: NodePath
-                Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Light Grey 1 - ffffff - White"
-            - Name: Width
-              Id: g=0b41e19aea5f4f565d6b28b8538c6b7a
-              Type: BaseVariableType
-              DataType: Size
-              Value: -1.0
+            Value: 100.0
         - Name: RecipeButton
           Id: g=2487440731eea66886c4b466fd5e7ea3
           Type: Button

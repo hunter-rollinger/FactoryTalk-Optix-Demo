@@ -18,7 +18,7 @@ Children:
     Type: BaseVariableType
     DataType: Size
     ModellingRule: Optional
-    Value: 42.0
+    Value: -1.0
   - Name: HorizontalAlignment
     Id: g=135c977d9fc9a25e15cb0a630b08131f
     Type: BaseVariableType
@@ -69,14 +69,14 @@ Children:
       Type: BaseVariableType
       DataType: Size
       ModellingRule: Optional
-      Value: 42.0
+      Value: -1.0
     - Name: Rows
       Id: g=65e35c1f8f0bc282fe204548f2535835
       Type: BaseDataVariableType
       DataType: String
       ValueRank: OneDimension
       ArrayDimensions: [0]
-      Value: ["1fr"]
+      Value: ["auto"]
     - Name: Columns
       Id: g=9a500864460b52c906b42898ad2204a6
       Type: BaseDataVariableType
@@ -1275,7 +1275,7 @@ Children:
         Type: BaseVariableType
         DataType: VerticalAlignment
         ModellingRule: Optional
-        Value: 3
+        Value: 2
       - Name: HorizontalAlignment
         Id: g=6624b42bb18577183b4c989c24e7ea4f
         Type: BaseVariableType
@@ -1442,6 +1442,7 @@ Children:
       Type: BaseVariableType
       DataType: VerticalAlignment
       ModellingRule: Optional
+      Value: 2
     - Name: Switch
       Id: g=68b2e003f4337de4e9456924d89544ad
       Type: Switch
@@ -1492,7 +1493,7 @@ Children:
         Type: BaseVariableType
         DataType: VerticalAlignment
         ModellingRule: Optional
-        Value: 3
+        Value: 2
       - Name: CheckedText
         Id: g=e9d5a52fcefd6b7377625aa1d0f4a699
         Type: BaseDataVariableType
@@ -1581,6 +1582,12 @@ Children:
         Type: BaseVariableType
         DataType: Size
         ModellingRule: Optional
+      - Name: Height
+        Id: g=2a05b0bd1a849e0cf40edb154df9fafd
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 40.0
     - Name: Spacer3
       Id: g=7a2945a497cf84da42f34c8d3d8c657b
       Type: Rectangle
@@ -2267,6 +2274,12 @@ Children:
           ReferenceType: HasParameter
           ModellingRule: Optional
           Value: "Auto"
+    - Name: ItemsVerticalAlignment
+      Id: g=82f402330b58d3089e65526358112d0d
+      Type: BaseVariableType
+      DataType: VerticalAlignment
+      ModellingRule: Optional
+      Value: 2
   - Name: IndicatorColor
     Id: g=4a7104187ce45acec891a141a4cca828
     Type: BaseDataVariableType
