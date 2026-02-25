@@ -1,0 +1,254 @@
+Name: S17693
+Id: g=f0ce2a61312b635b3e901c3f7a5b05c1
+Type: RAEtherNetIPStation
+Children:
+- Name: Route
+  Id: g=08b88befa6ebcca1a4ebda0ce9f4ad09
+  Type: BaseDataVariableType
+  DataType: String
+  Value: "10.0.0.1"
+- Name: StationStatusVariables
+  Id: g=e95daed8a390a5026210543b7f5b4ed6
+  Type: PropertyGroup
+  Children:
+  - Name: ActiveDataItems
+    Id: g=61f6836559bb31543dcae30e8f7b03ff
+    Type: BaseDataVariableType
+    DataType: UInt32
+    AccessLevel: Read
+  - Name: ActivityCounter
+    Id: g=66ed3b2a1a10dafa21cb9c84f9ca5ef1
+    Type: BaseDataVariableType
+    DataType: UInt32
+    AccessLevel: Read
+  - Name: CatalogNumber
+    Id: g=a1cace9adf1b4490ffafa2444ad0077c
+    Type: BaseDataVariableType
+    DataType: String
+    AccessLevel: Read
+  - Name: ControllerName
+    Id: g=b402ebd7f0dd32f12eb4a3ab9ab7cf98
+    Type: BaseDataVariableType
+    DataType: String
+    AccessLevel: Read
+  - Name: FailedDataItems
+    Id: g=3e46e8d9930c3741e91b138cc5177af1
+    Type: BaseDataVariableType
+    DataType: UInt32
+    AccessLevel: Read
+  - Name: MajorRev
+    Id: g=d195f8a2365d7af6588fb08882315026
+    Type: BaseDataVariableType
+    DataType: UInt32
+    AccessLevel: Read
+  - Name: MinorRev
+    Id: g=458a17720f620d8c29f751274ea6d556
+    Type: BaseDataVariableType
+    DataType: UInt32
+    AccessLevel: Read
+  - Name: Mode
+    Id: g=cf55d1c86550ddcf3bad6a194fac3980
+    Type: BaseDataVariableType
+    DataType: String
+    AccessLevel: Read
+  - Name: OptimizedBlocks
+    Id: g=fb43d1ff4aabfa968f9e4f763fd2764e
+    Type: BaseDataVariableType
+    DataType: UInt32
+    AccessLevel: Read
+  - Name: Path
+    Id: g=30c14cb30760a00df2717853c5d3bc5e
+    Type: BaseDataVariableType
+    DataType: String
+    AccessLevel: Read
+  - Name: Present
+    Id: g=22a5d7d203aa7e3b67a370b77b58736e
+    Type: BaseDataVariableType
+    DataType: Boolean
+    AccessLevel: Read
+  - Name: ProductCode
+    Id: g=44edd22429ecbddb3dec16008715c3e7
+    Type: BaseDataVariableType
+    DataType: UInt32
+    AccessLevel: Read
+  - Name: ProductType
+    Id: g=6abc5f8d474abf40b3ebb3fdd0125fb2
+    Type: BaseDataVariableType
+    DataType: UInt32
+    AccessLevel: Read
+  - Name: RecoverableMajorFaults
+    Id: g=0ea0772c4d1c897d873cdc0330e4d5d2
+    Type: BaseDataVariableType
+    DataType: Boolean
+    AccessLevel: Read
+  - Name: RecoverableMinorFaults
+    Id: g=29482cb9727c7414d0191ba8a21e6f40
+    Type: BaseDataVariableType
+    DataType: Boolean
+    AccessLevel: Read
+  - Name: RunMode
+    Id: g=7c5ede91bd52b9e92912fe34a002798b
+    Type: BaseDataVariableType
+    DataType: Boolean
+    AccessLevel: Read
+  - Name: Synchronized
+    Id: g=9b364a9885ed029fdd5f1e85bd732822
+    Type: BaseDataVariableType
+    DataType: Boolean
+    AccessLevel: Read
+  - Name: SyncState
+    Id: g=9ba943591225f9e886bd74f7b5cb3aa3
+    Type: BaseDataVariableType
+    DataType: String
+    AccessLevel: Read
+  - Name: UnrecoverableMajorFaults
+    Id: g=23f8d1f12e208949120c7d70360294f1
+    Type: BaseDataVariableType
+    DataType: Boolean
+    AccessLevel: Read
+  - Name: UnrecoverableMinorFaults
+    Id: g=14c05c63c8eb166426452a6258d96fe4
+    Type: BaseDataVariableType
+    DataType: Boolean
+    AccessLevel: Read
+  - Name: Vendor
+    Id: g=26e3c4d853aff16ffc0c82f3c74e0c0a
+    Type: BaseDataVariableType
+    DataType: UInt32
+    AccessLevel: Read
+- Name: OperationCode
+  Id: g=f38ca5ed3bb5ce694f9ae067fc2ee3aa
+  Type: BaseDataVariableType
+  DataType: CommunicationOperationCode
+  AccessLevel: Read
+- Class: Reference
+  Target: ns=7;i=29
+  Direction: Forward
+- Class: Reference
+  Target: ns=7;i=30
+  Direction: Forward
+- Class: Reference
+  Target: ns=7;i=67
+  Direction: Forward
+- Class: Reference
+  Target: ns=7;i=31
+  Direction: Forward
+- Class: Reference
+  Target: ns=7;i=94
+  Direction: Forward
+- Class: Reference
+  Target: ns=7;i=96
+  Direction: Forward
+- File: Tags/Tags.yaml
+- Name: Types
+  Id: g=7696119b3fffac5c51c646496902e92a
+  Type: FolderType
+  Children:
+  - File: DataTypes/DataTypes.yaml
+  - File: VariableTypes/VariableTypes.yaml
+- Name: EnableExtendedProperties
+  Id: g=afe17a484a152adc59a6c390ca0a248a
+  Type: BaseDataVariableType
+  DataType: Boolean
+  Value: true
+- Name: UseAlarms
+  Id: g=03d5c609460ec02fc89f1a14b8959c97
+  Type: BaseDataVariableType
+  DataType: Boolean
+- Name: Timeout
+  Id: g=21067c901cf7a59a8b7c86749a090ca4
+  Type: BaseDataVariableType
+  DataType: Duration
+  Value: "0:00:00:10.0000000"
+- Name: Status
+  Id: g=6ea58aff3352be50f85541a5b5868d1a
+  Type: FolderType
+  Children:
+  - Name: Revision
+    Id: g=385be642c6e45098bc19b800a6592ed8
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "0"
+    Children:
+    - Name: StringFormatter1
+      Id: g=951f7ab90e4bc286e7ea9709ffed51cb
+      Type: StringFormatter
+      Children:
+      - Name: Format
+        Id: g=f5817c616f17389b6e4e1197fa976387
+        Type: BaseDataVariableType
+        DataType: LocalizedText
+        ReferenceType: HasParameter
+        Value: {"LocaleId":"en-US","Text":"{0}.{1}"}
+      - Name: ns=9;Source0
+        Id: g=cfede2457ca85879498c9851a389c159
+        Type: BaseDataVariableType
+        DataType: BaseDataType
+        ReferenceType: HasSource
+        Children:
+        - Name: DynamicLink
+          Id: g=569df6af29f0ed8ef2c444d1f56fc8a2
+          Type: DynamicLink
+          DataType: NodePath
+          Value: "../../../../StationStatusVariables/MajorRev"
+      - Name: ns=9;Source1
+        Id: g=45882e5ac82bc7cbb339216af20fba6d
+        Type: BaseDataVariableType
+        DataType: BaseDataType
+        ReferenceType: HasSource
+        Children:
+        - Name: DynamicLink
+          Id: g=714f99f2b40529ad8c60d9066341d690
+          Type: DynamicLink
+          DataType: NodePath
+          Value: "../../../../StationStatusVariables/MinorRev"
+  - Name: Controller Name
+    Id: g=e83f5d44fa32d6cbe31af7072aff8d68
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "0"
+    Children:
+    - Name: DynamicLink
+      Id: g=ce35ae4b837b542a6d1d31a2254b1b18
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "../../StationStatusVariables/ControllerName"
+      Children:
+      - Name: Mode
+        Id: g=a2b4f5fc0052485ee5ff4ce77ab1592b
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        Value: 2
+  - Name: PLC Mode
+    Id: g=d311f35e708ce57eea4d91470015194e
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "0"
+    Children:
+    - Name: DynamicLink
+      Id: g=d4ac0977bd7859d8808b6365e0982185
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "../../StationStatusVariables/Mode"
+      Children:
+      - Name: Mode
+        Id: g=cd84e994357e4c507b6a4d3fc0e2aa20
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        Value: 2
+  - Name: PLC Status
+    Id: g=4eb40bc8196c0faec3f983c9b0875b14
+    Type: BaseDataVariableType
+    DataType: Int32
+    Children:
+    - Name: DynamicLink
+      Id: g=4aea1d0ea3434cf2e4abc06e210a13b5
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "../../StationStatusVariables/Present"
+      Children:
+      - Name: Mode
+        Id: g=4e32ab7a1eb57bc77d4afba39d6e1a88
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        Value: 2
