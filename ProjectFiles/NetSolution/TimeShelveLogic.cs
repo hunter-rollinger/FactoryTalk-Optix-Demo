@@ -3,6 +3,8 @@ using UAManagedCore;
 using FTOptix.UI;
 using FTOptix.NetLogic;
 using FTOptix.SerialPort;
+using FTOptix.OPCUAServer;
+using FTOptix.System;
 #endregion
 
 public class TimeShelveLogic : BaseNetLogic

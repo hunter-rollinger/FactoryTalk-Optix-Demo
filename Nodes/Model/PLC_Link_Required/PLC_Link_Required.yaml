@@ -1,100 +1,126 @@
 Name: PLC Link Required
+Id: g=c678c87f577234a36228b98b6a279cb8
 Type: FolderType
 Children:
 - Name: Machine Info
+  Id: g=23ba36f77d1d84b48c5e3728a44a0bc7
   Type: BaseObjectType
   Children:
   - Name: Recipe Name
+    Id: g=aca8f7ab7a0b292876804bbc54bd4a3c
     Type: BaseDataVariableType
     DataType: String
     Value: "0"
   - Name: Recipe Speed
+    Id: g=cf6fc6a20a21f493a1af7743348ffcbd
     Type: BaseDataVariableType
     DataType: Int32
   - Name: Recipe Number
+    Id: g=5427c35c08dc65e2a967e15c8b0f420c
     Type: BaseDataVariableType
     DataType: Int32
   - Name: Recipe Description
+    Id: g=a2287e89b0e0b5303d94ea969f553730
     Type: BaseDataVariableType
     DataType: String
     Value: "0"
   - Name: PackML State
+    Id: g=6729a146f229e20257da2ad52783a4e3
     Type: BaseDataVariableType
     DataType: Int32
     Children:
     - Name: DynamicLink
+      Id: g=653c59b86e31343d304600c7486e9225
       Type: DynamicLink
       DataType: NodePath
-      Value: "../../../../CommDrivers/Rockwell/Impact/Tags/Controller Tags/PackML_STS/StateCurrent"
+      Value: "../../../../CommDrivers/Rockwell/S17693/Tags/Controller Tags/PackML_STS/StateCurrent"
       Children:
       - Name: Mode
+        Id: g=d1ba9402e7861cce599015a76d7e4c8a
         Type: BaseVariableType
         DataType: DynamicLinkMode
         Value: 2
   - Name: PackML Mode
+    Id: g=18c0750f1bfc210c6d9e07df6ad89b7a
     Type: BaseDataVariableType
     DataType: Int32
     Children:
     - Name: DynamicLink
+      Id: g=260712f5f3ef97ed639efe1d1751808b
       Type: DynamicLink
       DataType: NodePath
-      Value: "../../../../CommDrivers/Rockwell/Impact/Tags/Controller Tags/PackML_STS/UnitModeCurrent"
+      Value: "../../../../CommDrivers/Rockwell/S17693/Tags/Controller Tags/PackML_STS/UnitModeCurrent"
       Children:
       - Name: Mode
+        Id: g=ae554fd31b58d5b120d490bb31952510
         Type: BaseVariableType
         DataType: DynamicLinkMode
         Value: 2
   - Name: Current Speed
+    Id: g=756950837453b87a50a2920d70a8b2ac
     Type: BaseDataVariableType
     DataType: Int32
     Children:
     - Name: DynamicLink
+      Id: g=91df4a1bcc07411429e4f1843f7d9810
       Type: DynamicLink
       DataType: NodePath
-      Value: "../../../../CommDrivers/Rockwell/Impact/Tags/Controller Tags/OI_DintFromPLC[0]"
+      Value: "../../../../CommDrivers/Rockwell/S17693/Tags/Controller Tags/OI_DintFromPLC[0]"
       Children:
       - Name: Mode
+        Id: g=975652012fb00d079c9c961bc72e24e9
         Type: BaseVariableType
         DataType: DynamicLinkMode
         Value: 2
   - Name: Current Position
+    Id: g=abb53e7ae661b941a056e0b2680f54bc
     Type: BaseDataVariableType
     DataType: Int32
     Children:
     - Name: DynamicLink
+      Id: g=363e7094de3decbad85c71eb4d0b8eea
       Type: DynamicLink
       DataType: NodePath
-      Value: "../../../../CommDrivers/Rockwell/Impact/Tags/Controller Tags/OI_DintFromPLC[34]"
+      Value: "../../../../CommDrivers/Rockwell/S17693/Tags/Controller Tags/OI_DintFromPLC[34]"
       Children:
       - Name: Mode
+        Id: g=23e330a8a6788a6e1b5fbc922ded4d3c
         Type: BaseVariableType
         DataType: DynamicLinkMode
         Value: 2
 - Name: Time Tracking
+  Id: g=dac3ee3dc7b2ad488bb12a13ddb3eac7
   Type: BaseObjectType
 - Name: Alarms
+  Id: g=16da6749e9906086716b9e2ac4fc36c5
   Type: BaseObjectType
 - Name: Warnings
+  Id: g=3b1178baa44674b2135aaad10c188225
   Type: BaseObjectType
 - Name: AxisOutOfPositionPopup
+  Id: g=724c6e2ffecc421e6f016b68543c48bf
   Type: BaseObjectType
   Children:
   - Name: AxisCurrent
+    Id: g=655c0de71ceb9f070117a83e05b0dd44
     Type: BaseDataVariableType
     DataType: Int32
     ValueRank: OneDimension
     ArrayDimensions: [10]
   - Name: AxisTarget
+    Id: g=07ef93e4c585d6dd1393105465e3e418
     Type: BaseDataVariableType
     DataType: Int32
     ValueRank: OneDimension
     ArrayDimensions: [10]
   - Name: AxisTolerance
+    Id: g=85c9b19e897825d08b4641ac4d622b09
     Type: BaseDataVariableType
     DataType: Int32
     ValueRank: OneDimension
     ArrayDimensions: [10]
   - Name: AxisName
+    Id: g=6dac059c013f20dd756d482dbcd8a108
     Type: BaseDataVariableType
     DataType: String
     ValueRank: OneDimension

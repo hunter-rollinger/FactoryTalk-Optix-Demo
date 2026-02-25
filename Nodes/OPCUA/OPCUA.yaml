@@ -1,2 +1,44 @@
 Name: OPCUA
+Id: g=584e2618bad360b46ac89556af10dbfd
 Type: OPCUACategoryFolder
+Children:
+- Name: OPCUAServer
+  Id: g=3980ed6c52bd58a4884c2153f71ef5e7
+  Type: OPCUAServer
+  Children:
+  - Name: EndpointURL
+    Id: g=cb769d782c96d0dc67c0475569030bc4
+    Type: PropertyType
+    DataType: ResourceUri
+    Value: "opc.tcp://localhost:59100"
+  - Name: NodesToPublish
+    Id: g=63a41cfe4423b9c610682d3c433a5e9a
+    Type: BaseObjectType
+    Children:
+    - Name: Configuration1
+      Id: g=9c9a62141224f7174c33fdc56a1fc4c8
+      Type: NodesToPublishConfigurationEntry
+      Children:
+      - Name: Nodes
+        Id: g=a28cd2e885475fb681957ae1c0541d4f
+        Type: BaseObjectType
+      - Name: Users
+        Id: g=72ec2bc64ef0f3c6069b8b81bcc992e0
+        Type: BaseObjectType
+      - Name: PublishDynamicConfiguration
+        Id: g=00628601c422395616d3e15cabb82074
+        Type: BaseDataVariableType
+        DataType: Boolean
+  - Name: MinimumMessageSecurityMode
+    Id: g=f76d318ce23cfb657a64a9913858ff42
+    Type: PropertyType
+    DataType: MessageSecurityModeEnum
+  - Name: MinimumSecurityPolicy
+    Id: g=6d02a222a2908f6d890ee2413935ed65
+    Type: PropertyType
+    DataType: SecurityPolicyEnum
+  - Name: CertificateIsExpired
+    Id: g=33d0b489f1857f3d24d57fc48ad99a12
+    Type: BaseDataVariableType
+    DataType: Boolean
+    AccessLevel: Read

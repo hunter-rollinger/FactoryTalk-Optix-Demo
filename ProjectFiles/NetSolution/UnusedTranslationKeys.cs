@@ -10,6 +10,8 @@ using System.IO;
 using FTOptix.Core;
 using System.Net.NetworkInformation;
 using FTOptix.SerialPort;
+using FTOptix.OPCUAServer;
+using FTOptix.System;
 #endregion
 
 public class UnusedTranslationKeys : BaseNetLogic

@@ -12,6 +12,8 @@ using UAManagedCore;
 using UAManagedCore.OpcUa;
 using FTOptix.RecipeX;
 using FTOptix.SerialPort;
+using FTOptix.OPCUAServer;
+using FTOptix.System;
 #endregion
 
 public class SetColors : BaseNetLogic

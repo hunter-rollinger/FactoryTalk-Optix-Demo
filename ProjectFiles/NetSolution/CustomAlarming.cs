@@ -296,7 +296,7 @@ public class CustomAlarming : BaseNetLogic
         }
         private void UpdateCurrentDisplayedAlarm()
         {
-            Debugger.Launch();
+            //Debugger.Launch();
             List<int> alarmIDs = GetActiveAlarmIDs();
 
             if (retaiendAlarms.Count == 0)

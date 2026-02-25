@@ -8,14 +8,15 @@ using System.IO;
 using System.Diagnostics;
 using FTOptix.RecipeX;
 using FTOptix.SerialPort;
+using FTOptix.OPCUAServer;
+using FTOptix.System;
+using FTOptix.HMIProject;
 #endregion
 
 public class ProductionStatisticsChart_NetLogic : BaseNetLogic
 {
 	public override void Start()
 	{
-		// Debugger.Launch();
-
 		projectPath = ResourceUri.FromProjectRelativePath("").Uri;
 		chartFolder = Path.Combine(projectPath, "eCharts", "Production Info Chart");
 		sourcePath = Path.Combine(chartFolder, "source-chart.js");
@@ -31,16 +32,19 @@ public class ProductionStatisticsChart_NetLogic : BaseNetLogic
 		outerValue = LogicObject.Owner.GetVariable("Outer_Value");
 		outerColor = LogicObject.Owner.GetVariable("Outer_Color");
 		outerBackground = LogicObject.Owner.GetVariable("Outer_Background_Color");
+		screenSizeIsNormal = LogicObject.GetVariable("ScreenSizeIsNormal");
 
 		innerValue.VariableChange += VariableChangeEvent;
 		outerValue.VariableChange += VariableChangeEvent;
-	
+		screenSizeIsNormal.VariableChange += VariableChangeEvent;
+
 		UpdateChart();
 	}
 	public override void Stop()
 	{
 		innerValue.VariableChange -= VariableChangeEvent;
 		outerValue.VariableChange -= VariableChangeEvent;
+		screenSizeIsNormal.VariableChange -= VariableChangeEvent;
 	}
 
 	private void VariableChangeEvent(object sender, VariableChangeEventArgs e)
@@ -62,6 +66,22 @@ public class ProductionStatisticsChart_NetLogic : BaseNetLogic
 		text = text.Replace("$5$", DecimalToHex(outerColor.Value, false, true));
 		text = text.Replace("$6$", DecimalToHex(outerBackground.Value, false, true));
 		Log.Verbose1("ProductionStatisticsChart_NetLogic", $"Updating Chart Outer Circle:   ${outerValue.Value}   ${DecimalToHex(outerColor.Value, false, true)}   ${DecimalToHex(outerBackground.Value, false, true)}");
+
+		if (screenSizeIsNormal != null) {
+			if ((bool)screenSizeIsNormal.Value.Value == true) {
+				text = text.Replace("$21$", "79%");
+				text = text.Replace("$22$", "89%");
+				text = text.Replace("$23$", "94%");
+				text = text.Replace("$24$", "99%");
+				text = text.Replace("$25$", "5");
+			} else {
+				text = text.Replace("$21$", "77%");
+				text = text.Replace("$22$", "87%");
+				text = text.Replace("$23$", "94%");
+				text = text.Replace("$24$", "99%");
+				text = text.Replace("$25$", "3");
+			}
+		}
 
 		// Write to file
 		File.WriteAllText(destPath, text);
@@ -99,4 +119,5 @@ public class ProductionStatisticsChart_NetLogic : BaseNetLogic
 	private IUAVariable outerValue;
 	private IUAVariable outerColor;
 	private IUAVariable outerBackground;
+	private IUAVariable screenSizeIsNormal;
 }

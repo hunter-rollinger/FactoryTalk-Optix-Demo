@@ -7,6 +7,8 @@ using System.Linq;
 using System.Linq.Expressions;
 using UAManagedCore;
 using FTOptix.SerialPort;
+using FTOptix.OPCUAServer;
+using FTOptix.System;
 using static AlarmFilterDataLogic;
 #endregion
 

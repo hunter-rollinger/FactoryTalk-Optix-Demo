@@ -9,6 +9,8 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Xml.Linq;
 using FTOptix.SerialPort;
+using FTOptix.OPCUAServer;
+using FTOptix.System;
 #endregion
 
 public class AlarmFilterEditModelLogic : BaseNetLogic

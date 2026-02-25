@@ -5,6 +5,8 @@ using System.Linq;
 using System.Text;
 using FTOptix.Alarm;
 using FTOptix.SerialPort;
+using FTOptix.OPCUAServer;
+using FTOptix.System;
 #endregion
 
 public class AlarmFilterQueryBuilderLogic : BaseNetLogic

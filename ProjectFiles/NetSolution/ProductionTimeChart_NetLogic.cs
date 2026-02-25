@@ -9,6 +9,8 @@ using System.Diagnostics;
 using System.Windows.Markup;
 using FTOptix.RecipeX;
 using FTOptix.SerialPort;
+using FTOptix.OPCUAServer;
+using FTOptix.System;
 #endregion
 
 public class ProductionTimeChart_NetLogic : BaseNetLogic

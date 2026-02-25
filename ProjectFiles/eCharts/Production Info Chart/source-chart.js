@@ -25,13 +25,13 @@ option = {
 		label: { show: false },
 		emphasis: { disabled: true },
 		select: { disabled: true },
-		radius: ['79%', '89%'],
+		radius: ['$21$', '$22$'],
 		data: [{
 			value: $1$,
 			itemStyle: {
 				color: '$2$',
 				borderColor: '$3$',
-				borderWidth: 5
+				borderWidth: $25$
 			}
 		},
 		{
@@ -39,7 +39,7 @@ option = {
 			itemStyle: {
 				color: '$3$',
 				borderColor: '$3$',
-				borderWidth: 5
+				borderWidth: $25$
 			}
 		}]
 	},
@@ -60,13 +60,13 @@ option = {
 		label: { show: false },
 		emphasis: { disabled: true },
 		select: { disabled: true },
-		radius: ['94%', '99%'],
+		radius: ['$23$', '$24$'],
 		data: [{
 			value: $4$,
 			itemStyle: {
 				color: '$5$',
 				borderColor: '$6$',
-				borderWidth: 5
+				borderWidth: $25$
 			}
 		},
 		{
@@ -74,7 +74,7 @@ option = {
 			itemStyle: {
 				color: '$6$',
 				borderColor: '$6$',
-				borderWidth: 5
+				borderWidth: $25$
 			}
 		}]
 	}]

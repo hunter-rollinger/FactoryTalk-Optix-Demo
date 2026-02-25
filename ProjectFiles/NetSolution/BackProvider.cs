@@ -10,6 +10,7 @@ using FTOptix.UI;
 using FTOptix.OPCUAServer;
 using System.Diagnostics;
 using FTOptix.SerialPort;
+using FTOptix.System;
 #endregion
 
 public class BackProvider : BaseNetLogic

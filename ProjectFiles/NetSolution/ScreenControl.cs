@@ -73,12 +73,15 @@ public class ScreenControl : BaseNetLogic
 	}
 
 	[ExportMethod]
-	public void CloseAllOpen() {
+	public void CloseAllOpen(bool CloseAllWindowsBool = true) {
 		var root = Project.Current;
-		ClosePopupsRecurse(root);
 
-		burgerMenuScreen.Visible = false;			// close burger menu
-		debugMenu.ChangePanel(emptyPanel);			// close debug menu
+		if (CloseAllWindowsBool == false)
+			return;
+
+		ClosePopupsRecurse(root);
+		burgerMenuScreen.Visible = false;           // close burger menu
+		debugMenu.ChangePanel(emptyPanel);          // close debug menu
 		standardQuickInfo.ChangePanel(emptyPanel);  // close standard quick info
 	}
 

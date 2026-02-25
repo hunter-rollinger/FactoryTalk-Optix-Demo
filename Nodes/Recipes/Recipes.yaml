@@ -1,1706 +1,2620 @@
 Name: Recipes
+Id: g=05ca5435c5b94d34ea134aba98163356
 Type: RecipesCategoryFolder
 Children:
 - Name: LegacyRecipeSchema
+  Id: g=3cd03bdaefb53adae34541fd7bcacfbf
   Type: ns=23;RecipeSchema
   Description: {"LocaleId":"en-US","Text":"Can be linked directly to PLC tag"}
   Children:
   - Name: Root
+    Id: g=eb191ef362914a3080c872da2054fb86
     Type: BaseObjectType
     Children:
     - Name: GlueCam01
+      Id: g=dc1a83710dae5f344e431daac9468a4d
       Type: BaseDataVariableType
-      DataType: UDT_PLS_Cam
+      DataType: Structure
+      Value: 
+       {
+        "Type": 22,
+        "Body": {
+         "TypeId": {
+          "IdType": 0,
+          "Id": 0,
+          "Namespace": -1
+         },
+         "Body":    {}
+        }
+       }
       Children:
       - Name: Description
+        Id: g=c790fe74997b453d6ee105c0edfbbb48
         Type: BaseDataVariableType
         DataType: String
       - Name: OnSpeed_Comp
+        Id: g=04052f5f032c6fd7846265a7d80dc896
         Type: BaseDataVariableType
         DataType: Float
       - Name: OffSpeed_Comp
+        Id: g=8a07ec37af9ca2fc879c1b38f9b83eaf
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_1_On
+        Id: g=a8be4a4cc8253302e60cf62afd6de212
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_1_Off
+        Id: g=8684cdffaa37aa6e25ac187ecdae0079
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_2_On
+        Id: g=da5cfdc784a5c1085b6d5011fec9eab2
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_2_Off
+        Id: g=e41dd3a6cb01259f08e7f2b4e2048b2d
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_3_On
+        Id: g=a8a2c6058ff8828a871f4528455d82b9
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_3_Off
+        Id: g=31ad6dbdcc23c0d1048816667310d429
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_4_On
+        Id: g=67597a8bc0a0feeabd4c8eb8df9f0847
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_4_Off
+        Id: g=1a648fbabdcf677b3908bd56a8d614ab
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_5_On
+        Id: g=c621e7398296c03264b436a76de3b467
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_5_Off
+        Id: g=fdf60c90fa5f8b365130c59d4ef699ba
         Type: BaseDataVariableType
         DataType: Float
     - Name: GlueCam02
+      Id: g=1d30b75e112666ab38296d8dcfaae42f
       Type: BaseDataVariableType
-      DataType: UDT_PLS_Cam
+      DataType: Structure
+      Value: 
+       {
+        "Type": 22,
+        "Body": {
+         "TypeId": {
+          "IdType": 0,
+          "Id": 0,
+          "Namespace": -1
+         },
+         "Body":    {}
+        }
+       }
       Children:
       - Name: Description
+        Id: g=ee6342c41d35afcf47a194269d658062
         Type: BaseDataVariableType
         DataType: String
       - Name: OnSpeed_Comp
+        Id: g=8985b832f12c33807578b0c48971e10b
         Type: BaseDataVariableType
         DataType: Float
       - Name: OffSpeed_Comp
+        Id: g=b9c2e6befb38a98b8e836f786cec051a
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_1_On
+        Id: g=3f45ce65e41fbd16612347b0812c187d
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_1_Off
+        Id: g=64d998b23fbf9004e7b8520a94d9241e
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_2_On
+        Id: g=11820dd0dd32b528061e8b7d95eb0b25
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_2_Off
+        Id: g=e805d5b3af3870dc0439ea077718bef5
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_3_On
+        Id: g=0b95110b62c3c40216cb4c11b732373b
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_3_Off
+        Id: g=13ffa9f8857b7b550e7f11480df57fd7
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_4_On
+        Id: g=e0bd9957393ba2581f31cc92a8a33b23
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_4_Off
+        Id: g=9858d6c0b72a918da56a1bb203ff46ab
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_5_On
+        Id: g=1eec496c81089d6de7c39e90e7d8732b
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_5_Off
+        Id: g=aeefb8f5506f1e0f021226ec7ab9e6d9
         Type: BaseDataVariableType
         DataType: Float
     - Name: GlueCam03
+      Id: g=f9d0d41ca67f7f4599a99e214bb4af63
       Type: BaseDataVariableType
-      DataType: UDT_PLS_Cam
+      DataType: Structure
+      Value: 
+       {
+        "Type": 22,
+        "Body": {
+         "TypeId": {
+          "IdType": 0,
+          "Id": 0,
+          "Namespace": -1
+         },
+         "Body":    {}
+        }
+       }
       Children:
       - Name: Description
+        Id: g=de7ec358b111f15c14668c684a45902c
         Type: BaseDataVariableType
         DataType: String
       - Name: OnSpeed_Comp
+        Id: g=fc8440ffd3eaacee2427493fff3ced35
         Type: BaseDataVariableType
         DataType: Float
       - Name: OffSpeed_Comp
+        Id: g=7df19d80f8e34d0e34946c4d0d4478c6
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_1_On
+        Id: g=e8f6fbbbb10656033e203951e3add3af
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_1_Off
+        Id: g=6686f891c9949f6f9cfc091c090960b2
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_2_On
+        Id: g=7777d60e0dc2e2993375e8c8166734b2
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_2_Off
+        Id: g=5a59fa2d773dfd4859511f8797f60fcf
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_3_On
+        Id: g=68336de2121a4bfc2cbb30d7e3393db3
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_3_Off
+        Id: g=c635df0d7ca595dd8d9b64fbca1bf660
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_4_On
+        Id: g=a2855fc24b943f5b7e446ca0864d4278
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_4_Off
+        Id: g=1a4e44b4a174a6d72034847daffa2e7a
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_5_On
+        Id: g=4b233e81371f88bef0772d30b7c620b1
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_5_Off
+        Id: g=45bb5a3e62379b5e6fb904dfa90fec39
         Type: BaseDataVariableType
         DataType: Float
     - Name: GlueCam04
+      Id: g=aaf17a50a464dbee6f2341a1f694176c
       Type: BaseDataVariableType
-      DataType: UDT_PLS_Cam
+      DataType: Structure
+      Value: 
+       {
+        "Type": 22,
+        "Body": {
+         "TypeId": {
+          "IdType": 0,
+          "Id": 0,
+          "Namespace": -1
+         },
+         "Body":    {}
+        }
+       }
       Children:
       - Name: Description
+        Id: g=5ac2041790571a2f9445846f56b5ba22
         Type: BaseDataVariableType
         DataType: String
       - Name: OnSpeed_Comp
+        Id: g=4095a724829c16e173479cd1d1bcd96f
         Type: BaseDataVariableType
         DataType: Float
       - Name: OffSpeed_Comp
+        Id: g=f3be570898967d0591e3e7d4168f9ec1
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_1_On
+        Id: g=cfd6f76c1a6db89829a923286f510ac0
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_1_Off
+        Id: g=02df7f848ae38d9acb52e5bf4b431866
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_2_On
+        Id: g=9a2c52c076a047326c27892d9cb6ebbe
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_2_Off
+        Id: g=f38b7e4debb796051d520f8b516d29c9
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_3_On
+        Id: g=ac1c2662b02e41cbecc70924ce4b765f
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_3_Off
+        Id: g=63cffb8f39aabc30e42f8447acd60860
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_4_On
+        Id: g=20f03e4961f7cb06d64a6e454aa64186
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_4_Off
+        Id: g=af7b66318674397379264702a3d64bed
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_5_On
+        Id: g=06ea636bd9a30ff808b121972d43bda8
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_5_Off
+        Id: g=039c9837c155157186dea7c96c3e2c48
         Type: BaseDataVariableType
         DataType: Float
     - Name: GlueCam05
+      Id: g=cd696f9b8350d0d68d2b5b1a9e106c40
       Type: BaseDataVariableType
-      DataType: UDT_PLS_Cam
+      DataType: Structure
+      Value: 
+       {
+        "Type": 22,
+        "Body": {
+         "TypeId": {
+          "IdType": 0,
+          "Id": 0,
+          "Namespace": -1
+         },
+         "Body":    {}
+        }
+       }
       Children:
       - Name: Description
+        Id: g=455ed33b594c41247aff0879acd09740
         Type: BaseDataVariableType
         DataType: String
       - Name: OnSpeed_Comp
+        Id: g=8a1aefb5303af41036ec6aa14c1d0d20
         Type: BaseDataVariableType
         DataType: Float
       - Name: OffSpeed_Comp
+        Id: g=52cb514b9eb2d91a8b56e5f977a59401
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_1_On
+        Id: g=ece034542bb5be87b68e8730a8d26593
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_1_Off
+        Id: g=1fb756c8bb0f2bf127b848163c62fd0f
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_2_On
+        Id: g=117b438f3f816aa4b59d34cb3008ffb0
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_2_Off
+        Id: g=e4fcf9c82e92902309015b42b925f399
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_3_On
+        Id: g=4bc5778f3ca8c52e2c4e008d017d0a98
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_3_Off
+        Id: g=2ba98ec40c2019f3a30042b1dc0f31aa
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_4_On
+        Id: g=98d33ba24539b0229e0373e046ab81af
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_4_Off
+        Id: g=61921b0a8232fd051cd7d927fa85c63d
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_5_On
+        Id: g=0bfb065b42a205a4421fa7025c0462a3
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_5_Off
+        Id: g=b7dcf33099e3fb7de30be0b9615ae54b
         Type: BaseDataVariableType
         DataType: Float
     - Name: GlueCam06
+      Id: g=e2fbc90aac3d5b2d93c45a5ddcf96f12
       Type: BaseDataVariableType
-      DataType: UDT_PLS_Cam
+      DataType: Structure
+      Value: 
+       {
+        "Type": 22,
+        "Body": {
+         "TypeId": {
+          "IdType": 0,
+          "Id": 0,
+          "Namespace": -1
+         },
+         "Body":    {}
+        }
+       }
       Children:
       - Name: Description
+        Id: g=0d13ad9e9aff084d24c6e5cb25239c01
         Type: BaseDataVariableType
         DataType: String
       - Name: OnSpeed_Comp
+        Id: g=967f09b769353e367f242c5f94ed6928
         Type: BaseDataVariableType
         DataType: Float
       - Name: OffSpeed_Comp
+        Id: g=faf26c559b9fe948f1e075154238a6d3
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_1_On
+        Id: g=b6eb55d54c7319d0016082a66430fc4a
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_1_Off
+        Id: g=a5739b24cd4a5b81fd97ed2abb70b77e
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_2_On
+        Id: g=53612d1c2b169f74a9198c19540b3024
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_2_Off
+        Id: g=65bc965aec0d66bd4407d7ea2fc6d1c7
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_3_On
+        Id: g=7728d65b46b63a4482fa678c1e9fb040
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_3_Off
+        Id: g=e7d383a7c51a3a28910fdf23795ca104
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_4_On
+        Id: g=6da6a3309d9cb3d1b1edb32a6407af85
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_4_Off
+        Id: g=042affcd6a551072679a20fdf690262b
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_5_On
+        Id: g=d2eef4407fda7642976d2b8153786839
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_5_Off
+        Id: g=43d0a887fe3249fca733dba9edcad978
         Type: BaseDataVariableType
         DataType: Float
     - Name: GlueCam07
+      Id: g=ec6a0bd74942f84263f9cab5b02ffab5
       Type: BaseDataVariableType
-      DataType: UDT_PLS_Cam
+      DataType: Structure
+      Value: 
+       {
+        "Type": 22,
+        "Body": {
+         "TypeId": {
+          "IdType": 0,
+          "Id": 0,
+          "Namespace": -1
+         },
+         "Body":    {}
+        }
+       }
       Children:
       - Name: Description
+        Id: g=e916b551f33e678efdfde41194cdfd68
         Type: BaseDataVariableType
         DataType: String
       - Name: OnSpeed_Comp
+        Id: g=99773b1824287023c2839ab8c6219146
         Type: BaseDataVariableType
         DataType: Float
       - Name: OffSpeed_Comp
+        Id: g=389b90d783d9e36bb6a06edd43775d81
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_1_On
+        Id: g=57d26f176f4570527742192ba004c9c2
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_1_Off
+        Id: g=2503c053ecdbbc95361728443e28b3a1
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_2_On
+        Id: g=351fe6ce9b85432926339a8cf5294d04
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_2_Off
+        Id: g=39bbe6bd34cbf392fb83ebb2d4ee4d98
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_3_On
+        Id: g=52031012ce0ebcf046911ec5bd652fdc
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_3_Off
+        Id: g=0a4cc4495348dda67c31d0d69bff0eb0
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_4_On
+        Id: g=856be9d999946459ca6689441bc13729
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_4_Off
+        Id: g=deab8578cb0fc5a32dc4f6021c100b1d
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_5_On
+        Id: g=c1aaae68ebe29c935b77cf1cd36ace83
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_5_Off
+        Id: g=0a3b9a2bd004195884e4f94e96986066
         Type: BaseDataVariableType
         DataType: Float
     - Name: GlueCam08
+      Id: g=19440f7b780e080f9666156f4fc78f2a
       Type: BaseDataVariableType
-      DataType: UDT_PLS_Cam
+      DataType: Structure
+      Value: 
+       {
+        "Type": 22,
+        "Body": {
+         "TypeId": {
+          "IdType": 0,
+          "Id": 0,
+          "Namespace": -1
+         },
+         "Body":    {}
+        }
+       }
       Children:
       - Name: Description
+        Id: g=c22f99db24a2bf42334e987420ff7094
         Type: BaseDataVariableType
         DataType: String
       - Name: OnSpeed_Comp
+        Id: g=0932a93c65f34f7745dd9bf3578a9d72
         Type: BaseDataVariableType
         DataType: Float
       - Name: OffSpeed_Comp
+        Id: g=7aee42ad91a9ea820acd1dd58beada0d
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_1_On
+        Id: g=069c2b9f9b225831ce05820ac900dfc6
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_1_Off
+        Id: g=43cfc0ced8baabe1efb05a4fae0cbfe1
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_2_On
+        Id: g=e9d2ab90811e9d8c9cb1b74f8b5b2c18
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_2_Off
+        Id: g=08ed33c0d534420200c2a40a88a80d02
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_3_On
+        Id: g=ffd47ef383f4d368411384585ac959a7
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_3_Off
+        Id: g=45622eac25f6fcb968a4d0d61c25ee64
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_4_On
+        Id: g=dc4c1b274a31ead72a09569bd94c6928
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_4_Off
+        Id: g=ac1b62a973205dd84ffdfc5c22f60bb8
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_5_On
+        Id: g=3e2ebe8810eee0bd87d38d3142599dc3
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_5_Off
+        Id: g=e484b0a35330dc3b47749ec30a6022e3
         Type: BaseDataVariableType
         DataType: Float
     - Name: TimingCam01
+      Id: g=90e6ececd2f444580c0012ea63cb57fe
       Type: BaseDataVariableType
-      DataType: UDT_PLS_Cam
+      DataType: Structure
+      Value: 
+       {
+        "Type": 22,
+        "Body": {
+         "TypeId": {
+          "IdType": 0,
+          "Id": 0,
+          "Namespace": -1
+         },
+         "Body":    {}
+        }
+       }
       Children:
       - Name: Description
+        Id: g=09145bcd23772886ab558a3e658b2e82
         Type: BaseDataVariableType
         DataType: String
       - Name: OnSpeed_Comp
+        Id: g=8037e96ed346d6ecf4d482a2ee21558e
         Type: BaseDataVariableType
         DataType: Float
       - Name: OffSpeed_Comp
+        Id: g=9ad6a8e89e0efcf052045c8fb9619b4d
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_1_On
+        Id: g=3f411a48a1bdcc074ec99668f5cc8353
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_1_Off
+        Id: g=b9b0af72b77062f93911d2feaa163308
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_2_On
+        Id: g=d6db1d2e62b3862500c36394fcbacf60
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_2_Off
+        Id: g=78ec105b72949859db51bf92cac93f11
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_3_On
+        Id: g=30e8b8279f1746b13b98fc37bc7d4d9c
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_3_Off
+        Id: g=c92ff59328a8f9b907d22d7ecf460f70
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_4_On
+        Id: g=373821c77972db4e1b7ec2e221aa5243
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_4_Off
+        Id: g=bc6fcebc009d55ebce323f318bc64e93
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_5_On
+        Id: g=9dfc9d86431320185219019f749236ec
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_5_Off
+        Id: g=806765252e3ae56e9974e8203410efd0
         Type: BaseDataVariableType
         DataType: Float
     - Name: TimingCam02
+      Id: g=ab7d27ec356905b919bcae8dac09f585
       Type: BaseDataVariableType
-      DataType: UDT_PLS_Cam
+      DataType: Structure
+      Value: 
+       {
+        "Type": 22,
+        "Body": {
+         "TypeId": {
+          "IdType": 0,
+          "Id": 0,
+          "Namespace": -1
+         },
+         "Body":    {}
+        }
+       }
       Children:
       - Name: Description
+        Id: g=bbddde6c003dfda389741f6bea892caf
         Type: BaseDataVariableType
         DataType: String
       - Name: OnSpeed_Comp
+        Id: g=da03936e3331d516124a858f954ba001
         Type: BaseDataVariableType
         DataType: Float
       - Name: OffSpeed_Comp
+        Id: g=5755804f827f77077357f1463f8df77e
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_1_On
+        Id: g=7a2cf3e8e8a8da5f051ae2a7dd25a146
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_1_Off
+        Id: g=939418b5d7d93034e6de7d76020936cc
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_2_On
+        Id: g=b21b650a3be05eaef40ee16367f1a3ad
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_2_Off
+        Id: g=24fefd597861bdf63d4f1fd69d08c668
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_3_On
+        Id: g=3eb96243071101a7b0f8ca5cbaf4c624
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_3_Off
+        Id: g=0f42e18aeff447ed6769597fadb2e3b0
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_4_On
+        Id: g=a4d717b6cf05e72a420db8f4663a492e
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_4_Off
+        Id: g=0a79dab7bbca771c3f567bf959f30039
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_5_On
+        Id: g=9e14f7c04381a3e90848abe346347bf4
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_5_Off
+        Id: g=fe8e3e5db4fb9799ba4fec4da3f5e0f9
         Type: BaseDataVariableType
         DataType: Float
     - Name: TimingCam03
+      Id: g=b021457c48aaee1696c6065ce30692f4
       Type: BaseDataVariableType
-      DataType: UDT_PLS_Cam
+      DataType: Structure
+      Value: 
+       {
+        "Type": 22,
+        "Body": {
+         "TypeId": {
+          "IdType": 0,
+          "Id": 0,
+          "Namespace": -1
+         },
+         "Body":    {}
+        }
+       }
       Children:
       - Name: Description
+        Id: g=054ed1c91e2915addbd50d8062f6c343
         Type: BaseDataVariableType
         DataType: String
       - Name: OnSpeed_Comp
+        Id: g=e278d692fb64efc232f2d527eafb8a8f
         Type: BaseDataVariableType
         DataType: Float
       - Name: OffSpeed_Comp
+        Id: g=1642d2d56b0635842ba673b0fccafe6b
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_1_On
+        Id: g=a6a36eeacb6b06d54eff653ba7a0e7de
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_1_Off
+        Id: g=5e670f1e35fb04c0ab2eb31ef81d9426
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_2_On
+        Id: g=b55ff348bcd37b9d98d4b7d2d529ffb8
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_2_Off
+        Id: g=f47a273ebf4e93816c2a87bb1e976bf3
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_3_On
+        Id: g=8fd74e36fe6f4403320a68f4d44468af
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_3_Off
+        Id: g=e577f148cac1597bc5db19240613cc13
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_4_On
+        Id: g=77459600672cf414ee2f23749a08aed7
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_4_Off
+        Id: g=ed0b458596ee63133019fd449c353826
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_5_On
+        Id: g=3bc703b897b7245d9f7ce5c7b7761ba8
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_5_Off
+        Id: g=c3652ff5b3744a3dd5939f7ef51a630e
         Type: BaseDataVariableType
         DataType: Float
     - Name: TimingCam04
+      Id: g=44327cdcb3e14dd1b53a28bd684503ae
       Type: BaseDataVariableType
-      DataType: UDT_PLS_Cam
+      DataType: Structure
+      Value: 
+       {
+        "Type": 22,
+        "Body": {
+         "TypeId": {
+          "IdType": 0,
+          "Id": 0,
+          "Namespace": -1
+         },
+         "Body":    {}
+        }
+       }
       Children:
       - Name: Description
+        Id: g=b2c28eae988a0791a8a95a1756837942
         Type: BaseDataVariableType
         DataType: String
       - Name: OnSpeed_Comp
+        Id: g=369379cfecc0b0720cc5be0a6e02bc63
         Type: BaseDataVariableType
         DataType: Float
       - Name: OffSpeed_Comp
+        Id: g=95ea075976f358cc4f0fee9612791a36
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_1_On
+        Id: g=bca380b256167130cd93a6217a05b524
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_1_Off
+        Id: g=218f7be467ab684d4cba6a115be33e5e
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_2_On
+        Id: g=14d78b5faa91d980a3bee47e7f181692
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_2_Off
+        Id: g=dba22483731841d8fda1616b4169baa3
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_3_On
+        Id: g=aa79c5be63bce8c4f040f348e5666ae8
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_3_Off
+        Id: g=cfb22848dd008178f6c464cef3a8393d
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_4_On
+        Id: g=016e2ad4348dd564f4ff304f2a90e2f1
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_4_Off
+        Id: g=f77f9d1fcd499ec074e55af0b816d095
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_5_On
+        Id: g=d2561dd394a54105709638390f33a85e
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_5_Off
+        Id: g=37921375a7d44e43e178902d843313d7
         Type: BaseDataVariableType
         DataType: Float
     - Name: TimingCam05
+      Id: g=c26b76947866df7683f488b6592e5811
       Type: BaseDataVariableType
-      DataType: UDT_PLS_Cam
+      DataType: Structure
+      Value: 
+       {
+        "Type": 22,
+        "Body": {
+         "TypeId": {
+          "IdType": 0,
+          "Id": 0,
+          "Namespace": -1
+         },
+         "Body":    {}
+        }
+       }
       Children:
       - Name: Description
+        Id: g=7c3f19a42242dad12b3ab4340c32b4a1
         Type: BaseDataVariableType
         DataType: String
       - Name: OnSpeed_Comp
+        Id: g=453d8e7776ad280d72f0d974489bd1c3
         Type: BaseDataVariableType
         DataType: Float
       - Name: OffSpeed_Comp
+        Id: g=97ef5c9e5d5d311f9f2dead69373ec5e
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_1_On
+        Id: g=55078e5ba894b68a25b3f87bfab80870
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_1_Off
+        Id: g=bfdaba95d1f206af244aa7122bd5c469
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_2_On
+        Id: g=8e7a38768bf359ac83ad58b46d060c31
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_2_Off
+        Id: g=1b8e4ae1dbd87b503da74b2d63d9d433
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_3_On
+        Id: g=0b58c33d67e974f93ce18b0f7a368283
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_3_Off
+        Id: g=45186ecd4b1c6697285663e444889857
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_4_On
+        Id: g=cd0cb4ee78ae990ec7e22893b72a921f
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_4_Off
+        Id: g=44eda849572139bd00ea2607be9f93f4
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_5_On
+        Id: g=6337ae447c4f5ec23662ba7b8bbe1336
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_5_Off
+        Id: g=09c3935edd7ad049b9b5eba306ef5d7a
         Type: BaseDataVariableType
         DataType: Float
     - Name: TimingCam06
+      Id: g=ca954c590dd275ce565fe12561a6c088
       Type: BaseDataVariableType
-      DataType: UDT_PLS_Cam
+      DataType: Structure
+      Value: 
+       {
+        "Type": 22,
+        "Body": {
+         "TypeId": {
+          "IdType": 0,
+          "Id": 0,
+          "Namespace": -1
+         },
+         "Body":    {}
+        }
+       }
       Children:
       - Name: Description
+        Id: g=80315e6fe351963e5bae573290f6d73e
         Type: BaseDataVariableType
         DataType: String
       - Name: OnSpeed_Comp
+        Id: g=98243ceab03170a83072ade7ab1224c7
         Type: BaseDataVariableType
         DataType: Float
       - Name: OffSpeed_Comp
+        Id: g=be758b3c6d6ef5a1a4124c0dcdee8df7
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_1_On
+        Id: g=9cfd3c4182d472971658eeb52b05ec1c
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_1_Off
+        Id: g=617c3e96232300489224cc5892c91258
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_2_On
+        Id: g=53c69ff9114f7ced60ca8215df3fd260
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_2_Off
+        Id: g=a4f3cdf189c3bd331c398ab3293498ec
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_3_On
+        Id: g=2b478300a5452fd281aba6cb9c7e062d
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_3_Off
+        Id: g=a609922ba210783d9c2fdf53bf0996b9
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_4_On
+        Id: g=f13843c8150d97816e77164d51758beb
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_4_Off
+        Id: g=c1ab72ed435dfa4ec40f2f388b3c75a1
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_5_On
+        Id: g=54f4b48d8d7ced19630f1cb0fc39bccf
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_5_Off
+        Id: g=035f5aa72605275bc9293184d46edbb2
         Type: BaseDataVariableType
         DataType: Float
     - Name: TimingCam07
+      Id: g=633c5e198baec0136856d5bf5d9d77ec
       Type: BaseDataVariableType
-      DataType: UDT_PLS_Cam
+      DataType: Structure
+      Value: 
+       {
+        "Type": 22,
+        "Body": {
+         "TypeId": {
+          "IdType": 0,
+          "Id": 0,
+          "Namespace": -1
+         },
+         "Body":    {}
+        }
+       }
       Children:
       - Name: Description
+        Id: g=bc1d37c8a155f29926db8332041dc37f
         Type: BaseDataVariableType
         DataType: String
       - Name: OnSpeed_Comp
+        Id: g=28739a942624235f3fd3930d41a89cd3
         Type: BaseDataVariableType
         DataType: Float
       - Name: OffSpeed_Comp
+        Id: g=b790146a360a32c091b86df7cf1d8fad
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_1_On
+        Id: g=37a3801bd8bcbd41cb8c8869bfce08f9
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_1_Off
+        Id: g=908c45b9c3ac40229428246a0c8f8b0a
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_2_On
+        Id: g=2753e50cf7d182c701272f98df1a55dc
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_2_Off
+        Id: g=cb08b4eed8abac927068d031b1d187cb
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_3_On
+        Id: g=2c07895ffc36a1a6e024d3b876269d0f
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_3_Off
+        Id: g=6515f3fdd62f36f9aff35526ed711e4d
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_4_On
+        Id: g=43d1f05a80527d6730d9e8af331afde9
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_4_Off
+        Id: g=038f1c181e3c9e0d9b57b9b8f1d04bef
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_5_On
+        Id: g=bd0115c3482fee07edaf33468793ffe7
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_5_Off
+        Id: g=983ad55118e3bfc5f4116efea6b82937
         Type: BaseDataVariableType
         DataType: Float
     - Name: TimingCam08
+      Id: g=552c67e38ecd03294894f2be928ff30c
       Type: BaseDataVariableType
-      DataType: UDT_PLS_Cam
+      DataType: Structure
+      Value: 
+       {
+        "Type": 22,
+        "Body": {
+         "TypeId": {
+          "IdType": 0,
+          "Id": 0,
+          "Namespace": -1
+         },
+         "Body":    {}
+        }
+       }
       Children:
       - Name: Description
+        Id: g=97dff1a580913dd92e8474e63c43cb30
         Type: BaseDataVariableType
         DataType: String
       - Name: OnSpeed_Comp
+        Id: g=050d25f1ea6a505ce21a61cda8108058
         Type: BaseDataVariableType
         DataType: Float
       - Name: OffSpeed_Comp
+        Id: g=d35166ad8ac0502e19e1cc39d775ae7a
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_1_On
+        Id: g=ca32bbb3343457c7072cbd53818eda0e
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_1_Off
+        Id: g=1b842427810e35cba11ef31e87d48037
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_2_On
+        Id: g=1fae3d4d91d69d5638bf2ec7995ac4fd
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_2_Off
+        Id: g=5b1def0142fc8c9811c009286b51d158
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_3_On
+        Id: g=b482440df9c15a0ad7cfcd6e580b4e88
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_3_Off
+        Id: g=646b85978548ea9c419f2e73388832a3
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_4_On
+        Id: g=bdb0459995ebca1c1907ce58fab37dda
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_4_Off
+        Id: g=46559148698a7eaec40c537f96111279
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_5_On
+        Id: g=7032c61d601f5653c1313665861c819e
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_5_Off
+        Id: g=8632d271b4155e2e347aa21637b15887
         Type: BaseDataVariableType
         DataType: Float
     - Name: TimingCam09
+      Id: g=3150bb8bb26ee8874e8b3703d7040248
       Type: BaseDataVariableType
-      DataType: UDT_PLS_Cam
+      DataType: Structure
+      Value: 
+       {
+        "Type": 22,
+        "Body": {
+         "TypeId": {
+          "IdType": 0,
+          "Id": 0,
+          "Namespace": -1
+         },
+         "Body":    {}
+        }
+       }
       Children:
       - Name: Description
+        Id: g=4056b3ce7338c7308207d301e2d3ecec
         Type: BaseDataVariableType
         DataType: String
       - Name: OnSpeed_Comp
+        Id: g=70e9b74781644a674164e138091b8bb6
         Type: BaseDataVariableType
         DataType: Float
       - Name: OffSpeed_Comp
+        Id: g=a1d2721b57bd70f3b43a954b9ea6ab9c
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_1_On
+        Id: g=1b05b3ac7ed3974b0fdf6cad111eb428
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_1_Off
+        Id: g=78b1b0d173d1b0d2513a1b1fe8c92972
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_2_On
+        Id: g=1e4ab9f446ba830171a1760cd0630553
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_2_Off
+        Id: g=068c5050077bc6059971042790aa4724
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_3_On
+        Id: g=c1057d39b55c1ad048b9008a37b1d03a
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_3_Off
+        Id: g=38a7ae335ab47d9f9b22d1c993bd109d
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_4_On
+        Id: g=5aeb0ac1fd02cfefc4e0d2bd2cd93980
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_4_Off
+        Id: g=8bee63a111041d91c5f7afa47af205a8
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_5_On
+        Id: g=a72f32541f8a77057dd2c0f560a6ce89
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_5_Off
+        Id: g=d5af5880ecddb2f87e7737022a24416c
         Type: BaseDataVariableType
         DataType: Float
     - Name: TimingCam10
+      Id: g=91b9fa385de801d7f638184818a9739e
       Type: BaseDataVariableType
-      DataType: UDT_PLS_Cam
+      DataType: Structure
+      Value: 
+       {
+        "Type": 22,
+        "Body": {
+         "TypeId": {
+          "IdType": 0,
+          "Id": 0,
+          "Namespace": -1
+         },
+         "Body":    {}
+        }
+       }
       Children:
       - Name: Description
+        Id: g=087b15b96cdc9d3eb0791a899286eccb
         Type: BaseDataVariableType
         DataType: String
       - Name: OnSpeed_Comp
+        Id: g=8970b76afa999addd268864cbd75842c
         Type: BaseDataVariableType
         DataType: Float
       - Name: OffSpeed_Comp
+        Id: g=b4560a698b3c885eabfd2e264d59ddc1
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_1_On
+        Id: g=f5f6329505dbe545517adade3c700eab
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_1_Off
+        Id: g=05cbd2b01459a3c6bd195b452b5b0cfa
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_2_On
+        Id: g=487b1350e9c7c5392bbd8fcdcdffc2e9
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_2_Off
+        Id: g=dd845e70e03ab47ee7cd90e9b99aec74
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_3_On
+        Id: g=34506349b4d7ef9e0d015c399b60fafa
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_3_Off
+        Id: g=bbc25dd25780806ddb937bbb1202d548
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_4_On
+        Id: g=2178b36c5973e669ca2d398775d276e2
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_4_Off
+        Id: g=11fa06686080739bd838969a2435fbe0
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_5_On
+        Id: g=05b960b5728c95bef38a96c0de5aaad6
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_5_Off
+        Id: g=c8d8bc9f113dc515eef9b672db955bb3
         Type: BaseDataVariableType
         DataType: Float
     - Name: TimingCam11
+      Id: g=441aba42a7abdeb23f373bf23c319b80
       Type: BaseDataVariableType
-      DataType: UDT_PLS_Cam
+      DataType: Structure
+      Value: 
+       {
+        "Type": 22,
+        "Body": {
+         "TypeId": {
+          "IdType": 0,
+          "Id": 0,
+          "Namespace": -1
+         },
+         "Body":    {}
+        }
+       }
       Children:
       - Name: Description
+        Id: g=c3c1c7ebc0dcd947e43e6d5a613adf15
         Type: BaseDataVariableType
         DataType: String
       - Name: OnSpeed_Comp
+        Id: g=b3394621d81ab30a8ff88e72fdcb0f15
         Type: BaseDataVariableType
         DataType: Float
       - Name: OffSpeed_Comp
+        Id: g=800cad42233f31d8923faa965d54b0ac
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_1_On
+        Id: g=4248a4028c3a185c7e223124635eed20
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_1_Off
+        Id: g=1f8d44e969cd6ff3849de63f38716cde
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_2_On
+        Id: g=628f8936e340245fa4d80d6d19c57a4a
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_2_Off
+        Id: g=9cd55c0fd1140e0776744d196aecc67d
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_3_On
+        Id: g=c2f5938683a032eb8b2bad0da11d2550
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_3_Off
+        Id: g=70c746c77e1603c9e242f420646ef5f9
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_4_On
+        Id: g=e39d76974ad5ae1ca1db56736dac9532
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_4_Off
+        Id: g=529cfb31a3af689537041417e2c4f62a
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_5_On
+        Id: g=46b855c7c0591d13f84e7c97b6a44ee3
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_5_Off
+        Id: g=d1314f0d59da0a950c450e330a4b5034
         Type: BaseDataVariableType
         DataType: Float
     - Name: TimingCam12
+      Id: g=b02c637932059bd7ec12f0c9ce7d9ad6
       Type: BaseDataVariableType
-      DataType: UDT_PLS_Cam
+      DataType: Structure
+      Value: 
+       {
+        "Type": 22,
+        "Body": {
+         "TypeId": {
+          "IdType": 0,
+          "Id": 0,
+          "Namespace": -1
+         },
+         "Body":    {}
+        }
+       }
       Children:
       - Name: Description
+        Id: g=54dc395383564214b28db7525b80e9e3
         Type: BaseDataVariableType
         DataType: String
       - Name: OnSpeed_Comp
+        Id: g=311f501cebcef6da05e900c082823d95
         Type: BaseDataVariableType
         DataType: Float
       - Name: OffSpeed_Comp
+        Id: g=468ab18b02be9392c75a7b1e2b3434c5
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_1_On
+        Id: g=fe7cb62b78be2cedda7c224b0aebfbe0
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_1_Off
+        Id: g=9c1a497c54b18c21896b98dc82eca0c4
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_2_On
+        Id: g=a9311a061494ea847f487edb0f7053ed
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_2_Off
+        Id: g=65b2698af765f193c815b52680bd5cad
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_3_On
+        Id: g=c013959c3528ede85db621aef7907dda
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_3_Off
+        Id: g=4638cd0cb138c8db8dcd7ccbec477249
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_4_On
+        Id: g=92c5559b456bd5d0dd051f2788c83d3d
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_4_Off
+        Id: g=cbf2168ab05449dc314eb88e13476528
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_5_On
+        Id: g=e46cb4037b48aee27fbf61ff641a50dc
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_5_Off
+        Id: g=6ee6414c5c5936711e16ae374d26db62
         Type: BaseDataVariableType
         DataType: Float
     - Name: TimingCam13
+      Id: g=a9219dd8679f5b9d97c738c2118ab7fe
       Type: BaseDataVariableType
-      DataType: UDT_PLS_Cam
+      DataType: Structure
+      Value: 
+       {
+        "Type": 22,
+        "Body": {
+         "TypeId": {
+          "IdType": 0,
+          "Id": 0,
+          "Namespace": -1
+         },
+         "Body":    {}
+        }
+       }
       Children:
       - Name: Description
+        Id: g=592d976204930e39c2e6db2653839b1b
         Type: BaseDataVariableType
         DataType: String
       - Name: OnSpeed_Comp
+        Id: g=f20848dfefb01bf3aaa6fcc5acd25a35
         Type: BaseDataVariableType
         DataType: Float
       - Name: OffSpeed_Comp
+        Id: g=348e259b412737881d8ef265b61b1702
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_1_On
+        Id: g=a839bbee70a9251390611385643de6c1
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_1_Off
+        Id: g=445993c9a3730bf26d6dd70d2aa385df
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_2_On
+        Id: g=6a1ded2a986b3f5810faae7bd80e7508
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_2_Off
+        Id: g=52c8fc6aaf817bd2a116a41bcb62d3e4
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_3_On
+        Id: g=b3dded90a950bf3d0e717e67eb5538ae
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_3_Off
+        Id: g=3729709daa69fc661420c1c759d9beb9
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_4_On
+        Id: g=a37dbe297a924cb255a8801d9db9ed71
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_4_Off
+        Id: g=0fe4afb3906a17dea085a0a5d0f40c6a
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_5_On
+        Id: g=d511ed108a80717f215644e6a73ba425
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_5_Off
+        Id: g=0a6064ba01981c5f0057600a2297d451
         Type: BaseDataVariableType
         DataType: Float
     - Name: TimingCam14
+      Id: g=8d7beb9b03e19f5dce278b4dc5d57471
       Type: BaseDataVariableType
-      DataType: UDT_PLS_Cam
+      DataType: Structure
+      Value: 
+       {
+        "Type": 22,
+        "Body": {
+         "TypeId": {
+          "IdType": 0,
+          "Id": 0,
+          "Namespace": -1
+         },
+         "Body":    {}
+        }
+       }
       Children:
       - Name: Description
+        Id: g=03dd4887122486fc11374e6bd2cbdb83
         Type: BaseDataVariableType
         DataType: String
       - Name: OnSpeed_Comp
+        Id: g=78385bfc88385e4f5aca639d65b2626a
         Type: BaseDataVariableType
         DataType: Float
       - Name: OffSpeed_Comp
+        Id: g=2141ee2afa34f0faae4835f698a675e4
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_1_On
+        Id: g=bae419542c77be52ef64c4bbf78a27d9
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_1_Off
+        Id: g=29f78d59a7309df95b670d116cd20f42
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_2_On
+        Id: g=7c2dc80f2dc47c04f8bdb5ab9fded62a
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_2_Off
+        Id: g=f1db2bb346c579a7587d84d24821702d
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_3_On
+        Id: g=1dc90fbcd508eec6f695e1499a5c752a
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_3_Off
+        Id: g=ca2aeba8529e571668ffc7ea03670120
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_4_On
+        Id: g=9870e300a00065a78c7ba53fda6b457b
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_4_Off
+        Id: g=daf078f7e9362422ff52602404656e9c
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_5_On
+        Id: g=9895a921e4f6678163a36e9223d8f68b
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_5_Off
+        Id: g=745dc2262b64922b1382bcb59cbcb67d
         Type: BaseDataVariableType
         DataType: Float
     - Name: TimingCam15
+      Id: g=cf3e88fa21a5158fdd0f6b4f47026c67
       Type: BaseDataVariableType
-      DataType: UDT_PLS_Cam
+      DataType: Structure
+      Value: 
+       {
+        "Type": 22,
+        "Body": {
+         "TypeId": {
+          "IdType": 0,
+          "Id": 0,
+          "Namespace": -1
+         },
+         "Body":    {}
+        }
+       }
       Children:
       - Name: Description
+        Id: g=4146d599f6f04f77cfe32223b4c59386
         Type: BaseDataVariableType
         DataType: String
       - Name: OnSpeed_Comp
+        Id: g=6f83e648c922e9d08341b5b45f9a4bc8
         Type: BaseDataVariableType
         DataType: Float
       - Name: OffSpeed_Comp
+        Id: g=190f1a349d1774dc87ecbb07851e83a4
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_1_On
+        Id: g=6db153060c649da16934ee51ec915590
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_1_Off
+        Id: g=41d98507d1b2c864c5e976f2ebe801b8
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_2_On
+        Id: g=f51c87bb6e1ff613a195bfae754bc6be
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_2_Off
+        Id: g=6a39573f10e34264dedcf8a4455a4c92
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_3_On
+        Id: g=cb188e4371b7414037c890cb17075382
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_3_Off
+        Id: g=51b20d5d8858aa91267b8b5e64b684ad
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_4_On
+        Id: g=dc1f61001e54082d1a913b26b890c368
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_4_Off
+        Id: g=5e0122cec122f8c01f9625d074cd9449
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_5_On
+        Id: g=dd78014fee2eed8acd219a561792403d
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_5_Off
+        Id: g=24ce73d9c9ff3250798c9373a89ee766
         Type: BaseDataVariableType
         DataType: Float
     - Name: TimingCam16
+      Id: g=64e548e6ed4dab6a36f0db05a24fcf31
       Type: BaseDataVariableType
-      DataType: UDT_PLS_Cam
+      DataType: Structure
+      Value: 
+       {
+        "Type": 22,
+        "Body": {
+         "TypeId": {
+          "IdType": 0,
+          "Id": 0,
+          "Namespace": -1
+         },
+         "Body":    {}
+        }
+       }
       Children:
       - Name: Description
+        Id: g=e3294f9abffa9ee9c30cafd435dfda11
         Type: BaseDataVariableType
         DataType: String
       - Name: OnSpeed_Comp
+        Id: g=1fc0ab395f2a9ed0bf99a980de99a2a3
         Type: BaseDataVariableType
         DataType: Float
       - Name: OffSpeed_Comp
+        Id: g=d55e7646a2a746518a4b7720a1bf528d
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_1_On
+        Id: g=7e01c6256ba22d78044fe6e5aee86851
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_1_Off
+        Id: g=26876c85de8ea027c31b1863b8b185c1
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_2_On
+        Id: g=77a6b2720f48c3726272efe134a80644
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_2_Off
+        Id: g=b07ac808c692a024b1e3317adbc8a6db
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_3_On
+        Id: g=2b2fbb105a37db02c5360c31c4c59174
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_3_Off
+        Id: g=a46d02e34833fc41c78282428510320d
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_4_On
+        Id: g=8eac5a52d40d667e163a73d2e54bfc3c
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_4_Off
+        Id: g=abb1e629e2a7c7faa69efa237bd38deb
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_5_On
+        Id: g=169a5a08d24d3fd0a29aaceb570591a7
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_5_Off
+        Id: g=0ac70abb3f32c36a0da5c7758564c9c3
         Type: BaseDataVariableType
         DataType: Float
     - Name: TimingCam17
+      Id: g=933c3313b6703165789cf4c82850a03d
       Type: BaseDataVariableType
-      DataType: UDT_PLS_Cam
+      DataType: Structure
+      Value: 
+       {
+        "Type": 22,
+        "Body": {
+         "TypeId": {
+          "IdType": 0,
+          "Id": 0,
+          "Namespace": -1
+         },
+         "Body":    {}
+        }
+       }
       Children:
       - Name: Description
+        Id: g=6259cb1d9d5bcffbde252ece257a23b1
         Type: BaseDataVariableType
         DataType: String
       - Name: OnSpeed_Comp
+        Id: g=af84060745e703d4aa50e5da240b10b6
         Type: BaseDataVariableType
         DataType: Float
       - Name: OffSpeed_Comp
+        Id: g=435228ef25556ddd27eacb4e85471b40
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_1_On
+        Id: g=0c669f072b12302bd7e30e1813f38345
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_1_Off
+        Id: g=bfd9a684ad433b6f7aa78828ebc00b32
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_2_On
+        Id: g=a758ec1fc95596788a8686cac9f48dbe
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_2_Off
+        Id: g=2b1938093637dcb20d319baf9c009633
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_3_On
+        Id: g=a64d55497b158f22504f1a1cb0f3cd3f
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_3_Off
+        Id: g=a4457ed6e02059addde9bd0d5d0cc809
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_4_On
+        Id: g=decb878293b63bf30ec6435a7d7a10b5
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_4_Off
+        Id: g=e279734bc0af01c5c069cc922844b748
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_5_On
+        Id: g=d281cffef6dad31a37cbf1e1c797e2bc
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_5_Off
+        Id: g=42ffab8f64b023214043363d7e6acc2f
         Type: BaseDataVariableType
         DataType: Float
     - Name: TimingCam18
+      Id: g=e86185ed6171269b0029e673937b9a3f
       Type: BaseDataVariableType
-      DataType: UDT_PLS_Cam
+      DataType: Structure
+      Value: 
+       {
+        "Type": 22,
+        "Body": {
+         "TypeId": {
+          "IdType": 0,
+          "Id": 0,
+          "Namespace": -1
+         },
+         "Body":    {}
+        }
+       }
       Children:
       - Name: Description
+        Id: g=a7e3a06ca51bfe6fd43ffeaec9d39365
         Type: BaseDataVariableType
         DataType: String
       - Name: OnSpeed_Comp
+        Id: g=ff9f4260598b4a0a5408495fc074645a
         Type: BaseDataVariableType
         DataType: Float
       - Name: OffSpeed_Comp
+        Id: g=3ffe0f7b7c039c2815f8994c80061e44
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_1_On
+        Id: g=7de568a9903871df33973c99f35722b8
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_1_Off
+        Id: g=e34a40ba3a4c5e3d804d48765cbf4690
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_2_On
+        Id: g=6f4325bc31b76549e6467d30e61b819b
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_2_Off
+        Id: g=ee2d7643b59f68b29f834a0a2f481589
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_3_On
+        Id: g=e09a6c2910fbb83d7a05c1a89495a741
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_3_Off
+        Id: g=bcbe1f64e2cdfb7205561afaf9969957
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_4_On
+        Id: g=954063cb5636c33ade127e81c96a3ab4
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_4_Off
+        Id: g=d4449a164a96f9c29250165034dbcba9
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_5_On
+        Id: g=116eee451db806d4b35b2c4471f5faf3
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_5_Off
+        Id: g=eaa6b9a166954b8f1695a748fd09b6ea
         Type: BaseDataVariableType
         DataType: Float
     - Name: TimingCam19
+      Id: g=3a37c9d72597ee61ca0b3e909782867e
       Type: BaseDataVariableType
-      DataType: UDT_PLS_Cam
+      DataType: Structure
+      Value: 
+       {
+        "Type": 22,
+        "Body": {
+         "TypeId": {
+          "IdType": 0,
+          "Id": 0,
+          "Namespace": -1
+         },
+         "Body":    {}
+        }
+       }
       Children:
       - Name: Description
+        Id: g=ba26ddefcea50c03ad1f368d20378d8b
         Type: BaseDataVariableType
         DataType: String
       - Name: OnSpeed_Comp
+        Id: g=28a1818814b684e1a332dbdd73a44650
         Type: BaseDataVariableType
         DataType: Float
       - Name: OffSpeed_Comp
+        Id: g=91c87da44b1763ca55e0b310e39c6fb8
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_1_On
+        Id: g=afb7d028a0acc7196116837364c0c11e
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_1_Off
+        Id: g=6f35464ad2eac205639769872a4ef312
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_2_On
+        Id: g=7b52b84b32c46a25c0ad9cbc87d6cd9a
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_2_Off
+        Id: g=4981affa916e11715f54cf4286260ea5
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_3_On
+        Id: g=987613581a0ab9477297e148066a76a3
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_3_Off
+        Id: g=3dd585d305dc4b7b645ab44fdd394c3f
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_4_On
+        Id: g=f65f2c7519e54fff3eb812e5bb02c9aa
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_4_Off
+        Id: g=fd938a819f0437afabf8978f3ccb5fe7
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_5_On
+        Id: g=0388d2421fc1bd620dc539695f28356d
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_5_Off
+        Id: g=b7d7e58d389140a89cadcd93b0de3d94
         Type: BaseDataVariableType
         DataType: Float
     - Name: TimingCam20
+      Id: g=3a0572e28ffcae58563357c2be30df1c
       Type: BaseDataVariableType
-      DataType: UDT_PLS_Cam
+      DataType: Structure
+      Value: 
+       {
+        "Type": 22,
+        "Body": {
+         "TypeId": {
+          "IdType": 0,
+          "Id": 0,
+          "Namespace": -1
+         },
+         "Body":    {}
+        }
+       }
       Children:
       - Name: Description
+        Id: g=861183be03eaf2ee22dc0068698081d7
         Type: BaseDataVariableType
         DataType: String
       - Name: OnSpeed_Comp
+        Id: g=77cf557e4622bd71c5d30e755c7bbe42
         Type: BaseDataVariableType
         DataType: Float
       - Name: OffSpeed_Comp
+        Id: g=98c19dcb34a6bdaa4e28c3c55ede7143
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_1_On
+        Id: g=ef97f20d0d1edafa78c93c84b9c7f9c4
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_1_Off
+        Id: g=f83a4332066904a819b186aae90a9079
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_2_On
+        Id: g=6d6da64ac21af5ace1e6a14d82751d91
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_2_Off
+        Id: g=06247a4bf91f4dcc4dcbce03435613f9
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_3_On
+        Id: g=cc46d015164162c17a7c411ad0ec2a56
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_3_Off
+        Id: g=e6460873aa787bf373e62a43a37aa332
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_4_On
+        Id: g=3c4119bb00088fe6d767b6ecb70490f2
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_4_Off
+        Id: g=43ea3725c742c4a202b1a9e793dfe004
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_5_On
+        Id: g=054d1b36ed7695ff771b660b9fe590dc
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_5_Off
+        Id: g=59a3c54d46c1999c821d46814b18af95
         Type: BaseDataVariableType
         DataType: Float
     - Name: TimingCam21
+      Id: g=ee64afd2155d6aabf80bf476f60ea5db
       Type: BaseDataVariableType
-      DataType: UDT_PLS_Cam
+      DataType: Structure
+      Value: 
+       {
+        "Type": 22,
+        "Body": {
+         "TypeId": {
+          "IdType": 0,
+          "Id": 0,
+          "Namespace": -1
+         },
+         "Body":    {}
+        }
+       }
       Children:
       - Name: Description
+        Id: g=700e1d9d1389baaa798ac85d3713443f
         Type: BaseDataVariableType
         DataType: String
       - Name: OnSpeed_Comp
+        Id: g=51e0000435e614c90f6357bd35afaa60
         Type: BaseDataVariableType
         DataType: Float
       - Name: OffSpeed_Comp
+        Id: g=33d72e93e8f53bde62e2dbce070bd687
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_1_On
+        Id: g=0a95ecd56e506ecd422dd975bb0166cb
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_1_Off
+        Id: g=6373f526d15196c0a06a00ff7c293bab
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_2_On
+        Id: g=badef01a467cf30e81e72234fc22cd23
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_2_Off
+        Id: g=12f73859b524600706280205f0cc1634
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_3_On
+        Id: g=d31cad9a00d48576d6e51aaefac0405b
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_3_Off
+        Id: g=7c50e0be28d245aa6b74cf7001f0642f
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_4_On
+        Id: g=8323aff9e8febb0a9232f9584a7a3ea4
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_4_Off
+        Id: g=9e16ddf8dc9653c0c70ca92b42867ded
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_5_On
+        Id: g=849113d89c756a3aad9ec52b3bfbaf12
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_5_Off
+        Id: g=bff19d81720585e9c12002e0cb357fd6
         Type: BaseDataVariableType
         DataType: Float
     - Name: TimingCam22
+      Id: g=95c6ec9ea9600b711a15f9dba52ad278
       Type: BaseDataVariableType
-      DataType: UDT_PLS_Cam
+      DataType: Structure
+      Value: 
+       {
+        "Type": 22,
+        "Body": {
+         "TypeId": {
+          "IdType": 0,
+          "Id": 0,
+          "Namespace": -1
+         },
+         "Body":    {}
+        }
+       }
       Children:
       - Name: Description
+        Id: g=2d1afa115c0fb8e852a9f2a7399d9467
         Type: BaseDataVariableType
         DataType: String
       - Name: OnSpeed_Comp
+        Id: g=b226a4db4c397ade1e4c0ffbd3e5b6e1
         Type: BaseDataVariableType
         DataType: Float
       - Name: OffSpeed_Comp
+        Id: g=7497c3f3de8a5e0181f325fd09c0685e
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_1_On
+        Id: g=1f9235356cb36a0366a45f007af5c390
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_1_Off
+        Id: g=84de777bce9b438a70b39c9b5b464280
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_2_On
+        Id: g=e46809fd0a7077b4186a203c01117c55
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_2_Off
+        Id: g=def18a41400a190429d90c83ebcbfc77
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_3_On
+        Id: g=edbe9827e7d18fd4b329400180e3782b
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_3_Off
+        Id: g=9ba5fdd1156af3e90eeb37f7e62e0561
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_4_On
+        Id: g=0a1dfc156702a4faa08ef6100b74ff03
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_4_Off
+        Id: g=a7db88d26c88d3cbf7d228ecda2d1955
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_5_On
+        Id: g=381b8d309ffa2c07261c9d55ae0e9d5c
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_5_Off
+        Id: g=19a64cb9fedb4919f187ed998550a0c1
         Type: BaseDataVariableType
         DataType: Float
     - Name: Axis02LeadingLugThickness
+      Id: g=0ddc566b9358a7168bf9d4d0123a26aa
       Type: BaseDataVariableType
       DataType: Float
     - Name: Axis02Offset
+      Id: g=d1b91e42a38869180440656bbb7a6184
       Type: BaseDataVariableType
       DataType: Float
     - Name: Axis03Offset
+      Id: g=41f31b64c7e655dc384839d9bd2d7e80
       Type: BaseDataVariableType
       DataType: Int16
     - Name: Axis04Offset
+      Id: g=4a7be74c837a7e3e40ffed3c5c33f966
       Type: BaseDataVariableType
       DataType: Float
     - Name: Axis05Offset
+      Id: g=ee1c295e06455ab81f5e8b2b2274f63f
       Type: BaseDataVariableType
       DataType: Int16
     - Name: Axis06Offset
+      Id: g=4d5e60416965f8852963c04833bea8ff
       Type: BaseDataVariableType
       DataType: Int16
     - Name: Axis07Offset
+      Id: g=505db3d90aeed5cd1a86eb7b627fcbf7
       Type: BaseDataVariableType
       DataType: Int16
     - Name: Axis08Offset
+      Id: g=5a01c594610da6b6e90dc99ea264734a
       Type: BaseDataVariableType
       DataType: Int16
     - Name: Axis09Offset
+      Id: g=dfb4c7ae36b0fe5de1208ed9d218ec6d
       Type: BaseDataVariableType
       DataType: Int16
     - Name: Axis10Offset
+      Id: g=290ff725e0c75cafccb25438e1f48813
       Type: BaseDataVariableType
       DataType: Int16
     - Name: Axis11Offset
+      Id: g=22af9179943e72c778e34fd4fa12f1bb
       Type: BaseDataVariableType
       DataType: Float
     - Name: Axis12Offset
+      Id: g=1aac9305fac3d42d669ddf8cb8467701
       Type: BaseDataVariableType
       DataType: Float
     - Name: Axis13Offset
+      Id: g=de238e90294c3520593439b6e69f4186
       Type: BaseDataVariableType
       DataType: Int16
     - Name: Axis14Offset
+      Id: g=0f6c5c3df0ca06f1a863b41f4ff47d11
       Type: BaseDataVariableType
       DataType: Int16
     - Name: Axis15Offset
+      Id: g=400ab689f7e2b385c9d3ac42ac16b01d
       Type: BaseDataVariableType
       DataType: Int16
     - Name: Axis15DwellPosition
+      Id: g=ce093ecd48fe246028caecd60682e360
       Type: BaseDataVariableType
       DataType: Int16
     - Name: Axis16Offset
+      Id: g=9ee3bffa35852ee63b9ff9e2ea1c4782
       Type: BaseDataVariableType
       DataType: Int16
     - Name: Axis16DwellPosition
+      Id: g=1793e1bf80cee81991021dd402611561
       Type: BaseDataVariableType
       DataType: Int16
     - Name: Axis21Offset
+      Id: g=439ca83e35fad67235430c9f316a44eb
       Type: BaseDataVariableType
       DataType: Int16
     - Name: Axis22Offset
+      Id: g=99d9aab7b6c28ff5bef1e2040afe214e
       Type: BaseDataVariableType
       DataType: Int16
     - Name: INT01
+      Id: g=600825f53283e3a7cac5a32f4c7e5224
       Type: BaseDataVariableType
       DataType: Int16
     - Name: INT02
+      Id: g=06acca19d2e3bebc08ebc17d029bab5a
       Type: BaseDataVariableType
       DataType: Int16
     - Name: INT03
+      Id: g=151b3f22e9db6f745a6440e4f5e64c3e
       Type: BaseDataVariableType
       DataType: Int16
     - Name: INT04
+      Id: g=42ba87f29ed3f71f67481f4be597e960
       Type: BaseDataVariableType
       DataType: Int16
     - Name: INT05
+      Id: g=e89ddc1ae35f25e6762a2231b36dbb81
       Type: BaseDataVariableType
       DataType: Int16
     - Name: INT06
+      Id: g=2f9abca3576cc37ece71c97200e4ba28
       Type: BaseDataVariableType
       DataType: Int16
     - Name: INT07
+      Id: g=54ef242818c6d7f21ef0cc9612ceae52
       Type: BaseDataVariableType
       DataType: Int16
     - Name: INT08
+      Id: g=3a7e8980802d1a0fa2d0ad2d0ff5759a
       Type: BaseDataVariableType
       DataType: Int16
     - Name: INT09
+      Id: g=3815ffdd5bb1a4e242d041f48d782061
       Type: BaseDataVariableType
       DataType: Int16
     - Name: INT10
+      Id: g=2066b3c52d40ba3c6d4c89371847d1e8
       Type: BaseDataVariableType
       DataType: Int16
     - Name: INT11
+      Id: g=77e2d14ccc53828ad44719af49efb2c5
       Type: BaseDataVariableType
       DataType: Int16
     - Name: INT12
+      Id: g=c2af5abac7cfee9a4a3978247cd8ce7f
       Type: BaseDataVariableType
       DataType: Int16
     - Name: INT13
+      Id: g=1efe536587ba6a47675a61ca2df1d1c4
       Type: BaseDataVariableType
       DataType: Int16
     - Name: INT14
+      Id: g=9a7e9b75a10ba8f8409063a3be52227a
       Type: BaseDataVariableType
       DataType: Int16
     - Name: INT15
+      Id: g=ece36915056de8c474cd6ec5307196e9
       Type: BaseDataVariableType
       DataType: Int16
     - Name: INT16
+      Id: g=1ffbcc82dc973f1c7c60c0feb5457688
       Type: BaseDataVariableType
       DataType: Int16
     - Name: INT17
+      Id: g=8c2275b45be4235bc74d8f3ab6d133a1
       Type: BaseDataVariableType
       DataType: Int16
     - Name: INT18
+      Id: g=f31d81e98bfe82c195b947dcef1d2c0b
       Type: BaseDataVariableType
       DataType: Int16
     - Name: INT19
+      Id: g=56dc4a2a525ea8bb2beb389edd0f9756
       Type: BaseDataVariableType
       DataType: Int16
     - Name: INT20
+      Id: g=9e1d56dc8dcad25cc78820489a0e6b5a
       Type: BaseDataVariableType
       DataType: Int16
     - Name: INT21
+      Id: g=45295bc6dd59a1524b3d11d4e175c83c
       Type: BaseDataVariableType
       DataType: Int16
     - Name: INT22
+      Id: g=be508e3cd570a8262b4fc9a67f0d36f9
       Type: BaseDataVariableType
       DataType: Int16
     - Name: INT23
+      Id: g=64851fb8b79fa9230ed29f80fcc1a4e3
       Type: BaseDataVariableType
       DataType: Int16
     - Name: INT24
+      Id: g=6fc3d6bb4c019ffcf0043ce9f36548f1
       Type: BaseDataVariableType
       DataType: Int16
     - Name: INT25
+      Id: g=44c0ba5e89f36c1480a279b350a16e3e
       Type: BaseDataVariableType
       DataType: Int16
     - Name: INT26
+      Id: g=f2071584f2ea636d892ef4166b96573f
       Type: BaseDataVariableType
       DataType: Int16
     - Name: REAL03
+      Id: g=09aa244e140ace526be2937fa541e2b3
       Type: BaseDataVariableType
       DataType: Float
     - Name: NumberOfCartonsPerMagazineFlight
+      Id: g=883bf6f37cd57ecc001fd9a790630080
       Type: BaseDataVariableType
       DataType: Float
     - Name: UpHill_Carton_Mag_Speed_IPM
+      Id: g=8a6733ff18bf823c719bb5a9a3df2c9f
       Type: BaseDataVariableType
       DataType: Float
     - Name: Straight_Carton_Mag_Speed_IPM
+      Id: g=599ca1c9f50c587eb2a1b297e37830a3
       Type: BaseDataVariableType
       DataType: Float
     - Name: EnableHoseGun1and4
+      Id: g=dc336b7c1db28af61597dccf2dfe585a
       Type: BaseDataVariableType
       DataType: Boolean
     - Name: EnableCartonFeedAirAssist
+      Id: g=e2c5c2bd0e4194dd0107dcef7de70f5f
       Type: BaseDataVariableType
       DataType: Boolean
     - Name: InfeedConveyor1_Mul
+      Id: g=f801a799a0c8b3933c1f5dae82bf8546
       Type: BaseDataVariableType
       DataType: Float
     - Name: InfeedConveyor2_Mul
+      Id: g=f29492239ebb2329e82908f103e1b68b
       Type: BaseDataVariableType
       DataType: Float
     - Name: Auto_NominalSpeed_CPM
+      Id: g=165d0a5def939275c916e72dcba8a08d
       Type: BaseDataVariableType
       DataType: Int16
     - Name: Auto_SurgeSpeed_CPM
+      Id: g=3fa0f278a00c4da7cb2f29999e0c4a33
       Type: BaseDataVariableType
       DataType: Int16
     - Name: Auto_NominalSpeed_CPM_OtherPackerDown
+      Id: g=67142f40089590096d1937ab9c4461d6
       Type: BaseDataVariableType
       DataType: Int16
     - Name: Auto_SurgeSpeed_CPM_OtherPackerDown
+      Id: g=fb85f34bd65b669a2a5b9dc0c5e7ed1c
       Type: BaseDataVariableType
       DataType: Int16
     - Name: GarveyInfeedConv1_Mul
+      Id: g=7ee3cddaddcdf40ff72ea9076ed44054
       Type: BaseDataVariableType
       DataType: Float
     - Name: GarveyInfinityLoop_Mul
+      Id: g=fdb809245470703c25363c8a39368ae7
       Type: BaseDataVariableType
       DataType: Float
     - Name: GarveyInfinityOutput_Mul
+      Id: g=f5885e6c3f61005e91acc7d995e86006
       Type: BaseDataVariableType
       DataType: Float
     - Name: GarveyInfinitySlowDownLane_Mul
+      Id: g=2bd4d45cde0a7ce5b6d80072592c3874
       Type: BaseDataVariableType
       DataType: Float
     - Name: Auto_MediumSpeed_CPM
+      Id: g=2c855c0cf9070d2bb578f505c546df44
       Type: BaseDataVariableType
       DataType: Int16
     - Name: Auto_HighSpeed_CPM
+      Id: g=e6d3d21297a3406483f9ebfaaf0b32b6
       Type: BaseDataVariableType
       DataType: Int16
     - Name: ProductDiameter_Inches
+      Id: g=0cecd4d9d9b3e2838624dd664fa07756
       Type: BaseDataVariableType
       DataType: Float
     - Name: GluePressureAtLowSpeed_PSI
+      Id: g=ed2c7aced53fd9fbd24fecd7e4a2058f
       Type: BaseDataVariableType
       DataType: Int16
     - Name: GluePressureAtHighSpeed_PSI
+      Id: g=339b55263ba62f44c533a58de98cc67f
       Type: BaseDataVariableType
       DataType: Int16
     - Name: MaxSpeedThisSize_CPM
+      Id: g=45e04f23977ba9ac1134a99f7f704fba
       Type: BaseDataVariableType
       DataType: Int16
     - Name: SikoCounterSetpoint
+      Id: g=216773b1e146373141bf0675432a7519
       Type: BaseDataVariableType
       DataType: Float
       ValueRank: OneDimension
       ArrayDimensions: [110]
     - Name: SizeChangePoint_PushToVerify
+      Id: g=8cfcb269c187047aa97781cd6df53311
       Type: BaseDataVariableType
       DataType: Float
       ValueRank: OneDimension
       ArrayDimensions: [55]
     - Name: D510_VFD1_NerconBot_Mul
+      Id: g=f1f55886e0ff0b3eac8785954b689131
       Type: BaseDataVariableType
       DataType: Float
     - Name: D510_VFD2_NerconSide_Mul
+      Id: g=a5d7ae5f8ac5be750e9cc8f0aac98e89
       Type: BaseDataVariableType
       DataType: Float
     - Name: D510_VFD3_IntroloxInfeed_Mul
+      Id: g=e5afb0bb179128a44f33c5fbee8dd97b
       Type: BaseDataVariableType
       DataType: Float
     - Name: D510_VFD4_IntroloxTurning_Mul
+      Id: g=759336597baa3d94609044c03e12313d
       Type: BaseDataVariableType
       DataType: Float
     - Name: D510_VFD5_IntroloxReject_Mul
+      Id: g=c03e71a8b90717c6336812d22eeb7e91
       Type: BaseDataVariableType
       DataType: Float
     - Name: D510_VFD6_IntroloxReject_Mul
+      Id: g=499dcb055ae9db0ad16833d3d8384394
       Type: BaseDataVariableType
       DataType: Float
     - Name: D510_VFD7_IntroloxDischarge_Mul
+      Id: g=6cea229f12e7787acf9fb7c066a99bbf
       Type: BaseDataVariableType
       DataType: Float
     - Name: i_447_SensorCenteredOnTarget
+      Id: g=9014bf11345873600b1dc3684046d55a
       Type: BaseDataVariableType
       DataType: Int16
       ValueRank: OneDimension
       ArrayDimensions: [20]
     - Name: i_447_InfeedSensorProx
+      Id: g=5da110d1917dda2c3ce992cfecc3c3b2
       Type: BaseDataVariableType
       DataType: Int16
     - Name: i_447_UpstreamInfeedSensorProx
+      Id: g=89b2da93077050120d1aa038e53f5b4b
       Type: BaseDataVariableType
       DataType: Int16
     - Name: bo_447_CenterBoardRequired
+      Id: g=ebc441238626bea83371040821f79b84
       Type: BaseDataVariableType
       DataType: Boolean
     - Name: byte_445_RFID_SensorSetpoint
+      Id: g=4e388b089d2ddf347605a56fff9dcd10
       Type: BaseDataVariableType
       DataType: SByte
       ValueRank: OneDimension
       ArrayDimensions: [60]
     - Name: i_445_TagCenteredOnSensor
+      Id: g=ee387ab1497f873c8342cee530c6a7e1
       Type: BaseDataVariableType
       DataType: Int16
       ValueRank: OneDimension
       ArrayDimensions: [60]
     - Name: D232_SRStation_RejectAtXRay
+      Id: g=c7ad613040c8cf47c98449bd3b9b152b
       Type: BaseDataVariableType
       DataType: Int32
     - Name: D232_SRStation_RejectAtDischargeJam
+      Id: g=0ab00e8c466307129e91d1ee9e58cb04
       Type: BaseDataVariableType
       DataType: Int32
     - Name: D232_SRStation_RejectAtOpenOuterFlap
+      Id: g=3748ae2e1933c1e289a3620445cc9f71
       Type: BaseDataVariableType
       DataType: Int32
     - Name: D232_SRStation_RejectAtIntralox
+      Id: g=00cbfb2990a25657602edd93f7b29410
       Type: BaseDataVariableType
       DataType: Int32
     - Name: D510_Intralox_MenuNumber
+      Id: g=9760260879124efb3e48f192b5a96b71
       Type: BaseDataVariableType
       DataType: Int32
     - Name: D510_Intralox_NumPacksLane1
+      Id: g=10ac0061c4b78d72262f70684be707f7
       Type: BaseDataVariableType
       DataType: Int32
     - Name: D510_Intralox_NumPacksLane2
+      Id: g=6da835edc5df7ab8c6cd6c53299f668e
       Type: BaseDataVariableType
       DataType: Int32
     - Name: D510_Intralox_NumPacksLane3
+      Id: g=2ff1b03e022976820174b0f8daaa270c
       Type: BaseDataVariableType
       DataType: Int32
     - Name: D510_Intralox_TurnProduct
+      Id: g=2dc7b1c076b91ddd5244f434e28cf339
       Type: BaseDataVariableType
       DataType: Int32
     - Name: r_449_TouchToVerifySetpoints
+      Id: g=9d8057b2daebd280e1b539a7a083d03e
       Type: BaseDataVariableType
       DataType: Float
       ValueRank: OneDimension
       ArrayDimensions: [50]
     - Name: R128_SpeconInfeed_Mul
+      Id: g=11d0d834d5d51bf99c9b994ed315eadc
       Type: BaseDataVariableType
       DataType: Float
     - Name: R213_DischargeConveyor_Mul
+      Id: g=170ce59e5154bfa477a08f7a9fe35924
       Type: BaseDataVariableType
       DataType: Float
     - Name: Enable2ndStationBottomFlapCloser
+      Id: g=b0d6e6a6ae421736d1fd6d0cca6d5e99
       Type: BaseDataVariableType
       DataType: Boolean
     - Name: FlapSeparatorMode
+      Id: g=165dc4d51116290acdd7cd30832bdfcb
       Type: BaseDataVariableType
       DataType: Boolean
     - Name: GluePressureAtLowSpeed2_PSI
+      Id: g=7ff99ac9d63c22227a16817dacdb8dc1
       Type: BaseDataVariableType
       DataType: Int16
     - Name: GluePressureAtHighSpeed2_PSI
+      Id: g=f5cda71f1ae752f14f58d276d4687f54
       Type: BaseDataVariableType
       DataType: Int16
     - Name: SecondStationBotGlueHosesGunsEnable
+      Id: g=a81ce3da850fc7a7407ceca2dd8cab47
       Type: BaseDataVariableType
       DataType: Boolean
     - Name: SecondStationTopMidGlueHosesGunsEnable
+      Id: g=42fe70b346a9344874484929c75efb11
       Type: BaseDataVariableType
       DataType: Boolean
     - Name: FirstStationGlueHosesGunsEnable
+      Id: g=42982aa81cbc7e20f51aad7c55847525
       Type: BaseDataVariableType
       DataType: Boolean
     - Name: B370_CodeDaterActive_OS
+      Id: g=adabcd49dabebe0015d1987584c97a08
       Type: BaseDataVariableType
       DataType: Boolean
     - Name: B371_CodeDaterActive_LS
+      Id: g=bff4cd25ac69085bef5f4aafe2cfcc21
       Type: BaseDataVariableType
       DataType: Boolean
     - Name: SpecCon_Parallel_Multiplier
+      Id: g=4867e6b1695886e9596ff54a60e67165
       Type: BaseDataVariableType
       DataType: Float
     - Name: RotaryFlapSeparatorDirection
+      Id: g=c5013af303bafcc4a9a712e63e1eff2b
       Type: BaseDataVariableType
       DataType: Int16
     - Name: B510_IntraloxBypassMode
+      Id: g=8c458eb31b931084ff18475c2ba3b431
       Type: BaseDataVariableType
       DataType: Boolean
     - Name: B160_TopFlapNotPresent
+      Id: g=007af43e453a8bf60e98d373a349a4c5
       Type: BaseDataVariableType
       DataType: Boolean
     - Name: I200_PEC1_OpenInnerFlapMaxDist_mm_LS
+      Id: g=725287ba65ff8594a6e6035a96beaaa1
       Type: BaseDataVariableType
       DataType: Int16
     - Name: I200_PEC2_OpenInnerFlapMaxDist_mm_OS
+      Id: g=d25ac492c6c1cb5652002d001ccb270e
       Type: BaseDataVariableType
       DataType: Int16
     - Name: I195_TemperatureSetpoint_Tank
+      Id: g=352c97f7ad0e8d04f055f778e0816e39
       Type: BaseDataVariableType
       DataType: Int16
     - Name: I195_TemperatureSetpoint_Manifold
+      Id: g=e7b4ac370232750034a04a0acad8db8f
       Type: BaseDataVariableType
       DataType: Int16
     - Name: I195_TemperatureSetpoint_Hose1
+      Id: g=ea3df90149cae82fec8c604fe85d6adb
       Type: BaseDataVariableType
       DataType: Int16
     - Name: I195_TemperatureSetpoint_Gun1
+      Id: g=6683bda98716ca7e9125a4e51fb1350c
       Type: BaseDataVariableType
       DataType: Int16
     - Name: I195_TemperatureSetpoint_Hose2
+      Id: g=b52a6b259a8095cae4630046b5164da1
       Type: BaseDataVariableType
       DataType: Int16
     - Name: I195_TemperatureSetpoint_Gun2
+      Id: g=d40c0f899b1b0aecd00125122c6c6d84
       Type: BaseDataVariableType
       DataType: Int16
     - Name: I195_TemperatureSetpoint_Hose3
+      Id: g=35831165473b59ad92fff16840d5f7c2
       Type: BaseDataVariableType
       DataType: Int16
     - Name: I195_TemperatureSetpoint_Gun3
+      Id: g=00a58da8387478a530f2755cd1af7c03
       Type: BaseDataVariableType
       DataType: Int16
     - Name: I195_TemperatureSetpoint_Hose4
+      Id: g=dd6ee6e849c8555f24b24d719ab65019
       Type: BaseDataVariableType
       DataType: Int16
     - Name: I195_TemperatureSetpoint_Gun4
+      Id: g=c9714d9989a256a1e1a0edfe4c5e5e6c
       Type: BaseDataVariableType
       DataType: Int16
     - Name: I195_TemperatureSetpoint_Hose5
+      Id: g=221cfcc74dab7ef19b6456c1fc667964
       Type: BaseDataVariableType
       DataType: Int16
     - Name: I195_TemperatureSetpoint_Gun5
+      Id: g=dc5fd81f47e2048c3ac79bb47ed48a93
       Type: BaseDataVariableType
       DataType: Int16
     - Name: I195_TemperatureSetpoint_Hose6
+      Id: g=3feaa7636351b88eee9f736f44507f62
       Type: BaseDataVariableType
       DataType: Int16
     - Name: I195_TemperatureSetpoint_Gun6
+      Id: g=4ed03236e4abab6ca14f3f850a687ebe
       Type: BaseDataVariableType
       DataType: Int16
     - Name: I195_TemperatureSetpoint_Hose7
+      Id: g=59f51a7fd50967716b9b6d431dcaef4d
       Type: BaseDataVariableType
       DataType: Int16
     - Name: I195_TemperatureSetpoint_Gun7
+      Id: g=3383516b2ec1aa0e40fcd80338921792
       Type: BaseDataVariableType
       DataType: Int16
     - Name: I195_TemperatureSetpoint_Hose8
+      Id: g=456b75cc0ee3bc07f3e4a60ff1eef1e5
       Type: BaseDataVariableType
       DataType: Int16
     - Name: I195_TemperatureSetpoint_Gun8
+      Id: g=f6bcf40fa5514a1b8bf57a21bb57908d
       Type: BaseDataVariableType
       DataType: Int16
     - Name: I240_CartonFeedLugPitch
+      Id: g=53b4c4acf2ec17fdcfe29bbc652438fa
       Type: BaseDataVariableType
       DataType: Int32
     - Name: I150_CartonFed_ShiftRegisterStation
+      Id: g=97a5983b0a0e8fb11db5e3d0075268de
       Type: BaseDataVariableType
       DataType: Int32
     - Name: I160_MissingCartonCheck_ShiftRegisterSta
+      Id: g=bfba078263d20e15230b30f75a746c47
       Type: BaseDataVariableType
       DataType: Int32
   - Class: Reference
@@ -1740,1751 +2654,2676 @@ Children:
     Target: ns=23;i=60
     Direction: Forward
   - Name: Store
+    Id: g=94331c6c7a58b587861c305c0ed1f412
     Type: NodePointer
     DataType: NodeId
     Value: "/Objects/OptimateDemoProject/DataStores/LegacyRecipeData"
     Children:
     - Name: Kind
+      Id: g=9a13f650248f0f5f482e2640e5d4e89a
       Type: PropertyType
       DataType: NodeId
       Value: "/Types/ObjectTypes/BaseObjectType/Store"
   - Name: TableName
+    Id: g=513fe0d4ffaa6686683ea298dea83fcf
     Type: BaseDataVariableType
     DataType: String
   - Name: TargetNode
+    Id: g=19c985a26003349d10a0a79115d22d8c
     Type: NodePointer
     DataType: NodeId
     Value: "/Objects/OptimateDemoProject/Model/PLC Link Required/RecipeData"
     Children:
     - Name: Kind
+      Id: g=7d18410539db15ab4a69659b12e610e3
       Type: PropertyType
       DataType: NodeId
   - Name: EditModel
+    Id: g=6e27ca356e786b7bff25765833c1636a
     Type: BaseObjectType
     Children:
     - Name: GlueCam01
+      Id: g=6846a29c77c53bd9148c59619090741e
       Type: BaseDataVariableType
-      DataType: UDT_PLS_Cam
+      DataType: Structure
+      Value: 
+       {
+        "Type": 22,
+        "Body": {
+         "TypeId": {
+          "IdType": 0,
+          "Id": 0,
+          "Namespace": -1
+         },
+         "Body":    {}
+        }
+       }
       Children:
       - Name: Description
+        Id: g=a907538fbf926a2d7e20738fb68b8b9f
         Type: BaseDataVariableType
         DataType: String
       - Name: OnSpeed_Comp
+        Id: g=c3368c1beb425ae625e4e786d7141eba
         Type: BaseDataVariableType
         DataType: Float
       - Name: OffSpeed_Comp
+        Id: g=a852213126f6638c0e91a72b6344489c
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_1_On
+        Id: g=74dcf256a26ecd518cdbd1a54035e2cc
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_1_Off
+        Id: g=7422b0c40e516428ae3cf6dca9499e4b
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_2_On
+        Id: g=2cab2960be7abcfa635bd07fb8329263
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_2_Off
+        Id: g=24531e641019f42e7c7c48776bb4bc9b
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_3_On
+        Id: g=1bb804a666675299ab6caf38707b81d3
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_3_Off
+        Id: g=0eff234ed34b820d3bd1876db44df798
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_4_On
+        Id: g=d17fe50aa565821de2fc049e127c3c25
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_4_Off
+        Id: g=597ed613988faebcd3626f1877016bd7
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_5_On
+        Id: g=5b6e77d4ec5e4dd2c57e0646564f94ce
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_5_Off
+        Id: g=44612de7f9d2326793780957f7a00b92
         Type: BaseDataVariableType
         DataType: Float
     - Name: GlueCam02
+      Id: g=eefb2184939c5ccf73a054a219f9836e
       Type: BaseDataVariableType
-      DataType: UDT_PLS_Cam
+      DataType: Structure
+      Value: 
+       {
+        "Type": 22,
+        "Body": {
+         "TypeId": {
+          "IdType": 0,
+          "Id": 0,
+          "Namespace": -1
+         },
+         "Body":    {}
+        }
+       }
       Children:
       - Name: Description
+        Id: g=c8df65c64a45d8387d8e769cd22807a1
         Type: BaseDataVariableType
         DataType: String
       - Name: OnSpeed_Comp
+        Id: g=ea96de1187680827ee6330268bc6fade
         Type: BaseDataVariableType
         DataType: Float
       - Name: OffSpeed_Comp
+        Id: g=06e5933cebff09c9b11fba1f231b5401
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_1_On
+        Id: g=3a00d3779b47f7871ff9cc610be2a9a2
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_1_Off
+        Id: g=0a4f515aba51d799eb3ba65096d20782
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_2_On
+        Id: g=b9aef04eb2d2d0f2d8959ae7cd84d847
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_2_Off
+        Id: g=04871474b0afe619f35f7c7eb55d0506
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_3_On
+        Id: g=c22340225a33930ed1c19bf12516fd30
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_3_Off
+        Id: g=8fa9b4131e6d4bc0f61ace22cd415604
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_4_On
+        Id: g=74da108430ee6452e2dc7a5f69e38c16
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_4_Off
+        Id: g=2780c782c31c00de5e606fc775e9af72
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_5_On
+        Id: g=6ef3331ddfe566df1cb935bb0b8a7380
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_5_Off
+        Id: g=7edd2977401e80474bfad6f9acec7c6e
         Type: BaseDataVariableType
         DataType: Float
     - Name: GlueCam03
+      Id: g=0b3cf647babeef31f508633244b5eb11
       Type: BaseDataVariableType
-      DataType: UDT_PLS_Cam
+      DataType: Structure
+      Value: 
+       {
+        "Type": 22,
+        "Body": {
+         "TypeId": {
+          "IdType": 0,
+          "Id": 0,
+          "Namespace": -1
+         },
+         "Body":    {}
+        }
+       }
       Children:
       - Name: Description
+        Id: g=f264d5cf7d8aa9a65b5431ca5bbb1838
         Type: BaseDataVariableType
         DataType: String
       - Name: OnSpeed_Comp
+        Id: g=cf525c9a31a93303ada0ab2f4933777b
         Type: BaseDataVariableType
         DataType: Float
       - Name: OffSpeed_Comp
+        Id: g=31540f0f140493b7dbcd50db0d8214a5
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_1_On
+        Id: g=86463cf3bc369c2310ab65ad4658eab7
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_1_Off
+        Id: g=4a3afe2bd455734f31879dcc16ad5822
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_2_On
+        Id: g=a0601226f16a61f614219c1751b78a8d
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_2_Off
+        Id: g=92de094203add70cfedc95c38e7069e8
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_3_On
+        Id: g=6c17fc854d0b7d69dcb0da1a3784e6b6
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_3_Off
+        Id: g=43aff5913774eed86deadc747badc59a
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_4_On
+        Id: g=afdaabf11d762a1779e5614cc65f7bc5
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_4_Off
+        Id: g=2c0c49f8e2ca7dbf11ebf8e6954e87f2
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_5_On
+        Id: g=5231fd9b09bd566e80aec30e60a12317
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_5_Off
+        Id: g=810f490f78a45048a41bb2db09f4f4b7
         Type: BaseDataVariableType
         DataType: Float
     - Name: GlueCam04
+      Id: g=b05828b755e16f4494a1d821747f1bc3
       Type: BaseDataVariableType
-      DataType: UDT_PLS_Cam
+      DataType: Structure
+      Value: 
+       {
+        "Type": 22,
+        "Body": {
+         "TypeId": {
+          "IdType": 0,
+          "Id": 0,
+          "Namespace": -1
+         },
+         "Body":    {}
+        }
+       }
       Children:
       - Name: Description
+        Id: g=57f8b66c5374416704a6ad51137e73a9
         Type: BaseDataVariableType
         DataType: String
       - Name: OnSpeed_Comp
+        Id: g=8893199b3800232d101e88853ddd1a45
         Type: BaseDataVariableType
         DataType: Float
       - Name: OffSpeed_Comp
+        Id: g=a9212f678a0232e3687ea5d731950644
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_1_On
+        Id: g=69a6dc424ad1b2304afb69bec8b7ca75
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_1_Off
+        Id: g=2d3f9eb46246ca7e2c8d56a55cce5d13
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_2_On
+        Id: g=a88b1c44530c669b33252e8a3673a887
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_2_Off
+        Id: g=603e36ae7fef55194cec931be0ab08c3
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_3_On
+        Id: g=832273f5ac1e4cf72bba12047f374546
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_3_Off
+        Id: g=a7e2e20c8799c1bb8292490f1c289127
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_4_On
+        Id: g=6f9b79ceb207823fd717d5db0e45f9d2
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_4_Off
+        Id: g=05bc39c8490ddc1ad5142627b79036d4
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_5_On
+        Id: g=a9f420cac0311307e5408a6f446acdb2
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_5_Off
+        Id: g=6d6bf749d719484b342b2671432d351f
         Type: BaseDataVariableType
         DataType: Float
     - Name: GlueCam05
+      Id: g=d9743721a2d296cdf811a37eb74e0ced
       Type: BaseDataVariableType
-      DataType: UDT_PLS_Cam
+      DataType: Structure
+      Value: 
+       {
+        "Type": 22,
+        "Body": {
+         "TypeId": {
+          "IdType": 0,
+          "Id": 0,
+          "Namespace": -1
+         },
+         "Body":    {}
+        }
+       }
       Children:
       - Name: Description
+        Id: g=001ee6f962bfb6ccb60747bf15d02b76
         Type: BaseDataVariableType
         DataType: String
       - Name: OnSpeed_Comp
+        Id: g=cc3dbc1eb5f760043f4adf49d3309a0a
         Type: BaseDataVariableType
         DataType: Float
       - Name: OffSpeed_Comp
+        Id: g=f5dd0f918d5e73388bc670b8579749d2
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_1_On
+        Id: g=a781ad02169c9b95a031b43b7d001a33
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_1_Off
+        Id: g=c8061eaba250c94fa44f49f484e23031
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_2_On
+        Id: g=990a206f7d793a3d5f6abfa4d4f105fb
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_2_Off
+        Id: g=2413139bcec0ff6dc8d5ef1b10b94509
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_3_On
+        Id: g=f26bd2025dea030a1e9f5e965cb6b279
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_3_Off
+        Id: g=e225bedb6a80b24ed14322137f26ee70
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_4_On
+        Id: g=aec7776a293951fe6357d6eb26e75062
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_4_Off
+        Id: g=d275a404f8cd961b3b2e1da7984f9f2d
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_5_On
+        Id: g=88aace9960448d491b5b0f5fb2e4de3b
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_5_Off
+        Id: g=c56407fef18a782b45034df92669963b
         Type: BaseDataVariableType
         DataType: Float
     - Name: GlueCam06
+      Id: g=bb8e8aaa06ec2c4bf5dafde5db0ef8b5
       Type: BaseDataVariableType
-      DataType: UDT_PLS_Cam
+      DataType: Structure
+      Value: 
+       {
+        "Type": 22,
+        "Body": {
+         "TypeId": {
+          "IdType": 0,
+          "Id": 0,
+          "Namespace": -1
+         },
+         "Body":    {}
+        }
+       }
       Children:
       - Name: Description
+        Id: g=1e0e811ae54b6a8bbeb7c52efe8e9fc6
         Type: BaseDataVariableType
         DataType: String
       - Name: OnSpeed_Comp
+        Id: g=93397cece29ebd82fd8c42964a1c3933
         Type: BaseDataVariableType
         DataType: Float
       - Name: OffSpeed_Comp
+        Id: g=aeb702ebb35e0ad069674f457fa8b385
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_1_On
+        Id: g=134f52c406f6f0032593c77486937359
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_1_Off
+        Id: g=b00b4b09e233abd8de5b988e55b625bf
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_2_On
+        Id: g=b8aa72a321a8d539a05668f60081170c
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_2_Off
+        Id: g=0364242d23bfbb4a92a58a55d1f56e9c
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_3_On
+        Id: g=52aa14d28b05ab6d585495ea2b058758
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_3_Off
+        Id: g=058178c1bfa040845056c9a475d405fb
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_4_On
+        Id: g=deb1844604b2682ee7058b85594d1a7f
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_4_Off
+        Id: g=bf0315d093fd5bb635a071f67c9becad
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_5_On
+        Id: g=daec3172ee5d55f9e3931569ca068589
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_5_Off
+        Id: g=d3bd61cc13b96dc9d37ae11b223b2efe
         Type: BaseDataVariableType
         DataType: Float
     - Name: GlueCam07
+      Id: g=d9889f3d4fb9aacf5249492bca6c9a4f
       Type: BaseDataVariableType
-      DataType: UDT_PLS_Cam
+      DataType: Structure
+      Value: 
+       {
+        "Type": 22,
+        "Body": {
+         "TypeId": {
+          "IdType": 0,
+          "Id": 0,
+          "Namespace": -1
+         },
+         "Body":    {}
+        }
+       }
       Children:
       - Name: Description
+        Id: g=3cdd68264b93e47487edcba6df511506
         Type: BaseDataVariableType
         DataType: String
       - Name: OnSpeed_Comp
+        Id: g=964e99cc6a53620bcd30efec06a6d0fa
         Type: BaseDataVariableType
         DataType: Float
       - Name: OffSpeed_Comp
+        Id: g=6d02ea796333731656ba21a7a109bea6
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_1_On
+        Id: g=bbea5a41f8ca8e2ec321df8cf1cbcb56
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_1_Off
+        Id: g=34db088fd7bf8b67328536fe5a632df8
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_2_On
+        Id: g=63a66392cf3bce2685c428c41cd26321
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_2_Off
+        Id: g=8b14e1cf71ab5edb0023fa6ecfabbc7c
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_3_On
+        Id: g=7dec72b6c60dde3cd0e88661634a5fbb
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_3_Off
+        Id: g=622cd759d45add8bc0d9484e259a5e8e
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_4_On
+        Id: g=f2c14fbe11a17b713e76e8cc66a48c35
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_4_Off
+        Id: g=54ec5fca9f9013d252d419c2554a8085
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_5_On
+        Id: g=150a764cc80c82bddd15418cd2acee7c
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_5_Off
+        Id: g=2ae30c2929932c71f39919196ff261b0
         Type: BaseDataVariableType
         DataType: Float
     - Name: GlueCam08
+      Id: g=d0674258f4a2e48463f7fde6193656cc
       Type: BaseDataVariableType
-      DataType: UDT_PLS_Cam
+      DataType: Structure
+      Value: 
+       {
+        "Type": 22,
+        "Body": {
+         "TypeId": {
+          "IdType": 0,
+          "Id": 0,
+          "Namespace": -1
+         },
+         "Body":    {}
+        }
+       }
       Children:
       - Name: Description
+        Id: g=3a1119f88a95f4bd366497cb2397bc66
         Type: BaseDataVariableType
         DataType: String
       - Name: OnSpeed_Comp
+        Id: g=3fe4426e8c74dd15ff1ca96cc89a9522
         Type: BaseDataVariableType
         DataType: Float
       - Name: OffSpeed_Comp
+        Id: g=29e8b35370097f7049f99334c33f198d
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_1_On
+        Id: g=f6e4ba80b62ff89c2ce4c75bcc1441df
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_1_Off
+        Id: g=562804e90b35ea836b498cc277027879
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_2_On
+        Id: g=59fb40dac577bb7b83841d4a0f1b8528
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_2_Off
+        Id: g=550e21d5e3860e1afc9503529bce6e53
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_3_On
+        Id: g=00a61fb1966988a7219290770d86063d
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_3_Off
+        Id: g=7d3c5c962a44509c43be4063df4bafeb
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_4_On
+        Id: g=8f27589a36541778475f3e17f3969bc2
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_4_Off
+        Id: g=8de2681d9664d28e3baf755aeaa1a7fb
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_5_On
+        Id: g=40bc2e2fc936a9d4a6b4a06b628f69ce
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_5_Off
+        Id: g=10c24e76836d79fc5ac7c7db2111d64f
         Type: BaseDataVariableType
         DataType: Float
     - Name: TimingCam01
+      Id: g=6cbf80904d0ef87761a371d8e391af5f
       Type: BaseDataVariableType
-      DataType: UDT_PLS_Cam
+      DataType: Structure
+      Value: 
+       {
+        "Type": 22,
+        "Body": {
+         "TypeId": {
+          "IdType": 0,
+          "Id": 0,
+          "Namespace": -1
+         },
+         "Body":    {}
+        }
+       }
       Children:
       - Name: Description
+        Id: g=7b8bc51eb297e11baa6ea5187135b051
         Type: BaseDataVariableType
         DataType: String
       - Name: OnSpeed_Comp
+        Id: g=1ec8f7b817ac0e4ea140f5f00a13fa0a
         Type: BaseDataVariableType
         DataType: Float
       - Name: OffSpeed_Comp
+        Id: g=340d736f2371646790172cbe5b1dd1da
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_1_On
+        Id: g=c336e54b2eb3c1eea90b5438f80d561b
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_1_Off
+        Id: g=01b89176f09d91ca9b25ce7826f877de
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_2_On
+        Id: g=1327e29ba7120fe0430e08235b451c65
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_2_Off
+        Id: g=a12be524cc0b1cd342a20a9ff3cb2cdd
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_3_On
+        Id: g=90c910843c57f116447b4f1cbd518e9e
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_3_Off
+        Id: g=3f3f85eab4712a8ff988b0514a79ca7b
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_4_On
+        Id: g=ecf74b2253c15be88b917f2f0842582b
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_4_Off
+        Id: g=1320fd27e9f059295f6ce7b4e2978685
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_5_On
+        Id: g=fc44a81bd01412d816e02cf47f016ee7
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_5_Off
+        Id: g=d251e529bbc3ca4b58b19697bd0492e4
         Type: BaseDataVariableType
         DataType: Float
     - Name: TimingCam02
+      Id: g=2212e1e290df7897702846384f6628d8
       Type: BaseDataVariableType
-      DataType: UDT_PLS_Cam
+      DataType: Structure
+      Value: 
+       {
+        "Type": 22,
+        "Body": {
+         "TypeId": {
+          "IdType": 0,
+          "Id": 0,
+          "Namespace": -1
+         },
+         "Body":    {}
+        }
+       }
       Children:
       - Name: Description
+        Id: g=1610579ca30e75dbb5cbf0a50ded5d2b
         Type: BaseDataVariableType
         DataType: String
       - Name: OnSpeed_Comp
+        Id: g=04cc80cf5aa9be8b0466646e5bbe034c
         Type: BaseDataVariableType
         DataType: Float
       - Name: OffSpeed_Comp
+        Id: g=13aaa753ac0b4fcb2f87109795c55b4d
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_1_On
+        Id: g=4fa4eb5f9d7a9ea8b649537d7ada931c
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_1_Off
+        Id: g=7245b31d7fa376b7c329fd8818e41f6c
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_2_On
+        Id: g=ba57574d1a6c36b6da9cdbe2492bfba4
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_2_Off
+        Id: g=8ec9190ffc35bd9f0b8ef30f3d940752
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_3_On
+        Id: g=f784145af18583b4d1c7984b709ca446
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_3_Off
+        Id: g=67bac5e67fa759e812573c99867aaa65
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_4_On
+        Id: g=0400ef3c5c4742676a59401cf92109d5
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_4_Off
+        Id: g=e5e9513c4c927fd94d8ea28d6e06a2af
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_5_On
+        Id: g=021c74f382bcd65973052a92c6ead4cc
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_5_Off
+        Id: g=706fd0a1ba833ae02d18e41405b5aa9e
         Type: BaseDataVariableType
         DataType: Float
     - Name: TimingCam03
+      Id: g=5159be983368b79ff8ffacf24b7bcacb
       Type: BaseDataVariableType
-      DataType: UDT_PLS_Cam
+      DataType: Structure
+      Value: 
+       {
+        "Type": 22,
+        "Body": {
+         "TypeId": {
+          "IdType": 0,
+          "Id": 0,
+          "Namespace": -1
+         },
+         "Body":    {}
+        }
+       }
       Children:
       - Name: Description
+        Id: g=377cb5725057f76c30dca909ee6a737f
         Type: BaseDataVariableType
         DataType: String
       - Name: OnSpeed_Comp
+        Id: g=f8c2458f98f62384a49c2e6fe169e6d5
         Type: BaseDataVariableType
         DataType: Float
       - Name: OffSpeed_Comp
+        Id: g=503e7ae0fa46ae392b3a5b49fc8b7384
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_1_On
+        Id: g=af1ac3923326913e9781b654fcf2b5b6
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_1_Off
+        Id: g=b91dadba33411f5c542710dcf7d4b866
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_2_On
+        Id: g=28f2ae1056fc72fb057c1b2ab57fd9da
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_2_Off
+        Id: g=5fcc272cb016bc33e470fa9202007655
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_3_On
+        Id: g=5184b48e5e64fa262d54a69343d88634
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_3_Off
+        Id: g=4f739029972ca1ea539719f52db307e7
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_4_On
+        Id: g=91a69eac64db8ddc145d9571ad034228
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_4_Off
+        Id: g=ccebe0e69e55fa97870f9d533a083b11
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_5_On
+        Id: g=dc56aa4e711b9f4f0437c3f2bb182988
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_5_Off
+        Id: g=529037c2833e1740ff5d2bf62685568c
         Type: BaseDataVariableType
         DataType: Float
     - Name: TimingCam04
+      Id: g=b98a9f74c51c3f5f0f9ba593cfd76f03
       Type: BaseDataVariableType
-      DataType: UDT_PLS_Cam
+      DataType: Structure
+      Value: 
+       {
+        "Type": 22,
+        "Body": {
+         "TypeId": {
+          "IdType": 0,
+          "Id": 0,
+          "Namespace": -1
+         },
+         "Body":    {}
+        }
+       }
       Children:
       - Name: Description
+        Id: g=0cf28c131ceb617b685e70667f4a866c
         Type: BaseDataVariableType
         DataType: String
       - Name: OnSpeed_Comp
+        Id: g=dd1291df49efba674e8bd77176d50986
         Type: BaseDataVariableType
         DataType: Float
       - Name: OffSpeed_Comp
+        Id: g=c6fb266bb07dfb0d34407c43405c1c45
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_1_On
+        Id: g=10805b8c4295889a8c869314b315ddee
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_1_Off
+        Id: g=fc63057b7a141603c37c3be73d1fe271
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_2_On
+        Id: g=685882fc7b588c63c20020bdf815313a
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_2_Off
+        Id: g=14964d5f5eb1e796a9c99ad0703e4e65
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_3_On
+        Id: g=ef9914018842383bcf38bdde9003b952
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_3_Off
+        Id: g=de520ecd9c4d0a35e69ff51e4b8542b4
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_4_On
+        Id: g=f0b18298fe85959d6060736bba6f4fcf
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_4_Off
+        Id: g=53c3f4a90d8b1b4ade946177ae0acca5
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_5_On
+        Id: g=38684819ee4833ae8b40e064abfbba54
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_5_Off
+        Id: g=c5d13a256ae2436d65a7396272d68bdb
         Type: BaseDataVariableType
         DataType: Float
     - Name: TimingCam05
+      Id: g=8f5ecd2a3ace90b5fb679e40e7dadc9f
       Type: BaseDataVariableType
-      DataType: UDT_PLS_Cam
+      DataType: Structure
+      Value: 
+       {
+        "Type": 22,
+        "Body": {
+         "TypeId": {
+          "IdType": 0,
+          "Id": 0,
+          "Namespace": -1
+         },
+         "Body":    {}
+        }
+       }
       Children:
       - Name: Description
+        Id: g=71abec173cd02902b34fa877634daa48
         Type: BaseDataVariableType
         DataType: String
       - Name: OnSpeed_Comp
+        Id: g=5d1af80d6ad851e8ec61229c5df6817a
         Type: BaseDataVariableType
         DataType: Float
       - Name: OffSpeed_Comp
+        Id: g=d8cae14ede49b37e5705ac2364118a9c
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_1_On
+        Id: g=5b92093220ebcb15f8bdc359ca7c0c5d
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_1_Off
+        Id: g=edc63c3e0afe5708a634f9802f17faf7
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_2_On
+        Id: g=cb879e17cd80dc72ade4ba605d9df358
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_2_Off
+        Id: g=aecc9f8a00a16e51df42ee92235c5444
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_3_On
+        Id: g=7c0b5b9232aa9dccfe020181eb91a9e9
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_3_Off
+        Id: g=7b80b91e3eb9e907630d27eff3db8a7f
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_4_On
+        Id: g=3cacb46b227fc879c97fbcf017da64a8
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_4_Off
+        Id: g=60d2f635141e82b88bd16a22c5ed731b
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_5_On
+        Id: g=1c220ba1791aeb7cca12a755765127ca
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_5_Off
+        Id: g=02fc6340a881ab347528b4067d34a81e
         Type: BaseDataVariableType
         DataType: Float
     - Name: TimingCam06
+      Id: g=d1b31408b1500281e940cb01b3977e32
       Type: BaseDataVariableType
-      DataType: UDT_PLS_Cam
+      DataType: Structure
+      Value: 
+       {
+        "Type": 22,
+        "Body": {
+         "TypeId": {
+          "IdType": 0,
+          "Id": 0,
+          "Namespace": -1
+         },
+         "Body":    {}
+        }
+       }
       Children:
       - Name: Description
+        Id: g=00c13d362629f62151516d733e9b138b
         Type: BaseDataVariableType
         DataType: String
       - Name: OnSpeed_Comp
+        Id: g=b6f611905a38b0b75026aa235deb24e5
         Type: BaseDataVariableType
         DataType: Float
       - Name: OffSpeed_Comp
+        Id: g=b53b9ae07b51914dab196a3693ea9e16
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_1_On
+        Id: g=a47d8e6eb79cb203733c6ec00d49519d
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_1_Off
+        Id: g=9ae13a4a911ab3bbe175e140b30b8bb3
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_2_On
+        Id: g=ce786204e604c179dc377e14f3f40923
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_2_Off
+        Id: g=e834ccac438403c513b3fbe518b2cf54
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_3_On
+        Id: g=b648d588fdee8e19f7c6b0b1bab76456
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_3_Off
+        Id: g=59d10ea63f4c0e80ff73b25e1623b8a7
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_4_On
+        Id: g=418fa7b63ba3d396b51c9dc45fe9948f
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_4_Off
+        Id: g=f69f2e32fbeab040abbd727e1711a639
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_5_On
+        Id: g=7f26d0dba77abd20dc98737a08c5fe5b
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_5_Off
+        Id: g=8749cced3417bfeae2e7970c2f323b73
         Type: BaseDataVariableType
         DataType: Float
     - Name: TimingCam07
+      Id: g=7f4f10a968fbf5cbbd9f3fddbe57712d
       Type: BaseDataVariableType
-      DataType: UDT_PLS_Cam
+      DataType: Structure
+      Value: 
+       {
+        "Type": 22,
+        "Body": {
+         "TypeId": {
+          "IdType": 0,
+          "Id": 0,
+          "Namespace": -1
+         },
+         "Body":    {}
+        }
+       }
       Children:
       - Name: Description
+        Id: g=484b671153063de070a4a509d0dde3ee
         Type: BaseDataVariableType
         DataType: String
       - Name: OnSpeed_Comp
+        Id: g=7e44114d98b6bd67d8ddf3467fa03bbd
         Type: BaseDataVariableType
         DataType: Float
       - Name: OffSpeed_Comp
+        Id: g=0502a92efe255eec201db877a2c9e794
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_1_On
+        Id: g=56fc9272a7070bb7672f81e8bdaec27a
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_1_Off
+        Id: g=4f530034c30ea6e438c96ca46e37ff54
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_2_On
+        Id: g=643501a4df214d317a4cb57d91f24da9
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_2_Off
+        Id: g=d11b35dfdffbe9b8cf93a3725301d7d6
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_3_On
+        Id: g=55bddad3406e6662f2ca27e9bc7b27e1
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_3_Off
+        Id: g=919ae3d8979f40ca7803f575266b8143
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_4_On
+        Id: g=d03498b75ecc52152429436251d5dfd3
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_4_Off
+        Id: g=2da6e3a4e7a37ab80be327c64e70a487
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_5_On
+        Id: g=e248ffb4315fb6dc6a96b7647cf5e035
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_5_Off
+        Id: g=3a3b3c86b484fc6e792435ef8ab69142
         Type: BaseDataVariableType
         DataType: Float
     - Name: TimingCam08
+      Id: g=0b08961585e967338ac8f5b99821de06
       Type: BaseDataVariableType
-      DataType: UDT_PLS_Cam
+      DataType: Structure
+      Value: 
+       {
+        "Type": 22,
+        "Body": {
+         "TypeId": {
+          "IdType": 0,
+          "Id": 0,
+          "Namespace": -1
+         },
+         "Body":    {}
+        }
+       }
       Children:
       - Name: Description
+        Id: g=72a8da96e61ba90f91bb6e47e0acf271
         Type: BaseDataVariableType
         DataType: String
       - Name: OnSpeed_Comp
+        Id: g=f45d9b07a41cd0f81f9a9e5704754b37
         Type: BaseDataVariableType
         DataType: Float
       - Name: OffSpeed_Comp
+        Id: g=38f8823a5f3dbdc9ed69748fbe51e6b3
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_1_On
+        Id: g=a45313269ec2eb33955e3975407bb692
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_1_Off
+        Id: g=a20e5d7caab47f70909966a21cc14c36
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_2_On
+        Id: g=dd24c12041210a84dca6ede3df537dae
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_2_Off
+        Id: g=525fb8c681a63509f0120c6e615e10a1
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_3_On
+        Id: g=a2a6e07c0b8ae10845f34ac91bee932a
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_3_Off
+        Id: g=536cc01ae9e38ec9fcbd4985e1e4ca1d
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_4_On
+        Id: g=4fed8f3ce2a6efa0d9dd47afad5904ea
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_4_Off
+        Id: g=ba12beec58168c9200a620519fc27d8e
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_5_On
+        Id: g=ed491b7fe7c1b7f8c8ee03567da87a05
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_5_Off
+        Id: g=ae81ea7fea6b1e2a7f4b2be1fe0b1c50
         Type: BaseDataVariableType
         DataType: Float
     - Name: TimingCam09
+      Id: g=9b774b49ca83ba23607080d64a6d0658
       Type: BaseDataVariableType
-      DataType: UDT_PLS_Cam
+      DataType: Structure
+      Value: 
+       {
+        "Type": 22,
+        "Body": {
+         "TypeId": {
+          "IdType": 0,
+          "Id": 0,
+          "Namespace": -1
+         },
+         "Body":    {}
+        }
+       }
       Children:
       - Name: Description
+        Id: g=2c21ed878cf0ee42c05bf939ab88e1da
         Type: BaseDataVariableType
         DataType: String
       - Name: OnSpeed_Comp
+        Id: g=0fa7996a4aff497c927886e974a6ae8e
         Type: BaseDataVariableType
         DataType: Float
       - Name: OffSpeed_Comp
+        Id: g=70477b3d1e05dabdf22be390c7a79f61
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_1_On
+        Id: g=7c2fa0a046a8443cbdc6f25022187655
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_1_Off
+        Id: g=1c802c47803a3fd68d8fa9d7861ced0b
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_2_On
+        Id: g=1b007e1ade4513aab5206111295420fb
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_2_Off
+        Id: g=1cbefb5c840def05d812b48727ddd953
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_3_On
+        Id: g=2c2d6f3c8f7010877c2d877492830f07
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_3_Off
+        Id: g=c470e24bde2fa2d643af32b0503abbad
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_4_On
+        Id: g=510507d10e3d6b95a965dea246eb6cdd
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_4_Off
+        Id: g=bf3c23d5f1bdcd53e78836dddd9e5d2a
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_5_On
+        Id: g=c30085d29b7e48cb38b147cb93940138
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_5_Off
+        Id: g=3c05f856bec44ed9f9e7666439add776
         Type: BaseDataVariableType
         DataType: Float
     - Name: TimingCam10
+      Id: g=d47df9585d1d569b13356a63dbbcb30f
       Type: BaseDataVariableType
-      DataType: UDT_PLS_Cam
+      DataType: Structure
+      Value: 
+       {
+        "Type": 22,
+        "Body": {
+         "TypeId": {
+          "IdType": 0,
+          "Id": 0,
+          "Namespace": -1
+         },
+         "Body":    {}
+        }
+       }
       Children:
       - Name: Description
+        Id: g=faba95985c4f75c333ad6a0f393c84b1
         Type: BaseDataVariableType
         DataType: String
       - Name: OnSpeed_Comp
+        Id: g=8f751d81f70c0e8aa23c39315bd88ca8
         Type: BaseDataVariableType
         DataType: Float
       - Name: OffSpeed_Comp
+        Id: g=aa7f480f36e2ece63a07fef23e4b5348
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_1_On
+        Id: g=f82b01e33337e8eb33685577f12f4cc8
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_1_Off
+        Id: g=522cb9cf216031fc3769d3145e0cac00
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_2_On
+        Id: g=d2f2c687a6c030254bee48c0feeeb739
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_2_Off
+        Id: g=7162164b80d2e6d65570a1c4a10945f4
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_3_On
+        Id: g=74cf59598fe41c3dff4ec6c1394080a4
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_3_Off
+        Id: g=4de62f4d8b71f231f16ca303849c0327
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_4_On
+        Id: g=b5216947de5dc0cf75de945b415a6348
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_4_Off
+        Id: g=987f3c991ef881c9559ce2b8b249ac4b
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_5_On
+        Id: g=6de1199fdc3f217ae7d443b08d01620b
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_5_Off
+        Id: g=c88869e42e6b94d01da84d9c23b5c719
         Type: BaseDataVariableType
         DataType: Float
     - Name: TimingCam11
+      Id: g=9055993ca6a8bc649a0128d8ad7f5b34
       Type: BaseDataVariableType
-      DataType: UDT_PLS_Cam
+      DataType: Structure
+      Value: 
+       {
+        "Type": 22,
+        "Body": {
+         "TypeId": {
+          "IdType": 0,
+          "Id": 0,
+          "Namespace": -1
+         },
+         "Body":    {}
+        }
+       }
       Children:
       - Name: Description
+        Id: g=5366c3d818d27d1449047784273a3dce
         Type: BaseDataVariableType
         DataType: String
       - Name: OnSpeed_Comp
+        Id: g=04541e75acdcd59533f64212aee8c8d9
         Type: BaseDataVariableType
         DataType: Float
       - Name: OffSpeed_Comp
+        Id: g=9a8801441abe1bddf719e3dddd86dcdf
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_1_On
+        Id: g=4465c84030437c485d5f2f8ecaabb552
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_1_Off
+        Id: g=b335f3e91265b13dcbe36c80715db87b
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_2_On
+        Id: g=343e40e934f87dba9016b1b1247109e5
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_2_Off
+        Id: g=5021bdffc31dd7b6dffd21f6e11e1143
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_3_On
+        Id: g=5ba0d2d0cf762af62be168f6b37bd1ad
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_3_Off
+        Id: g=d149f97801c374dff221d3ecdb3297b1
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_4_On
+        Id: g=c281a6cba698be3e13f9074d3614b9f0
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_4_Off
+        Id: g=17605dad840db8796cdcad4675325823
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_5_On
+        Id: g=bd6491b977af8d55609ad7a7c831dc4d
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_5_Off
+        Id: g=f17fc69d603cfe7c8774a922bef15b7a
         Type: BaseDataVariableType
         DataType: Float
     - Name: TimingCam12
+      Id: g=40eb3a4f7f0bec798f5f6b3b67c56647
       Type: BaseDataVariableType
-      DataType: UDT_PLS_Cam
+      DataType: Structure
+      Value: 
+       {
+        "Type": 22,
+        "Body": {
+         "TypeId": {
+          "IdType": 0,
+          "Id": 0,
+          "Namespace": -1
+         },
+         "Body":    {}
+        }
+       }
       Children:
       - Name: Description
+        Id: g=b11d39cf9617ec65c8c5c75e20cbc7ba
         Type: BaseDataVariableType
         DataType: String
       - Name: OnSpeed_Comp
+        Id: g=57da2bfa1e9ac476efd52e0af8b92604
         Type: BaseDataVariableType
         DataType: Float
       - Name: OffSpeed_Comp
+        Id: g=19ea2232c836eb8c4ff0e7237de4b93d
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_1_On
+        Id: g=90062b0eabeb0812aeb166712243eade
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_1_Off
+        Id: g=f0e74f1d0257c3c8ff8e266a04515224
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_2_On
+        Id: g=a040e0097b726d4144461fee10a79efc
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_2_Off
+        Id: g=caa15daf30173d3789c107199fa8dc42
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_3_On
+        Id: g=584b4bcb0cdbdf7646adb60f1834c78b
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_3_Off
+        Id: g=e028f76c83a1aaa23050ddfeb7e90571
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_4_On
+        Id: g=20fa46817e3591b4a5dd7d863c9bd8a6
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_4_Off
+        Id: g=8332637b9a4ce37cae1214896de792d3
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_5_On
+        Id: g=60e97b18ac3819a723f248b668cb45f3
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_5_Off
+        Id: g=58aa5085cc6c5a73108aa394f442e105
         Type: BaseDataVariableType
         DataType: Float
     - Name: TimingCam13
+      Id: g=cd358732ffa05b02d3808f65017423be
       Type: BaseDataVariableType
-      DataType: UDT_PLS_Cam
+      DataType: Structure
+      Value: 
+       {
+        "Type": 22,
+        "Body": {
+         "TypeId": {
+          "IdType": 0,
+          "Id": 0,
+          "Namespace": -1
+         },
+         "Body":    {}
+        }
+       }
       Children:
       - Name: Description
+        Id: g=89970810f6b619eec94e41e145492e37
         Type: BaseDataVariableType
         DataType: String
       - Name: OnSpeed_Comp
+        Id: g=ff52d62c8bdff20652b12af38f9ce034
         Type: BaseDataVariableType
         DataType: Float
       - Name: OffSpeed_Comp
+        Id: g=16f04c24c5907685ea2a299fa656ccf7
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_1_On
+        Id: g=2a898d5a3728061e1daef52898d3a07d
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_1_Off
+        Id: g=49aa27edfbc49357823aaa757e9c1373
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_2_On
+        Id: g=16b948a8455fa92a6b158afe40f189a4
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_2_Off
+        Id: g=4a3123f3acc8220996a24a7d5ca0fc15
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_3_On
+        Id: g=ea20f5df0c6376fbf09e834084d2343e
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_3_Off
+        Id: g=379a4fd8078d4c97e4fd9fc51f717872
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_4_On
+        Id: g=c82f70329fa627359e195242a6af69f6
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_4_Off
+        Id: g=01b264113ee8a6919c88e3ed7185f343
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_5_On
+        Id: g=09392f3bd800546df0c61907c47a1bed
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_5_Off
+        Id: g=942b44bab75cf631db8d46e35573ed7d
         Type: BaseDataVariableType
         DataType: Float
     - Name: TimingCam14
+      Id: g=ae89684e4daad8b9389a2fedf7d903c5
       Type: BaseDataVariableType
-      DataType: UDT_PLS_Cam
+      DataType: Structure
+      Value: 
+       {
+        "Type": 22,
+        "Body": {
+         "TypeId": {
+          "IdType": 0,
+          "Id": 0,
+          "Namespace": -1
+         },
+         "Body":    {}
+        }
+       }
       Children:
       - Name: Description
+        Id: g=60fb082f2e32382d0a3fc3cbe305060e
         Type: BaseDataVariableType
         DataType: String
       - Name: OnSpeed_Comp
+        Id: g=2498be6cfd3c0c77a6df9f345fe5e422
         Type: BaseDataVariableType
         DataType: Float
       - Name: OffSpeed_Comp
+        Id: g=685f92c204728f3142b8170c5a357741
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_1_On
+        Id: g=4958286dd77aa25ff433fdbcf829a5b1
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_1_Off
+        Id: g=6879146ae99151e1274807419650bd22
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_2_On
+        Id: g=01b8a9d3070e3228dc0cdb5553c6c376
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_2_Off
+        Id: g=819f15464d2b24172d1fdbeef4620bb4
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_3_On
+        Id: g=7b8e67e06e8bf123050415a771ae5713
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_3_Off
+        Id: g=4917c972da382bdb0412dfc1c665ab5a
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_4_On
+        Id: g=4909360127e8c4babf393c59958958dc
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_4_Off
+        Id: g=af754de803b8f1dc15351c867cedc7ff
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_5_On
+        Id: g=253055ee3a6438499a331f327dde6aff
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_5_Off
+        Id: g=963d2e072c175de39e17a95eb5c49053
         Type: BaseDataVariableType
         DataType: Float
     - Name: TimingCam15
+      Id: g=fd370fea69f60b3e6363504edd6a20b5
       Type: BaseDataVariableType
-      DataType: UDT_PLS_Cam
+      DataType: Structure
+      Value: 
+       {
+        "Type": 22,
+        "Body": {
+         "TypeId": {
+          "IdType": 0,
+          "Id": 0,
+          "Namespace": -1
+         },
+         "Body":    {}
+        }
+       }
       Children:
       - Name: Description
+        Id: g=f1c1c1873f761c05b9da5a071c38634f
         Type: BaseDataVariableType
         DataType: String
       - Name: OnSpeed_Comp
+        Id: g=fb47a99f0fcf834feb514ba53dc75cb7
         Type: BaseDataVariableType
         DataType: Float
       - Name: OffSpeed_Comp
+        Id: g=20e5091c39b6e227ceec06c839e3b041
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_1_On
+        Id: g=52a2180cb2b64aa18165e54de0102924
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_1_Off
+        Id: g=c820dc1771bd68f31bb7511a391840d4
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_2_On
+        Id: g=6d7f6d7760ca16004659ff868f3f6209
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_2_Off
+        Id: g=1cbec9b520c9d39c3921c6f4e4648a1f
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_3_On
+        Id: g=84ee4ad55d2f39adfca316a14adb1706
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_3_Off
+        Id: g=cec5327181bc25fef469d94c1b04253f
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_4_On
+        Id: g=ff9c1a3d70998fbbf155e0c317fc9251
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_4_Off
+        Id: g=8ab8528b844e3cfbe5dbe86cf28ac479
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_5_On
+        Id: g=13a7693f4835d3eb99439caeee252356
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_5_Off
+        Id: g=448ff20ddc57216ae58389e7f6ec4238
         Type: BaseDataVariableType
         DataType: Float
     - Name: TimingCam16
+      Id: g=994d3733e3d00ad6a3f1363e185ff3dc
       Type: BaseDataVariableType
-      DataType: UDT_PLS_Cam
+      DataType: Structure
+      Value: 
+       {
+        "Type": 22,
+        "Body": {
+         "TypeId": {
+          "IdType": 0,
+          "Id": 0,
+          "Namespace": -1
+         },
+         "Body":    {}
+        }
+       }
       Children:
       - Name: Description
+        Id: g=925f02a977295cf31da32931b80d21c0
         Type: BaseDataVariableType
         DataType: String
       - Name: OnSpeed_Comp
+        Id: g=4284058aab511cec9c6deffd54235ea7
         Type: BaseDataVariableType
         DataType: Float
       - Name: OffSpeed_Comp
+        Id: g=fb40fa6901c85f0fcabe5e95f373152d
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_1_On
+        Id: g=33572101d492882f059ae78812d3a396
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_1_Off
+        Id: g=bfa701a205b612fc8fd6bd267c2b75c8
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_2_On
+        Id: g=97655c235d0483af3a6e445b16b310e0
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_2_Off
+        Id: g=30865084b497233fc783fd180108388c
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_3_On
+        Id: g=cc155e6c4d71d8953d17b67ffc6f061f
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_3_Off
+        Id: g=74d6397363525937fbd3ec2ba3e2e08f
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_4_On
+        Id: g=dd3f7f884e1957022f5269d04220a03e
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_4_Off
+        Id: g=621f5055541abdda9af570bc8ce17018
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_5_On
+        Id: g=0605f834711d1d7a5832cf72a74bdc03
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_5_Off
+        Id: g=48f669ba86674d41468b4b0615fb64aa
         Type: BaseDataVariableType
         DataType: Float
     - Name: TimingCam17
+      Id: g=dfe55ce77dd8151a70664cc6d1161cbc
       Type: BaseDataVariableType
-      DataType: UDT_PLS_Cam
+      DataType: Structure
+      Value: 
+       {
+        "Type": 22,
+        "Body": {
+         "TypeId": {
+          "IdType": 0,
+          "Id": 0,
+          "Namespace": -1
+         },
+         "Body":    {}
+        }
+       }
       Children:
       - Name: Description
+        Id: g=dbf2ef0c3d369a051a8a1f07152272a0
         Type: BaseDataVariableType
         DataType: String
       - Name: OnSpeed_Comp
+        Id: g=1f58fcf4ae28371fccc419bce3a19e75
         Type: BaseDataVariableType
         DataType: Float
       - Name: OffSpeed_Comp
+        Id: g=7de615da67bdd29a98b27e444b8ece17
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_1_On
+        Id: g=7fc835ce5fc7e5281f47a63b92fc5385
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_1_Off
+        Id: g=304c354c079705766ded86bfaa391bc9
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_2_On
+        Id: g=75048d1ba4714d40b7966e4c6d6f9e3f
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_2_Off
+        Id: g=c82ad4c8801b4e3b709f41cd31ffc5cf
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_3_On
+        Id: g=933a288fc1958055a6532f2b3b90fcc5
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_3_Off
+        Id: g=0975c4835577d8be83547918f87da3c4
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_4_On
+        Id: g=60064a84f54d4c05607806ca9c56cb5b
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_4_Off
+        Id: g=c499885b3cdb580abccde49f4fc81ae1
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_5_On
+        Id: g=8b5ccd3c7a7ebd1ac8128caebb6f30cd
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_5_Off
+        Id: g=6f8965a7aaa7860d200c0f511c7b1ed4
         Type: BaseDataVariableType
         DataType: Float
     - Name: TimingCam18
+      Id: g=7cf41f0367760a067c13b08624652248
       Type: BaseDataVariableType
-      DataType: UDT_PLS_Cam
+      DataType: Structure
+      Value: 
+       {
+        "Type": 22,
+        "Body": {
+         "TypeId": {
+          "IdType": 0,
+          "Id": 0,
+          "Namespace": -1
+         },
+         "Body":    {}
+        }
+       }
       Children:
       - Name: Description
+        Id: g=9923ba9a7ab98517e6985234341b95f5
         Type: BaseDataVariableType
         DataType: String
       - Name: OnSpeed_Comp
+        Id: g=28da991ce65c87a5acdd6f36b857ed8e
         Type: BaseDataVariableType
         DataType: Float
       - Name: OffSpeed_Comp
+        Id: g=199e46ccba94ee5e5f732710985014ab
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_1_On
+        Id: g=22bce3aedb92e56aac257e1fba756461
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_1_Off
+        Id: g=c67fc64c615e4e9454d7ed3f23bc93d1
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_2_On
+        Id: g=49411907537ce9a7040571c541faf41a
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_2_Off
+        Id: g=cc32bcdec9dfff589f22a9b41b12aa0a
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_3_On
+        Id: g=3ce6ba59f94ce09e8a4ee995d340cbaa
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_3_Off
+        Id: g=c1b004cf805ceac909cd80543b6507bf
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_4_On
+        Id: g=1278990ab34c1b9961b9d979d75fde76
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_4_Off
+        Id: g=13e6b4587c37828cee1f73e5f486b046
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_5_On
+        Id: g=5e0472fa9ef0cdb93620fcd52adfe051
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_5_Off
+        Id: g=c8743b7354ade3c8cae722b1339ee18c
         Type: BaseDataVariableType
         DataType: Float
     - Name: TimingCam19
+      Id: g=cbd188f2ce22eb8dbfc6c608348df726
       Type: BaseDataVariableType
-      DataType: UDT_PLS_Cam
+      DataType: Structure
+      Value: 
+       {
+        "Type": 22,
+        "Body": {
+         "TypeId": {
+          "IdType": 0,
+          "Id": 0,
+          "Namespace": -1
+         },
+         "Body":    {}
+        }
+       }
       Children:
       - Name: Description
+        Id: g=f2419a02f90b10717ae13260204973be
         Type: BaseDataVariableType
         DataType: String
       - Name: OnSpeed_Comp
+        Id: g=7e111275ce0fa3cb9d78490f917fa1cc
         Type: BaseDataVariableType
         DataType: Float
       - Name: OffSpeed_Comp
+        Id: g=ab1fb0d3fae5721a795d89f952028bb7
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_1_On
+        Id: g=e7e6f9442854dd16ffa735ab98915937
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_1_Off
+        Id: g=1ad05d458d607da727521deea0b20198
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_2_On
+        Id: g=52c94a9fe93be0dbc9d6eade697426c8
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_2_Off
+        Id: g=2861898741bfb773cef94e98e81069f3
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_3_On
+        Id: g=4ff7c168b512d4db15fb733f18542feb
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_3_Off
+        Id: g=2da02a7c1e57996d6dc42854669b0396
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_4_On
+        Id: g=7f77d308e32395b091d616f9f0cd7b62
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_4_Off
+        Id: g=196ff768b747ec9fdec1c576dc2671d6
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_5_On
+        Id: g=d555660e8e54cd074251bb6bc25a2dec
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_5_Off
+        Id: g=342e84d5667d21459ed0b465ef38d991
         Type: BaseDataVariableType
         DataType: Float
     - Name: TimingCam20
+      Id: g=ef1434fd4c967de1bae09ccb77f90752
       Type: BaseDataVariableType
-      DataType: UDT_PLS_Cam
+      DataType: Structure
+      Value: 
+       {
+        "Type": 22,
+        "Body": {
+         "TypeId": {
+          "IdType": 0,
+          "Id": 0,
+          "Namespace": -1
+         },
+         "Body":    {}
+        }
+       }
       Children:
       - Name: Description
+        Id: g=db9c3d99a7c0da46e5a3cc34b1f62bc0
         Type: BaseDataVariableType
         DataType: String
       - Name: OnSpeed_Comp
+        Id: g=54771868bbe81a0ff194046652812f9b
         Type: BaseDataVariableType
         DataType: Float
       - Name: OffSpeed_Comp
+        Id: g=640e9cb6478de3232ba42655bd1f43b1
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_1_On
+        Id: g=92aebab88af07c2bbeb1fd1d5ca1f329
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_1_Off
+        Id: g=06de91c22c4bb9816f23863f698f63db
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_2_On
+        Id: g=2ab608f7db5a5047ed1a1071892a3235
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_2_Off
+        Id: g=4b2f1f018f9325061821715139c0a45a
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_3_On
+        Id: g=5e705bf2d553aa4404fb6a7d90ba33fa
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_3_Off
+        Id: g=7894f20a9455e8889701549cd58f220d
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_4_On
+        Id: g=ad0c9e90c30633d482c48b3694547071
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_4_Off
+        Id: g=725732f78dcad85682cda5bc127cca3c
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_5_On
+        Id: g=a95a26dbf11e419cb02682bf2ada9888
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_5_Off
+        Id: g=44b56b4ec2ea44c2d7973e43ccc14994
         Type: BaseDataVariableType
         DataType: Float
     - Name: TimingCam21
+      Id: g=483584558d55c05ad4e6179f03cc8e8f
       Type: BaseDataVariableType
-      DataType: UDT_PLS_Cam
+      DataType: Structure
+      Value: 
+       {
+        "Type": 22,
+        "Body": {
+         "TypeId": {
+          "IdType": 0,
+          "Id": 0,
+          "Namespace": -1
+         },
+         "Body":    {}
+        }
+       }
       Children:
       - Name: Description
+        Id: g=f98ea3efdecc07d305d324e63d9e7daf
         Type: BaseDataVariableType
         DataType: String
       - Name: OnSpeed_Comp
+        Id: g=045efb80946e45697cfc71f070731230
         Type: BaseDataVariableType
         DataType: Float
       - Name: OffSpeed_Comp
+        Id: g=861d519baa87b2d8ff8d589503040a2a
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_1_On
+        Id: g=8edce7cf3256e126dc5f411e1e4fe085
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_1_Off
+        Id: g=ef70a5328b34b198b8e25eb34a7ad215
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_2_On
+        Id: g=95764bcf1a8906c8e83d026a576b4463
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_2_Off
+        Id: g=1d78a2c1d60f3fcf606065675f6e9f53
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_3_On
+        Id: g=b354e3275d3e395116ee4904ba14a000
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_3_Off
+        Id: g=fbbe876f53d27700497e41aac150af42
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_4_On
+        Id: g=3c0333657a32cb46f1b5560aea5a186a
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_4_Off
+        Id: g=39cd5be260beaec30dd499fbff6d8a49
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_5_On
+        Id: g=55816f9dc468d28871df84d4fb0d3b52
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_5_Off
+        Id: g=a0c87eb4db10e03f3a34ae864bf8158b
         Type: BaseDataVariableType
         DataType: Float
     - Name: TimingCam22
+      Id: g=b37c3d2e17c3f2ed3d34cb2e561baddf
       Type: BaseDataVariableType
-      DataType: UDT_PLS_Cam
+      DataType: Structure
+      Value: 
+       {
+        "Type": 22,
+        "Body": {
+         "TypeId": {
+          "IdType": 0,
+          "Id": 0,
+          "Namespace": -1
+         },
+         "Body":    {}
+        }
+       }
       Children:
       - Name: Description
+        Id: g=5a988b930eb41630f4972d51668aaf30
         Type: BaseDataVariableType
         DataType: String
       - Name: OnSpeed_Comp
+        Id: g=e30985a21185f4cac8928b641fe35cc7
         Type: BaseDataVariableType
         DataType: Float
       - Name: OffSpeed_Comp
+        Id: g=5f4b93d6800fd29b36ce2a9b865d8fd3
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_1_On
+        Id: g=c0b4f761ff7b0b4786513747e9bba3a7
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_1_Off
+        Id: g=ad83046362f6c5e30fd17d7c673ea6fc
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_2_On
+        Id: g=f474a8011f57988df6327a80edc71ad4
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_2_Off
+        Id: g=fefa00306267b5690643e496ecad783b
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_3_On
+        Id: g=88996ebd9692055a7fcb9b703154af9a
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_3_Off
+        Id: g=3dc7316423ddbfacdbdebe70d042cdbb
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_4_On
+        Id: g=76043ce5d67362aa54a6a3b4313642a1
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_4_Off
+        Id: g=7f43a5f43043e2331b1db050c1c8d2e6
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_5_On
+        Id: g=b5283f1b42b67254420d9a96122026b7
         Type: BaseDataVariableType
         DataType: Float
       - Name: Cam_5_Off
+        Id: g=000cc6c09ac1dcf1e3f5287ba9806555
         Type: BaseDataVariableType
         DataType: Float
     - Name: Axis02LeadingLugThickness
+      Id: g=a4d0bf81ab90a492182c994bc2ec2e4d
       Type: BaseDataVariableType
       DataType: Float
     - Name: Axis02Offset
+      Id: g=58364fb6eaa82a7098048b3a54540cb6
       Type: BaseDataVariableType
       DataType: Float
     - Name: Axis03Offset
+      Id: g=eb158595f2a83164008bbef75bcce818
       Type: BaseDataVariableType
       DataType: Int16
     - Name: Axis04Offset
+      Id: g=760eacb724a78643cf7d64e323241c64
       Type: BaseDataVariableType
       DataType: Float
     - Name: Axis05Offset
+      Id: g=c469557b22a6a920eefef7ee162f865a
       Type: BaseDataVariableType
       DataType: Int16
     - Name: Axis06Offset
+      Id: g=db43b4d864b8a31eb7c017dc01774920
       Type: BaseDataVariableType
       DataType: Int16
     - Name: Axis07Offset
+      Id: g=f1bca6d62a94f622a7e891c9a7143a60
       Type: BaseDataVariableType
       DataType: Int16
     - Name: Axis08Offset
+      Id: g=c0995f5fecf880200b662d4d3c04835d
       Type: BaseDataVariableType
       DataType: Int16
     - Name: Axis09Offset
+      Id: g=12238827fc7c5f1acd35bcb4b128375f
       Type: BaseDataVariableType
       DataType: Int16
     - Name: Axis10Offset
+      Id: g=9c20be9e28e35ab14391366a0a143208
       Type: BaseDataVariableType
       DataType: Int16
     - Name: Axis11Offset
+      Id: g=320f1b1326ab15bddee6237b8f3bf6cc
       Type: BaseDataVariableType
       DataType: Float
     - Name: Axis12Offset
+      Id: g=097721d7209bff99f6cb39640964ed12
       Type: BaseDataVariableType
       DataType: Float
     - Name: Axis13Offset
+      Id: g=32f9f00bff5a325f1163d6c35ebbb92f
       Type: BaseDataVariableType
       DataType: Int16
     - Name: Axis14Offset
+      Id: g=0c3e7cbaefeb3073ec1dd325a62931e9
       Type: BaseDataVariableType
       DataType: Int16
     - Name: Axis15Offset
+      Id: g=d77a384a9eadab12878cef921190b03c
       Type: BaseDataVariableType
       DataType: Int16
     - Name: Axis15DwellPosition
+      Id: g=c3c6707f5a202c15c1ff088a4495ab97
       Type: BaseDataVariableType
       DataType: Int16
     - Name: Axis16Offset
+      Id: g=e40f85c43e9a455cab8d7088f32fa960
       Type: BaseDataVariableType
       DataType: Int16
     - Name: Axis16DwellPosition
+      Id: g=955c92023673719afbc743595384da1c
       Type: BaseDataVariableType
       DataType: Int16
     - Name: Axis21Offset
+      Id: g=6b01ea0a35aa761b18cec261c02ff63d
       Type: BaseDataVariableType
       DataType: Int16
     - Name: Axis22Offset
+      Id: g=ff8676886b798cee361ff81fecef3f95
       Type: BaseDataVariableType
       DataType: Int16
     - Name: INT01
+      Id: g=65d99b106599a67b9f1275e023f70a82
       Type: BaseDataVariableType
       DataType: Int16
     - Name: INT02
+      Id: g=385308a336e08687f97117e1622ebb3c
       Type: BaseDataVariableType
       DataType: Int16
     - Name: INT03
+      Id: g=c22f96c431c770443c98c667ca00e522
       Type: BaseDataVariableType
       DataType: Int16
     - Name: INT04
+      Id: g=a14646f78d9c4ef7f0e5f8dc04b7f5c1
       Type: BaseDataVariableType
       DataType: Int16
     - Name: INT05
+      Id: g=c2bf988040436337dbe388286a223f63
       Type: BaseDataVariableType
       DataType: Int16
     - Name: INT06
+      Id: g=80f0b7f53c31ad3dc1845f82b4ebd101
       Type: BaseDataVariableType
       DataType: Int16
     - Name: INT07
+      Id: g=1f8381f341316c4f0acc621086baff44
       Type: BaseDataVariableType
       DataType: Int16
     - Name: INT08
+      Id: g=303bf3b0ee77218d91674281303abf98
       Type: BaseDataVariableType
       DataType: Int16
     - Name: INT09
+      Id: g=f838798320aac4798aa67e6fd9e9afb3
       Type: BaseDataVariableType
       DataType: Int16
     - Name: INT10
+      Id: g=0d61523ba5a7c54063b8ccc738ddea9b
       Type: BaseDataVariableType
       DataType: Int16
     - Name: INT11
+      Id: g=2143f9f96256502f59e4dfc68233f52a
       Type: BaseDataVariableType
       DataType: Int16
     - Name: INT12
+      Id: g=071496faffbb19eb06ea21c68f21b235
       Type: BaseDataVariableType
       DataType: Int16
     - Name: INT13
+      Id: g=5ef0a4ac0bc020b45497a3cd47fdb4da
       Type: BaseDataVariableType
       DataType: Int16
     - Name: INT14
+      Id: g=fe6340ef4d8278f2be43f93d75b0db90
       Type: BaseDataVariableType
       DataType: Int16
     - Name: INT15
+      Id: g=2060d09110e11c3b061e352f40cfbbca
       Type: BaseDataVariableType
       DataType: Int16
     - Name: INT16
+      Id: g=c2686ff9e8eefd2e1c527ef3bfe6fc91
       Type: BaseDataVariableType
       DataType: Int16
     - Name: INT17
+      Id: g=8a98d3025b15aafb9069c301dd647329
       Type: BaseDataVariableType
       DataType: Int16
     - Name: INT18
+      Id: g=3758a5c847fad18916d192c6b94a4fe0
       Type: BaseDataVariableType
       DataType: Int16
     - Name: INT19
+      Id: g=2681a10cdb81179b6cd10b27b7ccc624
       Type: BaseDataVariableType
       DataType: Int16
     - Name: INT20
+      Id: g=27e56e34144b2e5418f82eab4def6d19
       Type: BaseDataVariableType
       DataType: Int16
     - Name: INT21
+      Id: g=78b445eaca0b65bb78df33759697b6df
       Type: BaseDataVariableType
       DataType: Int16
     - Name: INT22
+      Id: g=ac260733b9580e644a7dc8d74e12a3e0
       Type: BaseDataVariableType
       DataType: Int16
     - Name: INT23
+      Id: g=e583bea135437208876758875f5b7dd9
       Type: BaseDataVariableType
       DataType: Int16
     - Name: INT24
+      Id: g=548e5e8c0ff160163bf8a762539344f6
       Type: BaseDataVariableType
       DataType: Int16
     - Name: INT25
+      Id: g=4236bd38138430e1bac5a8d6f2e387f3
       Type: BaseDataVariableType
       DataType: Int16
     - Name: INT26
+      Id: g=ae23e2e65df75789d984a1803c90e09b
       Type: BaseDataVariableType
       DataType: Int16
     - Name: REAL03
+      Id: g=589c0443c65635b90758ca8aeef1c134
       Type: BaseDataVariableType
       DataType: Float
     - Name: NumberOfCartonsPerMagazineFlight
+      Id: g=f05110cc83a641cdda38218d895d28d9
       Type: BaseDataVariableType
       DataType: Float
     - Name: UpHill_Carton_Mag_Speed_IPM
+      Id: g=82c38b73dfe3dbef5de180f3b47f8676
       Type: BaseDataVariableType
       DataType: Float
     - Name: Straight_Carton_Mag_Speed_IPM
+      Id: g=1e0d55ad70830de3954f3680f7c510b9
       Type: BaseDataVariableType
       DataType: Float
     - Name: EnableHoseGun1and4
+      Id: g=5049f4a01bcb7fbc6652449363722dcc
       Type: BaseDataVariableType
       DataType: Boolean
     - Name: EnableCartonFeedAirAssist
+      Id: g=23c405c8514aaa09381075e3277b2044
       Type: BaseDataVariableType
       DataType: Boolean
     - Name: InfeedConveyor1_Mul
+      Id: g=5d192ba27c75c99b22cb573173c48fd7
       Type: BaseDataVariableType
       DataType: Float
     - Name: InfeedConveyor2_Mul
+      Id: g=075ce416e834e803162706b2f8573a1c
       Type: BaseDataVariableType
       DataType: Float
     - Name: Auto_NominalSpeed_CPM
+      Id: g=061ff492842f1061f2a74abf6745ece9
       Type: BaseDataVariableType
       DataType: Int16
     - Name: Auto_SurgeSpeed_CPM
+      Id: g=b7eef4770a2b0aaf859868047e97aaa9
       Type: BaseDataVariableType
       DataType: Int16
     - Name: Auto_NominalSpeed_CPM_OtherPackerDown
+      Id: g=a831a14e00d14438fb9b4e7de62c8a71
       Type: BaseDataVariableType
       DataType: Int16
     - Name: Auto_SurgeSpeed_CPM_OtherPackerDown
+      Id: g=400ef270778df49ed1ca093aa48fdb0d
       Type: BaseDataVariableType
       DataType: Int16
     - Name: GarveyInfeedConv1_Mul
+      Id: g=b18bf9d8b41478a9bb9052f5a2699371
       Type: BaseDataVariableType
       DataType: Float
     - Name: GarveyInfinityLoop_Mul
+      Id: g=7fd391ba6f6b6639b17aaf888ece7905
       Type: BaseDataVariableType
       DataType: Float
     - Name: GarveyInfinityOutput_Mul
+      Id: g=5eb523cabc6cb1d23de07d961e386558
       Type: BaseDataVariableType
       DataType: Float
     - Name: GarveyInfinitySlowDownLane_Mul
+      Id: g=963c4e9bfab3651523b7773505b7d88e
       Type: BaseDataVariableType
       DataType: Float
     - Name: Auto_MediumSpeed_CPM
+      Id: g=e04e80560f907be69fe5f6b4dd7944e7
       Type: BaseDataVariableType
       DataType: Int16
     - Name: Auto_HighSpeed_CPM
+      Id: g=19673f7cbb371cabf22316359ec8efc6
       Type: BaseDataVariableType
       DataType: Int16
     - Name: ProductDiameter_Inches
+      Id: g=e686500b07c48d240b9fbe070540f444
       Type: BaseDataVariableType
       DataType: Float
     - Name: GluePressureAtLowSpeed_PSI
+      Id: g=7e80781371e9df47e259fe7de1fbfc6b
       Type: BaseDataVariableType
       DataType: Int16
     - Name: GluePressureAtHighSpeed_PSI
+      Id: g=46b1274e913873a6e23b568138a97b2f
       Type: BaseDataVariableType
       DataType: Int16
     - Name: MaxSpeedThisSize_CPM
+      Id: g=97c75618fe0537ac193c280505a0b10f
       Type: BaseDataVariableType
       DataType: Int16
     - Name: SikoCounterSetpoint
+      Id: g=aa78169d30b3e7362985efd91bfffa49
       Type: BaseDataVariableType
       DataType: Float
       ValueRank: OneDimension
       ArrayDimensions: [110]
     - Name: SizeChangePoint_PushToVerify
+      Id: g=b7cb9a82b7e896d95eeea8fa7803ac76
       Type: BaseDataVariableType
       DataType: Float
       ValueRank: OneDimension
       ArrayDimensions: [55]
     - Name: D510_VFD1_NerconBot_Mul
+      Id: g=d2b888563f0805168304a1a4f133f1be
       Type: BaseDataVariableType
       DataType: Float
     - Name: D510_VFD2_NerconSide_Mul
+      Id: g=ddb47458471e77c600524c07f15dad5b
       Type: BaseDataVariableType
       DataType: Float
     - Name: D510_VFD3_IntroloxInfeed_Mul
+      Id: g=00519b1d25a1424f759df3021acff211
       Type: BaseDataVariableType
       DataType: Float
     - Name: D510_VFD4_IntroloxTurning_Mul
+      Id: g=4326bfa8310fbb2ce66d0b4ca9dd7a93
       Type: BaseDataVariableType
       DataType: Float
     - Name: D510_VFD5_IntroloxReject_Mul
+      Id: g=0de0d26afd55a8110065c6ddb9db0b37
       Type: BaseDataVariableType
       DataType: Float
     - Name: D510_VFD6_IntroloxReject_Mul
+      Id: g=f4b146f1ccbac7ec301b5bcc67e8541a
       Type: BaseDataVariableType
       DataType: Float
     - Name: D510_VFD7_IntroloxDischarge_Mul
+      Id: g=97ee9aa36e8f7c9f69cc9581c0f5866a
       Type: BaseDataVariableType
       DataType: Float
     - Name: i_447_SensorCenteredOnTarget
+      Id: g=062158f154c916a84574232aeacdd8b2
       Type: BaseDataVariableType
       DataType: Int16
       ValueRank: OneDimension
       ArrayDimensions: [20]
     - Name: i_447_InfeedSensorProx
+      Id: g=b8ee394a528481d08a3f604acbdbe6bc
       Type: BaseDataVariableType
       DataType: Int16
     - Name: i_447_UpstreamInfeedSensorProx
+      Id: g=387b4521fbae06bce8abad0b2ca3077b
       Type: BaseDataVariableType
       DataType: Int16
     - Name: bo_447_CenterBoardRequired
+      Id: g=61040218ee138474264ff38931e02ac1
       Type: BaseDataVariableType
       DataType: Boolean
     - Name: byte_445_RFID_SensorSetpoint
+      Id: g=8240ad8cc66bf9bc93f3eb0448a1ac1f
       Type: BaseDataVariableType
       DataType: SByte
       ValueRank: OneDimension
       ArrayDimensions: [60]
     - Name: i_445_TagCenteredOnSensor
+      Id: g=550975f804ed72ac8b723c1ecf3e1e00
       Type: BaseDataVariableType
       DataType: Int16
       ValueRank: OneDimension
       ArrayDimensions: [60]
     - Name: D232_SRStation_RejectAtXRay
+      Id: g=945eb993ff3fa308efa84d9b5b904644
       Type: BaseDataVariableType
       DataType: Int32
     - Name: D232_SRStation_RejectAtDischargeJam
+      Id: g=ddb00a8b12aaa43c350f9cf1da7e04b3
       Type: BaseDataVariableType
       DataType: Int32
     - Name: D232_SRStation_RejectAtOpenOuterFlap
+      Id: g=6803db86822bec369b7b0e6656688695
       Type: BaseDataVariableType
       DataType: Int32
     - Name: D232_SRStation_RejectAtIntralox
+      Id: g=d4bfeb32c648b619f86b84838698bac6
       Type: BaseDataVariableType
       DataType: Int32
     - Name: D510_Intralox_MenuNumber
+      Id: g=15eb5a7c7fa500cd42ce429319e2b33d
       Type: BaseDataVariableType
       DataType: Int32
     - Name: D510_Intralox_NumPacksLane1
+      Id: g=86427437edd9b2509bbbe45ef36280d3
       Type: BaseDataVariableType
       DataType: Int32
     - Name: D510_Intralox_NumPacksLane2
+      Id: g=a131da4d9fe6487cd0ab5bd802b20def
       Type: BaseDataVariableType
       DataType: Int32
     - Name: D510_Intralox_NumPacksLane3
+      Id: g=66d3cc6be6d4071930257389084f3d18
       Type: BaseDataVariableType
       DataType: Int32
     - Name: D510_Intralox_TurnProduct
+      Id: g=d0f61a30b3d9a408d744b06b3186c12e
       Type: BaseDataVariableType
       DataType: Int32
     - Name: r_449_TouchToVerifySetpoints
+      Id: g=aac824083870254e44ac8c7041f9fb49
       Type: BaseDataVariableType
       DataType: Float
       ValueRank: OneDimension
       ArrayDimensions: [50]
     - Name: R128_SpeconInfeed_Mul
+      Id: g=11b8aa683662f961c840afaddf4e1c5b
       Type: BaseDataVariableType
       DataType: Float
     - Name: R213_DischargeConveyor_Mul
+      Id: g=5e974d4ee4867ea3ea49e3e4d0c1fe25
       Type: BaseDataVariableType
       DataType: Float
     - Name: Enable2ndStationBottomFlapCloser
+      Id: g=0022d7958e843c1965ff7e33421a7fb9
       Type: BaseDataVariableType
       DataType: Boolean
     - Name: FlapSeparatorMode
+      Id: g=43fb9eeb165e178f5edca78a8d276e87
       Type: BaseDataVariableType
       DataType: Boolean
     - Name: GluePressureAtLowSpeed2_PSI
+      Id: g=2fd0ab72fa9d4be0e3ac9c8dcfe3e583
       Type: BaseDataVariableType
       DataType: Int16
     - Name: GluePressureAtHighSpeed2_PSI
+      Id: g=99bbbaaad3a8e9c5e9442509efb32900
       Type: BaseDataVariableType
       DataType: Int16
     - Name: SecondStationBotGlueHosesGunsEnable
+      Id: g=ab40063ee1be29145a3b149c565cc820
       Type: BaseDataVariableType
       DataType: Boolean
     - Name: SecondStationTopMidGlueHosesGunsEnable
+      Id: g=79baae7780f939b2dcf1d28d332a5900
       Type: BaseDataVariableType
       DataType: Boolean
     - Name: FirstStationGlueHosesGunsEnable
+      Id: g=cdc8dc0f683e324acde82889d2aacc72
       Type: BaseDataVariableType
       DataType: Boolean
     - Name: B370_CodeDaterActive_OS
+      Id: g=13705f7fa91c7e4fc7146658d01141d6
       Type: BaseDataVariableType
       DataType: Boolean
     - Name: B371_CodeDaterActive_LS
+      Id: g=b0a94d29da44141157ea0c6e170e0078
       Type: BaseDataVariableType
       DataType: Boolean
     - Name: SpecCon_Parallel_Multiplier
+      Id: g=5c17323aec7720cb9584cc374ea9aa45
       Type: BaseDataVariableType
       DataType: Float
     - Name: RotaryFlapSeparatorDirection
+      Id: g=d34d0822925949f3a99eb510b98a552f
       Type: BaseDataVariableType
       DataType: Int16
     - Name: B510_IntraloxBypassMode
+      Id: g=a9c068d5ed3dc3c5e9c46f5da45e7734
       Type: BaseDataVariableType
       DataType: Boolean
     - Name: B160_TopFlapNotPresent
+      Id: g=e7dcb939bacc016e9f5682a0b5cb87e4
       Type: BaseDataVariableType
       DataType: Boolean
     - Name: I200_PEC1_OpenInnerFlapMaxDist_mm_LS
+      Id: g=6ab99290a3da728c9a447c0fe32b79be
       Type: BaseDataVariableType
       DataType: Int16
     - Name: I200_PEC2_OpenInnerFlapMaxDist_mm_OS
+      Id: g=624af093317293ed048e89d67dc1d775
       Type: BaseDataVariableType
       DataType: Int16
     - Name: I195_TemperatureSetpoint_Tank
+      Id: g=38d37990f45517d8e9179f75b96924bb
       Type: BaseDataVariableType
       DataType: Int16
     - Name: I195_TemperatureSetpoint_Manifold
+      Id: g=9d6c8f64b9f1babac2d826d6f6345dfe
       Type: BaseDataVariableType
       DataType: Int16
     - Name: I195_TemperatureSetpoint_Hose1
+      Id: g=bd746ca20948388001a8de1793e7c825
       Type: BaseDataVariableType
       DataType: Int16
     - Name: I195_TemperatureSetpoint_Gun1
+      Id: g=92af131c01fa80b2d4df0e951a8ad082
       Type: BaseDataVariableType
       DataType: Int16
     - Name: I195_TemperatureSetpoint_Hose2
+      Id: g=fadf84e003e3663b675ede19285b0c24
       Type: BaseDataVariableType
       DataType: Int16
     - Name: I195_TemperatureSetpoint_Gun2
+      Id: g=103b11fc67809213a97ea4a97e7462cf
       Type: BaseDataVariableType
       DataType: Int16
     - Name: I195_TemperatureSetpoint_Hose3
+      Id: g=4c6be2eb7d7c00a737913eeba9689cf9
       Type: BaseDataVariableType
       DataType: Int16
     - Name: I195_TemperatureSetpoint_Gun3
+      Id: g=449ed79c4f3867faee1282a34990a0c6
       Type: BaseDataVariableType
       DataType: Int16
     - Name: I195_TemperatureSetpoint_Hose4
+      Id: g=f0762460072b8fdd540cf971b39f2541
       Type: BaseDataVariableType
       DataType: Int16
     - Name: I195_TemperatureSetpoint_Gun4
+      Id: g=c930aa493b0d28e8f24edb3c5ea8d5db
       Type: BaseDataVariableType
       DataType: Int16
     - Name: I195_TemperatureSetpoint_Hose5
+      Id: g=7eb142e686499e412d62078f5cce2027
       Type: BaseDataVariableType
       DataType: Int16
     - Name: I195_TemperatureSetpoint_Gun5
+      Id: g=ab227a249dcb96b3776ded05c06d2325
       Type: BaseDataVariableType
       DataType: Int16
     - Name: I195_TemperatureSetpoint_Hose6
+      Id: g=98dfc1e1c22030b3e66c0caf248492b2
       Type: BaseDataVariableType
       DataType: Int16
     - Name: I195_TemperatureSetpoint_Gun6
+      Id: g=1721c247096ab7f2441269dc657c5b07
       Type: BaseDataVariableType
       DataType: Int16
     - Name: I195_TemperatureSetpoint_Hose7
+      Id: g=b0f8bf76797e1310768782610f5c3493
       Type: BaseDataVariableType
       DataType: Int16
     - Name: I195_TemperatureSetpoint_Gun7
+      Id: g=ed99bb091eca4aebf231646efbc40b40
       Type: BaseDataVariableType
       DataType: Int16
     - Name: I195_TemperatureSetpoint_Hose8
+      Id: g=87031b381bf8940a9f58e607e63029df
       Type: BaseDataVariableType
       DataType: Int16
     - Name: I195_TemperatureSetpoint_Gun8
+      Id: g=cc13fb800b339857b15e2729963f6ab7
       Type: BaseDataVariableType
       DataType: Int16
     - Name: I240_CartonFeedLugPitch
+      Id: g=220ebab6721c3b740883daed8bbdb119
       Type: BaseDataVariableType
       DataType: Int32
     - Name: I150_CartonFed_ShiftRegisterStation
+      Id: g=03ac0d60665d2eb7cb4dfa3d832ae28e
       Type: BaseDataVariableType
       DataType: Int32
     - Name: I160_MissingCartonCheck_ShiftRegisterSta
+      Id: g=d7209961b55fb991eaa41082dcad057d
       Type: BaseDataVariableType
       DataType: Int32
   - Name: Timeout
+    Id: g=28d1a43c277356223d1e7fd3f3870d9f
     Type: BaseDataVariableType
     DataType: Duration
     Value: "0:00:00:10.0000000"
 - Name: MachineRecipe
+  Id: g=277211901b452dd36c6e448a0644a851
   Type: ns=43;RecipeSchema
   Children:
   - Name: TargetNode
+    Id: g=18e5830cdf0df7eb1d4fb51e86a7b776
     Type: NodePointer
     DataType: NodeId
     Children:
     - Name: Kind
+      Id: g=f9d55c2636e475a37ebb6b1c4d9cb206
       Type: PropertyType
       DataType: NodeId
   - Name: Store
+    Id: g=4d091c4b7de067330e68524fc2f9875c
     Type: NodePointer
     DataType: NodeId
     Value: "/Objects/OptimateDemoProject/DataStores/RecipeData"
     Children:
     - Name: Kind
+      Id: g=2037c1f355600a2a3c24c07a0582d9c8
       Type: PropertyType
       DataType: NodeId
       Value: "/Types/ObjectTypes/BaseObjectType/Store"
   - Name: Status
+    Id: g=1fbe4acb38fb6c85bdab15ac04139b86
     Type: BaseDataVariableType
     DataType: RecipeSchemaStatus
     AccessLevel: Read
   - Name: Metadata
+    Id: g=7d0ebdd507ceaddb5a7e8dbcbf9dbfb0
     Type: BaseObjectType
   - Class: Reference
     Target: ns=43;i=16
@@ -3544,30 +5383,37 @@ Children:
     Target: ns=43;i=175
     Direction: Forward
 - Name: VariableDebug_All
+  Id: g=70415c27f96fb0e4efd1b9678e644023
   Type: ns=43;RecipeSchema
   Children:
   - Name: TargetNode
+    Id: g=940d63a340b1ae269043c3be29fb8730
     Type: NodePointer
     DataType: NodeId
     Value: "/Objects/OptimateDemoProject/Model"
     Children:
     - Name: Kind
+      Id: g=5801a4ec15916973011c23a693250b76
       Type: PropertyType
       DataType: NodeId
       Value: "/Types/ObjectTypes/BaseObjectType/FolderType/CategoryFolder/ModelCategoryFolder"
   - Name: Store
+    Id: g=04ca2e05db579548d9bd322b5a8e9020
     Type: NodePointer
     DataType: NodeId
     Children:
     - Name: Kind
+      Id: g=36ed6026d81e78d83fed083fdfad9f33
       Type: PropertyType
       DataType: NodeId
       Value: "/Types/ObjectTypes/BaseObjectType/Store"
   - Name: Status
+    Id: g=cdc281b18ce24ac6cd1ac3c365c21a6d
     Type: BaseDataVariableType
     DataType: RecipeSchemaStatus
     AccessLevel: Read
   - Name: Metadata
+    Id: g=00ea0a9323dabb4960ffe07a925fb371
     Type: BaseObjectType
   - Class: Reference
     Target: ns=43;i=16

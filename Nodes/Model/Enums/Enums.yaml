@@ -1,4 +1,5 @@
 Name: Enums
+Id: g=67fc1ed45aa00252ed0b88ff23211489
 Type: FolderType
 Children:
 - Class: DataType
@@ -87,6 +88,7 @@ Children:
    }
   Children:
   - Name: ns=0;EnumValues
+    Id: g=22a5b0d4caa669c7b9c1444f8e893610
     Type: BaseDataVariableType
     DataType: EnumValueType
     ModellingRule: None
@@ -151,6 +153,7 @@ Children:
    }
   Children:
   - Name: ns=0;EnumValues
+    Id: g=a16e6475863188d0ee656b7fc5093d93
     Type: BaseDataVariableType
     DataType: EnumValueType
     ModellingRule: None
@@ -201,6 +204,7 @@ Children:
    }
   Children:
   - Name: ns=0;EnumValues
+    Id: g=0a4be7bb3751dfa152ee6757716253c8
     Type: BaseDataVariableType
     DataType: EnumValueType
     ModellingRule: None
@@ -258,6 +262,7 @@ Children:
    }
   Children:
   - Name: ns=0;EnumValues
+    Id: g=e7e4331998895cbf589e6d0f5555196e
     Type: BaseDataVariableType
     DataType: EnumValueType
     ModellingRule: None
@@ -315,6 +320,7 @@ Children:
    }
   Children:
   - Name: ns=0;EnumValues
+    Id: g=83c23d730174c2a0cbb120eee586a1e1
     Type: BaseDataVariableType
     DataType: EnumValueType
     ModellingRule: None
@@ -379,6 +385,7 @@ Children:
    }
   Children:
   - Name: ns=0;EnumValues
+    Id: g=02984b1d977eb62434b58df2975bf7a6
     Type: BaseDataVariableType
     DataType: EnumValueType
     ModellingRule: None
@@ -389,3 +396,47 @@ Children:
   Name: Positioning
   Id: g=cc9f6f5ed0ee8f1c172a764bcf1d0a75
   Supertype: Enumeration
+- Class: DataType
+  Name: CustomBoolean
+  Id: g=a9d7aa97ae6e9e7b5d13eb0fde253077
+  Supertype: Enumeration
+  EnumDefinition: 
+   {
+    "Name": "CustomBoolean",
+    "DataType": {
+     "IdType": 2,
+     "Id": "a9d7aa97ae6e9e7b5d13eb0fde253077",
+     "Namespace": 36
+    },
+    "Fields": [{
+      "Name": "Value0",
+      "Value": 0,
+      "DisplayName": {
+       "LocaleId": "en-US",
+       "Text": "False"
+      }
+     },{
+      "Name": "Value1",
+      "Value": 1,
+      "DisplayName": {
+       "LocaleId": "en-US",
+       "Text": "True"
+      }
+     },{
+      "Name": "Value2",
+      "Value": 2,
+      "DisplayName": {
+       "LocaleId": "en-US",
+       "Text": "Default"
+      }
+     }]
+   }
+  Children:
+  - Name: ns=0;EnumValues
+    Id: g=0bb1e30ebcd29d485ac3d76988c9f3e3
+    Type: BaseDataVariableType
+    DataType: EnumValueType
+    ModellingRule: None
+    ValueRank: OneDimension
+    ArrayDimensions: [0]
+    Value: [{"TypeId":{"Id":7594},"Body":{"Value":0,"DisplayName":{"LocaleId":"en-US","Text":"False"},"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}},{"TypeId":{"Id":7594},"Body":{"Value":1,"DisplayName":{"LocaleId":"en-US","Text":"True"},"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}},{"TypeId":{"Id":7594},"Body":{"Value":2,"DisplayName":{"LocaleId":"en-US","Text":"Default"},"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}}]

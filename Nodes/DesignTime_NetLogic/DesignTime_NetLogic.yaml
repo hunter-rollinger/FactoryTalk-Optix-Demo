@@ -1,45 +1,58 @@
 Name: DesignTime NetLogic
+Id: g=c335246cb7815f8237fa0040fc6572cc
 Type: NetLogicCategoryFolder
 Children:
 - Name: SetColors
+  Id: g=e914d0008f0ad06999f67be4302cb86d
   Type: NetLogic
   Children:
   - Name: BehaviourStartPriority
+    Id: g=bc62980930f96dc6c9f3825e12504e44
     Type: BehaviourStartPriorityVariableType
     DataType: Byte
     Value: 180
   - Class: Method
     Name: FindAndSetColorVariables
+    Id: g=42e84390e4b5a3a068022c9d268689d8
   - Name: ColorReferenceFolder
+    Id: g=599184cbaddca2e2e431224fc2e6df8b
     Type: BaseDataVariableType
     DataType: NodeId
     Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project"
 - Name: UnusedTranslationKeys
+  Id: g=100278a5ac7a5707a397e012e57abceb
   Type: NetLogic
   WriteMask: BrowseName|DataType|Description|DisplayName|MinimumSamplingInterval|UserAccessLevel
   Children:
   - Name: BehaviourStartPriority
+    Id: g=98c97d5a26e16ff4fae963984f249d99
     Type: BehaviourStartPriorityVariableType
     DataType: Byte
     Value: 180
   - Name: LocalizationDictionary
+    Id: g=dd90d558986aab496bfa729ad0ce7a3d
     Type: NodePointer
     DataType: NodeId
     Children:
     - Name: Kind
+      Id: g=244348bf9d18190d8eefc612692437d3
       Type: PropertyType
       DataType: NodeId
       Value: "/Types/VariableTypes/BaseVariableType/LocalizationDictionary"
   - Name: RemoveUnusedKeys
+    Id: g=aa42055bdd44692ed8838c86439f732d
     Type: BaseDataVariableType
     DataType: Boolean
   - Class: Method
     Name: SearchForUnusedKeys
+    Id: g=41d94a787b650d19a818f5071c350971
   - Name: ReportPath
+    Id: g=db2260a881fc213e3c5ca5dabe4eb7f9
     Type: BaseDataVariableType
     DataType: ResourceUri
     Value: "ns=36;%PROJECTDIR%/UnusedTranslationKeys.txt"
   - Name: ns=19;LibraryReference
+    Id: g=a11898d0433afec9459d8b44e3f342e2
     Type: ObjectLibraryReference
     DataType: ObjectLibraryReferenceDataType
     Value: 

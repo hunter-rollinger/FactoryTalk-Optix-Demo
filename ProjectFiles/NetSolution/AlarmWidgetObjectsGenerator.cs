@@ -8,6 +8,8 @@ using System.Collections.Generic;
 using System.Linq;
 using UAManagedCore;
 using FTOptix.SerialPort;
+using FTOptix.OPCUAServer;
+using FTOptix.System;
 using static AlarmFilterDataLogic;
 using OpcUa = UAManagedCore.OpcUa;
 #endregion

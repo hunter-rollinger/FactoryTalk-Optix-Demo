@@ -120,11 +120,6 @@ public class Production_Bucker_Conveyor : FTOptix.UI.Screen
 {
 }
 
-[MapType(NamespaceUri = "OptimateDemoProject", Guid = "3d530c91a212e5780324b245b1219f8e")]
-public class Statistics_Circular_Percent : FTOptix.UI.Panel
-{
-}
-
 [MapType(NamespaceUri = "OptimateDemoProject", Guid = "a88f9a74802613aa6217382f70f1149a")]
 public class Production_Carton_Feed : FTOptix.UI.Screen
 {
@@ -205,6 +200,11 @@ public class Manual_Gluing : FTOptix.UI.Screen
 {
 }
 
+[MapType(NamespaceUri = "OptimateDemoProject", Guid = "b1954347952e84142f14ac291e5a7565")]
+public class UserLogin : FTOptix.UI.Dialog
+{
+}
+
 [MapType(NamespaceUri = "OptimateDemoProject", Guid = "b82541d12672d6742c3c9c5a2b6a44a0")]
 public class Maintenance_Menu_Bar : MenuBar
 {
@@ -275,6 +275,11 @@ public class Debug_SystemInfo : FTOptix.UI.Screen
 {
 }
 
+[MapType(NamespaceUri = "OptimateDemoProject", Guid = "cb5fcd2f528fd22475ed541049f4e7e2")]
+public class AlphaNumeric_Simple : FTOptix.UI.VirtualKeyboardPanel
+{
+}
+
 [MapType(NamespaceUri = "OptimateDemoProject", Guid = "ac3f76e888a5e3fdd2691155ca1fc8f6")]
 public class AlphaNumeric : FTOptix.UI.VirtualKeyboardPanel
 {
@@ -287,6 +292,11 @@ public class Numeric : FTOptix.UI.VirtualKeyboardPanel
 
 [MapType(NamespaceUri = "OptimateDemoProject", Guid = "7c800b75f0a9ce52bf7bacf8e45b97a8")]
 public class PackML_State_Mode_Indicator : FTOptix.UI.Panel
+{
+}
+
+[MapType(NamespaceUri = "OptimateDemoProject", Guid = "3d530c91a212e5780324b245b1219f8e")]
+public class Statistics_Circular_Percent_DEPRECATED_USE_ECHART : FTOptix.UI.Panel
 {
 }
 
@@ -370,6 +380,11 @@ public class CollapseMenu : FTOptix.UI.Panel
 {
 }
 
+[MapType(NamespaceUri = "OptimateDemoProject", Guid = "01a421926031ec41d685808b59f89467")]
+public class NodesCounterDialog : FTOptix.UI.Dialog
+{
+}
+
 [MapType(NamespaceUri = "OptimateDemoProject", Guid = "c3d0e0369fcd88b7e26e8f0c21d05209")]
 public class AlarmSummaryMedium : FTOptix.UI.Panel
 {
@@ -420,48 +435,8 @@ public class AlarmManager : FTOptix.UI.Panel
 {
 }
 
-[MapType(NamespaceUri = "OptimateDemoProject", Guid = "3f82bccdaed6e6d0e5ea3ad4f62f3dcf")]
-public class AlarmCountersAllAlarmsIconText : FTOptix.UI.RowLayout
-{
-}
-
-[MapType(NamespaceUri = "OptimateDemoProject", Guid = "cabbc6b26130ac8765b838abc1d4b503")]
-public class AlarmManagerSmall : FTOptix.UI.Panel
-{
-}
-
-[MapType(NamespaceUri = "OptimateDemoProject", Guid = "26eed90d734d9899c2021706e5cd0f77")]
-public class AlarmManagerButtonsIconText : FTOptix.UI.RowLayout
-{
-}
-
-[MapType(NamespaceUri = "OptimateDemoProject", Guid = "3f1ad25fe2aa12104b9cb2da922cca38")]
-public class PaginationControlLayout : FTOptix.UI.RowLayout
-{
-}
-
-[MapType(NamespaceUri = "OptimateDemoProject", Guid = "2b2b282c2deda3501e7c7235524e4184")]
-public class AlarmManagerButtonIconText : FTOptix.UI.Button
-{
-}
-
 [MapType(NamespaceUri = "OptimateDemoProject", Guid = "f7693488f23341ce8f24714cb90408c5")]
 public class AlarmSummary : FTOptix.UI.Panel
-{
-}
-
-[MapType(NamespaceUri = "OptimateDemoProject", Guid = "5d3dd0728568a004e511612d39b3bb8b")]
-public class AlarmCountersRetainedAlarmsIconText : FTOptix.UI.RowLayout
-{
-}
-
-[MapType(NamespaceUri = "OptimateDemoProject", Guid = "7d3106e471a8907216f33ccb165e123d")]
-public class AlarmSummaryButtonsIconText : FTOptix.UI.RowLayout
-{
-}
-
-[MapType(NamespaceUri = "OptimateDemoProject", Guid = "97c39b6db0cb36282b065ab26ae59462")]
-public class AlarmSummaryButtonIconText : FTOptix.UI.Button
 {
 }
 
@@ -470,28 +445,13 @@ public class AlarmManagerMedium : FTOptix.UI.Panel
 {
 }
 
-[MapType(NamespaceUri = "OptimateDemoProject", Guid = "cb312cab1201bdc981036402327063fb")]
-public class AlarmManagerButtonsIcon : FTOptix.UI.Panel
+[MapType(NamespaceUri = "OptimateDemoProject", Guid = "26eed90d734d9899c2021706e5cd0f77")]
+public class AlarmManagerButtonsIconText : FTOptix.UI.RowLayout
 {
 }
 
-[MapType(NamespaceUri = "OptimateDemoProject", Guid = "c79fc3a329c0dc560b6dd21d9d2eb363")]
-public class AlarmManagerButtonIcon : FTOptix.UI.Button
-{
-}
-
-[MapType(NamespaceUri = "OptimateDemoProject", Guid = "935b3a944436e800243e52c3a2263c18")]
-public class AlarmCountersRetainedAlarmsIcon : FTOptix.UI.RowLayout
-{
-}
-
-[MapType(NamespaceUri = "OptimateDemoProject", Guid = "3ff553cf6f240bbbc4509c003316a8a0")]
-public class AlarmSummaryButtonsIcon : FTOptix.UI.Panel
-{
-}
-
-[MapType(NamespaceUri = "OptimateDemoProject", Guid = "d86c8ccd46c5c0828c27be9bcfda1f31")]
-public class AlarmSummaryButtonIcon : FTOptix.UI.Button
+[MapType(NamespaceUri = "OptimateDemoProject", Guid = "cabbc6b26130ac8765b838abc1d4b503")]
+public class AlarmManagerSmall : FTOptix.UI.Panel
 {
 }
 
@@ -500,8 +460,8 @@ public class AlarmSummarySmall : FTOptix.UI.Panel
 {
 }
 
-[MapType(NamespaceUri = "OptimateDemoProject", Guid = "7e6294cb0863fc4103e1aab7928cc7c7")]
-public class FilterApplyButton : FTOptix.UI.Button
+[MapType(NamespaceUri = "OptimateDemoProject", Guid = "7fdddbdcf6a84c3a030fee9cd66e58eb")]
+public class NodesCounterPanel : FTOptix.UI.Panel
 {
 }
 
@@ -510,23 +470,18 @@ public class AlarmWidgetsFilters : FTOptix.UI.Dialog
 {
 }
 
-[MapType(NamespaceUri = "OptimateDemoProject", Guid = "de41af1bbe7da093290323d6a1ca0605")]
-public class CloseButton : FTOptix.UI.Button
-{
-}
-
 [MapType(NamespaceUri = "OptimateDemoProject", Guid = "91f59585f3d1d2373d25244e902c17fd")]
 public class AlarmWidgetsTimedShelve : FTOptix.UI.Dialog
 {
 }
 
-[MapType(NamespaceUri = "OptimateDemoProject", Guid = "1bdd3cc0f30a479baefa3fa9717a431c")]
-public class AlarmWidgetsViewDetails : FTOptix.UI.Dialog
+[MapType(NamespaceUri = "OptimateDemoProject", Guid = "c049c11533fc3b24614e7fd49b8690f8")]
+public class RecipeDisplay : FTOptix.UI.Dialog
 {
 }
 
-[MapType(NamespaceUri = "OptimateDemoProject", Guid = "77ada910589d4f7047f7f3a93804f4a9")]
-public class IconText : FTOptix.UI.RowLayout
+[MapType(NamespaceUri = "OptimateDemoProject", Guid = "1bdd3cc0f30a479baefa3fa9717a431c")]
+public class AlarmWidgetsViewDetails : FTOptix.UI.Dialog
 {
 }
 
@@ -540,6 +495,66 @@ public class AlarmWidgetsViewMessagePanel : FTOptix.UI.Panel
 {
 }
 
+[MapType(NamespaceUri = "OptimateDemoProject", Guid = "935b3a944436e800243e52c3a2263c18")]
+public class AlarmCountersRetainedAlarmsIcon : FTOptix.UI.RowLayout
+{
+}
+
+[MapType(NamespaceUri = "OptimateDemoProject", Guid = "2b2b282c2deda3501e7c7235524e4184")]
+public class AlarmManagerButtonIconText : FTOptix.UI.Button
+{
+}
+
+[MapType(NamespaceUri = "OptimateDemoProject", Guid = "3f1ad25fe2aa12104b9cb2da922cca38")]
+public class PaginationControlLayout : FTOptix.UI.RowLayout
+{
+}
+
+[MapType(NamespaceUri = "OptimateDemoProject", Guid = "3f82bccdaed6e6d0e5ea3ad4f62f3dcf")]
+public class AlarmCountersAllAlarmsIconText : FTOptix.UI.RowLayout
+{
+}
+
+[MapType(NamespaceUri = "OptimateDemoProject", Guid = "5d3dd0728568a004e511612d39b3bb8b")]
+public class AlarmCountersRetainedAlarmsIconText : FTOptix.UI.RowLayout
+{
+}
+
+[MapType(NamespaceUri = "OptimateDemoProject", Guid = "77ada910589d4f7047f7f3a93804f4a9")]
+public class IconText : FTOptix.UI.RowLayout
+{
+}
+
+[MapType(NamespaceUri = "OptimateDemoProject", Guid = "7d3106e471a8907216f33ccb165e123d")]
+public class AlarmSummaryButtonsIconText : FTOptix.UI.RowLayout
+{
+}
+
+[MapType(NamespaceUri = "OptimateDemoProject", Guid = "cb312cab1201bdc981036402327063fb")]
+public class AlarmManagerButtonsIcon : FTOptix.UI.Panel
+{
+}
+
+[MapType(NamespaceUri = "OptimateDemoProject", Guid = "3ff553cf6f240bbbc4509c003316a8a0")]
+public class AlarmSummaryButtonsIcon : FTOptix.UI.Panel
+{
+}
+
+[MapType(NamespaceUri = "OptimateDemoProject", Guid = "97c39b6db0cb36282b065ab26ae59462")]
+public class AlarmSummaryButtonIconText : FTOptix.UI.Button
+{
+}
+
+[MapType(NamespaceUri = "OptimateDemoProject", Guid = "d86c8ccd46c5c0828c27be9bcfda1f31")]
+public class AlarmSummaryButtonIcon : FTOptix.UI.Button
+{
+}
+
+[MapType(NamespaceUri = "OptimateDemoProject", Guid = "c79fc3a329c0dc560b6dd21d9d2eb363")]
+public class AlarmManagerButtonIcon : FTOptix.UI.Button
+{
+}
+
 [MapType(NamespaceUri = "OptimateDemoProject", Guid = "9a1c944fa2fb5c8d358a20de172a454b")]
 public class ChipCloseButton : FTOptix.UI.Button
 {
@@ -547,6 +562,16 @@ public class ChipCloseButton : FTOptix.UI.Button
 
 [MapType(NamespaceUri = "OptimateDemoProject", Guid = "06bdafd271eeed9a4a12f5f0e07e131c")]
 public class PresetFiltersButton : FTOptix.UI.Button
+{
+}
+
+[MapType(NamespaceUri = "OptimateDemoProject", Guid = "de41af1bbe7da093290323d6a1ca0605")]
+public class CloseButton : FTOptix.UI.Button
+{
+}
+
+[MapType(NamespaceUri = "OptimateDemoProject", Guid = "7e6294cb0863fc4103e1aab7928cc7c7")]
+public class FilterApplyButton : FTOptix.UI.Button
 {
 }
 

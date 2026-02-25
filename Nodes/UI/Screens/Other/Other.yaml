@@ -1,4 +1,5 @@
 Name: Other
+Id: g=971ae435604acace270c813ace222f69
 Type: FolderType
 Children:
 - Name: Overview
@@ -8,25 +9,31 @@ Children:
   ReferenceType: HasComponent
   Children:
   - Name: Width
+    Id: g=612453a1aa036b654dbf5c4107c67ec2
     Type: BaseVariableType
     DataType: Size
     ModellingRule: Optional
     Value: -1.0
   - Name: BackgroundColor
+    Id: g=6334d040021b0bae7cf32100db3e2ca0
     Type: BaseDataVariableType
     DataType: Color
     Value: "#ffffff"
     Children:
     - Name: DynamicLink
+      Id: g=fdd55b216c58974d00cefd9e97c6ded5
       Type: DynamicLink
       DataType: NodePath
       Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Light Grey 1 - ffffff - White"
   - Name: Overview SVG
+    Id: g=b61d6bf8983d81fa48222f08d944816b
     Type: AdvancedSVGImage
     Children:
     - Name: SVGElementProperties
+      Id: g=b67a61cd8730644006085245ef2173dd
       Type: BaseObjectType
     - Name: Path
+      Id: g=1c111ff9ad3746042719c7fc340e2517
       Type: BaseDataVariableType
       DataType: ResourceUri
       Value: "ns=36;%PROJECTDIR%/Graphics/Cartoning/SVG/Overview - Tissue.svg"
@@ -34,62 +41,75 @@ Children:
       Target: ns=11;i=1360
       Direction: Forward
     - Name: Width
+      Id: g=95d0961cd4e5bb48f7df1b0dc5a8a83b
       Type: BaseVariableType
       DataType: Size
       ModellingRule: Optional
       Value: 50.0
     - Name: Height
+      Id: g=5ebd7a5feb60634b759a7ca847bd6b7c
       Type: BaseVariableType
       DataType: Size
       ModellingRule: Optional
       Value: 50.0
     - Name: HorizontalAlignment
+      Id: g=af6dcd3514411d0a1e0e46e7d46f14a2
       Type: BaseVariableType
       DataType: HorizontalAlignment
       ModellingRule: Optional
       Value: 3
     - Name: VerticalAlignment
+      Id: g=c51af2518aa9c096c58e5a069aba03af
       Type: BaseVariableType
       DataType: VerticalAlignment
       ModellingRule: Optional
       Value: 3
     - Name: LeftMargin
+      Id: g=18dd4793dd17f945a545aaf7d36f8818
       Type: BaseVariableType
       DataType: Size
       ModellingRule: Optional
       Value: 10.0
     - Name: TopMargin
+      Id: g=c2801bb6a70b9bb4e1a6f64ab70edac2
       Type: BaseVariableType
       DataType: Size
       ModellingRule: Optional
       Value: 10.0
     - Name: RightMargin
+      Id: g=7235de21d3fb818fe7b8525342920660
       Type: BaseVariableType
       DataType: Size
       ModellingRule: Optional
       Value: 10.0
     - Name: BottomMargin
+      Id: g=772a53474e63e78eeeb7d136664fa44d
       Type: BaseVariableType
       DataType: Size
       ModellingRule: Optional
       Value: 10.0
     - Name: FillMode
+      Id: g=7ab50564b83b2df422ca363fe5ea54fe
       Type: BaseDataVariableType
       DataType: ImageFillModeEnum
       ModellingRule: Optional
     - Name: Rotation
+      Id: g=b7b5d4afdbc58e309911a5816790c089
       Type: BaseVariableType
       DataType: Size
       ModellingRule: Optional
     - Name: ColorizationMode
+      Id: g=f0c6190c50a2f4d4cc6bc89876ccfa2d
       Type: BaseDataVariableType
       DataType: ColorizationModeEnum
       ModellingRule: Optional
     - Name: MoveTarget
+      Id: g=84e2c7be344b8a2da706bfb95346fb25
       Type: NodePointer
       DataType: NodeId
       Children:
       - Name: Kind
+        Id: g=d1d8b728da9290e2d913798d70bc4b60
         Type: PropertyType
         DataType: NodeId
         Value: "/Types/ObjectTypes/BaseObjectType/BaseUIObject/Item/Container"

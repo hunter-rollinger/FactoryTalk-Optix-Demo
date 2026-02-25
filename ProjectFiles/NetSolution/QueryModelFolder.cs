@@ -22,6 +22,8 @@ using FTOptix.Retentivity;
 using FTOptix.CommunicationDriver;
 using FTOptix.Core;
 using FTOptix.SerialPort;
+using FTOptix.OPCUAServer;
+using FTOptix.System;
 #endregion
 
 public class QueryModelFolder : BaseNetLogic

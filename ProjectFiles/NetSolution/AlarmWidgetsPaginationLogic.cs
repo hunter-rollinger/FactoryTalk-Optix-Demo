@@ -7,6 +7,8 @@ using System;
 using System.Linq;
 using UAManagedCore;
 using FTOptix.SerialPort;
+using FTOptix.OPCUAServer;
+using FTOptix.System;
 #endregion
 
 public class AlarmWidgetsPaginationLogic : BaseNetLogic

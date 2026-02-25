@@ -6,6 +6,8 @@ using System;
 using System.Collections.Generic;
 using UAManagedCore;
 using FTOptix.SerialPort;
+using FTOptix.OPCUAServer;
+using FTOptix.System;
 #endregion
 
 public class AlarmFilterDataLogic : BaseNetLogic
