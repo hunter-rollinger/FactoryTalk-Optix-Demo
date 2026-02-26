@@ -1300,67 +1300,6 @@ Children:
     - Name: Background
       Id: g=b9ab6d7c72fb1e4a1895f84ebd69dccc
       Type: Panel
-      Children:
-      - Name: slim gray right side
-        Id: g=46efa943752187c335f0074657e66551
-        Type: Rectangle
-        Children:
-        - Name: FillColor
-          Id: g=fc364ecc3b9d8530485cab2165add7ef
-          Type: BaseDataVariableType
-          DataType: Color
-          Value: "#333333"
-          Children:
-          - Name: DynamicLink
-            Id: g=838e14aa4d2528dc874ecaa3bc90a254
-            Type: DynamicLink
-            DataType: NodePath
-            Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Dark Grey 5 - 333333"
-      - Name: slim gray left side
-        Id: g=997867bd2db635dfa69430937b09bb18
-        Type: Rectangle
-        Children:
-        - Name: FillColor
-          Id: g=172dc1286a5d3f188131c1adb9d7b3a7
-          Type: BaseDataVariableType
-          DataType: Color
-          Value: "#333333"
-          Children:
-          - Name: DynamicLink
-            Id: g=a550b785c5ecd81ec8ce9f9d6183f807
-            Type: DynamicLink
-            DataType: NodePath
-            Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Dark Grey 5 - 333333"
-      - Name: slim gray bottom bar
-        Id: g=14c154389779a7019fad4431b9967aec
-        Type: Rectangle
-        Children:
-        - Name: FillColor
-          Id: g=5ef5c3bff8090e4a93528d769fc78a16
-          Type: BaseDataVariableType
-          DataType: Color
-          Value: "#333333"
-          Children:
-          - Name: DynamicLink
-            Id: g=c0dc6f4c67df435f62f3c74d2c0023fb
-            Type: DynamicLink
-            DataType: NodePath
-            Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Dark Grey 5 - 333333"
-      - Name: light grey rounder
-        Id: g=85511bda5b3f8c782dccc4c79d2153e7
-        Type: Rectangle
-        Children:
-        - Name: FillColor
-          Id: g=c35afb56bf6617f0682b1dcc4445b4f7
-          Type: BaseDataVariableType
-          DataType: Color
-          Value: "#e9e9e9"
-          Children:
-          - Name: DynamicLink
-            Id: g=66ce46f9383a50bb8f3d27100978c554
-            Type: DynamicLink
-            DataType: NodePath
-            Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Light Grey 4 - e9e9e9 - Separators"
     - Name: BottomBarLayout
       Id: g=0a102af4ee876efc320c6f4ec43713c2
       Type: RowLayout
@@ -1380,6 +1319,36 @@ Children:
             Type: DynamicLink
             DataType: NodePath
             Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Dark Grey 5 - 333333"
+        - Name: slim gray left side
+          Id: g=997867bd2db635dfa69430937b09bb18
+          Type: Rectangle
+          Children:
+          - Name: FillColor
+            Id: g=172dc1286a5d3f188131c1adb9d7b3a7
+            Type: BaseDataVariableType
+            DataType: Color
+            Value: "#333333"
+            Children:
+            - Name: DynamicLink
+              Id: g=a550b785c5ecd81ec8ce9f9d6183f807
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Dark Grey 5 - 333333"
+        - Name: slim gray bottom bar
+          Id: g=1260ca4f61dee29851f8b09c10a2e12f
+          Type: Rectangle
+          Children:
+          - Name: FillColor
+            Id: g=4207abe0dea90ffd7093dde67811bea6
+            Type: BaseDataVariableType
+            DataType: Color
+            Value: "#333333"
+            Children:
+            - Name: DynamicLink
+              Id: g=8d7b02e61b0f93b4c72f967b0a778000
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Dark Grey 5 - 333333"
         - Name: NavButtons
           Id: g=142ca0078a9d93baaccb2818092cd24f
           Type: RowLayout
@@ -1940,6 +1909,16 @@ Children:
                   Id: g=e4c631763a8c3b053f1e42a0afa2a58b
                   Type: PropertyType
                   DataType: UInt16
+            - Name: Visible
+              Id: g=579688602f7044420e10295cbfd5de3c
+              Type: BaseDataVariableType
+              DataType: Boolean
+              Children:
+              - Name: DynamicLink
+                Id: g=d94a0a3bf77f9ba24e9bcbf5a150959c
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "../../../../../Machine Has Manual"
           - Name: Maintenance
             Id: g=adc227aa5a41d48581fa7397733aa425
             Type: Button
@@ -2306,6 +2285,16 @@ Children:
                   Id: g=94e7f310847c72d69dcf1ff7c644f83d
                   Type: PropertyType
                   DataType: UInt16
+            - Name: Visible
+              Id: g=e3256d682fd1a57f078af4d79e24a98a
+              Type: BaseDataVariableType
+              DataType: Boolean
+              Children:
+              - Name: DynamicLink
+                Id: g=c138505cd6a8ba64236a889b87015e7f
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "../../../../../Machine Has Changeover"
         - Name: Internal_Mode
           Id: g=7fca98988db6935a35d994d7d36c6522
           Type: BaseObjectType
@@ -2339,43 +2328,141 @@ Children:
             Id: g=cf0aaa92816b738c425be0a0a6670029
             Type: BaseDataVariableType
             DataType: Int32
-      - Name: coesia logo
-        Id: g=3fb925d84d802c775b8730bba5a3f211
-        Type: Image
+      - Name: coesia
+        Id: g=1e44c29b1634c350a88beccb54508fdd
+        Type: Panel
         Children:
-        - Name: Path
-          Id: g=d3d4d1b4898e821210340362d4c5e359
-          Type: BaseDataVariableType
-          DataType: ResourceUri
-          Value: "ns=36;%PROJECTDIR%/Graphics/Coesia - Library/Logos/Coesia.svg"
-      - Name: BottomBarCustomButtons
-        Id: g=0e165c1b547545a36ed209db1141a2f7
-        Type: PanelLoader
+        - Name: slim gray bottom bar
+          Id: g=d4a927e373e1ec6331fd9285a03be2ba
+          Type: Rectangle
+          Children:
+          - Name: FillColor
+            Id: g=dfc162145012d3a1964c634755e925e9
+            Type: BaseDataVariableType
+            DataType: Color
+            Value: "#333333"
+            Children:
+            - Name: DynamicLink
+              Id: g=fb0e4a45380a8a1333b2bac7a1e7ac64
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Dark Grey 5 - 333333"
+        - Name: light grey rounder
+          Id: g=85511bda5b3f8c782dccc4c79d2153e7
+          Type: Rectangle
+          Children:
+          - Name: FillColor
+            Id: g=c35afb56bf6617f0682b1dcc4445b4f7
+            Type: BaseDataVariableType
+            DataType: Color
+            Value: "#e9e9e9"
+            Children:
+            - Name: DynamicLink
+              Id: g=66ce46f9383a50bb8f3d27100978c554
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Light Grey 4 - e9e9e9 - Separators"
+        - Name: light grey rounder1
+          Id: g=a8330a2f647164a9609fb9da7bfc33f1
+          Type: Rectangle
+          Children:
+          - Name: FillColor
+            Id: g=e73f8540c703a19a0a8a06f09d827863
+            Type: BaseDataVariableType
+            DataType: Color
+            Value: "#e9e9e9"
+            Children:
+            - Name: DynamicLink
+              Id: g=13f6676f5a716cd575800f5485dc2cfd
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Light Grey 4 - e9e9e9 - Separators"
+        - Name: coesia logo
+          Id: g=3fb925d84d802c775b8730bba5a3f211
+          Type: Image
+          Children:
+          - Name: Path
+            Id: g=d3d4d1b4898e821210340362d4c5e359
+            Type: BaseDataVariableType
+            DataType: ResourceUri
+            Value: "ns=36;%PROJECTDIR%/Graphics/Coesia - Library/Logos/Coesia.svg"
+      - Name: special buttons
+        Id: g=3592d3664aed6b8812775a534d78f40f
+        Type: Panel
         Children:
-        - Name: Panel
-          Id: g=eaa8da641356ec14ea531753c1e70133
-          Type: NodePointer
-          DataType: NodeId
+        - Name: slim gray bottom bar
+          Id: g=6ee5ddbed10618d444943683665ff3ec
+          Type: Rectangle
           Children:
-          - Name: Kind
-            Id: g=cbbc04f6bc7175fdb2b8a0a579a9b36b
-            Type: PropertyType
-            DataType: NodeId
-            Value: "/Types/ObjectTypes/BaseObjectType/BaseUIObject/Item/Container"
-        - Name: CurrentPanel
-          Id: g=f10652ba2ca0bf93f374cb3a0f06b9ed
-          Type: NodePointer
-          DataType: NodeId
-          AccessLevel: Read
+          - Name: FillColor
+            Id: g=c0677a5ddfd286c4b24150b0860ff489
+            Type: BaseDataVariableType
+            DataType: Color
+            Value: "#333333"
+            Children:
+            - Name: DynamicLink
+              Id: g=47e7a389736326152305d5cd5dffeaca
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Dark Grey 5 - 333333"
+        - Name: light grey rounder
+          Id: g=7a18d0ce6b86d54c151701382c53b9cf
+          Type: Rectangle
           Children:
-          - Name: Kind
-            Id: g=42b88ab82655cdecbe69746b7007a79c
-            Type: PropertyType
+          - Name: FillColor
+            Id: g=ba144b1a1de0e77df2ce9f3d54952f83
+            Type: BaseDataVariableType
+            DataType: Color
+            Value: "#e9e9e9"
+            Children:
+            - Name: DynamicLink
+              Id: g=bc9cab97ac318ee7d90d5edf6c78d5f0
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Light Grey 4 - e9e9e9 - Separators"
+        - Name: light grey rounder1
+          Id: g=d2ef3b83a25bb6974ba986d4b5aa955a
+          Type: Rectangle
+          Children:
+          - Name: FillColor
+            Id: g=a37baae7d5088d3f1f02c5a61696f6cd
+            Type: BaseDataVariableType
+            DataType: Color
+            Value: "#e9e9e9"
+            Children:
+            - Name: DynamicLink
+              Id: g=271e1494e2bfd972f11dba98284b4f11
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Light Grey 4 - e9e9e9 - Separators"
+        - Name: BottomBarCustomButtons
+          Id: g=0e165c1b547545a36ed209db1141a2f7
+          Type: PanelLoader
+          Children:
+          - Name: Panel
+            Id: g=eaa8da641356ec14ea531753c1e70133
+            Type: NodePointer
             DataType: NodeId
-            Value: "/Types/ObjectTypes/BaseObjectType/BaseUIObject/Item"
-        - Class: Reference
-          Target: ns=11;i=478
-          Direction: Forward
+            Children:
+            - Name: Kind
+              Id: g=cbbc04f6bc7175fdb2b8a0a579a9b36b
+              Type: PropertyType
+              DataType: NodeId
+              Value: "/Types/ObjectTypes/BaseObjectType/BaseUIObject/Item/Container"
+          - Name: CurrentPanel
+            Id: g=f10652ba2ca0bf93f374cb3a0f06b9ed
+            Type: NodePointer
+            DataType: NodeId
+            AccessLevel: Read
+            Children:
+            - Name: Kind
+              Id: g=42b88ab82655cdecbe69746b7007a79c
+              Type: PropertyType
+              DataType: NodeId
+              Value: "/Types/ObjectTypes/BaseObjectType/BaseUIObject/Item"
+          - Class: Reference
+            Target: ns=11;i=478
+            Direction: Forward
       - Name: machine controls button
         Id: g=db47deef6ba7a7a35ede4b69bad5fca6
         Type: Rectangle
@@ -2410,6 +2497,36 @@ Children:
               Type: DynamicLink
               DataType: NodePath
               Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Dark Grey 4 - 404040"
+        - Name: slim gray right side
+          Id: g=46efa943752187c335f0074657e66551
+          Type: Rectangle
+          Children:
+          - Name: FillColor
+            Id: g=fc364ecc3b9d8530485cab2165add7ef
+            Type: BaseDataVariableType
+            DataType: Color
+            Value: "#333333"
+            Children:
+            - Name: DynamicLink
+              Id: g=838e14aa4d2528dc874ecaa3bc90a254
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Dark Grey 5 - 333333"
+        - Name: slim gray bottom bar
+          Id: g=f5a1a0209baa73d2e5cb5e4db077bf69
+          Type: Rectangle
+          Children:
+          - Name: FillColor
+            Id: g=c655a39db8f28876dcce683a7c7afe40
+            Type: BaseDataVariableType
+            DataType: Color
+            Value: "#333333"
+            Children:
+            - Name: DynamicLink
+              Id: g=882a32c3d3754f47ee51f516e5bf3526
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Dark Grey 5 - 333333"
     - Name: MainMenuScreenVisibility
       Id: g=a5b78f2c941a0d6c03b8b531ae50c802
       Type: BaseDataVariableType
@@ -2427,6 +2544,16 @@ Children:
           DataType: DynamicLinkMode
           ModellingRule: Optional
           Value: 2
+    - Name: Machine Has Changeover
+      Id: g=4ab3a6b5b321077fc5eff0a479dc15d1
+      Type: BaseDataVariableType
+      DataType: Boolean
+      Value: true
+    - Name: Machine Has Manual
+      Id: g=c69701cfdc1996ccafa8cda1f3a5472f
+      Type: BaseDataVariableType
+      DataType: Boolean
+      Value: true
   - Name: BurgerMenu
     Id: g=3715ef737deca5ae92450f47e98bd915
     Type: BurgerMenu
