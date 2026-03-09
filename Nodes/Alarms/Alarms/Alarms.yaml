@@ -3,3 +3,97 @@ Id: g=9a3d017c5ada5f5017a2b61d67ce2633
 Type: FolderType
 Children:
 - File: PLC_Alarms/PLC_Alarms.yaml
+- Name: PLC_Comm_Lost
+  Id: g=4ed6dde0d2b04ef38bb9e7c81e11081d
+  Type: CustomAlarm
+  Children:
+  - Class: Reference
+    Target: ns=25;i=81
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=82
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=83
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=130
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=135
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=132
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=146
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=148
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=150
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=152
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=154
+    Direction: Forward
+  - Name: NormalStateValue
+    Id: g=a08d32bf14572de6a281435424004662
+    Type: BaseDataVariableType
+    DataType: Double
+    Value: 1.0
+  - Name: InputValue
+    Id: g=8324269477c026ddd30f76b08e5d56fd
+    Type: BaseDataVariableType
+    DataType: Double
+    Children:
+    - Name: DynamicLink
+      Id: g=caa26de464eca1adb2c3671d4e41c88d
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "../../../../CommDrivers/Rockwell/S17693/StationStatusVariables/Present"
+  - Name: LastEvent
+    Id: g=a3b37c7e5406406b58c98bb9e9702448
+    Type: BaseDataVariableType
+    DataType: BaseDataType
+    ValueRank: OneDimension
+    ArrayDimensions: [0]
+  - Name: Message
+    Id: g=edaae6f881890a93f55835af4f86a81f
+    Type: BaseDataVariableType
+    DataType: LocalizedText
+    Value: {"NamespaceIndex":36,"TextId":"PLC Communication Lost"}
+  - Name: Help_Text
+    Id: g=63fda606a93827bf3b32ba32c6bebc03
+    Type: BaseDataVariableType
+    DataType: String
+  - Name: Aux_Text
+    Id: g=e778cf1f3567efdc87a1c6e67ff3279d
+    Type: BaseDataVariableType
+    DataType: String
+  - Name: Image
+    Id: g=3ca2a784d7913afefe8f50cef570b4fe
+    Type: BaseDataVariableType
+    DataType: ResourceUri
+  - Name: Overview
+    Id: g=2b91e1aae49044271ba6c42c91600af4
+    Type: BaseDataVariableType
+    DataType: ResourceUri
+  - Name: Severity
+    Id: g=2afa28a49d9b67422949c6dcdebdb316
+    Type: BaseDataVariableType
+    DataType: UInt16
+    Value: 1000
+    Children:
+    - Name: DynamicLink
+      Id: g=cf9fa40690743a0083eabfdf5954f156
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "/Objects/OptimateDemoProject/Alarms/AlarmSeverity/Alarm"
+  - Name: Timestamp
+    Id: g=111ba93cfb01a3ea22d6521a77fea7b8
+    Type: BaseDataVariableType
+    DataType: DateTime

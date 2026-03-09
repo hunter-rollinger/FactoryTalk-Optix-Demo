@@ -2,10 +2,10 @@ Name: AlarmTypes
 Id: g=f4e4614ac0f6323d768507971a8280d7
 Type: FolderType
 Children:
-- Name: AlarmType_OptimateAlarm
+- Name: AlarmType_CustomAlarm
   Id: g=f0c80e232644cc79ed299e59a20ecd2d
   Supertype: OffNormalAlarmType
-  DisplayName: {"LocaleId":"","Text":"OptimateAlarm"}
+  DisplayName: {"LocaleId":"","Text":"CustomAlarm"}
   Children:
   - Name: NormalState
     Id: g=ab7af998ecb7496c0cae2fcefead13b9
@@ -168,13 +168,13 @@ Children:
     Type: BaseDataVariableType
     DataType: ResourceUri
   - Name: Timestamp
-    Id: g=341614cd18cb1668b141f226564400e0
+    Id: g=11ec2207e2dc7e7d32d51d4d50551d13
     Type: BaseDataVariableType
     DataType: DateTime
-- Name: AlarmType_OptimateWarning
+- Name: AlarmType_CustomWarning
   Id: g=6560a3da9e3d0eea7647fbb81060cba2
   Supertype: OffNormalAlarmType
-  DisplayName: {"LocaleId":"","Text":"OptimateWarning"}
+  DisplayName: {"LocaleId":"","Text":"CustomWarning"}
   Children:
   - Name: NormalState
     Id: g=f55252d3f3d62a7084ee088ca926194d
@@ -328,10 +328,10 @@ Children:
     Id: g=368f8c385ce766a56dac2c121fc1e2db
     Type: BaseDataVariableType
     DataType: String
-- Name: AlarmType_OptimateStatus
+- Name: AlarmType_CustomStatus
   Id: g=c2ca38a4c19da392aaa3d5751f2c6362
   Supertype: OffNormalAlarmType
-  DisplayName: {"LocaleId":"","Text":"OptimateStatus"}
+  DisplayName: {"LocaleId":"","Text":"CustomStatus"}
   Children:
   - Name: NormalState
     Id: g=aacb53712c1bb2b29d8ad40ce5793557
@@ -485,10 +485,10 @@ Children:
     Id: g=5f110bc76b3b300b72b9dea7f772e0f6
     Type: BaseDataVariableType
     DataType: String
-- Name: AlarmType_OptimateMessage
+- Name: AlarmType_CustomMessage
   Id: g=4a85c14492d2cdb01d3612a5412f1b98
   Supertype: OffNormalAlarmType
-  DisplayName: {"LocaleId":"","Text":"OptimateMessage"}
+  DisplayName: {"LocaleId":"","Text":"CustomMessage"}
   Children:
   - Name: NormalState
     Id: g=afcb22cf80df4a39e89585850aa685db

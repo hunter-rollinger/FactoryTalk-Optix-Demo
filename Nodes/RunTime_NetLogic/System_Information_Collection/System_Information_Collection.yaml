@@ -6,7 +6,7 @@ Children:
   Id: g=f416ba571b2be04d15205ab47e50da10
   Type: NetLogic
   Children:
-  - Name: DateTime
+  - Name: CurrentDT
     Id: g=aa04cf025d357f1270579d2369abf984
     Type: BaseDataVariableType
     DataType: DateTime
@@ -63,6 +63,48 @@ Children:
     Type: BaseDataVariableType
     DataType: String
     Value: "0"
+  - Name: Yestarday
+    Id: g=262271f3e33376453c2e2481da3f14da
+    Type: BaseDataVariableType
+    DataType: DateTime
+    Children:
+    - Name: Year
+      Id: g=aba65f2b0217edb76de4ebef80ef2c81
+      Type: BaseDataVariableType
+      DataType: Int32
+    - Name: Month
+      Id: g=fdcf955bdf0dd64d2e9b5d0b3757063b
+      Type: BaseDataVariableType
+      DataType: Int32
+    - Name: Day
+      Id: g=a582006b4ec084f5290fe55876293e6c
+      Type: BaseDataVariableType
+      DataType: Int32
+    - Name: Hour
+      Id: g=2e946db1616ec36e3cc03d1e07deba4c
+      Type: BaseDataVariableType
+      DataType: Int32
+    - Name: Minute
+      Id: g=b4950b37d03cd18b6c9e4cc404a74da6
+      Type: BaseDataVariableType
+      DataType: Int32
+    - Name: Second
+      Id: g=b28d9b192f41c14ce8c04b93a964f0e6
+      Type: BaseDataVariableType
+      DataType: Int32
+    - Name: Day Of Week
+      Id: g=8620c736df521f4d75312794bceccb1e
+      Type: BaseDataVariableType
+      DataType: String
+      Value: "0"
+    - Name: Day Of Year
+      Id: g=db268c5d40e39496d4344e59aaf83cae
+      Type: BaseDataVariableType
+      DataType: Int32
+    - Name: Daylight Savings
+      Id: g=9223f390d83d20ea42a73f7d1f596436
+      Type: BaseDataVariableType
+      DataType: Boolean
 - Name: Short Date
   Id: g=1d7cc055d197301b7e323a828d6eda44
   Type: BaseDataVariableType
@@ -89,7 +131,7 @@ Children:
         Id: g=79503ff2308eafe7f4bebd2907cae280
         Type: DynamicLink
         DataType: NodePath
-        Value: "../../../SystemInformationCollection/DateTime"
+        Value: "../../../SystemInformationCollection/CurrentDT"
 - Name: Extended Date
   Id: g=3673089b41feef1f220078c7ff5a7f13
   Type: BaseDataVariableType
@@ -116,7 +158,7 @@ Children:
         Id: g=ad285111c1723465926819281ed36a0b
         Type: DynamicLink
         DataType: NodePath
-        Value: "../../../SystemInformationCollection/DateTime"
+        Value: "../../../SystemInformationCollection/CurrentDT"
 - Name: Short Time
   Id: g=d4d1c3e5a3abc629e1351165bd76e3da
   Type: BaseDataVariableType
@@ -143,7 +185,7 @@ Children:
         Id: g=74598ef922c1ba4dd4fef989897de1df
         Type: DynamicLink
         DataType: NodePath
-        Value: "../../../SystemInformationCollection/DateTime"
+        Value: "../../../SystemInformationCollection/CurrentDT"
 - Name: Extended Time
   Id: g=32db26498ffdf98aa53892a532fd4db9
   Type: BaseDataVariableType
@@ -170,4 +212,4 @@ Children:
         Id: g=3db3137a4e4010fad8c0a0f28a6e1c35
         Type: DynamicLink
         DataType: NodePath
-        Value: "../../../SystemInformationCollection/DateTime"
+        Value: "../../../SystemInformationCollection/CurrentDT"

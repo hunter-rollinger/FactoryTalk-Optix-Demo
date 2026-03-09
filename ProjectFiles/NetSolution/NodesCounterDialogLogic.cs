@@ -11,6 +11,7 @@ using FTOptix.Core;
 using FTOptix.NetLogic;
 using FTOptix.OPCUAServer;
 using FTOptix.System;
+using FTOptix.DataLogger;
 #endregion
 
 public class NodesCounterDialogLogic : BaseNetLogic

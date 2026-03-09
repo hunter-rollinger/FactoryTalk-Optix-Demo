@@ -1114,7 +1114,7 @@ Children:
                 DataType: LocalizedText
                 ReferenceType: HasParameter
                 ModellingRule: Optional
-                Value: {"LocaleId":"en-US","Text":"{0,0:T}"}
+                Value: {"LocaleId":"en-US","Text":"{0:T}"}
               - Name: ns=9;Source0
                 Id: g=75bf178dc3e1682ce16af10ea791b6d3
                 Type: BaseDataVariableType
@@ -1125,7 +1125,7 @@ Children:
                   Id: g=6b97496e2da9b44d77ae495f4ea47dab
                   Type: DynamicLink
                   DataType: NodePath
-                  Value: "{AlarmPopup (OptimateAlarm Type)}/Timestamp"
+                  Value: "{AlarmPopup (OptimateAlarm Type)}/ReceiveTime"
           - Name: VerticalAlignment
             Id: g=4fc54d2513590def862d764c9e98944c
             Type: BaseVariableType
@@ -1150,7 +1150,7 @@ Children:
                 DataType: LocalizedText
                 ReferenceType: HasParameter
                 ModellingRule: Optional
-                Value: {"LocaleId":"en-US","Text":"{0,0:P}"}
+                Value: {"LocaleId":"en-US","Text":"{0:p}"}
               - Name: ns=9;Source0
                 Id: g=5fa34622572b634c9481991ba99a55a9
                 Type: BaseDataVariableType
@@ -1161,7 +1161,7 @@ Children:
                   Id: g=ad9f676f321ecf5acdccff7fccdae291
                   Type: DynamicLink
                   DataType: NodePath
-                  Value: "{AlarmPopup (OptimateAlarm Type)}/Timestamp"
+                  Value: "{AlarmPopup (OptimateAlarm Type)}/ReceiveTime"
           - Name: LeftMargin
             Id: g=63c2cd59ed0b3777e4496e6577875011
             Type: BaseVariableType
@@ -1642,7 +1642,7 @@ Children:
       Id: g=0a35ce1675105457d1493883051623e4
       Type: PropertyType
       DataType: NodeId
-      Value: "/Objects/OptimateDemoProject/Alarms/OptimateAlarm"
+      Value: "/Objects/OptimateDemoProject/Alarms/CustomAlarm"
   - Name: Opacity
     Id: g=ab7314bc7e3e5f77663053eec3eda0a1
     Type: BaseVariableType

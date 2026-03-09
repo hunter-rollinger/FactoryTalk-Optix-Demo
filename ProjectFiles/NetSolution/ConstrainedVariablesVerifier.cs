@@ -13,6 +13,7 @@ using FTOptix.NetLogic;
 using FTOptix.Core;
 using FTOptix.SerialPort;
 using FTOptix.System;
+using FTOptix.DataLogger;
 #endregion
 
 public class ConstrainedVariablesVerifier : BaseNetLogic

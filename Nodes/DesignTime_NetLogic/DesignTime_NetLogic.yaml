@@ -68,3 +68,74 @@ Children:
        "highestIgnoredVersion": 0
       }
      }
+- Name: GenerateOptixAlarms
+  Id: g=5211e8762e6aca36b1d9ee01d9d689a9
+  Type: NetLogic
+  Children:
+  - Name: BehaviourStartPriority
+    Id: g=73ca9ae39adc1fd7b9630c9e21a8d2c4
+    Type: BehaviourStartPriorityVariableType
+    DataType: Byte
+    Value: 180
+  - Name: DestinationFolder
+    Id: g=48f0f89560ec40cb01c6333ae3e257a5
+    Type: BaseDataVariableType
+    DataType: NodeId
+    Value: "/Objects/OptimateDemoProject/Alarms/Alarms/PLC Alarms"
+  - Name: AlarmSource
+    Id: g=8abeb3a4d840e8f7bcf4a59d7a5fa9ec
+    Type: BaseDataVariableType
+    DataType: NodeId
+    Value: "/Objects/OptimateDemoProject/CommDrivers/Rockwell/S17693/Tags/Controller Tags/OptixAlarms"
+  - Class: Method
+    Name: GenerateAlarmsFromPLC
+    Id: g=38130f94eabfe6f6c1c9601d72faf1ef
+  - Name: AllContentFromPLC
+    Id: g=1f321725b71c1b039e4015f4efa043b1
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Value: true
+- Name: FromPlcToModel
+  Id: g=c62fe0e91b742614980fd72580d93f08
+  Type: NetLogic
+  WriteMask: BrowseName|DataType|Description|DisplayName|MinimumSamplingInterval|UserAccessLevel
+  Children:
+  - Name: BehaviourStartPriority
+    Id: g=93c93efa7748499745ffdc6808f3cb95
+    Type: BehaviourStartPriorityVariableType
+    DataType: Byte
+    Value: 180
+  - Name: StartingNodeToFetch
+    Id: g=6ec13fe57fff6f8e8e462947de742e75
+    Type: BaseDataVariableType
+    DataType: NodeId
+    Value: "/Objects/OptimateDemoProject/CommDrivers/Rockwell/S17693/Tags/Controller Tags/OptixAlarms"
+  - Name: TargetFolder
+    Id: g=17a32a4cf4f4a78683fc3e29283d2120
+    Type: BaseDataVariableType
+    DataType: NodeId
+    Value: "/Objects/OptimateDemoProject/Alarms/Alarms/PLC Alarms"
+  - Name: DeleteExistingTags
+    Id: g=9f0156db8a563046d3b97c636f5ff3b1
+    Type: BaseDataVariableType
+    DataType: Boolean
+  - Name: ns=19;LibraryReference
+    Id: g=91040213faabf458905a9b215089aaa8
+    Type: ObjectLibraryReference
+    DataType: ObjectLibraryReferenceDataType
+    Value: 
+     {
+      "TypeId": {
+       "Id": 72,
+       "Namespace": 19
+      },
+      "Body": {
+       "libraryGuid": "f0701375ee41467993d632db6a8fdaa5",
+       "objectGuid": "ca08c3f9989e6a81fe78d8172b436a51",
+       "objectVersion": 1,
+       "highestIgnoredVersion": 0
+      }
+     }
+  - Class: Method
+    Name: Method1
+    Id: g=1624db10cbeabceffb62e878531bd726

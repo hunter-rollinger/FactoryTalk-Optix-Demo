@@ -1,3 +1,66 @@
 Name: DataTypes
 Id: g=22b87db18ce3253d352466f774d2b509
 Type: FolderType
+Children:
+- Class: DataType
+  Name: OptimateAlarm
+  Id: g=35dd5a52b78a4d9d3cd77923b19ebb9a
+  Supertype: Structure
+  StructDefinition: 
+   {
+    "Name": "OptimateAlarm",
+    "DataType": {
+     "IdType": 2,
+     "Id": "35dd5a52b78a4d9d3cd77923b19ebb9a",
+     "Namespace": 36
+    },
+    "Fields": [{
+      "Name": "Active",
+      "DataType": {
+       "Id": 1
+      }
+     },{
+      "Name": "Severity",
+      "DataType": {
+       "Id": 4
+      }
+     },{
+      "Name": "Enabled",
+      "DataType": {
+       "Id": 1
+      }
+     },{
+      "Name": "AlarmText",
+      "DataType": {
+       "Id": 12
+      }
+     },{
+      "Name": "AlarmAuxText",
+      "DataType": {
+       "Id": 12
+      }
+     },{
+      "Name": "AlarmHelpText",
+      "DataType": {
+       "Id": 12
+      }
+     },{
+      "Name": "OverviewImage",
+      "DataType": {
+       "Id": 12
+      }
+     },{
+      "Name": "AlarmImage",
+      "DataType": {
+       "Id": 12
+      }
+     }]
+   }
+  DisplayName: {"LocaleId":"","Text":"OptimateAlarm"}
+  Children:
+  - Name: ns=0;Default Binary
+    Id: g=3c269834134c64b072e58105b8600ee2
+    Type: DataTypeEncodingType
+    ModellingRule: None
+    DisplayName: {"LocaleId":"","Text":"Default Binary"}
+    ReferenceType: HasEncoding

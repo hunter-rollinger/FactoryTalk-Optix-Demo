@@ -1,37 +1,41 @@
 #region Using directives
-using FTOptix.Core;
-using System;
-using UAManagedCore;
-using OpcUa = UAManagedCore.OpcUa;
-using FTOptix.HMIProject;
-using FTOptix.OPCUAServer;
-using FTOptix.UI;
-using FTOptix.NativeUI;
-using FTOptix.CoreBase;
-using FTOptix.NetLogic;
-using FTOptix.DataLogger;
-using FTOptix.Store;
-using FTOptix.SQLiteStore;
-using FTOptix.ODBCStore;
-using FTOptix.InfluxDBStoreLocal;
-using FTOptix.InfluxDBStore;
-using FTOptix.SerialPort;
-using FTOptix.EventLogger;
-using System.Linq;
-using System.Collections.Generic;
-using FTOptix.Recipe;
-using FTOptix.OPCUAClient;
 using FTOptix.AuditSigning;
-using System.Diagnostics;
-using System.Timers;
-using FTOptix.System;
+using FTOptix.Core;
+using FTOptix.CoreBase;
+using FTOptix.DataLogger;
 using FTOptix.EdgeAppPlatform;
+using FTOptix.EventLogger;
+using FTOptix.HMIProject;
+using FTOptix.InfluxDBStore;
+using FTOptix.InfluxDBStoreLocal;
 using FTOptix.MQTTClient;
-using System.Runtime.CompilerServices;
-using FTOptix.TwinCAT;
-using FTOptix.Report;
+using FTOptix.NativeUI;
+using FTOptix.NetLogic;
+using FTOptix.ODBCStore;
+using FTOptix.OPCUAClient;
+using FTOptix.OPCUAServer;
+using FTOptix.Recipe;
 using FTOptix.RecipeX;
+using FTOptix.Report;
+using FTOptix.SerialPort;
+using FTOptix.SQLiteStore;
+using FTOptix.Store;
+using FTOptix.System;
+using FTOptix.TwinCAT;
+using FTOptix.UI;
+using System;
+using System.Collections.Generic;
+using System.Diagnostics;
 using System.Diagnostics.CodeAnalysis;
+using System.Linq;
+using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
+using System.Security.Claims;
+using System.Timers;
+using UAManagedCore;
+using static System.Collections.Specialized.BitVector32;
+using OpcUa = UAManagedCore.OpcUa;
+
 #endregion
 
 public class ScreenControl : BaseNetLogic
@@ -79,24 +83,62 @@ public class ScreenControl : BaseNetLogic
 		if (CloseAllWindowsBool == false)
 			return;
 
-		ClosePopupsRecurse(root);
+		Session current =  GetSession(root);
+		if (current == null) {
+			Log.Error("ScreenControl - CloseAllOpen", "No session found for current node.");
+			return;
+		}
+
+		ClosePopupsRecurse(current);				// close all popups and dialogs in current session
 		burgerMenuScreen.Visible = false;           // close burger menu
 		debugMenu.ChangePanel(emptyPanel);          // close debug menu
 		standardQuickInfo.ChangePanel(emptyPanel);  // close standard quick info
 	}
 
-	private static void ClosePopupsRecurse(IUANode node) {
-		if (node is Dialog dialog) {
-			try {
-				var openDialog = InformationModel.Get<Dialog>(dialog.NodeId);
-				openDialog.Close();
-			} catch { }
+	private Session GetSession(IUANode node) {
+		Session nativeSession = null;
+		string nativeSessionId = null;
+		Session[] webSessions = null;
+		string[] webSessionIds = null;
+		string callingSessionId = null;
+
+		try {
+			var native = Project.Current.Get("UI/NativePresentationEngine");    // get native presentation engine
+			var nativeSessions = native.Get("Sessions");                        // get all native sessions
+			nativeSession = (Session)nativeSessions.Children[1];                // get first (and only) native session
+			nativeSessionId = nativeSession.BrowseName;							// get native session id
+		} catch { Log.Warning("ScreenControl", "No Native Session Found."); }	// if try fails native session does not exist (this is fine if true)
+
+		try {
+			var web = Project.Current.Get("UI/WebPresentationEngine");			// get web presentation engine
+			var getWebSessions = web.Get("Sessions");							// get all web sessions
+			webSessions = new Session[getWebSessions.Children.Count];			// set length of web session array to number of web sessions
+			webSessionIds = new string[getWebSessions.Children.Count];			// set length of web session id array to number of web sessions
+			for (int i = 1; i < getWebSessions.Children.Count; i++) {			// iterate over web session children to get id
+				webSessionIds[i - 1] = getWebSessions.Children[i].BrowseName;	// get each web session id and put into web session id array
+			}
+		} catch { Log.Warning("ScreenControl", "No Web Sessions Found."); }		// if try fails web sessions do not exist (this is fine if true)
+
+		try {
+			callingSessionId = node.Context.Sessions.CurrentSessionInfo.SessionObject.BrowseName;
+
+			if (nativeSessionId != null && nativeSessionId == callingSessionId)
+				return nativeSession;
+
+			if (webSessionIds != null && webSessionIds.Contains(callingSessionId))
+				return webSessions[Array.IndexOf(webSessionIds, callingSessionId)];
+
+		} catch { Log.Error("ScreenControl - ClosePopupsRecurse", "Error while obtaining calling session id."); }
+
+		return null;
+	}
+
+	private static void ClosePopupsRecurse(Session session) {
+		foreach (Dialog item in session.Get("UIRoot").Children.OfType<Dialog>().ToList()) {
+			if (item.BrowseName.ToLowerInvariant() == "alarmpopup" || item.BrowseName.ToLowerInvariant() == "screensaver") {
+				item.Close(); // close any currently open alarm popups
+			}
 		}
-
-		foreach (var child in node.Children)
-			ClosePopupsRecurse(child);
-
-		return;
 	}
 
 	private void WindowSizeChanged(object sender, VariableChangeEventArgs e) {

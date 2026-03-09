@@ -12,6 +12,7 @@ using System.Net.NetworkInformation;
 using FTOptix.SerialPort;
 using FTOptix.OPCUAServer;
 using FTOptix.System;
+using FTOptix.DataLogger;
 #endregion
 
 public class UnusedTranslationKeys : BaseNetLogic

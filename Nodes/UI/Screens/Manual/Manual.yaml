@@ -1754,7 +1754,7 @@ Children:
               Type: BaseVariableType
               DataType: HorizontalAlignment
               ModellingRule: Optional
-              Value: 1
+              Value: 2
             - Name: VerticalAlignment
               Id: g=89f19480c6e43c3a1baf8eb6b95cca96
               Type: BaseVariableType
@@ -1847,13 +1847,7 @@ Children:
               Type: BaseVariableType
               DataType: Size
               ModellingRule: Optional
-              Value: -1.0
-            - Name: Height
-              Id: g=f0baf34916fe7a7af540e53a673deffe
-              Type: BaseVariableType
-              DataType: Size
-              ModellingRule: Optional
-              Value: -1.0
+              Value: 160.0
         - Name: manual
           Id: g=610113e92f42e342851eeae1886bb584
           Type: RowLayout
@@ -3190,7 +3184,7 @@ Children:
               Type: BaseVariableType
               DataType: HorizontalAlignment
               ModellingRule: Optional
-              Value: 1
+              Value: 2
             - Name: VerticalAlignment
               Id: g=fbe0e2429ef311222cde8782e3c37516
               Type: BaseVariableType
@@ -3283,13 +3277,7 @@ Children:
               Type: BaseVariableType
               DataType: Size
               ModellingRule: Optional
-              Value: -1.0
-            - Name: Height
-              Id: g=0faaa816259f586e43c76963fe046a7c
-              Type: BaseVariableType
-              DataType: Size
-              ModellingRule: Optional
-              Value: -1.0
+              Value: 160.0
         - Name: index
           Id: g=badeab5edb9d1f1042ccf47b5d52614c
           Type: RowLayout
@@ -4626,7 +4614,7 @@ Children:
               Type: BaseVariableType
               DataType: HorizontalAlignment
               ModellingRule: Optional
-              Value: 1
+              Value: 2
             - Name: VerticalAlignment
               Id: g=240df791203503e97037f083b767ac1b
               Type: BaseVariableType
@@ -4719,13 +4707,7 @@ Children:
               Type: BaseVariableType
               DataType: Size
               ModellingRule: Optional
-              Value: -1.0
-            - Name: Height
-              Id: g=b14cbea5d70bbf3e48156a10cee80736
-              Type: BaseVariableType
-              DataType: Size
-              ModellingRule: Optional
-              Value: -1.0
+              Value: 160.0
         - Name: goto
           Id: g=914801c1da8d9260f470cf1a7f6d3f16
           Type: RowLayout
@@ -6062,7 +6044,7 @@ Children:
               Type: BaseVariableType
               DataType: HorizontalAlignment
               ModellingRule: Optional
-              Value: 1
+              Value: 2
             - Name: VerticalAlignment
               Id: g=25c206385fc412b2ee89e648d8397004
               Type: BaseVariableType
@@ -6155,13 +6137,7 @@ Children:
               Type: BaseVariableType
               DataType: Size
               ModellingRule: Optional
-              Value: -1.0
-            - Name: Height
-              Id: g=c1d1d63dd3abdeb55e05f9b59506063b
-              Type: BaseVariableType
-              DataType: Size
-              ModellingRule: Optional
-              Value: -1.0
+              Value: 160.0
         - Name: jog
           Id: g=853601e0b707344f01388abf5804b0ac
           Type: RowLayout
@@ -7498,7 +7474,7 @@ Children:
               Type: BaseVariableType
               DataType: HorizontalAlignment
               ModellingRule: Optional
-              Value: 1
+              Value: 2
             - Name: VerticalAlignment
               Id: g=461f4a667a49a4c1a1f6e67922f637a1
               Type: BaseVariableType
@@ -7591,13 +7567,7 @@ Children:
               Type: BaseVariableType
               DataType: Size
               ModellingRule: Optional
-              Value: -1.0
-            - Name: Height
-              Id: g=c68c41b668f8484c169ddad894314342
-              Type: BaseVariableType
-              DataType: Size
-              ModellingRule: Optional
-              Value: -1.0
+              Value: 160.0
         - Name: MultiColor_InfoBox
           Id: g=5b05922a06318968588279cf5c911b84
           Type: MultiColor_InfoBox
@@ -16713,6 +16683,17 @@ Children:
                 Id: g=40a4e61d1c3e5f609a66af9f7c30c977
                 Type: PropertyType
                 DataType: UInt16
+          - Name: Enabled
+            Id: g=b4ded95da44200ebb9876f755665054e
+            Type: BaseDataVariableType
+            DataType: Boolean
+            Value: true
+            Children:
+            - Name: DynamicLink
+              Id: g=416ebc9003d6c405da2048d3f37e5b13
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "{Window}/Standard_Content_Container/VerticalLayout/Main_Content_Container/HorizontalLayout/Standard_Content/BackProvider/CanGoBack"
         - Name: Next
           Id: g=8b7acbf3de834f9df6fc080f9c8b033f
           Type: Button
@@ -16790,6 +16771,17 @@ Children:
                 Id: g=41d585d83edb43a3472c9b6dbecfad28
                 Type: PropertyType
                 DataType: UInt16
+          - Name: Enabled
+            Id: g=1ddeb38625aaedfc5bf4da911aff2ee3
+            Type: BaseDataVariableType
+            DataType: Boolean
+            Value: true
+            Children:
+            - Name: DynamicLink
+              Id: g=c3cbab67e0f64577252bcca16ad38aa0
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "{Window}/Standard_Content_Container/VerticalLayout/Main_Content_Container/HorizontalLayout/Standard_Content/BackProvider/CanGoNext"
         - Name: 'Separator - Dark'
           Id: g=444bcd16de6726a5b3a5ccfa8d11315b
           Type: Rectangle

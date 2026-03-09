@@ -2633,3 +2633,271 @@ Children:
       Id: g=8a96008214ac54edca762ef369c64605
       Type: DynamicLink
       DataType: NodePath
+- Name: AlarmSeverityIcons
+  Id: g=279e51c67f1ee5c3d52664d026c864d2
+  Supertype: ValueMapConverter
+  ReferenceType: HasComponent
+  Children:
+  - Name: Source
+    Id: g=c649b527d57bf6e8698e2565c4872169
+    Type: BaseDataVariableType
+    DataType: BaseDataType
+    ReferenceType: HasSource
+  - Name: ns=9;Pairs
+    Id: g=c6af68759ac3439b8e818fd9beee10ba
+    Type: BaseObjectType
+    Children:
+    - Name: Pair
+      Id: g=405bbaf034853108b38504fdc68eb668
+      Type: ValueMapPair
+      Children:
+      - Name: Key
+        Id: g=8ebffc61b55f6a422d1caef3df9dec8a
+        Type: BaseDataVariableType
+        DataType: UInt32
+      - Name: Value
+        Id: g=941d9dc8ffe936e7ac590e7ecfc51166
+        Type: BaseDataVariableType
+        DataType: ResourceUri
+    - Name: Pair1
+      Id: g=e3f69aefcaa06fb7cc669ef635de842f
+      Type: ValueMapPair
+      Children:
+      - Name: Key
+        Id: g=8cf1afb2e135c7ce50d84bc328a903a1
+        Type: BaseDataVariableType
+        DataType: UInt32
+        Value: 1
+        Children:
+        - Name: DynamicLink
+          Id: g=58bc2524d35ef9107f9626f2efb08bc2
+          Type: DynamicLink
+          DataType: NodePath
+          Value: "/Objects/OptimateDemoProject/Alarms/AlarmSeverity/Message"
+          Children:
+          - Name: Mode
+            Id: g=b239e4080a5a0d143311a3b561b87f2d
+            Type: BaseVariableType
+            DataType: DynamicLinkMode
+            ModellingRule: Optional
+            Value: 2
+      - Name: Value
+        Id: g=3ebd433dd5f3b6ac11554a8c33a7bab4
+        Type: BaseDataVariableType
+        DataType: ResourceUri
+        Value: "ns=36;%PROJECTDIR%/Graphics/Coesia - Library/General/32x32/info-color.svg"
+    - Name: Pair2
+      Id: g=1c103b69e6b430e1fbe969efe8bdb5a8
+      Type: ValueMapPair
+      Children:
+      - Name: Key
+        Id: g=438d1605904082fd7202e27b2e5ab6ca
+        Type: BaseDataVariableType
+        DataType: UInt32
+        Value: 10
+        Children:
+        - Name: DynamicLink
+          Id: g=db1229bf783525cb1199510fff586b7e
+          Type: DynamicLink
+          DataType: NodePath
+          Value: "/Objects/OptimateDemoProject/Alarms/AlarmSeverity/Status"
+          Children:
+          - Name: Mode
+            Id: g=3c7222e5c0dcbf9c15828d3113ce13ce
+            Type: BaseVariableType
+            DataType: DynamicLinkMode
+            ModellingRule: Optional
+            Value: 2
+      - Name: Value
+        Id: g=41b3b1b10d85561312c755c816373268
+        Type: BaseDataVariableType
+        DataType: ResourceUri
+        Value: "ns=36;%PROJECTDIR%/Graphics/Coesia - Library/General/32x32/warning-color.svg"
+    - Name: Pair3
+      Id: g=dab11d60c4431c037aa41d94ffda6db1
+      Type: ValueMapPair
+      Children:
+      - Name: Key
+        Id: g=6a5f3972af9181cda4d1e1b31131eb2e
+        Type: BaseDataVariableType
+        DataType: UInt32
+        Value: 100
+        Children:
+        - Name: DynamicLink
+          Id: g=2e756dffdd5bbc11fec7c3a249d998d0
+          Type: DynamicLink
+          DataType: NodePath
+          Value: "/Objects/OptimateDemoProject/Alarms/AlarmSeverity/Warning"
+          Children:
+          - Name: Mode
+            Id: g=1f6de308b9f62ab4a3c8d3ff32729f64
+            Type: BaseVariableType
+            DataType: DynamicLinkMode
+            ModellingRule: Optional
+            Value: 2
+      - Name: Value
+        Id: g=5f7a429b9f6c8979a5d559b3a816c24b
+        Type: BaseDataVariableType
+        DataType: ResourceUri
+        Value: "ns=36;%PROJECTDIR%/Graphics/Coesia - Library/General/32x32/warning-color.svg"
+    - Name: Pair4
+      Id: g=106ae4b06d77c678194cc94158aff796
+      Type: ValueMapPair
+      Children:
+      - Name: Key
+        Id: g=4d4d8619eedf4a20a497d08fc5fc0067
+        Type: BaseDataVariableType
+        DataType: UInt32
+        Value: 1000
+        Children:
+        - Name: DynamicLink
+          Id: g=d6bf1628e1e8350e89f1a26cc691602f
+          Type: DynamicLink
+          DataType: NodePath
+          Value: "/Objects/OptimateDemoProject/Alarms/AlarmSeverity/Alarm"
+          Children:
+          - Name: Mode
+            Id: g=4f53acd47fd5f14586568484803fec04
+            Type: BaseVariableType
+            DataType: DynamicLinkMode
+            ModellingRule: Optional
+            Value: 2
+      - Name: Value
+        Id: g=a4772b3beb8de2a2946bd23d8772703d
+        Type: BaseDataVariableType
+        DataType: ResourceUri
+        Value: "ns=36;%PROJECTDIR%/Graphics/Coesia - Library/General/32x32/alarm-color.svg"
+- Name: AlarmSeverityText
+  Id: g=f43a02ccedbddb3b074f2b1a90c163c3
+  Supertype: ValueMapConverter
+  ReferenceType: HasComponent
+  Children:
+  - Name: Source
+    Id: g=4f906db3cb3ccf919676653e48f039b4
+    Type: BaseDataVariableType
+    DataType: BaseDataType
+    ReferenceType: HasSource
+  - Name: ns=9;Pairs
+    Id: g=4f00f8f39e4685c766a6eb60f471c22b
+    Type: BaseObjectType
+    Children:
+    - Name: Pair
+      Id: g=fce7d27eb71af86b1c063938a4f56f05
+      Type: ValueMapPair
+      Children:
+      - Name: Key
+        Id: g=307c6567212483c1cd6cf175831ca38a
+        Type: BaseDataVariableType
+        DataType: UInt32
+      - Name: Value
+        Id: g=c7e7fdce538a96eb7b7ec140ded7a2c6
+        Type: BaseDataVariableType
+        DataType: String
+    - Name: Pair1
+      Id: g=19ae68de0e148bad5602b6844ac7af00
+      Type: ValueMapPair
+      Children:
+      - Name: Key
+        Id: g=fee18fa6cdf38b073e2db78084a28b7b
+        Type: BaseDataVariableType
+        DataType: UInt32
+        Value: 1
+        Children:
+        - Name: DynamicLink
+          Id: g=0f7cf50aa1fb84ea21400206f8a6536b
+          Type: DynamicLink
+          DataType: NodePath
+          Value: "/Objects/OptimateDemoProject/Alarms/AlarmSeverity/Message"
+          Children:
+          - Name: Mode
+            Id: g=b6e86a510a09d7f858c885254517f712
+            Type: BaseVariableType
+            DataType: DynamicLinkMode
+            ModellingRule: Optional
+            Value: 2
+      - Name: Value
+        Id: g=98b8813499372e3194a9698c7b6947bc
+        Type: BaseDataVariableType
+        DataType: String
+        Value: "Message"
+    - Name: Pair2
+      Id: g=8b6f33eb79b66c22d0167ef88841d823
+      Type: ValueMapPair
+      Children:
+      - Name: Key
+        Id: g=985b4c0262ef8d26ba15039080cd1a5e
+        Type: BaseDataVariableType
+        DataType: UInt32
+        Value: 10
+        Children:
+        - Name: DynamicLink
+          Id: g=ba4a4c0d288af96aff7940862830c761
+          Type: DynamicLink
+          DataType: NodePath
+          Value: "/Objects/OptimateDemoProject/Alarms/AlarmSeverity/Status"
+          Children:
+          - Name: Mode
+            Id: g=b7d9e0b41949c5c651fea522989621a2
+            Type: BaseVariableType
+            DataType: DynamicLinkMode
+            ModellingRule: Optional
+            Value: 2
+      - Name: Value
+        Id: g=92f5e971d92bf80370eaf534ca2eda73
+        Type: BaseDataVariableType
+        DataType: String
+        Value: "Status"
+    - Name: Pair3
+      Id: g=17c9a1c2ad650501ad996bbfc3cbbe2e
+      Type: ValueMapPair
+      Children:
+      - Name: Key
+        Id: g=4a2f9add8da97017e6e86e10b82dc9c7
+        Type: BaseDataVariableType
+        DataType: UInt32
+        Value: 100
+        Children:
+        - Name: DynamicLink
+          Id: g=24ebca57e6d06a148ea0db1345b143a9
+          Type: DynamicLink
+          DataType: NodePath
+          Value: "/Objects/OptimateDemoProject/Alarms/AlarmSeverity/Warning"
+          Children:
+          - Name: Mode
+            Id: g=607128f40f1f391507448688e5ea2a9b
+            Type: BaseVariableType
+            DataType: DynamicLinkMode
+            ModellingRule: Optional
+            Value: 2
+      - Name: Value
+        Id: g=f410c17e034343e97b3373cb4a56caef
+        Type: BaseDataVariableType
+        DataType: String
+        Value: "Warning"
+    - Name: Pair4
+      Id: g=047a94c46ec1f6c8c11eb7c02740b1ba
+      Type: ValueMapPair
+      Children:
+      - Name: Key
+        Id: g=36d403083ecb050e8487420f5cf0f0a6
+        Type: BaseDataVariableType
+        DataType: UInt32
+        Value: 1000
+        Children:
+        - Name: DynamicLink
+          Id: g=44f8c7dca83a5b3c397c9903af611b9c
+          Type: DynamicLink
+          DataType: NodePath
+          Value: "/Objects/OptimateDemoProject/Alarms/AlarmSeverity/Alarm"
+          Children:
+          - Name: Mode
+            Id: g=4d243c52669c3eed350550e38bd576aa
+            Type: BaseVariableType
+            DataType: DynamicLinkMode
+            ModellingRule: Optional
+            Value: 2
+      - Name: Value
+        Id: g=2a1ba79d45acf9d52179b83acd6b2aad
+        Type: BaseDataVariableType
+        DataType: String
+        Value: "Alarm"

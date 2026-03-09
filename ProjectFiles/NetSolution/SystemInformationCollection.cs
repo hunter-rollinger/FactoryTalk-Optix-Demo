@@ -16,6 +16,8 @@ using FTOptix.Report;
 using FTOptix.RecipeX;
 using FTOptix.SerialPort;
 using FTOptix.UI;
+using System.Diagnostics;
+using FTOptix.DataLogger;
 #endregion
 
 public class SystemInformationCollection : BaseNetLogic
@@ -26,10 +28,10 @@ public class SystemInformationCollection : BaseNetLogic
         LogicObject.GetVariable("OS Version").Value = Environment.OSVersion.VersionString;
         LogicObject.GetVariable("OS User").Value = Environment.UserName;
 
-		secondTask = new PeriodicTask(UpdateSystemVariables, 1000, LogicObject);
+		secondTask = new PeriodicTask(UpdateEverySecond, 1000, LogicObject);
 		secondTask.Start();
 
-		minuteTask = new PeriodicTask(UpdateSystemVariables, 60000, LogicObject);
+		minuteTask = new PeriodicTask(UpdateEveryMinute, 60000, LogicObject);
 		minuteTask.Start();
 	}
 
@@ -41,21 +43,16 @@ public class SystemInformationCollection : BaseNetLogic
 		minuteTask = null;
 	}
 
-    private void UpdateSystemVariables() {
-        // local date time
-        DateTime localTime = DateTime.Now;
-        LogicObject.GetVariable("DateTime").Value = localTime;
-        LogicObject.GetVariable("DateTime/Year").Value = localTime.Year;
-        LogicObject.GetVariable("DateTime/Month").Value = localTime.Month;
-        LogicObject.GetVariable("DateTime/Day").Value = localTime.Day;
-        LogicObject.GetVariable("DateTime/Hour").Value = localTime.Hour;
-        LogicObject.GetVariable("DateTime/Minute").Value = localTime.Minute;
-        LogicObject.GetVariable("DateTime/Second").Value = localTime.Second;
-        LogicObject.GetVariable("DateTime/Day Of Week").Value = localTime.DayOfWeek.ToString();
-        LogicObject.GetVariable("DateTime/Day Of Year").Value = localTime.DayOfYear;
-        LogicObject.GetVariable("DateTime/Daylight Savings").Value = localTime.IsDaylightSavingTime();
-    }
+	private void UpdateEverySecond() {
+		localTime = DateTime.Now;
+		LogicObject.GetVariable("CurrentDT").Value = localTime;
+		LogicObject.GetVariable("Yesterday").Value = localTime.AddDays(-1);
+	}
 
-    private PeriodicTask secondTask;
+	private void UpdateEveryMinute() {
+	}
+
+	private DateTime localTime;
+	private PeriodicTask secondTask;
     private PeriodicTask minuteTask;
 }

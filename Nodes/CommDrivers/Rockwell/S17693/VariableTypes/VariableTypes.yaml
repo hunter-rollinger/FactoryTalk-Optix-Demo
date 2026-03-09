@@ -1,3 +1,90 @@
 Name: VariableTypes
 Id: g=b094a7d540a4d613232ce22fa83fe203
 Type: FolderType
+Children:
+- Name: OptimateAlarm
+  Id: g=84ceb916959287a7df05f990f1cf84a3
+  Supertype: RAEtherNetIPTagStructure
+  DataType: OptimateAlarm
+  ValueRank: Any
+  Children:
+  - Name: Active
+    Id: g=bb887bc93caf1a76e01bfd0584c310e6
+    Type: RAEtherNetIPTag
+    DataType: Boolean
+    Children:
+    - Name: SymbolName
+      Id: g=58f5fcd3ae1b79befa56a00cf112e5c4
+      Type: BaseDataVariableType
+      DataType: String
+      Value: "Active"
+  - Name: Severity
+    Id: g=a78325fdf7b31659ceae66e20dfa05f2
+    Type: RAEtherNetIPTag
+    DataType: Int16
+    Children:
+    - Name: SymbolName
+      Id: g=1ec3b29991eb1be84e037a7e6722c5f9
+      Type: BaseDataVariableType
+      DataType: String
+      Value: "Severity"
+  - Name: Enabled
+    Id: g=ea85d74ed833f7878099cc271ba0c96d
+    Type: RAEtherNetIPTag
+    DataType: Boolean
+    Children:
+    - Name: SymbolName
+      Id: g=68fd431b603bb15573a5d0f16a08085c
+      Type: BaseDataVariableType
+      DataType: String
+      Value: "Enabled"
+  - Name: AlarmText
+    Id: g=c2c213ff7102e0e9b4616e1709fd45ce
+    Type: RAEtherNetIPTag
+    DataType: String
+    Children:
+    - Name: SymbolName
+      Id: g=c075b73b146597c54f130878bd6d1d80
+      Type: BaseDataVariableType
+      DataType: String
+      Value: "AlarmText"
+  - Name: AlarmAuxText
+    Id: g=8cb85fb04f4f0bb679cd9bcae0acdac6
+    Type: RAEtherNetIPTag
+    DataType: String
+    Children:
+    - Name: SymbolName
+      Id: g=a79d491d7a7236cd0962af1aaba64765
+      Type: BaseDataVariableType
+      DataType: String
+      Value: "AlarmAuxText"
+  - Name: AlarmHelpText
+    Id: g=35b5ba2ac9d2f467a8d6a7f052270767
+    Type: RAEtherNetIPTag
+    DataType: String
+    Children:
+    - Name: SymbolName
+      Id: g=625e103d304d18bc204a2a70dbe15829
+      Type: BaseDataVariableType
+      DataType: String
+      Value: "AlarmHelpText"
+  - Name: OverviewImage
+    Id: g=40a9c534581e8ec502f813183fae3323
+    Type: RAEtherNetIPTag
+    DataType: String
+    Children:
+    - Name: SymbolName
+      Id: g=78fde38a8768fee532f880aa26c10a49
+      Type: BaseDataVariableType
+      DataType: String
+      Value: "OverviewImage"
+  - Name: AlarmImage
+    Id: g=7c8a59d60ee881998a0875b17429eafd
+    Type: RAEtherNetIPTag
+    DataType: String
+    Children:
+    - Name: SymbolName
+      Id: g=eda82b7bf25ba4a359496faff6246c4b
+      Type: BaseDataVariableType
+      DataType: String
+      Value: "AlarmImage"

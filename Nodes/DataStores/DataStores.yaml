@@ -10,8 +10,8 @@ Children:
     Id: g=6f84538a360b77714076b123bc968622
     Type: BaseObjectType
     Children:
-    - Name: AlarmsEventLogger1
-      Id: g=31951c5a8cba2e7560f8880dd8f45091
+    - Name: CustomAlarmHistory
+      Id: g=9773562c6e5eb2995f6823bdd273399a
       Type: SQLiteStoreTable
       Children:
       - Class: Reference
@@ -27,61 +27,113 @@ Children:
         Target: ns=15;i=20
         Direction: Forward
       - Name: Columns
-        Id: g=dfb2580459565749f37076459a863394
+        Id: g=8cd13d58c781a58271175af55c4f609e
+        Type: BaseObjectType
+        Children:
+        - Name: Severity
+          Id: g=0477f4200b5b27127a16401dc3a763e8
+          Type: StoreColumn
+          DataType: UInt16
+        - Name: Message
+          Id: g=122e7ccd18da3b313d79074e175dfce8
+          Type: StoreColumn
+          DataType: String
+        - Name: Comment
+          Id: g=bb3ed22aa96ab935cb9a1f6fe2c05022
+          Type: StoreColumn
+          DataType: String
+        - Name: LocalReceived
+          Id: g=11ecfc01474ce88c60460fa5e5c79ed5
+          Type: StoreColumn
+          DataType: DateTime
+        - Name: LocalCleared
+          Id: g=05e1fec88afa917cd757d378b2686df9
+          Type: StoreColumn
+          DataType: DateTime
+        - Name: UtcReceived
+          Id: g=2c1ad588b070c379102cd75877a3ecff
+          Type: StoreColumn
+          DataType: UtcTime
+        - Name: UtcCleared
+          Id: g=a8de65abbd9e511425c8c20663d3cc52
+          Type: StoreColumn
+          DataType: UtcTime
+    - Name: AlarmsEventLogger
+      Id: g=eb7475fb79311852dadd2a454f6d3aa2
+      Type: SQLiteStoreTable
+      Children:
+      - Class: Reference
+        Target: ns=15;i=12
+        Direction: Forward
+      - Class: Reference
+        Target: ns=15;i=15
+        Direction: Forward
+      - Class: Reference
+        Target: ns=15;i=21
+        Direction: Forward
+      - Class: Reference
+        Target: ns=15;i=20
+        Direction: Forward
+      - Name: Columns
+        Id: g=dc2779de3b9c5b2d8cc8c594a9ddc785
         Type: BaseObjectType
         Children:
         - Name: ActiveState_Id
-          Id: g=192b9c0c689ceb47b76879c6df631249
+          Id: g=87c96448a9b10c878716945b960c44cb
           Type: StoreColumn
           DataType: Boolean
         - Name: AckedState_Id
-          Id: g=8d221d6c7bb4094712d2710b863aa1de
+          Id: g=d307d51056d42bf92725eed256fbd4e8
           Type: StoreColumn
           DataType: Boolean
         - Name: ConfirmedState_Id
-          Id: g=c1de52c4b2e53c6da7585a6af73d43a7
+          Id: g=0f40f4a6cba2b976d9b77c380014a53f
+          Type: StoreColumn
+          DataType: Boolean
+        - Name: EnabledState_Id
+          Id: g=8615edf72c4b2f87e5945bd8b47fb8fb
           Type: StoreColumn
           DataType: Boolean
         - Name: ConditionName
-          Id: g=0523bfca68807123598019e171f4296c
+          Id: g=a6381283185c50aadb36cda7e63a4af0
           Type: StoreColumn
           DataType: String
-        - Name: EnabledState_Id
-          Id: g=43da520dade5ab4cd9d1471184a1e4e6
-          Type: StoreColumn
-          DataType: Boolean
         - Name: SourceName
-          Id: g=ac0a92226e2cfa11db6c36af119749b0
+          Id: g=3e1fe509d014bacb06940e39604075dd
           Type: StoreColumn
           DataType: String
-        - Name: Time
-          Id: g=e80e42813f51251a6eeb1a4ef075115f
-          Type: StoreColumn
-          DataType: UtcTime
         - Name: 'Message_en-US'
-          Id: g=fc71c597d8f0af25d6de47fd06f05fcf
+          Id: g=bc0a5ecd34242e9e3bd475ba285a5c88
           Type: StoreColumn
           DataType: String
         - Name: 'Message_it-IT'
-          Id: g=2a1ec7b6bc1e9b9e8afb3fcbbc8978e7
+          Id: g=524da0872276b1de0f828092aa2f420a
           Type: StoreColumn
           DataType: String
         - Name: 'Message_de-DE'
-          Id: g=5ceb5469b3008fc09ebe1cd4fe24bd53
+          Id: g=a636236f814177fc68e50a65b833fc66
           Type: StoreColumn
           DataType: String
         - Name: 'Message_es-ES'
-          Id: g=4e7ffb6040ab80dacb3974c35cf218c4
+          Id: g=f4c8f66a6f535b0284bf70bda8441192
           Type: StoreColumn
           DataType: String
         - Name: Severity
-          Id: g=48a7d0834a2967666a1f97e6762db6cb
+          Id: g=585895ea80d9837d31f910a2a1ba9b7d
           Type: StoreColumn
           DataType: UInt16
+        - Name: Time
+          Id: g=cc7f1fad93f3b10418ae4330b475fae6
+          Type: StoreColumn
+          DataType: UtcTime
         - Name: LocalTime
-          Id: g=d80933e576dc1f99442e153be86e381b
+          Id: g=a1ef2829b4dcdd39a87dba5059e8929c
           Type: StoreColumn
           DataType: DateTime
+        - Name: AlarmNodeId
+          Id: g=da3605814d8d3c8426efd072c8f0e1b3
+          Type: StoreColumn
+          DataType: String
   - Class: Reference
     Target: ns=29;i=30
     Direction: Forward
@@ -151,3 +203,36 @@ Children:
     Id: g=ab7be6bfbf6141d480afffe79bad86fb
     Type: BaseDataVariableType
     DataType: Boolean
+  - Name: AlarmHistoryObject
+    Id: g=2bff389e6debd1a3dc0823c481106621
+    Type: BaseObjectType
+    Description: {"LocaleId":"en-US","Text":"DO NOT MODIFY"}
+    Children:
+    - Name: Severity
+      Id: g=54706960d110746c43f1c9b692905ef2
+      Type: BaseDataVariableType
+      DataType: UInt16
+    - Name: Message
+      Id: g=cf2f6ff56c0509407ac71d3f0cfcf5da
+      Type: BaseDataVariableType
+      DataType: String
+    - Name: Comment
+      Id: g=77d5236b0d5b05ec8e6fc8014a9190f5
+      Type: BaseDataVariableType
+      DataType: String
+    - Name: LocalReceived
+      Id: g=ca48efef34e150e804e92784274e5e49
+      Type: BaseDataVariableType
+      DataType: DateTime
+    - Name: LocalCleared
+      Id: g=96c14bf1410a25cf45eec8683784aa89
+      Type: BaseDataVariableType
+      DataType: DateTime
+    - Name: UtcReceived
+      Id: g=06dc48098a7a31cac2465613427d6383
+      Type: BaseDataVariableType
+      DataType: UtcTime
+    - Name: UtcCleared
+      Id: g=c73d05ffc4e9658b4782545fbaf41fe0
+      Type: BaseDataVariableType
+      DataType: UtcTime

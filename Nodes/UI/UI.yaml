@@ -190,6 +190,7 @@ Children:
     Id: g=e2866258cb5ffa30666c2d2fbb501f78
     Type: BaseDataVariableType
     DataType: String
+    Value: "10.0.0.1"
   - Name: Port
     Id: g=83092678c88a64cb52efc206a2199dcb
     Type: BaseDataVariableType
@@ -620,7 +621,7 @@ Children:
         Id: g=ffcc7f735ebb3d7602f23953836b8a1b
         Type: DynamicLink
         DataType: NodePath
-        Value: "../../Bottom_Bar/BottomBarLayout/navigation buttons/Internal_Mode/ActiveMode"
+        Value: "../../Bottom_Bar/bottom bar grid/navigation buttons/Internal_Mode/ActiveMode"
         Children:
         - Name: Mode
           Id: g=b78aa0c1a01f4680af9cc2f1c05a2249
@@ -1055,6 +1056,14 @@ Children:
               - Class: Reference
                 Target: g=834ccc3777b76a6b3cb77824402fe2a8
                 Direction: Forward
+              - Name: CanGoBack
+                Id: g=6bdb92d06751def20f990396a3cbf6a0
+                Type: BaseDataVariableType
+                DataType: Boolean
+              - Name: CanGoNext
+                Id: g=31d395dc3df91557340726474f278618
+                Type: BaseDataVariableType
+                DataType: Boolean
             - Name: HorizontalAlignment
               Id: g=2a7a269f0850662bf3624bad24e08cb1
               Type: BaseVariableType
@@ -1297,28 +1306,31 @@ Children:
         Type: DynamicLink
         DataType: NodePath
         Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Light Grey 4 - e9e9e9 - Separators"
-    - Name: Background
-      Id: g=b9ab6d7c72fb1e4a1895f84ebd69dccc
-      Type: Panel
     - Name: BottomBarLayout
       Id: g=0a102af4ee876efc320c6f4ec43713c2
       Type: RowLayout
+    - Name: bottom bar grid
+      Id: g=1ab0822d5ea8330debb1fe7343eb7e90
+      Type: GridLayout
       Children:
-      - Name: navigation buttons
-        Id: g=ac171ca61241c3ef87ba4f4ea578ef31
-        Type: Rectangle
+      - Name: Columns
+        Id: g=be192e722cc712a058ed15c0254ead6b
+        Type: BaseDataVariableType
+        DataType: String
+        ValueRank: OneDimension
+        ArrayDimensions: [0]
+        Value: ["auto","Auto","1fr","Auto"]
+      - Name: Rows
+        Id: g=93d83b32bd0e286a65a3fb23c85f01cc
+        Type: BaseDataVariableType
+        DataType: String
+        ValueRank: OneDimension
+        ArrayDimensions: [0]
+        Value: ["Auto","8"]
+      - Name: background
+        Id: g=72b99c9bb1bd5fcbe178cf1da398d979
+        Type: Panel
         Children:
-        - Name: FillColor
-          Id: g=c3ea713d2efd7c05e30043ab344baf9f
-          Type: BaseDataVariableType
-          DataType: Color
-          Value: "#333333"
-          Children:
-          - Name: DynamicLink
-            Id: g=a2c747b1ee3549e20a0abb8f4939c4c8
-            Type: DynamicLink
-            DataType: NodePath
-            Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Dark Grey 5 - 333333"
         - Name: slim gray left side
           Id: g=997867bd2db635dfa69430937b09bb18
           Type: Rectangle
@@ -1349,6 +1361,39 @@ Children:
               Type: DynamicLink
               DataType: NodePath
               Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Dark Grey 5 - 333333"
+        - Name: slim gray right side
+          Id: g=46efa943752187c335f0074657e66551
+          Type: Rectangle
+          Children:
+          - Name: FillColor
+            Id: g=fc364ecc3b9d8530485cab2165add7ef
+            Type: BaseDataVariableType
+            DataType: Color
+            Value: "#333333"
+            Children:
+            - Name: DynamicLink
+              Id: g=838e14aa4d2528dc874ecaa3bc90a254
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Dark Grey 5 - 333333"
+        - Name: GridLayoutProperties
+          Id: g=0f183b50874233960b8c8e07aa3c1eda
+          Type: GridLayoutProperties
+      - Name: navigation buttons
+        Id: g=ac171ca61241c3ef87ba4f4ea578ef31
+        Type: Rectangle
+        Children:
+        - Name: FillColor
+          Id: g=c3ea713d2efd7c05e30043ab344baf9f
+          Type: BaseDataVariableType
+          DataType: Color
+          Value: "#333333"
+          Children:
+          - Name: DynamicLink
+            Id: g=a2c747b1ee3549e20a0abb8f4939c4c8
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Dark Grey 5 - 333333"
         - Name: NavButtons
           Id: g=142ca0078a9d93baaccb2818092cd24f
           Type: RowLayout
@@ -2295,6 +2340,11 @@ Children:
                 Type: DynamicLink
                 DataType: NodePath
                 Value: "../../../../../Machine Has Changeover"
+          - Name: RightMargin
+            Id: g=a86bafa3609f24cdc42f0f9925ed41a3
+            Type: BaseVariableType
+            DataType: Size
+            Value: 16.0
         - Name: Internal_Mode
           Id: g=7fca98988db6935a35d994d7d36c6522
           Type: BaseObjectType
@@ -2328,141 +2378,121 @@ Children:
             Id: g=cf0aaa92816b738c425be0a0a6670029
             Type: BaseDataVariableType
             DataType: Int32
-      - Name: coesia
-        Id: g=1e44c29b1634c350a88beccb54508fdd
-        Type: Panel
+        - Name: GridLayoutProperties
+          Id: g=fb47f36609c952dac7ccc905bbca6790
+          Type: GridLayoutProperties
+        - Name: RightMargin
+          Id: g=d2b70fb06d9234f4b9998377506857ff
+          Type: BaseVariableType
+          DataType: Size
+      - Name: light grey rounder
+        Id: g=85511bda5b3f8c782dccc4c79d2153e7
+        Type: Rectangle
         Children:
-        - Name: slim gray bottom bar
-          Id: g=d4a927e373e1ec6331fd9285a03be2ba
-          Type: Rectangle
+        - Name: FillColor
+          Id: g=c35afb56bf6617f0682b1dcc4445b4f7
+          Type: BaseDataVariableType
+          DataType: Color
+          Value: "#e9e9e9"
           Children:
-          - Name: FillColor
-            Id: g=dfc162145012d3a1964c634755e925e9
-            Type: BaseDataVariableType
-            DataType: Color
-            Value: "#333333"
-            Children:
-            - Name: DynamicLink
-              Id: g=fb0e4a45380a8a1333b2bac7a1e7ac64
-              Type: DynamicLink
-              DataType: NodePath
-              Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Dark Grey 5 - 333333"
-        - Name: light grey rounder
-          Id: g=85511bda5b3f8c782dccc4c79d2153e7
-          Type: Rectangle
-          Children:
-          - Name: FillColor
-            Id: g=c35afb56bf6617f0682b1dcc4445b4f7
-            Type: BaseDataVariableType
-            DataType: Color
-            Value: "#e9e9e9"
-            Children:
-            - Name: DynamicLink
-              Id: g=66ce46f9383a50bb8f3d27100978c554
-              Type: DynamicLink
-              DataType: NodePath
-              Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Light Grey 4 - e9e9e9 - Separators"
-        - Name: light grey rounder1
-          Id: g=a8330a2f647164a9609fb9da7bfc33f1
-          Type: Rectangle
-          Children:
-          - Name: FillColor
-            Id: g=e73f8540c703a19a0a8a06f09d827863
-            Type: BaseDataVariableType
-            DataType: Color
-            Value: "#e9e9e9"
-            Children:
-            - Name: DynamicLink
-              Id: g=13f6676f5a716cd575800f5485dc2cfd
-              Type: DynamicLink
-              DataType: NodePath
-              Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Light Grey 4 - e9e9e9 - Separators"
-        - Name: coesia logo
-          Id: g=3fb925d84d802c775b8730bba5a3f211
-          Type: Image
-          Children:
-          - Name: Path
-            Id: g=d3d4d1b4898e821210340362d4c5e359
-            Type: BaseDataVariableType
-            DataType: ResourceUri
-            Value: "ns=36;%PROJECTDIR%/Graphics/Coesia - Library/Logos/Coesia.svg"
-      - Name: special buttons
-        Id: g=3592d3664aed6b8812775a534d78f40f
-        Type: Panel
+          - Name: DynamicLink
+            Id: g=66ce46f9383a50bb8f3d27100978c554
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Light Grey 4 - e9e9e9 - Separators"
+        - Name: GridLayoutProperties
+          Id: g=08907e432321cd1ee85e47948c06be95
+          Type: GridLayoutProperties
+        - Name: LeftMargin
+          Id: g=ced6e75c55adb3209fdd96d2105312f1
+          Type: BaseVariableType
+          DataType: Size
+          Value: -20.0
+      - Name: coesia logo
+        Id: g=3fb925d84d802c775b8730bba5a3f211
+        Type: Image
         Children:
-        - Name: slim gray bottom bar
-          Id: g=6ee5ddbed10618d444943683665ff3ec
-          Type: Rectangle
+        - Name: Path
+          Id: g=d3d4d1b4898e821210340362d4c5e359
+          Type: BaseDataVariableType
+          DataType: ResourceUri
+          Value: "ns=36;%PROJECTDIR%/Graphics/Coesia - Library/Logos/Coesia.svg"
+        - Name: GridLayoutProperties
+          Id: g=3675a71678451377ba7371946792d3b3
+          Type: GridLayoutProperties
+        - Name: LeftMargin
+          Id: g=2b8fdfb6ae5239dc1cc5f4e0d2901a9f
+          Type: BaseVariableType
+          DataType: Size
           Children:
-          - Name: FillColor
-            Id: g=c0677a5ddfd286c4b24150b0860ff489
-            Type: BaseDataVariableType
-            DataType: Color
-            Value: "#333333"
+          - Name: ExpressionEvaluator1
+            Id: g=e873a05864361fee42fae8d3cf212ad3
+            Type: ExpressionEvaluator
             Children:
-            - Name: DynamicLink
-              Id: g=47e7a389736326152305d5cd5dffeaca
-              Type: DynamicLink
-              DataType: NodePath
-              Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Dark Grey 5 - 333333"
-        - Name: light grey rounder
-          Id: g=7a18d0ce6b86d54c151701382c53b9cf
-          Type: Rectangle
+            - Name: Source0
+              Id: g=2170e2f6a86f089701e2496db63cd4ef
+              Type: BaseDataVariableType
+              DataType: BaseDataType
+              ReferenceType: HasSource
+              Children:
+              - Name: DynamicLink
+                Id: g=62a8a01c470f5c2b7ea408dacf7e131a
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "../../../../../Machine Has Manual"
+            - Name: Source1
+              Id: g=0340ad8d49ac55d4a797858ddce13ce1
+              Type: BaseDataVariableType
+              DataType: BaseDataType
+              ReferenceType: HasSource
+              Children:
+              - Name: DynamicLink
+                Id: g=a696fe6b8e99365cfdba388adb1e4250
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "../../../../../Machine Has Changeover"
+            - Name: Source2
+              Id: g=4f56134cc27b13f95a2663fea2179511
+              Type: BaseDataVariableType
+              DataType: BaseDataType
+              ReferenceType: HasSource
+              Children:
+              - Name: DynamicLink
+                Id: g=9c08f2a03d125260d6167646154fb7d6
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "{Window}/ScreenControl/ScreenSizeIsNormal"
+      - Name: BottomBarCustomButtons
+        Id: g=0e165c1b547545a36ed209db1141a2f7
+        Type: PanelLoader
+        Children:
+        - Name: Panel
+          Id: g=eaa8da641356ec14ea531753c1e70133
+          Type: NodePointer
+          DataType: NodeId
           Children:
-          - Name: FillColor
-            Id: g=ba144b1a1de0e77df2ce9f3d54952f83
-            Type: BaseDataVariableType
-            DataType: Color
-            Value: "#e9e9e9"
-            Children:
-            - Name: DynamicLink
-              Id: g=bc9cab97ac318ee7d90d5edf6c78d5f0
-              Type: DynamicLink
-              DataType: NodePath
-              Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Light Grey 4 - e9e9e9 - Separators"
-        - Name: light grey rounder1
-          Id: g=d2ef3b83a25bb6974ba986d4b5aa955a
-          Type: Rectangle
-          Children:
-          - Name: FillColor
-            Id: g=a37baae7d5088d3f1f02c5a61696f6cd
-            Type: BaseDataVariableType
-            DataType: Color
-            Value: "#e9e9e9"
-            Children:
-            - Name: DynamicLink
-              Id: g=271e1494e2bfd972f11dba98284b4f11
-              Type: DynamicLink
-              DataType: NodePath
-              Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Light Grey 4 - e9e9e9 - Separators"
-        - Name: BottomBarCustomButtons
-          Id: g=0e165c1b547545a36ed209db1141a2f7
-          Type: PanelLoader
-          Children:
-          - Name: Panel
-            Id: g=eaa8da641356ec14ea531753c1e70133
-            Type: NodePointer
+          - Name: Kind
+            Id: g=cbbc04f6bc7175fdb2b8a0a579a9b36b
+            Type: PropertyType
             DataType: NodeId
-            Children:
-            - Name: Kind
-              Id: g=cbbc04f6bc7175fdb2b8a0a579a9b36b
-              Type: PropertyType
-              DataType: NodeId
-              Value: "/Types/ObjectTypes/BaseObjectType/BaseUIObject/Item/Container"
-          - Name: CurrentPanel
-            Id: g=f10652ba2ca0bf93f374cb3a0f06b9ed
-            Type: NodePointer
+            Value: "/Types/ObjectTypes/BaseObjectType/BaseUIObject/Item/Container"
+        - Name: CurrentPanel
+          Id: g=f10652ba2ca0bf93f374cb3a0f06b9ed
+          Type: NodePointer
+          DataType: NodeId
+          AccessLevel: Read
+          Children:
+          - Name: Kind
+            Id: g=42b88ab82655cdecbe69746b7007a79c
+            Type: PropertyType
             DataType: NodeId
-            AccessLevel: Read
-            Children:
-            - Name: Kind
-              Id: g=42b88ab82655cdecbe69746b7007a79c
-              Type: PropertyType
-              DataType: NodeId
-              Value: "/Types/ObjectTypes/BaseObjectType/BaseUIObject/Item"
-          - Class: Reference
-            Target: ns=11;i=478
-            Direction: Forward
+            Value: "/Types/ObjectTypes/BaseObjectType/BaseUIObject/Item"
+        - Class: Reference
+          Target: ns=11;i=478
+          Direction: Forward
+        - Name: GridLayoutProperties
+          Id: g=0b2bbdc7fda8f878187572de5a13a93a
+          Type: GridLayoutProperties
       - Name: machine controls button
         Id: g=db47deef6ba7a7a35ede4b69bad5fca6
         Type: Rectangle
@@ -2497,36 +2527,9 @@ Children:
               Type: DynamicLink
               DataType: NodePath
               Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Dark Grey 4 - 404040"
-        - Name: slim gray right side
-          Id: g=46efa943752187c335f0074657e66551
-          Type: Rectangle
-          Children:
-          - Name: FillColor
-            Id: g=fc364ecc3b9d8530485cab2165add7ef
-            Type: BaseDataVariableType
-            DataType: Color
-            Value: "#333333"
-            Children:
-            - Name: DynamicLink
-              Id: g=838e14aa4d2528dc874ecaa3bc90a254
-              Type: DynamicLink
-              DataType: NodePath
-              Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Dark Grey 5 - 333333"
-        - Name: slim gray bottom bar
-          Id: g=f5a1a0209baa73d2e5cb5e4db077bf69
-          Type: Rectangle
-          Children:
-          - Name: FillColor
-            Id: g=c655a39db8f28876dcce683a7c7afe40
-            Type: BaseDataVariableType
-            DataType: Color
-            Value: "#333333"
-            Children:
-            - Name: DynamicLink
-              Id: g=882a32c3d3754f47ee51f516e5bf3526
-              Type: DynamicLink
-              DataType: NodePath
-              Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Dark Grey 5 - 333333"
+        - Name: GridLayoutProperties
+          Id: g=6a9b8368b31f7370c2c4b46510962eab
+          Type: GridLayoutProperties
     - Name: MainMenuScreenVisibility
       Id: g=a5b78f2c941a0d6c03b8b531ae50c802
       Type: BaseDataVariableType
@@ -4136,12 +4139,12 @@ Children:
       Id: g=e78b04245bb737fa23e96c3c9b7d45c2
       Type: BaseDataVariableType
       DataType: NodeId
-      Value: "/Objects/OptimateDemoProject/UI/Screens/Burger/Alarm History/AlarmWidgets/AlarmManager"
+      Value: "/Objects/OptimateDemoProject/UI/Screens/Burger/Alarm History/AlarmHistory"
     - Name: EventHistory
       Id: g=784c46435fa8332e149a717a27cbf43f
       Type: BaseDataVariableType
       DataType: NodeId
-      Value: "/Objects/OptimateDemoProject/UI/Screens/Burger/Alarm History/AlarmWidgets/AlarmSummary"
+      Value: {"IdType":2,"Id":"f7693488f23341ce8f24714cb90408c5","Namespace":36}
     - Name: RecipeManagement
       Id: g=f0bf33a179547fb3ec8bcdb166e04d92
       Type: BaseDataVariableType
@@ -4324,6 +4327,906 @@ Children:
       Type: BaseDataVariableType
       DataType: Int32
       Value: 42
+  - Name: AlarmList
+    Id: g=c9e2c089e1227b0fe5794b708c0097c5
+    Type: AlarmActiveList
+    Children:
+    - Name: BackgroundColor
+      Id: g=f77d893837707075c6e99b4b9f0bf254
+      Type: BaseDataVariableType
+      DataType: Color
+      Children:
+      - Name: DynamicLink
+        Id: g=f99c622f9badb65611d68f7e0f3f8f37
+        Type: DynamicLink
+        DataType: NodePath
+        Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Transparent - 00000000"
+    - Name: BorderColor
+      Id: g=43c5dad8fc26fcd7086fef7d841ff1fa
+      Type: BaseDataVariableType
+      DataType: Color
+      Children:
+      - Name: DynamicLink
+        Id: g=1985ca737b738f072440b0307365fd3b
+        Type: DynamicLink
+        DataType: NodePath
+        Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Transparent - 00000000"
+    - Name: background
+      Id: g=ab616515de961cf42ebdaedb0db82098
+      Type: Rectangle
+      Children:
+      - Name: BorderColor
+        Id: g=563bcce93372df567958c19a1eb3bd16
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#333333"
+        Children:
+        - Name: DynamicLink
+          Id: g=c64bf3265a19ffed16a3d16dacd43c9b
+          Type: DynamicLink
+          DataType: NodePath
+          Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Dark Grey 5 - 333333"
+      - Name: FillColor
+        Id: g=24d13bd625d164a3d68236a70e00edbe
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#333333"
+        Children:
+        - Name: DynamicLink
+          Id: g=640f234ae1da22029f69be3b5cdc0a04
+          Type: DynamicLink
+          DataType: NodePath
+          Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Dark Grey 5 - 333333"
+    - Name: AlarmList
+      Id: g=30ae9938a32311d76ea12515eddd9efc
+      Type: DataGrid
+      Children:
+      - Name: Model
+        Id: g=fb93596fb5d62d73bb21a49cfd051f71
+        Type: NodePointer
+        DataType: NodeId
+        Children:
+        - Name: ItemKind
+          Id: g=4397775e0643d1805b4aa563164991b6
+          Type: PropertyType
+          DataType: NodeId
+          Value: "/Types/EventTypes/BaseEventType/ConditionType/AcknowledgeableConditionType/AlarmConditionType"
+        - Name: Kind
+          Id: g=a6189b00cd058ce77f2e5d2781eb90d0
+          Type: PropertyType
+          DataType: NodeId
+        - Name: DynamicLink
+          Id: g=da6b55fb586931a8b2da113580398fb7
+          Type: DynamicLink
+          DataType: NodePath
+          Value: "/Objects/RetainedAlarms/LocalizedAlarms@Pointer"
+      - Name: Query
+        Id: g=0be3677ddb3ce29db971ab1ac0c6280a
+        Type: BaseDataVariableType
+        DataType: String
+      - Name: Columns
+        Id: g=6db2cee65dc383c8448372aa0139e01e
+        Type: BaseObjectType
+        Children:
+        - Name: Severity
+          Id: g=0d95a5403992ad23ba1743bc884a8b50
+          Type: DataGridColumn
+          Children:
+          - Name: Title
+            Id: g=0f2863f8125971ebdf192ea68715032c
+            Type: BaseDataVariableType
+            DataType: LocalizedText
+            Value: {"LocaleId":"en-US","Text":"Type"}
+          - Name: Width
+            Id: g=ca11f389437995cf8e9dc03b6b4f5824
+            Type: BaseDataVariableType
+            DataType: Size
+            Value: 60.0
+          - Name: Visible
+            Id: g=78cb933dceba0d5a29589060d685e8f4
+            Type: BaseDataVariableType
+            DataType: Boolean
+            Value: true
+          - Name: HeaderAlignment
+            Id: g=613e8a297031578898fe68ec5641ec96
+            Type: BaseDataVariableType
+            DataType: TextHorizontalAlignment
+            Value: 1
+          - Name: ContentAlignment
+            Id: g=ba2ed35ef226401c675759e62319aabd
+            Type: BaseVariableType
+            DataType: HorizontalAlignment
+            Value: 2
+          - Name: OrderBy
+            Id: g=f9ce9224b50504372bb787ddddaa28f6
+            Type: BaseDataVariableType
+            DataType: NodePath
+          - Name: DataItemTemplate
+            Id: g=d30277ca01833750af42e5081287f864
+            Type: DataGridImageItemTemplate
+            Children:
+            - Name: Path
+              Id: g=17e2e964e7e180bd13c07c188acdfdf2
+              Type: BaseDataVariableType
+              DataType: ResourceUri
+              Children:
+              - Name: AlarmSeverityLevels1
+                Id: g=c51db505331fbc4e0deae071b0817f6e
+                Type: AlarmSeverityIcons
+                Children:
+                - Name: Source
+                  Id: g=65df790c8d03f256d67cff8929a23623
+                  Type: BaseDataVariableType
+                  DataType: BaseDataType
+                  ReferenceType: HasSource
+                  Children:
+                  - Name: DynamicLink
+                    Id: g=82c42ab14bd912077fd87490ed030b4b
+                    Type: DynamicLink
+                    DataType: NodePath
+                    Value: "{Item}/Severity"
+                - Name: Pairs
+                  Id: g=ebcdc13dca10c7758074addd2a3fec67
+                  Type: BaseObjectType
+                  Children:
+                  - Name: Pair
+                    Id: g=20f32485ab0f9606f22622ba54c1176d
+                    Type: ValueMapPair
+                    Children:
+                    - Name: Key
+                      Id: g=52ca7f2fe94e3443a7c0904eca8b8b75
+                      Type: BaseDataVariableType
+                      DataType: UInt32
+                    - Name: Value
+                      Id: g=f8baf15760174803b4683fb4cd195f8f
+                      Type: BaseDataVariableType
+                      DataType: ResourceUri
+                  - Name: Pair1
+                    Id: g=51cf3cc3efe4efc3d0c903effdbe3eea
+                    Type: ValueMapPair
+                    Children:
+                    - Name: Key
+                      Id: g=5efbf771423064344c9d4877cbc58b79
+                      Type: BaseDataVariableType
+                      DataType: UInt32
+                      Value: 1
+                      Children:
+                      - Name: DynamicLink
+                        Id: g=076f880565e2b29a601d5ac8b40a8307
+                        Type: DynamicLink
+                        DataType: NodePath
+                        Value: "/Objects/OptimateDemoProject/Alarms/AlarmSeverity/Message"
+                    - Name: Value
+                      Id: g=b3f01b17f9144094970a76faeca59dc1
+                      Type: BaseDataVariableType
+                      DataType: ResourceUri
+                      Value: "ns=36;%PROJECTDIR%/Graphics/Coesia - Library/General/32x32/info-color.svg"
+                  - Name: Pair2
+                    Id: g=484776bff8514807d975ff72bd3e4155
+                    Type: ValueMapPair
+                    Children:
+                    - Name: Key
+                      Id: g=060e4c4052b3587eaf1c89b883bb454f
+                      Type: BaseDataVariableType
+                      DataType: UInt32
+                      Value: 10
+                      Children:
+                      - Name: DynamicLink
+                        Id: g=e79aeebd5c020441d624bd809584c41f
+                        Type: DynamicLink
+                        DataType: NodePath
+                        Value: "/Objects/OptimateDemoProject/Alarms/AlarmSeverity/Status"
+                    - Name: Value
+                      Id: g=5ff9f4d242291fa65cbab7254305671c
+                      Type: BaseDataVariableType
+                      DataType: ResourceUri
+                      Value: "ns=36;%PROJECTDIR%/Graphics/Coesia - Library/General/32x32/warning-color.svg"
+                  - Name: Pair3
+                    Id: g=f518fa5610a766c69207901c5037067a
+                    Type: ValueMapPair
+                    Children:
+                    - Name: Key
+                      Id: g=b51a09a45d48630fde1fbf8fb9279655
+                      Type: BaseDataVariableType
+                      DataType: UInt32
+                      Value: 100
+                      Children:
+                      - Name: DynamicLink
+                        Id: g=8db1332f4d95425c72ece4e639b9562d
+                        Type: DynamicLink
+                        DataType: NodePath
+                        Value: "/Objects/OptimateDemoProject/Alarms/AlarmSeverity/Warning"
+                    - Name: Value
+                      Id: g=bb1d58a5ba87fb52316fdfc780be391c
+                      Type: BaseDataVariableType
+                      DataType: ResourceUri
+                      Value: "ns=36;%PROJECTDIR%/Graphics/Coesia - Library/General/32x32/warning-color.svg"
+                  - Name: Pair4
+                    Id: g=6eecb8d8a2faf4e8dfba783a1dc9530b
+                    Type: ValueMapPair
+                    Children:
+                    - Name: Key
+                      Id: g=598bb8f9a8bca0510388de8b42e10a2d
+                      Type: BaseDataVariableType
+                      DataType: UInt32
+                      Value: 1000
+                      Children:
+                      - Name: DynamicLink
+                        Id: g=03e22439ddb67b04f0d55a3559917381
+                        Type: DynamicLink
+                        DataType: NodePath
+                        Value: "/Objects/OptimateDemoProject/Alarms/AlarmSeverity/Alarm"
+                    - Name: Value
+                      Id: g=bab61c23db346c203de4b78fc7237627
+                      Type: BaseDataVariableType
+                      DataType: ResourceUri
+                      Value: "ns=36;%PROJECTDIR%/Graphics/Coesia - Library/General/32x32/alarm-color.svg"
+            - Name: Width
+              Id: g=179868fb7ed54a6c51920137c8bed862
+              Type: BaseDataVariableType
+              DataType: Size
+              Value: -1.0
+            - Name: Height
+              Id: g=a96bb6ac57c11169bb225b77dac73f55
+              Type: BaseDataVariableType
+              DataType: Size
+              Value: -1.0
+        - Name: AlarmTime
+          Id: g=5f9e8ede2ecbf8fa900ca79d8fcf838c
+          Type: DataGridColumn
+          Children:
+          - Name: Title
+            Id: g=f573e84825509aac7f9a68f04c8d2a65
+            Type: BaseDataVariableType
+            DataType: LocalizedText
+            Value: {"LocaleId":"en-US","Text":"Date"}
+          - Name: Width
+            Id: g=57f07bbb4f2fab4aefd00dfd6fea9aec
+            Type: BaseDataVariableType
+            DataType: Size
+            Value: 200.0
+          - Name: Visible
+            Id: g=58306d584a2ad8ca3ba41c7aa3c9e6dc
+            Type: BaseDataVariableType
+            DataType: Boolean
+            Value: true
+          - Name: HeaderAlignment
+            Id: g=58abffe81b4ec8aedb49fadc837c66e7
+            Type: BaseDataVariableType
+            DataType: TextHorizontalAlignment
+          - Name: ContentAlignment
+            Id: g=9003ed600b9e58806a592033b1eb8195
+            Type: BaseVariableType
+            DataType: HorizontalAlignment
+          - Name: OrderBy
+            Id: g=e1126c2f6c284e19c7cfec335df337fe
+            Type: BaseDataVariableType
+            DataType: NodePath
+          - Name: DataItemTemplate
+            Id: g=d0c9886dfbfc45fe4fb430965636a5ce
+            Type: DataGridLabelItemTemplate
+            Children:
+            - Name: Text
+              Id: g=c5ba94750b1db090ee9b5b6d6a0eefc0
+              Type: BaseDataVariableType
+              DataType: LocalizedText
+              Children:
+              - Name: StringFormatter1
+                Id: g=c335778ae91131f9b86d036833906c62
+                Type: StringFormatter
+                Children:
+                - Name: Source0
+                  Id: g=7db1c393cc293d26ac12f929a49e361a
+                  Type: BaseDataVariableType
+                  DataType: BaseDataType
+                  ReferenceType: HasSource
+                  Children:
+                  - Name: ExpressionEvaluator1
+                    Id: g=eb54031c624e374f6f3bcb0ce9a1a8a4
+                    Type: ExpressionEvaluator
+                    Children:
+                    - Name: Source0
+                      Id: g=11712541fb6b97cc39e45c85c9378996
+                      Type: BaseDataVariableType
+                      DataType: BaseDataType
+                      ReferenceType: HasSource
+                      Children:
+                      - Name: DynamicLink
+                        Id: g=d2049b45bf8d1253182e090b2185802d
+                        Type: DynamicLink
+                        DataType: NodePath
+                        Value: "{Item}/LocalTime"
+                    - Name: Source1
+                      Id: g=683ae68958c8aba1c1b859a2d95184dd
+                      Type: BaseDataVariableType
+                      DataType: BaseDataType
+                      ReferenceType: HasSource
+                      Children:
+                      - Name: DynamicLink
+                        Id: g=9ca430624ba98720908af344787a9257
+                        Type: DynamicLink
+                        DataType: NodePath
+                        Value: "{Item}/Time"
+            - Name: TextColor
+              Id: g=fd310d56d8beb766e4c51df661b8984e
+              Type: BaseDataVariableType
+              DataType: Color
+              Value: "#000000"
+        - Name: AlarmMessage
+          Id: g=41d12376a2296b7bd98a780b61e16db5
+          Type: DataGridColumn
+          Children:
+          - Name: Title
+            Id: g=432afe0362f9dc4b949ccaea4e1f6b94
+            Type: BaseDataVariableType
+            DataType: LocalizedText
+            Value: {"NamespaceIndex":36,"TextId":"Message"}
+          - Name: Width
+            Id: g=c8e925646a36517cb2d5afe667de6a78
+            Type: BaseDataVariableType
+            DataType: Size
+            Value: -1.0
+          - Name: Visible
+            Id: g=089b8fb994362de3e304569806d881a2
+            Type: BaseDataVariableType
+            DataType: Boolean
+            Value: true
+          - Name: HeaderAlignment
+            Id: g=113e451aa2e014cbcf940cb75f322a03
+            Type: BaseDataVariableType
+            DataType: TextHorizontalAlignment
+          - Name: ContentAlignment
+            Id: g=340cfbdefd85018d3b0943316f27b315
+            Type: BaseVariableType
+            DataType: HorizontalAlignment
+          - Name: OrderBy
+            Id: g=c5d0d343edbbc18d237b37d06cacab3b
+            Type: BaseDataVariableType
+            DataType: NodePath
+          - Name: DataItemTemplate
+            Id: g=ba2b5820481f21950a43eb638b88c12c
+            Type: DataGridLabelItemTemplate
+            Children:
+            - Name: Text
+              Id: g=9cb4d0759dfebde44c49f09ef8df31b8
+              Type: BaseDataVariableType
+              DataType: LocalizedText
+              Children:
+              - Name: DynamicLink
+                Id: g=992c7f8adf4d6b533007a390f9a6284e
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "{Item}/Message"
+      - Name: SelectedItem
+        Id: g=65e4276a30415959f070ea38d8acc5b7
+        Type: NodePointer
+        DataType: NodeId
+        Children:
+        - Name: Kind
+          Id: g=2aba5d03e673d6dfc86699cf0a76e912
+          Type: PropertyType
+          DataType: NodeId
+          Value: "/Types/EventTypes/BaseEventType/ConditionType/AcknowledgeableConditionType/AlarmConditionType"
+      - Name: UISelectedItem
+        Id: g=c7ba2e9b60e0ff106792394c8872a55e
+        Type: BaseDataVariableType
+        DataType: NodeId
+        AccessLevel: Read
+      - Name: SortColumn
+        Id: g=057b7afbac85777b1cf4bd8db645e046
+        Type: BaseDataVariableType
+        DataType: NodeId
+        Children:
+        - Name: DynamicLink
+          Id: g=da2cce55f002e8f804c685e569bff046
+          Type: DynamicLink
+          DataType: NodePath
+          Value: "../Columns/AlarmTime@NodeId"
+      - Name: SortOrder
+        Id: g=c3ba4d561a7127ff6eb92e0cfda49aa0
+        Type: BaseDataVariableType
+        DataType: SortOrderEnum
+      - Class: Reference
+        Target: ns=11;i=504
+        Direction: Forward
+      - Name: Item
+        Id: g=f94d9a6c8d5a8c40ddcb8964a027064b
+        Type: Alias
+        DataType: NodeId
+        Children:
+        - Name: Kind
+          Id: g=33f0ac2b64b9e7ad3747730646ff58a1
+          Type: PropertyType
+          DataType: NodeId
+          Value: "/Types/EventTypes/BaseEventType/ConditionType/AcknowledgeableConditionType/AlarmConditionType"
+    - Name: history
+      Id: g=7a1d1f6b56ba427186c4f13763ee9337
+      Type: Button
+      Children:
+      - Name: MouseClickEventHandler1
+        Id: g=334172cb2bf1dec7a28ecd30599644f6
+        Type: EventHandler
+        Children:
+        - Name: ListenEventType
+          Id: g=fac7563b0a5f5d830e7513bf67129e53
+          Type: PropertyType
+          DataType: NodeId
+          Value: "/Types/EventTypes/BaseEventType/MouseEvent/MouseClickEvent"
+        - Name: MethodsToCall
+          Id: g=d8c5092642773c4361fc9dfcf9a3ac67
+          Type: BaseObjectType
+          Children:
+          - Name: MethodContainer1
+            Id: g=c24799e3cc79ed72d96b711aa7880e61
+            Type: BaseObjectType
+            Children:
+            - Name: ObjectPointer
+              Id: g=2caa062009e165809ca895febe4f3b71
+              Type: NodePointer
+              DataType: NodeId
+              Children:
+              - Name: Kind
+                Id: g=8c1aa53db91f62d1f5152d841adc383b
+                Type: PropertyType
+                DataType: NodeId
+                Value: "/Types/ObjectTypes/BaseObjectType"
+              - Name: DynamicLink
+                Id: g=0f522d5a198fabf8ec71ffa2cb83d941
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "{Window}/ScreenControl@NodeId"
+            - Name: Method
+              Id: g=ed2952c1526cdfe7406fb0f687cd2742
+              Type: BaseDataVariableType
+              DataType: String
+              Value: "LoadNewScreen"
+            - Name: InputArguments
+              Id: g=dec73247f02ccb8fe6002de62cfe34aa
+              Type: BaseObjectType
+              Children:
+              - Name: panelToLoadNodeId
+                Id: g=6903bdd6a80a54a45ec9f8231adaae33
+                Type: BaseDataVariableType
+                DataType: NodeId
+                Children:
+                - Name: DynamicLink
+                  Id: g=ce1ee64466385e8e7abe0b09e6ff0fae
+                  Type: DynamicLink
+                  DataType: NodePath
+                  Value: "{Window}/BurgerMenu/Menu/Alarm History/MouseClickEventHandler1/MethodsToCall/MethodContainer1/InputArguments/panelToLoadNodeId@NodeId"
+              - Name: menuBarToLoad
+                Id: g=54218e4ad2eeb4ba00597a42a007df78
+                Type: BaseDataVariableType
+                DataType: NodeId
+                Value: "/Objects/OptimateDemoProject/UI/Screens/Burger/BurgerMenuBar"
+              - Name: modeToChangeTo
+                Id: g=11e059aa7da13b67d68e84ed27c28152
+                Type: BaseDataVariableType
+                DataType: Int32
+          - Name: MethodContainer2
+            Id: g=82c54db124335f4cfc2945abda20b4c1
+            Type: BaseObjectType
+            Children:
+            - Name: ObjectPointer
+              Id: g=2f5ed2af9835d6485210d164016b9203
+              Type: NodePointer
+              DataType: NodeId
+              Value: "/Objects/Commands/VariableCommands"
+              Children:
+              - Name: Kind
+                Id: g=c772f5a6c158a8adf4f292dffe5b3901
+                Type: PropertyType
+                DataType: NodeId
+                Value: "/Types/ObjectTypes/BaseObjectType"
+            - Name: Method
+              Id: g=d1c5692995a903ae480a379566f45eed
+              Type: BaseDataVariableType
+              DataType: String
+              Value: "Set"
+            - Name: InputArguments
+              Id: g=12eefc8b07659e85374e128dc131ff72
+              Type: BaseObjectType
+              Children:
+              - Name: VariableToModify
+                Id: g=714eb0ddd07a192a11594c800cf3cb24
+                Type: BaseDataVariableType
+                DataType: VariablePointer
+                Children:
+                - Name: DynamicLink
+                  Id: g=197269dee5035607e75eb73e8ceca580
+                  Type: DynamicLink
+                  DataType: NodePath
+                  Value: "{Window}/Top_Bar/AlarmListVisible@NodeId"
+              - Name: Value
+                Id: g=cff751dd807dbf2fe9dcaaa016ef26f8
+                Type: BaseDataVariableType
+                DataType: Boolean
+              - Name: ArrayIndex
+                Id: g=5f444353e558e597fcefa34ed41f805c
+                Type: BaseDataVariableType
+                DataType: UInt32
+                ValueRank: ScalarOrOneDimension
+        - Name: EventArguments
+          Id: g=3ef63716af0f64ce21cc8a87c68cac16
+          Type: MouseClickEvent
+          Children:
+          - Name: EventId
+            Id: g=e33aa81244df77132b07282f5bcc2a81
+            Type: PropertyType
+            DataType: ByteString
+          - Name: EventType
+            Id: g=36fe4f59245281cded7a78a07912bda1
+            Type: PropertyType
+            DataType: NodeId
+          - Name: SourceNode
+            Id: g=275a25e414d84916b71cee58b4c683d7
+            Type: PropertyType
+            DataType: NodeId
+          - Name: SourceName
+            Id: g=7633953f80bcbb678abe17c5117e6792
+            Type: PropertyType
+            DataType: String
+          - Name: Time
+            Id: g=9a4ee8b9905d73555f1790b8ad0957fd
+            Type: PropertyType
+            DataType: UtcTime
+          - Name: ReceiveTime
+            Id: g=3537e964e3a1d37be9cc8d4c486e9111
+            Type: PropertyType
+            DataType: UtcTime
+          - Name: Message
+            Id: g=e143dc8499004872e09fff72ed10b835
+            Type: PropertyType
+            DataType: LocalizedText
+          - Name: Severity
+            Id: g=d20518a1a5e594abe107bd02e34ccaa8
+            Type: PropertyType
+            DataType: UInt16
+    - Name: close
+      Id: g=908c1b55f3eaa1dc620cbd36a9e57701
+      Type: Button
+      Children:
+      - Name: MouseClickEventHandler1
+        Id: g=27c5c04e1c35c2c7504d0270a752bc85
+        Type: EventHandler
+        Children:
+        - Name: ListenEventType
+          Id: g=fd9574c2298bcf8052f84b82b14eb4d6
+          Type: PropertyType
+          DataType: NodeId
+          Value: "/Types/EventTypes/BaseEventType/MouseEvent/MouseClickEvent"
+        - Name: MethodsToCall
+          Id: g=df7e4fa4f4edd0354b084d4544cab001
+          Type: BaseObjectType
+          Children:
+          - Name: MethodContainer1
+            Id: g=b1bda888e4413f552d07a54b61396605
+            Type: BaseObjectType
+            Children:
+            - Name: ObjectPointer
+              Id: g=d942157af8a44569afead6e29ef46d71
+              Type: NodePointer
+              DataType: NodeId
+              Value: "/Objects/Commands/VariableCommands"
+              Children:
+              - Name: Kind
+                Id: g=8bffe510dca5c0e67f9b295c9c74e1bc
+                Type: PropertyType
+                DataType: NodeId
+                Value: "/Types/ObjectTypes/BaseObjectType"
+            - Name: Method
+              Id: g=ef0a10d9259286ba091ddcd4467fdc9a
+              Type: BaseDataVariableType
+              DataType: String
+              Value: "Set"
+            - Name: InputArguments
+              Id: g=2b2f3f0b249978990113a97784a54749
+              Type: BaseObjectType
+              Children:
+              - Name: VariableToModify
+                Id: g=f5f439bb7d898356ea6358a26e7a66fe
+                Type: BaseDataVariableType
+                DataType: VariablePointer
+                Children:
+                - Name: DynamicLink
+                  Id: g=ed37d0dbc2c9c0d345c5dbc94e5a5ae0
+                  Type: DynamicLink
+                  DataType: NodePath
+                  Value: "{Window}/Top_Bar/AlarmListVisible@NodeId"
+              - Name: Value
+                Id: g=06e66483d3925c502351f202fc51b243
+                Type: BaseDataVariableType
+                DataType: Boolean
+              - Name: ArrayIndex
+                Id: g=063a299aa23afccdcc67b305aab8e866
+                Type: BaseDataVariableType
+                DataType: UInt32
+                ValueRank: ScalarOrOneDimension
+        - Name: EventArguments
+          Id: g=1271e28ad284a1ed32b14b60e2624b73
+          Type: MouseClickEvent
+          Children:
+          - Name: EventId
+            Id: g=ef1abe9583cec979cb8124bcb7ab2a38
+            Type: PropertyType
+            DataType: ByteString
+          - Name: EventType
+            Id: g=8445f659fb6344df33df0e2623f21c0a
+            Type: PropertyType
+            DataType: NodeId
+          - Name: SourceNode
+            Id: g=ed099b5c43256ced7ceededb8e9406a0
+            Type: PropertyType
+            DataType: NodeId
+          - Name: SourceName
+            Id: g=c4b1d28d0337e84b8a024ad15d70052c
+            Type: PropertyType
+            DataType: String
+          - Name: Time
+            Id: g=339d022cb08b9f58af3ee99d6a96be41
+            Type: PropertyType
+            DataType: UtcTime
+          - Name: ReceiveTime
+            Id: g=9826427aa4202dae9ef63e986000d940
+            Type: PropertyType
+            DataType: UtcTime
+          - Name: Message
+            Id: g=876c93be17bbf7411e33d2fdcf99af58
+            Type: PropertyType
+            DataType: LocalizedText
+          - Name: Severity
+            Id: g=bc8c947cca8f246c029d31a4e1507c0b
+            Type: PropertyType
+            DataType: UInt16
+    - Name: details
+      Id: g=ab80107b2a90023a62a63f8978f23ebf
+      Type: Button
+      Children:
+      - Name: MouseClickEventHandler1
+        Id: g=739e770eef0255d409d45b76bc19d6f7
+        Type: EventHandler
+        Children:
+        - Name: ListenEventType
+          Id: g=3c5c35bc71c545f93b0bcf3b234c132c
+          Type: PropertyType
+          DataType: NodeId
+          Value: "/Types/EventTypes/BaseEventType/MouseEvent/MouseClickEvent"
+        - Name: MethodsToCall
+          Id: g=4aee999a04de5f30a1885d9d9794e690
+          Type: BaseObjectType
+          Children:
+          - Name: MethodContainer1
+            Id: g=d08f30d8315d746d8c53a18a68d81011
+            Type: BaseObjectType
+            Children:
+            - Name: ObjectPointer
+              Id: g=7577a9ec93bfac9a44d5132b5d0e52f4
+              Type: NodePointer
+              DataType: NodeId
+              Value: "/Objects/Commands/UICommands"
+              Children:
+              - Name: Kind
+                Id: g=fa6698d98d2aefe89139bba698725768
+                Type: PropertyType
+                DataType: NodeId
+                Value: "/Types/ObjectTypes/BaseObjectType"
+            - Name: Method
+              Id: g=ec1c2288a83a6c76000df86d432ba3ff
+              Type: BaseDataVariableType
+              DataType: String
+              Value: "OpenDialog"
+            - Name: InputArguments
+              Id: g=19d59b65324c7d193ce1a903b9ae8001
+              Type: BaseObjectType
+              Children:
+              - Name: Dialog
+                Id: g=5c2f3b9fdbdeab9c6b22ce474d6eca19
+                Type: BaseDataVariableType
+                DataType: NodeId
+                Value: "/Objects/OptimateDemoProject/UI/Screens/Popups/AlarmPopup"
+              - Name: AliasNode
+                Id: g=817ccfc92c7d67237feab22da21e3d4a
+                Type: BaseDataVariableType
+                DataType: NodeId
+                ValueRank: ScalarOrOneDimension
+                Value: {"IdType":2,"Id":"4e071b4b39e6f2501c36c995f4ec1c60","Namespace":36}
+                Children:
+                - Name: DynamicLink
+                  Id: g=19927f41fe5c136da89732178e8ff9bb
+                  Type: DynamicLink
+                  DataType: NodePath
+                  Value: "../../../../../../AlarmList/SelectedItem"
+              - Name: ParentItem
+                Id: g=addcfa6286e45f144fc489fec52a1c29
+                Type: BaseDataVariableType
+                DataType: NodeId
+                Children:
+                - Name: DynamicLink
+                  Id: g=204beee79a93e5147db32421ff1cd5ec
+                  Type: DynamicLink
+                  DataType: NodePath
+                  Value: "../../../../..@NodeId"
+            - Name: OutputArguments
+              Id: g=51a02b477cb95dc137702f7530ae687b
+              Type: BaseObjectType
+              Children:
+              - Name: DialogNodeId
+                Id: g=db20d52ce5fc5470c79d7864548b4d55
+                Type: BaseDataVariableType
+                DataType: NodeId
+          - Name: MethodContainer2
+            Id: g=3474d9c9ab353a90c5a914adde6360ed
+            Type: BaseObjectType
+            Children:
+            - Name: ObjectPointer
+              Id: g=82b3f79bc6aa520e607ee0d06565cf79
+              Type: NodePointer
+              DataType: NodeId
+              Value: "/Objects/Commands/VariableCommands"
+              Children:
+              - Name: Kind
+                Id: g=796f86fef432b610f5890dbf672bd060
+                Type: PropertyType
+                DataType: NodeId
+                Value: "/Types/ObjectTypes/BaseObjectType"
+            - Name: Method
+              Id: g=9535eec454e08ff45185b5dd33ae10e0
+              Type: BaseDataVariableType
+              DataType: String
+              Value: "Set"
+            - Name: InputArguments
+              Id: g=fd3c225da3efce1b2d97927fddddfb18
+              Type: BaseObjectType
+              Children:
+              - Name: VariableToModify
+                Id: g=873d5dd820dd5e5e7d0971e5a5864757
+                Type: BaseDataVariableType
+                DataType: VariablePointer
+                Children:
+                - Name: DynamicLink
+                  Id: g=67b58cc829e11b9be357c68168f517d6
+                  Type: DynamicLink
+                  DataType: NodePath
+                  Value: "{Window}/Top_Bar/AlarmListVisible@NodeId"
+              - Name: Value
+                Id: g=5835e6e502ed3c4ec4b0f09d30b4b0a9
+                Type: BaseDataVariableType
+                DataType: Boolean
+              - Name: ArrayIndex
+                Id: g=aaefc64a7320e6936a2352ee179c8226
+                Type: BaseDataVariableType
+                DataType: UInt32
+                ValueRank: ScalarOrOneDimension
+        - Name: EventArguments
+          Id: g=f299652807ede85ac01d9272e1c36a11
+          Type: MouseClickEvent
+          Children:
+          - Name: EventId
+            Id: g=3f1585fe44b08e1bafcd5b4f3f4bf86d
+            Type: PropertyType
+            DataType: ByteString
+          - Name: EventType
+            Id: g=ed29494e569d4e74cb0efc209218ff82
+            Type: PropertyType
+            DataType: NodeId
+          - Name: SourceNode
+            Id: g=2b0948e43b88ed92bd631cefb349b375
+            Type: PropertyType
+            DataType: NodeId
+          - Name: SourceName
+            Id: g=92ec0b73c4948ab5b3020b4b643960b1
+            Type: PropertyType
+            DataType: String
+          - Name: Time
+            Id: g=d580c596f81f100768614a82671b85ad
+            Type: PropertyType
+            DataType: UtcTime
+          - Name: ReceiveTime
+            Id: g=f529d9c4585fd735a4d6bee6ba4bf317
+            Type: PropertyType
+            DataType: UtcTime
+          - Name: Message
+            Id: g=e692a7f55a73bb3796d3c47e8ac84c0d
+            Type: PropertyType
+            DataType: LocalizedText
+          - Name: Severity
+            Id: g=f71e5c27bed0bac90a40e992094e1e0d
+            Type: PropertyType
+            DataType: UInt16
+      - Name: Enabled
+        Id: g=f952c64f34374ca95daeed9f0c47d551
+        Type: BaseDataVariableType
+        DataType: Boolean
+        Value: true
+        Children:
+        - Name: ExpressionEvaluator1
+          Id: g=1bc70570ad2185a37d3b46bd1255e8b8
+          Type: ExpressionEvaluator
+          Children:
+          - Name: Source0
+            Id: g=d6f5107f4fcac37290bf18c9664b46e9
+            Type: BaseDataVariableType
+            DataType: BaseDataType
+            ReferenceType: HasSource
+            Children:
+            - Name: DynamicLink
+              Id: g=15fb47978eec21726131aa604f51ca0e
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "/Objects/OptimateDemoProject/RunTime NetLogic/CustomAlarming/AlarmCount"
+          - Name: Source1
+            Id: g=16f9509bbbf2413057c9507f143f8b5f
+            Type: BaseDataVariableType
+            DataType: BaseDataType
+            ReferenceType: HasSource
+            Children:
+            - Name: DynamicLink
+              Id: g=f3b26b2ef2085287a4297df8db62e6a2
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "{Window}/AlarmList/AlarmList/UISelectedItem@Pointer"
+    - Name: HorizontalAlignment
+      Id: g=cb0b69e020e9eb5a0602fb1fed63f7a0
+      Type: BaseVariableType
+      DataType: HorizontalAlignment
+      ModellingRule: Optional
+    - Name: Visible
+      Id: g=f71ba1be1f7218333656db35a5636320
+      Type: BaseDataVariableType
+      DataType: Boolean
+    - Name: TopMargin
+      Id: g=128ccbe37eda95971e380d4b61effe45
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 68.0
+    - Name: BottomMargin
+      Id: g=84fb4f803f246a450552892658805105
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 100.0
+    - Name: Width
+      Id: g=26062a948f0c2e11a311efc8fb22a2d6
+      Type: BaseVariableType
+      DataType: Size
+      Value: -1.0
+      Children:
+      - Name: ConditionalConverter1
+        Id: g=1c28864b3c630c06cc057d7462a7a2fd
+        Type: ConditionalConverter
+        Children:
+        - Name: Condition
+          Id: g=289f61c7aa4d4a6248c272335be5b18e
+          Type: BaseDataVariableType
+          DataType: Boolean
+          ReferenceType: HasSource
+          Children:
+          - Name: DynamicLink
+            Id: g=0c30bbe03786f96909ea758893d612ca
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "{Window}/ScreenControl/ScreenSizeIsNormal"
+        - Name: TrueValue
+          Id: g=8b8e5f09954971b11fab7ed5a6f82ba8
+          Type: BaseDataVariableType
+          DataType: Size
+          ReferenceType: HasParameter
+          ModellingRule: Optional
+          Value: 1200.0
+        - Name: FalseValue
+          Id: g=aeb3f8df5d442a73e7d77928dc5341df
+          Type: BaseDataVariableType
+          DataType: Size
+          ReferenceType: HasParameter
+          ModellingRule: Optional
+          Value: 800.0
+    - Name: VerticalAlignment
+      Id: g=f888f1d5d959841f2b1dd57721ac84e0
+      Type: BaseVariableType
+      DataType: VerticalAlignment
+      ModellingRule: Optional
+      Value: 3
   - Name: Top_Bar
     Id: g=ba77fd16a91cb325624d48bb0387f2be
     Type: Top_Bar
@@ -4728,11 +5631,43 @@ Children:
             Type: BaseDataVariableType
             DataType: LocalizedText
             Children:
-            - Name: DynamicLink
-              Id: g=e11a2deb4c5e565de3d798c1946876b1
-              Type: DynamicLink
-              DataType: NodePath
-              Value: "/Objects/OptimateDemoProject/RunTime NetLogic/CustomAlarming/CurrentDisplayedAlarm/Message"
+            - Name: ConditionalConverter1
+              Id: g=05d20fa8960baaf78bf3d452b75466a5
+              Type: ConditionalConverter
+              Children:
+              - Name: Condition
+                Id: g=f3829c350c550b218f11f9927fea3b44
+                Type: BaseDataVariableType
+                DataType: Boolean
+                ReferenceType: HasSource
+                Children:
+                - Name: DynamicLink
+                  Id: g=ac1c916332874175836354b85bed7025
+                  Type: DynamicLink
+                  DataType: NodePath
+                  Value: "/Objects/OptimateDemoProject/RunTime NetLogic/CustomAlarming/BannerRotation"
+              - Name: TrueValue
+                Id: g=70d8a3d6f93a9fc1f9c9f9cfd19ce5a3
+                Type: BaseDataVariableType
+                DataType: LocalizedText
+                ReferenceType: HasParameter
+                Children:
+                - Name: DynamicLink
+                  Id: g=951186a85105472ac7b06c77fc54c49a
+                  Type: DynamicLink
+                  DataType: NodePath
+                  Value: "/Objects/OptimateDemoProject/RunTime NetLogic/CustomAlarming/CurrentDisplayedAlarm/Message"
+              - Name: FalseValue
+                Id: g=94c27f91170b47ca2752151468d63216
+                Type: BaseDataVariableType
+                DataType: LocalizedText
+                ReferenceType: HasParameter
+                Children:
+                - Name: DynamicLink
+                  Id: g=33fddf2eba1b714dceedf5593525c0bc
+                  Type: DynamicLink
+                  DataType: NodePath
+                  Value: "/Objects/OptimateDemoProject/RunTime NetLogic/CustomAlarming/StopAlarm/Message"
           - Name: Visible
             Id: g=56ffc5ac0748b653a3d11a76858e6474
             Type: BaseDataVariableType
@@ -4759,21 +5694,255 @@ Children:
             Type: BaseDataVariableType
             DataType: ResourceUri
             Children:
-            - Name: KeyValueConverter1
-              Id: g=1471e2e3d98f4097d39a87720019f383
-              Type: ValueMapConverter
+            - Name: ConditionalConverter1
+              Id: g=c24b819043b13e0b2fe40834c7abdfa6
+              Type: ConditionalConverter
               Children:
-              - Name: Source
-                Id: g=c6966c2ca40bb33da248369da0f34d48
+              - Name: Condition
+                Id: g=1c7b9f5d00f650cd1aa4e602746bc7df
                 Type: BaseDataVariableType
-                DataType: BaseDataType
+                DataType: Boolean
                 ReferenceType: HasSource
                 Children:
                 - Name: DynamicLink
-                  Id: g=4d0a93403a60bc542a2e67ef613a929f
+                  Id: g=d52cad0e7bf2dc6e34a1a87776528ea4
                   Type: DynamicLink
                   DataType: NodePath
-                  Value: "/Objects/OptimateDemoProject/RunTime NetLogic/CustomAlarming/CurrentDisplayedAlarm/Severity"
+                  Value: "/Objects/OptimateDemoProject/RunTime NetLogic/CustomAlarming/BannerRotation"
+              - Name: TrueValue
+                Id: g=d317a4f6ed6e6ce5bbcf28fab8f40f51
+                Type: BaseDataVariableType
+                DataType: ResourceUri
+                ReferenceType: HasParameter
+                Children:
+                - Name: AlarmSeverityLevels1
+                  Id: g=0265e9d8d19f71c6121b9bfbde48d660
+                  Type: AlarmSeverityIcons
+                  Children:
+                  - Name: Source
+                    Id: g=cc089e0b6860d29465620dc2ce588eaf
+                    Type: BaseDataVariableType
+                    DataType: BaseDataType
+                    ReferenceType: HasSource
+                    Children:
+                    - Name: DynamicLink
+                      Id: g=cb81d303a885a9f94319fb5bcac3b4b4
+                      Type: DynamicLink
+                      DataType: NodePath
+                      Value: "/Objects/OptimateDemoProject/RunTime NetLogic/CustomAlarming/CurrentDisplayedAlarm/Severity"
+                  - Name: Pairs
+                    Id: g=e748621b72a0f9061677ca8ee793e385
+                    Type: BaseObjectType
+                    Children:
+                    - Name: Pair
+                      Id: g=aee4e042fa07c81f4e22e9b12a2f759d
+                      Type: ValueMapPair
+                      Children:
+                      - Name: Key
+                        Id: g=dd7b1f4071a15df7102dd7cc7166953e
+                        Type: BaseDataVariableType
+                        DataType: UInt32
+                      - Name: Value
+                        Id: g=ee833e2ce8f1ca556f32d1fee62eea50
+                        Type: BaseDataVariableType
+                        DataType: ResourceUri
+                    - Name: Pair1
+                      Id: g=46ffa63d960a47d83cb756ff165c6462
+                      Type: ValueMapPair
+                      Children:
+                      - Name: Key
+                        Id: g=815ae3aef2ff83b783ff3be68e704db8
+                        Type: BaseDataVariableType
+                        DataType: UInt32
+                        Value: 1
+                        Children:
+                        - Name: DynamicLink
+                          Id: g=407941dedfd5a3c5abccf27e40f0c514
+                          Type: DynamicLink
+                          DataType: NodePath
+                          Value: "/Objects/OptimateDemoProject/Alarms/AlarmSeverity/Message"
+                      - Name: Value
+                        Id: g=9fe9e2a406b73f1d9fe2d6263ede6e47
+                        Type: BaseDataVariableType
+                        DataType: ResourceUri
+                        Value: "ns=36;%PROJECTDIR%/Graphics/Coesia - Library/General/32x32/info-color.svg"
+                    - Name: Pair2
+                      Id: g=267d05aad069eec28a60b69716f7ea1a
+                      Type: ValueMapPair
+                      Children:
+                      - Name: Key
+                        Id: g=0cd129afc9b7f48a1d9d1c37675b6427
+                        Type: BaseDataVariableType
+                        DataType: UInt32
+                        Value: 10
+                        Children:
+                        - Name: DynamicLink
+                          Id: g=30ccd82aab762f0fb3ed4f7140eada94
+                          Type: DynamicLink
+                          DataType: NodePath
+                          Value: "/Objects/OptimateDemoProject/Alarms/AlarmSeverity/Status"
+                      - Name: Value
+                        Id: g=be80c0d0efdba776c33aa5b9069cc1ad
+                        Type: BaseDataVariableType
+                        DataType: ResourceUri
+                        Value: "ns=36;%PROJECTDIR%/Graphics/Coesia - Library/General/32x32/warning-color.svg"
+                    - Name: Pair3
+                      Id: g=365ac1a631883e0b5647cf4fbc532b18
+                      Type: ValueMapPair
+                      Children:
+                      - Name: Key
+                        Id: g=6af6c1bb4246a5ec21ecdc6434ab2b71
+                        Type: BaseDataVariableType
+                        DataType: UInt32
+                        Value: 100
+                        Children:
+                        - Name: DynamicLink
+                          Id: g=e0e8a1d33cdeeb887cb0c2da9cecc338
+                          Type: DynamicLink
+                          DataType: NodePath
+                          Value: "/Objects/OptimateDemoProject/Alarms/AlarmSeverity/Warning"
+                      - Name: Value
+                        Id: g=81a95d029d82bcf20c80d3690325a7eb
+                        Type: BaseDataVariableType
+                        DataType: ResourceUri
+                        Value: "ns=36;%PROJECTDIR%/Graphics/Coesia - Library/General/32x32/warning-color.svg"
+                    - Name: Pair4
+                      Id: g=30c4f3affa2566b4bd80487cc82d665a
+                      Type: ValueMapPair
+                      Children:
+                      - Name: Key
+                        Id: g=5e7099f3f0e0a9dd956baa4320b99471
+                        Type: BaseDataVariableType
+                        DataType: UInt32
+                        Value: 1000
+                        Children:
+                        - Name: DynamicLink
+                          Id: g=8118942a4baab21d0b9a0419b4a338a0
+                          Type: DynamicLink
+                          DataType: NodePath
+                          Value: "/Objects/OptimateDemoProject/Alarms/AlarmSeverity/Alarm"
+                      - Name: Value
+                        Id: g=5914f053589ae14f029e747c85d9d565
+                        Type: BaseDataVariableType
+                        DataType: ResourceUri
+                        Value: "ns=36;%PROJECTDIR%/Graphics/Coesia - Library/General/32x32/alarm-color.svg"
+              - Name: FalseValue
+                Id: g=1deb1d99a0ff62206041b7d4384605c2
+                Type: BaseDataVariableType
+                DataType: ResourceUri
+                ReferenceType: HasParameter
+                Children:
+                - Name: AlarmSeverityLevels1
+                  Id: g=76b715faba6817bb7f57e47f85f2412b
+                  Type: AlarmSeverityIcons
+                  Children:
+                  - Name: Source
+                    Id: g=5e6f5b959bc95fb9cb8ee4e76dbe14eb
+                    Type: BaseDataVariableType
+                    DataType: BaseDataType
+                    ReferenceType: HasSource
+                    Children:
+                    - Name: DynamicLink
+                      Id: g=0406aa59f9b1756e2abe8e9fab4a4a49
+                      Type: DynamicLink
+                      DataType: NodePath
+                      Value: "/Objects/OptimateDemoProject/RunTime NetLogic/CustomAlarming/StopAlarm/Severity"
+                  - Name: Pairs
+                    Id: g=776832bde96cd5bc124c9e3760e8238b
+                    Type: BaseObjectType
+                    Children:
+                    - Name: Pair
+                      Id: g=6a6acad8b7c59d0e7850bf0ac4e5f9ca
+                      Type: ValueMapPair
+                      Children:
+                      - Name: Key
+                        Id: g=ce38ef2067bc60fca41f7b5a1c60acc4
+                        Type: BaseDataVariableType
+                        DataType: UInt32
+                      - Name: Value
+                        Id: g=8afd17645bf6bc459036412d3429106a
+                        Type: BaseDataVariableType
+                        DataType: ResourceUri
+                    - Name: Pair1
+                      Id: g=e1c60d7677aba8b71022f0fe9929c761
+                      Type: ValueMapPair
+                      Children:
+                      - Name: Key
+                        Id: g=66a85f7083593c1037860102dbb2df3c
+                        Type: BaseDataVariableType
+                        DataType: UInt32
+                        Value: 1
+                        Children:
+                        - Name: DynamicLink
+                          Id: g=c365374cc0d72e98d0ecde8276e5c232
+                          Type: DynamicLink
+                          DataType: NodePath
+                          Value: "/Objects/OptimateDemoProject/Alarms/AlarmSeverity/Message"
+                      - Name: Value
+                        Id: g=c2486acf7be81cee3e664f7d5bf1bbfe
+                        Type: BaseDataVariableType
+                        DataType: ResourceUri
+                        Value: "ns=36;%PROJECTDIR%/Graphics/Coesia - Library/General/32x32/info-color.svg"
+                    - Name: Pair2
+                      Id: g=cc3a40c694fb49673c7e94aafcf37d37
+                      Type: ValueMapPair
+                      Children:
+                      - Name: Key
+                        Id: g=a842a340d6062e9bab18617233bebdc6
+                        Type: BaseDataVariableType
+                        DataType: UInt32
+                        Value: 10
+                        Children:
+                        - Name: DynamicLink
+                          Id: g=ec8941c25ade4406effc03d5bba9e52e
+                          Type: DynamicLink
+                          DataType: NodePath
+                          Value: "/Objects/OptimateDemoProject/Alarms/AlarmSeverity/Status"
+                      - Name: Value
+                        Id: g=0f6ea2cbb3dc4679258a989217c4b308
+                        Type: BaseDataVariableType
+                        DataType: ResourceUri
+                        Value: "ns=36;%PROJECTDIR%/Graphics/Coesia - Library/General/32x32/warning-color.svg"
+                    - Name: Pair3
+                      Id: g=4a6e6bc49464bb625b98956cfc8c25a0
+                      Type: ValueMapPair
+                      Children:
+                      - Name: Key
+                        Id: g=2c3e899b043533846ed27d38472b2a93
+                        Type: BaseDataVariableType
+                        DataType: UInt32
+                        Value: 100
+                        Children:
+                        - Name: DynamicLink
+                          Id: g=125320faaa7bea77420a0e106a27ec33
+                          Type: DynamicLink
+                          DataType: NodePath
+                          Value: "/Objects/OptimateDemoProject/Alarms/AlarmSeverity/Warning"
+                      - Name: Value
+                        Id: g=3011db65153ffa228d3b86aa0208edc9
+                        Type: BaseDataVariableType
+                        DataType: ResourceUri
+                        Value: "ns=36;%PROJECTDIR%/Graphics/Coesia - Library/General/32x32/warning-color.svg"
+                    - Name: Pair4
+                      Id: g=69ba9da14b882785c41ef594473609c7
+                      Type: ValueMapPair
+                      Children:
+                      - Name: Key
+                        Id: g=38f2b1c02682753d9c9ec598521c21f0
+                        Type: BaseDataVariableType
+                        DataType: UInt32
+                        Value: 1000
+                        Children:
+                        - Name: DynamicLink
+                          Id: g=f7b474b7bedff631c51ffcd875082e39
+                          Type: DynamicLink
+                          DataType: NodePath
+                          Value: "/Objects/OptimateDemoProject/Alarms/AlarmSeverity/Alarm"
+                      - Name: Value
+                        Id: g=e40f69ab8d05cba959055de95ce7291f
+                        Type: BaseDataVariableType
+                        DataType: ResourceUri
+                        Value: "ns=36;%PROJECTDIR%/Graphics/Coesia - Library/General/32x32/alarm-color.svg"
           - Name: TextColor
             Id: g=f08f8307dad8befe02bfcbddd01e2376
             Type: BaseDataVariableType
@@ -4810,105 +5979,91 @@ Children:
           Type: Button
           Children:
           - Name: MouseClickEventHandler1
-            Id: g=52ff47687781a97841b1513b82e9d1ce
+            Id: g=8a5303f906ed1ddf416b370d07853c40
             Type: EventHandler
             Children:
             - Name: ListenEventType
-              Id: g=6c0323b64648e6c6cfecc494e3029499
+              Id: g=05c31f181ba47f38c78524bd394bf8ea
               Type: PropertyType
               DataType: NodeId
               Value: "/Types/EventTypes/BaseEventType/MouseEvent/MouseClickEvent"
             - Name: MethodsToCall
-              Id: g=d9e5138a069d588ef6b55912ee4b53a7
+              Id: g=100175302436572dfadd4ff42daf268d
               Type: BaseObjectType
               Children:
               - Name: MethodContainer1
-                Id: g=ad2343bcac1c4872898c189f27cf689a
+                Id: g=586a364978fb9fb068d484c6ffbde15d
                 Type: BaseObjectType
                 Children:
                 - Name: ObjectPointer
-                  Id: g=871fdbd844fb36a2d8914d53ac5d4023
+                  Id: g=0f5620d15b8b866f3ec1071991d38b7e
                   Type: NodePointer
                   DataType: NodeId
-                  Value: "/Objects/Commands/UICommands"
+                  Value: "/Objects/Commands/VariableCommands"
                   Children:
                   - Name: Kind
-                    Id: g=a10e45fc8510fd1d4bf6f6c89b095d68
+                    Id: g=aee61ed496fc82784081b11487200236
                     Type: PropertyType
                     DataType: NodeId
                     Value: "/Types/ObjectTypes/BaseObjectType"
                 - Name: Method
-                  Id: g=fb48cb30eb9fdbbd5acda6ef47024f45
+                  Id: g=950a124586bdd4dc77f11c1f15f29ab0
                   Type: BaseDataVariableType
                   DataType: String
-                  Value: "OpenDialog"
+                  Value: "Toggle"
                 - Name: InputArguments
-                  Id: g=06751b06a4490a26c1a6172281538a27
+                  Id: g=9b7ade16c84c363a972e053715490be9
                   Type: BaseObjectType
                   Children:
-                  - Name: Dialog
-                    Id: g=b7219ab235ff1d027078fd7d9583f630
+                  - Name: VariableToModify
+                    Id: g=24ae613c392960170a08d2a64fd8ac13
                     Type: BaseDataVariableType
-                    DataType: NodeId
-                    Value: "/Objects/OptimateDemoProject/UI/Screens/Popups/AlarmPopup"
-                  - Name: AliasNode
-                    Id: g=e5c4c51e977d9f6d9b2bbadf5a8c767f
-                    Type: BaseDataVariableType
-                    DataType: NodeId
-                    ValueRank: ScalarOrOneDimension
-                    Value: "/Objects/OptimateDemoProject/Alarms/Testing/TestAlarm1"
-                  - Name: ParentItem
-                    Id: g=efc9c57aea79bbdad54c14dc81f286b6
-                    Type: BaseDataVariableType
-                    DataType: NodeId
+                    DataType: VariablePointer
                     Children:
                     - Name: DynamicLink
-                      Id: g=e8552cc3c9fa8dd37972a81cf9193d5d
+                      Id: g=0c8b5dd1cf734e83ba0bcdbbde0b9a15
                       Type: DynamicLink
                       DataType: NodePath
-                      Value: "../../../../..@NodeId"
-                - Name: OutputArguments
-                  Id: g=bc921ba96267b9ad5f907ea69c1f02a0
-                  Type: BaseObjectType
-                  Children:
-                  - Name: DialogNodeId
-                    Id: g=4cec25efd8495f8899c19fc8221b38f7
+                      Value: "../../../../../../../../AlarmListVisible@NodeId"
+                  - Name: ArrayIndex
+                    Id: g=db948b430619d64e7d8e48c0b1f4dac8
                     Type: BaseDataVariableType
-                    DataType: NodeId
+                    DataType: UInt32
+                    ValueRank: ScalarOrOneDimension
             - Name: EventArguments
-              Id: g=78268f795780b8c6ca8313d8257a028b
+              Id: g=09bccc6b31080b3f65c82433c13bad56
               Type: MouseClickEvent
               Children:
               - Name: EventId
-                Id: g=db26821c5bab722a258e85ab47290fb8
+                Id: g=29ea24d373ee55c32a74989ee0db7ffa
                 Type: PropertyType
                 DataType: ByteString
               - Name: EventType
-                Id: g=2cec569d4945a87c5fba18d2c770e80f
+                Id: g=28cdd791394b43ea31800958790abeba
                 Type: PropertyType
                 DataType: NodeId
               - Name: SourceNode
-                Id: g=688cf1168d184f14188bf86f5f8e7871
+                Id: g=1072767309dbc74799d75beee53e99b3
                 Type: PropertyType
                 DataType: NodeId
               - Name: SourceName
-                Id: g=cb53ce0cf31d77bbfad6923af1202afd
+                Id: g=3c079b352c823b520b46363089883140
                 Type: PropertyType
                 DataType: String
               - Name: Time
-                Id: g=a87ef46fc767b676274ca35a2d35afce
+                Id: g=5ba31df2f15d08c7b54eb61cc61a01a8
                 Type: PropertyType
                 DataType: UtcTime
               - Name: ReceiveTime
-                Id: g=e5807eff734c51377fc877e51cc26336
+                Id: g=4835d7a813846c6a7b1550f97afd6693
                 Type: PropertyType
                 DataType: UtcTime
               - Name: Message
-                Id: g=b77d67111c2d1995335d727c2ca807f7
+                Id: g=a6b240116689f759c8b0d1b9f480a6df
                 Type: PropertyType
                 DataType: LocalizedText
               - Name: Severity
-                Id: g=deb48c9da664dc5d4d2357de8fbdd7d6
+                Id: g=39373af864c18f574c62acd03417b8dd
                 Type: PropertyType
                 DataType: UInt16
       - Name: Separator2
@@ -5666,6 +6821,23 @@ Children:
         Type: DynamicLink
         DataType: NodePath
         Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Dark Grey 5 - 333333"
+    - Name: AlarmListVisible
+      Id: g=8b9ba3a43311c4a9edefbf0cf8a84cab
+      Type: BaseDataVariableType
+      DataType: Boolean
+      Children:
+      - Name: DynamicLink
+        Id: g=00ec0cc80868a3b1b77b876fe2d6db4f
+        Type: DynamicLink
+        DataType: NodePath
+        Value: "{Window}/AlarmList/Visible"
+        Children:
+        - Name: Mode
+          Id: g=3fcf9488b4d4e0a59b2047a5af65f0f8
+          Type: BaseVariableType
+          DataType: DynamicLinkMode
+          ModellingRule: Optional
+          Value: 2
   - Name: Debug_Menu
     Id: g=3b71297c20a9af6a0704417515dcac19
     Type: PanelLoader

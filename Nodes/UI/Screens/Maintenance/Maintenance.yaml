@@ -107,6 +107,17 @@ Children:
                 Id: g=7a55e30a16072f36e6b1a449b97b73b9
                 Type: PropertyType
                 DataType: UInt16
+          - Name: Enabled
+            Id: g=b2b337fa453ad606afac7a62633c3520
+            Type: BaseDataVariableType
+            DataType: Boolean
+            Value: true
+            Children:
+            - Name: DynamicLink
+              Id: g=78dbdc1a7903e55376208f90730288ad
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "{Window}/Standard_Content_Container/VerticalLayout/Main_Content_Container/HorizontalLayout/Standard_Content/BackProvider/CanGoBack"
         - Name: Next
           Id: g=f7f53e8c5b4fab15628f7776aa0b7ffa
           Type: Button
@@ -184,6 +195,17 @@ Children:
                 Id: g=008ff4688e766b1bea5dfe30cd31ebb4
                 Type: PropertyType
                 DataType: UInt16
+          - Name: Enabled
+            Id: g=fee8b03d609e6314aa0eca7b4cf7b714
+            Type: BaseDataVariableType
+            DataType: Boolean
+            Value: true
+            Children:
+            - Name: DynamicLink
+              Id: g=130bea2ed747af80af6d2633f833c3dd
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "{Window}/Standard_Content_Container/VerticalLayout/Main_Content_Container/HorizontalLayout/Standard_Content/BackProvider/CanGoNext"
         - Name: 'Separator - Dark'
           Id: g=d8962b36cc70f56209dd00cf66113785
           Type: Rectangle
@@ -4338,7 +4360,7 @@ Children:
                     Id: g=deabfb022bc91de2efcd495f0de75c89
                     Type: StringFormatter
                     Children:
-                    - Name: ns=9;Source0
+                    - Name: Source0
                       Id: g=a86968c1a90bf21451de4ee2bce0271a
                       Type: BaseDataVariableType
                       DataType: BaseDataType
@@ -5725,7 +5747,7 @@ Children:
                     Id: g=10ebd3a790304c1b29ff712e78751eba
                     Type: StringFormatter
                     Children:
-                    - Name: ns=9;Source0
+                    - Name: Source0
                       Id: g=ffee319ed860a1b0aa762bc160687037
                       Type: BaseDataVariableType
                       DataType: BaseDataType
@@ -7114,7 +7136,7 @@ Children:
                     Id: g=12ca49a17b44276cccf505744c42a33e
                     Type: StringFormatter
                     Children:
-                    - Name: ns=9;Source0
+                    - Name: Source0
                       Id: g=accb970a8099f6de7ecf6daefcfca922
                       Type: BaseDataVariableType
                       DataType: BaseDataType
@@ -8503,7 +8525,7 @@ Children:
                     Id: g=86bfab26d0d1a57f36a653ed931f21ca
                     Type: StringFormatter
                     Children:
-                    - Name: ns=9;Source0
+                    - Name: Source0
                       Id: g=781272de8ee84b2f542555e8209dc413
                       Type: BaseDataVariableType
                       DataType: BaseDataType
@@ -9892,7 +9914,7 @@ Children:
                     Id: g=c224e6fd94cc431087bc94e03dff9b83
                     Type: StringFormatter
                     Children:
-                    - Name: ns=9;Source0
+                    - Name: Source0
                       Id: g=99b196826790751cb43083d0d65f2c0c
                       Type: BaseDataVariableType
                       DataType: BaseDataType
@@ -12644,7 +12666,7 @@ Children:
                       Id: g=dccdfa3db58a9694d27cc34bd94baf93
                       Type: StringFormatter
                       Children:
-                      - Name: ns=9;Source0
+                      - Name: Source0
                         Id: g=401219a4ea76556232c5ca19a7208a66
                         Type: BaseDataVariableType
                         DataType: BaseDataType
@@ -14413,7 +14435,7 @@ Children:
                       Id: g=a04c7a93b0e28808e31a3d2bb2e6414d
                       Type: StringFormatter
                       Children:
-                      - Name: ns=9;Source0
+                      - Name: Source0
                         Id: g=af79b0ec03564408e677f20ff0c616bb
                         Type: BaseDataVariableType
                         DataType: BaseDataType
@@ -16164,7 +16186,7 @@ Children:
                       Id: g=dc1a05f4436b3811498f7246d45c8477
                       Type: StringFormatter
                       Children:
-                      - Name: ns=9;Source0
+                      - Name: Source0
                         Id: g=c4f759112590e8fa323f5407639c83cb
                         Type: BaseDataVariableType
                         DataType: BaseDataType
@@ -17470,7 +17492,7 @@ Children:
                       Id: g=4ca836b9f99a1726a5c4d6303d1edbb6
                       Type: StringFormatter
                       Children:
-                      - Name: ns=9;Source0
+                      - Name: Source0
                         Id: g=2d5bc34cb3c8c0abe85ad4c9a933fb90
                         Type: BaseDataVariableType
                         DataType: BaseDataType

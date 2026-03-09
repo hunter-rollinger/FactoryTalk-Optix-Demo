@@ -36,14 +36,21 @@ using System.Diagnostics;
 
 public class CustomAlarming : BaseNetLogic
 {
-    public override void Start()
-    {
-        var context = LogicObject.Context;
+	#region startup / stop
+	public override void Start() {
+        Debugger.Launch();
+		burgerMenuScreen = (BurgerMenu)InformationModel.Get((NodeId)LogicObject.GetVariable("BurgerMenuScreen").Value);
+		debugMenu = (PanelLoader)InformationModel.Get((NodeId)LogicObject.GetVariable("DebugMenu").Value);
+		standardQuickInfo = (PanelLoader)InformationModel.Get((NodeId)LogicObject.GetVariable("StandardQuickInfo").Value);
+		emptyPanel = (NodeId)LogicObject.GetVariable("EmptyScreen").Value;
+
+		var context = LogicObject.Context;
         affinityId = context.AssignAffinityId();
 
         RegisterObserverOnLocalizedAlarmsContainer(context);
         RegisterObserverOnSessionActualLanguageChange(context);
         RegisterObserverOnLocalizedAlarmsObject(context);
+        startup = true;
     }
     public override void Stop()
     {
@@ -60,12 +67,12 @@ public class CustomAlarming : BaseNetLogic
     }
     public void RegisterObserverOnLocalizedAlarmsObject(IContext context)
     {
-        var retainedAlarms = context.GetNode(FTOptix.Alarm.Objects.RetainedAlarms);
+        var localRetainedAlarms = context.GetNode(FTOptix.Alarm.Objects.RetainedAlarms);
 
         retainedAlarmsObjectObserver = new RetainedAlarmsObjectObserver((ctx) => RegisterObserverOnLocalizedAlarmsContainer(ctx));
 
         // observe ReferenceAdded of localized alarm containers
-        alarmEventRegistration2 = retainedAlarms.RegisterEventObserver(
+        alarmEventRegistration2 = localRetainedAlarms.RegisterEventObserver(
             retainedAlarmsObjectObserver, EventType.ForwardReferenceAdded, affinityId);
     }
     public void RegisterObserverOnLocalizedAlarmsContainer(IContext context)
@@ -85,7 +92,7 @@ public class CustomAlarming : BaseNetLogic
 
         if (alarmHandler != null)
             alarmHandler.Dispose();
-        alarmHandler = new AlarmHandler(LogicObject, localizedAlarmsContainer);
+        alarmHandler = new AlarmHandler(this, LogicObject, localizedAlarmsContainer);
 
         if (localizedAlarmsContainer?.Children.Count > 0)
             alarmHandler.Initialize();
@@ -109,7 +116,8 @@ public class CustomAlarming : BaseNetLogic
 		sessionActualLanguageRegistration = currentSessionActualLanguage.RegisterEventObserver(
             sessionActualLanguageChangeObserver, EventType.VariableValueChanged, affinityId);
     }
-    private class RetainedAlarmsObjectObserver : IReferenceObserver
+	#endregion startup / stop
+	private class RetainedAlarmsObjectObserver : IReferenceObserver
     {
         public RetainedAlarmsObjectObserver(Action<IContext> action)
         {
@@ -131,9 +139,12 @@ public class CustomAlarming : BaseNetLogic
     }
     public class AlarmHandler : IDisposable, IReferenceObserver
     {
-        public AlarmHandler(IUANode logicNode, IUANode localizedAlarmsContainer)
+		#region initialize
+		private readonly CustomAlarming parent;
+        public AlarmHandler(CustomAlarming parent, IUANode logicNode, IUANode localizedAlarmsContainer)
         {
-            this.retaiendAlarms = new List<NodeId>();
+            this.parent = parent;
+            this.retainedAlarms = new List<NodeId>();
             this.retainedAlarmsLock = new Object();
             this.logicNode = logicNode;
             InitializeRetainedAlarmList(localizedAlarmsContainer);
@@ -145,13 +156,18 @@ public class CustomAlarming : BaseNetLogic
             rotationTime.VariableChange += RotationTime_VariableChange;
             bannerRotation = logicNode.GetVariable("BannerRotation");
             bannerRotation.VariableChange += BannerRotationToggle;
+			alarmsDB = InformationModel.Get<SQLiteStore>(logicNode.GetVariable("AlarmsDatabase").Value);
+			sourceTableName = InformationModel.Get(logicNode.GetVariable("DBSourceTable").Value).BrowseName;
+			targetTableName = InformationModel.Get(logicNode.GetVariable("DBTargetTable").Value).BrowseName;
+			nodeIdColumn = InformationModel.Get(logicNode.GetVariable("AlarmNodeIdColumn").Value).BrowseName;
 
-            retainedAlarmsCount.Value = retaiendAlarms.Count;
+			retainedAlarmsCount.Value = retainedAlarms.Count;
 
             rotationTask = new PeriodicTask(() => { lock (retainedAlarmsLock) { DisplayNextAlarm(); } }, rotationTime.Value, logicNode);
         }
         public void Initialize()
         {
+            //Debugger.Launch();
             currentIndex = 0;
             UpdateCurrentDisplayedAlarm();
             if (RotationRunning)
@@ -163,6 +179,7 @@ public class CustomAlarming : BaseNetLogic
             stopAlarm = logicNode.GetVariable("StopAlarm");
             latestAlarm = logicNode.GetVariable("LatestAlarm");
             bannerRotation = logicNode.GetVariable("BannerRotation");
+            alarmSeverityLevel = logicNode.GetVariable("AlarmSeverityLevel").Value;
 
             IContext context = logicNode.Context;
             var retainedAlarms = context.GetNode(FTOptix.Alarm.Objects.RetainedAlarms);
@@ -183,13 +200,19 @@ public class CustomAlarming : BaseNetLogic
             stopAlarm.Value = localizedAlarmsContainer.Children.First()?.NodeId ?? NodeId.Empty;
             latestAlarm.Value = localizedAlarmsContainer.Children.Last()?.NodeId ?? NodeId.Empty;
             retainedAlarmsCount.Value = localizedAlarmsContainer.Children.Count;
-        }
-        public void OnReferenceAdded(IUANode sourceNode, IUANode targetNode, NodeId referenceTypeId, ulong senderId)
+		}
+		private void InitializeRetainedAlarmList(IUANode localizedAlarmsContainer) {
+			foreach (var localizedAlarm in localizedAlarmsContainer.Children)
+				retainedAlarms.Add(localizedAlarm.NodeId);
+		}
+		#endregion
+		#region alarm added / removed
+		public void OnReferenceAdded(IUANode sourceNode, IUANode targetNode, NodeId referenceTypeId, ulong senderId)
         {
             lock (retainedAlarmsLock)
             {
-                retaiendAlarms.Add(targetNode.NodeId);
-                retainedAlarmsCount.Value = retaiendAlarms.Count;
+                retainedAlarms.Add(targetNode.NodeId);
+                retainedAlarmsCount.Value = retainedAlarms.Count;
 
                 if (!RotationRunning)
                     Initialize();
@@ -204,15 +227,23 @@ public class CustomAlarming : BaseNetLogic
                 latestAlarm.Value = targetNode.NodeId;
 
                 UpdateCurrentDisplayedAlarm();
-            }
+
+				object[,] result;
+				string[] header;
+                try {
+                    alarmsDB.Query($"UPDATE {sourceTableName} SET {nodeIdColumn}='{targetNode.NodeId}' WHERE rowid = (SELECT rowid FROM {sourceTableName} ORDER BY Time DESC LIMIT 1)", out header, out result);
+                } catch { Log.Error("CustomAlarming", "Error when setting NodeId for the latest alarm. Start checking at end of OnReferenceAdded method in NetLogic."); }
+			}
         }
         public void OnReferenceRemoved(IUANode sourceNode, IUANode targetNode, NodeId referenceTypeId, ulong senderId)
         {
-            lock (retainedAlarmsLock)
-            {
-                var alarmIndex = retaiendAlarms.IndexOf(targetNode.NodeId);
-                if (alarmIndex == -1)
-                {
+            lock (retainedAlarmsLock) {
+				object[,] result;
+				string[] header;
+				alarmsDB.Query($"SELECT 1 FROM {sourceTableName} WHERE {nodeIdColumn}='{targetNode.NodeId}'", out header, out result);
+
+				var alarmIndex = retainedAlarms.IndexOf(targetNode.NodeId);
+                if (alarmIndex == -1) {
                     Log.Error($"The alarm {targetNode.NodeId} was not fond in the alarm banner list");
                     return;
                 }
@@ -220,12 +251,12 @@ public class CustomAlarming : BaseNetLogic
                 if (alarmIndex < currentIndex)
                     currentIndex--;
 
-                retaiendAlarms.RemoveAt(alarmIndex);
+                retainedAlarms.RemoveAt(alarmIndex);
 
-                if (currentIndex == retaiendAlarms.Count)
+                if (currentIndex == retainedAlarms.Count)
                     currentIndex = 0;
 
-                retainedAlarmsCount.Value = retaiendAlarms.Count;
+                retainedAlarmsCount.Value = retainedAlarms.Count;
 
                 if (retainedAlarmsCount.Value == 0)
                 {
@@ -240,11 +271,14 @@ public class CustomAlarming : BaseNetLogic
                     {
                         StartRotation();
                     }
-                }
+				}
+;
+				if (GetActiveAlarmIDs().Count == 0)
+					popupTriggered = false;
 
-                IContext context = logicNode.Context;
-                var retainedAlarms = context.GetNode(FTOptix.Alarm.Objects.RetainedAlarms);
-                var localizedAlarmsVariable = retainedAlarms.GetVariable("LocalizedAlarms");
+				IContext context = logicNode.Context;
+                var localRetainedAlarms = context.GetNode(FTOptix.Alarm.Objects.RetainedAlarms);
+                var localizedAlarmsVariable = localRetainedAlarms.GetVariable("LocalizedAlarms");
                 var localizedAlarmsNodeId = (NodeId)localizedAlarmsVariable.Value;
                 IUANode localizedAlarmsContainer = null;
                 if (localizedAlarmsNodeId != null && !localizedAlarmsNodeId.IsEmpty)
@@ -261,25 +295,22 @@ public class CustomAlarming : BaseNetLogic
                 stopAlarm.Value = localizedAlarmsContainer.Children.First()?.NodeId ?? NodeId.Empty;
                 latestAlarm.Value = localizedAlarmsContainer.Children.Last()?.NodeId ?? NodeId.Empty;
                 retainedAlarmsCount.Value = localizedAlarmsContainer.Children.Count;
-;
-                if (GetActiveAlarmIDs().Count == 0)
-                    popupTriggered = false;
             }
         }
         private List<int> GetActiveAlarmIDs()
         {
             List<int> alarmIDs = [];
 
-            for (int i = 0; i < retaiendAlarms.Count; ++i)
+            for (int i = 0; i < retainedAlarms.Count; ++i)
             {
-                var alarmID = retaiendAlarms[i];
+                var alarmID = retainedAlarms[i];
                 if (alarmID != null)
                 {
                     IUANode alarmController = InformationModel.Get(alarmID);
                     if (InformationModel.Get<AlarmController>(alarmController.GetVariable("ConditionId").Value) != null)
                     {
                         DigitalAlarm alarm = InformationModel.Get<DigitalAlarm>(alarmController.GetVariable("ConditionId").Value);
-                        if (alarm.Severity == 1000)
+                        if (alarm.Severity == alarmSeverityLevel)
                         {
                             alarmIDs.Add(i);
                         }
@@ -289,17 +320,13 @@ public class CustomAlarming : BaseNetLogic
 
             return alarmIDs;
         }
-        private void InitializeRetainedAlarmList(IUANode localizedAlarmsContainer)
-        {
-            foreach (var localizedAlarm in localizedAlarmsContainer.Children)
-                retaiendAlarms.Add(localizedAlarm.NodeId);
-        }
+        #endregion
+        #region alarm popup
         private void UpdateCurrentDisplayedAlarm()
         {
-            //Debugger.Launch();
             List<int> alarmIDs = GetActiveAlarmIDs();
 
-            if (retaiendAlarms.Count == 0)
+            if (retainedAlarms.Count == 0)
             {
                 currentDisplayedAlarmIndex.Value = 0;
                 currentDisplayedAlarm.Value = NodeId.Empty;
@@ -307,91 +334,31 @@ public class CustomAlarming : BaseNetLogic
             else if (alarmIDs.Count != 0 && !bannerRotation.Value)
             {
                 currentDisplayedAlarmIndex.Value = alarmIDs.Min();
-                currentDisplayedAlarm.Value = retaiendAlarms[alarmIDs.Min()];
+                currentDisplayedAlarm.Value = retainedAlarms[alarmIDs.Min()];
             }
-            else if (retaiendAlarms.Count > 0 && !bannerRotation.Value)
+            else if (retainedAlarms.Count > 0 && !bannerRotation.Value)
             {
                 currentDisplayedAlarmIndex.Value = 0;
-                currentDisplayedAlarm.Value = retaiendAlarms[0];
+                currentDisplayedAlarm.Value = retainedAlarms[0];
             }
             else
             {
                 currentDisplayedAlarmIndex.Value = currentIndex;
-                currentDisplayedAlarm.Value = retaiendAlarms[currentIndex];
+                currentDisplayedAlarm.Value = retainedAlarms[currentIndex];
             }
 
-            if (alarmIDs.Count == 1 && !popupTriggered)
+            if (alarmIDs.Count == 1 && !popupTriggered && parent.startup)
             {
                 popupTriggered = true;
-                PopupTrigger(retaiendAlarms[alarmIDs.Min()]);
+                PopupTrigger(retainedAlarms[alarmIDs.Min()]);
             }
         }
-
-        #region banner rotation
-        public bool RotationRunning { get; private set; }
-        public NodeId CurrentDisplayedAlarmNodeId
-        {
-            get { return currentDisplayedAlarm.Value; }
-        }
-        private void RotationTime_VariableChange(object sender, VariableChangeEventArgs e)
-        {
-            var wasRunning = RotationRunning;
-            StopRotation();
-            if (bannerRotation.Value)
-            {
-                rotationTask = new PeriodicTask(DisplayNextAlarm, e.NewValue, logicNode);
-            }
-            if (wasRunning)
-                StartRotation();
-        }
-        private void BannerRotationToggle(object sender, VariableChangeEventArgs e)
-        {
-            if (bannerRotation.Value)
-            {
-                StartRotation();
-            }
-            else
-            {
-                StopRotation();
-            }
-        }
-        private void StopRotation()
-        {
-            if (!RotationRunning)
-                return;
-
-            rotationTask.Cancel();
-            RotationRunning = false;
-            skipFirstCallBack = false;
-
-            UpdateCurrentDisplayedAlarm();
-        }
-        private void StartRotation()
-        {
-            if (RotationRunning)
-                return;
-
-            rotationTask.Start();
-            RotationRunning = true;
-            skipFirstCallBack = true;
-        }
-        private void DisplayNextAlarm()
-        {
-            if (skipFirstCallBack)
-            {
-                skipFirstCallBack = false;
-                return;
-            }
-
-            var nextIndex = currentIndex + 1 >= retaiendAlarms.Count ? 0 : currentIndex + 1;
-            currentIndex = nextIndex;
-            UpdateCurrentDisplayedAlarm();
-        }
-        #endregion
-
-        #region alarm popup
         private void PopupTrigger(NodeId alarm)
         {
+            var test = InformationModel.Get(alarm);
+            if (test.BrowseName == "PLC_Comm_Lost")
+                return;
+
             DialogType alarmPopup = (DialogType)Project.Current.Get("UI/Screens/Popups/AlarmPopup");
 
             try
@@ -402,7 +369,7 @@ public class CustomAlarming : BaseNetLogic
                 IUANode native_window = native_session.Get("UIRoot");                   // get main window of active native session
                 if (native_window != null)                                              // check if native window exists
                 {                                                                       //
-                    CloseAllAlarmPopups((Session)native_session);                       // close any currently open alarm popups
+                    CloseAllPopups((Session)native_session);                       // close any currently open alarm popups
                     UICommands.OpenDialog(native_window, alarmPopup, alarm);            // trigger popup on native session
                 }                                                                       //   
             }
@@ -417,26 +384,86 @@ public class CustomAlarming : BaseNetLogic
                     IUANode web_window = web_session.Get("UIRoot");             //
                     if (web_window != null)                                     // multi-client alarm
                     {                                                           // popup handling
-                        CloseAllAlarmPopups((Session)web_session);              // close any currently open alarm popups
+                        CloseAllPopups((Session)web_session);              // close any currently open alarm popups
                         UICommands.OpenDialog(web_window, alarmPopup, alarm);   //
                     }                                                           //
                 }                                                               //
             }
             catch { } // if try fails web sessions do not exist (this is fine if true)
         }
-        private void CloseAllAlarmPopups(Session session)
-        {
-            foreach (Dialog item in session.Get("UIRoot").Children.OfType<Dialog>().ToList())
-            {
-                if (item.BrowseName.ToLowerInvariant() == "alarmpopup" || item.BrowseName.ToLowerInvariant() == "screensaver")
-                {
-                    item.Close(); // close any currently open alarm popups
-                }
-            }
-        }        
-        #endregion
+        public void CloseAllPopups(Session session) {
+			// operate on the session's UIRoot instances, not project-level nodes
+			var uiRoot = session.Get("UIRoot");
+			if (uiRoot != null) {
+				var sessionDebug = uiRoot.Children["Debug_Menu"] as PanelLoader;
+				if (sessionDebug != null)
+					sessionDebug.ChangePanel(parent.emptyPanel);
 
-        private PeriodicTask rotationTask;              // rotation
+				var sessionQuickInfo = uiRoot.Children["StandardQuickInfo"] as PanelLoader;
+				if (sessionQuickInfo != null)
+					sessionQuickInfo.ChangePanel(parent.emptyPanel);
+
+				var sessionBurger = uiRoot.Children["BurgerMenu"] as BurgerMenu;
+				if (sessionBurger != null)
+					sessionBurger.Visible = false;
+			}
+
+			foreach (Dialog item in uiRoot?.Children.OfType<Dialog>().ToList() ?? new List<Dialog>())
+				item.Close();
+		}
+		#endregion
+		#region banner rotation
+		public bool RotationRunning { get; private set; }
+		public NodeId CurrentDisplayedAlarmNodeId {
+			get { return currentDisplayedAlarm.Value; }
+		}
+		private void RotationTime_VariableChange(object sender, VariableChangeEventArgs e) {
+			var wasRunning = RotationRunning;
+			StopRotation();
+			if (bannerRotation.Value) {
+				rotationTask = new PeriodicTask(DisplayNextAlarm, e.NewValue, logicNode);
+			}
+			if (wasRunning)
+				StartRotation();
+		}
+		private void BannerRotationToggle(object sender, VariableChangeEventArgs e) {
+			if (bannerRotation.Value) {
+				StartRotation();
+			} else {
+				StopRotation();
+			}
+		}
+		private void StopRotation() {
+			if (!RotationRunning)
+				return;
+
+			rotationTask.Cancel();
+			RotationRunning = false;
+			skipFirstCallBack = false;
+
+			UpdateCurrentDisplayedAlarm();
+		}
+		private void StartRotation() {
+			if (RotationRunning)
+				return;
+
+			rotationTask.Start();
+			RotationRunning = true;
+			skipFirstCallBack = true;
+		}
+		private void DisplayNextAlarm() {
+			if (skipFirstCallBack) {
+				skipFirstCallBack = false;
+				return;
+			}
+
+			var nextIndex = currentIndex + 1 >= retainedAlarms.Count ? 0 : currentIndex + 1;
+			currentIndex = nextIndex;
+			UpdateCurrentDisplayedAlarm();
+		}
+		#endregion
+
+		private PeriodicTask rotationTask;              // rotation
         private IUAVariable currentDisplayedAlarm;      // rotation
         private IUAVariable currentDisplayedAlarmIndex; // rotation
         private IUAVariable rotationTime;               // rotation
@@ -447,12 +474,17 @@ public class CustomAlarming : BaseNetLogic
         private IUAVariable bannerRotation;             // rotation
         private bool skipFirstCallBack = false;         // rotation
         private int currentIndex = 0;                   // rotation
-        private List<NodeId> retaiendAlarms;            // alarm container
+        private List<NodeId> retainedAlarms;            // alarm container
         private Object retainedAlarmsLock;              // alarm container
-        public bool popupTriggered;                     // automatic alarmPopup
+		public bool popupTriggered;                     // automatic alarmPopup
+		private int alarmSeverityLevel;                 // alarm severity levl
+        SQLiteStore alarmsDB;
+		string sourceTableName;
+		string targetTableName;
+        string nodeIdColumn;
 
-        #region IDisposable Support
-        private bool disposedValue = false;
+		#region IDisposable Support
+		private bool disposedValue = false;
         protected virtual void Dispose(bool disposing)
         {
             if (disposedValue)
@@ -476,7 +508,14 @@ public class CustomAlarming : BaseNetLogic
         #endregion
     }
 
-    uint affinityId = 0;
+    private bool startup = false;
+
+	public BurgerMenu burgerMenuScreen;
+	public PanelLoader debugMenu;
+	public PanelLoader standardQuickInfo;
+	public NodeId emptyPanel;
+
+	uint affinityId = 0;
     AlarmHandler alarmHandler;
     RetainedAlarmsObjectObserver retainedAlarmsObjectObserver;
     IEventRegistration alarmEventRegistration;

@@ -11,6 +11,7 @@ using FTOptix.OPCUAServer;
 using System.Diagnostics;
 using FTOptix.SerialPort;
 using FTOptix.System;
+using FTOptix.DataLogger;
 #endregion
 
 public class BackProvider : BaseNetLogic
@@ -23,6 +24,9 @@ public class BackProvider : BaseNetLogic
 		if (panelLoader == null)
 			Log.Error("BackProvider", "Panel loader not found");
 		panelLoader.PanelVariable.VariableChange += PanelVariable_VariableChange;
+
+		canGoBack = LogicObject.GetVariable("CanGoBack");
+		canGoNext = LogicObject.GetVariable("CanGoNext");
 
 		fromBack = false;
 		fromNext = false;
@@ -43,14 +47,17 @@ public class BackProvider : BaseNetLogic
 			var oldPanel = InformationModel.Get(e.OldValue);
 			NodeId newPanelNodeId = e.OldValue;
 			newPanelStack.Push(newPanelNodeId);
+			canGoNext.Value = true;
 		} else {
 			var oldPanel = InformationModel.Get(e.OldValue);
 			NodeId oldPanelNodeId = e.OldValue;
 			oldPanelStack.Push(oldPanelNodeId);
+			canGoBack.Value = true;
 		}
 
 		if (!fromNext && !fromBack) {
 			newPanelStack.Clear();
+			canGoNext.Value = false;
 		}
 	}
 
@@ -77,6 +84,9 @@ public class BackProvider : BaseNetLogic
 		if (panelLoader == null)
 			Log.Error("BackProvider", "Panel loader not found");
 
+		if (oldPanelStack.Count <= 1)
+			canGoBack.Value = false;
+
 		if (oldPanelStack.Count == 0)
 			return;
 
@@ -95,10 +105,13 @@ public class BackProvider : BaseNetLogic
 		if (panelLoader == null)
 			Log.Error("BackProvider", "Panel loader not found");
 
+		if (newPanelStack.Count <= 1)
+			canGoNext.Value = false;
+
 		if (newPanelStack.Count == 0)
 			return;
 
-		var panelNodeId = newPanelStack.Pop();
+			var panelNodeId = newPanelStack.Pop();
 		fromNext = true;
 		panelLoader.ChangePanel(panelNodeId, NodeId.Empty);
 		fromNext = false;
@@ -108,4 +121,6 @@ public class BackProvider : BaseNetLogic
 	private Stack<NodeId> newPanelStack;
 	private bool fromBack;
 	private bool fromNext;
+	private IUAVariable canGoBack;
+	private IUAVariable canGoNext;
 }

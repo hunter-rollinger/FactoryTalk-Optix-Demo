@@ -14,6 +14,7 @@ using FTOptix.RecipeX;
 using FTOptix.SerialPort;
 using FTOptix.OPCUAServer;
 using FTOptix.System;
+using FTOptix.DataLogger;
 #endregion
 
 public class SetColors : BaseNetLogic

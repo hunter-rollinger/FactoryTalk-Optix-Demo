@@ -2,36 +2,10 @@ Name: PLC Alarms
 Id: g=10e0ccda43769ba125b455ce2c380e46
 Type: FolderType
 Children:
-- Name: OI_Stop_Test
-  Id: g=1d9e364aac1818ebaf688b41876bd769
-  Type: OffNormalAlarmController
+- Name: AlarmFromPLC.0
+  Id: g=a94097dad7c7446983b4c752a17ff5d7
+  Type: CustomAlarm
   Children:
-  - Name: NormalStateValue
-    Id: g=18f2dba26f182c1fabb25cec0892ae27
-    Type: BaseDataVariableType
-    DataType: Double
-  - Name: InputValue
-    Id: g=f73293ae24afad25d5b53d3f0067e062
-    Type: BaseDataVariableType
-    DataType: Double
-    Children:
-    - Name: DynamicLink
-      Id: g=f22b942f73e645298586e24b5a3a3b86
-      Type: DynamicLink
-      DataType: NodePath
-      Value: "../../../../../CommDrivers/Rockwell/S17693/Tags/Controller Tags/OI_Stop[0].0"
-      Children:
-      - Name: Mode
-        Id: g=2d4578a7f400fa51e0c6cc1cedd455ae
-        Type: BaseVariableType
-        DataType: DynamicLinkMode
-        Value: 2
-  - Name: LastEvent
-    Id: g=65795171b8e10ccdb2f1fe11819575fc
-    Type: BaseDataVariableType
-    DataType: BaseDataType
-    ValueRank: OneDimension
-    ArrayDimensions: [0]
   - Class: Reference
     Target: ns=25;i=81
     Direction: Forward
@@ -65,84 +39,122 @@ Children:
   - Class: Reference
     Target: ns=25;i=154
     Direction: Forward
-  - Name: AutoAcknowledge
-    Id: g=5e95837fe3044d3a0c195c18833641cf
-    Type: BaseDataVariableType
-    DataType: Boolean
-    Value: true
-  - Name: AutoConfirm
-    Id: g=7896d0c46ad7dd14fe589619769056c6
-    Type: BaseDataVariableType
-    DataType: Boolean
-    Value: true
-  - Name: Severity
-    Id: g=50ab0790e40efe36ef3663b6fde1da3b
-    Type: BaseDataVariableType
-    DataType: UInt16
-    Value: 1000
-  - Name: Message
-    Id: g=2deb97ca6b1b028ba773f6dfda52dc09
-    Type: BaseDataVariableType
-    DataType: LocalizedText
-    Value: {"LocaleId":"en-US","Text":"TestAlarm1"}
-    Children:
-    - Name: DynamicLink
-      Id: g=cc9d4bdd12e500a10ff8add1f2e4e13a
-      Type: DynamicLink
-      DataType: NodePath
-      Value: "../../../../../CommDrivers/Rockwell/S17693/Tags/Controller Tags/OI_Stop/0/0/Description"
-      Children:
-      - Name: IsPull
-        Id: g=f2bbdd840699ef9ede582c9653daedff
-        Type: BaseVariableType
-        DataType: Boolean
-        Value: true
-  - Name: MaxTimeShelved
-    Id: g=9ecc76043399f70b61a92aef6fac0f2c
-    Type: BaseDataVariableType
-    DataType: Duration
-  - Name: PresetTimeShelved
-    Id: g=78f247184bf701b76aa8a64259f3481b
-    Type: BaseDataVariableType
-    DataType: Duration
-  - Name: LatchingEnabled
-    Id: g=dcbacaae6ebe76daaf03e80bfc074b37
-    Type: BaseDataVariableType
-    DataType: Boolean
-  - Name: Enabled
-    Id: g=50dfd699492b7c9f6da2ad963becf6d9
-    Type: BaseDataVariableType
-    DataType: Boolean
-- Name: PackML_Test
-  Id: g=c044f52f0164e3b7ef9154d553f6d24e
-  Type: OffNormalAlarmController
-  Children:
   - Name: NormalStateValue
-    Id: g=40d7e325f973350de426d0fbaa5b1675
+    Id: g=d25ceb668c41bf03e3216da050a380f5
     Type: BaseDataVariableType
     DataType: Double
   - Name: InputValue
-    Id: g=21055555ce6a459a322e40513936392e
+    Id: g=298615ab3f03d77bff6d876b7dc915cf
     Type: BaseDataVariableType
     DataType: Double
     Children:
     - Name: DynamicLink
-      Id: g=b3cd2510dc4b26d41e277faad3675bb8
+      Id: g=87b58285dcda2c6f195e0220403d1303
       Type: DynamicLink
       DataType: NodePath
-      Value: "../../../../../CommDrivers/Rockwell/Essity/Tags/Controller Tags/AlarmCfg/0/Value"
+      Value: "/Objects/OptimateDemoProject/CommDrivers/Rockwell/S17693/Tags/Controller Tags/OptixAlarms/0/Active"
       Children:
       - Name: Mode
-        Id: g=ae5fa9a779d4defbe96b73b39c98cf11
+        Id: g=5d6aa7c316651043b960de8347c072ac
         Type: BaseVariableType
         DataType: DynamicLinkMode
-        Value: 2
   - Name: LastEvent
-    Id: g=0b50443d8ab795609290cb1a0ba36c0b
+    Id: g=9030fd265a7f05919464d245ef9ea295
     Type: BaseDataVariableType
     DataType: BaseDataType
     ValueRank: OneDimension
     ArrayDimensions: [0]
+  - Name: Help_Text
+    Id: g=e5a31fbb28056ff82ac06c414c0edf16
+    Type: BaseDataVariableType
+    DataType: String
+    Children:
+    - Name: DynamicLink
+      Id: g=094d169ac4fc438488ce7e3b29f5fe24
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "/Objects/OptimateDemoProject/CommDrivers/Rockwell/S17693/Tags/Controller Tags/OptixAlarms/0/AlarmHelpText"
+  - Name: Aux_Text
+    Id: g=93f5b312e085c7391dc61c202bfb624d
+    Type: BaseDataVariableType
+    DataType: String
+    Children:
+    - Name: DynamicLink
+      Id: g=bc62707abbf04c7cb4ba71cc6c095c79
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "/Objects/OptimateDemoProject/CommDrivers/Rockwell/S17693/Tags/Controller Tags/OptixAlarms/0/AlarmAuxText"
+  - Name: Image
+    Id: g=378e493afe6464c130e6862a397ee90e
+    Type: BaseDataVariableType
+    DataType: ResourceUri
+    Children:
+    - Name: DynamicLink
+      Id: g=e6cb0a99ef7d44149bd800fd2fab87f2
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "/Objects/OptimateDemoProject/CommDrivers/Rockwell/S17693/Tags/Controller Tags/OptixAlarms/0/AlarmImage"
+  - Name: Overview
+    Id: g=21f2cbc5aebf1956504973bb505372ca
+    Type: BaseDataVariableType
+    DataType: ResourceUri
+    Children:
+    - Name: DynamicLink
+      Id: g=009706f800264199a1f5469e1bed0555
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "/Objects/OptimateDemoProject/CommDrivers/Rockwell/S17693/Tags/Controller Tags/OptixAlarms/0/OverviewImage"
+  - Name: Severity
+    Id: g=3d0d398ed953dcef9f20bf597955a728
+    Type: BaseDataVariableType
+    DataType: UInt16
+    Value: 1000
+    Children:
+    - Name: DynamicLink
+      Id: g=5c77b7eef6806e082dd37c2442b8e485
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "/Objects/OptimateDemoProject/Alarms/AlarmSeverity/Alarm"
+  - Name: Enabled
+    Id: g=5bd4ad3888a61d147d0252bd5a35babe
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Value: true
+    Children:
+    - Name: DynamicLink
+      Id: g=72982ba0b53640d7bd187cfbddb841b2
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "/Objects/OptimateDemoProject/CommDrivers/Rockwell/S17693/Tags/Controller Tags/OptixAlarms/0/Enabled"
+  - Name: Message
+    Id: g=b8f67ee7a1c9a56c1c2e7031814de3bf
+    Type: BaseDataVariableType
+    DataType: LocalizedText
+    Value: {"LocaleId":"en-US","Text":"PLACEHOLDER"}
+    Children:
+    - Name: DynamicLink
+      Id: g=bc6c96ecf0584809868c580ead88211b
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "/Objects/OptimateDemoProject/CommDrivers/Rockwell/S17693/Tags/Controller Tags/OptixAlarms/0/AlarmText"
+  - Name: AutoAcknowledge
+    Id: g=ccfe458a4b5a2ac1838fffe9ffdbfbda
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Value: true
+  - Name: AutoConfirm
+    Id: g=0aba74790c4964a01b9d7863d3f00a63
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Value: true
+  - Name: Timestamp
+    Id: g=b125bb21609bbd782b591796901ea219
+    Type: BaseDataVariableType
+    DataType: DateTime
+- Name: AlarmFromPLC.1
+  Id: g=219f2fbaedc84e6cbddd69348bb030a5
+  Type: CustomAlarm
+  Children:
   - Class: Reference
     Target: ns=25;i=81
     Direction: Forward
@@ -176,63 +188,1307 @@ Children:
   - Class: Reference
     Target: ns=25;i=154
     Direction: Forward
-  - Name: AutoAcknowledge
-    Id: g=0adbb382f88f630d9221627af9d54a9b
+  - Name: NormalStateValue
+    Id: g=2370adacc88b91b7b529f960ba346658
     Type: BaseDataVariableType
-    DataType: Boolean
-    Value: true
-  - Name: AutoConfirm
-    Id: g=95e410e5f932ee5e25ab6707c34c4a57
+    DataType: Double
+  - Name: InputValue
+    Id: g=0d9aecdda064812b66ef00de4f41a881
     Type: BaseDataVariableType
-    DataType: Boolean
-    Value: true
+    DataType: Double
+    Children:
+    - Name: DynamicLink
+      Id: g=5ee2422b906040f1a818051fccfac165
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "/Objects/OptimateDemoProject/CommDrivers/Rockwell/S17693/Tags/Controller Tags/OptixAlarms/1/Active"
+      Children:
+      - Name: Mode
+        Id: g=030d256f686a3963c56c15211dcfdecf
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+  - Name: LastEvent
+    Id: g=b7a93fe268ff0f66d0c6db841c5f5091
+    Type: BaseDataVariableType
+    DataType: BaseDataType
+    ValueRank: OneDimension
+    ArrayDimensions: [0]
+  - Name: Help_Text
+    Id: g=83d1c98056b16b5dc53385738b930b88
+    Type: BaseDataVariableType
+    DataType: String
+    Children:
+    - Name: DynamicLink
+      Id: g=c19a06f622354f2fb1b5a82cdc927285
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "/Objects/OptimateDemoProject/CommDrivers/Rockwell/S17693/Tags/Controller Tags/OptixAlarms/1/AlarmHelpText"
+  - Name: Aux_Text
+    Id: g=b0eef9ac8a00cab344361bc4b74739de
+    Type: BaseDataVariableType
+    DataType: String
+    Children:
+    - Name: DynamicLink
+      Id: g=f58eb01212b841c192cec3e91de1bf55
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "/Objects/OptimateDemoProject/CommDrivers/Rockwell/S17693/Tags/Controller Tags/OptixAlarms/1/AlarmAuxText"
+  - Name: Image
+    Id: g=e398060f263ca670822ce64a48befa3f
+    Type: BaseDataVariableType
+    DataType: ResourceUri
+    Children:
+    - Name: DynamicLink
+      Id: g=74981fb7201449ff9b361daa9cb6ced8
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "/Objects/OptimateDemoProject/CommDrivers/Rockwell/S17693/Tags/Controller Tags/OptixAlarms/1/AlarmImage"
+  - Name: Overview
+    Id: g=a481de2164515f19ce623f7dc359a225
+    Type: BaseDataVariableType
+    DataType: ResourceUri
+    Children:
+    - Name: DynamicLink
+      Id: g=46bc9a6b42554ceda601cb810c4e1fe6
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "/Objects/OptimateDemoProject/CommDrivers/Rockwell/S17693/Tags/Controller Tags/OptixAlarms/1/OverviewImage"
   - Name: Severity
-    Id: g=83ecc57edc0ba52cb8626b2a48e8b189
+    Id: g=d445fd235e132853dbe9a5c4f85dbb05
     Type: BaseDataVariableType
     DataType: UInt16
     Value: 1000
     Children:
     - Name: DynamicLink
-      Id: g=da28bdb696c1c6f689e64480cea372e7
+      Id: g=a41257ab5485b6065c55a98599974afb
       Type: DynamicLink
       DataType: NodePath
-      Value: "../../../../../CommDrivers/Rockwell/Essity/Tags/Controller Tags/AlarmCfg/0/Category"
-      Children:
-      - Name: Mode
-        Id: g=6129a69566f52cd1be447189ae5a9228
-        Type: BaseVariableType
-        DataType: DynamicLinkMode
-        Value: 2
-  - Name: Message
-    Id: g=5e681262f3606b06dfb614e8f9ac1a7b
+      Value: "/Objects/OptimateDemoProject/Alarms/AlarmSeverity/Alarm"
+  - Name: Enabled
+    Id: g=6010a792eecff3d09ebc3839a6ae59d2
     Type: BaseDataVariableType
-    DataType: LocalizedText
-    Value: {"LocaleId":"en-US","Text":"TestAlarm1"}
+    DataType: Boolean
+    Value: true
     Children:
     - Name: DynamicLink
-      Id: g=90607784b94f2dc5f7e5073b43a89651
+      Id: g=1869abb9472e45eab39f0bf96c1a2ac0
       Type: DynamicLink
       DataType: NodePath
-      Value: "../../../../../CommDrivers/Rockwell/Essity/Tags/Controller Tags/AlarmCfg/0/Message[0]"
+      Value: "/Objects/OptimateDemoProject/CommDrivers/Rockwell/S17693/Tags/Controller Tags/OptixAlarms/1/Enabled"
+  - Name: Message
+    Id: g=fc1d0b846b8591e9a300bf4599bf04fd
+    Type: BaseDataVariableType
+    DataType: LocalizedText
+    Value: {"LocaleId":"en-US","Text":"PLACEHOLDER"}
+    Children:
+    - Name: DynamicLink
+      Id: g=3727482dd9ef45368024c45fdefc57f4
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "/Objects/OptimateDemoProject/CommDrivers/Rockwell/S17693/Tags/Controller Tags/OptixAlarms/1/AlarmText"
+  - Name: AutoAcknowledge
+    Id: g=d7de43f4b8386e05ed404bd348eb535e
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Value: true
+  - Name: AutoConfirm
+    Id: g=403a259f5bb334413c74155abb8cd473
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Value: true
+  - Name: Timestamp
+    Id: g=49f66a956c12cea5361d32a60544e967
+    Type: BaseDataVariableType
+    DataType: DateTime
+- Name: AlarmFromPLC.2
+  Id: g=642dfb1973d54ea38fe9065fa266f224
+  Type: CustomAlarm
+  Children:
+  - Class: Reference
+    Target: ns=25;i=81
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=82
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=83
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=130
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=135
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=132
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=146
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=148
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=150
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=152
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=154
+    Direction: Forward
+  - Name: NormalStateValue
+    Id: g=764a1042a58a3b43af12f2f05e8c0b29
+    Type: BaseDataVariableType
+    DataType: Double
+  - Name: InputValue
+    Id: g=29c0841bc77a871a062d97f9ccab6238
+    Type: BaseDataVariableType
+    DataType: Double
+    Children:
+    - Name: DynamicLink
+      Id: g=502d04f1e3f9caaa20a3cad8806456c9
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "/Objects/OptimateDemoProject/CommDrivers/Rockwell/S17693/Tags/Controller Tags/OptixAlarms/2/Active"
       Children:
-      - Name: IsPull
-        Id: g=e0ae4de61cbe7a932cc9539368288afb
+      - Name: Mode
+        Id: g=811f34dd1b06a233061255649bcf0eb0
         Type: BaseVariableType
-        DataType: Boolean
-        Value: true
-  - Name: MaxTimeShelved
-    Id: g=27fc1ab270bcd62fad2d2bcc3c305df7
+        DataType: DynamicLinkMode
+  - Name: LastEvent
+    Id: g=9efe9ecd75a0e9a8cfd80febf0c562de
     Type: BaseDataVariableType
-    DataType: Duration
-  - Name: PresetTimeShelved
-    Id: g=b5b65f43eb9f26355a899d57dde2f99a
+    DataType: BaseDataType
+    ValueRank: OneDimension
+    ArrayDimensions: [0]
+  - Name: Help_Text
+    Id: g=7ebe9a2ac988bc74f4db6efa11a1526a
     Type: BaseDataVariableType
-    DataType: Duration
-  - Name: LatchingEnabled
-    Id: g=d07fb3805258274e3ec52f2ccdfb08b8
+    DataType: String
+    Children:
+    - Name: DynamicLink
+      Id: g=abbe029e93bc445291ae14a69e73dd1d
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "/Objects/OptimateDemoProject/CommDrivers/Rockwell/S17693/Tags/Controller Tags/OptixAlarms/2/AlarmHelpText"
+  - Name: Aux_Text
+    Id: g=284108788d8630f91dc31378ca315297
     Type: BaseDataVariableType
-    DataType: Boolean
+    DataType: String
+    Children:
+    - Name: DynamicLink
+      Id: g=4e01b3787d8c4fb9bd7e16e2b2081b26
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "/Objects/OptimateDemoProject/CommDrivers/Rockwell/S17693/Tags/Controller Tags/OptixAlarms/2/AlarmAuxText"
+  - Name: Image
+    Id: g=9a05540925edde4ac878cab5276462fe
+    Type: BaseDataVariableType
+    DataType: ResourceUri
+    Children:
+    - Name: DynamicLink
+      Id: g=a3a72e3d56204892b173bf39d7101080
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "/Objects/OptimateDemoProject/CommDrivers/Rockwell/S17693/Tags/Controller Tags/OptixAlarms/2/AlarmImage"
+  - Name: Overview
+    Id: g=6d8dd529a1c5d087656374039348924e
+    Type: BaseDataVariableType
+    DataType: ResourceUri
+    Children:
+    - Name: DynamicLink
+      Id: g=251e3610ddf4488a81c485f2c8103c72
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "/Objects/OptimateDemoProject/CommDrivers/Rockwell/S17693/Tags/Controller Tags/OptixAlarms/2/OverviewImage"
+  - Name: Severity
+    Id: g=6b939579d06f91e9f23247692e3fc6ef
+    Type: BaseDataVariableType
+    DataType: UInt16
+    Value: 1000
+    Children:
+    - Name: DynamicLink
+      Id: g=0aed61195c1bf52c830ab25fd9141ed6
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "/Objects/OptimateDemoProject/Alarms/AlarmSeverity/Alarm"
   - Name: Enabled
-    Id: g=5e018a19d36d23ea60ab7549a4a51d1c
+    Id: g=599844e73843072da9e945016a4a79c1
     Type: BaseDataVariableType
     DataType: Boolean
+    Value: true
+    Children:
+    - Name: DynamicLink
+      Id: g=862075d4b47442d6ba3bfff39b66dff8
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "/Objects/OptimateDemoProject/CommDrivers/Rockwell/S17693/Tags/Controller Tags/OptixAlarms/2/Enabled"
+  - Name: Message
+    Id: g=3ad012abb23e1c5f493a0af8dc550f55
+    Type: BaseDataVariableType
+    DataType: LocalizedText
+    Value: {"LocaleId":"en-US","Text":"PLACEHOLDER"}
+    Children:
+    - Name: DynamicLink
+      Id: g=a13638d57d8243eb93eec6471842c29f
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "/Objects/OptimateDemoProject/CommDrivers/Rockwell/S17693/Tags/Controller Tags/OptixAlarms/2/AlarmText"
+  - Name: AutoAcknowledge
+    Id: g=7a7cf7bb321937a07f1da66770e425f7
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Value: true
+  - Name: AutoConfirm
+    Id: g=4f8367a6f9121bf15a3cc943a5ad2cf0
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Value: true
+  - Name: Timestamp
+    Id: g=fd7186f002ef94615a146027a1407a73
+    Type: BaseDataVariableType
+    DataType: DateTime
+- Name: AlarmFromPLC.3
+  Id: g=3aeaf280ff4b49868004ba58edac9dd5
+  Type: CustomAlarm
+  Children:
+  - Class: Reference
+    Target: ns=25;i=81
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=82
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=83
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=130
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=135
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=132
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=146
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=148
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=150
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=152
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=154
+    Direction: Forward
+  - Name: NormalStateValue
+    Id: g=c4f618448b289a0fc45899caeab39740
+    Type: BaseDataVariableType
+    DataType: Double
+  - Name: InputValue
+    Id: g=ed72a05cc7104e9d379dd7835e07827e
+    Type: BaseDataVariableType
+    DataType: Double
+    Children:
+    - Name: DynamicLink
+      Id: g=710375069ed74e01e756df5b01a3efaf
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "/Objects/OptimateDemoProject/CommDrivers/Rockwell/S17693/Tags/Controller Tags/OptixAlarms/3/Active"
+      Children:
+      - Name: Mode
+        Id: g=a92d0a6d220090ab3803b42f81950d04
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+  - Name: LastEvent
+    Id: g=26bbf3848d8e8d1d32a7b81990d3c370
+    Type: BaseDataVariableType
+    DataType: BaseDataType
+    ValueRank: OneDimension
+    ArrayDimensions: [0]
+  - Name: Help_Text
+    Id: g=f061dd494534b201f062fa3bc0e34819
+    Type: BaseDataVariableType
+    DataType: String
+    Children:
+    - Name: DynamicLink
+      Id: g=869dd7fd09864000b27226d57c168792
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "/Objects/OptimateDemoProject/CommDrivers/Rockwell/S17693/Tags/Controller Tags/OptixAlarms/3/AlarmHelpText"
+  - Name: Aux_Text
+    Id: g=96babd0e4cb1e050c320763e6b159ad2
+    Type: BaseDataVariableType
+    DataType: String
+    Children:
+    - Name: DynamicLink
+      Id: g=91efcc4bd70b4803a7d5dde1d9262e42
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "/Objects/OptimateDemoProject/CommDrivers/Rockwell/S17693/Tags/Controller Tags/OptixAlarms/3/AlarmAuxText"
+  - Name: Image
+    Id: g=64324a44d4517a05cad8892ae5e437ae
+    Type: BaseDataVariableType
+    DataType: ResourceUri
+    Children:
+    - Name: DynamicLink
+      Id: g=142790a76e834b33a01ddb77c4defc8c
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "/Objects/OptimateDemoProject/CommDrivers/Rockwell/S17693/Tags/Controller Tags/OptixAlarms/3/AlarmImage"
+  - Name: Overview
+    Id: g=49931b8c781123b4ee18f5fb08309bb4
+    Type: BaseDataVariableType
+    DataType: ResourceUri
+    Children:
+    - Name: DynamicLink
+      Id: g=591ce73808fe42d7a2f4e10973a87b25
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "/Objects/OptimateDemoProject/CommDrivers/Rockwell/S17693/Tags/Controller Tags/OptixAlarms/3/OverviewImage"
+  - Name: Severity
+    Id: g=cb10c9d0688fd2bdfde2328fe7990531
+    Type: BaseDataVariableType
+    DataType: UInt16
+    Value: 1000
+    Children:
+    - Name: DynamicLink
+      Id: g=8a51144b2d3ab1b20d84e8b81022b4d4
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "/Objects/OptimateDemoProject/Alarms/AlarmSeverity/Alarm"
+  - Name: Enabled
+    Id: g=c6544450ad6793d2d5c054e1b0c5d4e2
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Value: true
+    Children:
+    - Name: DynamicLink
+      Id: g=c3ea84e299644692a8a000eaf8b910e2
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "/Objects/OptimateDemoProject/CommDrivers/Rockwell/S17693/Tags/Controller Tags/OptixAlarms/3/Enabled"
+  - Name: Message
+    Id: g=183124aa75579e8e2e7b189e497fc8f6
+    Type: BaseDataVariableType
+    DataType: LocalizedText
+    Value: {"LocaleId":"en-US","Text":"PLACEHOLDER"}
+    Children:
+    - Name: DynamicLink
+      Id: g=18c64482367e4471b48a17da9f511468
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "/Objects/OptimateDemoProject/CommDrivers/Rockwell/S17693/Tags/Controller Tags/OptixAlarms/3/AlarmText"
+  - Name: AutoAcknowledge
+    Id: g=5a60f4be9eebba501dd78b4eba909a82
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Value: true
+  - Name: AutoConfirm
+    Id: g=147bbefe3cc79117a7745d8e9bfdd0fa
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Value: true
+  - Name: Timestamp
+    Id: g=7b8456a879f933a54bf7f691c5f52dff
+    Type: BaseDataVariableType
+    DataType: DateTime
+- Name: AlarmFromPLC.4
+  Id: g=40ea5455ccf44f74aaf95a87db452ada
+  Type: CustomAlarm
+  Children:
+  - Class: Reference
+    Target: ns=25;i=81
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=82
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=83
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=130
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=135
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=132
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=146
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=148
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=150
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=152
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=154
+    Direction: Forward
+  - Name: NormalStateValue
+    Id: g=f8c1d67bf30647ded0447236c07c8d48
+    Type: BaseDataVariableType
+    DataType: Double
+  - Name: InputValue
+    Id: g=5ecf3795014bb80b299c7087ffec0b5d
+    Type: BaseDataVariableType
+    DataType: Double
+    Children:
+    - Name: DynamicLink
+      Id: g=e55f9ea260452da465bb5bff76c61aee
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "/Objects/OptimateDemoProject/CommDrivers/Rockwell/S17693/Tags/Controller Tags/OptixAlarms/4/Active"
+      Children:
+      - Name: Mode
+        Id: g=7ad2030895dd39d7dbf90c55a247a539
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+  - Name: LastEvent
+    Id: g=deb7c5253ac39eb190f7e6d34395cd82
+    Type: BaseDataVariableType
+    DataType: BaseDataType
+    ValueRank: OneDimension
+    ArrayDimensions: [0]
+  - Name: Help_Text
+    Id: g=978ec49964dfeb66a2608f94b7f0de02
+    Type: BaseDataVariableType
+    DataType: String
+    Children:
+    - Name: DynamicLink
+      Id: g=d78777ec2d8f4d6ab4f1ca564f8a2bdc
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "/Objects/OptimateDemoProject/CommDrivers/Rockwell/S17693/Tags/Controller Tags/OptixAlarms/4/AlarmHelpText"
+  - Name: Aux_Text
+    Id: g=2e872218abb2f260769cd2d0ea27a0c4
+    Type: BaseDataVariableType
+    DataType: String
+    Children:
+    - Name: DynamicLink
+      Id: g=2d08972df4394ef79033da3cf9f23a5f
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "/Objects/OptimateDemoProject/CommDrivers/Rockwell/S17693/Tags/Controller Tags/OptixAlarms/4/AlarmAuxText"
+  - Name: Image
+    Id: g=ff06c5f94df5d6eb099f2deee5688c02
+    Type: BaseDataVariableType
+    DataType: ResourceUri
+    Children:
+    - Name: DynamicLink
+      Id: g=96911367114048c48010d5d23672b68d
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "/Objects/OptimateDemoProject/CommDrivers/Rockwell/S17693/Tags/Controller Tags/OptixAlarms/4/AlarmImage"
+  - Name: Overview
+    Id: g=4be0185785a5ab3a13f4efb3200a0278
+    Type: BaseDataVariableType
+    DataType: ResourceUri
+    Children:
+    - Name: DynamicLink
+      Id: g=4885566e4c334fd3806a20323b6e6c23
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "/Objects/OptimateDemoProject/CommDrivers/Rockwell/S17693/Tags/Controller Tags/OptixAlarms/4/OverviewImage"
+  - Name: Severity
+    Id: g=f0219b910737af5e0bccc014e7a7d0b5
+    Type: BaseDataVariableType
+    DataType: UInt16
+    Value: 1000
+    Children:
+    - Name: DynamicLink
+      Id: g=ab1dd615bb5acc1516b33f56a30bd209
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "/Objects/OptimateDemoProject/Alarms/AlarmSeverity/Alarm"
+  - Name: Enabled
+    Id: g=e153fec180c922cedfaf5397ad7ad9a5
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Value: true
+    Children:
+    - Name: DynamicLink
+      Id: g=db1b7c8a1c044e8f8dcc03f7541581cd
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "/Objects/OptimateDemoProject/CommDrivers/Rockwell/S17693/Tags/Controller Tags/OptixAlarms/4/Enabled"
+  - Name: Message
+    Id: g=d55a494c7d122f214ef6a7f74b098044
+    Type: BaseDataVariableType
+    DataType: LocalizedText
+    Value: {"LocaleId":"en-US","Text":"PLACEHOLDER"}
+    Children:
+    - Name: DynamicLink
+      Id: g=dff0e0ccffa54dcda1e3223edbd0bb20
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "/Objects/OptimateDemoProject/CommDrivers/Rockwell/S17693/Tags/Controller Tags/OptixAlarms/4/AlarmText"
+  - Name: AutoAcknowledge
+    Id: g=9fd54bc7a1a5722592c59bf6618175a2
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Value: true
+  - Name: AutoConfirm
+    Id: g=b43ff22989a98b9644c85f2c2baa77d6
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Value: true
+  - Name: Timestamp
+    Id: g=5fe4341d2ddeff22e4082ca169c45cbe
+    Type: BaseDataVariableType
+    DataType: DateTime
+- Name: AlarmFromPLC.5
+  Id: g=e9e21568f0994f4dba94a0cea40b9666
+  Type: CustomAlarm
+  Children:
+  - Class: Reference
+    Target: ns=25;i=81
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=82
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=83
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=130
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=135
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=132
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=146
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=148
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=150
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=152
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=154
+    Direction: Forward
+  - Name: NormalStateValue
+    Id: g=e036e9046a53182cc0f424775a4d9902
+    Type: BaseDataVariableType
+    DataType: Double
+  - Name: InputValue
+    Id: g=2eefdea0f359a021ee71b39086a651db
+    Type: BaseDataVariableType
+    DataType: Double
+    Children:
+    - Name: DynamicLink
+      Id: g=3637f9daef28910beafedae3cb70d716
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "/Objects/OptimateDemoProject/CommDrivers/Rockwell/S17693/Tags/Controller Tags/OptixAlarms/5/Active"
+      Children:
+      - Name: Mode
+        Id: g=d14549f7643b2112330cf8a22bc9f346
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+  - Name: LastEvent
+    Id: g=7d607d87fd98d3db42301706b289bf97
+    Type: BaseDataVariableType
+    DataType: BaseDataType
+    ValueRank: OneDimension
+    ArrayDimensions: [0]
+  - Name: Help_Text
+    Id: g=04bd0e3c282268130cf0e14ce7928a9d
+    Type: BaseDataVariableType
+    DataType: String
+    Children:
+    - Name: DynamicLink
+      Id: g=7fd321acd83e46e28a542d699cdd1daa
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "/Objects/OptimateDemoProject/CommDrivers/Rockwell/S17693/Tags/Controller Tags/OptixAlarms/5/AlarmHelpText"
+  - Name: Aux_Text
+    Id: g=ae05ac7d2380bdf79e30861ef9695585
+    Type: BaseDataVariableType
+    DataType: String
+    Children:
+    - Name: DynamicLink
+      Id: g=bfc30e33204945e79e0f7e8bbb926235
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "/Objects/OptimateDemoProject/CommDrivers/Rockwell/S17693/Tags/Controller Tags/OptixAlarms/5/AlarmAuxText"
+  - Name: Image
+    Id: g=ce6a502670e798db9450645ff93ba2bf
+    Type: BaseDataVariableType
+    DataType: ResourceUri
+    Children:
+    - Name: DynamicLink
+      Id: g=b7ac6cd20a4e454ca2f4be9317474b07
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "/Objects/OptimateDemoProject/CommDrivers/Rockwell/S17693/Tags/Controller Tags/OptixAlarms/5/AlarmImage"
+  - Name: Overview
+    Id: g=6bb218e6a292cfda2dd476e2c18adcbd
+    Type: BaseDataVariableType
+    DataType: ResourceUri
+    Children:
+    - Name: DynamicLink
+      Id: g=19fab4cc213d4133904eda9e1a0ff2b2
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "/Objects/OptimateDemoProject/CommDrivers/Rockwell/S17693/Tags/Controller Tags/OptixAlarms/5/OverviewImage"
+  - Name: Severity
+    Id: g=752f8559fc1570ebe985de999f258dd2
+    Type: BaseDataVariableType
+    DataType: UInt16
+    Value: 1000
+    Children:
+    - Name: DynamicLink
+      Id: g=67d3d1a967cf6d88725c0eb55c2b5626
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "/Objects/OptimateDemoProject/Alarms/AlarmSeverity/Alarm"
+  - Name: Enabled
+    Id: g=f8f6f5509e8ebef9c0bd2e9fbb45e362
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Value: true
+    Children:
+    - Name: DynamicLink
+      Id: g=a60c25cfa07245688ef39c49e1599a36
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "/Objects/OptimateDemoProject/CommDrivers/Rockwell/S17693/Tags/Controller Tags/OptixAlarms/5/Enabled"
+  - Name: Message
+    Id: g=49402fd7516a18728ec14eb6c79a6ec9
+    Type: BaseDataVariableType
+    DataType: LocalizedText
+    Value: {"LocaleId":"en-US","Text":"PLACEHOLDER"}
+    Children:
+    - Name: DynamicLink
+      Id: g=a12de6876bec4f23ba46e8682a1a5385
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "/Objects/OptimateDemoProject/CommDrivers/Rockwell/S17693/Tags/Controller Tags/OptixAlarms/5/AlarmText"
+  - Name: AutoAcknowledge
+    Id: g=d9a3e66f4d2ad753c634bc92f4576892
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Value: true
+  - Name: AutoConfirm
+    Id: g=9395a9f9aa7029099c397ed47a962549
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Value: true
+  - Name: Timestamp
+    Id: g=2b446f53a02ff3e2e829e77133c43124
+    Type: BaseDataVariableType
+    DataType: DateTime
+- Name: AlarmFromPLC.6
+  Id: g=8e51986b766c4a66847101b095e9532a
+  Type: CustomAlarm
+  Children:
+  - Class: Reference
+    Target: ns=25;i=81
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=82
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=83
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=130
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=135
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=132
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=146
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=148
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=150
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=152
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=154
+    Direction: Forward
+  - Name: NormalStateValue
+    Id: g=8fde3a5700b99fb8b0ec4dbba6146816
+    Type: BaseDataVariableType
+    DataType: Double
+  - Name: InputValue
+    Id: g=2eab2f31015a21b2bcd5e4a96010e38f
+    Type: BaseDataVariableType
+    DataType: Double
+    Children:
+    - Name: DynamicLink
+      Id: g=bfd9d59f1fb19ace2998c4b49f16019e
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "/Objects/OptimateDemoProject/CommDrivers/Rockwell/S17693/Tags/Controller Tags/OptixAlarms/6/Active"
+      Children:
+      - Name: Mode
+        Id: g=80b678a674af10a3c6feab05d23464fc
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+  - Name: LastEvent
+    Id: g=12aef06273d26f85a732ed64ad36503e
+    Type: BaseDataVariableType
+    DataType: BaseDataType
+    ValueRank: OneDimension
+    ArrayDimensions: [0]
+  - Name: Help_Text
+    Id: g=3af0a693a7a0bbf1e6d170676343f95c
+    Type: BaseDataVariableType
+    DataType: String
+    Children:
+    - Name: DynamicLink
+      Id: g=df23854795b9477eb0be6c2954345b9c
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "/Objects/OptimateDemoProject/CommDrivers/Rockwell/S17693/Tags/Controller Tags/OptixAlarms/6/AlarmHelpText"
+  - Name: Aux_Text
+    Id: g=8db54f3e83669ee59b4629148286d683
+    Type: BaseDataVariableType
+    DataType: String
+    Children:
+    - Name: DynamicLink
+      Id: g=b7321061f8ae468f959d53e476bcb05d
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "/Objects/OptimateDemoProject/CommDrivers/Rockwell/S17693/Tags/Controller Tags/OptixAlarms/6/AlarmAuxText"
+  - Name: Image
+    Id: g=07423209f9dae33e9ce68084adce09fd
+    Type: BaseDataVariableType
+    DataType: ResourceUri
+    Children:
+    - Name: DynamicLink
+      Id: g=b8aca70529db486ea6c51f9cb8b07411
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "/Objects/OptimateDemoProject/CommDrivers/Rockwell/S17693/Tags/Controller Tags/OptixAlarms/6/AlarmImage"
+  - Name: Overview
+    Id: g=1cffe9e637e86228203b2cabdcfedcc0
+    Type: BaseDataVariableType
+    DataType: ResourceUri
+    Children:
+    - Name: DynamicLink
+      Id: g=afbb229b7a914bf3b6c3cc1bf2fe247f
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "/Objects/OptimateDemoProject/CommDrivers/Rockwell/S17693/Tags/Controller Tags/OptixAlarms/6/OverviewImage"
+  - Name: Severity
+    Id: g=d62760b576ab34ca0afb6e4f29d3849e
+    Type: BaseDataVariableType
+    DataType: UInt16
+    Value: 1000
+    Children:
+    - Name: DynamicLink
+      Id: g=9b2ee0dbca97189af448e0b2a462605b
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "/Objects/OptimateDemoProject/Alarms/AlarmSeverity/Alarm"
+  - Name: Enabled
+    Id: g=032dc763fd1f8de1fa4e2fc4dd53ecb0
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Value: true
+    Children:
+    - Name: DynamicLink
+      Id: g=4cb0002dc6cc4d0fa5d9778eb0be28cb
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "/Objects/OptimateDemoProject/CommDrivers/Rockwell/S17693/Tags/Controller Tags/OptixAlarms/6/Enabled"
+  - Name: Message
+    Id: g=598a7d1499d1541952f02e5d34e117a9
+    Type: BaseDataVariableType
+    DataType: LocalizedText
+    Value: {"LocaleId":"en-US","Text":"PLACEHOLDER"}
+    Children:
+    - Name: DynamicLink
+      Id: g=0b36a82c87c044eead833d43c21022c7
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "/Objects/OptimateDemoProject/CommDrivers/Rockwell/S17693/Tags/Controller Tags/OptixAlarms/6/AlarmText"
+  - Name: AutoAcknowledge
+    Id: g=bf40565f1ca6f0576d30572e8e6d98de
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Value: true
+  - Name: AutoConfirm
+    Id: g=c7333cb34bae52a3883e957e2278d927
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Value: true
+  - Name: Timestamp
+    Id: g=af182aba3c130d80e05fe061e61e8088
+    Type: BaseDataVariableType
+    DataType: DateTime
+- Name: AlarmFromPLC.7
+  Id: g=e92c3e89ae3e4d7ea8a1f1fc960e9d5c
+  Type: CustomAlarm
+  Children:
+  - Class: Reference
+    Target: ns=25;i=81
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=82
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=83
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=130
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=135
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=132
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=146
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=148
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=150
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=152
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=154
+    Direction: Forward
+  - Name: NormalStateValue
+    Id: g=ef64ccdf9d68554ed8168b88808357d7
+    Type: BaseDataVariableType
+    DataType: Double
+  - Name: InputValue
+    Id: g=e12dc90a3f8d2b30220a3b89e3091214
+    Type: BaseDataVariableType
+    DataType: Double
+    Children:
+    - Name: DynamicLink
+      Id: g=34158e16b74317f8d87b5fbbf2ed2208
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "/Objects/OptimateDemoProject/CommDrivers/Rockwell/S17693/Tags/Controller Tags/OptixAlarms/7/Active"
+      Children:
+      - Name: Mode
+        Id: g=69e5c4bfabf8a0e257b1923508a219f3
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+  - Name: LastEvent
+    Id: g=bf3829bae9d026a04f3dd9f9c6b35661
+    Type: BaseDataVariableType
+    DataType: BaseDataType
+    ValueRank: OneDimension
+    ArrayDimensions: [0]
+  - Name: Help_Text
+    Id: g=049818bcb77490b577d828593e16fff6
+    Type: BaseDataVariableType
+    DataType: String
+    Children:
+    - Name: DynamicLink
+      Id: g=1617623a95c14d3f9bb4102e2a2b264e
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "/Objects/OptimateDemoProject/CommDrivers/Rockwell/S17693/Tags/Controller Tags/OptixAlarms/7/AlarmHelpText"
+  - Name: Aux_Text
+    Id: g=a51582a72934bf019e8c36bd3bf4dfed
+    Type: BaseDataVariableType
+    DataType: String
+    Children:
+    - Name: DynamicLink
+      Id: g=aec423f7d0de4ce784715d4d4cff20e2
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "/Objects/OptimateDemoProject/CommDrivers/Rockwell/S17693/Tags/Controller Tags/OptixAlarms/7/AlarmAuxText"
+  - Name: Image
+    Id: g=2a91f58e2dcf51b94b7980e77e3623b8
+    Type: BaseDataVariableType
+    DataType: ResourceUri
+    Children:
+    - Name: DynamicLink
+      Id: g=c60d2576d9f44605887769f75bb5080e
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "/Objects/OptimateDemoProject/CommDrivers/Rockwell/S17693/Tags/Controller Tags/OptixAlarms/7/AlarmImage"
+  - Name: Overview
+    Id: g=72d4595b242745384a934a9124f85066
+    Type: BaseDataVariableType
+    DataType: ResourceUri
+    Children:
+    - Name: DynamicLink
+      Id: g=093b903941334d21a172fd2c93ee51d9
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "/Objects/OptimateDemoProject/CommDrivers/Rockwell/S17693/Tags/Controller Tags/OptixAlarms/7/OverviewImage"
+  - Name: Severity
+    Id: g=aad370b187e90c9c269b9e4d388df26a
+    Type: BaseDataVariableType
+    DataType: UInt16
+    Value: 1000
+    Children:
+    - Name: DynamicLink
+      Id: g=0d6fd1d3f76c24eba02e0aa41ba69038
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "/Objects/OptimateDemoProject/Alarms/AlarmSeverity/Alarm"
+  - Name: Enabled
+    Id: g=fe80af2bf9f888e00181cb2146a7a746
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Value: true
+    Children:
+    - Name: DynamicLink
+      Id: g=c2fe237be6284eb5ae17e48ac00acaa8
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "/Objects/OptimateDemoProject/CommDrivers/Rockwell/S17693/Tags/Controller Tags/OptixAlarms/7/Enabled"
+  - Name: Message
+    Id: g=e2b94885d19c316a9546207c6f373f01
+    Type: BaseDataVariableType
+    DataType: LocalizedText
+    Value: {"LocaleId":"en-US","Text":"PLACEHOLDER"}
+    Children:
+    - Name: DynamicLink
+      Id: g=aad9a172474b484b97b15cb89dbcdebf
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "/Objects/OptimateDemoProject/CommDrivers/Rockwell/S17693/Tags/Controller Tags/OptixAlarms/7/AlarmText"
+  - Name: AutoAcknowledge
+    Id: g=368d4afb6c5ad94074e6ce0e71e2641a
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Value: true
+  - Name: AutoConfirm
+    Id: g=4fb7c6cf06af07f17334610e49729fa1
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Value: true
+  - Name: Timestamp
+    Id: g=75c2aadbedc43999b70265bce22d7712
+    Type: BaseDataVariableType
+    DataType: DateTime
+- Name: AlarmFromPLC.8
+  Id: g=a06ff4750bc8439fabe5e843aac40069
+  Type: CustomAlarm
+  Children:
+  - Class: Reference
+    Target: ns=25;i=81
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=82
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=83
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=130
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=135
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=132
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=146
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=148
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=150
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=152
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=154
+    Direction: Forward
+  - Name: NormalStateValue
+    Id: g=f5d95338146e746aff93227857ddc33e
+    Type: BaseDataVariableType
+    DataType: Double
+  - Name: InputValue
+    Id: g=a6888169ce88762aad679768e7c68137
+    Type: BaseDataVariableType
+    DataType: Double
+    Children:
+    - Name: DynamicLink
+      Id: g=43188673bbd198b0038345c2ca9a67b6
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "/Objects/OptimateDemoProject/CommDrivers/Rockwell/S17693/Tags/Controller Tags/OptixAlarms/8/Active"
+      Children:
+      - Name: Mode
+        Id: g=d4bd9f05b96381e51696328e62f40889
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+  - Name: LastEvent
+    Id: g=b787de3ad2955ac1a3361350b8f7249e
+    Type: BaseDataVariableType
+    DataType: BaseDataType
+    ValueRank: OneDimension
+    ArrayDimensions: [0]
+  - Name: Help_Text
+    Id: g=1dc8b435fc49766729613d120496802a
+    Type: BaseDataVariableType
+    DataType: String
+    Children:
+    - Name: DynamicLink
+      Id: g=cec09b04c76d4ec7a623ca24ad5a9351
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "/Objects/OptimateDemoProject/CommDrivers/Rockwell/S17693/Tags/Controller Tags/OptixAlarms/8/AlarmHelpText"
+  - Name: Aux_Text
+    Id: g=ead74813509f67909f2a9c3266fa5f31
+    Type: BaseDataVariableType
+    DataType: String
+    Children:
+    - Name: DynamicLink
+      Id: g=a43d46a527634091b1a1629267b9c57f
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "/Objects/OptimateDemoProject/CommDrivers/Rockwell/S17693/Tags/Controller Tags/OptixAlarms/8/AlarmAuxText"
+  - Name: Image
+    Id: g=9912e0ba2d1d53e7aacc8971db201012
+    Type: BaseDataVariableType
+    DataType: ResourceUri
+    Children:
+    - Name: DynamicLink
+      Id: g=f7289c4df43444e3af1b3a4bc22a7f17
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "/Objects/OptimateDemoProject/CommDrivers/Rockwell/S17693/Tags/Controller Tags/OptixAlarms/8/AlarmImage"
+  - Name: Overview
+    Id: g=7a7f30f07e3d402cf1b2a313ab3af570
+    Type: BaseDataVariableType
+    DataType: ResourceUri
+    Children:
+    - Name: DynamicLink
+      Id: g=fa95f9c7a3de4fccbf7efd65d62adef6
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "/Objects/OptimateDemoProject/CommDrivers/Rockwell/S17693/Tags/Controller Tags/OptixAlarms/8/OverviewImage"
+  - Name: Severity
+    Id: g=ffdb36c277e9587275f1c8fc7b10a1c5
+    Type: BaseDataVariableType
+    DataType: UInt16
+    Value: 1000
+    Children:
+    - Name: DynamicLink
+      Id: g=54618b4549aa9ab308eb98f73fa42ce8
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "/Objects/OptimateDemoProject/Alarms/AlarmSeverity/Alarm"
+  - Name: Enabled
+    Id: g=4daf290531dabd5ebbc4abb3f2670ca7
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Value: true
+    Children:
+    - Name: DynamicLink
+      Id: g=7a20bbf071e7476ab667f6174dd3a3bc
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "/Objects/OptimateDemoProject/CommDrivers/Rockwell/S17693/Tags/Controller Tags/OptixAlarms/8/Enabled"
+  - Name: Message
+    Id: g=136af97f7623d984041c6a2fa402aa2d
+    Type: BaseDataVariableType
+    DataType: LocalizedText
+    Value: {"LocaleId":"en-US","Text":"PLACEHOLDER"}
+    Children:
+    - Name: DynamicLink
+      Id: g=9fa5d751751d4b0d8f606395605e94d2
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "/Objects/OptimateDemoProject/CommDrivers/Rockwell/S17693/Tags/Controller Tags/OptixAlarms/8/AlarmText"
+  - Name: AutoAcknowledge
+    Id: g=abcc8cc8498c7be1d7a8335d81d9e513
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Value: true
+  - Name: AutoConfirm
+    Id: g=56d95c20eb3c2a817636397d44dc0cc8
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Value: true
+  - Name: Timestamp
+    Id: g=f88796cf27a6ac99aecbcb3336bf7b15
+    Type: BaseDataVariableType
+    DataType: DateTime
+- Name: AlarmFromPLC.9
+  Id: g=27794766856848fc86907a0570e518c9
+  Type: CustomAlarm
+  Children:
+  - Class: Reference
+    Target: ns=25;i=81
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=82
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=83
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=130
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=135
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=132
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=146
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=148
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=150
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=152
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=154
+    Direction: Forward
+  - Name: NormalStateValue
+    Id: g=bb3aa21a50dd5990ca5f86b636c4ec3b
+    Type: BaseDataVariableType
+    DataType: Double
+  - Name: InputValue
+    Id: g=0c9142458b4c009ee19d1bffae2e99ea
+    Type: BaseDataVariableType
+    DataType: Double
+    Children:
+    - Name: DynamicLink
+      Id: g=f7c56a271d3354a2942829d47010c056
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "/Objects/OptimateDemoProject/CommDrivers/Rockwell/S17693/Tags/Controller Tags/OptixAlarms/9/Active"
+      Children:
+      - Name: Mode
+        Id: g=f36d00ea9cda8c9ef5eb0402c2676cb4
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+  - Name: LastEvent
+    Id: g=4cd4e1c221cf962147731b09bda301cb
+    Type: BaseDataVariableType
+    DataType: BaseDataType
+    ValueRank: OneDimension
+    ArrayDimensions: [0]
+  - Name: Help_Text
+    Id: g=7fb0ae1b5ba2506bd613fa7c9597b984
+    Type: BaseDataVariableType
+    DataType: String
+    Children:
+    - Name: DynamicLink
+      Id: g=e9a1a86e9e544b78a9ba322648f2f752
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "/Objects/OptimateDemoProject/CommDrivers/Rockwell/S17693/Tags/Controller Tags/OptixAlarms/9/AlarmHelpText"
+  - Name: Aux_Text
+    Id: g=58eae9cf5901a2acbcb75ec10cbb6ad0
+    Type: BaseDataVariableType
+    DataType: String
+    Children:
+    - Name: DynamicLink
+      Id: g=6f6cffc381c14eaf9884ff7acc09a38d
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "/Objects/OptimateDemoProject/CommDrivers/Rockwell/S17693/Tags/Controller Tags/OptixAlarms/9/AlarmAuxText"
+  - Name: Image
+    Id: g=c6e5519f897daa723219a670d1f8c27b
+    Type: BaseDataVariableType
+    DataType: ResourceUri
+    Children:
+    - Name: DynamicLink
+      Id: g=5eef07aeac1f4606a11ba50b79b3108e
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "/Objects/OptimateDemoProject/CommDrivers/Rockwell/S17693/Tags/Controller Tags/OptixAlarms/9/AlarmImage"
+  - Name: Overview
+    Id: g=31a4d901c8c6f46307043a0644a063c2
+    Type: BaseDataVariableType
+    DataType: ResourceUri
+    Children:
+    - Name: DynamicLink
+      Id: g=64b9c4a1b37a44a6afd116edf76215d0
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "/Objects/OptimateDemoProject/CommDrivers/Rockwell/S17693/Tags/Controller Tags/OptixAlarms/9/OverviewImage"
+  - Name: Severity
+    Id: g=cab7f2bdefb230e9707907a267991b99
+    Type: BaseDataVariableType
+    DataType: UInt16
+    Value: 1000
+    Children:
+    - Name: DynamicLink
+      Id: g=3ae4b773bc377e77baa0f706a02a9d96
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "/Objects/OptimateDemoProject/Alarms/AlarmSeverity/Alarm"
+  - Name: Enabled
+    Id: g=97958a1b4f456c5b8a937020f791a26c
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Value: true
+    Children:
+    - Name: DynamicLink
+      Id: g=86164202d8a148e5a04aea8dd5f29fcb
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "/Objects/OptimateDemoProject/CommDrivers/Rockwell/S17693/Tags/Controller Tags/OptixAlarms/9/Enabled"
+  - Name: Message
+    Id: g=fc4cdf8e177c33b953e20b843dba492d
+    Type: BaseDataVariableType
+    DataType: LocalizedText
+    Value: {"LocaleId":"en-US","Text":"PLACEHOLDER"}
+    Children:
+    - Name: DynamicLink
+      Id: g=ecd32e10f41a42d8a3445a81411a757d
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "/Objects/OptimateDemoProject/CommDrivers/Rockwell/S17693/Tags/Controller Tags/OptixAlarms/9/AlarmText"
+  - Name: AutoAcknowledge
+    Id: g=014013547001f030e2ad219fd464d212
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Value: true
+  - Name: AutoConfirm
+    Id: g=af0b8eeab2afbb7b029f6bf637f26443
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Value: true
+  - Name: Timestamp
+    Id: g=7532b745de13396abff4401096d2a1d5
+    Type: BaseDataVariableType
+    DataType: DateTime

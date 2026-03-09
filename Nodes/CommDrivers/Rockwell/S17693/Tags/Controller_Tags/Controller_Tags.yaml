@@ -3520,6 +3520,977 @@ Children:
           Type: BaseDataVariableType
           DataType: String
           Value: "OI_SelectToPLC[9].9.@Description"
+- Name: OptixAlarms
+  Id: g=5e5f5310f6028b258c60dd3b00bcbda3
+  Type: OptimateAlarm
+  DataType: OptimateAlarm
+  ValueRank: OneDimension
+  ArrayDimensions: [10]
+  Children:
+  - Name: SymbolName
+    Id: g=2a0453081fce25b228f74f5da3aacbf0
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "OptixAlarms"
+  - Name: BlockRead
+    Id: g=ddbb4cc93395711f8e6b6957aca2432e
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Value: true
+  - Name: 0
+    Id: g=6fadcafc26d01e1662e660319bd4c4a0
+    Type: OptimateAlarm
+    DataType: OptimateAlarm
+    Children:
+    - Name: SymbolName
+      Id: g=3e599a29a6484ee49c3d3f75f4f7b19d
+      Type: BaseDataVariableType
+      DataType: String
+      Value: "OptixAlarms[0]"
+    - Name: BlockRead
+      Id: g=c9975ddea78ac679ef73cd2ed9bd684f
+      Type: BaseDataVariableType
+      DataType: Boolean
+      Value: true
+    - Name: Active
+      Id: g=0c59f633ad50e985c65b1c4e5ec50a1b
+      Type: RAEtherNetIPTag
+      DataType: Boolean
+      Children:
+      - Name: SymbolName
+        Id: g=2aea32f5fba3c42a099f81837101b659
+        Type: BaseDataVariableType
+        DataType: String
+        Value: "OptixAlarms[0].Active"
+    - Name: Severity
+      Id: g=e9834e767452493256ad32821e4fd743
+      Type: RAEtherNetIPTag
+      DataType: Int16
+      Children:
+      - Name: SymbolName
+        Id: g=a70e7e05f1c7b5c8f25d73dad4c8ba02
+        Type: BaseDataVariableType
+        DataType: String
+        Value: "OptixAlarms[0].Severity"
+    - Name: Enabled
+      Id: g=7cad0efecf53620b1412d43c99184794
+      Type: RAEtherNetIPTag
+      DataType: Boolean
+      Children:
+      - Name: SymbolName
+        Id: g=800578f29b2053bec1025b42978579c5
+        Type: BaseDataVariableType
+        DataType: String
+        Value: "OptixAlarms[0].Enabled"
+    - Name: AlarmText
+      Id: g=33066856af49cbe32ee3c41b626e4d1e
+      Type: RAEtherNetIPTag
+      DataType: String
+      Children:
+      - Name: SymbolName
+        Id: g=8f6588b925b21ed1deac48c09592f0fa
+        Type: BaseDataVariableType
+        DataType: String
+        Value: "OptixAlarms[0].AlarmText"
+    - Name: AlarmAuxText
+      Id: g=81d184688b1a33ac6a297303fb9f9e8f
+      Type: RAEtherNetIPTag
+      DataType: String
+      Children:
+      - Name: SymbolName
+        Id: g=c24c963ca189b20e959e88ddc8eb162c
+        Type: BaseDataVariableType
+        DataType: String
+        Value: "OptixAlarms[0].AlarmAuxText"
+    - Name: AlarmHelpText
+      Id: g=bd4ac6391931395d57d0ed3a4ef0499d
+      Type: RAEtherNetIPTag
+      DataType: String
+      Children:
+      - Name: SymbolName
+        Id: g=e961b0fdb7d1510c551731d6b221264f
+        Type: BaseDataVariableType
+        DataType: String
+        Value: "OptixAlarms[0].AlarmHelpText"
+    - Name: OverviewImage
+      Id: g=7a4baf4c743118977166709c16a2df4c
+      Type: RAEtherNetIPTag
+      DataType: String
+      Children:
+      - Name: SymbolName
+        Id: g=0556577e5033edd9c9d13c2d8e802c2c
+        Type: BaseDataVariableType
+        DataType: String
+        Value: "OptixAlarms[0].OverviewImage"
+    - Name: AlarmImage
+      Id: g=3de564551de279681f08fae6ee0e56b2
+      Type: RAEtherNetIPTag
+      DataType: String
+      Children:
+      - Name: SymbolName
+        Id: g=60ea156b39a11a2c6e13405d3a90f836
+        Type: BaseDataVariableType
+        DataType: String
+        Value: "OptixAlarms[0].AlarmImage"
+      - Name: ArrayUpdateMode
+        Id: g=2df1e9ac709db6d961e2d65fbb753bb5
+        Type: BaseDataVariableType
+        DataType: TagArrayUpdateMode
+  - Name: 1
+    Id: g=c4adb8c4d391515d02b46e55cb2eda92
+    Type: OptimateAlarm
+    DataType: OptimateAlarm
+    Children:
+    - Name: SymbolName
+      Id: g=6bc2fa7341c8ea8278e50a6e03d440b6
+      Type: BaseDataVariableType
+      DataType: String
+      Value: "OptixAlarms[1]"
+    - Name: BlockRead
+      Id: g=6bc82aeeba92b4901142805e4352527f
+      Type: BaseDataVariableType
+      DataType: Boolean
+      Value: true
+    - Name: Active
+      Id: g=9590fc0390ebb8ad998a0c4077996048
+      Type: RAEtherNetIPTag
+      DataType: Boolean
+      Children:
+      - Name: SymbolName
+        Id: g=0b9893b9e31e9597548265ca7280a9cb
+        Type: BaseDataVariableType
+        DataType: String
+        Value: "OptixAlarms[1].Active"
+    - Name: Severity
+      Id: g=1557e9df22f26cc643c64cb7f3eb5c34
+      Type: RAEtherNetIPTag
+      DataType: Int16
+      Children:
+      - Name: SymbolName
+        Id: g=73d25595819ae909f3c183f4713f8098
+        Type: BaseDataVariableType
+        DataType: String
+        Value: "OptixAlarms[1].Severity"
+    - Name: Enabled
+      Id: g=2da41af3769cb30d4917d3967508d5cd
+      Type: RAEtherNetIPTag
+      DataType: Boolean
+      Children:
+      - Name: SymbolName
+        Id: g=7a9dabea5d94ceee696a9a33ea600fe3
+        Type: BaseDataVariableType
+        DataType: String
+        Value: "OptixAlarms[1].Enabled"
+    - Name: AlarmText
+      Id: g=dc660d2f8106b88cbf7f35e6c2f11f2f
+      Type: RAEtherNetIPTag
+      DataType: String
+      Children:
+      - Name: SymbolName
+        Id: g=6db2a0b82f12bf18cb4cdd92d5c708cd
+        Type: BaseDataVariableType
+        DataType: String
+        Value: "OptixAlarms[1].AlarmText"
+    - Name: AlarmAuxText
+      Id: g=1660d8960522e847fccd82de71ebb4db
+      Type: RAEtherNetIPTag
+      DataType: String
+      Children:
+      - Name: SymbolName
+        Id: g=796d5d6a91b178be54855990211d6edb
+        Type: BaseDataVariableType
+        DataType: String
+        Value: "OptixAlarms[1].AlarmAuxText"
+    - Name: AlarmHelpText
+      Id: g=e6306f3615ba7f84ea9cc4de01b339e3
+      Type: RAEtherNetIPTag
+      DataType: String
+      Children:
+      - Name: SymbolName
+        Id: g=52501057f0814ca531500b7f06db7b4f
+        Type: BaseDataVariableType
+        DataType: String
+        Value: "OptixAlarms[1].AlarmHelpText"
+    - Name: OverviewImage
+      Id: g=b2904f6aa81ba1309e2c40482acf182c
+      Type: RAEtherNetIPTag
+      DataType: String
+      Children:
+      - Name: SymbolName
+        Id: g=b754e84a900854842efeb5f93ae13b22
+        Type: BaseDataVariableType
+        DataType: String
+        Value: "OptixAlarms[1].OverviewImage"
+    - Name: AlarmImage
+      Id: g=2edfb78a3e7e9adea591ec8bfeb51923
+      Type: RAEtherNetIPTag
+      DataType: String
+      Children:
+      - Name: SymbolName
+        Id: g=9bf2d1884e08dbf282627ec0be8f948d
+        Type: BaseDataVariableType
+        DataType: String
+        Value: "OptixAlarms[1].AlarmImage"
+  - Name: 2
+    Id: g=91001eb1c068e10106f40635d5d13b5f
+    Type: OptimateAlarm
+    DataType: OptimateAlarm
+    Children:
+    - Name: SymbolName
+      Id: g=1d915d05bdee4144dcb1546694ba491e
+      Type: BaseDataVariableType
+      DataType: String
+      Value: "OptixAlarms[2]"
+    - Name: BlockRead
+      Id: g=bd425bb9020aa55bc66499d731473aa2
+      Type: BaseDataVariableType
+      DataType: Boolean
+      Value: true
+    - Name: Active
+      Id: g=5ab0a520cd7c5161b55e2de4fc9ac61c
+      Type: RAEtherNetIPTag
+      DataType: Boolean
+      Children:
+      - Name: SymbolName
+        Id: g=279d268f6096da40e3a553acf52c0337
+        Type: BaseDataVariableType
+        DataType: String
+        Value: "OptixAlarms[2].Active"
+    - Name: Severity
+      Id: g=f45bde2854d9608f1461e3fcf644e808
+      Type: RAEtherNetIPTag
+      DataType: Int16
+      Children:
+      - Name: SymbolName
+        Id: g=4b2ab902254ce2a3a36b2ac26c20625d
+        Type: BaseDataVariableType
+        DataType: String
+        Value: "OptixAlarms[2].Severity"
+    - Name: Enabled
+      Id: g=1c28aace525b7b0c94038a62fb43adba
+      Type: RAEtherNetIPTag
+      DataType: Boolean
+      Children:
+      - Name: SymbolName
+        Id: g=cf36309f3061b515ded9d7c200d668e8
+        Type: BaseDataVariableType
+        DataType: String
+        Value: "OptixAlarms[2].Enabled"
+    - Name: AlarmText
+      Id: g=2ad226497f2f7b70f28f8c4b5826dd1c
+      Type: RAEtherNetIPTag
+      DataType: String
+      Children:
+      - Name: SymbolName
+        Id: g=121526ddb4657511b649d136fdc1f982
+        Type: BaseDataVariableType
+        DataType: String
+        Value: "OptixAlarms[2].AlarmText"
+    - Name: AlarmAuxText
+      Id: g=92d600377c232688ed3a80a3eaa70db7
+      Type: RAEtherNetIPTag
+      DataType: String
+      Children:
+      - Name: SymbolName
+        Id: g=0787dd96dad3dd80b3ec2210591ab33a
+        Type: BaseDataVariableType
+        DataType: String
+        Value: "OptixAlarms[2].AlarmAuxText"
+    - Name: AlarmHelpText
+      Id: g=075166e02632f7edd3b94e9b53d92943
+      Type: RAEtherNetIPTag
+      DataType: String
+      Children:
+      - Name: SymbolName
+        Id: g=43826f640502f9552b150b79bb8d046f
+        Type: BaseDataVariableType
+        DataType: String
+        Value: "OptixAlarms[2].AlarmHelpText"
+    - Name: OverviewImage
+      Id: g=7d4bb7477609fec7c68eb7a0c474a4e9
+      Type: RAEtherNetIPTag
+      DataType: String
+      Children:
+      - Name: SymbolName
+        Id: g=4344fdbd05267654780633595b517d44
+        Type: BaseDataVariableType
+        DataType: String
+        Value: "OptixAlarms[2].OverviewImage"
+    - Name: AlarmImage
+      Id: g=d21c557f1bf7f5bd4dc95821b1c21574
+      Type: RAEtherNetIPTag
+      DataType: String
+      Children:
+      - Name: SymbolName
+        Id: g=f41b529665e70652f744e2b6f0c02f33
+        Type: BaseDataVariableType
+        DataType: String
+        Value: "OptixAlarms[2].AlarmImage"
+  - Name: 3
+    Id: g=1704d5f38d263fcf4f298063e64c2082
+    Type: OptimateAlarm
+    DataType: OptimateAlarm
+    Children:
+    - Name: SymbolName
+      Id: g=6d5616e788cc5affe0d98212533123a0
+      Type: BaseDataVariableType
+      DataType: String
+      Value: "OptixAlarms[3]"
+    - Name: BlockRead
+      Id: g=86cd289cd1d58649373980b43306fe1e
+      Type: BaseDataVariableType
+      DataType: Boolean
+      Value: true
+    - Name: Active
+      Id: g=4d08d538ecc2c701e2073f447c8f7590
+      Type: RAEtherNetIPTag
+      DataType: Boolean
+      Children:
+      - Name: SymbolName
+        Id: g=9e885ffe7ad7a4306dec071ee59ab2a4
+        Type: BaseDataVariableType
+        DataType: String
+        Value: "OptixAlarms[3].Active"
+    - Name: Severity
+      Id: g=4d13af548c772761d2c8d8893f607a5b
+      Type: RAEtherNetIPTag
+      DataType: Int16
+      Children:
+      - Name: SymbolName
+        Id: g=84ee55b906f35cb355c867461f7bc9a5
+        Type: BaseDataVariableType
+        DataType: String
+        Value: "OptixAlarms[3].Severity"
+    - Name: Enabled
+      Id: g=46594ea6c614fd122f4f8968fe5fa93c
+      Type: RAEtherNetIPTag
+      DataType: Boolean
+      Children:
+      - Name: SymbolName
+        Id: g=e4bf52b656f8057b4e711b5af8cdb50d
+        Type: BaseDataVariableType
+        DataType: String
+        Value: "OptixAlarms[3].Enabled"
+    - Name: AlarmText
+      Id: g=6e0a9545a78a09c89e0b8b320891f934
+      Type: RAEtherNetIPTag
+      DataType: String
+      Children:
+      - Name: SymbolName
+        Id: g=d5aa9d2bddc39478a113291c15be4fb2
+        Type: BaseDataVariableType
+        DataType: String
+        Value: "OptixAlarms[3].AlarmText"
+    - Name: AlarmAuxText
+      Id: g=215cf805d5b9c83bb813187960adb886
+      Type: RAEtherNetIPTag
+      DataType: String
+      Children:
+      - Name: SymbolName
+        Id: g=e923a845607ee74eb3b9bc0b5e42a68f
+        Type: BaseDataVariableType
+        DataType: String
+        Value: "OptixAlarms[3].AlarmAuxText"
+    - Name: AlarmHelpText
+      Id: g=42f2e639243eba95d32ef3967c73c896
+      Type: RAEtherNetIPTag
+      DataType: String
+      Children:
+      - Name: SymbolName
+        Id: g=87bdcc6609aecd25f1dee798a5dffbd1
+        Type: BaseDataVariableType
+        DataType: String
+        Value: "OptixAlarms[3].AlarmHelpText"
+    - Name: OverviewImage
+      Id: g=4ecbcd7ab2f0965e32d00e82ce59ed16
+      Type: RAEtherNetIPTag
+      DataType: String
+      Children:
+      - Name: SymbolName
+        Id: g=1cf122437d84345781e6b5bf47e39ba8
+        Type: BaseDataVariableType
+        DataType: String
+        Value: "OptixAlarms[3].OverviewImage"
+    - Name: AlarmImage
+      Id: g=1f3128c1032bf399fd591b086032e047
+      Type: RAEtherNetIPTag
+      DataType: String
+      Children:
+      - Name: SymbolName
+        Id: g=664a6fc22e1fb103ae9f485b6ab508a4
+        Type: BaseDataVariableType
+        DataType: String
+        Value: "OptixAlarms[3].AlarmImage"
+  - Name: 4
+    Id: g=63477d273ae9dec816c30b41b410e721
+    Type: OptimateAlarm
+    DataType: OptimateAlarm
+    Children:
+    - Name: SymbolName
+      Id: g=f2bb1aded731577bfee74997ea2f8a36
+      Type: BaseDataVariableType
+      DataType: String
+      Value: "OptixAlarms[4]"
+    - Name: BlockRead
+      Id: g=dd45d8191dec08342231cdd82ce89d88
+      Type: BaseDataVariableType
+      DataType: Boolean
+      Value: true
+    - Name: Active
+      Id: g=b3d0d3186e99802d0767352a2366bb10
+      Type: RAEtherNetIPTag
+      DataType: Boolean
+      Children:
+      - Name: SymbolName
+        Id: g=a25b6639158342be7f9ec948a2a6ab3d
+        Type: BaseDataVariableType
+        DataType: String
+        Value: "OptixAlarms[4].Active"
+    - Name: Severity
+      Id: g=8b5edc028df69eefc2166d3ff4a379c2
+      Type: RAEtherNetIPTag
+      DataType: Int16
+      Children:
+      - Name: SymbolName
+        Id: g=241812bba4f0e4851797218ac37feab0
+        Type: BaseDataVariableType
+        DataType: String
+        Value: "OptixAlarms[4].Severity"
+    - Name: Enabled
+      Id: g=b54a2d80d19783514cf2315236a7f111
+      Type: RAEtherNetIPTag
+      DataType: Boolean
+      Children:
+      - Name: SymbolName
+        Id: g=93336e36a222a6e75da9a30ab8986ee7
+        Type: BaseDataVariableType
+        DataType: String
+        Value: "OptixAlarms[4].Enabled"
+    - Name: AlarmText
+      Id: g=99181944c7aeb22d647eaa6ea166f0d2
+      Type: RAEtherNetIPTag
+      DataType: String
+      Children:
+      - Name: SymbolName
+        Id: g=845327a51aa3b4ec0c3e16281c420069
+        Type: BaseDataVariableType
+        DataType: String
+        Value: "OptixAlarms[4].AlarmText"
+    - Name: AlarmAuxText
+      Id: g=127984d56e4fb6671a58e9e484ccdf19
+      Type: RAEtherNetIPTag
+      DataType: String
+      Children:
+      - Name: SymbolName
+        Id: g=a2a0ed15a5d6cb794f6e3fd231c3b1a7
+        Type: BaseDataVariableType
+        DataType: String
+        Value: "OptixAlarms[4].AlarmAuxText"
+    - Name: AlarmHelpText
+      Id: g=6267c4c790278d12000e83e9e05337d4
+      Type: RAEtherNetIPTag
+      DataType: String
+      Children:
+      - Name: SymbolName
+        Id: g=faf66c5679df6509b55642f0f0317613
+        Type: BaseDataVariableType
+        DataType: String
+        Value: "OptixAlarms[4].AlarmHelpText"
+    - Name: OverviewImage
+      Id: g=a4a0a76e90540abe4150cb7547f5bba3
+      Type: RAEtherNetIPTag
+      DataType: String
+      Children:
+      - Name: SymbolName
+        Id: g=0f8eabd3466947354282cf97eaa6074e
+        Type: BaseDataVariableType
+        DataType: String
+        Value: "OptixAlarms[4].OverviewImage"
+    - Name: AlarmImage
+      Id: g=63a0f078a086ca8a2d6b2306e4fb5179
+      Type: RAEtherNetIPTag
+      DataType: String
+      Children:
+      - Name: SymbolName
+        Id: g=053f8e7f2f9b41e9365954bb4d24e75f
+        Type: BaseDataVariableType
+        DataType: String
+        Value: "OptixAlarms[4].AlarmImage"
+  - Name: 5
+    Id: g=8b108bc2c7e34b9dd02220650e989feb
+    Type: OptimateAlarm
+    DataType: OptimateAlarm
+    Children:
+    - Name: SymbolName
+      Id: g=a9b906046bac1619505679471773755e
+      Type: BaseDataVariableType
+      DataType: String
+      Value: "OptixAlarms[5]"
+    - Name: BlockRead
+      Id: g=a05b5260623311d72c3cd8d01c800b96
+      Type: BaseDataVariableType
+      DataType: Boolean
+      Value: true
+    - Name: Active
+      Id: g=0335d423f3537c6a65ef1d8f5c768b90
+      Type: RAEtherNetIPTag
+      DataType: Boolean
+      Children:
+      - Name: SymbolName
+        Id: g=79763edc77fd311609598d353ca5ce39
+        Type: BaseDataVariableType
+        DataType: String
+        Value: "OptixAlarms[5].Active"
+    - Name: Severity
+      Id: g=97fad3b82a068e08c327d1e6783029ce
+      Type: RAEtherNetIPTag
+      DataType: Int16
+      Children:
+      - Name: SymbolName
+        Id: g=66235253f1b92bcba4ab3e3473b07895
+        Type: BaseDataVariableType
+        DataType: String
+        Value: "OptixAlarms[5].Severity"
+    - Name: Enabled
+      Id: g=5e05facaf9142becfd775fe1bfffdbe5
+      Type: RAEtherNetIPTag
+      DataType: Boolean
+      Children:
+      - Name: SymbolName
+        Id: g=e84c0974b5efae84893ec751aee723f2
+        Type: BaseDataVariableType
+        DataType: String
+        Value: "OptixAlarms[5].Enabled"
+    - Name: AlarmText
+      Id: g=f10fb074dabeb7ae1595d06b70886f91
+      Type: RAEtherNetIPTag
+      DataType: String
+      Children:
+      - Name: SymbolName
+        Id: g=1fa8e2d5e8df183afcf9088ed6130591
+        Type: BaseDataVariableType
+        DataType: String
+        Value: "OptixAlarms[5].AlarmText"
+    - Name: AlarmAuxText
+      Id: g=6bd783ae2e468610a1c972254eb584d3
+      Type: RAEtherNetIPTag
+      DataType: String
+      Children:
+      - Name: SymbolName
+        Id: g=e9b771341a3d44873d95972f0a9e0357
+        Type: BaseDataVariableType
+        DataType: String
+        Value: "OptixAlarms[5].AlarmAuxText"
+    - Name: AlarmHelpText
+      Id: g=81768555bef28e845f97121a9b6153ed
+      Type: RAEtherNetIPTag
+      DataType: String
+      Children:
+      - Name: SymbolName
+        Id: g=ff2d549cb841933a5b13ce87c713c03b
+        Type: BaseDataVariableType
+        DataType: String
+        Value: "OptixAlarms[5].AlarmHelpText"
+    - Name: OverviewImage
+      Id: g=767ebdb5ca09d554e3c9081c7058fcbf
+      Type: RAEtherNetIPTag
+      DataType: String
+      Children:
+      - Name: SymbolName
+        Id: g=4e74ce370cbbd145aec93a0c49c25b94
+        Type: BaseDataVariableType
+        DataType: String
+        Value: "OptixAlarms[5].OverviewImage"
+    - Name: AlarmImage
+      Id: g=b96cc0d5691fb10f4682a3736f360315
+      Type: RAEtherNetIPTag
+      DataType: String
+      Children:
+      - Name: SymbolName
+        Id: g=1fe5bce16fffad3fdc4694d4ecd73164
+        Type: BaseDataVariableType
+        DataType: String
+        Value: "OptixAlarms[5].AlarmImage"
+  - Name: 6
+    Id: g=aaa4ea5d3e1548e22157ed06d0d15b4a
+    Type: OptimateAlarm
+    DataType: OptimateAlarm
+    Children:
+    - Name: SymbolName
+      Id: g=322a4b96b88466de0dc9d061bcefd2a7
+      Type: BaseDataVariableType
+      DataType: String
+      Value: "OptixAlarms[6]"
+    - Name: BlockRead
+      Id: g=18182aea76bdeb3b9a14412d2f0b2266
+      Type: BaseDataVariableType
+      DataType: Boolean
+      Value: true
+    - Name: Active
+      Id: g=67d7a9db479e2c08f4b9ac404d02f679
+      Type: RAEtherNetIPTag
+      DataType: Boolean
+      Children:
+      - Name: SymbolName
+        Id: g=db1def12346e3746d275ffaf07b59403
+        Type: BaseDataVariableType
+        DataType: String
+        Value: "OptixAlarms[6].Active"
+    - Name: Severity
+      Id: g=f1426f715e60329a8ef36ae8e291ce27
+      Type: RAEtherNetIPTag
+      DataType: Int16
+      Children:
+      - Name: SymbolName
+        Id: g=94dc2d0136345b5f89ea7994d122a17d
+        Type: BaseDataVariableType
+        DataType: String
+        Value: "OptixAlarms[6].Severity"
+    - Name: Enabled
+      Id: g=12e6e1423f30c2f56a71bc28eeb29eff
+      Type: RAEtherNetIPTag
+      DataType: Boolean
+      Children:
+      - Name: SymbolName
+        Id: g=696e81bc3b1450caa1992d49ffd6d563
+        Type: BaseDataVariableType
+        DataType: String
+        Value: "OptixAlarms[6].Enabled"
+    - Name: AlarmText
+      Id: g=4758aeea556c2e30baecf06e8227386e
+      Type: RAEtherNetIPTag
+      DataType: String
+      Children:
+      - Name: SymbolName
+        Id: g=400e11da6aa52ef1900f53b8ae010e0c
+        Type: BaseDataVariableType
+        DataType: String
+        Value: "OptixAlarms[6].AlarmText"
+    - Name: AlarmAuxText
+      Id: g=d3138bfb4a9b3618aeb4aea2c30509cf
+      Type: RAEtherNetIPTag
+      DataType: String
+      Children:
+      - Name: SymbolName
+        Id: g=f638e1d38ae328b90e2d721a94294121
+        Type: BaseDataVariableType
+        DataType: String
+        Value: "OptixAlarms[6].AlarmAuxText"
+    - Name: AlarmHelpText
+      Id: g=390fdd00fd464e2625fe13ea6b10eb2a
+      Type: RAEtherNetIPTag
+      DataType: String
+      Children:
+      - Name: SymbolName
+        Id: g=3e9ef5af067d02a3e38665c7f897c389
+        Type: BaseDataVariableType
+        DataType: String
+        Value: "OptixAlarms[6].AlarmHelpText"
+    - Name: OverviewImage
+      Id: g=de59aa64f17da680de7d78a7bba77989
+      Type: RAEtherNetIPTag
+      DataType: String
+      Children:
+      - Name: SymbolName
+        Id: g=68b0613a7d4d8086811c54703beb43f8
+        Type: BaseDataVariableType
+        DataType: String
+        Value: "OptixAlarms[6].OverviewImage"
+    - Name: AlarmImage
+      Id: g=bb3df00eb9c05d2c7f43777fe964273d
+      Type: RAEtherNetIPTag
+      DataType: String
+      Children:
+      - Name: SymbolName
+        Id: g=6aac1736fe67a57aa8f58507ccd20e66
+        Type: BaseDataVariableType
+        DataType: String
+        Value: "OptixAlarms[6].AlarmImage"
+  - Name: 7
+    Id: g=73b0c99a3112edc741024f4730cbef61
+    Type: OptimateAlarm
+    DataType: OptimateAlarm
+    Children:
+    - Name: SymbolName
+      Id: g=f63fc23cc4fde6999227bf32a2675df2
+      Type: BaseDataVariableType
+      DataType: String
+      Value: "OptixAlarms[7]"
+    - Name: BlockRead
+      Id: g=5a97e8848edbe5f50bf02371a4903e0f
+      Type: BaseDataVariableType
+      DataType: Boolean
+      Value: true
+    - Name: Active
+      Id: g=eec7a29e62669870cf71da456019d542
+      Type: RAEtherNetIPTag
+      DataType: Boolean
+      Children:
+      - Name: SymbolName
+        Id: g=22de1e550377c2867ab34fa03e908d91
+        Type: BaseDataVariableType
+        DataType: String
+        Value: "OptixAlarms[7].Active"
+    - Name: Severity
+      Id: g=d98b6d29a31a46baca16d918bb3a8ad9
+      Type: RAEtherNetIPTag
+      DataType: Int16
+      Children:
+      - Name: SymbolName
+        Id: g=c441572590f06349ed47f62905d737d8
+        Type: BaseDataVariableType
+        DataType: String
+        Value: "OptixAlarms[7].Severity"
+    - Name: Enabled
+      Id: g=d3411a7ba8e4fc6fc7a8568e24b94d37
+      Type: RAEtherNetIPTag
+      DataType: Boolean
+      Children:
+      - Name: SymbolName
+        Id: g=2ae5e36114fcb39d190bc69650b697a9
+        Type: BaseDataVariableType
+        DataType: String
+        Value: "OptixAlarms[7].Enabled"
+    - Name: AlarmText
+      Id: g=c88f7b473ffd2232df668d363dd9ff87
+      Type: RAEtherNetIPTag
+      DataType: String
+      Children:
+      - Name: SymbolName
+        Id: g=ead8511218b34c1d565f4a11c0c7568e
+        Type: BaseDataVariableType
+        DataType: String
+        Value: "OptixAlarms[7].AlarmText"
+    - Name: AlarmAuxText
+      Id: g=7140a08061da43e91265bbf7817f17b9
+      Type: RAEtherNetIPTag
+      DataType: String
+      Children:
+      - Name: SymbolName
+        Id: g=4c01d7ab65aad7e82df35b7efa532081
+        Type: BaseDataVariableType
+        DataType: String
+        Value: "OptixAlarms[7].AlarmAuxText"
+    - Name: AlarmHelpText
+      Id: g=3ab7dc0dc0c0771143e97d6202d74da2
+      Type: RAEtherNetIPTag
+      DataType: String
+      Children:
+      - Name: SymbolName
+        Id: g=df7b60994073b2bea87d85326eef5da1
+        Type: BaseDataVariableType
+        DataType: String
+        Value: "OptixAlarms[7].AlarmHelpText"
+    - Name: OverviewImage
+      Id: g=65da962b0f252a50bbcc38d9ec8c78c1
+      Type: RAEtherNetIPTag
+      DataType: String
+      Children:
+      - Name: SymbolName
+        Id: g=d79744ad556014a4daff81963db3a10a
+        Type: BaseDataVariableType
+        DataType: String
+        Value: "OptixAlarms[7].OverviewImage"
+    - Name: AlarmImage
+      Id: g=74032561947cd8ab47e1f3c652e0e7b1
+      Type: RAEtherNetIPTag
+      DataType: String
+      Children:
+      - Name: SymbolName
+        Id: g=3fd3a38598d19a0d75a5a73dd139929f
+        Type: BaseDataVariableType
+        DataType: String
+        Value: "OptixAlarms[7].AlarmImage"
+  - Name: 8
+    Id: g=165084b251677dd4038c3754f2d02aae
+    Type: OptimateAlarm
+    DataType: OptimateAlarm
+    Children:
+    - Name: SymbolName
+      Id: g=314c1dec9d334091c9e53782af95ea30
+      Type: BaseDataVariableType
+      DataType: String
+      Value: "OptixAlarms[8]"
+    - Name: BlockRead
+      Id: g=76a353cce2aa43bd502eb74df164d511
+      Type: BaseDataVariableType
+      DataType: Boolean
+      Value: true
+    - Name: Active
+      Id: g=714583ce2bd9d35baf8165c8f2aac38f
+      Type: RAEtherNetIPTag
+      DataType: Boolean
+      Children:
+      - Name: SymbolName
+        Id: g=0afb346410f3a0e32bf278a20afca86c
+        Type: BaseDataVariableType
+        DataType: String
+        Value: "OptixAlarms[8].Active"
+    - Name: Severity
+      Id: g=144fb3d35b05975edf5d9623abc6c60e
+      Type: RAEtherNetIPTag
+      DataType: Int16
+      Children:
+      - Name: SymbolName
+        Id: g=d43467ef934dce452238d4fa801ff0a9
+        Type: BaseDataVariableType
+        DataType: String
+        Value: "OptixAlarms[8].Severity"
+    - Name: Enabled
+      Id: g=eadabf87bc7e15a1567b795bb1e711be
+      Type: RAEtherNetIPTag
+      DataType: Boolean
+      Children:
+      - Name: SymbolName
+        Id: g=d76e52a05d4643543f27bea2a91c3219
+        Type: BaseDataVariableType
+        DataType: String
+        Value: "OptixAlarms[8].Enabled"
+    - Name: AlarmText
+      Id: g=ac3db2f22addf83bb218a53a374097bb
+      Type: RAEtherNetIPTag
+      DataType: String
+      Children:
+      - Name: SymbolName
+        Id: g=b3533e58f218b2f18c30f1a10e53f90c
+        Type: BaseDataVariableType
+        DataType: String
+        Value: "OptixAlarms[8].AlarmText"
+    - Name: AlarmAuxText
+      Id: g=4b0e03108eb5185fd127e8608c8848b2
+      Type: RAEtherNetIPTag
+      DataType: String
+      Children:
+      - Name: SymbolName
+        Id: g=3ee64abf82e462cfdfe16ce8988c979b
+        Type: BaseDataVariableType
+        DataType: String
+        Value: "OptixAlarms[8].AlarmAuxText"
+    - Name: AlarmHelpText
+      Id: g=6275a19794de1378d231a8b7970a512b
+      Type: RAEtherNetIPTag
+      DataType: String
+      Children:
+      - Name: SymbolName
+        Id: g=c2f4dbafccf1f8fd5065c90d50217f0b
+        Type: BaseDataVariableType
+        DataType: String
+        Value: "OptixAlarms[8].AlarmHelpText"
+    - Name: OverviewImage
+      Id: g=6156cbd5c43267dcf530ab9fa32680f2
+      Type: RAEtherNetIPTag
+      DataType: String
+      Children:
+      - Name: SymbolName
+        Id: g=af47f7fdd87dae692f16897af09b2b28
+        Type: BaseDataVariableType
+        DataType: String
+        Value: "OptixAlarms[8].OverviewImage"
+    - Name: AlarmImage
+      Id: g=e8222fe5be16eb82150d3e76ff3e4a6a
+      Type: RAEtherNetIPTag
+      DataType: String
+      Children:
+      - Name: SymbolName
+        Id: g=c9c12834a65ccd74bc369b1fa59484d5
+        Type: BaseDataVariableType
+        DataType: String
+        Value: "OptixAlarms[8].AlarmImage"
+  - Name: 9
+    Id: g=409ad4d2db7f0a69669b26eb1fc7c792
+    Type: OptimateAlarm
+    DataType: OptimateAlarm
+    Children:
+    - Name: SymbolName
+      Id: g=b788829b3e2867a2b0cf63387effa4af
+      Type: BaseDataVariableType
+      DataType: String
+      Value: "OptixAlarms[9]"
+    - Name: BlockRead
+      Id: g=ebd6b9a6a1ee125999aa45b23e2f8988
+      Type: BaseDataVariableType
+      DataType: Boolean
+      Value: true
+    - Name: Active
+      Id: g=91c8712858afe1d4d4b833ff51810d19
+      Type: RAEtherNetIPTag
+      DataType: Boolean
+      Children:
+      - Name: SymbolName
+        Id: g=76289afa66aa7c5e40f570e47aefb4b1
+        Type: BaseDataVariableType
+        DataType: String
+        Value: "OptixAlarms[9].Active"
+    - Name: Severity
+      Id: g=51b42a67135903d83b61710b91c1bf98
+      Type: RAEtherNetIPTag
+      DataType: Int16
+      Children:
+      - Name: SymbolName
+        Id: g=dacab5b3c7eee4d5db6ff4c08e3080c2
+        Type: BaseDataVariableType
+        DataType: String
+        Value: "OptixAlarms[9].Severity"
+    - Name: Enabled
+      Id: g=5bc70d41c51c76801eafa87d233c4226
+      Type: RAEtherNetIPTag
+      DataType: Boolean
+      Children:
+      - Name: SymbolName
+        Id: g=1df136a5343359aa22839c12ebf11712
+        Type: BaseDataVariableType
+        DataType: String
+        Value: "OptixAlarms[9].Enabled"
+    - Name: AlarmText
+      Id: g=bc77e4b552b712e555abc1d9b8394e0e
+      Type: RAEtherNetIPTag
+      DataType: String
+      Children:
+      - Name: SymbolName
+        Id: g=38f0520fa7bf5273f3cfd1bfc11bf8c5
+        Type: BaseDataVariableType
+        DataType: String
+        Value: "OptixAlarms[9].AlarmText"
+    - Name: AlarmAuxText
+      Id: g=47b58dfdf17dd573e1cb6be41e2ac20d
+      Type: RAEtherNetIPTag
+      DataType: String
+      Children:
+      - Name: SymbolName
+        Id: g=7009aa3041e8e8816ae21588df279615
+        Type: BaseDataVariableType
+        DataType: String
+        Value: "OptixAlarms[9].AlarmAuxText"
+    - Name: AlarmHelpText
+      Id: g=e7dd36d161796aa0e31b3c79607a7700
+      Type: RAEtherNetIPTag
+      DataType: String
+      Children:
+      - Name: SymbolName
+        Id: g=fd11638c3cf903b1b31ece87621e867d
+        Type: BaseDataVariableType
+        DataType: String
+        Value: "OptixAlarms[9].AlarmHelpText"
+    - Name: OverviewImage
+      Id: g=34b8bbec887d0993ab23cbf56de873f5
+      Type: RAEtherNetIPTag
+      DataType: String
+      Children:
+      - Name: SymbolName
+        Id: g=d7a74247b9f445450be2cf49b54242f8
+        Type: BaseDataVariableType
+        DataType: String
+        Value: "OptixAlarms[9].OverviewImage"
+    - Name: AlarmImage
+      Id: g=6839dea04e4c125deea5f3d7cd340cee
+      Type: RAEtherNetIPTag
+      DataType: String
+      Children:
+      - Name: SymbolName
+        Id: g=29791ffa6f90ac6fc3c1a165bc7b51af
+        Type: BaseDataVariableType
+        DataType: String
+        Value: "OptixAlarms[9].AlarmImage"
 - Name: OI_AlarmTime
   Id: g=6a8f6c422de94e70ffb62046ae58065a
   Type: RAEtherNetIPTag

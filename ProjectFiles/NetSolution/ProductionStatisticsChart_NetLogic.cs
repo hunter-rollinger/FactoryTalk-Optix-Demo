@@ -11,6 +11,7 @@ using FTOptix.SerialPort;
 using FTOptix.OPCUAServer;
 using FTOptix.System;
 using FTOptix.HMIProject;
+using FTOptix.DataLogger;
 #endregion
 
 public class ProductionStatisticsChart_NetLogic : BaseNetLogic

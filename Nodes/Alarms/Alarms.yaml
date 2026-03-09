@@ -6,8 +6,8 @@ Children:
 - File: Warnings/Warnings.yaml
 - File: Status/Status.yaml
 - File: Messages/Messages.yaml
-- File: Testing/Testing.yaml
-- Name: OptimateAlarm
+- File: AlarmSeverity/AlarmSeverity.yaml
+- Name: CustomAlarm
   Id: g=cad23cc01859ccdb433eb4694398e887
   Supertype: OffNormalAlarmController
   Children:
@@ -87,8 +87,20 @@ Children:
     Id: g=984319730cf010894f6e8bc91bb0f847
     Type: BaseDataVariableType
     DataType: UInt16
-    ModellingRule: Optional
     Value: 1000
+    Children:
+    - Name: DynamicLink
+      Id: g=7b8300adec3b6cb518be87f98c484113
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "/Objects/OptimateDemoProject/Alarms/AlarmSeverity/Alarm"
+      Children:
+      - Name: Mode
+        Id: g=0d1efd9842d073d48b54427a1f6c7dda
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        ModellingRule: Optional
+        Value: 2
   - Name: Message
     Id: g=216c989f6073e99113ab46cb19eef247
     Type: BaseDataVariableType
@@ -120,23 +132,21 @@ Children:
     Id: g=d5d5af69abb4324e049df1703cb6ade3
     Type: BaseDataVariableType
     DataType: ResourceUri
-    Description: {"LocaleId":"en-US","Text":"Image Path"}
   - Name: Overview
     Id: g=2337c71007e312726d34b9c03153f532
     Type: BaseDataVariableType
     DataType: ResourceUri
-    Description: {"LocaleId":"en-US","Text":"Image Path"}
-  - Name: Timestamp
-    Id: g=f80ae271cda38e93beba410c9b8ed498
-    Type: BaseDataVariableType
-    DataType: DateTime
   - Name: Enabled
     Id: g=95c22146e3ea862513506761d3e9ca84
     Type: BaseDataVariableType
     DataType: Boolean
     ModellingRule: Optional
     Value: true
-- Name: OptimateWarning
+  - Name: Timestamp
+    Id: g=9ce9944d23cf28bbacd1983104b3d6d3
+    Type: BaseDataVariableType
+    DataType: DateTime
+- Name: CustomWarning
   Id: g=bb5928a79adae253341d86267f2f8c8d
   Supertype: OffNormalAlarmController
   Children:
@@ -216,8 +226,20 @@ Children:
     Id: g=983b9a4a0e9c0ac31fb9c7873c894b8c
     Type: BaseDataVariableType
     DataType: UInt16
-    ModellingRule: Optional
     Value: 100
+    Children:
+    - Name: DynamicLink
+      Id: g=555f941a370f35f84ba9e2f2447b1cda
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "/Objects/OptimateDemoProject/Alarms/AlarmSeverity/Warning"
+      Children:
+      - Name: Mode
+        Id: g=34601fdf6c9b1927e2886798a0f1316b
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        ModellingRule: Optional
+        Value: 2
   - Name: Message
     Id: g=8c7fa6bc24e8c193a864693df0d3ec37
     Type: BaseDataVariableType
@@ -251,7 +273,7 @@ Children:
     DataType: Boolean
     ModellingRule: Optional
     Value: true
-- Name: OptimateStatus
+- Name: CustomStatus
   Id: g=05e862619b891247738e0618931b3d0e
   Supertype: OffNormalAlarmController
   Children:
@@ -331,8 +353,20 @@ Children:
     Id: g=9daa8f03a41fbc42d6b7809468cc18cf
     Type: BaseDataVariableType
     DataType: UInt16
-    ModellingRule: Optional
     Value: 10
+    Children:
+    - Name: DynamicLink
+      Id: g=b0ab82b9e4d1240caa4c898ab7c732c6
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "/Objects/OptimateDemoProject/Alarms/AlarmSeverity/Status"
+      Children:
+      - Name: Mode
+        Id: g=5bd68ef5f6cda1b917f6feb6c92bf92d
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        ModellingRule: Optional
+        Value: 2
   - Name: Message
     Id: g=7f5f2dba82978d561a4182116f38177e
     Type: BaseDataVariableType
@@ -366,7 +400,7 @@ Children:
     DataType: Boolean
     ModellingRule: Optional
     Value: true
-- Name: OptimateMessage
+- Name: CustomMessage
   Id: g=598895e89105a56f1d85c90d08f46a7b
   Supertype: OffNormalAlarmController
   Children:
@@ -446,8 +480,20 @@ Children:
     Id: g=784be84d755504b9f3d7e7d91900081c
     Type: BaseDataVariableType
     DataType: UInt16
-    ModellingRule: Optional
     Value: 1
+    Children:
+    - Name: DynamicLink
+      Id: g=4d5380bf375b0f7a36777ee417f25d57
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "/Objects/OptimateDemoProject/Alarms/AlarmSeverity/Message"
+      Children:
+      - Name: Mode
+        Id: g=23a33c70b2e506cf0425e87f60a45b40
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        ModellingRule: Optional
+        Value: 2
   - Name: Message
     Id: g=622682c83e1749f451943af5f03d96ef
     Type: BaseDataVariableType

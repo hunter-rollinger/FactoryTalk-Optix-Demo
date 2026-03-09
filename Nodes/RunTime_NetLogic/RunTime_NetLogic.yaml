@@ -17,7 +17,7 @@ Children:
       Id: g=8bce697dd521fdbefe8273c1a538c4d4
       Type: PropertyType
       DataType: NodeId
-      Value: "/Objects/OptimateDemoProject/AlarmTypes/AlarmType_OptimateAlarm"
+      Value: "/Objects/OptimateDemoProject/AlarmTypes/AlarmType_CustomAlarm"
   - Name: LatestAlarm
     Id: g=7da0fcac6bcceeb07afab8e7d18ea2b7
     Type: NodePointer
@@ -28,7 +28,7 @@ Children:
       Id: g=49a0f209670a27e2c178fb2ef54ce9fc
       Type: PropertyType
       DataType: NodeId
-      Value: "/Objects/OptimateDemoProject/AlarmTypes/AlarmType_OptimateAlarm"
+      Value: "/Objects/OptimateDemoProject/AlarmTypes/AlarmType_CustomAlarm"
   - Name: AlarmCount
     Id: g=196926262f2e2ce2947d3dab353c5245
     Type: BaseDataVariableType
@@ -44,7 +44,7 @@ Children:
       Id: g=3ad3be9ef7345cb2dea0f9bb525b2439
       Type: PropertyType
       DataType: NodeId
-      Value: "/Objects/OptimateDemoProject/AlarmTypes/AlarmType_OptimateAlarm"
+      Value: "/Objects/OptimateDemoProject/AlarmTypes/AlarmType_CustomAlarm"
     - Name: NodeClass
       Id: g=4ce80829793d9c07ed9baf2cd4d2e3a2
       Type: PropertyType
@@ -64,6 +64,117 @@ Children:
     Id: g=fba0a44c7373d58b3f9301783395e480
     Type: BaseDataVariableType
     DataType: Boolean
+  - Name: BurgerMenuScreen
+    Id: g=354fa6ec877371883a46040f8011e2a5
+    Type: BaseDataVariableType
+    DataType: NodeId
+    Children:
+    - Name: DynamicLink
+      Id: g=80a70e8ab8d844feeef4a397dedf1b4d
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "{ApplicationWindow}/BurgerMenu@NodeId"
+      Children:
+      - Name: Mode
+        Id: g=2d970a738b65fa35db605cf68d36ac0b
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        Value: 2
+  - Name: DebugMenu
+    Id: g=25f5a32dc4cc7f608d58f44d4b554631
+    Type: BaseDataVariableType
+    DataType: NodeId
+    Children:
+    - Name: DynamicLink
+      Id: g=3aa74e89f08fd93890ecaa2e98606682
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "{ApplicationWindow}/Debug_Menu@NodeId"
+      Children:
+      - Name: Mode
+        Id: g=369066c9f724d26012849a535704b58f
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        Value: 2
+  - Name: StandardQuickInfo
+    Id: g=84912ed004b26e26975442e59859e639
+    Type: BaseDataVariableType
+    DataType: NodeId
+    Children:
+    - Name: DynamicLink
+      Id: g=9f049ca1907a8fdb24f2ae3f3c18ff7f
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "{ApplicationWindow}/Standard_Content_Container/VerticalLayout/Main_Content_Container/StandardQuickInfo@NodeId"
+      Children:
+      - Name: Mode
+        Id: g=c5aac9e04438e684f6e8447ec35f2cb1
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        Value: 2
+  - Name: ApplicationWindow
+    Id: g=cd8b3ef0b4020166d7494fc6f55fb736
+    Type: Alias
+    DataType: NodeId
+    Value: "/Objects/OptimateDemoProject/UI/ApplicationWindow"
+    Children:
+    - Name: Kind
+      Id: g=501f851277d3808e13173f3b5c0a0852
+      Type: PropertyType
+      DataType: NodeId
+      Value: "/Objects/OptimateDemoProject/UI/ApplicationWindow"
+  - Name: EmptyScreen
+    Id: g=fdb64c06a265dce47ad552005d07e53e
+    Type: BaseDataVariableType
+    DataType: NodeId
+    Value: "/Objects/OptimateDemoProject/UI/Screens/Base Screens/Empty"
+  - Name: AlarmSeverityLevel
+    Id: g=cf9950d71deb56d9a600e3c8abd80d91
+    Type: BaseDataVariableType
+    DataType: Int32
+    Children:
+    - Name: DynamicLink
+      Id: g=93ab81ad17c5b3ad15b57fda551ca0d1
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "../../../Alarms/AlarmSeverity/Alarm"
+      Children:
+      - Name: Mode
+        Id: g=d79663ab3ee58b4adb745f9d17370ec8
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        Value: 2
+  - Name: AlarmsDatabase
+    Id: g=b7db7f7b78b5ffd91507e13c27a4f04d
+    Type: BaseDataVariableType
+    DataType: NodeId
+    Children:
+    - Name: DynamicLink
+      Id: g=7b843287e443bf5ffcd7bc6a51b85152
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "../../../DataStores/Alarms"
+      Children:
+      - Name: Mode
+        Id: g=4c696daae766d23ffdc011f7ad484aac
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        Value: 2
+  - Name: DBTargetTable
+    Id: g=de3ac95181fa63054871c37e94248139
+    Type: BaseDataVariableType
+    DataType: NodeId
+    Value: "/Objects/OptimateDemoProject/DataStores/Alarms/Tables/CustomAlarmHistory"
+  - Name: DBSourceTable
+    Id: g=c267dc6d4e5f9649ea90baa6bfcadea1
+    Type: BaseDataVariableType
+    DataType: NodeId
+    Value: "/Objects/OptimateDemoProject/DataStores/Alarms/Tables/AlarmsEventLogger"
+  - Name: AlarmNodeIdColumn
+    Id: g=a92f57e7f90461d19261e3598ba213d0
+    Type: BaseDataVariableType
+    DataType: NodeId
+    Value: "/Objects/OptimateDemoProject/DataStores/Alarms/Tables/AlarmsEventLogger/Columns/AlarmNodeId"
 - File: System_Information_Collection/System_Information_Collection.yaml
 - Name: ConstrainedVariablesVerifier
   Id: g=6930795d61f8e2338ca11b8871398dc8
