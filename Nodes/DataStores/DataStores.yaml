@@ -10,54 +10,6 @@ Children:
     Id: g=6f84538a360b77714076b123bc968622
     Type: BaseObjectType
     Children:
-    - Name: CustomAlarmHistory
-      Id: g=9773562c6e5eb2995f6823bdd273399a
-      Type: SQLiteStoreTable
-      Children:
-      - Class: Reference
-        Target: ns=15;i=12
-        Direction: Forward
-      - Class: Reference
-        Target: ns=15;i=15
-        Direction: Forward
-      - Class: Reference
-        Target: ns=15;i=21
-        Direction: Forward
-      - Class: Reference
-        Target: ns=15;i=20
-        Direction: Forward
-      - Name: Columns
-        Id: g=8cd13d58c781a58271175af55c4f609e
-        Type: BaseObjectType
-        Children:
-        - Name: Severity
-          Id: g=0477f4200b5b27127a16401dc3a763e8
-          Type: StoreColumn
-          DataType: UInt16
-        - Name: Message
-          Id: g=122e7ccd18da3b313d79074e175dfce8
-          Type: StoreColumn
-          DataType: String
-        - Name: Comment
-          Id: g=bb3ed22aa96ab935cb9a1f6fe2c05022
-          Type: StoreColumn
-          DataType: String
-        - Name: LocalReceived
-          Id: g=11ecfc01474ce88c60460fa5e5c79ed5
-          Type: StoreColumn
-          DataType: DateTime
-        - Name: LocalCleared
-          Id: g=05e1fec88afa917cd757d378b2686df9
-          Type: StoreColumn
-          DataType: DateTime
-        - Name: UtcReceived
-          Id: g=2c1ad588b070c379102cd75877a3ecff
-          Type: StoreColumn
-          DataType: UtcTime
-        - Name: UtcCleared
-          Id: g=a8de65abbd9e511425c8c20663d3cc52
-          Type: StoreColumn
-          DataType: UtcTime
     - Name: AlarmsEventLogger
       Id: g=eb7475fb79311852dadd2a454f6d3aa2
       Type: SQLiteStoreTable
@@ -130,10 +82,19 @@ Children:
           Id: g=a1ef2829b4dcdd39a87dba5059e8929c
           Type: StoreColumn
           DataType: DateTime
+        - Name: ReceiveTime
+          Id: g=abfd3bd57ef45fab06226bc24ac40dbd
+          Type: StoreColumn
+          DataType: UtcTime
         - Name: AlarmNodeId
-          Id: g=da3605814d8d3c8426efd072c8f0e1b3
+          Id: g=10574329456c771c49494cc2a7dca211
           Type: StoreColumn
           DataType: String
+      - Name: RecordLimit
+        Id: g=94e7a4e3e5ebc89d6169338fc82d8009
+        Type: BaseDataVariableType
+        DataType: UInt32
+        Value: 100000
   - Class: Reference
     Target: ns=29;i=30
     Direction: Forward
@@ -203,36 +164,3 @@ Children:
     Id: g=ab7be6bfbf6141d480afffe79bad86fb
     Type: BaseDataVariableType
     DataType: Boolean
-  - Name: AlarmHistoryObject
-    Id: g=2bff389e6debd1a3dc0823c481106621
-    Type: BaseObjectType
-    Description: {"LocaleId":"en-US","Text":"DO NOT MODIFY"}
-    Children:
-    - Name: Severity
-      Id: g=54706960d110746c43f1c9b692905ef2
-      Type: BaseDataVariableType
-      DataType: UInt16
-    - Name: Message
-      Id: g=cf2f6ff56c0509407ac71d3f0cfcf5da
-      Type: BaseDataVariableType
-      DataType: String
-    - Name: Comment
-      Id: g=77d5236b0d5b05ec8e6fc8014a9190f5
-      Type: BaseDataVariableType
-      DataType: String
-    - Name: LocalReceived
-      Id: g=ca48efef34e150e804e92784274e5e49
-      Type: BaseDataVariableType
-      DataType: DateTime
-    - Name: LocalCleared
-      Id: g=96c14bf1410a25cf45eec8683784aa89
-      Type: BaseDataVariableType
-      DataType: DateTime
-    - Name: UtcReceived
-      Id: g=06dc48098a7a31cac2465613427d6383
-      Type: BaseDataVariableType
-      DataType: UtcTime
-    - Name: UtcCleared
-      Id: g=c73d05ffc4e9658b4782545fbaf41fe0
-      Type: BaseDataVariableType
-      DataType: UtcTime

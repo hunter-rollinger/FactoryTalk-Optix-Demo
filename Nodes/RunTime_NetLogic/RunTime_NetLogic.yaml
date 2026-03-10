@@ -160,21 +160,36 @@ Children:
         Type: BaseVariableType
         DataType: DynamicLinkMode
         Value: 2
-  - Name: DBTargetTable
-    Id: g=de3ac95181fa63054871c37e94248139
-    Type: BaseDataVariableType
-    DataType: NodeId
-    Value: "/Objects/OptimateDemoProject/DataStores/Alarms/Tables/CustomAlarmHistory"
-  - Name: DBSourceTable
+  - Name: DatabaseTable
     Id: g=c267dc6d4e5f9649ea90baa6bfcadea1
     Type: BaseDataVariableType
     DataType: NodeId
     Value: "/Objects/OptimateDemoProject/DataStores/Alarms/Tables/AlarmsEventLogger"
-  - Name: AlarmNodeIdColumn
-    Id: g=a92f57e7f90461d19261e3598ba213d0
+  - Name: TableReceiveTime
+    Id: g=8f3ac9ff1026892f3df1f3d5d378c809
+    Type: BaseDataVariableType
+    DataType: NodeId
+    Value: "/Objects/OptimateDemoProject/DataStores/Alarms/Tables/AlarmsEventLogger/Columns/ReceiveTime"
+  - Name: TableAlarmNodeId
+    Id: g=d58bdba206b7ff510f6ebbf34ed47e61
     Type: BaseDataVariableType
     DataType: NodeId
     Value: "/Objects/OptimateDemoProject/DataStores/Alarms/Tables/AlarmsEventLogger/Columns/AlarmNodeId"
+  - Name: TableUtcTime
+    Id: g=ecd632799f899c4d5e2533b1044cd4cf
+    Type: BaseDataVariableType
+    DataType: NodeId
+    Value: "/Objects/OptimateDemoProject/DataStores/Alarms/Tables/AlarmsEventLogger/Columns/Time"
+  - Name: TableLocalTime
+    Id: g=f6afc46d90afb14a0e6c13984fffe4c4
+    Type: BaseDataVariableType
+    DataType: NodeId
+    Value: "/Objects/OptimateDemoProject/DataStores/Alarms/Tables/AlarmsEventLogger/Columns/LocalTime"
+  - Name: TableConditionName
+    Id: g=4cc19584fa8fe656b2fea38b65ddc06f
+    Type: BaseDataVariableType
+    DataType: NodeId
+    Value: "/Objects/OptimateDemoProject/DataStores/Alarms/Tables/AlarmsEventLogger/Columns/ConditionName"
 - File: System_Information_Collection/System_Information_Collection.yaml
 - Name: ConstrainedVariablesVerifier
   Id: g=6930795d61f8e2338ca11b8871398dc8

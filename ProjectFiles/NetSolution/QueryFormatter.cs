@@ -27,18 +27,22 @@ public class QueryFormatter : BaseNetLogic
 {
     public override void Start() {
 		query = LogicObject.GetVariable("Query");
-		languageVariable = LogicObject.GetVariable("Language");
 		dbTable = LogicObject.GetVariable("DatabaseTable");
 		fromTimestampVariable = LogicObject.GetVariable("FromTimestamp");
 		toTimestampVariable = LogicObject.GetVariable("ToTimestamp");
 		severityVariable = LogicObject.GetVariable("Severity");
 		textVariable = LogicObject.GetVariable("Text");
+
+		languageVariable = LogicObject.GetVariable("Language");
 		fromTimestampVariableFormatted = LogicObject.GetVariable("FromTimestampFormatted");
 		toTimestampVariableFormatted = LogicObject.GetVariable("ToTimestampFormatted");
 		severityVariableFormatted = LogicObject.GetVariable("SeverityFormatted");
 		textVariableFormatted = LogicObject.GetVariable("TextFormatted");
-		NodeId detailsColumnId = LogicObject.GetVariable("DetailsColumn").Value;
-		detailsColumn = InformationModel.Get<GridLayout>(detailsColumnId);
+
+		activeColumn = LogicObject.GetVariable("ActiveColumn").Value;
+		colReceiveTime = LogicObject.GetVariable("TableReceiveTime").Value;
+
+		detailsColumn = InformationModel.Get<GridLayout>(LogicObject.GetVariable("DetailsColumn").Value);
 		resetQuery();
 	}
 
@@ -48,7 +52,6 @@ public class QueryFormatter : BaseNetLogic
 
 	private void subscribeToVariableChanges() {
 		languageVariable.VariableChange += VariableUpdate;
-		dbTable.VariableChange += VariableUpdate;
 		fromTimestampVariableFormatted.VariableChange += VariableUpdate;
 		toTimestampVariableFormatted.VariableChange += VariableUpdate;
 		severityVariableFormatted.VariableChange += VariableUpdate;
@@ -57,16 +60,10 @@ public class QueryFormatter : BaseNetLogic
 
 	private void unsubscribeFromVariableChanges() {
 		languageVariable.VariableChange -= VariableUpdate;
-		dbTable.VariableChange -= VariableUpdate;
 		fromTimestampVariableFormatted.VariableChange -= VariableUpdate;
 		toTimestampVariableFormatted.VariableChange -= VariableUpdate;
 		severityVariableFormatted.VariableChange -= VariableUpdate;
 		textVariableFormatted.VariableChange -= VariableUpdate;
-	}
-
-	[ExportMethod]
-	public void userSelectionChanged() {
-
 	}
 
 	[ExportMethod]
@@ -102,13 +99,13 @@ public class QueryFormatter : BaseNetLogic
 		else severity = "";
 
 		if (!fromTimestamp.Contains("1601") && !toTimestamp.Contains("1601")) {
-			timestampResult = $" WHERE LocalTime BETWEEN {fromTimestamp} AND {toTimestamp}";
-		} else timestampResult = $" WHERE LocalTime BETWEEN '{DateTime.Now.AddDays(-1)}' AND '{DateTime.Now}'";
+			timestampResult = $" AND {colReceiveTime} BETWEEN {fromTimestamp} AND {toTimestamp}";
+		} else timestampResult = $" AND {colReceiveTime} BETWEEN '{DateTime.Now.AddDays(-1)}' AND '{DateTime.Now}'";
 
 		if (language == "Message_" && language.Length < 8)
 			language = "Message_en-US";
 
-		if (text != "''" && text.Length > 2)
+		if (text != "''" && text != "'%%'" && text.Length > 4)
 			text = $" AND {language} LIKE {text}";
 		else text = "";
 
@@ -117,9 +114,12 @@ public class QueryFormatter : BaseNetLogic
 			return;
 		} else Log.Verbose1("QueryFormatter", $"Using event logger: {eventLogger}");
 
+		string initSort = $"WHERE {activeColumn}=0";
+
 		// build sql query. for reference on names of columns see alarm database in optix studio
-		query.Value = $"SELECT {language} AS Message, Severity, LocalCleared, LocalReceived, Comment FROM {eventLogger} {timestampResult}{severity}{text} ORDER BY LocalTime DESC";
-		Log.Info("QueryFormatter", query.Value);
+		string output = $"SELECT {language} AS Message, Severity, Time, LocalTime, {colReceiveTime} FROM {eventLogger} {initSort}{timestampResult}{severity}{text} ORDER BY {colReceiveTime} DESC";
+		query.Value = output;
+		Log.Info("QueryFormatter", output);
 	}
 
 	private IUAVariable query;
@@ -140,4 +140,6 @@ public class QueryFormatter : BaseNetLogic
 	private string toTimestamp;
 	private string severity;
 	private string text;
+	private string activeColumn;
+	private string colReceiveTime;
 }

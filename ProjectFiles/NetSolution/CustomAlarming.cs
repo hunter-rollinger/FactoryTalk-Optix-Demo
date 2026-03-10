@@ -1,37 +1,40 @@
 #region Using directives
-using System;
-using CoreBase = FTOptix.CoreBase;
-using FTOptix.HMIProject;
-using UAManagedCore;
-using System.Linq;
-using UAManagedCore.Logging;
-using FTOptix.NetLogic;
 using FTOptix.Alarm;
-using System.Collections.Generic;
-using System.Threading;
+using FTOptix.AuditSigning;
+using FTOptix.Core;
+using FTOptix.DataLogger;
+using FTOptix.EdgeAppPlatform;
+using FTOptix.EventLogger;
+using FTOptix.HMIProject;
 using FTOptix.InfluxDBStore;
 using FTOptix.InfluxDBStoreLocal;
-using FTOptix.DataLogger;
-using FTOptix.Store;
-using FTOptix.SQLiteStore;
-using FTOptix.ODBCStore;
-using FTOptix.SerialPort;
-using FTOptix.EventLogger;
-using System.Security.Claims;
-using FTOptix.UI;
 using FTOptix.NativeUI;
-using System.Linq.Expressions;
-using FTOptix.Core;
+using FTOptix.NetLogic;
+using FTOptix.ODBCStore;
+using FTOptix.OPCUAClient;
 using FTOptix.OPCUAServer;
 using FTOptix.Recipe;
-using FTOptix.OPCUAClient;
-using FTOptix.AuditSigning;
-using FTOptix.System;
-using FTOptix.EdgeAppPlatform;
-using FTOptix.TwinCAT;
-using FTOptix.Report;
 using FTOptix.RecipeX;
+using FTOptix.Report;
+using FTOptix.SerialPort;
+using FTOptix.SQLiteStore;
+using FTOptix.Store;
+using FTOptix.System;
+using FTOptix.TwinCAT;
+using FTOptix.UI;
+using System;
+using System.Collections.Generic;
+using System.Data.SqlTypes;
 using System.Diagnostics;
+using System.Linq;
+using System.Linq.Expressions;
+using System.Reflection.PortableExecutable;
+using System.Security.Claims;
+using System.Threading;
+using UAManagedCore;
+using UAManagedCore.Logging;
+using CoreBase = FTOptix.CoreBase;
+
 #endregion
 
 public class CustomAlarming : BaseNetLogic
@@ -141,8 +144,7 @@ public class CustomAlarming : BaseNetLogic
     {
 		#region initialize
 		private readonly CustomAlarming parent;
-        public AlarmHandler(CustomAlarming parent, IUANode logicNode, IUANode localizedAlarmsContainer)
-        {
+        public AlarmHandler(CustomAlarming parent, IUANode logicNode, IUANode localizedAlarmsContainer) {
             this.parent = parent;
             this.retainedAlarms = new List<NodeId>();
             this.retainedAlarmsLock = new Object();
@@ -156,10 +158,13 @@ public class CustomAlarming : BaseNetLogic
             rotationTime.VariableChange += RotationTime_VariableChange;
             bannerRotation = logicNode.GetVariable("BannerRotation");
             bannerRotation.VariableChange += BannerRotationToggle;
-			alarmsDB = InformationModel.Get<SQLiteStore>(logicNode.GetVariable("AlarmsDatabase").Value);
-			sourceTableName = InformationModel.Get(logicNode.GetVariable("DBSourceTable").Value).BrowseName;
-			targetTableName = InformationModel.Get(logicNode.GetVariable("DBTargetTable").Value).BrowseName;
-			nodeIdColumn = InformationModel.Get(logicNode.GetVariable("AlarmNodeIdColumn").Value).BrowseName;
+            alarmsDB = InformationModel.Get<SQLiteStore>(logicNode.GetVariable("AlarmsDatabase").Value);
+            dbTable = InformationModel.Get(logicNode.GetVariable("DatabaseTable").Value).BrowseName;
+            colReceiveTime = InformationModel.Get(logicNode.GetVariable("TableReceiveTime").Value).BrowseName;
+			colNodeId = InformationModel.Get(logicNode.GetVariable("TableAlarmNodeId").Value).BrowseName;
+			colUtcTime = InformationModel.Get(logicNode.GetVariable("TableUtcTime").Value).BrowseName;
+			colLocalTime = InformationModel.Get(logicNode.GetVariable("TableLocalTime").Value).BrowseName;
+			colCondName = InformationModel.Get(logicNode.GetVariable("TableConditionName").Value).BrowseName;
 
 			retainedAlarmsCount.Value = retainedAlarms.Count;
 
@@ -231,7 +236,9 @@ public class CustomAlarming : BaseNetLogic
 				object[,] result;
 				string[] header;
                 try {
-                    alarmsDB.Query($"UPDATE {sourceTableName} SET {nodeIdColumn}='{targetNode.NodeId}' WHERE rowid = (SELECT rowid FROM {sourceTableName} ORDER BY Time DESC LIMIT 1)", out header, out result);
+                    string query = $"UPDATE {dbTable} SET {colReceiveTime}=(SELECT {colUtcTime} FROM {dbTable} WHERE {colCondName}='{targetNode.BrowseName}' ORDER BY {colUtcTime} DESC LIMIT 1), {colNodeId}='{targetNode.NodeId}' WHERE rowid=(SELECT rowid FROM {dbTable} ORDER BY {colUtcTime} DESC LIMIT 1)";
+					Log.Info("CustomAlarming", $"Executing query to set NodeId for latest alarm: {query}");
+					alarmsDB.Query(query, out header, out result);
                 } catch { Log.Error("CustomAlarming", "Error when setting NodeId for the latest alarm. Start checking at end of OnReferenceAdded method in NetLogic."); }
 			}
         }
@@ -240,7 +247,19 @@ public class CustomAlarming : BaseNetLogic
             lock (retainedAlarmsLock) {
 				object[,] result;
 				string[] header;
-				alarmsDB.Query($"SELECT 1 FROM {sourceTableName} WHERE {nodeIdColumn}='{targetNode.NodeId}'", out header, out result);
+                try {
+                    // get row info
+                    string query = $"SELECT {colReceiveTime} FROM {dbTable} WHERE {colNodeId}='{targetNode.NodeId}'";
+                    Log.Info("CustomAlarming", $"Executing query to set NodeId for latest alarm: {query}");
+                    alarmsDB.Query(query, out header, out result);
+                    DateTime dtObject = (DateTime)result[0, 0];
+                    string dateTime = dtObject.ToString("yyyy-MM-ddTHH:mm:ss:fffffff");
+
+                    // set row info
+                    query = $"UPDATE {dbTable} SET {colReceiveTime}='{dateTime}', {colNodeId}='{targetNode.NodeId}' WHERE rowid=(SELECT rowid FROM {dbTable} ORDER BY {colUtcTime} DESC LIMIT 1)";
+					Log.Info("CustomAlarming", $"Executing query to set NodeId for latest alarm: {query}");
+					alarmsDB.Query(query, out header, out result);
+				} catch { Log.Error("CustomAlarming", "DB Query Error. See OnReferenceRemoved in NetLogic."); }
 
 				var alarmIndex = retainedAlarms.IndexOf(targetNode.NodeId);
                 if (alarmIndex == -1) {
@@ -478,10 +497,13 @@ public class CustomAlarming : BaseNetLogic
         private Object retainedAlarmsLock;              // alarm container
 		public bool popupTriggered;                     // automatic alarmPopup
 		private int alarmSeverityLevel;                 // alarm severity levl
-        SQLiteStore alarmsDB;
-		string sourceTableName;
-		string targetTableName;
-        string nodeIdColumn;
+        SQLiteStore alarmsDB;                           // get alarm database to add time to
+		string dbTable;                                 // get table in database of which to modify
+        string colReceiveTime;                          // column name in table to set receive time
+		string colNodeId;                               // column in table to set nodeid for a uid to search
+		string colUtcTime;                              // column in table to sort by
+		string colLocalTime;                            // column in table to get timestamp from
+		string colCondName;                             // column in table to get the condition name (variable) from
 
 		#region IDisposable Support
 		private bool disposedValue = false;
