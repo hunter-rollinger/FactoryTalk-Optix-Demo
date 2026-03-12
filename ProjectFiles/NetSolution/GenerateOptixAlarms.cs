@@ -5,6 +5,9 @@ using FTOptix.NetLogic;
 using System;
 using UAManagedCore;
 using FTOptix.DataLogger;
+using FTOptix.Recipe;
+using FTOptix.AuditSigning;
+using FTOptix.RecipeX;
 
 public class GenerateOptixAlarms : BaseNetLogic {
 	[ExportMethod]

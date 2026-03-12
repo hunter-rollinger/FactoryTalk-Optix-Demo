@@ -1,3522 +1,2835 @@
 Name: Controller Tags
-Id: g=91980cf35c4b09a59d498aed1a1ae0c5
 Type: FolderType
 Children:
 - Name: OI_SelectFromPLC
-  Id: g=d9ce0f05f58797c86f0d8015385d3b9e
   Type: RAEtherNetIPTag
   DataType: Int32
   ValueRank: OneDimension
   ArrayDimensions: [20]
   Children:
   - Name: SymbolName
-    Id: g=d8d96e27078b8f5bdca9eca05745914a
     Type: BaseDataVariableType
     DataType: String
     Value: "OI_SelectFromPLC"
   - Name: 1
-    Id: g=f624f1125ca280be57617b0294ef9e82
     Type: MetaTagArrayIndex
     ReferenceType: HasTagChild
     Children:
     - Name: 28
-      Id: g=14f6acb1183110267449d8cd23722609
       Type: MetaTagBitIndex
       Children:
       - Name: Description
-        Id: g=3369a7c9ba17f71eea963dde1851acad
         Type: RAEtherNetIPMetaTag
         DataType: String
         Value: "Manual\r\nGlue\r\nRun-Up\r\nPressure Control"
         Children:
         - Name: SymbolName
-          Id: g=abf297f6377f2c6f7ecdb199f1af986a
           Type: BaseDataVariableType
           DataType: String
           Value: "OI_SelectFromPLC[1].28.@Description"
   - Name: 8
-    Id: g=7b2fbeecaf85671b478cbb7907ee7b61
     Type: MetaTagArrayIndex
     ReferenceType: HasTagChild
     Children:
     - Name: 8
-      Id: g=c93c526880e26c15944d8bc177158244
       Type: MetaTagBitIndex
       Children:
       - Name: Description
-        Id: g=651ad3b6757d50c188c4592651d6eee4
         Type: RAEtherNetIPMetaTag
         DataType: String
         Value: "RFID Login Write Indicator"
         Children:
         - Name: SymbolName
-          Id: g=8c1d842c28fa3621713b17983a0c66c9
           Type: BaseDataVariableType
           DataType: String
           Value: "OI_SelectFromPLC[8].8.@Description"
 - Name: OI_DintToPLC
-  Id: g=2b01cac77f950ca051b7b5147c1c2997
   Type: RAEtherNetIPTag
   DataType: Int32
   ValueRank: OneDimension
   ArrayDimensions: [32]
   Children:
   - Name: SymbolName
-    Id: g=b9929af8d2f9aebe00e1651f257b4536
     Type: BaseDataVariableType
     DataType: String
     Value: "OI_DintToPLC"
   - Name: 0
-    Id: g=2ed56429b214601473bc8da104417992
     Type: MetaTagArrayIndex
     ReferenceType: HasTagChild
     Children:
     - Name: Description
-      Id: g=982c3a44f035b07eca9869bfe3d72130
       Type: RAEtherNetIPMetaTag
       DataType: String
       Value: "Jog Speed"
       Children:
       - Name: SymbolName
-        Id: g=da2908eddabb07f412a8a0423e8f2656
         Type: BaseDataVariableType
         DataType: String
         Value: "OI_DintToPLC[0].@Description"
   - Name: 16
-    Id: g=fdc00dbc6772c27783a6e4d2ce06a205
     Type: MetaTagArrayIndex
     ReferenceType: HasTagChild
     Children:
     - Name: Description
-      Id: g=b8397125f6c322b59920336e24e0cd2c
       Type: RAEtherNetIPMetaTag
       DataType: String
       Value: "Axis Selected on Reference Screen"
       Children:
       - Name: SymbolName
-        Id: g=bc25c272f51e2b110491b7c9486debb1
         Type: BaseDataVariableType
         DataType: String
         Value: "OI_DintToPLC[16].@Description"
   - Name: 18
-    Id: g=f137746ba92c9d95625f9dff416e6ddc
     Type: MetaTagArrayIndex
     ReferenceType: HasTagChild
     Children:
     - Name: Description
-      Id: g=aba18a70aea740888a45880e543e3893
       Type: RAEtherNetIPMetaTag
       DataType: String
       Value: "Manual Active Glue Pressure From PLC"
       Children:
       - Name: SymbolName
-        Id: g=73f4f2d9d0b98734bd81dcf66564f630
         Type: BaseDataVariableType
         DataType: String
         Value: "OI_DintToPLC[18].@Description"
   - Name: 19
-    Id: g=e5220b373fd4aec610dc92237641277b
     Type: MetaTagArrayIndex
     ReferenceType: HasTagChild
     Children:
     - Name: Description
-      Id: g=fe5afdc11f08bf3ab7b0432314ac60d7
       Type: RAEtherNetIPMetaTag
       DataType: String
       Value: "Barrel Loader Oil Duration in Seconds"
       Children:
       - Name: SymbolName
-        Id: g=de06b7695accfb0c57b8e3780871318c
         Type: BaseDataVariableType
         DataType: String
         Value: "OI_DintToPLC[19].@Description"
   - Name: 1
-    Id: g=3760450229320d727f1ebc28256dbf11
     Type: MetaTagArrayIndex
     ReferenceType: HasTagChild
     Children:
     - Name: Description
-      Id: g=550020620cde141325a735b31996ea64
       Type: RAEtherNetIPMetaTag
       DataType: String
       Value: "Index Position"
       Children:
       - Name: SymbolName
-        Id: g=05374af9392b26c4b3f79079c53ad5f7
         Type: BaseDataVariableType
         DataType: String
         Value: "OI_DintToPLC[1].@Description"
   - Name: 20
-    Id: g=6740ed4b7b1401632603f63277b0e235
     Type: MetaTagArrayIndex
     ReferenceType: HasTagChild
     Children:
     - Name: Description
-      Id: g=277be6b34e40ebe2b4782d6372fc8fa8
       Type: RAEtherNetIPMetaTag
       DataType: String
       Value: "Barrel Loader Oil Interval in carton cycles"
       Children:
       - Name: SymbolName
-        Id: g=6485466a800c01563e215e07bc445400
         Type: BaseDataVariableType
         DataType: String
         Value: "OI_DintToPLC[20].@Description"
   - Name: 23
-    Id: g=fa873c6a66f66e971fcb352ee1924f86
     Type: MetaTagArrayIndex
     ReferenceType: HasTagChild
     Children:
     - Name: Description
-      Id: g=57feaa6ac1e1f715cf606457c3f11350
       Type: RAEtherNetIPMetaTag
       DataType: String
       Value: "Photo-Eye Blow-Off (Clean) Duration in Seconds"
       Children:
       - Name: SymbolName
-        Id: g=1a6522a673db47a1e9b1761f87fac8e0
         Type: BaseDataVariableType
         DataType: String
         Value: "OI_DintToPLC[23].@Description"
   - Name: 24
-    Id: g=8ca02ed585a4325177514dbd629d023e
     Type: MetaTagArrayIndex
     ReferenceType: HasTagChild
     Children:
     - Name: Description
-      Id: g=f996f9c65cb72300bc128770318b065a
       Type: RAEtherNetIPMetaTag
       DataType: String
       Value: "Photo-Eye Blow-Off (Clean) Interval in carton cycles"
       Children:
       - Name: SymbolName
-        Id: g=9c87063e8676327559e74ef62a038a8a
         Type: BaseDataVariableType
         DataType: String
         Value: "OI_DintToPLC[24].@Description"
   - Name: 26
-    Id: g=c48599ac0326777533f0462835adf2d1
     Type: MetaTagArrayIndex
     ReferenceType: HasTagChild
     Children:
     - Name: Description
-      Id: g=45cdad110063db8d0cf0b4234374a69c
       Type: RAEtherNetIPMetaTag
       DataType: String
       Value: "Manual Active Glue Pressure To PLC"
       Children:
       - Name: SymbolName
-        Id: g=969bde7c0f860911aa5733942ed8957f
         Type: BaseDataVariableType
         DataType: String
         Value: "OI_DintToPLC[26].@Description"
   - Name: 2
-    Id: g=afd2fd3213eb25d66076040798533e08
     Type: MetaTagArrayIndex
     ReferenceType: HasTagChild
     Children:
     - Name: Description
-      Id: g=91c94dd480f1d62cbd55f0f8e48cbf2b
       Type: RAEtherNetIPMetaTag
       DataType: String
       Value: "Go To Position"
       Children:
       - Name: SymbolName
-        Id: g=2505a2ba10ec4d0edec059f4003c53d6
         Type: BaseDataVariableType
         DataType: String
         Value: "OI_DintToPLC[2].@Description"
   - Name: 3
-    Id: g=f27af602f1b0f8b9df9ece28e134562c
     Type: MetaTagArrayIndex
     ReferenceType: HasTagChild
     Children:
     - Name: Description
-      Id: g=07b0277b7624fe5ff68e664d9c2f1941
       Type: RAEtherNetIPMetaTag
       DataType: String
       Value: "History Index"
       Children:
       - Name: SymbolName
-        Id: g=4b7ca527b916dd3cda5ccc6046f6754b
         Type: BaseDataVariableType
         DataType: String
         Value: "OI_DintToPLC[3].@Description"
     - Name: 0
-      Id: g=789b32fab79a9ab54b199f54171c06a7
       Type: MetaTagBitIndex
       Children:
       - Name: Description
-        Id: g=86729409995eac73859ad9f5219998c9
         Type: RAEtherNetIPMetaTag
         DataType: String
         Value: "History Index"
         Children:
         - Name: SymbolName
-          Id: g=4dc82f3d45f971f9578ae99846522105
           Type: BaseDataVariableType
           DataType: String
           Value: "OI_DintToPLC[3].0.@Description"
     - Name: 1
-      Id: g=4241b9aa9d6ccad1cbdc5ab84edf8a16
       Type: MetaTagBitIndex
       Children:
       - Name: Description
-        Id: g=9649685f3baf92a65ab618c33123ff34
         Type: RAEtherNetIPMetaTag
         DataType: String
         Value: "History Index"
         Children:
         - Name: SymbolName
-          Id: g=b8667bf018104c55217eab307c4874f4
           Type: BaseDataVariableType
           DataType: String
           Value: "OI_DintToPLC[3].1.@Description"
   - Name: 4
-    Id: g=d63c71401cb437da9c81c059808b7a5f
     Type: MetaTagArrayIndex
     ReferenceType: HasTagChild
     Children:
     - Name: Description
-      Id: g=105ccc8227f89821fcd0f04d91a20419
       Type: RAEtherNetIPMetaTag
       DataType: String
       Value: "Bucket Conveyor Oil Duration in seconds"
       Children:
       - Name: SymbolName
-        Id: g=19427ca0491b56aa0e3cc3cc9b1efe87
         Type: BaseDataVariableType
         DataType: String
         Value: "OI_DintToPLC[4].@Description"
   - Name: 5
-    Id: g=60c29f190a3bb824fff40d98bac7eb92
     Type: MetaTagArrayIndex
     ReferenceType: HasTagChild
     Children:
     - Name: Description
-      Id: g=2a6593e8858fa8a721d0d0115235cd97
       Type: RAEtherNetIPMetaTag
       DataType: String
       Value: "Bucket Conveyor Oil Interval in carton cycles"
       Children:
       - Name: SymbolName
-        Id: g=647872b8a637e20a2d57f9327c43a92e
         Type: BaseDataVariableType
         DataType: String
         Value: "OI_DintToPLC[5].@Description"
 - Name: OI_RealFromPLC
-  Id: g=fabe361fef33519684bfe7a9824fb900
   Type: RAEtherNetIPTag
   DataType: Float
   ValueRank: OneDimension
   ArrayDimensions: [20]
   Children:
   - Name: SymbolName
-    Id: g=a1ea5c4a0d64a4311ff5cfb1be808999
     Type: BaseDataVariableType
     DataType: String
     Value: "OI_RealFromPLC"
   - Name: Description
-    Id: g=c3062eed555d7ae31f7024384960ce02
     Type: RAEtherNetIPMetaTag
     DataType: String
     Value: "Float Values From PLC To HMI"
     Children:
     - Name: SymbolName
-      Id: g=5f228f272537d26af4d011056932768b
       Type: BaseDataVariableType
       DataType: String
       Value: "OI_RealFromPLC.@Description"
   - Name: 10
-    Id: g=ca3f03bd4973c98368f95618dae81821
     Type: MetaTagArrayIndex
     ReferenceType: HasTagChild
     Children:
     - Name: Description
-      Id: g=15d49d4af01ea625254c5558a4f8a105
       Type: RAEtherNetIPMetaTag
       DataType: String
       Value: "Transfer 1 Pick Position Z Max"
       Children:
       - Name: SymbolName
-        Id: g=1d621baae97039d61dd12b88c0ce8d75
         Type: BaseDataVariableType
         DataType: String
         Value: "OI_RealFromPLC[10].@Description"
   - Name: 11
-    Id: g=b5f499408f77bac718115c3a41e5c517
     Type: MetaTagArrayIndex
     ReferenceType: HasTagChild
     Children:
     - Name: Description
-      Id: g=15e9b34a8239184dde4961cd2fb4ff23
       Type: RAEtherNetIPMetaTag
       DataType: String
       Value: "Transfer 1 Pick Position Z Min"
       Children:
       - Name: SymbolName
-        Id: g=d74dc33cecf7c6c78d337bce0586e485
         Type: BaseDataVariableType
         DataType: String
         Value: "OI_RealFromPLC[11].@Description"
   - Name: 12
-    Id: g=b818d79fc6ce04acad6c8cc4cfcbb8a4
     Type: MetaTagArrayIndex
     ReferenceType: HasTagChild
     Children:
     - Name: Description
-      Id: g=f17868be26f86f761b50b8b1d6c37d3a
       Type: RAEtherNetIPMetaTag
       DataType: String
       Value: "Transfer 1 Place Position X Max"
       Children:
       - Name: SymbolName
-        Id: g=21d15e41c3d5862c5732f2d2867b235b
         Type: BaseDataVariableType
         DataType: String
         Value: "OI_RealFromPLC[12].@Description"
   - Name: 13
-    Id: g=6885674804545f7e4e77b6a40269f5d8
     Type: MetaTagArrayIndex
     ReferenceType: HasTagChild
     Children:
     - Name: Description
-      Id: g=241bf46a7167808e56c0f25233e65e1f
       Type: RAEtherNetIPMetaTag
       DataType: String
       Value: "Transfer 1 Place Position X Min"
       Children:
       - Name: SymbolName
-        Id: g=56f265b2e500f394fa55ce99627c0084
         Type: BaseDataVariableType
         DataType: String
         Value: "OI_RealFromPLC[13].@Description"
   - Name: 14
-    Id: g=f662a9e744d5a0027cd8bfa64706a559
     Type: MetaTagArrayIndex
     ReferenceType: HasTagChild
     Children:
     - Name: Description
-      Id: g=59dd4d07fd9a3f547d587f099136fd59
       Type: RAEtherNetIPMetaTag
       DataType: String
       Value: "Transfer 1 Place Postion Z Max"
       Children:
       - Name: SymbolName
-        Id: g=7cb4dda21baa1bbbbf38a9db4dc4104b
         Type: BaseDataVariableType
         DataType: String
         Value: "OI_RealFromPLC[14].@Description"
   - Name: 15
-    Id: g=66a8a27e77f57a4b2ecc3e7e3c40d582
     Type: MetaTagArrayIndex
     ReferenceType: HasTagChild
     Children:
     - Name: Description
-      Id: g=d19f901588db2b67171a52aabe41720c
       Type: RAEtherNetIPMetaTag
       DataType: String
       Value: "Transfer 1 Place Postion Z Min"
       Children:
       - Name: SymbolName
-        Id: g=e692721bbbfc98519b50bda420841b04
         Type: BaseDataVariableType
         DataType: String
         Value: "OI_RealFromPLC[15].@Description"
   - Name: 16
-    Id: g=97bb9d6e8553b948f6993a99ea39df2e
     Type: MetaTagArrayIndex
     ReferenceType: HasTagChild
     Children:
     - Name: Description
-      Id: g=45b1f311f57cc9c84fbab50c7ff3aea4
       Type: RAEtherNetIPMetaTag
       DataType: String
       Value: "Transfer 1 Pick \r\nClear Z Max"
       Children:
       - Name: SymbolName
-        Id: g=1aa6b24c361fe4c952fb700f9da50704
         Type: BaseDataVariableType
         DataType: String
         Value: "OI_RealFromPLC[16].@Description"
   - Name: 17
-    Id: g=b0b6d03c45cd0032b7b8283bacd5f171
     Type: MetaTagArrayIndex
     ReferenceType: HasTagChild
     Children:
     - Name: Description
-      Id: g=dfa2c5cf4f0c6cbeba79e95fd3fd7452
       Type: RAEtherNetIPMetaTag
       DataType: String
       Value: "Transfer 1 Pick\r\nClear Z Min"
       Children:
       - Name: SymbolName
-        Id: g=55cd7a272a22267affc229436aee0024
         Type: BaseDataVariableType
         DataType: String
         Value: "OI_RealFromPLC[17].@Description"
   - Name: 18
-    Id: g=43e74382bd970528954de82d53527764
     Type: MetaTagArrayIndex
     ReferenceType: HasTagChild
     Children:
     - Name: Description
-      Id: g=8ad9845357e1bcb938b71438ade38cf0
       Type: RAEtherNetIPMetaTag
       DataType: String
       Value: "Transfer 1 Place Clear Z Max"
       Children:
       - Name: SymbolName
-        Id: g=e0ce879fdb3cab0602743ce62fc8a596
         Type: BaseDataVariableType
         DataType: String
         Value: "OI_RealFromPLC[18].@Description"
   - Name: 19
-    Id: g=168a0ad61f832e7b0d730917af95bfe7
     Type: MetaTagArrayIndex
     ReferenceType: HasTagChild
     Children:
     - Name: Description
-      Id: g=39f1b0429483c19d9e72f08fd7615908
       Type: RAEtherNetIPMetaTag
       DataType: String
       Value: "Transfer 1 Place Clear Z Min"
       Children:
       - Name: SymbolName
-        Id: g=48a4d930386be0d44a4560f8edae7401
         Type: BaseDataVariableType
         DataType: String
         Value: "OI_RealFromPLC[19].@Description"
   - Name: 2
-    Id: g=ab1dc19520381d6f6ba596f317352cfb
     Type: MetaTagArrayIndex
     ReferenceType: HasTagChild
     Children:
     - Name: Description
-      Id: g=76a47ceb4b8fdc77694c68916d47ba31
       Type: RAEtherNetIPMetaTag
       DataType: String
       Value: "Transport leading lug Position"
       Children:
       - Name: SymbolName
-        Id: g=579d77de55bce5119f776d7bbaa40939
         Type: BaseDataVariableType
         DataType: String
         Value: "OI_RealFromPLC[2].@Description"
   - Name: 3
-    Id: g=804e85b2056fab39956063cf16d7aaa0
     Type: MetaTagArrayIndex
     ReferenceType: HasTagChild
     Children:
     - Name: Description
-      Id: g=f9d8abaad1eb3fad4546406ccbeb9852
       Type: RAEtherNetIPMetaTag
       DataType: String
       Value: "Transport trailing lug Position"
       Children:
       - Name: SymbolName
-        Id: g=61f91a4a41745bf89d745788d5da094d
         Type: BaseDataVariableType
         DataType: String
         Value: "OI_RealFromPLC[3].@Description"
   - Name: 4
-    Id: g=4cc2b84c8628bff73c279533c2453de5
     Type: MetaTagArrayIndex
     ReferenceType: HasTagChild
     Children:
     - Name: Description
-      Id: g=87a38ad5ba91f2e78c65512d3df3ede3
       Type: RAEtherNetIPMetaTag
       DataType: String
       Value: "carton feed position"
       Children:
       - Name: SymbolName
-        Id: g=5b852b1db6b195908cd30660ecbab0ee
         Type: BaseDataVariableType
         DataType: String
         Value: "OI_RealFromPLC[4].@Description"
   - Name: 5
-    Id: g=e20da4fe19ecfb6b48dc7b39e33400c3
     Type: MetaTagArrayIndex
     ReferenceType: HasTagChild
     Children:
     - Name: Description
-      Id: g=8522f50e2ed683f9d2f8b5b2d9bcf749
       Type: RAEtherNetIPMetaTag
       DataType: String
       Value: "Overhead Confiner/ Tamp position"
       Children:
       - Name: SymbolName
-        Id: g=6424931966e7ca570ba25b6da3b4773d
         Type: BaseDataVariableType
         DataType: String
         Value: "OI_RealFromPLC[5].@Description"
   - Name: 8
-    Id: g=6bc39b0494acdf89cb846ee616e0c3e5
     Type: MetaTagArrayIndex
     ReferenceType: HasTagChild
     Children:
     - Name: Description
-      Id: g=8b5bbbc6fead2db600719cbcd5fa5953
       Type: RAEtherNetIPMetaTag
       DataType: String
       Value: "Transfer 1 Pick Position X Max"
       Children:
       - Name: SymbolName
-        Id: g=d2c333d5d37b615ed1597fc856f055f0
         Type: BaseDataVariableType
         DataType: String
         Value: "OI_RealFromPLC[8].@Description"
   - Name: 9
-    Id: g=edc2c86e0a278429b875bb6044bb66e7
     Type: MetaTagArrayIndex
     ReferenceType: HasTagChild
     Children:
     - Name: Description
-      Id: g=ffbcb6395554810881682a87223f6b33
       Type: RAEtherNetIPMetaTag
       DataType: String
       Value: "Transfer 1 Pick Position X Min"
       Children:
       - Name: SymbolName
-        Id: g=aa3458f3eb14a2bc7df3309d002a1e81
         Type: BaseDataVariableType
         DataType: String
         Value: "OI_RealFromPLC[9].@Description"
 - Name: OI_DintFromPLC
-  Id: g=12577453ab904f085fa74aaecc327451
   Type: RAEtherNetIPTag
   DataType: Int32
   ValueRank: OneDimension
   ArrayDimensions: [100]
   Children:
   - Name: SymbolName
-    Id: g=16ee8af5cfaffcde66a334ae5bed0821
     Type: BaseDataVariableType
     DataType: String
     Value: "OI_DintFromPLC"
   - Name: 0
-    Id: g=5244432efc1e6c52a67a8ba4402b1105
     Type: MetaTagArrayIndex
     ReferenceType: HasTagChild
     Children:
     - Name: Description
-      Id: g=f912ad71e261c63d49c1ca7237ef4396
       Type: RAEtherNetIPMetaTag
       DataType: String
       Value: "Cartoner Uptime Minutes (Shift)"
       Children:
       - Name: SymbolName
-        Id: g=7d31320c5768dcf54b39360d7f8cf540
         Type: BaseDataVariableType
         DataType: String
         Value: "OI_DintFromPLC[0].@Description"
   - Name: 10
-    Id: g=c8fed90f549a23b2eb9b55fade58ccdb
     Type: MetaTagArrayIndex
     ReferenceType: HasTagChild
     Children:
     - Name: Description
-      Id: g=560f380fafba10afa50440fc053f90c7
       Type: RAEtherNetIPMetaTag
       DataType: String
       Value: "Total Uptime\r\nNon-Resetting"
       Children:
       - Name: SymbolName
-        Id: g=121adb3bdcd67fc5bc5f8578cedd6a04
         Type: BaseDataVariableType
         DataType: String
         Value: "OI_DintFromPLC[10].@Description"
   - Name: 11
-    Id: g=5847587af1106195a27f7628e1e55c4c
     Type: MetaTagArrayIndex
     ReferenceType: HasTagChild
     Children:
     - Name: Description
-      Id: g=b876ded94bc09408da2ff96823355145
       Type: RAEtherNetIPMetaTag
       DataType: String
       Value: "Actual\r\n0019-RU1\r\nPressure\r\n(PSI)"
       Children:
       - Name: SymbolName
-        Id: g=6afbf6dd046ffd71f9ca9204f567c50a
         Type: BaseDataVariableType
         DataType: String
         Value: "OI_DintFromPLC[11].@Description"
   - Name: 12
-    Id: g=e18cc0c8253f346d42bfc31b3563c99f
     Type: MetaTagArrayIndex
     ReferenceType: HasTagChild
     Children:
     - Name: Description
-      Id: g=47c03d5f45845c8e0eaa784f7c470f8a
       Type: RAEtherNetIPMetaTag
       DataType: String
       Value: "High Load (Shift)"
       Children:
       - Name: SymbolName
-        Id: g=23966aeafacfe34905ae90199bb4b427
         Type: BaseDataVariableType
         DataType: String
         Value: "OI_DintFromPLC[12].@Description"
   - Name: 13
-    Id: g=8ad590e590a719a7f1289675c7d06cfd
     Type: MetaTagArrayIndex
     ReferenceType: HasTagChild
     Children:
     - Name: Description
-      Id: g=7821ac518fee7bbcae1c9f3b1cc2f6c5
       Type: RAEtherNetIPMetaTag
       DataType: String
       Value: "High Load (Total)"
       Children:
       - Name: SymbolName
-        Id: g=1772ed6f78a7b199d730d19aa84e0233
         Type: BaseDataVariableType
         DataType: String
         Value: "OI_DintFromPLC[13].@Description"
   - Name: 14
-    Id: g=4ee1affab048949e0abb5981458409fd
     Type: MetaTagArrayIndex
     ReferenceType: HasTagChild
     Children:
     - Name: Description
-      Id: g=1198fd4b8a14ec36a57f411cc73f1afe
       Type: RAEtherNetIPMetaTag
       DataType: String
       Value: "L-shape Carton Count (Shift)"
       Children:
       - Name: SymbolName
-        Id: g=1631e87661a8b46926ef0a50417c7566
         Type: BaseDataVariableType
         DataType: String
         Value: "OI_DintFromPLC[14].@Description"
   - Name: 15
-    Id: g=d578b5def302f485a8802cecfd48843f
     Type: MetaTagArrayIndex
     ReferenceType: HasTagChild
     Children:
     - Name: Description
-      Id: g=8cba083fc2224613765977dc08dcc98d
       Type: RAEtherNetIPMetaTag
       DataType: String
       Value: "L-Shape Carton Count (Total)"
       Children:
       - Name: SymbolName
-        Id: g=cf48e96243071d18fdc59663d71c5528
         Type: BaseDataVariableType
         DataType: String
         Value: "OI_DintFromPLC[15].@Description"
   - Name: 16
-    Id: g=0d01118b8188bb1f1ddb746034a35e64
     Type: MetaTagArrayIndex
     ReferenceType: HasTagChild
     Children:
     - Name: Description
-      Id: g=b5ae659709829f59565ca341b415ad79
       Type: RAEtherNetIPMetaTag
       DataType: String
       Value: "Open Flap  (Shift)"
       Children:
       - Name: SymbolName
-        Id: g=7505dab01ab51be2ff737d707b87eac2
         Type: BaseDataVariableType
         DataType: String
         Value: "OI_DintFromPLC[16].@Description"
   - Name: 17
-    Id: g=7ac3b4c08ab1ea291ba7cf0e0c550ba1
     Type: MetaTagArrayIndex
     ReferenceType: HasTagChild
     Children:
     - Name: Description
-      Id: g=152286b17c2d77c7e7306b02373e19a6
       Type: RAEtherNetIPMetaTag
       DataType: String
       Value: "Open Flap Latch (Total)"
       Children:
       - Name: SymbolName
-        Id: g=ca615c14af27aafa27e1c0b97de7cc3c
         Type: BaseDataVariableType
         DataType: String
         Value: "OI_DintFromPLC[17].@Description"
   - Name: 18
-    Id: g=ffd6a1bc2a36f601121efa7f039df1d0
     Type: MetaTagArrayIndex
     ReferenceType: HasTagChild
     Children:
     - Name: Description
-      Id: g=061e1e4604cd45ab0e274998de974a3a
       Type: RAEtherNetIPMetaTag
       DataType: String
       Value: "Minor Flap (Shift)"
       Children:
       - Name: SymbolName
-        Id: g=7c62ec556adf3a27e409f8711599e2f9
         Type: BaseDataVariableType
         DataType: String
         Value: "OI_DintFromPLC[18].@Description"
   - Name: 19
-    Id: g=5714226db678edb7c7be91462f41b6e7
     Type: MetaTagArrayIndex
     ReferenceType: HasTagChild
     Children:
     - Name: Description
-      Id: g=e39ac5dbc088ba29b936f1de1cfb8536
       Type: RAEtherNetIPMetaTag
       DataType: String
       Value: "Minor Flap (Total)"
       Children:
       - Name: SymbolName
-        Id: g=b69a41386a12f405479c9e39b7af5fe2
         Type: BaseDataVariableType
         DataType: String
         Value: "OI_DintFromPLC[19].@Description"
   - Name: 1
-    Id: g=eef92d710ba6f51576652b56a7f81eb9
     Type: MetaTagArrayIndex
     ReferenceType: HasTagChild
     Children:
     - Name: Description
-      Id: g=4375ef7f50ed6ec8947dd9c7004b9647
       Type: RAEtherNetIPMetaTag
       DataType: String
       Value: "Cartoner Uptime Minutes (Total)"
       Children:
       - Name: SymbolName
-        Id: g=28674c51f843d1199a74d5ea32403d7a
         Type: BaseDataVariableType
         DataType: String
         Value: "OI_DintFromPLC[1].@Description"
   - Name: 20
-    Id: g=00647b5de926f4410dd3630a39145e8f
     Type: MetaTagArrayIndex
     ReferenceType: HasTagChild
     Children:
     - Name: Description
-      Id: g=2707641b6b6b7949ce90cfedd03e0b1a
       Type: RAEtherNetIPMetaTag
       DataType: String
       Value: "PLC Max Machine Task Scan Time"
       Children:
       - Name: SymbolName
-        Id: g=503b41d8c968b32a15be278e56dc539a
         Type: BaseDataVariableType
         DataType: String
         Value: "OI_DintFromPLC[20].@Description"
   - Name: 21
-    Id: g=4ee9b647638db4e4992af474b24179c7
     Type: MetaTagArrayIndex
     ReferenceType: HasTagChild
     Children:
     - Name: Description
-      Id: g=ec7d8a3f21f5ffa85274e4b18671c704
       Type: RAEtherNetIPMetaTag
       DataType: String
       Value: "PLC Last Machine Groun Scan Time"
       Children:
       - Name: SymbolName
-        Id: g=d0df3ef8f3422900490f58fbe85c4315
         Type: BaseDataVariableType
         DataType: String
         Value: "OI_DintFromPLC[21].@Description"
   - Name: 22
-    Id: g=e5dadbc4ae96f9d4e4eed0f42d9e3c09
     Type: MetaTagArrayIndex
     ReferenceType: HasTagChild
     Children:
     - Name: Description
-      Id: g=0f9abac6b96717005728a7d29aa95ff2
       Type: RAEtherNetIPMetaTag
       DataType: String
       Value: "PLC Last Machine Task Scan Time"
       Children:
       - Name: SymbolName
-        Id: g=6f61279672738a9137c1d92252142beb
         Type: BaseDataVariableType
         DataType: String
         Value: "OI_DintFromPLC[22].@Description"
   - Name: 23
-    Id: g=28b71e027c1ea39911c7da26f9a8394f
     Type: MetaTagArrayIndex
     ReferenceType: HasTagChild
     Children:
     - Name: Description
-      Id: g=b501eb734e910cd75a356b279bc44374
       Type: RAEtherNetIPMetaTag
       DataType: String
       Value: "PLC Max machine Group Scan Time"
       Children:
       - Name: SymbolName
-        Id: g=60b2c5cc6dd1cc64843ddab9b2cd0102
         Type: BaseDataVariableType
         DataType: String
         Value: "OI_DintFromPLC[23].@Description"
   - Name: 24
-    Id: g=867e2bd9de899e7252442ad1e3be8117
     Type: MetaTagArrayIndex
     ReferenceType: HasTagChild
     Children:
     - Name: Description
-      Id: g=2b3fea03870da9b20dfe0e2f9aba05bf
       Type: RAEtherNetIPMetaTag
       DataType: String
       Value: "Forces Enabled"
       Children:
       - Name: SymbolName
-        Id: g=e39cedbcc6c9f4398aefcfc1890f5cda
         Type: BaseDataVariableType
         DataType: String
         Value: "OI_DintFromPLC[24].@Description"
     - Name: 0
-      Id: g=97190bc5d741028bb8e123b2c272e9e7
       Type: MetaTagBitIndex
       Children:
       - Name: Description
-        Id: g=15faec5e80d13aa2f803a6be902f8a56
         Type: RAEtherNetIPMetaTag
         DataType: String
         Value: "Forces Installed In  Program"
         Children:
         - Name: SymbolName
-          Id: g=9b98173a322dba787a254c625c0ef423
           Type: BaseDataVariableType
           DataType: String
           Value: "OI_DintFromPLC[24].0.@Description"
     - Name: 1
-      Id: g=ef32b44f436af3acdd26b4cef48aa546
       Type: MetaTagBitIndex
       Children:
       - Name: Description
-        Id: g=82863de501798fed0626027962a0616e
         Type: RAEtherNetIPMetaTag
         DataType: String
         Value: "Forces Active In Program"
         Children:
         - Name: SymbolName
-          Id: g=51347952c3b6256774829a66c53244d2
           Type: BaseDataVariableType
           DataType: String
           Value: "OI_DintFromPLC[24].1.@Description"
   - Name: 25
-    Id: g=9556181f566629ded545b782b7229b9e
     Type: MetaTagArrayIndex
     ReferenceType: HasTagChild
     Children:
     - Name: Description
-      Id: g=462dc585bcd6e99caadd7de9bae1b586
       Type: RAEtherNetIPMetaTag
       DataType: String
       Value: "Manual Active Glue Pressure From PLC"
       Children:
       - Name: SymbolName
-        Id: g=9bbbcfde54c0afb04831ad06a506dd19
         Type: BaseDataVariableType
         DataType: String
         Value: "OI_DintFromPLC[25].@Description"
   - Name: 26
-    Id: g=b6e7e9c77de7710cc31748c1582948ef
     Type: MetaTagArrayIndex
     ReferenceType: HasTagChild
     Children:
     - Name: Description
-      Id: g=727aad65fcf5dc72fcee021ad087f30a
       Type: RAEtherNetIPMetaTag
       DataType: String
       Value: "Main Task Overlap Count"
       Children:
       - Name: SymbolName
-        Id: g=a9c6a784d667a2860c1166f87cb6c3fe
         Type: BaseDataVariableType
         DataType: String
         Value: "OI_DintFromPLC[26].@Description"
   - Name: 27
-    Id: g=99f6ec6d4f36813dddd7320d6497ffb2
     Type: MetaTagArrayIndex
     ReferenceType: HasTagChild
     Children:
     - Name: Description
-      Id: g=585558005ee41bdf61429753b5bbb13c
       Type: RAEtherNetIPMetaTag
       DataType: String
       Value: "Axis Task Overlap Count"
       Children:
       - Name: SymbolName
-        Id: g=d3d53dedd39b4ed25f6cc87c0a8ce14c
         Type: BaseDataVariableType
         DataType: String
         Value: "OI_DintFromPLC[27].@Description"
   - Name: 28
-    Id: g=6b2e76c065c70cbe9edba5e4d767f777
     Type: MetaTagArrayIndex
     ReferenceType: HasTagChild
     Children:
     - Name: Description
-      Id: g=af0eabfa269d6caaa477bdff97a7fa30
       Type: RAEtherNetIPMetaTag
       DataType: String
       Value: "PLC Last Axis Scan Time"
       Children:
       - Name: SymbolName
-        Id: g=a106bb0bd7b7c5b8494fc40131380335
         Type: BaseDataVariableType
         DataType: String
         Value: "OI_DintFromPLC[28].@Description"
   - Name: 29
-    Id: g=27102f0a8fc3c6acf87925faa3d61ee6
     Type: MetaTagArrayIndex
     ReferenceType: HasTagChild
     Children:
     - Name: Description
-      Id: g=7f33d5c95fd92ec6b3847b014f1a3e46
       Type: RAEtherNetIPMetaTag
       DataType: String
       Value: "PLC Max Axis Scan Time"
       Children:
       - Name: SymbolName
-        Id: g=81694b17a95d3a952b369351f79d9df4
         Type: BaseDataVariableType
         DataType: String
         Value: "OI_DintFromPLC[29].@Description"
   - Name: 2
-    Id: g=c957d05b1530debc940931f014f2d626
     Type: MetaTagArrayIndex
     ReferenceType: HasTagChild
     Children:
     - Name: Description
-      Id: g=0f1094f119104fb1a2ed565102df3dcd
       Type: RAEtherNetIPMetaTag
       DataType: String
       Value: "Cartoner Cycles (Shift)"
       Children:
       - Name: SymbolName
-        Id: g=0b2815e4f9326098a13a80157dbb7548
         Type: BaseDataVariableType
         DataType: String
         Value: "OI_DintFromPLC[2].@Description"
   - Name: 30
-    Id: g=311a2a56fe7d62d3c7c70d471d6b1ef2
     Type: MetaTagArrayIndex
     ReferenceType: HasTagChild
     Children:
     - Name: Description
-      Id: g=59f7a2821ff427835d792ef30cbd4d75
       Type: RAEtherNetIPMetaTag
       DataType: String
       Value: "OI Screen# Change"
       Children:
       - Name: SymbolName
-        Id: g=f8bd6a7f65a900abc79efcceca9fa39b
         Type: BaseDataVariableType
         DataType: String
         Value: "OI_DintFromPLC[30].@Description"
   - Name: 31
-    Id: g=48e7769d614f71b78bde5ecdc4543bf1
     Type: MetaTagArrayIndex
     ReferenceType: HasTagChild
     Children:
     - Name: Description
-      Id: g=93250d5a94c5c58b275fc77ffb539d8b
       Type: RAEtherNetIPMetaTag
       DataType: String
       Value: "Cartoner Not Produced"
       Children:
       - Name: SymbolName
-        Id: g=e89ec5c442efc004dc7e757ab74d5e28
         Type: BaseDataVariableType
         DataType: String
         Value: "OI_DintFromPLC[31].@Description"
   - Name: 32
-    Id: g=8dfffea98f4a9a5997f695efa8d1be6a
     Type: MetaTagArrayIndex
     ReferenceType: HasTagChild
     Children:
     - Name: Description
-      Id: g=90eef630bd7844fd01fa8afcec0c7c99
       Type: RAEtherNetIPMetaTag
       DataType: String
       Value: "Current\r\n190-RU1\r\nPressure\r\nSetpoint\r\n(PSI)"
       Children:
       - Name: SymbolName
-        Id: g=23594c9a7fe7aba7944c3a15d894ea34
         Type: BaseDataVariableType
         DataType: String
         Value: "OI_DintFromPLC[32].@Description"
   - Name: 33
-    Id: g=8d10df44346323731d7afdec0e86ca50
     Type: MetaTagArrayIndex
     ReferenceType: HasTagChild
     Children:
     - Name: Description
-      Id: g=1e925853481993816c6c8e40244a8e57
       Type: RAEtherNetIPMetaTag
       DataType: String
       Value: "Transfer Rejects (Shift)"
       Children:
       - Name: SymbolName
-        Id: g=f1303a68cf04f283055457574aeaeb0a
         Type: BaseDataVariableType
         DataType: String
         Value: "OI_DintFromPLC[33].@Description"
   - Name: 34
-    Id: g=024c8254bb93727c54036a8324b28ba3
     Type: MetaTagArrayIndex
     ReferenceType: HasTagChild
     Children:
     - Name: Description
-      Id: g=2d6940941c06fefd1ac19569d392d64d
       Type: RAEtherNetIPMetaTag
       DataType: String
       Value: "Transfer Rejects (Total)"
       Children:
       - Name: SymbolName
-        Id: g=936ccbce1ea07bd50c2a506db8248abe
         Type: BaseDataVariableType
         DataType: String
         Value: "OI_DintFromPLC[34].@Description"
   - Name: 3
-    Id: g=03016c9cfda97c13f319d4a8515cf1bf
     Type: MetaTagArrayIndex
     ReferenceType: HasTagChild
     Children:
     - Name: Description
-      Id: g=5550d6d8c17eff6fdc70e25994aafd57
       Type: RAEtherNetIPMetaTag
       DataType: String
       Value: "Cartoner Cycles (Total)"
       Children:
       - Name: SymbolName
-        Id: g=8c73c7db7e59baf479c2d55b5eb0f344
         Type: BaseDataVariableType
         DataType: String
         Value: "OI_DintFromPLC[3].@Description"
   - Name: 4
-    Id: g=edc025ec1dff046634f7fe7c08dda248
     Type: MetaTagArrayIndex
     ReferenceType: HasTagChild
     Children:
     - Name: Description
-      Id: g=5ad3bd5b391c88cd1f95f603483546fb
       Type: RAEtherNetIPMetaTag
       DataType: String
       Value: "Automatic Stops (Shift)"
       Children:
       - Name: SymbolName
-        Id: g=0ca93da4ddb4c5aafd545dbfcc219ba0
         Type: BaseDataVariableType
         DataType: String
         Value: "OI_DintFromPLC[4].@Description"
   - Name: 5
-    Id: g=ee299388c52010c609a4927c94080459
     Type: MetaTagArrayIndex
     ReferenceType: HasTagChild
     Children:
     - Name: Description
-      Id: g=6d9f4bcdd08b97d7a1c79c56b6f47975
       Type: RAEtherNetIPMetaTag
       DataType: String
       Value: "Automatic Stops (Total)"
       Children:
       - Name: SymbolName
-        Id: g=756056cc2290b52496548383ac12d89e
         Type: BaseDataVariableType
         DataType: String
         Value: "OI_DintFromPLC[5].@Description"
   - Name: 6
-    Id: g=320a548e892aa61b8c905017b00313a3
     Type: MetaTagArrayIndex
     ReferenceType: HasTagChild
     Children:
     - Name: Description
-      Id: g=7a411d7f998246b6814b466d35ff9f13
       Type: RAEtherNetIPMetaTag
       DataType: String
       Value: "Cartons Fed (Shift)"
       Children:
       - Name: SymbolName
-        Id: g=004614fec8c19e79b91e9d9a00bb43a1
         Type: BaseDataVariableType
         DataType: String
         Value: "OI_DintFromPLC[6].@Description"
   - Name: 72
-    Id: g=d4534a39ade07b229f15e0d193804819
     Type: MetaTagArrayIndex
     ReferenceType: HasTagChild
     Children:
     - Name: Description
-      Id: g=f148bd903fed7790a786902fa7dd5c60
       Type: RAEtherNetIPMetaTag
       DataType: String
       Value: "Laser Reject (Shift)"
       Children:
       - Name: SymbolName
-        Id: g=1d8b167391c64d2be9e399ea98d1bef4
         Type: BaseDataVariableType
         DataType: String
         Value: "OI_DintFromPLC[72].@Description"
   - Name: 73
-    Id: g=767ff4b0dc1dbb636e6adb023498503d
     Type: MetaTagArrayIndex
     ReferenceType: HasTagChild
     Children:
     - Name: Description
-      Id: g=ed90a0a5d0dde891f9879d51c2875b78
       Type: RAEtherNetIPMetaTag
       DataType: String
       Value: "Laser Reject (Total)"
       Children:
       - Name: SymbolName
-        Id: g=35da5514496a1b3c198a6bdf15befe0b
         Type: BaseDataVariableType
         DataType: String
         Value: "OI_DintFromPLC[73].@Description"
   - Name: 74
-    Id: g=3c809c6b2a00aab5863fcc937ecb4050
     Type: MetaTagArrayIndex
     ReferenceType: HasTagChild
     Children:
     - Name: Description
-      Id: g=fcc1fdf80669bfe886b3c261394401a9
       Type: RAEtherNetIPMetaTag
       DataType: String
       Value: "Glue Reject (Shift)"
       Children:
       - Name: SymbolName
-        Id: g=23a89598b553a3b2145603daa52ad523
         Type: BaseDataVariableType
         DataType: String
         Value: "OI_DintFromPLC[74].@Description"
   - Name: 75
-    Id: g=48ff002868ef63227a0c614443e85e34
     Type: MetaTagArrayIndex
     ReferenceType: HasTagChild
     Children:
     - Name: Description
-      Id: g=771e2c811a883d74824e73735670c9cc
       Type: RAEtherNetIPMetaTag
       DataType: String
       Value: "Glue Reject (Total)"
       Children:
       - Name: SymbolName
-        Id: g=b581c154448b74aab8104d5f9c6fa435
         Type: BaseDataVariableType
         DataType: String
         Value: "OI_DintFromPLC[75].@Description"
   - Name: 7
-    Id: g=d3ed4391294f16d36a6e8b7c3c881162
     Type: MetaTagArrayIndex
     ReferenceType: HasTagChild
     Children:
     - Name: Description
-      Id: g=682a63fbc27490a20acb51eca585029b
       Type: RAEtherNetIPMetaTag
       DataType: String
       Value: "Cartons Fed (Total)"
       Children:
       - Name: SymbolName
-        Id: g=9a11cc941651f5ec34d47389ddb59a09
         Type: BaseDataVariableType
         DataType: String
         Value: "OI_DintFromPLC[7].@Description"
   - Name: 8
-    Id: g=99961755216a025a582a417994d55eb5
     Type: MetaTagArrayIndex
     ReferenceType: HasTagChild
     Children:
     - Name: Description
-      Id: g=84c170def41c8e737c2975a828329c4e
       Type: RAEtherNetIPMetaTag
       DataType: String
       Value: "Cartons Produced (Shift)"
       Children:
       - Name: SymbolName
-        Id: g=e37c198b4aa7791a09628a7ddb4648bf
         Type: BaseDataVariableType
         DataType: String
         Value: "OI_DintFromPLC[8].@Description"
   - Name: 9
-    Id: g=9aa651dc28a49b0467fcb95991874b67
     Type: MetaTagArrayIndex
     ReferenceType: HasTagChild
     Children:
     - Name: Description
-      Id: g=f8db03d100c32bdba569a05aa0e3c6b6
       Type: RAEtherNetIPMetaTag
       DataType: String
       Value: "Cartons Produced (Total)"
       Children:
       - Name: SymbolName
-        Id: g=6e40b414a1f5ead5f6d55796c13a89b3
         Type: BaseDataVariableType
         DataType: String
         Value: "OI_DintFromPLC[9].@Description"
 - Name: OI_SelectToPLC
-  Id: g=edc6126d57c367760552c5ef06906cd4
   Type: RAEtherNetIPTag
   DataType: Int32
   ValueRank: OneDimension
   ArrayDimensions: [20]
   Children:
   - Name: SymbolName
-    Id: g=071c34caaaa04bf51e0d5f62ac832efd
     Type: BaseDataVariableType
     DataType: String
     Value: "OI_SelectToPLC"
   - Name: 0
-    Id: g=d8ad54185484df120507a3cd90c8d82d
     Type: MetaTagArrayIndex
     ReferenceType: HasTagChild
     Children:
     - Name: 0
-      Id: g=5b72ba8ad23bf8f3c786dcae440a313a
       Type: MetaTagBitIndex
       Children:
       - Name: Description
-        Id: g=a5c1cbe2c0d17436c7ff39245f729d93
         Type: RAEtherNetIPMetaTag
         DataType: String
         Value: "Automatic Run Mode"
         Children:
         - Name: SymbolName
-          Id: g=21723ff97c74a282d0d3ac5193640e2b
           Type: BaseDataVariableType
           DataType: String
           Value: "OI_SelectToPLC[0].0.@Description"
     - Name: 1
-      Id: g=4695d79e8440af3ac79ff2397793f8ac
       Type: MetaTagBitIndex
       Children:
       - Name: Description
-        Id: g=90f9103670e5c0c960fb304daf019da7
         Type: RAEtherNetIPMetaTag
         DataType: String
         Value: "Goto Mode"
         Children:
         - Name: SymbolName
-          Id: g=f773465ed7a39a80f234ef9720f0963a
           Type: BaseDataVariableType
           DataType: String
           Value: "OI_SelectToPLC[0].1.@Description"
     - Name: 10
-      Id: g=9d6e53e247393275375635b3722c811d
       Type: MetaTagBitIndex
       Children:
       - Name: Description
-        Id: g=90c20dc2ae8c69476e3f5e7b26f20e04
         Type: RAEtherNetIPMetaTag
         DataType: String
         Value: "Transfer - Dry Cycle Mode"
         Children:
         - Name: SymbolName
-          Id: g=ad5d6be1d3f82d45d859fce020d43a9b
           Type: BaseDataVariableType
           DataType: String
           Value: "OI_SelectToPLC[0].10.@Description"
     - Name: 11
-      Id: g=85a5385ce21d27aef516070d0179f0d3
       Type: MetaTagBitIndex
       Children:
       - Name: Description
-        Id: g=2ea1bca4ac1c8fcc0535f3350487ee45
         Type: RAEtherNetIPMetaTag
         DataType: String
         Value: "Transfer - Cleanout Mode"
         Children:
         - Name: SymbolName
-          Id: g=5e7b9d41ac9e973d7fa6822659ff88b4
           Type: BaseDataVariableType
           DataType: String
           Value: "OI_SelectToPLC[0].11.@Description"
     - Name: 12
-      Id: g=b7382299c4d933118376ca8a7b1c6205
       Type: MetaTagBitIndex
       Children:
       - Name: Description
-        Id: g=a5ea6c7ea43140ded48daed5fac07376
         Type: RAEtherNetIPMetaTag
         DataType: String
         Value: "Transfer Modes Enabled"
         Children:
         - Name: SymbolName
-          Id: g=fb57aee24b8148be32696bf88c1b965e
           Type: BaseDataVariableType
           DataType: String
           Value: "OI_SelectToPLC[0].12.@Description"
     - Name: 13
-      Id: g=4a29ce63a3c3076eaf00e1b22c024867
       Type: MetaTagBitIndex
       Children:
       - Name: Description
-        Id: g=f153226aa1452d08b20e124d6e061bb6
         Type: RAEtherNetIPMetaTag
         DataType: String
         Value: "Transfer - Joint Axis Jog Mode"
         Children:
         - Name: SymbolName
-          Id: g=ce480321bc0e84dcf4c82f6164e036b6
           Type: BaseDataVariableType
           DataType: String
           Value: "OI_SelectToPLC[0].13.@Description"
     - Name: 14
-      Id: g=efa5c16525921186a1bc8b9196b7f552
       Type: MetaTagBitIndex
       Children:
       - Name: Description
-        Id: g=c32c97a5c4eba650a0d09c10725038e3
         Type: RAEtherNetIPMetaTag
         DataType: String
         Value: "Transfer - Joint Axis Jog Mode Enabled"
         Children:
         - Name: SymbolName
-          Id: g=87cfb5b716090aa2f503adacb0a7bf5a
           Type: BaseDataVariableType
           DataType: String
           Value: "OI_SelectToPLC[0].14.@Description"
     - Name: 15
-      Id: g=c3f7a0d9ebecb854c60e23d6f6a0a9c1
       Type: MetaTagBitIndex
       Children:
       - Name: Description
-        Id: g=b8428d4ec872b215ac858538959d0b02
         Type: RAEtherNetIPMetaTag
         DataType: String
         Value: "Transfer - EOAT Jog Mode"
         Children:
         - Name: SymbolName
-          Id: g=0fe6ba3f6a0a90ec52b095e2cc169ec9
           Type: BaseDataVariableType
           DataType: String
           Value: "OI_SelectToPLC[0].15.@Description"
     - Name: 16
-      Id: g=9315797a164d8d740715a6a3ea51cd01
       Type: MetaTagBitIndex
       Children:
       - Name: Description
-        Id: g=65f2a0e5a2fc5c1644a0a08340edc70c
         Type: RAEtherNetIPMetaTag
         DataType: String
         Value: "Transfer - Coordinate Axis Jog Mode Enabled"
         Children:
         - Name: SymbolName
-          Id: g=a7ae7f820c9acc5f57c8e2da98633f09
           Type: BaseDataVariableType
           DataType: String
           Value: "OI_SelectToPLC[0].16.@Description"
     - Name: 2
-      Id: g=343708eb7a800924ecc8159117ed00fe
       Type: MetaTagBitIndex
       Children:
       - Name: Description
-        Id: g=c2950669f4b9ac91f474500e3762baae
         Type: RAEtherNetIPMetaTag
         DataType: String
         Value: "Index Mode"
         Children:
         - Name: SymbolName
-          Id: g=cc881125b58a9dd10f1527d492f29112
           Type: BaseDataVariableType
           DataType: String
           Value: "OI_SelectToPLC[0].2.@Description"
     - Name: 3
-      Id: g=74c863edca80d79e6d37b8320d821443
       Type: MetaTagBitIndex
       Children:
       - Name: Description
-        Id: g=30c11f232f6a4b4499a616ef420a7fe8
         Type: RAEtherNetIPMetaTag
         DataType: String
         Value: "Jog Mode"
         Children:
         - Name: SymbolName
-          Id: g=fc8601ab4c68497f00244a2c83b501d0
           Type: BaseDataVariableType
           DataType: String
           Value: "OI_SelectToPLC[0].3.@Description"
     - Name: 4
-      Id: g=8182ecc3f62af5a92a8166b601516059
       Type: MetaTagBitIndex
       Children:
       - Name: Description
-        Id: g=9723144f74f4ff7e52874b3bc218a397
         Type: RAEtherNetIPMetaTag
         DataType: String
         Value: "Manual Run Mode"
         Children:
         - Name: SymbolName
-          Id: g=3f805852d3710a2e10a6d5dc7e0de105
           Type: BaseDataVariableType
           DataType: String
           Value: "OI_SelectToPLC[0].4.@Description"
     - Name: 5
-      Id: g=6c5b2f30dcfe5226632c3ea0ca3ce322
       Type: MetaTagBitIndex
       Children:
       - Name: Description
-        Id: g=51cc6e66e5f013525431d587ca0e9f27
         Type: RAEtherNetIPMetaTag
         DataType: String
         Value: "Run Out Mode"
         Children:
         - Name: SymbolName
-          Id: g=0bbe99af510c6c5a9d37e516bba25ead
           Type: BaseDataVariableType
           DataType: String
           Value: "OI_SelectToPLC[0].5.@Description"
     - Name: 6
-      Id: g=d637f4314f070b9316bed871fd58b2d4
       Type: MetaTagBitIndex
       Children:
       - Name: Description
-        Id: g=525c22eb98265af5dbaa2fe3e50ac044
         Type: RAEtherNetIPMetaTag
         DataType: String
         Value: "Validation Mode"
         Children:
         - Name: SymbolName
-          Id: g=14b51516ce5599d24684680ed223ca59
           Type: BaseDataVariableType
           DataType: String
           Value: "OI_SelectToPLC[0].6.@Description"
     - Name: 7
-      Id: g=2a97e24a9610620417fc97f6cdfc5a34
       Type: MetaTagBitIndex
       Children:
       - Name: Description
-        Id: g=0c4dfaedc09511c2298bf5deff04e088
         Type: RAEtherNetIPMetaTag
         DataType: String
         Value: "Demo Mode"
         Children:
         - Name: SymbolName
-          Id: g=ae806566bca2b4107f80d0471620839d
           Type: BaseDataVariableType
           DataType: String
           Value: "OI_SelectToPLC[0].7.@Description"
     - Name: 8
-      Id: g=01bdf2ccbbde6db302c0cdec72947b70
       Type: MetaTagBitIndex
       Children:
       - Name: Description
-        Id: g=f0e61955d702571a013d832d7cdd9569
         Type: RAEtherNetIPMetaTag
         DataType: String
         Value: "Disable All Counter Alarms"
         Children:
         - Name: SymbolName
-          Id: g=273baea1f0424a9620e9883166fe46e7
           Type: BaseDataVariableType
           DataType: String
           Value: "OI_SelectToPLC[0].8.@Description"
     - Name: 9
-      Id: g=6273ee329ca8308e42fb07211fc437dc
       Type: MetaTagBitIndex
       Children:
       - Name: Description
-        Id: g=0a041cdded25627aac84ec7b745c2edc
         Type: RAEtherNetIPMetaTag
         DataType: String
         Value: "Transfer - Refeed Mode"
         Children:
         - Name: SymbolName
-          Id: g=21af330a51ee944cc39d5f04c9662de7
           Type: BaseDataVariableType
           DataType: String
           Value: "OI_SelectToPLC[0].9.@Description"
   - Name: 10
-    Id: g=ccaf1420f8e0810025562e2ab967136a
     Type: MetaTagArrayIndex
     ReferenceType: HasTagChild
     Children:
     - Name: Description
-      Id: g=c4b29801a8cb4a696f28b48a1cd1f8ba
       Type: RAEtherNetIPMetaTag
       DataType: String
       Value: "Transfer"
       Children:
       - Name: SymbolName
-        Id: g=7e58f77741efb29589eba17aec327e2c
         Type: BaseDataVariableType
         DataType: String
         Value: "OI_SelectToPLC[10].@Description"
     - Name: 10
-      Id: g=64a3bf2db2f262738bc50ad94673d0e5
       Type: MetaTagBitIndex
       Children:
       - Name: Description
-        Id: g=6f25c5cdbe20ac5ac9f774627c3fa0b1
         Type: RAEtherNetIPMetaTag
         DataType: String
         Value: "Transfer -  Dry Cycle Mode"
         Children:
         - Name: SymbolName
-          Id: g=4616c44ef6090ea8aa99beb26abce0df
           Type: BaseDataVariableType
           DataType: String
           Value: "OI_SelectToPLC[10].10.@Description"
     - Name: 11
-      Id: g=332aedf6388a893f50e1a14fb1d9198e
       Type: MetaTagBitIndex
       Children:
       - Name: Description
-        Id: g=ef07a6b4666c43801bd2873ba7525562
         Type: RAEtherNetIPMetaTag
         DataType: String
         Value: "Transfer - Cleanout Mode"
         Children:
         - Name: SymbolName
-          Id: g=c8fb22486a90752297af112cce755010
           Type: BaseDataVariableType
           DataType: String
           Value: "OI_SelectToPLC[10].11.@Description"
     - Name: 12
-      Id: g=d5c735f7f7739e7d896bc7ac312bed48
       Type: MetaTagBitIndex
       Children:
       - Name: Description
-        Id: g=3545d266049338ecee2c64b2bfee01f0
         Type: RAEtherNetIPMetaTag
         DataType: String
         Value: "Transfer - Referencing Mode"
         Children:
         - Name: SymbolName
-          Id: g=ed2c7e6d3a0db2ebb9fb853fcb5177c5
           Type: BaseDataVariableType
           DataType: String
           Value: "OI_SelectToPLC[10].12.@Description"
   - Name: 11
-    Id: g=5e51c12993f7d588b1553a26ab718fa1
     Type: MetaTagArrayIndex
     ReferenceType: HasTagChild
     Children:
     - Name: 0
-      Id: g=dbf6b19d08f99b9fcfa77f3a26392b05
       Type: MetaTagBitIndex
       Children:
       - Name: Description
-        Id: g=1711d9cc21166ce2571c3115286619e6
         Type: RAEtherNetIPMetaTag
         DataType: String
         Value: "Auto Calibrate PB"
         Children:
         - Name: SymbolName
-          Id: g=4500022cd0b62a467b06e015ec6785b4
           Type: BaseDataVariableType
           DataType: String
           Value: "OI_SelectToPLC[11].0.@Description"
     - Name: 1
-      Id: g=c3b287c6c3a2c27b54c5d280af1f952d
       Type: MetaTagBitIndex
       Children:
       - Name: Description
-        Id: g=39f1c4d2f618025f67ac00358b591b13
         Type: RAEtherNetIPMetaTag
         DataType: String
         Value: "Auto Calibrate \r\nAbort PB"
         Children:
         - Name: SymbolName
-          Id: g=8308089b6b39181f85b1b36b52901d6c
           Type: BaseDataVariableType
           DataType: String
           Value: "OI_SelectToPLC[11].1.@Description"
     - Name: 2
-      Id: g=0c4a84b6ae426a8f757fce0d02290873
       Type: MetaTagBitIndex
       Children:
       - Name: Description
-        Id: g=183ac7ec996bbfcf86c46280d6389264
         Type: RAEtherNetIPMetaTag
         DataType: String
         Value: "Transfer 1\r\nBagger Selected ON"
         Children:
         - Name: SymbolName
-          Id: g=51c828df42d362e8acc84b9062eb5479
           Type: BaseDataVariableType
           DataType: String
           Value: "OI_SelectToPLC[11].2.@Description"
     - Name: 3
-      Id: g=7aa4775dccedc1f3fbc2631d329222fc
       Type: MetaTagBitIndex
       Children:
       - Name: Description
-        Id: g=d3e56263605268051f98104b0596369c
         Type: RAEtherNetIPMetaTag
         DataType: String
         Value: "Transfer 1\r\nBypass Mode\r\nSelected"
         Children:
         - Name: SymbolName
-          Id: g=312152b1e3501b4eeb9bb2019df39e66
           Type: BaseDataVariableType
           DataType: String
           Value: "OI_SelectToPLC[11].3.@Description"
   - Name: 12
-    Id: g=66b71c7e6b9ea15fd1f989ada117db92
     Type: MetaTagArrayIndex
     ReferenceType: HasTagChild
     Children:
     - Name: 2
-      Id: g=bbc7353b377b455d4d9b57f2ba7858b5
       Type: MetaTagBitIndex
       Children:
       - Name: Description
-        Id: g=e577767c27907289633afb3120dc4c1f
         Type: RAEtherNetIPMetaTag
         DataType: String
         Value: "Transfer 2\r\nBagger Selected ON"
         Children:
         - Name: SymbolName
-          Id: g=3a9a498da2aa8986022760f5de35b1fc
           Type: BaseDataVariableType
           DataType: String
           Value: "OI_SelectToPLC[12].2.@Description"
   - Name: 13
-    Id: g=931b60bf68f07cb79331440ac6ca8d45
     Type: MetaTagArrayIndex
     ReferenceType: HasTagChild
     Children:
     - Name: 2
-      Id: g=d5241ab0cd7eb4d9cfccd8a6e06f3128
       Type: MetaTagBitIndex
       Children:
       - Name: Description
-        Id: g=21752c709fd25610cace4f11c71f7458
         Type: RAEtherNetIPMetaTag
         DataType: String
         Value: "Transfer 3\r\nBagger Selected ON"
         Children:
         - Name: SymbolName
-          Id: g=2ced74d617663ebfc7fcf9324629a860
           Type: BaseDataVariableType
           DataType: String
           Value: "OI_SelectToPLC[13].2.@Description"
   - Name: 14
-    Id: g=74544525cdb8062f92ec2e52c41ff885
     Type: MetaTagArrayIndex
     ReferenceType: HasTagChild
     Children:
     - Name: 2
-      Id: g=b86b2128450fd478520e5a8e3dac4886
       Type: MetaTagBitIndex
       Children:
       - Name: Description
-        Id: g=f91c1c79ad418b5ff37ce73167b1cb13
         Type: RAEtherNetIPMetaTag
         DataType: String
         Value: "Transfer 4\r\nBagger Selected ON"
         Children:
         - Name: SymbolName
-          Id: g=6ddcb60b2ab937ea27d3a4c856ca03c5
           Type: BaseDataVariableType
           DataType: String
           Value: "OI_SelectToPLC[14].2.@Description"
   - Name: 1
-    Id: g=8f9cd0a6b94ffb43bc07e60f4b0e4fdd
     Type: MetaTagArrayIndex
     ReferenceType: HasTagChild
     Children:
     - Name: Description
-      Id: g=919d1d9aa3c0231254939b701e80a1af
       Type: RAEtherNetIPMetaTag
       DataType: String
       Value: "SELECT"
       Children:
       - Name: SymbolName
-        Id: g=439bfc135a8a957e36456bdba9ee6683
         Type: BaseDataVariableType
         DataType: String
         Value: "OI_SelectToPLC[1].@Description"
     - Name: 0
-      Id: g=643b9abe5fe46a0a8d7d96c03ee29415
       Type: MetaTagBitIndex
       Children:
       - Name: Description
-        Id: g=10a1ffdc35e1edb47dc27cd55ed65820
         Type: RAEtherNetIPMetaTag
         DataType: String
         Value: "Carton Feed Air Supply"
         Children:
         - Name: SymbolName
-          Id: g=fee6dfbce497c6fd8ccd26dedbc21e2c
           Type: BaseDataVariableType
           DataType: String
           Value: "OI_SelectToPLC[1].0.@Description"
     - Name: 1
-      Id: g=0f713cc6997aa36b3b61e5470aa7cda1
       Type: MetaTagBitIndex
       Children:
       - Name: Description
-        Id: g=5b98460893311b2d9b5663dff6d459f3
         Type: RAEtherNetIPMetaTag
         DataType: String
         Value: "Manual Carton Feed ON Select From HMI To PLC"
         Children:
         - Name: SymbolName
-          Id: g=db4db1ca9a246e08123e33028288e1f1
           Type: BaseDataVariableType
           DataType: String
           Value: "OI_SelectToPLC[1].1.@Description"
     - Name: 11
-      Id: g=75ef5e6c12e4333c87aecaa7e69f2e9b
       Type: MetaTagBitIndex
       Children:
       - Name: Description
-        Id: g=e6e39d4e598391ef73b3d18af4641c24
         Type: RAEtherNetIPMetaTag
         DataType: String
         Value: "Cleanout Mode Active"
         Children:
         - Name: SymbolName
-          Id: g=bb4cc6d3156c2fda7746db4801e85b14
           Type: BaseDataVariableType
           DataType: String
           Value: "OI_SelectToPLC[1].11.@Description"
     - Name: 12
-      Id: g=8bd4e82f65dc53aaba9691fcfb93a7d7
       Type: MetaTagBitIndex
       Children:
       - Name: Description
-        Id: g=6af7c6c4709b83b898e8c8d3ae2ed108
         Type: RAEtherNetIPMetaTag
         DataType: String
         Value: "RESET COUNTERS"
         Children:
         - Name: SymbolName
-          Id: g=dd308ba3eda8fbc64029017dbb67fbfa
           Type: BaseDataVariableType
           DataType: String
           Value: "OI_SelectToPLC[1].12.@Description"
     - Name: 13
-      Id: g=119814d751f6f5858de9e8ffea352d44
       Type: MetaTagBitIndex
       Children:
       - Name: Description
-        Id: g=423121407340f475e446cae34799ffbb
         Type: RAEtherNetIPMetaTag
         DataType: String
         Value: "PackML Reset All Times"
         Children:
         - Name: SymbolName
-          Id: g=a01a765002eef12bf04a5b8f5dd3d3f0
           Type: BaseDataVariableType
           DataType: String
           Value: "OI_SelectToPLC[1].13.@Description"
     - Name: 15
-      Id: g=581d6027d882cdd603f720ad56dd19d6
       Type: MetaTagBitIndex
       Children:
       - Name: Description
-        Id: g=cfd9b4a3c66836fdb0f3da365979a841
         Type: RAEtherNetIPMetaTag
         DataType: String
         Value: "Size Copy"
         Children:
         - Name: SymbolName
-          Id: g=9a574c030a4e341aa75700539a6bd090
           Type: BaseDataVariableType
           DataType: String
           Value: "OI_SelectToPLC[1].15.@Description"
     - Name: 16
-      Id: g=b2fe5e72095cd57e51fc936493ab518f
       Type: MetaTagBitIndex
       Children:
       - Name: Description
-        Id: g=a3309348f8b10c98543539640593d35e
         Type: RAEtherNetIPMetaTag
         DataType: String
         Value: "FORCE Cartoner Guard Locks"
         Children:
         - Name: SymbolName
-          Id: g=0aaba879048bae8af0aff674fbea8376
           Type: BaseDataVariableType
           DataType: String
           Value: "OI_SelectToPLC[1].16.@Description"
     - Name: 17
-      Id: g=3ca6b10968e22cf5e94639a40c4ac64d
       Type: MetaTagBitIndex
       Children:
       - Name: Description
-        Id: g=df3aa3fe00e2a4afed99b6d842a9a67f
         Type: RAEtherNetIPMetaTag
         DataType: String
         Value: "Chain Tensioner RELEASE"
         Children:
         - Name: SymbolName
-          Id: g=1667643a5c53d6e344e948defd585ada
           Type: BaseDataVariableType
           DataType: String
           Value: "OI_SelectToPLC[1].17.@Description"
     - Name: 18
-      Id: g=ae822a8af24e3d5443047d37847e330d
       Type: MetaTagBitIndex
       Children:
       - Name: Description
-        Id: g=b963e1883d8b5d849f86032d3beaf0e7
         Type: RAEtherNetIPMetaTag
         DataType: String
         Value: "Chain Tensioner EXTEND"
         Children:
         - Name: SymbolName
-          Id: g=d02f3654e9ef84f5be8f98d90d4421c7
           Type: BaseDataVariableType
           DataType: String
           Value: "OI_SelectToPLC[1].18.@Description"
     - Name: 2
-      Id: g=4337ace8b39f78e865cb66dcfc580b7e
       Type: MetaTagBitIndex
       Children:
       - Name: Description
-        Id: g=2dcd7d43b97b71d92c2e46da7a9d2e64
         Type: RAEtherNetIPMetaTag
         DataType: String
         Value: "Loader Retractor Selected ON"
         Children:
         - Name: SymbolName
-          Id: g=43659921efb04e4b3b090790d736c637
           Type: BaseDataVariableType
           DataType: String
           Value: "OI_SelectToPLC[1].2.@Description"
     - Name: 20
-      Id: g=8f870895737b6193ee2a68ec8096bd07
       Type: MetaTagBitIndex
       Children:
       - Name: Description
-        Id: g=79352b4244eaefdf0a39ca01d0493fcf
         Type: RAEtherNetIPMetaTag
         DataType: String
         Value: "Glue Purge On"
         Children:
         - Name: SymbolName
-          Id: g=f5783f3df2ea0bd957f6a3baca1af6bb
           Type: BaseDataVariableType
           DataType: String
           Value: "OI_SelectToPLC[1].20.@Description"
     - Name: 21
-      Id: g=16f49ea7c0d3d0476a7c04ef96cbcc8d
       Type: MetaTagBitIndex
       Children:
       - Name: Description
-        Id: g=e7e3bfd920bbcd70936c0e70e60b2a3a
         Type: RAEtherNetIPMetaTag
         DataType: String
         Value: "Outer Operator Side Glue Purge"
         Children:
         - Name: SymbolName
-          Id: g=47cdf3e7aff93dcd2a9f658beebb5b57
           Type: BaseDataVariableType
           DataType: String
           Value: "OI_SelectToPLC[1].21.@Description"
     - Name: 22
-      Id: g=a775c190bee764b0cb7dfcc62cd8da26
       Type: MetaTagBitIndex
       Children:
       - Name: Description
-        Id: g=bb66c8be2fac43cbfdf6ffabd882e5c2
         Type: RAEtherNetIPMetaTag
         DataType: String
         Value: "Outer Loader Side Glue Purge"
         Children:
         - Name: SymbolName
-          Id: g=1dd3a7b50f4eeae3766741280142a04c
           Type: BaseDataVariableType
           DataType: String
           Value: "OI_SelectToPLC[1].22.@Description"
     - Name: 23
-      Id: g=e066ebed7758f6881445f89280dcb5b7
       Type: MetaTagBitIndex
       Children:
       - Name: Description
-        Id: g=3b04493505279940594e67c6a0a07c0d
         Type: RAEtherNetIPMetaTag
         DataType: String
         Value: "Inner Operator Side Glue Purge"
         Children:
         - Name: SymbolName
-          Id: g=6943e668a15fe4ba2a6c5373884913e8
           Type: BaseDataVariableType
           DataType: String
           Value: "OI_SelectToPLC[1].23.@Description"
     - Name: 24
-      Id: g=494ee00eb14db9bf4fea32bd927345fd
       Type: MetaTagBitIndex
       Children:
       - Name: Description
-        Id: g=e1b8dc623cf7d0acf90d928ec2a52a52
         Type: RAEtherNetIPMetaTag
         DataType: String
         Value: "Inner Loader Side Glue Purge"
         Children:
         - Name: SymbolName
-          Id: g=d3053a69d400b639fd388d74e9fd7b6c
           Type: BaseDataVariableType
           DataType: String
           Value: "OI_SelectToPLC[1].24.@Description"
     - Name: 26
-      Id: g=fe391d05bd9b10caaa0b900935d821c8
       Type: MetaTagBitIndex
       Children:
       - Name: Description
-        Id: g=66aac7bcc73cc1c6d2ae7980a2e83d28
         Type: RAEtherNetIPMetaTag
         DataType: String
         Value: "Robot Joint Axis\r\nJog Mode"
         Children:
         - Name: SymbolName
-          Id: g=fbeb4922f71b642b5897dd6599978e6c
           Type: BaseDataVariableType
           DataType: String
           Value: "OI_SelectToPLC[1].26.@Description"
     - Name: 27
-      Id: g=969008d2840901724d69192026a2b948
       Type: MetaTagBitIndex
       Children:
       - Name: Description
-        Id: g=1a4d9e26655ec8d9a58acf042326c848
         Type: RAEtherNetIPMetaTag
         DataType: String
         Value: "Robot Coordinate Axis Jog Mode"
         Children:
         - Name: SymbolName
-          Id: g=5001bb26136cbeba982bc9bc6d5a5eeb
           Type: BaseDataVariableType
           DataType: String
           Value: "OI_SelectToPLC[1].27.@Description"
     - Name: 28
-      Id: g=96790acf837aca0505bddaa8d9a323eb
       Type: MetaTagBitIndex
       Children:
       - Name: Description
-        Id: g=58e320deeb33d3f1fcfdfa7c5f115bef
         Type: RAEtherNetIPMetaTag
         DataType: String
         Value: "Manually Force Glue Pressure"
         Children:
         - Name: SymbolName
-          Id: g=c49b27541a5f94a2797b4c351e2181e9
           Type: BaseDataVariableType
           DataType: String
           Value: "OI_SelectToPLC[1].28.@Description"
     - Name: 29
-      Id: g=0df6b787aa869e5d01aee55c0e8761b1
       Type: MetaTagBitIndex
       Children:
       - Name: Description
-        Id: g=4c44d7fbd1da4597f87de9c0c40d0259
         Type: RAEtherNetIPMetaTag
         DataType: String
         Value: "Write Shift Values"
         Children:
         - Name: SymbolName
-          Id: g=e87f791bba853fe1edfffa8ec1f254cb
           Type: BaseDataVariableType
           DataType: String
           Value: "OI_SelectToPLC[1].29.@Description"
     - Name: 3
-      Id: g=455410cb2d46031013059076000a7cf5
       Type: MetaTagBitIndex
       Children:
       - Name: Description
-        Id: g=2e01e71cbb298c232fe814947e794a12
         Type: RAEtherNetIPMetaTag
         DataType: String
         Value: "Top Rails RETRACT Selected"
         Children:
         - Name: SymbolName
-          Id: g=c4eac189fb06581d99a748ded0fb29a9
           Type: BaseDataVariableType
           DataType: String
           Value: "OI_SelectToPLC[1].3.@Description"
     - Name: 4
-      Id: g=6dedd05a8b3415187d1744480611370c
       Type: MetaTagBitIndex
       Children:
       - Name: Description
-        Id: g=545e3ab097420bc017a8408b40ece086
         Type: RAEtherNetIPMetaTag
         DataType: String
         Value: "Retract Diverter Switcher"
         Children:
         - Name: SymbolName
-          Id: g=52ab7680ebc67cd3dcabe1e85f5074dc
           Type: BaseDataVariableType
           DataType: String
           Value: "OI_SelectToPLC[1].4.@Description"
     - Name: 5
-      Id: g=9a6a9935a28de3cdc3f00d8ec62e5398
       Type: MetaTagBitIndex
       Children:
       - Name: Description
-        Id: g=d34514f61250911ab4631aa67b0472bb
         Type: RAEtherNetIPMetaTag
         DataType: String
         Value: "0007-CR1 Cartoner Lights"
         Children:
         - Name: SymbolName
-          Id: g=fe7e8182716ff82ece52904633548045
           Type: BaseDataVariableType
           DataType: String
           Value: "OI_SelectToPLC[1].5.@Description"
     - Name: 6
-      Id: g=2c792abe2bbb9cd1f692215f3f9ddb30
       Type: MetaTagBitIndex
       Children:
       - Name: Description
-        Id: g=aa550ee2b54734d8a38ab9383e8048d1
         Type: RAEtherNetIPMetaTag
         DataType: String
         Value: "Overhead Confiner Tamp RETRACT"
         Children:
         - Name: SymbolName
-          Id: g=16e58816d5840290dc882dbd3da3ea3f
           Type: BaseDataVariableType
           DataType: String
           Value: "OI_SelectToPLC[1].6.@Description"
     - Name: 7
-      Id: g=ef655ebf722d33f2d351ee6e4f794c22
       Type: MetaTagBitIndex
       Children:
       - Name: Description
-        Id: g=48fbde0150efb440b2767b8d76c01620
         Type: RAEtherNetIPMetaTag
         DataType: String
         Value: "Jones Continuous Feed Selected ON"
         Children:
         - Name: SymbolName
-          Id: g=b2ab6b7450bc92a336373b0c0b67f4a9
           Type: BaseDataVariableType
           DataType: String
           Value: "OI_SelectToPLC[1].7.@Description"
     - Name: 8
-      Id: g=26da833ebdd6d2d8219e1d5b806b993b
       Type: MetaTagBitIndex
       Children:
       - Name: Description
-        Id: g=91ac8ca4b122ecb14a9000a812ce61d1
         Type: RAEtherNetIPMetaTag
         DataType: String
         Value: "Size Change Initiated"
         Children:
         - Name: SymbolName
-          Id: g=98ec938d0ee6ecdbc3621bd559fa2eb1
           Type: BaseDataVariableType
           DataType: String
           Value: "OI_SelectToPLC[1].8.@Description"
     - Name: 9
-      Id: g=e2c52af4d78426a8ae7f6ad2d8538f8c
       Type: MetaTagBitIndex
       Children:
       - Name: Description
-        Id: g=81a5cd64eb658b75720401c23c5e7326
         Type: RAEtherNetIPMetaTag
         DataType: String
         Value: "HOT MELT\r\nEngineering Bypass"
         Children:
         - Name: SymbolName
-          Id: g=e70011f20af93338e05db96c912f16d5
           Type: BaseDataVariableType
           DataType: String
           Value: "OI_SelectToPLC[1].9.@Description"
   - Name: 2
-    Id: g=3e76564f164693299a752c55a3845f5a
     Type: MetaTagArrayIndex
     ReferenceType: HasTagChild
     Children:
     - Name: Description
-      Id: g=23772e1f2f90c7bb601bb29cec345a1e
       Type: RAEtherNetIPMetaTag
       DataType: String
       Value: "BYPASS"
       Children:
       - Name: SymbolName
-        Id: g=5eef6953887372fc90a830038ece0fa6
         Type: BaseDataVariableType
         DataType: String
         Value: "OI_SelectToPLC[2].@Description"
     - Name: 0
-      Id: g=e397e60f2fa399962dd45b88950c5675
       Type: MetaTagBitIndex
       Children:
       - Name: Description
-        Id: g=f4064d575eaabeb745e47c403a700e88
         Type: RAEtherNetIPMetaTag
         DataType: String
         Value: "Hot Melt Bypass"
         Children:
         - Name: SymbolName
-          Id: g=f2cb6a43f4729263ed4334a8eea94283
           Type: BaseDataVariableType
           DataType: String
           Value: "OI_SelectToPLC[2].0.@Description"
     - Name: 1
-      Id: g=2983fecaa088a56c0e441f0624ea85ca
       Type: MetaTagBitIndex
       Children:
       - Name: Description
-        Id: g=574d41fede7aa9b1bc5ceb7c87b1ab16
         Type: RAEtherNetIPMetaTag
         DataType: String
         Value: "Downstream Bypass"
         Children:
         - Name: SymbolName
-          Id: g=abf9aa6af1e8759309fa2a2d723c1efb
           Type: BaseDataVariableType
           DataType: String
           Value: "OI_SelectToPLC[2].1.@Description"
     - Name: 10
-      Id: g=e1aaacdd96cecc80533e658b6b53538c
       Type: MetaTagBitIndex
       Children:
       - Name: Description
-        Id: g=c7b0df55c8eaee17c6069e1300596ee6
         Type: RAEtherNetIPMetaTag
         DataType: String
         Value: "Case Packer Bypass ON"
         Children:
         - Name: SymbolName
-          Id: g=a739640f8542edb68cd48a7bc32e5fff
           Type: BaseDataVariableType
           DataType: String
           Value: "OI_SelectToPLC[2].10.@Description"
     - Name: 11
-      Id: g=cdba0af928824ef9d24c057d60510129
       Type: MetaTagBitIndex
       Children:
       - Name: Description
-        Id: g=56bf5c347557845756366d0b6a9789d0
         Type: RAEtherNetIPMetaTag
         DataType: String
         Value: "X- Ray Bypass"
         Children:
         - Name: SymbolName
-          Id: g=1892283feb5fd3d7c2f78344f2932771
           Type: BaseDataVariableType
           DataType: String
           Value: "OI_SelectToPLC[2].11.@Description"
     - Name: 12
-      Id: g=237fd4137e3faebe478ec694ac7d16a9
       Type: MetaTagBitIndex
       Children:
       - Name: Description
-        Id: g=47f028ec0e01f3a2c992db1c6572fa63
         Type: RAEtherNetIPMetaTag
         DataType: String
         Value: "Tablet Bypass"
         Children:
         - Name: SymbolName
-          Id: g=ebf403aa0b6c4f41c4d1886d1dc060ab
           Type: BaseDataVariableType
           DataType: String
           Value: "OI_SelectToPLC[2].12.@Description"
     - Name: 13
-      Id: g=8bfc40d9efea29312182fbc490763583
       Type: MetaTagBitIndex
       Children:
       - Name: Description
-        Id: g=2c705c143b2777c1288252945eb2d44a
         Type: RAEtherNetIPMetaTag
         DataType: String
         Value: "Reject Verification Bypass"
         Children:
         - Name: SymbolName
-          Id: g=b9614372aca2313861adda624be28c11
           Type: BaseDataVariableType
           DataType: String
           Value: "OI_SelectToPLC[2].13.@Description"
     - Name: 15
-      Id: g=a5ded4522432427afaa3e5b2b07f0398
       Type: MetaTagBitIndex
       Children:
       - Name: Description
-        Id: g=fe39e34ffb09c6b41e8442ef2a84d065
         Type: RAEtherNetIPMetaTag
         DataType: String
         Value: "Barcode Reject Verification Bypass"
         Children:
         - Name: SymbolName
-          Id: g=84b22e19ac58426923f3f2dfd14588c1
           Type: BaseDataVariableType
           DataType: String
           Value: "OI_SelectToPLC[2].15.@Description"
     - Name: 16
-      Id: g=bb3a9b8c5ddaf2ecd9da38e2a3aeac60
       Type: MetaTagBitIndex
       Children:
       - Name: Description
-        Id: g=aa0fef84fdaa58061ce211a9a196aa37
         Type: RAEtherNetIPMetaTag
         DataType: String
         Value: "Transfer 1 Upstream Signal Bypass"
         Children:
         - Name: SymbolName
-          Id: g=9e04bbe8aa5419963bda7f3c5bf4a1f9
           Type: BaseDataVariableType
           DataType: String
           Value: "OI_SelectToPLC[2].16.@Description"
     - Name: 17
-      Id: g=a8cd743b5c1083d88d11dc0d6a167e86
       Type: MetaTagBitIndex
       Children:
       - Name: Description
-        Id: g=594349a41ba20a0ecdf4bfb974d34bf7
         Type: RAEtherNetIPMetaTag
         DataType: String
         Value: "Transfer 2 Upstream Signal Bypass"
         Children:
         - Name: SymbolName
-          Id: g=a27af5d6a23b1d1f8cdb538e3ae9eeb8
           Type: BaseDataVariableType
           DataType: String
           Value: "OI_SelectToPLC[2].17.@Description"
     - Name: 18
-      Id: g=deee8b4a2778d25fa4d6024864afecf0
       Type: MetaTagBitIndex
       Children:
       - Name: Description
-        Id: g=b28c7a2361beaa35b23706dac8fdac74
         Type: RAEtherNetIPMetaTag
         DataType: String
         Value: "Transfer C Metal Detector Bypass"
         Children:
         - Name: SymbolName
-          Id: g=521e3042fe96ce21388e4478391f3c4e
           Type: BaseDataVariableType
           DataType: String
           Value: "OI_SelectToPLC[2].18.@Description"
     - Name: 2
-      Id: g=b1849c6b6604ef2a0af30cfbb96f10f9
       Type: MetaTagBitIndex
       Children:
       - Name: Description
-        Id: g=da0f15d7b1cc7f0a07f71222cbf9d9ec
         Type: RAEtherNetIPMetaTag
         DataType: String
         Value: "Barcode Reader Bypass"
         Children:
         - Name: SymbolName
-          Id: g=5583e15af143251a46b70c427a86547f
           Type: BaseDataVariableType
           DataType: String
           Value: "OI_SelectToPLC[2].2.@Description"
     - Name: 3
-      Id: g=009358c1d552de1a93c39016a5cc9462
       Type: MetaTagBitIndex
       Children:
       - Name: Description
-        Id: g=857247ba2838d010150f73ae2658a08d
         Type: RAEtherNetIPMetaTag
         DataType: String
         Value: "Laser Coder Bypass"
         Children:
         - Name: SymbolName
-          Id: g=c31545fb2fc2a7a593112b723d8121b1
           Type: BaseDataVariableType
           DataType: String
           Value: "OI_SelectToPLC[2].3.@Description"
     - Name: 4
-      Id: g=c5b4b4e0624ea9ccd7e786089633da1b
       Type: MetaTagBitIndex
       Children:
       - Name: Description
-        Id: g=a5041d27f6bc312d1183ee7e7ebad296
         Type: RAEtherNetIPMetaTag
         DataType: String
         Value: "Premium Feeder1 Bypass"
         Children:
         - Name: SymbolName
-          Id: g=9cec19ad7dbb56b170e9c27ddd7a0705
           Type: BaseDataVariableType
           DataType: String
           Value: "OI_SelectToPLC[2].4.@Description"
     - Name: 5
-      Id: g=711164d47da476d8401fad97faa22053
       Type: MetaTagBitIndex
       Children:
       - Name: Description
-        Id: g=60fef4199f56c39c2de2fa8f2313e00e
         Type: RAEtherNetIPMetaTag
         DataType: String
         Value: "Jones Continuous Feed Selected ON"
         Children:
         - Name: SymbolName
-          Id: g=0f81143175138e428faedc173769d34b
           Type: BaseDataVariableType
           DataType: String
           Value: "OI_SelectToPLC[2].5.@Description"
     - Name: 6
-      Id: g=b4f2917b7678dd4bb2fa50e8266dd919
       Type: MetaTagBitIndex
       Children:
       - Name: Description
-        Id: g=df4737c293eeaf7bab2add3b9546b84d
         Type: RAEtherNetIPMetaTag
         DataType: String
         Value: "Upstream Equipment Bypass"
         Children:
         - Name: SymbolName
-          Id: g=25b95c1426fb313c1e39e4a1c9d0ec4c
           Type: BaseDataVariableType
           DataType: String
           Value: "OI_SelectToPLC[2].6.@Description"
     - Name: 7
-      Id: g=ff62c7533f89928a6ed491bbe455da16
       Type: MetaTagBitIndex
       Children:
       - Name: Description
-        Id: g=fb5193c7c85a46ca1ea6d496817beeb7
         Type: RAEtherNetIPMetaTag
         DataType: String
         Value: "Premium Feeder 2 Bypass"
         Children:
         - Name: SymbolName
-          Id: g=10bb36277797dcee46c23077f45a65d6
           Type: BaseDataVariableType
           DataType: String
           Value: "OI_SelectToPLC[2].7.@Description"
     - Name: 8
-      Id: g=abf90e4be376d58e6f02b4b4f71868c2
       Type: MetaTagBitIndex
       Children:
       - Name: Description
-        Id: g=2f19105e47a14d48bdac9a776d636029
         Type: RAEtherNetIPMetaTag
         DataType: String
         Value: "RFID Bypass"
         Children:
         - Name: SymbolName
-          Id: g=6aa5ee99b8795113920223dd079a9cdb
           Type: BaseDataVariableType
           DataType: String
           Value: "OI_SelectToPLC[2].8.@Description"
     - Name: 9
-      Id: g=77305ddcab6b33ff22cf028e51518bbb
       Type: MetaTagBitIndex
       Children:
       - Name: Description
-        Id: g=c8fa2dcd8a89be410663fdc261be2d17
         Type: RAEtherNetIPMetaTag
         DataType: String
         Value: "CheckWeigher Bypass"
         Children:
         - Name: SymbolName
-          Id: g=f9b1c593037a16e0dd466f82ac9071e1
           Type: BaseDataVariableType
           DataType: String
           Value: "OI_SelectToPLC[2].9.@Description"
   - Name: 3
-    Id: g=158e2cd7e066943d9703aa98a3ac71d3
     Type: MetaTagArrayIndex
     ReferenceType: HasTagChild
     Children:
     - Name: 0
-      Id: g=88b99ec622e93559a9290e083cb0bb42
       Type: MetaTagBitIndex
       Children:
       - Name: Description
-        Id: g=5f3e622428ab26fade93401dbd3860ce
         Type: RAEtherNetIPMetaTag
         DataType: String
         Value: "Reset Production Data SHIFT"
         Children:
         - Name: SymbolName
-          Id: g=2c5b6c2d0dde2a52e2425d698e78bf00
           Type: BaseDataVariableType
           DataType: String
           Value: "OI_SelectToPLC[3].0.@Description"
     - Name: 1
-      Id: g=dc227eaa8154adb2dd545381cdca8d5d
       Type: MetaTagBitIndex
       Children:
       - Name: Description
-        Id: g=41677253bf366a4cd10d20de811b8e2f
         Type: RAEtherNetIPMetaTag
         DataType: String
         Value: "Reset Production Data TOTAL"
         Children:
         - Name: SymbolName
-          Id: g=fc44c7af14b410eb9dd49f157a2b630d
           Type: BaseDataVariableType
           DataType: String
           Value: "OI_SelectToPLC[3].1.@Description"
     - Name: 5
-      Id: g=04bee346648f6e4243ba9ca6ef2e4a17
       Type: MetaTagBitIndex
       Children:
       - Name: Description
-        Id: g=d09076cf72a3f4598337d54e9354feed
         Type: RAEtherNetIPMetaTag
         DataType: String
         Value: "Reset Max Scan"
         Children:
         - Name: SymbolName
-          Id: g=048be6042fd41ebc7f60cd6d6e7b3bd0
           Type: BaseDataVariableType
           DataType: String
           Value: "OI_SelectToPLC[3].5.@Description"
     - Name: 6
-      Id: g=0504052f13a906d84401fee5ee9b6f94
       Type: MetaTagBitIndex
       Children:
       - Name: Description
-        Id: g=5dd73e4f1426ec77d833e4bfe77b4ac8
         Type: RAEtherNetIPMetaTag
         DataType: String
         Value: "Reset Overlap Count"
         Children:
         - Name: SymbolName
-          Id: g=5584f979f204fe080b28dacebe40a8d5
           Type: BaseDataVariableType
           DataType: String
           Value: "OI_SelectToPLC[3].6.@Description"
   - Name: 4
-    Id: g=57a8bbd7b0268cac4a24707fddc1876b
     Type: MetaTagArrayIndex
     ReferenceType: HasTagChild
     Children:
     - Name: Description
-      Id: g=19c0b2142eb4e7625212a9a57f583824
       Type: RAEtherNetIPMetaTag
       DataType: String
       Value: "Tablet PB"
       Children:
       - Name: SymbolName
-        Id: g=0c5f7ff6617dd30e60aaa605446b85fb
         Type: BaseDataVariableType
         DataType: String
         Value: "OI_SelectToPLC[4].@Description"
     - Name: 0
-      Id: g=78d1be61606dc8846ebad08aba4b4819
       Type: MetaTagBitIndex
       Children:
       - Name: Description
-        Id: g=d6c3c79f6ff1c4fbca8b162e61032691
         Type: RAEtherNetIPMetaTag
         DataType: String
         Value: "Tablet Prepare To Start Pushbutton"
         Children:
         - Name: SymbolName
-          Id: g=8345eac1357a3351d0f047148f2c9007
           Type: BaseDataVariableType
           DataType: String
           Value: "OI_SelectToPLC[4].0.@Description"
     - Name: 1
-      Id: g=8b558856289ee09f1c6fa4386f07517d
       Type: MetaTagBitIndex
       Children:
       - Name: Description
-        Id: g=79c1005fd64f920f30ffbec169094c0b
         Type: RAEtherNetIPMetaTag
         DataType: String
         Value: "Tablet Start Pushbutton"
         Children:
         - Name: SymbolName
-          Id: g=02b082707cc578ba35a63ed837b1b87f
           Type: BaseDataVariableType
           DataType: String
           Value: "OI_SelectToPLC[4].1.@Description"
     - Name: 2
-      Id: g=3a23a70f6d651d473de44e9ed29a260e
       Type: MetaTagBitIndex
       Children:
       - Name: Description
-        Id: g=6d76b4127983f3ff1441d3a8777e3311
         Type: RAEtherNetIPMetaTag
         DataType: String
         Value: "Tablet Normal Stop Pushbutton"
         Children:
         - Name: SymbolName
-          Id: g=375ab07ecdd65e4268c73bb2a33f28b3
           Type: BaseDataVariableType
           DataType: String
           Value: "OI_SelectToPLC[4].2.@Description"
   - Name: 5
-    Id: g=9d9b7f0f2e733fa74988fafc62d7f27f
     Type: MetaTagArrayIndex
     ReferenceType: HasTagChild
     Children:
     - Name: Description
-      Id: g=e9985db2c5e0430999b5c1f9eec48831
       Type: RAEtherNetIPMetaTag
       DataType: String
       Value: "Reset IOB"
       Children:
       - Name: SymbolName
-        Id: g=b7845ea55d9a369bd8ac4652b8d1cba0
         Type: BaseDataVariableType
         DataType: String
         Value: "OI_SelectToPLC[5].@Description"
     - Name: 1
-      Id: g=e459c4821385992c8eec80d684c34b76
       Type: MetaTagBitIndex
       Children:
       - Name: Description
-        Id: g=59c507a2822e534fce7fa9f24ca6dd04
         Type: RAEtherNetIPMetaTag
         DataType: String
         Value: "Reset 0006-IOB2"
         Children:
         - Name: SymbolName
-          Id: g=b1f54395ad91b956a4afbb14a9636b18
           Type: BaseDataVariableType
           DataType: String
           Value: "OI_SelectToPLC[5].1.@Description"
     - Name: 10
-      Id: g=a9c45b13cd21c62f54ef1152a5db8afa
       Type: MetaTagBitIndex
       Children:
       - Name: Description
-        Id: g=f8b49beecfc13ba782b36d5ecec1c429
         Type: RAEtherNetIPMetaTag
         DataType: String
         Value: "Restore IO link block 0006-2 port 4"
         Children:
         - Name: SymbolName
-          Id: g=b51d415f1ae952915ce3133bbe2f8aa2
           Type: BaseDataVariableType
           DataType: String
           Value: "OI_SelectToPLC[5].10.@Description"
     - Name: 11
-      Id: g=6a12f2238c36a18fabccf2bf95253c7f
       Type: MetaTagBitIndex
       Children:
       - Name: Description
-        Id: g=64d39201ffebe4929fd7815bfd7a1992
         Type: RAEtherNetIPMetaTag
         DataType: String
         Value: "Restore IO link block 0006-2 port 8"
         Children:
         - Name: SymbolName
-          Id: g=292aef0018544473466b9970b31ddee0
           Type: BaseDataVariableType
           DataType: String
           Value: "OI_SelectToPLC[5].11.@Description"
     - Name: 12
-      Id: g=ea7267bf96e541dfe840af97eaeac327
       Type: MetaTagBitIndex
       Children:
       - Name: Description
-        Id: g=798d72e7594bf3d98c9862c3809c43a2
         Type: RAEtherNetIPMetaTag
         DataType: String
         Value: "Restore IO link block 0006-3 port 4"
         Children:
         - Name: SymbolName
-          Id: g=c20540074a14d8a9100fcb4155025f6c
           Type: BaseDataVariableType
           DataType: String
           Value: "OI_SelectToPLC[5].12.@Description"
     - Name: 13
-      Id: g=85b04faea33ab63b0be8f4eb05b57910
       Type: MetaTagBitIndex
       Children:
       - Name: Description
-        Id: g=0cf89cc14144d7ae76af19c07a2b4c86
         Type: RAEtherNetIPMetaTag
         DataType: String
         Value: "Restore IO link block 0006-3 port 7"
         Children:
         - Name: SymbolName
-          Id: g=f93aeca0cb820b865329d62200a03e8a
           Type: BaseDataVariableType
           DataType: String
           Value: "OI_SelectToPLC[5].13.@Description"
     - Name: 14
-      Id: g=5f43fc77cf7d8340c0bcf694d5ee7f26
       Type: MetaTagBitIndex
       Children:
       - Name: Description
-        Id: g=408d5f2baaebc01b5f6d5da6ef5b5879
         Type: RAEtherNetIPMetaTag
         DataType: String
         Value: "Restore IO link block 0006-3 port 8"
         Children:
         - Name: SymbolName
-          Id: g=e8f66a10838c8affba6d6c786b8300e5
           Type: BaseDataVariableType
           DataType: String
           Value: "OI_SelectToPLC[5].14.@Description"
     - Name: 15
-      Id: g=d08b40c1a27882f8ef73d7b44f4042c3
       Type: MetaTagBitIndex
       Children:
       - Name: Description
-        Id: g=aaaf27ce46af58d0e13a1e3afa79d6da
         Type: RAEtherNetIPMetaTag
         DataType: String
         Value: "Restore IO link block 0006-6 port 2"
         Children:
         - Name: SymbolName
-          Id: g=cf781f8d67fb7b06c5d47226aa6bafae
           Type: BaseDataVariableType
           DataType: String
           Value: "OI_SelectToPLC[5].15.@Description"
     - Name: 2
-      Id: g=b802a103cc55b8d2d36faf8f44e6c8a5
       Type: MetaTagBitIndex
       Children:
       - Name: Description
-        Id: g=05405054fff5718961e0a07db28e8cde
         Type: RAEtherNetIPMetaTag
         DataType: String
         Value: "Reset 0006-IOB3"
         Children:
         - Name: SymbolName
-          Id: g=55d97e05cb7bc78bc8822621e584830d
           Type: BaseDataVariableType
           DataType: String
           Value: "OI_SelectToPLC[5].2.@Description"
     - Name: 21
-      Id: g=e54e7179f3196a2f3b9137b435a8e35f
       Type: MetaTagBitIndex
       Children:
       - Name: Description
-        Id: g=a04b7b5b531c29a7ee61f1e96b66d4f4
         Type: RAEtherNetIPMetaTag
         DataType: String
         Value: "Restore IO link Block 0041-1 port 4"
         Children:
         - Name: SymbolName
-          Id: g=efaa1f54a34e4b6788665df30475e55c
           Type: BaseDataVariableType
           DataType: String
           Value: "OI_SelectToPLC[5].21.@Description"
     - Name: 22
-      Id: g=c1f7b6e7f773c1e93e56d4c74aba0d0c
       Type: MetaTagBitIndex
       Children:
       - Name: Description
-        Id: g=c8633aa46233a738e1469e647e2c3a2d
         Type: RAEtherNetIPMetaTag
         DataType: String
         Value: "Restore IO link Block 0042-1 port 4"
         Children:
         - Name: SymbolName
-          Id: g=911c9e4cd1528db09884de803e26dc1c
           Type: BaseDataVariableType
           DataType: String
           Value: "OI_SelectToPLC[5].22.@Description"
     - Name: 23
-      Id: g=d222fcb70203fc3cbf77358f35e65e91
       Type: MetaTagBitIndex
       Children:
       - Name: Description
-        Id: g=1c41b71bbb8b5fc0c336006bac062f7e
         Type: RAEtherNetIPMetaTag
         DataType: String
         Value: "Restore IO link Block 0043-1 port 4"
         Children:
         - Name: SymbolName
-          Id: g=d5540af37f341d43461d3d23add40c5d
           Type: BaseDataVariableType
           DataType: String
           Value: "OI_SelectToPLC[5].23.@Description"
     - Name: 24
-      Id: g=1bbc13875f8c8924de85b9038962c579
       Type: MetaTagBitIndex
       Children:
       - Name: Description
-        Id: g=c96248111afc9edd89ffe7b5ba57db3b
         Type: RAEtherNetIPMetaTag
         DataType: String
         Value: "Restore IO link Block 0044-1 port 4"
         Children:
         - Name: SymbolName
-          Id: g=111bc8037467fd9cc5606b1fc06e553a
           Type: BaseDataVariableType
           DataType: String
           Value: "OI_SelectToPLC[5].24.@Description"
     - Name: 3
-      Id: g=25bf0a981ba42e18194b9262ea7f30e3
       Type: MetaTagBitIndex
       Children:
       - Name: Description
-        Id: g=df10c1d6ebf6de4fa2cffda422759692
         Type: RAEtherNetIPMetaTag
         DataType: String
         Value: "Reset 0006-IOB6"
         Children:
         - Name: SymbolName
-          Id: g=e3f4f0f4c761f8e7574c842ffba73723
           Type: BaseDataVariableType
           DataType: String
           Value: "OI_SelectToPLC[5].3.@Description"
     - Name: 4
-      Id: g=80923e5b27dc5d59a032374a165bd27c
       Type: MetaTagBitIndex
       Children:
       - Name: Description
-        Id: g=a537dbe9616d08d00c212c959e766fbd
         Type: RAEtherNetIPMetaTag
         DataType: String
         Value: "Reset 0041-IOB1"
         Children:
         - Name: SymbolName
-          Id: g=f478bab6a1674ed7a0f4f5e1346f91d2
           Type: BaseDataVariableType
           DataType: String
           Value: "OI_SelectToPLC[5].4.@Description"
     - Name: 5
-      Id: g=1f57b1ebf8253b560ecb383765641b05
       Type: MetaTagBitIndex
       Children:
       - Name: Description
-        Id: g=a3bd323cbed3277253173ea84f5d0208
         Type: RAEtherNetIPMetaTag
         DataType: String
         Value: "Reset 0042-IOB1"
         Children:
         - Name: SymbolName
-          Id: g=74a91fa016e465ff71b8fd5a29202212
           Type: BaseDataVariableType
           DataType: String
           Value: "OI_SelectToPLC[5].5.@Description"
     - Name: 6
-      Id: g=2abe893e83afff6b9efadde41cac00a5
       Type: MetaTagBitIndex
       Children:
       - Name: Description
-        Id: g=1d5a7be140293545cba0fd53a42b77fd
         Type: RAEtherNetIPMetaTag
         DataType: String
         Value: "Reset 0043-IOB1"
         Children:
         - Name: SymbolName
-          Id: g=7dff400c88af5376cd151ab122902082
           Type: BaseDataVariableType
           DataType: String
           Value: "OI_SelectToPLC[5].6.@Description"
     - Name: 7
-      Id: g=6ad07ddbfa3125efebcb47530f2f5994
       Type: MetaTagBitIndex
       Children:
       - Name: Description
-        Id: g=32e9ba1554f8e59374a6ace91cee9bec
         Type: RAEtherNetIPMetaTag
         DataType: String
         Value: "Reset 0021-IOB1"
         Children:
         - Name: SymbolName
-          Id: g=ec354496fd4079523baed4a046449a2d
           Type: BaseDataVariableType
           DataType: String
           Value: "OI_SelectToPLC[5].7.@Description"
     - Name: 8
-      Id: g=c33454c20acb6546ebd39ac3db6a5e09
       Type: MetaTagBitIndex
       Children:
       - Name: Description
-        Id: g=ba1dc3cded52fe9673d17806bf78f313
         Type: RAEtherNetIPMetaTag
         DataType: String
         Value: "Reset 0021-IOB2"
         Children:
         - Name: SymbolName
-          Id: g=b826cd6d7ab9564bcc885d7e46c10ab7
           Type: BaseDataVariableType
           DataType: String
           Value: "OI_SelectToPLC[5].8.@Description"
   - Name: 6
-    Id: g=bb74f1d4df7c9785da3896f6b4f3716a
     Type: MetaTagArrayIndex
     ReferenceType: HasTagChild
     Children:
     - Name: Description
-      Id: g=c605c241fcdd079ac08d9da9f3f738a0
       Type: RAEtherNetIPMetaTag
       DataType: String
       Value: "Index"
       Children:
       - Name: SymbolName
-        Id: g=1311e17ae466fbaf24a86e18d28b8da8
         Type: BaseDataVariableType
         DataType: String
         Value: "OI_SelectToPLC[6].@Description"
     - Name: 0
-      Id: g=91bc728fa472e851e7de5345f15b450d
       Type: MetaTagBitIndex
       Children:
       - Name: Description
-        Id: g=ae345bbd8172224b77bfb41581884e97
         Type: RAEtherNetIPMetaTag
         DataType: String
         Value: "Index History"
         Children:
         - Name: SymbolName
-          Id: g=f0f178c0ec02fcc1af5858a9ea8cb0d7
           Type: BaseDataVariableType
           DataType: String
           Value: "OI_SelectToPLC[6].0.@Description"
     - Name: 1
-      Id: g=5259e0d87686f1fb21808b497f781d69
       Type: MetaTagBitIndex
       Children:
       - Name: Description
-        Id: g=7c8bdc10dff3e11efb556ce3ebf90586
         Type: RAEtherNetIPMetaTag
         DataType: String
         Value: "Index History"
         Children:
         - Name: SymbolName
-          Id: g=b66ef13443dafe8e78b961aa53f16eeb
           Type: BaseDataVariableType
           DataType: String
           Value: "OI_SelectToPLC[6].1.@Description"
   - Name: 7
-    Id: g=5bf976f98584a6ba261c938aea742a20
     Type: MetaTagArrayIndex
     ReferenceType: HasTagChild
     Children:
     - Name: Description
-      Id: g=6f5ba087d88b72c0d91f100562500c37
       Type: RAEtherNetIPMetaTag
       DataType: String
       Value: "Robot Transfer Reference"
       Children:
       - Name: SymbolName
-        Id: g=9459fc5fd1a75f7256b878307f7b43ae
         Type: BaseDataVariableType
         DataType: String
         Value: "OI_SelectToPLC[7].@Description"
     - Name: 0
-      Id: g=0ff7e685d521c9c47d07afc574bc4660
       Type: MetaTagBitIndex
       Children:
       - Name: Description
-        Id: g=d41065dac2ec5e03f3af065bfa72f9a2
         Type: RAEtherNetIPMetaTag
         DataType: String
         Value: "Robot Joint1 Reference"
         Children:
         - Name: SymbolName
-          Id: g=a4a533fc1d30381cd0e8afa88b534e94
           Type: BaseDataVariableType
           DataType: String
           Value: "OI_SelectToPLC[7].0.@Description"
     - Name: 1
-      Id: g=be6030f85f1f70cd1f36a81def50a38f
       Type: MetaTagBitIndex
       Children:
       - Name: Description
-        Id: g=59085607bc514e23b0fb3ab66b22b801
         Type: RAEtherNetIPMetaTag
         DataType: String
         Value: "Robot Joint2 Reference"
         Children:
         - Name: SymbolName
-          Id: g=e5d1c69850ad26013ceaa4b3a9d10376
           Type: BaseDataVariableType
           DataType: String
           Value: "OI_SelectToPLC[7].1.@Description"
     - Name: 2
-      Id: g=ccb260aae6ee79c284e8cd6b9deedd0f
       Type: MetaTagBitIndex
       Children:
       - Name: Description
-        Id: g=d162981d9aa83dec0a449f5feaaac5fb
         Type: RAEtherNetIPMetaTag
         DataType: String
         Value: "Robot EOAT1 Reference"
         Children:
         - Name: SymbolName
-          Id: g=7c378bebe175ce74a34f585da6f204a1
           Type: BaseDataVariableType
           DataType: String
           Value: "OI_SelectToPLC[7].2.@Description"
     - Name: 3
-      Id: g=3242d3cfea4587f503bbfce2f4f1f31d
       Type: MetaTagBitIndex
       Children:
       - Name: Description
-        Id: g=3e860eb6fa87ffdadce6745a191d1f69
         Type: RAEtherNetIPMetaTag
         DataType: String
         Value: "Robot EOAT2 Reference"
         Children:
         - Name: SymbolName
-          Id: g=af5f0c584af394f53a2c4c38f85eccee
           Type: BaseDataVariableType
           DataType: String
           Value: "OI_SelectToPLC[7].3.@Description"
     - Name: 4
-      Id: g=2a53ef494ba750f37ba6153696e4d6e5
       Type: MetaTagBitIndex
       Children:
       - Name: Description
-        Id: g=680438a4aaa2c066d109c3764def6030
         Type: RAEtherNetIPMetaTag
         DataType: String
         Value: "Robot EOAT3 Reference"
         Children:
         - Name: SymbolName
-          Id: g=8d08b659d2818b2e40af3f6b516a9ca7
           Type: BaseDataVariableType
           DataType: String
           Value: "OI_SelectToPLC[7].4.@Description"
     - Name: 5
-      Id: g=415f10b197933adcef7b7138d9f3c56f
       Type: MetaTagBitIndex
       Children:
       - Name: Description
-        Id: g=16ac6b6958b5ba5d6ad4ccf8a1c6b753
         Type: RAEtherNetIPMetaTag
         DataType: String
         Value: "Robot EOAT4 Reference"
         Children:
         - Name: SymbolName
-          Id: g=28934fa9b200ffa1924e63b6563e7a66
           Type: BaseDataVariableType
           DataType: String
           Value: "OI_SelectToPLC[7].5.@Description"
     - Name: 6
-      Id: g=13f61a7f08c5cbcb12db91150ee6bfc1
       Type: MetaTagBitIndex
       Children:
       - Name: Description
-        Id: g=71c96ed4bc3b886d798c7b47896392b3
         Type: RAEtherNetIPMetaTag
         DataType: String
         Value: "Infeed Conveyor Reference"
         Children:
         - Name: SymbolName
-          Id: g=d9879b298467506368e47be4f3e264ab
           Type: BaseDataVariableType
           DataType: String
           Value: "OI_SelectToPLC[7].6.@Description"
   - Name: 8
-    Id: g=0ab8a9119f52f33b21cafe12624a8396
     Type: MetaTagArrayIndex
     ReferenceType: HasTagChild
     Children:
     - Name: Description
-      Id: g=d3a92dd2f2e03e011924a3a1f92faf50
       Type: RAEtherNetIPMetaTag
       DataType: String
       Value: "RFID"
       Children:
       - Name: SymbolName
-        Id: g=84dd736b627dfc645de9411bb978b92c
         Type: BaseDataVariableType
         DataType: String
         Value: "OI_SelectToPLC[8].@Description"
     - Name: 0
-      Id: g=0473e5543284ba6b0839c417e0194502
       Type: MetaTagBitIndex
       Children:
       - Name: Description
-        Id: g=a26ec70a70cce63ec2a29d13d702a52f
         Type: RAEtherNetIPMetaTag
         DataType: String
         Value: "Initiate RFID Verification From HMI PB"
         Children:
         - Name: SymbolName
-          Id: g=19ba19977c35b9da067e183daef27829
           Type: BaseDataVariableType
           DataType: String
           Value: "OI_SelectToPLC[8].0.@Description"
     - Name: 1
-      Id: g=fd75809f428a86bb8f08a086035f5590
       Type: MetaTagBitIndex
       Children:
       - Name: Description
-        Id: g=79149d8741b41eba119a4295f0dd55a2
         Type: RAEtherNetIPMetaTag
         DataType: String
         Value: "RFID Login Write Enable"
         Children:
         - Name: SymbolName
-          Id: g=b71e7292632ba1868b5436a45584c4fa
           Type: BaseDataVariableType
           DataType: String
           Value: "OI_SelectToPLC[8].1.@Description"
     - Name: 2
-      Id: g=6fd2e4922e03072ff2c71452656f8cd3
       Type: MetaTagBitIndex
       Children:
       - Name: Description
-        Id: g=efd6ce85b2cebf63a85281ceeac0e28c
         Type: RAEtherNetIPMetaTag
         DataType: String
         Value: "RFID Login Read"
         Children:
         - Name: SymbolName
-          Id: g=ad4433f58a994684811e558946bcc614
           Type: BaseDataVariableType
           DataType: String
           Value: "OI_SelectToPLC[8].2.@Description"
     - Name: 29
-      Id: g=9abe6fdddee183527c05b8e690f79e05
       Type: MetaTagBitIndex
       Children:
       - Name: Description
-        Id: g=e039f1e038387280ef8c27a946be7c21
         Type: RAEtherNetIPMetaTag
         DataType: String
         Value: "Force Reset of Pusher Head Read/Write Head"
         Children:
         - Name: SymbolName
-          Id: g=79238c8df6165a74f78d6e6b967a343b
           Type: BaseDataVariableType
           DataType: String
           Value: "OI_SelectToPLC[8].29.@Description"
     - Name: 30
-      Id: g=3ebd79c52f3299a531e37fc5cb1f34f0
       Type: MetaTagBitIndex
       Children:
       - Name: Description
-        Id: g=3c6ae418990f7502f3992c79019f706e
         Type: RAEtherNetIPMetaTag
         DataType: String
         Value: "Force Reset of Confiner Tamp Feet Read/Write Head"
         Children:
         - Name: SymbolName
-          Id: g=81cbcb4c145454e12245380fbca5427b
           Type: BaseDataVariableType
           DataType: String
           Value: "OI_SelectToPLC[8].30.@Description"
     - Name: 31
-      Id: g=9fc72df6fc68786e6e93f070a64e5678
       Type: MetaTagBitIndex
       Children:
       - Name: Description
-        Id: g=ac9c492b2349e41f491fd0fe5b8e680b
         Type: RAEtherNetIPMetaTag
         DataType: String
         Value: "Force Reset of RFID Login Read/Write Head"
         Children:
         - Name: SymbolName
-          Id: g=aa5dacbf3a8b3c1eeadc58ecd4b27a4b
           Type: BaseDataVariableType
           DataType: String
           Value: "OI_SelectToPLC[8].31.@Description"
     - Name: 8
-      Id: g=30783dc38d2b92fdb876c27e36fcc877
       Type: MetaTagBitIndex
       Children:
       - Name: Description
-        Id: g=5a3fe213d32eb089dcc1c8ef0846ed35
         Type: RAEtherNetIPMetaTag
         DataType: String
         Value: "RFID Login Write"
         Children:
         - Name: SymbolName
-          Id: g=14ebea77363a3c54a3438d6e6f220e82
           Type: BaseDataVariableType
           DataType: String
           Value: "OI_SelectToPLC[8].8.@Description"
   - Name: 9
-    Id: g=8cd9a5ebb8094bb36f285f2daede7df3
     Type: MetaTagArrayIndex
     ReferenceType: HasTagChild
     Children:
     - Name: Description
-      Id: g=3f5683f680ca3b8fe9810a0f27824776
       Type: RAEtherNetIPMetaTag
       DataType: String
       Value: "Robot Transfer Axis, Coordinate, EOAT"
       Children:
       - Name: SymbolName
-        Id: g=54fc4b0745aa07bdb5b9187b6082bdbf
         Type: BaseDataVariableType
         DataType: String
         Value: "OI_SelectToPLC[9].@Description"
     - Name: 0
-      Id: g=4dd209c5a84cdcd4ea9fe8503d67f311
       Type: MetaTagBitIndex
       Children:
       - Name: Description
-        Id: g=9ab50b0ba5203606b037ee37cac41cf5
         Type: RAEtherNetIPMetaTag
         DataType: String
         Value: "Robot Joint1 Jog Plus"
         Children:
         - Name: SymbolName
-          Id: g=d63160bbf81d08055248bc62c8307b3b
           Type: BaseDataVariableType
           DataType: String
           Value: "OI_SelectToPLC[9].0.@Description"
     - Name: 1
-      Id: g=8d65b77504b204e8e2bc72da4076bb75
       Type: MetaTagBitIndex
       Children:
       - Name: Description
-        Id: g=4c2e3fb01e184ac5e1a125d3724d154e
         Type: RAEtherNetIPMetaTag
         DataType: String
         Value: "Robot Joint1 Jog Minus"
         Children:
         - Name: SymbolName
-          Id: g=09e66771d2edc1d97a3add0224d70e0b
           Type: BaseDataVariableType
           DataType: String
           Value: "OI_SelectToPLC[9].1.@Description"
     - Name: 10
-      Id: g=654a1fbe314a4629c3f2fe125cb03353
       Type: MetaTagBitIndex
       Children:
       - Name: Description
-        Id: g=1bfdc9c66afd25634a45021439e8adba
         Type: RAEtherNetIPMetaTag
         DataType: String
         Value: "Robot EOAT2 Jog Plus"
         Children:
         - Name: SymbolName
-          Id: g=3a4f5dc995be7e4a59d9704178f56adf
           Type: BaseDataVariableType
           DataType: String
           Value: "OI_SelectToPLC[9].10.@Description"
     - Name: 11
-      Id: g=379d963170c2ee3a1a8ae53c2755c42a
       Type: MetaTagBitIndex
       Children:
       - Name: Description
-        Id: g=de09746d18f5f81ff52cfd74f449661c
         Type: RAEtherNetIPMetaTag
         DataType: String
         Value: "Robot EOAT2 Jog Minus"
         Children:
         - Name: SymbolName
-          Id: g=01df1bdce320d928249632dfc8103781
           Type: BaseDataVariableType
           DataType: String
           Value: "OI_SelectToPLC[9].11.@Description"
     - Name: 12
-      Id: g=66794a1ab6d50c662dc9c25d6dd6deca
       Type: MetaTagBitIndex
       Children:
       - Name: Description
-        Id: g=3b9621d0df3f03e55fdeedeff2fe5f1b
         Type: RAEtherNetIPMetaTag
         DataType: String
         Value: "Robot EOAT3 Jog Plus"
         Children:
         - Name: SymbolName
-          Id: g=5473a41ef4e10d4cb61a5e488b1ced65
           Type: BaseDataVariableType
           DataType: String
           Value: "OI_SelectToPLC[9].12.@Description"
     - Name: 13
-      Id: g=a09dd65aee8d312e8d13807ae0d79a89
       Type: MetaTagBitIndex
       Children:
       - Name: Description
-        Id: g=45f1a91232e5de0d73ccac24deafdd17
         Type: RAEtherNetIPMetaTag
         DataType: String
         Value: "Robot EOAT3 Jog Minus"
         Children:
         - Name: SymbolName
-          Id: g=c591aad55221138f3abd3902eb69e03c
           Type: BaseDataVariableType
           DataType: String
           Value: "OI_SelectToPLC[9].13.@Description"
     - Name: 14
-      Id: g=e5dbfde74dbaff361d5db5cfbf580df5
       Type: MetaTagBitIndex
       Children:
       - Name: Description
-        Id: g=7018193b176ce43031b754989cbbedda
         Type: RAEtherNetIPMetaTag
         DataType: String
         Value: "Robot EOAT4 Jog Plus"
         Children:
         - Name: SymbolName
-          Id: g=c3a20cfe17eef775fee7030c8dbae038
           Type: BaseDataVariableType
           DataType: String
           Value: "OI_SelectToPLC[9].14.@Description"
     - Name: 15
-      Id: g=6a9a2d905753b6cce0110d0341700815
       Type: MetaTagBitIndex
       Children:
       - Name: Description
-        Id: g=fc8739db77890ba009de2598a74b89ec
         Type: RAEtherNetIPMetaTag
         DataType: String
         Value: "Robot EOAT4 Jog Minus"
         Children:
         - Name: SymbolName
-          Id: g=0a9017f7b98023fce2d63daf73c807a9
           Type: BaseDataVariableType
           DataType: String
           Value: "OI_SelectToPLC[9].15.@Description"
     - Name: 16
-      Id: g=d07cb0916a9a5eb32910d165777ed99d
       Type: MetaTagBitIndex
       Children:
       - Name: Description
-        Id: g=d7e9a9146e395ced1dfdf167cbede63b
         Type: RAEtherNetIPMetaTag
         DataType: String
         Value: "Index Conveyor Jog Plus"
         Children:
         - Name: SymbolName
-          Id: g=4f5a98fef169715cc9882c4aed2ab043
           Type: BaseDataVariableType
           DataType: String
           Value: "OI_SelectToPLC[9].16.@Description"
     - Name: 17
-      Id: g=0ff1ca0dac3305b04cb75ff4009f9b98
       Type: MetaTagBitIndex
       Children:
       - Name: Description
-        Id: g=c76401c87d2929bfdb7bc7ad62311d6a
         Type: RAEtherNetIPMetaTag
         DataType: String
         Value: "Index Conveyor Jog Minus"
         Children:
         - Name: SymbolName
-          Id: g=b400bf3288805e3ec2736240afa7f070
           Type: BaseDataVariableType
           DataType: String
           Value: "OI_SelectToPLC[9].17.@Description"
     - Name: 18
-      Id: g=6cd56435b2c4a558abce2debc946284e
       Type: MetaTagBitIndex
       Children:
       - Name: Description
-        Id: g=4fc92d0a7b7b5e81407753192382db1a
         Type: RAEtherNetIPMetaTag
         DataType: String
         Value: "Index Conveyor Index One"
         Children:
         - Name: SymbolName
-          Id: g=74dd044515f288b58d1e5d30e070e232
           Type: BaseDataVariableType
           DataType: String
           Value: "OI_SelectToPLC[9].18.@Description"
     - Name: 2
-      Id: g=1c4156dbb3e42440fcb52c2403543123
       Type: MetaTagBitIndex
       Children:
       - Name: Description
-        Id: g=8f9d5d2efe5b59a72edcdd8d2c54b433
         Type: RAEtherNetIPMetaTag
         DataType: String
         Value: "Robot Joint2 Jog Plus"
         Children:
         - Name: SymbolName
-          Id: g=b9853be6f51d9bd88885e23b69231442
           Type: BaseDataVariableType
           DataType: String
           Value: "OI_SelectToPLC[9].2.@Description"
     - Name: 24
-      Id: g=3f0067001c6207ac1a211e6d86413a64
       Type: MetaTagBitIndex
       Children:
       - Name: Description
-        Id: g=34c9c2d52fe7361179c45a7756f786a7
         Type: RAEtherNetIPMetaTag
         DataType: String
         Value: "Robot EOAT1 Expand"
         Children:
         - Name: SymbolName
-          Id: g=b0d3634cdb92728479bf8be8a667dcf9
           Type: BaseDataVariableType
           DataType: String
           Value: "OI_SelectToPLC[9].24.@Description"
     - Name: 25
-      Id: g=abae4906022d55067b38d88a278d1ac6
       Type: MetaTagBitIndex
       Children:
       - Name: Description
-        Id: g=f9263ffddd1bb0d78a2817b867af1c11
         Type: RAEtherNetIPMetaTag
         DataType: String
         Value: "Robot EOAT2 Expand"
         Children:
         - Name: SymbolName
-          Id: g=c1e461c22280a4ffc8a4d344e8a55bb5
           Type: BaseDataVariableType
           DataType: String
           Value: "OI_SelectToPLC[9].25.@Description"
     - Name: 26
-      Id: g=a471975f4a216357f8d8967b1983bbd8
       Type: MetaTagBitIndex
       Children:
       - Name: Description
-        Id: g=c23512e23e79fe93e20cf767da13ad4c
         Type: RAEtherNetIPMetaTag
         DataType: String
         Value: "Robot EOAT3 Expand"
         Children:
         - Name: SymbolName
-          Id: g=7eb2d9bcc14edef677543388e7f7e2ed
           Type: BaseDataVariableType
           DataType: String
           Value: "OI_SelectToPLC[9].26.@Description"
     - Name: 27
-      Id: g=d02661c4cede64b375324eb23dc444ea
       Type: MetaTagBitIndex
       Children:
       - Name: Description
-        Id: g=49967806d9ad1c60a2ff0bf4701949ba
         Type: RAEtherNetIPMetaTag
         DataType: String
         Value: "Robot EOAT4 Expand"
         Children:
         - Name: SymbolName
-          Id: g=6feb31cb8af5993dc9595235fba42ac9
           Type: BaseDataVariableType
           DataType: String
           Value: "OI_SelectToPLC[9].27.@Description"
     - Name: 28
-      Id: g=0ef05e2801c03c45ae35da153847ef68
       Type: MetaTagBitIndex
       Children:
       - Name: Description
-        Id: g=3eab14a8703ffe4f1cac67af8460fa80
         Type: RAEtherNetIPMetaTag
         DataType: String
         Value: "Robot Joint1 Brake Release"
         Children:
         - Name: SymbolName
-          Id: g=8b2dd46ac2b554928818ffd8b2a2569e
           Type: BaseDataVariableType
           DataType: String
           Value: "OI_SelectToPLC[9].28.@Description"
     - Name: 29
-      Id: g=db789eaf2ae0d894cab83247e72247ae
       Type: MetaTagBitIndex
       Children:
       - Name: Description
-        Id: g=a9019dccb7da54ea29c70c7f7c9a5c7d
         Type: RAEtherNetIPMetaTag
         DataType: String
         Value: "Robot Joint2 Brake Release"
         Children:
         - Name: SymbolName
-          Id: g=7ca04af5083a22797812b5c0aa17c494
           Type: BaseDataVariableType
           DataType: String
           Value: "OI_SelectToPLC[9].29.@Description"
     - Name: 3
-      Id: g=eb550d1afb3a0d2105eed63f4f4f2cbf
       Type: MetaTagBitIndex
       Children:
       - Name: Description
-        Id: g=9e2c2f59ed5de4b2efcf914b0c61ba66
         Type: RAEtherNetIPMetaTag
         DataType: String
         Value: "Robot Joint2 Jog Minus"
         Children:
         - Name: SymbolName
-          Id: g=16175556d6bce478a2c1469a9863f1ef
           Type: BaseDataVariableType
           DataType: String
           Value: "OI_SelectToPLC[9].3.@Description"
     - Name: 30
-      Id: g=a340022dd21ca4f9deba0bae28d14b79
       Type: MetaTagBitIndex
       Children:
       - Name: Description
-        Id: g=f259aa4fdc04e3483c49b7e7672985cd
         Type: RAEtherNetIPMetaTag
         DataType: String
         Value: "Clear Index Conveyor Shift Register"
         Children:
         - Name: SymbolName
-          Id: g=c96b24d56c18f6faf3a1eab6e3d984ff
           Type: BaseDataVariableType
           DataType: String
           Value: "OI_SelectToPLC[9].30.@Description"
     - Name: 31
-      Id: g=defc4876f5bbb1d498f96b96def1954c
       Type: MetaTagBitIndex
       Children:
       - Name: Description
-        Id: g=e45f5ae499858fd04761c25881f15867
         Type: RAEtherNetIPMetaTag
         DataType: String
         Value: "Robot Program Reset"
         Children:
         - Name: SymbolName
-          Id: g=d5f9c10f6795d5869d1088b979bdee5d
           Type: BaseDataVariableType
           DataType: String
           Value: "OI_SelectToPLC[9].31.@Description"
     - Name: 4
-      Id: g=745ff431c23ecb2caa47b0e58eb05d68
       Type: MetaTagBitIndex
       Children:
       - Name: Description
-        Id: g=0cee4bdb701c1f3872995dfdbca60b06
         Type: RAEtherNetIPMetaTag
         DataType: String
         Value: "Robot X Jog Plus"
         Children:
         - Name: SymbolName
-          Id: g=f2825d9071c81cef8dc7e9908b85171e
           Type: BaseDataVariableType
           DataType: String
           Value: "OI_SelectToPLC[9].4.@Description"
     - Name: 5
-      Id: g=7fe670c384de8f6582b114d911edfb6e
       Type: MetaTagBitIndex
       Children:
       - Name: Description
-        Id: g=225db69ae007b5b1bff869c2b6e08ec7
         Type: RAEtherNetIPMetaTag
         DataType: String
         Value: "Robot X Jog Minus"
         Children:
         - Name: SymbolName
-          Id: g=f728273c5ff8820a4759cf4fff609aa3
           Type: BaseDataVariableType
           DataType: String
           Value: "OI_SelectToPLC[9].5.@Description"
     - Name: 6
-      Id: g=c05010a3dd4722f835099d3f09656f1b
       Type: MetaTagBitIndex
       Children:
       - Name: Description
-        Id: g=23caa1349171bc15c2258fcc0e971db1
         Type: RAEtherNetIPMetaTag
         DataType: String
         Value: "Robot Z Jog Plus"
         Children:
         - Name: SymbolName
-          Id: g=ec902bb253772e1c0bf422fead107280
           Type: BaseDataVariableType
           DataType: String
           Value: "OI_SelectToPLC[9].6.@Description"
     - Name: 7
-      Id: g=bfcf1d52cfe80d50011e66d2632dae82
       Type: MetaTagBitIndex
       Children:
       - Name: Description
-        Id: g=aac6ed9169393277c94e829dae1ecc4c
         Type: RAEtherNetIPMetaTag
         DataType: String
         Value: "Robot Z Jog Minus"
         Children:
         - Name: SymbolName
-          Id: g=4c16aef7f3f3ddeebc4e82cc70c68ce4
           Type: BaseDataVariableType
           DataType: String
           Value: "OI_SelectToPLC[9].7.@Description"
     - Name: 8
-      Id: g=ea31d929b0ab1e1be5e15f64c7f6ac24
       Type: MetaTagBitIndex
       Children:
       - Name: Description
-        Id: g=a37b365072b2a3f4e3e58475dd3495a5
         Type: RAEtherNetIPMetaTag
         DataType: String
         Value: "Robot EOAT1 Jog Plus"
         Children:
         - Name: SymbolName
-          Id: g=aa547997c406d921ee0baa67a5d54a57
           Type: BaseDataVariableType
           DataType: String
           Value: "OI_SelectToPLC[9].8.@Description"
     - Name: 9
-      Id: g=b34e5189cc419057c7e969a406f8153f
       Type: MetaTagBitIndex
       Children:
       - Name: Description
-        Id: g=05a152ef587db717e82eb0b375b61864
         Type: RAEtherNetIPMetaTag
         DataType: String
         Value: "Robot EOAT1 Jog Minus"
         Children:
         - Name: SymbolName
-          Id: g=4ca581f1201f535569f4cc79231c565b
           Type: BaseDataVariableType
           DataType: String
           Value: "OI_SelectToPLC[9].9.@Description"
@@ -3528,1026 +2841,821 @@ Children:
   ArrayDimensions: [10]
   Children:
   - Name: SymbolName
-    Id: g=2a0453081fce25b228f74f5da3aacbf0
     Type: BaseDataVariableType
     DataType: String
     Value: "OptixAlarms"
   - Name: BlockRead
-    Id: g=ddbb4cc93395711f8e6b6957aca2432e
     Type: BaseDataVariableType
     DataType: Boolean
     Value: true
   - Name: 0
-    Id: g=6fadcafc26d01e1662e660319bd4c4a0
     Type: OptimateAlarm
     DataType: OptimateAlarm
     Children:
     - Name: SymbolName
-      Id: g=3e599a29a6484ee49c3d3f75f4f7b19d
       Type: BaseDataVariableType
       DataType: String
       Value: "OptixAlarms[0]"
     - Name: BlockRead
-      Id: g=c9975ddea78ac679ef73cd2ed9bd684f
       Type: BaseDataVariableType
       DataType: Boolean
       Value: true
     - Name: Active
-      Id: g=0c59f633ad50e985c65b1c4e5ec50a1b
       Type: RAEtherNetIPTag
       DataType: Boolean
       Children:
       - Name: SymbolName
-        Id: g=2aea32f5fba3c42a099f81837101b659
         Type: BaseDataVariableType
         DataType: String
         Value: "OptixAlarms[0].Active"
     - Name: Severity
-      Id: g=e9834e767452493256ad32821e4fd743
       Type: RAEtherNetIPTag
       DataType: Int16
       Children:
       - Name: SymbolName
-        Id: g=a70e7e05f1c7b5c8f25d73dad4c8ba02
         Type: BaseDataVariableType
         DataType: String
         Value: "OptixAlarms[0].Severity"
     - Name: Enabled
-      Id: g=7cad0efecf53620b1412d43c99184794
       Type: RAEtherNetIPTag
       DataType: Boolean
       Children:
       - Name: SymbolName
-        Id: g=800578f29b2053bec1025b42978579c5
         Type: BaseDataVariableType
         DataType: String
         Value: "OptixAlarms[0].Enabled"
     - Name: AlarmText
-      Id: g=33066856af49cbe32ee3c41b626e4d1e
       Type: RAEtherNetIPTag
       DataType: String
       Children:
       - Name: SymbolName
-        Id: g=8f6588b925b21ed1deac48c09592f0fa
         Type: BaseDataVariableType
         DataType: String
         Value: "OptixAlarms[0].AlarmText"
     - Name: AlarmAuxText
-      Id: g=81d184688b1a33ac6a297303fb9f9e8f
       Type: RAEtherNetIPTag
       DataType: String
       Children:
       - Name: SymbolName
-        Id: g=c24c963ca189b20e959e88ddc8eb162c
         Type: BaseDataVariableType
         DataType: String
         Value: "OptixAlarms[0].AlarmAuxText"
     - Name: AlarmHelpText
-      Id: g=bd4ac6391931395d57d0ed3a4ef0499d
       Type: RAEtherNetIPTag
       DataType: String
       Children:
       - Name: SymbolName
-        Id: g=e961b0fdb7d1510c551731d6b221264f
         Type: BaseDataVariableType
         DataType: String
         Value: "OptixAlarms[0].AlarmHelpText"
     - Name: OverviewImage
-      Id: g=7a4baf4c743118977166709c16a2df4c
       Type: RAEtherNetIPTag
       DataType: String
       Children:
       - Name: SymbolName
-        Id: g=0556577e5033edd9c9d13c2d8e802c2c
         Type: BaseDataVariableType
         DataType: String
         Value: "OptixAlarms[0].OverviewImage"
     - Name: AlarmImage
-      Id: g=3de564551de279681f08fae6ee0e56b2
       Type: RAEtherNetIPTag
       DataType: String
       Children:
       - Name: SymbolName
-        Id: g=60ea156b39a11a2c6e13405d3a90f836
         Type: BaseDataVariableType
         DataType: String
         Value: "OptixAlarms[0].AlarmImage"
       - Name: ArrayUpdateMode
-        Id: g=2df1e9ac709db6d961e2d65fbb753bb5
         Type: BaseDataVariableType
         DataType: TagArrayUpdateMode
   - Name: 1
-    Id: g=c4adb8c4d391515d02b46e55cb2eda92
     Type: OptimateAlarm
     DataType: OptimateAlarm
     Children:
     - Name: SymbolName
-      Id: g=6bc2fa7341c8ea8278e50a6e03d440b6
       Type: BaseDataVariableType
       DataType: String
       Value: "OptixAlarms[1]"
     - Name: BlockRead
-      Id: g=6bc82aeeba92b4901142805e4352527f
       Type: BaseDataVariableType
       DataType: Boolean
       Value: true
     - Name: Active
-      Id: g=9590fc0390ebb8ad998a0c4077996048
       Type: RAEtherNetIPTag
       DataType: Boolean
       Children:
       - Name: SymbolName
-        Id: g=0b9893b9e31e9597548265ca7280a9cb
         Type: BaseDataVariableType
         DataType: String
         Value: "OptixAlarms[1].Active"
     - Name: Severity
-      Id: g=1557e9df22f26cc643c64cb7f3eb5c34
       Type: RAEtherNetIPTag
       DataType: Int16
       Children:
       - Name: SymbolName
-        Id: g=73d25595819ae909f3c183f4713f8098
         Type: BaseDataVariableType
         DataType: String
         Value: "OptixAlarms[1].Severity"
     - Name: Enabled
-      Id: g=2da41af3769cb30d4917d3967508d5cd
       Type: RAEtherNetIPTag
       DataType: Boolean
       Children:
       - Name: SymbolName
-        Id: g=7a9dabea5d94ceee696a9a33ea600fe3
         Type: BaseDataVariableType
         DataType: String
         Value: "OptixAlarms[1].Enabled"
     - Name: AlarmText
-      Id: g=dc660d2f8106b88cbf7f35e6c2f11f2f
       Type: RAEtherNetIPTag
       DataType: String
       Children:
       - Name: SymbolName
-        Id: g=6db2a0b82f12bf18cb4cdd92d5c708cd
         Type: BaseDataVariableType
         DataType: String
         Value: "OptixAlarms[1].AlarmText"
     - Name: AlarmAuxText
-      Id: g=1660d8960522e847fccd82de71ebb4db
       Type: RAEtherNetIPTag
       DataType: String
       Children:
       - Name: SymbolName
-        Id: g=796d5d6a91b178be54855990211d6edb
         Type: BaseDataVariableType
         DataType: String
         Value: "OptixAlarms[1].AlarmAuxText"
     - Name: AlarmHelpText
-      Id: g=e6306f3615ba7f84ea9cc4de01b339e3
       Type: RAEtherNetIPTag
       DataType: String
       Children:
       - Name: SymbolName
-        Id: g=52501057f0814ca531500b7f06db7b4f
         Type: BaseDataVariableType
         DataType: String
         Value: "OptixAlarms[1].AlarmHelpText"
     - Name: OverviewImage
-      Id: g=b2904f6aa81ba1309e2c40482acf182c
       Type: RAEtherNetIPTag
       DataType: String
       Children:
       - Name: SymbolName
-        Id: g=b754e84a900854842efeb5f93ae13b22
         Type: BaseDataVariableType
         DataType: String
         Value: "OptixAlarms[1].OverviewImage"
     - Name: AlarmImage
-      Id: g=2edfb78a3e7e9adea591ec8bfeb51923
       Type: RAEtherNetIPTag
       DataType: String
       Children:
       - Name: SymbolName
-        Id: g=9bf2d1884e08dbf282627ec0be8f948d
         Type: BaseDataVariableType
         DataType: String
         Value: "OptixAlarms[1].AlarmImage"
   - Name: 2
-    Id: g=91001eb1c068e10106f40635d5d13b5f
     Type: OptimateAlarm
     DataType: OptimateAlarm
     Children:
     - Name: SymbolName
-      Id: g=1d915d05bdee4144dcb1546694ba491e
       Type: BaseDataVariableType
       DataType: String
       Value: "OptixAlarms[2]"
     - Name: BlockRead
-      Id: g=bd425bb9020aa55bc66499d731473aa2
       Type: BaseDataVariableType
       DataType: Boolean
       Value: true
     - Name: Active
-      Id: g=5ab0a520cd7c5161b55e2de4fc9ac61c
       Type: RAEtherNetIPTag
       DataType: Boolean
       Children:
       - Name: SymbolName
-        Id: g=279d268f6096da40e3a553acf52c0337
         Type: BaseDataVariableType
         DataType: String
         Value: "OptixAlarms[2].Active"
     - Name: Severity
-      Id: g=f45bde2854d9608f1461e3fcf644e808
       Type: RAEtherNetIPTag
       DataType: Int16
       Children:
       - Name: SymbolName
-        Id: g=4b2ab902254ce2a3a36b2ac26c20625d
         Type: BaseDataVariableType
         DataType: String
         Value: "OptixAlarms[2].Severity"
     - Name: Enabled
-      Id: g=1c28aace525b7b0c94038a62fb43adba
       Type: RAEtherNetIPTag
       DataType: Boolean
       Children:
       - Name: SymbolName
-        Id: g=cf36309f3061b515ded9d7c200d668e8
         Type: BaseDataVariableType
         DataType: String
         Value: "OptixAlarms[2].Enabled"
     - Name: AlarmText
-      Id: g=2ad226497f2f7b70f28f8c4b5826dd1c
       Type: RAEtherNetIPTag
       DataType: String
       Children:
       - Name: SymbolName
-        Id: g=121526ddb4657511b649d136fdc1f982
         Type: BaseDataVariableType
         DataType: String
         Value: "OptixAlarms[2].AlarmText"
     - Name: AlarmAuxText
-      Id: g=92d600377c232688ed3a80a3eaa70db7
       Type: RAEtherNetIPTag
       DataType: String
       Children:
       - Name: SymbolName
-        Id: g=0787dd96dad3dd80b3ec2210591ab33a
         Type: BaseDataVariableType
         DataType: String
         Value: "OptixAlarms[2].AlarmAuxText"
     - Name: AlarmHelpText
-      Id: g=075166e02632f7edd3b94e9b53d92943
       Type: RAEtherNetIPTag
       DataType: String
       Children:
       - Name: SymbolName
-        Id: g=43826f640502f9552b150b79bb8d046f
         Type: BaseDataVariableType
         DataType: String
         Value: "OptixAlarms[2].AlarmHelpText"
     - Name: OverviewImage
-      Id: g=7d4bb7477609fec7c68eb7a0c474a4e9
       Type: RAEtherNetIPTag
       DataType: String
       Children:
       - Name: SymbolName
-        Id: g=4344fdbd05267654780633595b517d44
         Type: BaseDataVariableType
         DataType: String
         Value: "OptixAlarms[2].OverviewImage"
     - Name: AlarmImage
-      Id: g=d21c557f1bf7f5bd4dc95821b1c21574
       Type: RAEtherNetIPTag
       DataType: String
       Children:
       - Name: SymbolName
-        Id: g=f41b529665e70652f744e2b6f0c02f33
         Type: BaseDataVariableType
         DataType: String
         Value: "OptixAlarms[2].AlarmImage"
   - Name: 3
-    Id: g=1704d5f38d263fcf4f298063e64c2082
     Type: OptimateAlarm
     DataType: OptimateAlarm
     Children:
     - Name: SymbolName
-      Id: g=6d5616e788cc5affe0d98212533123a0
       Type: BaseDataVariableType
       DataType: String
       Value: "OptixAlarms[3]"
     - Name: BlockRead
-      Id: g=86cd289cd1d58649373980b43306fe1e
       Type: BaseDataVariableType
       DataType: Boolean
       Value: true
     - Name: Active
-      Id: g=4d08d538ecc2c701e2073f447c8f7590
       Type: RAEtherNetIPTag
       DataType: Boolean
       Children:
       - Name: SymbolName
-        Id: g=9e885ffe7ad7a4306dec071ee59ab2a4
         Type: BaseDataVariableType
         DataType: String
         Value: "OptixAlarms[3].Active"
     - Name: Severity
-      Id: g=4d13af548c772761d2c8d8893f607a5b
       Type: RAEtherNetIPTag
       DataType: Int16
       Children:
       - Name: SymbolName
-        Id: g=84ee55b906f35cb355c867461f7bc9a5
         Type: BaseDataVariableType
         DataType: String
         Value: "OptixAlarms[3].Severity"
     - Name: Enabled
-      Id: g=46594ea6c614fd122f4f8968fe5fa93c
       Type: RAEtherNetIPTag
       DataType: Boolean
       Children:
       - Name: SymbolName
-        Id: g=e4bf52b656f8057b4e711b5af8cdb50d
         Type: BaseDataVariableType
         DataType: String
         Value: "OptixAlarms[3].Enabled"
     - Name: AlarmText
-      Id: g=6e0a9545a78a09c89e0b8b320891f934
       Type: RAEtherNetIPTag
       DataType: String
       Children:
       - Name: SymbolName
-        Id: g=d5aa9d2bddc39478a113291c15be4fb2
         Type: BaseDataVariableType
         DataType: String
         Value: "OptixAlarms[3].AlarmText"
     - Name: AlarmAuxText
-      Id: g=215cf805d5b9c83bb813187960adb886
       Type: RAEtherNetIPTag
       DataType: String
       Children:
       - Name: SymbolName
-        Id: g=e923a845607ee74eb3b9bc0b5e42a68f
         Type: BaseDataVariableType
         DataType: String
         Value: "OptixAlarms[3].AlarmAuxText"
     - Name: AlarmHelpText
-      Id: g=42f2e639243eba95d32ef3967c73c896
       Type: RAEtherNetIPTag
       DataType: String
       Children:
       - Name: SymbolName
-        Id: g=87bdcc6609aecd25f1dee798a5dffbd1
         Type: BaseDataVariableType
         DataType: String
         Value: "OptixAlarms[3].AlarmHelpText"
     - Name: OverviewImage
-      Id: g=4ecbcd7ab2f0965e32d00e82ce59ed16
       Type: RAEtherNetIPTag
       DataType: String
       Children:
       - Name: SymbolName
-        Id: g=1cf122437d84345781e6b5bf47e39ba8
         Type: BaseDataVariableType
         DataType: String
         Value: "OptixAlarms[3].OverviewImage"
     - Name: AlarmImage
-      Id: g=1f3128c1032bf399fd591b086032e047
       Type: RAEtherNetIPTag
       DataType: String
       Children:
       - Name: SymbolName
-        Id: g=664a6fc22e1fb103ae9f485b6ab508a4
         Type: BaseDataVariableType
         DataType: String
         Value: "OptixAlarms[3].AlarmImage"
   - Name: 4
-    Id: g=63477d273ae9dec816c30b41b410e721
     Type: OptimateAlarm
     DataType: OptimateAlarm
     Children:
     - Name: SymbolName
-      Id: g=f2bb1aded731577bfee74997ea2f8a36
       Type: BaseDataVariableType
       DataType: String
       Value: "OptixAlarms[4]"
     - Name: BlockRead
-      Id: g=dd45d8191dec08342231cdd82ce89d88
       Type: BaseDataVariableType
       DataType: Boolean
       Value: true
     - Name: Active
-      Id: g=b3d0d3186e99802d0767352a2366bb10
       Type: RAEtherNetIPTag
       DataType: Boolean
       Children:
       - Name: SymbolName
-        Id: g=a25b6639158342be7f9ec948a2a6ab3d
         Type: BaseDataVariableType
         DataType: String
         Value: "OptixAlarms[4].Active"
     - Name: Severity
-      Id: g=8b5edc028df69eefc2166d3ff4a379c2
       Type: RAEtherNetIPTag
       DataType: Int16
       Children:
       - Name: SymbolName
-        Id: g=241812bba4f0e4851797218ac37feab0
         Type: BaseDataVariableType
         DataType: String
         Value: "OptixAlarms[4].Severity"
     - Name: Enabled
-      Id: g=b54a2d80d19783514cf2315236a7f111
       Type: RAEtherNetIPTag
       DataType: Boolean
       Children:
       - Name: SymbolName
-        Id: g=93336e36a222a6e75da9a30ab8986ee7
         Type: BaseDataVariableType
         DataType: String
         Value: "OptixAlarms[4].Enabled"
     - Name: AlarmText
-      Id: g=99181944c7aeb22d647eaa6ea166f0d2
       Type: RAEtherNetIPTag
       DataType: String
       Children:
       - Name: SymbolName
-        Id: g=845327a51aa3b4ec0c3e16281c420069
         Type: BaseDataVariableType
         DataType: String
         Value: "OptixAlarms[4].AlarmText"
     - Name: AlarmAuxText
-      Id: g=127984d56e4fb6671a58e9e484ccdf19
       Type: RAEtherNetIPTag
       DataType: String
       Children:
       - Name: SymbolName
-        Id: g=a2a0ed15a5d6cb794f6e3fd231c3b1a7
         Type: BaseDataVariableType
         DataType: String
         Value: "OptixAlarms[4].AlarmAuxText"
     - Name: AlarmHelpText
-      Id: g=6267c4c790278d12000e83e9e05337d4
       Type: RAEtherNetIPTag
       DataType: String
       Children:
       - Name: SymbolName
-        Id: g=faf66c5679df6509b55642f0f0317613
         Type: BaseDataVariableType
         DataType: String
         Value: "OptixAlarms[4].AlarmHelpText"
     - Name: OverviewImage
-      Id: g=a4a0a76e90540abe4150cb7547f5bba3
       Type: RAEtherNetIPTag
       DataType: String
       Children:
       - Name: SymbolName
-        Id: g=0f8eabd3466947354282cf97eaa6074e
         Type: BaseDataVariableType
         DataType: String
         Value: "OptixAlarms[4].OverviewImage"
     - Name: AlarmImage
-      Id: g=63a0f078a086ca8a2d6b2306e4fb5179
       Type: RAEtherNetIPTag
       DataType: String
       Children:
       - Name: SymbolName
-        Id: g=053f8e7f2f9b41e9365954bb4d24e75f
         Type: BaseDataVariableType
         DataType: String
         Value: "OptixAlarms[4].AlarmImage"
   - Name: 5
-    Id: g=8b108bc2c7e34b9dd02220650e989feb
     Type: OptimateAlarm
     DataType: OptimateAlarm
     Children:
     - Name: SymbolName
-      Id: g=a9b906046bac1619505679471773755e
       Type: BaseDataVariableType
       DataType: String
       Value: "OptixAlarms[5]"
     - Name: BlockRead
-      Id: g=a05b5260623311d72c3cd8d01c800b96
       Type: BaseDataVariableType
       DataType: Boolean
       Value: true
     - Name: Active
-      Id: g=0335d423f3537c6a65ef1d8f5c768b90
       Type: RAEtherNetIPTag
       DataType: Boolean
       Children:
       - Name: SymbolName
-        Id: g=79763edc77fd311609598d353ca5ce39
         Type: BaseDataVariableType
         DataType: String
         Value: "OptixAlarms[5].Active"
     - Name: Severity
-      Id: g=97fad3b82a068e08c327d1e6783029ce
       Type: RAEtherNetIPTag
       DataType: Int16
       Children:
       - Name: SymbolName
-        Id: g=66235253f1b92bcba4ab3e3473b07895
         Type: BaseDataVariableType
         DataType: String
         Value: "OptixAlarms[5].Severity"
     - Name: Enabled
-      Id: g=5e05facaf9142becfd775fe1bfffdbe5
       Type: RAEtherNetIPTag
       DataType: Boolean
       Children:
       - Name: SymbolName
-        Id: g=e84c0974b5efae84893ec751aee723f2
         Type: BaseDataVariableType
         DataType: String
         Value: "OptixAlarms[5].Enabled"
     - Name: AlarmText
-      Id: g=f10fb074dabeb7ae1595d06b70886f91
       Type: RAEtherNetIPTag
       DataType: String
       Children:
       - Name: SymbolName
-        Id: g=1fa8e2d5e8df183afcf9088ed6130591
         Type: BaseDataVariableType
         DataType: String
         Value: "OptixAlarms[5].AlarmText"
     - Name: AlarmAuxText
-      Id: g=6bd783ae2e468610a1c972254eb584d3
       Type: RAEtherNetIPTag
       DataType: String
       Children:
       - Name: SymbolName
-        Id: g=e9b771341a3d44873d95972f0a9e0357
         Type: BaseDataVariableType
         DataType: String
         Value: "OptixAlarms[5].AlarmAuxText"
     - Name: AlarmHelpText
-      Id: g=81768555bef28e845f97121a9b6153ed
       Type: RAEtherNetIPTag
       DataType: String
       Children:
       - Name: SymbolName
-        Id: g=ff2d549cb841933a5b13ce87c713c03b
         Type: BaseDataVariableType
         DataType: String
         Value: "OptixAlarms[5].AlarmHelpText"
     - Name: OverviewImage
-      Id: g=767ebdb5ca09d554e3c9081c7058fcbf
       Type: RAEtherNetIPTag
       DataType: String
       Children:
       - Name: SymbolName
-        Id: g=4e74ce370cbbd145aec93a0c49c25b94
         Type: BaseDataVariableType
         DataType: String
         Value: "OptixAlarms[5].OverviewImage"
     - Name: AlarmImage
-      Id: g=b96cc0d5691fb10f4682a3736f360315
       Type: RAEtherNetIPTag
       DataType: String
       Children:
       - Name: SymbolName
-        Id: g=1fe5bce16fffad3fdc4694d4ecd73164
         Type: BaseDataVariableType
         DataType: String
         Value: "OptixAlarms[5].AlarmImage"
   - Name: 6
-    Id: g=aaa4ea5d3e1548e22157ed06d0d15b4a
     Type: OptimateAlarm
     DataType: OptimateAlarm
     Children:
     - Name: SymbolName
-      Id: g=322a4b96b88466de0dc9d061bcefd2a7
       Type: BaseDataVariableType
       DataType: String
       Value: "OptixAlarms[6]"
     - Name: BlockRead
-      Id: g=18182aea76bdeb3b9a14412d2f0b2266
       Type: BaseDataVariableType
       DataType: Boolean
       Value: true
     - Name: Active
-      Id: g=67d7a9db479e2c08f4b9ac404d02f679
       Type: RAEtherNetIPTag
       DataType: Boolean
       Children:
       - Name: SymbolName
-        Id: g=db1def12346e3746d275ffaf07b59403
         Type: BaseDataVariableType
         DataType: String
         Value: "OptixAlarms[6].Active"
     - Name: Severity
-      Id: g=f1426f715e60329a8ef36ae8e291ce27
       Type: RAEtherNetIPTag
       DataType: Int16
       Children:
       - Name: SymbolName
-        Id: g=94dc2d0136345b5f89ea7994d122a17d
         Type: BaseDataVariableType
         DataType: String
         Value: "OptixAlarms[6].Severity"
     - Name: Enabled
-      Id: g=12e6e1423f30c2f56a71bc28eeb29eff
       Type: RAEtherNetIPTag
       DataType: Boolean
       Children:
       - Name: SymbolName
-        Id: g=696e81bc3b1450caa1992d49ffd6d563
         Type: BaseDataVariableType
         DataType: String
         Value: "OptixAlarms[6].Enabled"
     - Name: AlarmText
-      Id: g=4758aeea556c2e30baecf06e8227386e
       Type: RAEtherNetIPTag
       DataType: String
       Children:
       - Name: SymbolName
-        Id: g=400e11da6aa52ef1900f53b8ae010e0c
         Type: BaseDataVariableType
         DataType: String
         Value: "OptixAlarms[6].AlarmText"
     - Name: AlarmAuxText
-      Id: g=d3138bfb4a9b3618aeb4aea2c30509cf
       Type: RAEtherNetIPTag
       DataType: String
       Children:
       - Name: SymbolName
-        Id: g=f638e1d38ae328b90e2d721a94294121
         Type: BaseDataVariableType
         DataType: String
         Value: "OptixAlarms[6].AlarmAuxText"
     - Name: AlarmHelpText
-      Id: g=390fdd00fd464e2625fe13ea6b10eb2a
       Type: RAEtherNetIPTag
       DataType: String
       Children:
       - Name: SymbolName
-        Id: g=3e9ef5af067d02a3e38665c7f897c389
         Type: BaseDataVariableType
         DataType: String
         Value: "OptixAlarms[6].AlarmHelpText"
     - Name: OverviewImage
-      Id: g=de59aa64f17da680de7d78a7bba77989
       Type: RAEtherNetIPTag
       DataType: String
       Children:
       - Name: SymbolName
-        Id: g=68b0613a7d4d8086811c54703beb43f8
         Type: BaseDataVariableType
         DataType: String
         Value: "OptixAlarms[6].OverviewImage"
     - Name: AlarmImage
-      Id: g=bb3df00eb9c05d2c7f43777fe964273d
       Type: RAEtherNetIPTag
       DataType: String
       Children:
       - Name: SymbolName
-        Id: g=6aac1736fe67a57aa8f58507ccd20e66
         Type: BaseDataVariableType
         DataType: String
         Value: "OptixAlarms[6].AlarmImage"
   - Name: 7
-    Id: g=73b0c99a3112edc741024f4730cbef61
     Type: OptimateAlarm
     DataType: OptimateAlarm
     Children:
     - Name: SymbolName
-      Id: g=f63fc23cc4fde6999227bf32a2675df2
       Type: BaseDataVariableType
       DataType: String
       Value: "OptixAlarms[7]"
     - Name: BlockRead
-      Id: g=5a97e8848edbe5f50bf02371a4903e0f
       Type: BaseDataVariableType
       DataType: Boolean
       Value: true
     - Name: Active
-      Id: g=eec7a29e62669870cf71da456019d542
       Type: RAEtherNetIPTag
       DataType: Boolean
       Children:
       - Name: SymbolName
-        Id: g=22de1e550377c2867ab34fa03e908d91
         Type: BaseDataVariableType
         DataType: String
         Value: "OptixAlarms[7].Active"
     - Name: Severity
-      Id: g=d98b6d29a31a46baca16d918bb3a8ad9
       Type: RAEtherNetIPTag
       DataType: Int16
       Children:
       - Name: SymbolName
-        Id: g=c441572590f06349ed47f62905d737d8
         Type: BaseDataVariableType
         DataType: String
         Value: "OptixAlarms[7].Severity"
     - Name: Enabled
-      Id: g=d3411a7ba8e4fc6fc7a8568e24b94d37
       Type: RAEtherNetIPTag
       DataType: Boolean
       Children:
       - Name: SymbolName
-        Id: g=2ae5e36114fcb39d190bc69650b697a9
         Type: BaseDataVariableType
         DataType: String
         Value: "OptixAlarms[7].Enabled"
     - Name: AlarmText
-      Id: g=c88f7b473ffd2232df668d363dd9ff87
       Type: RAEtherNetIPTag
       DataType: String
       Children:
       - Name: SymbolName
-        Id: g=ead8511218b34c1d565f4a11c0c7568e
         Type: BaseDataVariableType
         DataType: String
         Value: "OptixAlarms[7].AlarmText"
     - Name: AlarmAuxText
-      Id: g=7140a08061da43e91265bbf7817f17b9
       Type: RAEtherNetIPTag
       DataType: String
       Children:
       - Name: SymbolName
-        Id: g=4c01d7ab65aad7e82df35b7efa532081
         Type: BaseDataVariableType
         DataType: String
         Value: "OptixAlarms[7].AlarmAuxText"
     - Name: AlarmHelpText
-      Id: g=3ab7dc0dc0c0771143e97d6202d74da2
       Type: RAEtherNetIPTag
       DataType: String
       Children:
       - Name: SymbolName
-        Id: g=df7b60994073b2bea87d85326eef5da1
         Type: BaseDataVariableType
         DataType: String
         Value: "OptixAlarms[7].AlarmHelpText"
     - Name: OverviewImage
-      Id: g=65da962b0f252a50bbcc38d9ec8c78c1
       Type: RAEtherNetIPTag
       DataType: String
       Children:
       - Name: SymbolName
-        Id: g=d79744ad556014a4daff81963db3a10a
         Type: BaseDataVariableType
         DataType: String
         Value: "OptixAlarms[7].OverviewImage"
     - Name: AlarmImage
-      Id: g=74032561947cd8ab47e1f3c652e0e7b1
       Type: RAEtherNetIPTag
       DataType: String
       Children:
       - Name: SymbolName
-        Id: g=3fd3a38598d19a0d75a5a73dd139929f
         Type: BaseDataVariableType
         DataType: String
         Value: "OptixAlarms[7].AlarmImage"
   - Name: 8
-    Id: g=165084b251677dd4038c3754f2d02aae
     Type: OptimateAlarm
     DataType: OptimateAlarm
     Children:
     - Name: SymbolName
-      Id: g=314c1dec9d334091c9e53782af95ea30
       Type: BaseDataVariableType
       DataType: String
       Value: "OptixAlarms[8]"
     - Name: BlockRead
-      Id: g=76a353cce2aa43bd502eb74df164d511
       Type: BaseDataVariableType
       DataType: Boolean
       Value: true
     - Name: Active
-      Id: g=714583ce2bd9d35baf8165c8f2aac38f
       Type: RAEtherNetIPTag
       DataType: Boolean
       Children:
       - Name: SymbolName
-        Id: g=0afb346410f3a0e32bf278a20afca86c
         Type: BaseDataVariableType
         DataType: String
         Value: "OptixAlarms[8].Active"
     - Name: Severity
-      Id: g=144fb3d35b05975edf5d9623abc6c60e
       Type: RAEtherNetIPTag
       DataType: Int16
       Children:
       - Name: SymbolName
-        Id: g=d43467ef934dce452238d4fa801ff0a9
         Type: BaseDataVariableType
         DataType: String
         Value: "OptixAlarms[8].Severity"
     - Name: Enabled
-      Id: g=eadabf87bc7e15a1567b795bb1e711be
       Type: RAEtherNetIPTag
       DataType: Boolean
       Children:
       - Name: SymbolName
-        Id: g=d76e52a05d4643543f27bea2a91c3219
         Type: BaseDataVariableType
         DataType: String
         Value: "OptixAlarms[8].Enabled"
     - Name: AlarmText
-      Id: g=ac3db2f22addf83bb218a53a374097bb
       Type: RAEtherNetIPTag
       DataType: String
       Children:
       - Name: SymbolName
-        Id: g=b3533e58f218b2f18c30f1a10e53f90c
         Type: BaseDataVariableType
         DataType: String
         Value: "OptixAlarms[8].AlarmText"
     - Name: AlarmAuxText
-      Id: g=4b0e03108eb5185fd127e8608c8848b2
       Type: RAEtherNetIPTag
       DataType: String
       Children:
       - Name: SymbolName
-        Id: g=3ee64abf82e462cfdfe16ce8988c979b
         Type: BaseDataVariableType
         DataType: String
         Value: "OptixAlarms[8].AlarmAuxText"
     - Name: AlarmHelpText
-      Id: g=6275a19794de1378d231a8b7970a512b
       Type: RAEtherNetIPTag
       DataType: String
       Children:
       - Name: SymbolName
-        Id: g=c2f4dbafccf1f8fd5065c90d50217f0b
         Type: BaseDataVariableType
         DataType: String
         Value: "OptixAlarms[8].AlarmHelpText"
     - Name: OverviewImage
-      Id: g=6156cbd5c43267dcf530ab9fa32680f2
       Type: RAEtherNetIPTag
       DataType: String
       Children:
       - Name: SymbolName
-        Id: g=af47f7fdd87dae692f16897af09b2b28
         Type: BaseDataVariableType
         DataType: String
         Value: "OptixAlarms[8].OverviewImage"
     - Name: AlarmImage
-      Id: g=e8222fe5be16eb82150d3e76ff3e4a6a
       Type: RAEtherNetIPTag
       DataType: String
       Children:
       - Name: SymbolName
-        Id: g=c9c12834a65ccd74bc369b1fa59484d5
         Type: BaseDataVariableType
         DataType: String
         Value: "OptixAlarms[8].AlarmImage"
   - Name: 9
-    Id: g=409ad4d2db7f0a69669b26eb1fc7c792
     Type: OptimateAlarm
     DataType: OptimateAlarm
     Children:
     - Name: SymbolName
-      Id: g=b788829b3e2867a2b0cf63387effa4af
       Type: BaseDataVariableType
       DataType: String
       Value: "OptixAlarms[9]"
     - Name: BlockRead
-      Id: g=ebd6b9a6a1ee125999aa45b23e2f8988
       Type: BaseDataVariableType
       DataType: Boolean
       Value: true
     - Name: Active
-      Id: g=91c8712858afe1d4d4b833ff51810d19
       Type: RAEtherNetIPTag
       DataType: Boolean
       Children:
       - Name: SymbolName
-        Id: g=76289afa66aa7c5e40f570e47aefb4b1
         Type: BaseDataVariableType
         DataType: String
         Value: "OptixAlarms[9].Active"
     - Name: Severity
-      Id: g=51b42a67135903d83b61710b91c1bf98
       Type: RAEtherNetIPTag
       DataType: Int16
       Children:
       - Name: SymbolName
-        Id: g=dacab5b3c7eee4d5db6ff4c08e3080c2
         Type: BaseDataVariableType
         DataType: String
         Value: "OptixAlarms[9].Severity"
     - Name: Enabled
-      Id: g=5bc70d41c51c76801eafa87d233c4226
       Type: RAEtherNetIPTag
       DataType: Boolean
       Children:
       - Name: SymbolName
-        Id: g=1df136a5343359aa22839c12ebf11712
         Type: BaseDataVariableType
         DataType: String
         Value: "OptixAlarms[9].Enabled"
     - Name: AlarmText
-      Id: g=bc77e4b552b712e555abc1d9b8394e0e
       Type: RAEtherNetIPTag
       DataType: String
       Children:
       - Name: SymbolName
-        Id: g=38f0520fa7bf5273f3cfd1bfc11bf8c5
         Type: BaseDataVariableType
         DataType: String
         Value: "OptixAlarms[9].AlarmText"
     - Name: AlarmAuxText
-      Id: g=47b58dfdf17dd573e1cb6be41e2ac20d
       Type: RAEtherNetIPTag
       DataType: String
       Children:
       - Name: SymbolName
-        Id: g=7009aa3041e8e8816ae21588df279615
         Type: BaseDataVariableType
         DataType: String
         Value: "OptixAlarms[9].AlarmAuxText"
     - Name: AlarmHelpText
-      Id: g=e7dd36d161796aa0e31b3c79607a7700
       Type: RAEtherNetIPTag
       DataType: String
       Children:
       - Name: SymbolName
-        Id: g=fd11638c3cf903b1b31ece87621e867d
         Type: BaseDataVariableType
         DataType: String
         Value: "OptixAlarms[9].AlarmHelpText"
     - Name: OverviewImage
-      Id: g=34b8bbec887d0993ab23cbf56de873f5
       Type: RAEtherNetIPTag
       DataType: String
       Children:
       - Name: SymbolName
-        Id: g=d7a74247b9f445450be2cf49b54242f8
         Type: BaseDataVariableType
         DataType: String
         Value: "OptixAlarms[9].OverviewImage"
     - Name: AlarmImage
-      Id: g=6839dea04e4c125deea5f3d7cd340cee
       Type: RAEtherNetIPTag
       DataType: String
       Children:
       - Name: SymbolName
-        Id: g=29791ffa6f90ac6fc3c1a165bc7b51af
         Type: BaseDataVariableType
         DataType: String
         Value: "OptixAlarms[9].AlarmImage"
 - Name: OI_AlarmTime
-  Id: g=6a8f6c422de94e70ffb62046ae58065a
   Type: RAEtherNetIPTag
   DataType: Boolean
   Children:
   - Name: SymbolName
-    Id: g=346e1212319ddd333f9c805d76fb81e4
     Type: BaseDataVariableType
     DataType: String
     Value: "OI_AlarmTime"
 - Name: OI_IdleTime
-  Id: g=5feeb311535fb1e1309cb3c4af57076a
   Type: RAEtherNetIPTag
   DataType: Boolean
   Children:
   - Name: SymbolName
-    Id: g=f54719208795e981334467222b7f9d98
     Type: BaseDataVariableType
     DataType: String
     Value: "OI_IdleTime"
 - Name: OI_JogTime
-  Id: g=564e13fc92b55a8830d708bf525a741f
   Type: RAEtherNetIPTag
   DataType: Boolean
   Children:
   - Name: SymbolName
-    Id: g=4bea27bdf3f5cff3eef0442dbaa33914
     Type: BaseDataVariableType
     DataType: String
     Value: "OI_JogTime"
 - Name: OI_OperatorAlarmtime
-  Id: g=6f868ba2273bec381b4636cd7e0d9d32
   Type: RAEtherNetIPTag
   DataType: Boolean
   Children:
   - Name: SymbolName
-    Id: g=cd4ed09b640e7823efd8611bd5372a18
     Type: BaseDataVariableType
     DataType: String
     Value: "OI_OperatorAlarmtime"
 - Name: OI_ProductionTime
-  Id: g=57222e30d077a084d183102090b6f795
   Type: RAEtherNetIPTag
   DataType: Boolean
   Children:
   - Name: SymbolName
-    Id: g=1cbd7d300ee7d6152f761591ca2fbe6c
     Type: BaseDataVariableType
     DataType: String
     Value: "OI_ProductionTime"
 - Name: OI_SuspendTime
-  Id: g=114e62350b62d2d7ed920c2c59544174
   Type: RAEtherNetIPTag
   DataType: Boolean
   Children:
   - Name: SymbolName
-    Id: g=9bcaec2552f2726a5e00bf31a344a02e
     Type: BaseDataVariableType
     DataType: String
     Value: "OI_SuspendTime"

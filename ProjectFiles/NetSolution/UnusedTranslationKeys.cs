@@ -13,6 +13,9 @@ using FTOptix.SerialPort;
 using FTOptix.OPCUAServer;
 using FTOptix.System;
 using FTOptix.DataLogger;
+using FTOptix.Recipe;
+using FTOptix.AuditSigning;
+using FTOptix.RecipeX;
 #endregion
 
 public class UnusedTranslationKeys : BaseNetLogic

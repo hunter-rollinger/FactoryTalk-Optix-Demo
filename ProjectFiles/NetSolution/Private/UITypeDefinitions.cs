@@ -60,6 +60,11 @@ public class Production_Loading : FTOptix.UI.Screen
 {
 }
 
+[MapType(NamespaceUri = "OptimateDemoProject", Guid = "dccc18444d54b63c438f4c359ab5800c")]
+public class RejectsByZone : FTOptix.UI.Screen
+{
+}
+
 [MapType(NamespaceUri = "OptimateDemoProject", Guid = "08231cb9559a2a842103718567e83555")]
 public class Template_Screen : FTOptix.UI.Screen
 {
@@ -305,11 +310,6 @@ public class PackML_State_Mode_Indicator : FTOptix.UI.Panel
 {
 }
 
-[MapType(NamespaceUri = "OptimateDemoProject", Guid = "3d530c91a212e5780324b245b1219f8e")]
-public class Statistics_Circular_Percent_DEPRECATED_USE_ECHART : FTOptix.UI.Panel
-{
-}
-
 [MapType(NamespaceUri = "OptimateDemoProject", Guid = "216c0c2f4e5ed9b91680fcd43f42c553")]
 public class Position_Dispaly : FTOptix.UI.RowLayout
 {
@@ -457,5 +457,20 @@ public class CalendarPickerDialog : FTOptix.UI.Panel
 
 [MapType(NamespaceUri = "OptimateDemoProject", Guid = "7fdddbdcf6a84c3a030fee9cd66e58eb")]
 public class NodesCounterPanel : FTOptix.UI.Panel
+{
+}
+
+[MapType(NamespaceUri = "OptimateDemoProject", Guid = "be0f5f0c3cd399b38360a916d9fb89f6")]
+public class EventHistory : FTOptix.UI.Screen
+{
+}
+
+[MapType(NamespaceUri = "OptimateDemoProject", Guid = "b119615661d25d59965b75c66fc740b5")]
+public class Analysis : FTOptix.UI.Screen
+{
+}
+
+[MapType(NamespaceUri = "OptimateDemoProject", Guid = "5bf654c77f18a45502d0c82e6b912a8b")]
+public class ShiftStatistics : FTOptix.UI.Screen
 {
 }

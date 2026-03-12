@@ -14,6 +14,9 @@ using FTOptix.Core;
 using FTOptix.SerialPort;
 using FTOptix.System;
 using FTOptix.DataLogger;
+using FTOptix.Recipe;
+using FTOptix.AuditSigning;
+using FTOptix.RecipeX;
 #endregion
 
 public class ConstrainedVariablesVerifier : BaseNetLogic

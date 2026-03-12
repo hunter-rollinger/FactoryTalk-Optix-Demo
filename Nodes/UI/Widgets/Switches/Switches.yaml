@@ -1,5 +1,4 @@
 Name: Switches
-Id: g=428078a12b775cb258d396d7f43f82ba
 Type: FolderType
 Children:
 - Name: Switch_OnOff_Standard
@@ -8,77 +7,63 @@ Children:
   ReferenceType: HasComponent
   Children:
   - Name: Width
-    Id: g=48cfeaedb8a09d29ca9ca9dee61ff53f
     Type: BaseVariableType
     DataType: Size
     ModellingRule: Optional
     Value: 250.0
   - Name: Height
-    Id: g=603c4d2900f7d079bb1205e8e8d43947
     Type: BaseVariableType
     DataType: Size
     ModellingRule: Optional
     Value: -1.0
   - Name: HorizontalAlignment
-    Id: g=135c977d9fc9a25e15cb0a630b08131f
     Type: BaseVariableType
     DataType: HorizontalAlignment
     ModellingRule: Optional
     Value: 3
   - Name: VerticalAlignment
-    Id: g=64ec92d060463522e783a92f30123692
     Type: BaseVariableType
     DataType: VerticalAlignment
     ModellingRule: Optional
   - Name: Toggle
-    Id: g=857b930590aa75750e276ae657a2006d
     Type: BaseDataVariableType
     DataType: Boolean
   - Name: On Text
-    Id: g=3cee5dad0c20a19ab284803374a0d606
     Type: BaseDataVariableType
     DataType: String
     Value: "On"
   - Name: Off Text
-    Id: g=2354e25e8f685aabb791113a5ed8c283
     Type: BaseDataVariableType
     DataType: String
     Value: "Off"
   - Name: Button Enabled
-    Id: g=b4768f0102e85ddb88c4ed4030c16823
     Type: BaseDataVariableType
     DataType: Boolean
     Value: true
   - Name: Label
-    Id: g=8044b82c335728fbfddd60e5286c4caf
     Type: BaseDataVariableType
     DataType: String
     Value: "Label"
   - Name: GridLayout
-    Id: g=9136890b5e67ea5914149ef5ed6a7c23
     Type: GridLayout
     Children:
     - Name: Width
-      Id: g=fa42f1ec143a3259ec45a6e78d82012d
       Type: BaseVariableType
       DataType: Size
       ModellingRule: Optional
       Value: 180.0
     - Name: Height
-      Id: g=8aa63bc780a0bd8722b73c595dfce728
       Type: BaseVariableType
       DataType: Size
       ModellingRule: Optional
       Value: -1.0
     - Name: Rows
-      Id: g=65e35c1f8f0bc282fe204548f2535835
       Type: BaseDataVariableType
       DataType: String
       ValueRank: OneDimension
       ArrayDimensions: [0]
       Value: ["auto"]
     - Name: Columns
-      Id: g=9a500864460b52c906b42898ad2204a6
       Type: BaseDataVariableType
       DataType: String
       ValueRank: OneDimension
@@ -86,13 +71,11 @@ Children:
       Value: ["Auto","Auto","3fr","Auto","Auto","Auto","Auto"]
       Children:
       - Name: DynamicLink_2
-        Id: g=bc55b14b25a52b807f53b61d09b93b97
         Type: DynamicLink
         DataType: NodePath
         Value: "../Label Column Setting"
         Children:
         - Name: ParentElementAccess
-          Id: g=6b17c69d8c93699028a17ecd3e9948ba
           Type: BaseVariableType
           DataType: ElementAccess
           Value: 
@@ -107,2194 +90,1766 @@ Children:
             }
            }
     - Name: Pointer
-      Id: g=75bb2fc6ed3b4f70d6d68cf7eafc8ea1
       Type: Multi_State_Indicator
       Children:
       - Name: Circle
-        Id: g=d87fb99245f63f080c14a3546e6d1de6
         Type: Ellipse
         Children:
         - Name: FillColor
-          Id: g=d5fd2e511c2ef29c0a28e6d936212d55
           Type: BaseDataVariableType
           DataType: Color
           Value: "#ff9900"
           Children:
           - Name: IndicatorColors1
-            Id: g=e6abc8a84171d14b85417a4339ccacb3
             Type: Colors
             Children:
             - Name: Source
-              Id: g=4f8511c089ecdba1997b9baeba3682b2
               Type: BaseDataVariableType
               DataType: BaseDataType
               ReferenceType: HasSource
               Children:
               - Name: DynamicLink
-                Id: g=33a2357fd626c57907f4453741c3f4c7
                 Type: DynamicLink
                 DataType: NodePath
                 Value: "../../../../IndicatorColor"
             - Name: Pairs
-              Id: g=b270044e29ad5fb651e49305cd063b4b
               Type: BaseObjectType
               Children:
               - Name: Pair3
-                Id: g=acdf5f0e9424cfbafc13625db7789d23
                 Type: ValueMapPair
                 Children:
                 - Name: Key
-                  Id: g=9649526ce3439bae4a0fa5e5a81dacbe
                   Type: BaseDataVariableType
                   DataType: Int16
                   Value: 1
                 - Name: Value
-                  Id: g=438cf0f462c0cd7376d2ce64bae797f0
                   Type: BaseDataVariableType
                   DataType: Color
                   Value: "#23af72"
                   Children:
                   - Name: DynamicLink
-                    Id: g=648f66b353236ab0b474104e0918e598
                     Type: DynamicLink
                     DataType: NodePath
                     Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Good - 23af72 - Green"
               - Name: Pair4
-                Id: g=29ec18f52d1cac05e4ca3f124cb8b0f9
                 Type: ValueMapPair
                 Children:
                 - Name: Key
-                  Id: g=8952ff9c6f2c7d6c1bb4c60ec23d3df5
                   Type: BaseDataVariableType
                   DataType: Int16
                   Value: 2
                 - Name: Value
-                  Id: g=372f2ae896103c41aea82e8d16239498
                   Type: BaseDataVariableType
                   DataType: Color
                   Value: "#6d91b6"
                   Children:
                   - Name: DynamicLink
-                    Id: g=6668b54018f0bb7c5477d6c0147babb1
                     Type: DynamicLink
                     DataType: NodePath
                     Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Selected - 6d91b6 - Info - Blue"
               - Name: Pair5
-                Id: g=14917d6c70c12d1b7e862bd08fba917c
                 Type: ValueMapPair
                 Children:
                 - Name: Key
-                  Id: g=e3136b155ee9f0b6713f10bd6b866a2b
                   Type: BaseDataVariableType
                   DataType: Int16
                   Value: 3
                 - Name: Value
-                  Id: g=2b3e501940a1c1e186db79834d2abd9b
                   Type: BaseDataVariableType
                   DataType: Color
                   Value: "#ff9900"
                   Children:
                   - Name: DynamicLink
-                    Id: g=53157fa6c09ac383f3c3b3a7dc4a6170
                     Type: DynamicLink
                     DataType: NodePath
                     Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Warning - ff9900 - Orange"
               - Name: Pair
-                Id: g=52d33a76774e45adbdb24776dc12df72
                 Type: ValueMapPair
                 Children:
                 - Name: Key
-                  Id: g=b648c74ab310754b797057f61e0e59db
                   Type: BaseDataVariableType
                   DataType: Int16
                   Value: 4
                 - Name: Value
-                  Id: g=3c36b3f635b205a62397f7ef6cebd5ae
                   Type: BaseDataVariableType
                   DataType: Color
                   Value: "#cc0036"
                   Children:
                   - Name: DynamicLink
-                    Id: g=677dcf242a72d1472a92107a5a853dbc
                     Type: DynamicLink
                     DataType: NodePath
                     Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Error - cc036 - Red"
               - Name: Pair6
-                Id: g=bb435790cd1015a1270af4bfc330e580
                 Type: ValueMapPair
                 Children:
                 - Name: Key
-                  Id: g=cb36ad5049fed46d072d700914460c0b
                   Type: BaseDataVariableType
                   DataType: Int16
                   Value: 5
                 - Name: Value
-                  Id: g=7eeaeeecfdd4dabfa1dce7eb4d7f6982
                   Type: BaseDataVariableType
                   DataType: Color
                   Value: "#6d6e70"
                   Children:
                   - Name: DynamicLink
-                    Id: g=af84fc77c5ce58567652ed2f7c7890d9
                     Type: DynamicLink
                     DataType: NodePath
                     Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Dark Grey 2 - 6d6e70"
               - Name: Pair1
-                Id: g=0df9c24094d989b01a651c37a8e3769c
                 Type: ValueMapPair
                 Children:
                 - Name: Key
-                  Id: g=e706ec626d64443fe46bb7e051c41ec5
                   Type: BaseDataVariableType
                   DataType: Int16
                   Value: 6
                 - Name: Value
-                  Id: g=2ab0eb68980697b2f7c9deff149290f6
                   Type: BaseDataVariableType
                   DataType: Color
         - Name: Visible
-          Id: g=7cf2273e4e5832740ce9870aaf2b83a2
           Type: BaseDataVariableType
           DataType: Boolean
           Value: true
           Children:
           - Name: ExpressionEvaluator1
-            Id: g=e176f5d0146093da26f9bfccf128b87f
             Type: ExpressionEvaluator
             Children:
             - Name: Source0
-              Id: g=0ff7eaa9a227a089bfa95d9fff9c5969
               Type: BaseDataVariableType
               DataType: BaseDataType
               ReferenceType: HasSource
               Children:
               - Name: DynamicLink
-                Id: g=ced7b79b0aac8e2762eb4563c06d27d9
                 Type: DynamicLink
                 DataType: NodePath
                 Value: "../../../../IndicatorColor"
       - Name: IndicatorColor
-        Id: g=80e4daab75517c09713ad1750a1f8759
         Type: BaseDataVariableType
         DataType: 'Multi-State Indicator Colors'
         Value: 2
       - Name: Indicator
-        Id: g=7435f50c206eb7c000385ea63c6316ed
         Type: Image
         Children:
         - Name: Path
-          Id: g=815865d83f69c18eed0e003e01193475
           Type: BaseDataVariableType
           DataType: ResourceUri
           Children:
           - Name: IndicatorSymbol1
-            Id: g=08a3a54aa1b8141681cd65a7ec262d00
             Type: Symbols
             Children:
             - Name: Source
-              Id: g=027d8484a14c8b6764c5d5b3a68f0bd6
               Type: BaseDataVariableType
               DataType: BaseDataType
               ReferenceType: HasSource
               Children:
               - Name: DynamicLink
-                Id: g=b01063ed23e798733806a17b68884260
                 Type: DynamicLink
                 DataType: NodePath
                 Value: "../../../../IndicatorSymbol"
             - Name: Pairs
-              Id: g=6536ae770c48420f5eb4ad6c9f1fdf27
               Type: BaseObjectType
               Children:
               - Name: Pair2
-                Id: g=73f1eb95b20c5c4c5295334e8f36d40d
                 Type: ValueMapPair
                 Children:
                 - Name: Key
-                  Id: g=7d78dbb94bde59174dbcbbc0d9de88f9
                   Type: BaseDataVariableType
                   DataType: Int16
                   Value: 1
                 - Name: Value
-                  Id: g=e6cfb34de099a5a761d6bda54ddecbf2
                   Type: BaseDataVariableType
                   DataType: ResourceUri
                   Value: "ns=36;%PROJECTDIR%/Graphics/Coesia - Library/indicator items/warning.svg"
               - Name: Pair3
-                Id: g=f210e86e9cab9e1aef0f1fa9d7fcfff8
                 Type: ValueMapPair
                 Children:
                 - Name: Key
-                  Id: g=8b6874e17ca5500cb7caaff44f37be1d
                   Type: BaseDataVariableType
                   DataType: Int16
                   Value: 2
                 - Name: Value
-                  Id: g=6461c02c1e546fba30a951788eb34413
                   Type: BaseDataVariableType
                   DataType: ResourceUri
                   Value: "ns=36;%PROJECTDIR%/Graphics/Coesia - Library/indicator items/good.svg"
               - Name: Pair4
-                Id: g=a80f6119d80b9790e4bcff20b6f6ee27
                 Type: ValueMapPair
                 Children:
                 - Name: Key
-                  Id: g=f4425d8757ac7311514aa173c18c7c5f
                   Type: BaseDataVariableType
                   DataType: Int16
                   Value: 3
                 - Name: Value
-                  Id: g=b19aed0449e1806286c9f81a1688b653
                   Type: BaseDataVariableType
                   DataType: ResourceUri
                   Value: "ns=36;%PROJECTDIR%/Graphics/Coesia - Library/indicator items/info.svg"
               - Name: Pair5
-                Id: g=30fcb1e1544ac8e29bfbb423e62fd909
                 Type: ValueMapPair
                 Children:
                 - Name: Key
-                  Id: g=b663c60f9f89cd22fda50eaa4acb34bd
                   Type: BaseDataVariableType
                   DataType: Int16
                   Value: 4
                 - Name: Value
-                  Id: g=20b132cae6ea0727d61e94d9e96cb747
                   Type: BaseDataVariableType
                   DataType: ResourceUri
                   Value: "ns=36;%PROJECTDIR%/Graphics/Coesia - Library/indicator items/led-lit.svg"
               - Name: Pair6
-                Id: g=df9b29cedc139026a0ba32a0ed87a5a8
                 Type: ValueMapPair
                 Children:
                 - Name: Key
-                  Id: g=e4a2cd67328a29372f31acb672dce539
                   Type: BaseDataVariableType
                   DataType: Int16
                   Value: 5
                 - Name: Value
-                  Id: g=b911a090a99e142b9901f783f3626a35
                   Type: BaseDataVariableType
                   DataType: ResourceUri
                   Value: "ns=36;%PROJECTDIR%/Graphics/Coesia - Library/indicator items/servo axis.svg"
               - Name: Pair7
-                Id: g=5f1efe9fc14febebaea5fda1dd3db655
                 Type: ValueMapPair
                 Children:
                 - Name: Key
-                  Id: g=849c79b1a0049e18062e656480ac3513
                   Type: BaseDataVariableType
                   DataType: Int16
                   Value: 6
                 - Name: Value
-                  Id: g=5d826c5fc039f3e31634462d74085fbc
                   Type: BaseDataVariableType
                   DataType: ResourceUri
                   Value: "ns=36;%PROJECTDIR%/Graphics/Coesia - Library/indicator items/open.svg"
               - Name: Pair8
-                Id: g=927bfbc032269f786edcce01dae36eb0
                 Type: ValueMapPair
                 Children:
                 - Name: Key
-                  Id: g=5d47371c51f4e9c210e41587aa834f47
                   Type: BaseDataVariableType
                   DataType: Int16
                   Value: 7
                 - Name: Value
-                  Id: g=1eadfecd10f163f5061d24f0c9b997fe
                   Type: BaseDataVariableType
                   DataType: ResourceUri
                   Value: "ns=36;%PROJECTDIR%/Graphics/Coesia - Library/indicator items/closed.svg"
               - Name: Pair9
-                Id: g=2f1c6c7560047fd982f6e70e8051cfa8
                 Type: ValueMapPair
                 Children:
                 - Name: Key
-                  Id: g=a6c669686ce36ea8080a5cc790c50919
                   Type: BaseDataVariableType
                   DataType: Int16
                   Value: 8
                 - Name: Value
-                  Id: g=fdf08c004d3f7d930ea32f605acf8d60
                   Type: BaseDataVariableType
                   DataType: ResourceUri
                   Value: "ns=36;%PROJECTDIR%/Graphics/Coesia - Library/indicator items/error.svg"
               - Name: Pair1
-                Id: g=54c920c8719b33791fdc3251c6339182
                 Type: ValueMapPair
                 Children:
                 - Name: Key
-                  Id: g=b3df127ee0bc7c2a987e31273f606f07
                   Type: BaseDataVariableType
                   DataType: Int16
                   Value: 9
                 - Name: Value
-                  Id: g=41967cec4a04e40994e5643add17d0dd
                   Type: BaseDataVariableType
                   DataType: ResourceUri
                   Value: "ns=36;%PROJECTDIR%/Graphics/Coesia - Library/indicator items/exclaim.svg"
               - Name: Pair10
-                Id: g=9f318638e6cada49f428d358efcfb653
                 Type: ValueMapPair
                 Children:
                 - Name: Key
-                  Id: g=4235e69507e925dfabc4e14af420df13
                   Type: BaseDataVariableType
                   DataType: Int16
                   Value: 10
                 - Name: Value
-                  Id: g=eac162906a2c7b57c7a2e0665d4b7a13
                   Type: BaseDataVariableType
                   DataType: ResourceUri
         - Name: Visible
-          Id: g=1c286dc5571677dc92bcf4253222cebe
           Type: BaseDataVariableType
           DataType: Boolean
           Value: true
           Children:
           - Name: ExpressionEvaluator1
-            Id: g=9daf1f8c86af17de8cce3f5fbb5a6e16
             Type: ExpressionEvaluator
             Children:
             - Name: Source0
-              Id: g=02f5cd5aaa0906a3c8171b81ac79f2bd
               Type: BaseDataVariableType
               DataType: BaseDataType
               ReferenceType: HasSource
               Children:
               - Name: DynamicLink
-                Id: g=1fa36d5c401f952617730dc5e7f826a8
                 Type: DynamicLink
                 DataType: NodePath
                 Value: "../../../../Label/Visible"
             - Name: Source1
-              Id: g=b39e55dff730d084e5aac0e120ff68dc
               Type: BaseDataVariableType
               DataType: BaseDataType
               ReferenceType: HasSource
               Children:
               - Name: DynamicLink
-                Id: g=deca0d97c2cc63e8b0f2244cf3d64e37
                 Type: DynamicLink
                 DataType: NodePath
                 Value: "../../../../IndicatorSymbol"
       - Name: IndicatorSymbol
-        Id: g=0f45644e570e050b74d2aae85257994e
         Type: BaseDataVariableType
         DataType: 'Multi-State Indicator Symbols'
       - Name: HorizontalAlignment
-        Id: g=40d6ca8b4fb4d30d37fa80c3fc73064b
         Type: BaseVariableType
         DataType: HorizontalAlignment
         ModellingRule: Optional
         Value: 2
       - Name: VerticalAlignment
-        Id: g=f733b42f5a650ed740646128d3353234
         Type: BaseVariableType
         DataType: VerticalAlignment
         ModellingRule: Optional
         Value: 2
       - Name: Opacity
-        Id: g=82921b086b34e676ea5c74b14614a78a
         Type: BaseVariableType
         DataType: Float
         Value: 100.0
       - Name: Rotation
-        Id: g=4355aa544ef888dc2a0b760bc9a91663
         Type: BaseVariableType
         DataType: Size
         ModellingRule: Optional
       - Name: ns=11;GridLayoutProperties
-        Id: g=807f9a3136fc49a3cf3663d14b6d55b7
         Type: GridLayoutProperties
         DisplayName: {"NamespaceIndex":11,"TextId":"GridLayoutPropertiesDisplayName"}
         Children:
         - Name: ColumnStart
-          Id: g=da1a72936470f4c95edf7d5688f169c7
           Type: BaseDataVariableType
           DataType: Int32
           ModellingRule: Optional
       - Name: TextToDisplay
-        Id: g=fa24ac3cbc91a69cff314d4b25252adb
         Type: BaseDataVariableType
         DataType: String
         Children:
         - Name: DynamicLink
-          Id: g=c4931785300c5f00f34354746f2fc20d
           Type: DynamicLink
           DataType: NodePath
           Value: "../../../Pointer"
           Children:
           - Name: Mode
-            Id: g=49ec22930ad77d356ec6e4033e05e156
             Type: BaseVariableType
             DataType: DynamicLinkMode
             ModellingRule: Optional
             Value: 2
       - Name: Label
-        Id: g=4efcc807b800d962ad9090a49d6fbf13
         Type: Label
         Children:
         - Name: Visible
-          Id: g=871eac05ceab780d16ce4fe9f6fb3695
           Type: BaseDataVariableType
           DataType: Boolean
           Value: true
           Children:
           - Name: ExpressionEvaluator1
-            Id: g=78f7006d1653bf9a3ddca3f71edfb9de
             Type: ExpressionEvaluator
             Children:
             - Name: Source0
-              Id: g=d5112257f08b960821ba60d301da3efa
               Type: BaseDataVariableType
               DataType: BaseDataType
               ReferenceType: HasSource
               Children:
               - Name: DynamicLink
-                Id: g=b2d233bb427b9ee9c54def458d0aa902
                 Type: DynamicLink
                 DataType: NodePath
                 Value: "../../../../TextToDisplay"
         - Name: Text
-          Id: g=203183d3bb3843b1cbc4003022560009
           Type: BaseDataVariableType
           DataType: LocalizedText
           Children:
           - Name: DynamicLink
-            Id: g=1bdaea8d7da6505b79b13290c35cd357
             Type: DynamicLink
             DataType: NodePath
             Value: "../../TextToDisplay"
       - Name: Visible
-        Id: g=1d09b53f4cb117057cc76d3f0e83acc9
         Type: BaseDataVariableType
         DataType: Boolean
         Value: true
         Children:
         - Name: ExpressionEvaluator1
-          Id: g=2a4d018c5693563c958a0e4c3b08d9c1
           Type: ExpressionEvaluator
           Children:
           - Name: Expression
-            Id: g=18da3dcc06ace959d7f1e29fbcb7d565
             Type: BaseDataVariableType
             DataType: String
             ReferenceType: HasParameter
             ModellingRule: Optional
             Value: "!isempty({0})"
           - Name: ns=9;Source0
-            Id: g=10b728fd0bc442936723ae1d4f63add1
             Type: BaseDataVariableType
             DataType: BaseDataType
             ReferenceType: HasSource
             Children:
             - Name: DynamicLink
-              Id: g=10d93e598abf48efa651727f83987ae6
               Type: DynamicLink
               DataType: NodePath
               Value: "../../../../../Pointer"
       - Name: Multi_State_Indicator1
-        Id: g=12d9eeca075a83a32bb372dc56c31cf4
         Type: Multi_State_Indicator
         Children:
         - Name: Circle
-          Id: g=8f324bc2fe4abaadc09bf531e781d0d3
           Type: Ellipse
           Children:
           - Name: FillColor
-            Id: g=be0e6cc4a4aa89d3aafd09dfce0dca50
             Type: BaseDataVariableType
             DataType: Color
             Value: "#ff9900"
             Children:
             - Name: IndicatorColors1
-              Id: g=b478dc618e654019ea4bcb77245e6902
               Type: Colors
               Children:
               - Name: Source
-                Id: g=340ee0581a27fd295b58a1689a8d53fc
                 Type: BaseDataVariableType
                 DataType: BaseDataType
                 ReferenceType: HasSource
                 Children:
                 - Name: DynamicLink
-                  Id: g=78cedbbf101080bcc942964bae0f5449
                   Type: DynamicLink
                   DataType: NodePath
                   Value: "../../../../IndicatorColor"
               - Name: Pairs
-                Id: g=551c8bb4087cf6b816ca3191cc1f13d4
                 Type: BaseObjectType
                 Children:
                 - Name: Pair3
-                  Id: g=4670566e273596f27b85186d2efe9fb0
                   Type: ValueMapPair
                   Children:
                   - Name: Key
-                    Id: g=2b7082d26ede9437ed30e52fb9ce04bc
                     Type: BaseDataVariableType
                     DataType: Int16
                     Value: 1
                   - Name: Value
-                    Id: g=87eb886857ed96d809458bc9f284d40f
                     Type: BaseDataVariableType
                     DataType: Color
                     Value: "#23af72"
                     Children:
                     - Name: DynamicLink
-                      Id: g=764e169a4b9185ddef17d9e5cce4cd58
                       Type: DynamicLink
                       DataType: NodePath
                       Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Good - 23af72 - Green"
                 - Name: Pair4
-                  Id: g=f9b112dd3bfbd8f5a440fb90fdb1f69b
                   Type: ValueMapPair
                   Children:
                   - Name: Key
-                    Id: g=d812f739fd54acff22c4b93906feecec
                     Type: BaseDataVariableType
                     DataType: Int16
                     Value: 2
                   - Name: Value
-                    Id: g=5656015677b2f86c0f08a17ba753bd7d
                     Type: BaseDataVariableType
                     DataType: Color
                     Value: "#6d91b6"
                     Children:
                     - Name: DynamicLink
-                      Id: g=659c19698a35fc57e96d9ccb7f9e919e
                       Type: DynamicLink
                       DataType: NodePath
                       Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Selected - 6d91b6 - Info - Blue"
                 - Name: Pair5
-                  Id: g=0804258d484f7b0e033e546fa43ae798
                   Type: ValueMapPair
                   Children:
                   - Name: Key
-                    Id: g=7ada284242662067b2e8cf6faab1dd6e
                     Type: BaseDataVariableType
                     DataType: Int16
                     Value: 3
                   - Name: Value
-                    Id: g=4e26464b740a1c3e56c9b821e5d663ca
                     Type: BaseDataVariableType
                     DataType: Color
                     Value: "#ff9900"
                     Children:
                     - Name: DynamicLink
-                      Id: g=bb6b2fd1ce4f829a77c72d6f5184259e
                       Type: DynamicLink
                       DataType: NodePath
                       Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Warning - ff9900 - Orange"
                 - Name: Pair
-                  Id: g=6a8f89198cf66cdf28307e0e40afb002
                   Type: ValueMapPair
                   Children:
                   - Name: Key
-                    Id: g=d0645871456ff6f01c907c55b311a703
                     Type: BaseDataVariableType
                     DataType: Int16
                     Value: 4
                   - Name: Value
-                    Id: g=032dfc307a7519f0c4a961286f5ae645
                     Type: BaseDataVariableType
                     DataType: Color
                     Value: "#cc0036"
                     Children:
                     - Name: DynamicLink
-                      Id: g=d95a1f703c7083fee8fed7dbbac87567
                       Type: DynamicLink
                       DataType: NodePath
                       Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Error - cc036 - Red"
                 - Name: Pair6
-                  Id: g=46734b333e98d87bd85dfe58391aea82
                   Type: ValueMapPair
                   Children:
                   - Name: Key
-                    Id: g=5d29a19c206617bbb5a50f51ddea0c5d
                     Type: BaseDataVariableType
                     DataType: Int16
                     Value: 5
                   - Name: Value
-                    Id: g=1d5feb53c568e6be95a62f363cba72c3
                     Type: BaseDataVariableType
                     DataType: Color
                     Value: "#6d6e70"
                     Children:
                     - Name: DynamicLink
-                      Id: g=ba74e545bab2a995a37001e049b3ad7f
                       Type: DynamicLink
                       DataType: NodePath
                       Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Dark Grey 2 - 6d6e70"
                 - Name: Pair1
-                  Id: g=a6baad5b9ac559c3921bd2dbfbb9478d
                   Type: ValueMapPair
                   Children:
                   - Name: Key
-                    Id: g=9234539e56297d79d9bb5796989d0e0c
                     Type: BaseDataVariableType
                     DataType: Int16
                     Value: 6
                   - Name: Value
-                    Id: g=ae8db9547e11ac31ed7e1f9db92c03e0
                     Type: BaseDataVariableType
                     DataType: Color
           - Name: Visible
-            Id: g=228314a3b6631dca4e54b61783d03b09
             Type: BaseDataVariableType
             DataType: Boolean
             Value: true
             Children:
             - Name: ExpressionEvaluator1
-              Id: g=019222bd0e6fd587a8e9d5bda544c1ba
               Type: ExpressionEvaluator
               Children:
               - Name: Source0
-                Id: g=e6ce3251b5dca1b975a842bc4b83024a
                 Type: BaseDataVariableType
                 DataType: BaseDataType
                 ReferenceType: HasSource
                 Children:
                 - Name: DynamicLink
-                  Id: g=98dc524c50f679d2b18072be0ddcf6d9
                   Type: DynamicLink
                   DataType: NodePath
                   Value: "../../../../IndicatorColor"
         - Name: IndicatorColor
-          Id: g=28a5a4b53bca408efc578ca70a534e1c
           Type: BaseDataVariableType
           DataType: 'Multi-State Indicator Colors'
           Value: 3
           Children:
           - Name: DynamicLink
-            Id: g=9f099c3c110edfbd8cd2f189b0ed09e4
             Type: DynamicLink
             DataType: NodePath
             Value: "../../../IndicatorColor"
             Children:
             - Name: Mode
-              Id: g=33495786aa97f9959b4923b02efc19d9
               Type: BaseVariableType
               DataType: DynamicLinkMode
               ModellingRule: Optional
               Value: 2
         - Name: Indicator
-          Id: g=a401c2f877ffd4b7b3429e08e87a539e
           Type: Image
           Children:
           - Name: Path
-            Id: g=5c7a67e4c2113c8ec1cef4fde0035368
             Type: BaseDataVariableType
             DataType: ResourceUri
             Children:
             - Name: IndicatorSymbol1
-              Id: g=826118fa1512a62db2499ee2c7d58b60
               Type: Symbols
               Children:
               - Name: Source
-                Id: g=8edd4a47d26ef14fc8766d648210aa84
                 Type: BaseDataVariableType
                 DataType: BaseDataType
                 ReferenceType: HasSource
                 Children:
                 - Name: DynamicLink
-                  Id: g=5215dfe7ae8d50449a3d13ca268bf48d
                   Type: DynamicLink
                   DataType: NodePath
                   Value: "../../../../IndicatorSymbol"
               - Name: Pairs
-                Id: g=aaff96b353614bade8392e8a3b761375
                 Type: BaseObjectType
                 Children:
                 - Name: Pair2
-                  Id: g=48c298cc6480b73fd85186d33b2208f4
                   Type: ValueMapPair
                   Children:
                   - Name: Key
-                    Id: g=f5f7908025782bd7ee92baab41d2afc2
                     Type: BaseDataVariableType
                     DataType: Int16
                     Value: 1
                   - Name: Value
-                    Id: g=95f7b5de759227c45ad7c0fb3cce5b5d
                     Type: BaseDataVariableType
                     DataType: ResourceUri
                     Value: "ns=36;%PROJECTDIR%/Graphics/Coesia - Library/indicator items/warning.svg"
                 - Name: Pair3
-                  Id: g=688adebb2ab6bcde7a44e1d0b2fed6f3
                   Type: ValueMapPair
                   Children:
                   - Name: Key
-                    Id: g=cba8133079da1cf55eafe2a54f572830
                     Type: BaseDataVariableType
                     DataType: Int16
                     Value: 2
                   - Name: Value
-                    Id: g=2dbd65d5d0e929fc888e77b92abfd073
                     Type: BaseDataVariableType
                     DataType: ResourceUri
                     Value: "ns=36;%PROJECTDIR%/Graphics/Coesia - Library/indicator items/good.svg"
                 - Name: Pair4
-                  Id: g=5821e48892d456cb514563f6441f8ef9
                   Type: ValueMapPair
                   Children:
                   - Name: Key
-                    Id: g=0cbece64dae4453289f61f0bd815d250
                     Type: BaseDataVariableType
                     DataType: Int16
                     Value: 3
                   - Name: Value
-                    Id: g=b3d1f2a18d98d0a1a69f73ffc95c9cda
                     Type: BaseDataVariableType
                     DataType: ResourceUri
                     Value: "ns=36;%PROJECTDIR%/Graphics/Coesia - Library/indicator items/info.svg"
                 - Name: Pair5
-                  Id: g=885dd3a5bbd92939e84adb35cb5d2929
                   Type: ValueMapPair
                   Children:
                   - Name: Key
-                    Id: g=c5b583d5e2fd61155dcef5d7d3ef65de
                     Type: BaseDataVariableType
                     DataType: Int16
                     Value: 4
                   - Name: Value
-                    Id: g=452830a693a699e946b7f12427de3550
                     Type: BaseDataVariableType
                     DataType: ResourceUri
                     Value: "ns=36;%PROJECTDIR%/Graphics/Coesia - Library/indicator items/led-lit.svg"
                 - Name: Pair6
-                  Id: g=cf08711ce0d9c65d2caf074aaf762097
                   Type: ValueMapPair
                   Children:
                   - Name: Key
-                    Id: g=6797152a5e6888e73ba5d2ad615aa988
                     Type: BaseDataVariableType
                     DataType: Int16
                     Value: 5
                   - Name: Value
-                    Id: g=551e1af1ec5f144f02c369be5921dc11
                     Type: BaseDataVariableType
                     DataType: ResourceUri
                     Value: "ns=36;%PROJECTDIR%/Graphics/Coesia - Library/indicator items/servo axis.svg"
                 - Name: Pair7
-                  Id: g=56a1d314ee6006feb6372d00a92bc2cb
                   Type: ValueMapPair
                   Children:
                   - Name: Key
-                    Id: g=b94dcf58d8b10d29d789eb4f0ff02752
                     Type: BaseDataVariableType
                     DataType: Int16
                     Value: 6
                   - Name: Value
-                    Id: g=047ac249e73a24c9f0ab37de30e4b8e6
                     Type: BaseDataVariableType
                     DataType: ResourceUri
                     Value: "ns=36;%PROJECTDIR%/Graphics/Coesia - Library/indicator items/open.svg"
                 - Name: Pair8
-                  Id: g=172bdb3c2333069e93949e43333e50d6
                   Type: ValueMapPair
                   Children:
                   - Name: Key
-                    Id: g=ec5a4248887270d452414f7b640a2ddc
                     Type: BaseDataVariableType
                     DataType: Int16
                     Value: 7
                   - Name: Value
-                    Id: g=45ec46121b58b0aa6ba7036c9e23d4bd
                     Type: BaseDataVariableType
                     DataType: ResourceUri
                     Value: "ns=36;%PROJECTDIR%/Graphics/Coesia - Library/indicator items/closed.svg"
                 - Name: Pair9
-                  Id: g=f0e68bd12d27d7ac6c2d54a2f73c4507
                   Type: ValueMapPair
                   Children:
                   - Name: Key
-                    Id: g=8bd2f5b88f6fb74692854790c715d3f7
                     Type: BaseDataVariableType
                     DataType: Int16
                     Value: 8
                   - Name: Value
-                    Id: g=4677e9cf18a653319065fed815eda306
                     Type: BaseDataVariableType
                     DataType: ResourceUri
                     Value: "ns=36;%PROJECTDIR%/Graphics/Coesia - Library/indicator items/error.svg"
                 - Name: Pair1
-                  Id: g=218b1ea87d43467808171d224b9ce50f
                   Type: ValueMapPair
                   Children:
                   - Name: Key
-                    Id: g=27fa3e6c77b7ac6318438f755b8f42c4
                     Type: BaseDataVariableType
                     DataType: Int16
                     Value: 9
                   - Name: Value
-                    Id: g=7eba364688908c261fca5e63b8e46844
                     Type: BaseDataVariableType
                     DataType: ResourceUri
                     Value: "ns=36;%PROJECTDIR%/Graphics/Coesia - Library/indicator items/exclaim.svg"
                 - Name: Pair10
-                  Id: g=81d342dbdfc730be6b970ea5982305ec
                   Type: ValueMapPair
                   Children:
                   - Name: Key
-                    Id: g=02567d3b6f4c2240de6ba0664efe2069
                     Type: BaseDataVariableType
                     DataType: Int16
                     Value: 10
                   - Name: Value
-                    Id: g=92b834f27e3d29b0689726c053a4fe4b
                     Type: BaseDataVariableType
                     DataType: ResourceUri
           - Name: Visible
-            Id: g=2b1d7e54a36f1c17d5e053212979313c
             Type: BaseDataVariableType
             DataType: Boolean
             Value: true
             Children:
             - Name: ExpressionEvaluator1
-              Id: g=01ceba477952a96bcd6221c8fd54b740
               Type: ExpressionEvaluator
               Children:
               - Name: Source0
-                Id: g=6320f2961d67012022fa2cf3ba1c26bd
                 Type: BaseDataVariableType
                 DataType: BaseDataType
                 ReferenceType: HasSource
                 Children:
                 - Name: DynamicLink
-                  Id: g=00deb1c973a298cd3711d1a01ec5946a
                   Type: DynamicLink
                   DataType: NodePath
                   Value: "../../../../Label/Visible"
               - Name: Source1
-                Id: g=d8a0a7657d44c69b2d085965caa25394
                 Type: BaseDataVariableType
                 DataType: BaseDataType
                 ReferenceType: HasSource
                 Children:
                 - Name: DynamicLink
-                  Id: g=441962a623e1787d4bcbc395426a5d49
                   Type: DynamicLink
                   DataType: NodePath
                   Value: "../../../../IndicatorSymbol"
         - Name: IndicatorSymbol
-          Id: g=8086cf76207b549c817621cba06daa63
           Type: BaseDataVariableType
           DataType: 'Multi-State Indicator Symbols'
           Value: 1
           Children:
           - Name: DynamicLink
-            Id: g=c0bad138c35b44429c20e8f7f292363b
             Type: DynamicLink
             DataType: NodePath
             Value: "../../../IndicatorSymbol"
             Children:
             - Name: Mode
-              Id: g=a7b33f0fdf2c1ce067ed7e37a53676e0
               Type: BaseVariableType
               DataType: DynamicLinkMode
               ModellingRule: Optional
               Value: 2
         - Name: HorizontalAlignment
-          Id: g=4c03f0a3fe38f174e21f0763a92d929f
           Type: BaseVariableType
           DataType: HorizontalAlignment
           ModellingRule: Optional
           Value: 2
         - Name: VerticalAlignment
-          Id: g=e39e6d272f510391d06a0a803ebeeb7b
           Type: BaseVariableType
           DataType: VerticalAlignment
           ModellingRule: Optional
           Value: 2
         - Name: Opacity
-          Id: g=cd12204d403ef6f7624edb19a42363bc
           Type: BaseVariableType
           DataType: Float
           Value: 100.0
           Children:
           - Name: ConditionalConverter1
-            Id: g=2d1465759707c3bacab83bfdf1ff7c62
             Type: ConditionalConverter
             Children:
             - Name: Condition
-              Id: g=36599c0fe051b18d95ff8291be2ca18a
               Type: BaseDataVariableType
               DataType: Boolean
               ReferenceType: HasSource
               Children:
               - Name: ExpressionEvaluator1
-                Id: g=695a6f1f4d8b5a69ba781c3f8e7d0253
                 Type: ExpressionEvaluator
                 Children:
                 - Name: Expression
-                  Id: g=16b2b6075ad47088fdab930926eb2764
                   Type: BaseDataVariableType
                   DataType: String
                   ReferenceType: HasParameter
                   ModellingRule: Optional
                   Value: "({#invert}&&!{#toggle})||(!{#invert}&&{#toggle})"
                 - Name: ns=9;Sourceinvert
-                  Id: g=6e36617676e8fb257b1a025cdc1dd07f
                   Type: BaseDataVariableType
                   DataType: BaseDataType
                   ReferenceType: HasSource
                   Children:
                   - Name: DynamicLink
-                    Id: g=56080ddf219ff964dd8e4a07bf1222de
                     Type: DynamicLink
                     DataType: NodePath
                     Value: "../../../../../../../Invert Warning?"
                 - Name: ns=9;Sourcetoggle
-                  Id: g=59f8acad6f7585b2dfac6b4496279518
                   Type: BaseDataVariableType
                   DataType: BaseDataType
                   ReferenceType: HasSource
                   Children:
                   - Name: DynamicLink
-                    Id: g=5b72d1785294375ec77f929a861c6100
                     Type: DynamicLink
                     DataType: NodePath
                     Value: "../../../../../../../Toggle"
             - Name: TrueValue
-              Id: g=bac410fd9540ec55f7611c50c8b17dc3
               Type: BaseDataVariableType
               DataType: Int16
               ReferenceType: HasParameter
               Value: 100
             - Name: FalseValue
-              Id: g=f3d3dc185806bb4fc4f15348985cfa8b
               Type: BaseDataVariableType
               DataType: Int16
               ReferenceType: HasParameter
         - Name: Rotation
-          Id: g=d1baf09c16d97af0a38b174b4f02ce50
           Type: BaseVariableType
           DataType: Size
           ModellingRule: Optional
         - Name: ns=11;GridLayoutProperties
-          Id: g=9a9096e4338c70ca8c6495bdcad6c135
           Type: GridLayoutProperties
           DisplayName: {"NamespaceIndex":11,"TextId":"GridLayoutPropertiesDisplayName"}
           Children:
           - Name: ColumnStart
-            Id: g=bb0182972da3ce5c7e7e91228b6260de
             Type: BaseDataVariableType
             DataType: Int32
             ModellingRule: Optional
             Value: 6
         - Name: TextToDisplay
-          Id: g=32e8a44a77301062aeeb183447ced33c
           Type: BaseDataVariableType
           DataType: String
         - Name: Label
-          Id: g=205731c6424ea60b071bd63d433a5e13
           Type: Label
           Children:
           - Name: Visible
-            Id: g=32e1c5078e86738bf131b42fc8128359
             Type: BaseDataVariableType
             DataType: Boolean
             Value: true
             Children:
             - Name: ExpressionEvaluator1
-              Id: g=0669aaf880646a6a3990e6ddc0718a68
               Type: ExpressionEvaluator
               Children:
               - Name: Source0
-                Id: g=f15aa88c036cfe0b1985f2805e2b6bec
                 Type: BaseDataVariableType
                 DataType: BaseDataType
                 ReferenceType: HasSource
                 Children:
                 - Name: DynamicLink
-                  Id: g=825e4293769a47582ce34360c1757a36
                   Type: DynamicLink
                   DataType: NodePath
                   Value: "../../../../TextToDisplay"
           - Name: Text
-            Id: g=8e9af4165311f406f54510be6da98117
             Type: BaseDataVariableType
             DataType: LocalizedText
             Children:
             - Name: DynamicLink
-              Id: g=f8eac791555a7fc7a0bca39ff1fce4c2
               Type: DynamicLink
               DataType: NodePath
               Value: "../../TextToDisplay"
         - Name: Visible
-          Id: g=be5e351f5e4e0330c451de4f3b56aad7
           Type: BaseDataVariableType
           DataType: Boolean
           Value: true
           Children:
           - Name: ExpressionEvaluator1
-            Id: g=9db38153c3bc47d775715ba4389bcabc
             Type: ExpressionEvaluator
             Children:
             - Name: Expression
-              Id: g=792220c9a60255324acfa9958a5e98d1
               Type: BaseDataVariableType
               DataType: String
               ReferenceType: HasParameter
               ModellingRule: Optional
               Value: "{0}!=0&&{1}!=0"
             - Name: ns=9;Source0
-              Id: g=9caa86610f6ee72b739cb64149f0d0ae
               Type: BaseDataVariableType
               DataType: BaseDataType
               ReferenceType: HasSource
               Children:
               - Name: DynamicLink
-                Id: g=926f98bd21c032b1d7e988882dd0509d
                 Type: DynamicLink
                 DataType: NodePath
                 Value: "../../../../../IndicatorColor"
             - Name: ns=9;Source1
-              Id: g=4037415da6624f32b2902f98d566c7bf
               Type: BaseDataVariableType
               DataType: BaseDataType
               ReferenceType: HasSource
               Children:
               - Name: DynamicLink
-                Id: g=1fef8a75cd0eefb8f4dfe38d953af425
                 Type: DynamicLink
                 DataType: NodePath
                 Value: "../../../../../IndicatorSymbol"
       - Name: Width
-        Id: g=84ae25b82991c0d79f8d7a6f58119279
         Type: BaseVariableType
         DataType: Size
         ModellingRule: Optional
         Value: 32.0
       - Name: Height
-        Id: g=82b80d28d57685646dc05023a41e037d
         Type: BaseVariableType
         DataType: Size
         ModellingRule: Optional
         Value: 32.0
     - Name: Spacer1
-      Id: g=da3b701d7baa709ccc6a1a68d810b5d3
       Type: Rectangle
       Children:
       - Name: Width
-        Id: g=9d9ba37dd28b7e7b0bc3f1f63a9ec586
         Type: BaseVariableType
         DataType: Size
         ModellingRule: Optional
         Value: 10.0
       - Name: Height
-        Id: g=556ef3d1f967b076b233cd94422eeced
         Type: BaseVariableType
         DataType: Size
         ModellingRule: Optional
         Value: 20.0
       - Name: LeftMargin
-        Id: g=b21667ed04d20d72aab5eeaa5ee109a3
         Type: BaseVariableType
         DataType: Size
         ModellingRule: Optional
       - Name: TopMargin
-        Id: g=2d7aad9c9de1c1b18cd8721a2f5946ac
         Type: BaseVariableType
         DataType: Size
         ModellingRule: Optional
       - Name: Style
-        Id: g=28ad9f3b79d5d3be724c6e4ab3165a3a
         Type: BaseDataVariableType
         DataType: String
         ModellingRule: Optional
         Value: "Invisible"
       - Name: VerticalAlignment
-        Id: g=b8c790c05c48538c746f880c7a4ae18e
         Type: BaseVariableType
         DataType: VerticalAlignment
         ModellingRule: Optional
         Value: 3
       - Name: HorizontalAlignment
-        Id: g=66add61206d93d6c2ae042560dc0572f
         Type: BaseVariableType
         DataType: HorizontalAlignment
         ModellingRule: Optional
         Value: 2
       - Name: Visible
-        Id: g=dd6bf4b57c2b0c65fc645b4214607a08
         Type: BaseDataVariableType
         DataType: Boolean
         Value: true
         Children:
         - Name: DynamicLink
-          Id: g=351c8395f697a57a94cc8d8bdbf81cf8
           Type: DynamicLink
           DataType: NodePath
           Value: "../../Pointer/Visible"
       - Name: ns=11;GridLayoutProperties
-        Id: g=e65746aae3a36b4f07e6bb74367ed521
         Type: GridLayoutProperties
         DisplayName: {"NamespaceIndex":11,"TextId":"GridLayoutPropertiesDisplayName"}
         Children:
         - Name: ColumnStart
-          Id: g=d315e3ac04eb05264b9d1be7539bd693
           Type: BaseDataVariableType
           DataType: Int32
           ModellingRule: Optional
           Value: 1
     - Name: Label
-      Id: g=acc75ec5310c3418e2d0f181b7a9d509
       Type: Label
       Children:
       - Name: Text
-        Id: g=ecf977450d71099059abc6ca03c1d37d
         Type: BaseDataVariableType
         DataType: LocalizedText
         Children:
         - Name: StringFormatter1
-          Id: g=4182b79f462e1d7125ee5f12b0d2fcd0
           Type: StringFormatter
           Children:
           - Name: Format
-            Id: g=ab3a26b88d5a444f0fe6c5b398f625b6
             Type: BaseDataVariableType
             DataType: LocalizedText
             ReferenceType: HasParameter
             ModellingRule: Optional
             Value: {"LocaleId":"en-US","Text":"{0:u}"}
           - Name: ns=9;Source0
-            Id: g=40a2d7032d42b9d39dca4d4302ab246f
             Type: BaseDataVariableType
             DataType: BaseDataType
             ReferenceType: HasSource
             Children:
             - Name: DynamicLink
-              Id: g=e80dae357af61c757c7a9bc899b8965f
               Type: DynamicLink
               DataType: NodePath
               Value: "../../../../../Label"
       - Name: VerticalAlignment
-        Id: g=086565bf15e9868297d0f3317a466fe6
         Type: BaseVariableType
         DataType: VerticalAlignment
         ModellingRule: Optional
         Value: 2
       - Name: HorizontalAlignment
-        Id: g=6624b42bb18577183b4c989c24e7ea4f
         Type: BaseVariableType
         DataType: HorizontalAlignment
         ModellingRule: Optional
         Value: 3
       - Name: Width
-        Id: g=173eab6e687b9f58aece8fc8b3e98f3c
         Type: BaseVariableType
         DataType: Size
         ModellingRule: Optional
         Value: -1.0
       - Name: Style
-        Id: g=c6a4c236c109be1c173af947f929cce8
         Type: BaseDataVariableType
         DataType: String
         ModellingRule: Optional
         Value: "StandardControlLabel"
       - Name: Visible
-        Id: g=81398e5a7757f3b0c5bf4f3dd550fc06
         Type: BaseDataVariableType
         DataType: Boolean
         Value: true
         Children:
         - Name: ExpressionEvaluator1
-          Id: g=2d9029a51d24d9edc83b2bf820263e94
           Type: ExpressionEvaluator
           Children:
           - Name: Expression
-            Id: g=aa63a620d245a11e7191c40416394963
             Type: BaseDataVariableType
             DataType: String
             ReferenceType: HasParameter
             ModellingRule: Optional
             Value: "!isempty({0})"
           - Name: ns=9;Source0
-            Id: g=fb9b30b7cf8827046ab2562769bd0dd0
             Type: BaseDataVariableType
             DataType: BaseDataType
             ReferenceType: HasSource
             Children:
             - Name: DynamicLink
-              Id: g=e742e17837b7adfb6b22a58cba613787
               Type: DynamicLink
               DataType: NodePath
               Value: "../../../../../Label"
       - Name: LeftMargin
-        Id: g=8902c981412257f9ba305a5481f06f17
         Type: BaseVariableType
         DataType: Size
         ModellingRule: Optional
       - Name: TopMargin
-        Id: g=1dacb43ad5f64732f8bc51bf1c14b6be
         Type: BaseVariableType
         DataType: Size
         ModellingRule: Optional
       - Name: BottomMargin
-        Id: g=7c1d8652603c7e493866bc80d9292d54
         Type: BaseVariableType
         DataType: Size
         ModellingRule: Optional
       - Name: ns=11;GridLayoutProperties
-        Id: g=ff39fbfa9999701e9b527d449adf0d88
         Type: GridLayoutProperties
         DisplayName: {"NamespaceIndex":11,"TextId":"GridLayoutPropertiesDisplayName"}
         Children:
         - Name: ColumnStart
-          Id: g=579a4d20a26811911249a6d68da06a1b
           Type: BaseDataVariableType
           DataType: Int32
           ModellingRule: Optional
           Value: 2
       - Name: WordWrap
-        Id: g=05a8390b42553d3a16bcf23584ac04c8
         Type: BaseDataVariableType
         DataType: Boolean
         ModellingRule: Optional
         Value: true
       - Name: TextHorizontalAlignment
-        Id: g=3ed28295e049c94295ec259e92a8d163
         Type: BaseVariableType
         DataType: TextHorizontalAlignment
         ModellingRule: Optional
       - Name: TextVerticalAlignment
-        Id: g=6cb136dfcfd344340ebaf767b46e0170
         Type: BaseVariableType
         DataType: TextVerticalAlignment
         ModellingRule: Optional
         Value: 1
     - Name: Spacer2
-      Id: g=ed6305168072770a9a09cb9e7753484c
       Type: Rectangle
       Children:
       - Name: Width
-        Id: g=3a990f6832e5bdb2c4e43b6384b4c24c
         Type: BaseVariableType
         DataType: Size
         ModellingRule: Optional
         Value: 10.0
       - Name: Height
-        Id: g=05b39ac1ed43426f8080b1a177b70dcd
         Type: BaseVariableType
         DataType: Size
         ModellingRule: Optional
         Value: 20.0
       - Name: LeftMargin
-        Id: g=e8f7259c1092e533c2cb306d690c240c
         Type: BaseVariableType
         DataType: Size
         ModellingRule: Optional
       - Name: TopMargin
-        Id: g=5b9d617c8fdfef8a54455c84db99aa01
         Type: BaseVariableType
         DataType: Size
         ModellingRule: Optional
       - Name: Style
-        Id: g=699043d8c73ea48a0a390116239330ab
         Type: BaseDataVariableType
         DataType: String
         ModellingRule: Optional
         Value: "Invisible"
       - Name: VerticalAlignment
-        Id: g=3e23759372d344f9d0d18d05f4d2cdc0
         Type: BaseVariableType
         DataType: VerticalAlignment
         ModellingRule: Optional
         Value: 3
       - Name: HorizontalAlignment
-        Id: g=e55b9272dead848822970555ad3d4f90
         Type: BaseVariableType
         DataType: HorizontalAlignment
         ModellingRule: Optional
         Value: 2
       - Name: Visible
-        Id: g=da908fff7bed7aeef22758725bef4eeb
         Type: BaseDataVariableType
         DataType: Boolean
         Value: true
         Children:
         - Name: DynamicLink
-          Id: g=07353af2323dedae684930b767e66186
           Type: DynamicLink
           DataType: NodePath
           Value: "../../Label/Visible"
       - Name: ns=11;GridLayoutProperties
-        Id: g=6eb08708424ded4924cf9f0180294e9d
         Type: GridLayoutProperties
         DisplayName: {"NamespaceIndex":11,"TextId":"GridLayoutPropertiesDisplayName"}
         Children:
         - Name: ColumnStart
-          Id: g=4952ed663c0c8a164f0d6920042093ad
           Type: BaseDataVariableType
           DataType: Int32
           ModellingRule: Optional
           Value: 3
     - Name: HorizontalAlignment
-      Id: g=5decfa526e4cee97734262dade8fe76f
       Type: BaseVariableType
       DataType: HorizontalAlignment
       ModellingRule: Optional
       Value: 3
     - Name: VerticalAlignment
-      Id: g=b0481e1cce51b210741eab834c2a9c78
       Type: BaseVariableType
       DataType: VerticalAlignment
       ModellingRule: Optional
       Value: 2
     - Name: Switch
-      Id: g=68b2e003f4337de4e9456924d89544ad
       Type: Switch
       Children:
       - Name: Checked
-        Id: g=0e4b2ab94ad2b781f91d5e6994a6ea4f
         Type: BaseDataVariableType
         DataType: Boolean
         Value: true
         Children:
         - Name: DynamicLink
-          Id: g=3957427a96866474636fd77e70433bf7
           Type: DynamicLink
           DataType: NodePath
           Value: "../../../Toggle"
           Children:
           - Name: Mode
-            Id: g=e35278c54b89969a8addc2f8088e58c8
             Type: BaseVariableType
             DataType: DynamicLinkMode
             ModellingRule: Optional
             Value: 2
       - Name: ns=11;GridLayoutProperties
-        Id: g=2645a209c30197687303adb7049963f4
         Type: GridLayoutProperties
         DisplayName: {"NamespaceIndex":11,"TextId":"GridLayoutPropertiesDisplayName"}
         Children:
         - Name: RowStart
-          Id: g=0d9493b83dad00d20b45b7d066d455f3
           Type: BaseDataVariableType
           DataType: Int32
           ModellingRule: Optional
           Value: -1
         - Name: ColumnStart
-          Id: g=bea3b9e9ff41ed230b1d2c3a7784c857
           Type: BaseDataVariableType
           DataType: Int32
           ModellingRule: Optional
           Value: 4
       - Name: HorizontalAlignment
-        Id: g=ba181cd9e6afba92af5f97a65d4f7deb
         Type: BaseVariableType
         DataType: HorizontalAlignment
         ModellingRule: Optional
         Value: 2
       - Name: VerticalAlignment
-        Id: g=07eb6b3e222cc75dd277e940eef9b8a9
         Type: BaseVariableType
         DataType: VerticalAlignment
         ModellingRule: Optional
         Value: 2
       - Name: CheckedText
-        Id: g=e9d5a52fcefd6b7377625aa1d0f4a699
         Type: BaseDataVariableType
         DataType: LocalizedText
         Children:
         - Name: StringFormatter1
-          Id: g=7926d144ac25af0cc52f47215466541b
           Type: StringFormatter
           Children:
           - Name: Format
-            Id: g=2628ff29a26758a67a2ca52f8bde90c9
             Type: BaseDataVariableType
             DataType: LocalizedText
             ReferenceType: HasParameter
             ModellingRule: Optional
             Value: {"LocaleId":"en-US","Text":" {0:u} "}
           - Name: ns=9;Source0
-            Id: g=9707ecc070029794d6c90f91ff785280
             Type: BaseDataVariableType
             DataType: BaseDataType
             ReferenceType: HasSource
             Children:
             - Name: DynamicLink
-              Id: g=d23c6898d79c402b82ff67ca7e84d102
               Type: DynamicLink
               DataType: NodePath
               Value: "../../../../../On Text"
       - Name: UncheckedText
-        Id: g=12c5ef93e440a4a70b725982c3c04c70
         Type: BaseDataVariableType
         DataType: LocalizedText
         Value: {"LocaleId":"en-US","Text":"Off"}
         Children:
         - Name: StringFormatter1
-          Id: g=02d8156f5862f15a116355ac61c7de45
           Type: StringFormatter
           Children:
           - Name: Format
-            Id: g=7d9c01c8f1f89fc9af84d8c5ce470a92
             Type: BaseDataVariableType
             DataType: LocalizedText
             ReferenceType: HasParameter
             ModellingRule: Optional
             Value: {"LocaleId":"en-US","Text":" {0:u} "}
           - Name: ns=9;Source0
-            Id: g=a76ceb8683ca136bf3ad8c1d23a49d40
             Type: BaseDataVariableType
             DataType: BaseDataType
             ReferenceType: HasSource
             Children:
             - Name: DynamicLink
-              Id: g=7b7d8b29325f1c77b91adcca85d2c1ea
               Type: DynamicLink
               DataType: NodePath
               Value: "../../../../../Off Text"
       - Name: Enabled
-        Id: g=e0956b5df48d567d12405396f5026452
         Type: BaseDataVariableType
         DataType: Boolean
         Value: true
         Children:
         - Name: DynamicLink
-          Id: g=1f76c1e34c11fe0fc3245a1eda7a540e
           Type: DynamicLink
           DataType: NodePath
           Value: "../../../Button Enabled"
       - Name: Width
-        Id: g=1a1d9c10168894b90691ddb6d96d1192
         Type: BaseVariableType
         DataType: Size
         ModellingRule: Optional
         Value: 105.0
       - Name: Style
-        Id: g=6ec010695a7d434529c3e685c8419ca3
         Type: BaseDataVariableType
         DataType: String
         ModellingRule: Optional
         Value: "OnOff"
       - Name: LeftMargin
-        Id: g=08af0916d709699d60006621d0f45ba8
         Type: BaseVariableType
         DataType: Size
         ModellingRule: Optional
       - Name: RightMargin
-        Id: g=de84a85c82fb896104a95c177833b76d
         Type: BaseVariableType
         DataType: Size
         ModellingRule: Optional
       - Name: Height
-        Id: g=2a05b0bd1a849e0cf40edb154df9fafd
         Type: BaseVariableType
         DataType: Size
         ModellingRule: Optional
         Value: 40.0
     - Name: Spacer3
-      Id: g=7a2945a497cf84da42f34c8d3d8c657b
       Type: Rectangle
       Children:
       - Name: Width
-        Id: g=e2058ccc1a6abbcf9c74a3d0bb455e8b
         Type: BaseVariableType
         DataType: Size
         ModellingRule: Optional
         Value: 10.0
       - Name: Height
-        Id: g=bd1d7d5e39995bd892ce5c48471074b7
         Type: BaseVariableType
         DataType: Size
         ModellingRule: Optional
         Value: 20.0
       - Name: LeftMargin
-        Id: g=d25fba2126c626e25a8ebb6a3d04e0a7
         Type: BaseVariableType
         DataType: Size
         ModellingRule: Optional
       - Name: TopMargin
-        Id: g=170e53fc27a126a4c20dda5069e522e5
         Type: BaseVariableType
         DataType: Size
         ModellingRule: Optional
       - Name: Style
-        Id: g=5dd38b795cb5985fbd0b6fd8ecb66541
         Type: BaseDataVariableType
         DataType: String
         ModellingRule: Optional
         Value: "Invisible"
       - Name: VerticalAlignment
-        Id: g=b2a346949b8e3c912e4dcf0ea9fcd7ea
         Type: BaseVariableType
         DataType: VerticalAlignment
         ModellingRule: Optional
         Value: 3
       - Name: HorizontalAlignment
-        Id: g=b09f9c0257f2522feef3a9fd2d8934ef
         Type: BaseVariableType
         DataType: HorizontalAlignment
         ModellingRule: Optional
         Value: 2
       - Name: Visible
-        Id: g=1f09d5d413e07ecee0be15c58191a785
         Type: BaseDataVariableType
         DataType: Boolean
         Value: true
         Children:
         - Name: DynamicLink
-          Id: g=7aefcab02464e6ec1e869a522a5a8707
           Type: DynamicLink
           DataType: NodePath
           Value: "../../Multi_State_Indicator/Visible"
       - Name: ns=11;GridLayoutProperties
-        Id: g=b77061ba4d3a825081965774f3093c28
         Type: GridLayoutProperties
         DisplayName: {"NamespaceIndex":11,"TextId":"GridLayoutPropertiesDisplayName"}
         Children:
         - Name: ColumnStart
-          Id: g=b48f40b1826290db16c5a18cad0d74b0
           Type: BaseDataVariableType
           DataType: Int32
           ModellingRule: Optional
           Value: 5
     - Name: Multi_State_Indicator
-      Id: g=9353c6203cf8137d3ee871dba809779d
       Type: Multi_State_Indicator
       Children:
       - Name: Circle
-        Id: g=d6d0d6796a9abc6af98f3835b452212c
         Type: Ellipse
         Children:
         - Name: FillColor
-          Id: g=fd492155ca13ba7a8f21ef231ac81fd4
           Type: BaseDataVariableType
           DataType: Color
           Value: "#ff9900"
           Children:
           - Name: IndicatorColors1
-            Id: g=b9bbac665fc5a7b8ac3a9b2500965a5b
             Type: Colors
             Children:
             - Name: Source
-              Id: g=9fd76d63d4ac750feb45fd2ea530bd9a
               Type: BaseDataVariableType
               DataType: BaseDataType
               ReferenceType: HasSource
               Children:
               - Name: DynamicLink
-                Id: g=532f1e6a6237bd1024cfbe3d8b1e7e2e
                 Type: DynamicLink
                 DataType: NodePath
                 Value: "../../../../IndicatorColor"
             - Name: Pairs
-              Id: g=fe3d89c4fd7b3409c7f9e22d960d0660
               Type: BaseObjectType
               Children:
               - Name: Pair3
-                Id: g=b4f33652dfdbc4deb7c1e82b458a34a1
                 Type: ValueMapPair
                 Children:
                 - Name: Key
-                  Id: g=386c91e20570271699ed715ab3458d01
                   Type: BaseDataVariableType
                   DataType: Int16
                   Value: 1
                 - Name: Value
-                  Id: g=9d4809274c389a9c53f677cdfc516baa
                   Type: BaseDataVariableType
                   DataType: Color
                   Value: "#23af72"
                   Children:
                   - Name: DynamicLink
-                    Id: g=84b8515670e9ea9b1c29e8317cb9568d
                     Type: DynamicLink
                     DataType: NodePath
                     Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Good - 23af72 - Green"
               - Name: Pair4
-                Id: g=cf2902264d364233476d5f2ec86548cc
                 Type: ValueMapPair
                 Children:
                 - Name: Key
-                  Id: g=19bd024835511f89689f34e5bc946d76
                   Type: BaseDataVariableType
                   DataType: Int16
                   Value: 2
                 - Name: Value
-                  Id: g=be94ec4bdfbff8e16d267d71371ebebb
                   Type: BaseDataVariableType
                   DataType: Color
                   Value: "#6d91b6"
                   Children:
                   - Name: DynamicLink
-                    Id: g=438603682267bd9e2b04539c417752ad
                     Type: DynamicLink
                     DataType: NodePath
                     Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Selected - 6d91b6 - Info - Blue"
               - Name: Pair5
-                Id: g=b2cc988f7b14ea448837be4e78f1c06b
                 Type: ValueMapPair
                 Children:
                 - Name: Key
-                  Id: g=e0565460c76f5f31e1da69b02fb39a51
                   Type: BaseDataVariableType
                   DataType: Int16
                   Value: 3
                 - Name: Value
-                  Id: g=edb294521a57e2cab985380415cf7c19
                   Type: BaseDataVariableType
                   DataType: Color
                   Value: "#ff9900"
                   Children:
                   - Name: DynamicLink
-                    Id: g=c0993e1dca6f016c5c9752cd6e3e127f
                     Type: DynamicLink
                     DataType: NodePath
                     Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Warning - ff9900 - Orange"
               - Name: Pair
-                Id: g=9ca5b6ef6805b66202e37718d2e0f57b
                 Type: ValueMapPair
                 Children:
                 - Name: Key
-                  Id: g=da1fabb039f063ce1fdf4983456208a8
                   Type: BaseDataVariableType
                   DataType: Int16
                   Value: 4
                 - Name: Value
-                  Id: g=3192fd732e84a29addf1b4df408a217a
                   Type: BaseDataVariableType
                   DataType: Color
                   Value: "#cc0036"
                   Children:
                   - Name: DynamicLink
-                    Id: g=b937a475ae151bf97e3d471b4a4d06b3
                     Type: DynamicLink
                     DataType: NodePath
                     Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Error - cc036 - Red"
               - Name: Pair6
-                Id: g=cb7de7102a549cc7f6dff3b93e6dfb60
                 Type: ValueMapPair
                 Children:
                 - Name: Key
-                  Id: g=3980bd2da36039d53aeeb9a02557b65b
                   Type: BaseDataVariableType
                   DataType: Int16
                   Value: 5
                 - Name: Value
-                  Id: g=6109d7f87dccf5076fcb3d794d0d1b76
                   Type: BaseDataVariableType
                   DataType: Color
                   Value: "#6d6e70"
                   Children:
                   - Name: DynamicLink
-                    Id: g=24295abe3b52b414c0a9215b1f2c8af5
                     Type: DynamicLink
                     DataType: NodePath
                     Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Dark Grey 2 - 6d6e70"
               - Name: Pair1
-                Id: g=78358fc5280e11a542cc603bc3ee1580
                 Type: ValueMapPair
                 Children:
                 - Name: Key
-                  Id: g=8d01139ad75b8c069387275c917784d9
                   Type: BaseDataVariableType
                   DataType: Int16
                   Value: 6
                 - Name: Value
-                  Id: g=fa9deb2fcbdccd948fad9f2209213fb1
                   Type: BaseDataVariableType
                   DataType: Color
         - Name: Visible
-          Id: g=758be4485bdeb0f60bd81bc56f182cf0
           Type: BaseDataVariableType
           DataType: Boolean
           Value: true
           Children:
           - Name: ExpressionEvaluator1
-            Id: g=82359f4f1362f437e1188c6f886503ec
             Type: ExpressionEvaluator
             Children:
             - Name: Source0
-              Id: g=b08f4f9ddf60ec57dd0fe3d78a90c166
               Type: BaseDataVariableType
               DataType: BaseDataType
               ReferenceType: HasSource
               Children:
               - Name: DynamicLink
-                Id: g=bf23aad5523588d3bbe79adf6f03952a
                 Type: DynamicLink
                 DataType: NodePath
                 Value: "../../../../IndicatorColor"
       - Name: IndicatorColor
-        Id: g=8baeaefa4b01271f935d7bad19d07a8f
         Type: BaseDataVariableType
         DataType: 'Multi-State Indicator Colors'
         Value: 3
         Children:
         - Name: DynamicLink
-          Id: g=f1476a78b0114be2ba8fb9a70c988896
           Type: DynamicLink
           DataType: NodePath
           Value: "../../../IndicatorColor"
           Children:
           - Name: Mode
-            Id: g=a2611aa529f499183cffd2a032dfd7ee
             Type: BaseVariableType
             DataType: DynamicLinkMode
             ModellingRule: Optional
             Value: 2
       - Name: Indicator
-        Id: g=eb8c4ce06ed680db48864d2143959044
         Type: Image
         Children:
         - Name: Path
-          Id: g=5894b9a77d70630ba4523f25b37fae0f
           Type: BaseDataVariableType
           DataType: ResourceUri
           Children:
           - Name: IndicatorSymbol1
-            Id: g=4a724f8c06e5c62051ae2301a9675d25
             Type: Symbols
             Children:
             - Name: Source
-              Id: g=d834ecc4279972c9095cd9dbc7260d3c
               Type: BaseDataVariableType
               DataType: BaseDataType
               ReferenceType: HasSource
               Children:
               - Name: DynamicLink
-                Id: g=446266a40a203fcec6341cf8454720e9
                 Type: DynamicLink
                 DataType: NodePath
                 Value: "../../../../IndicatorSymbol"
             - Name: Pairs
-              Id: g=0b08d9265cf2f89a7fbf0daa0c6c4ee3
               Type: BaseObjectType
               Children:
               - Name: Pair2
-                Id: g=707b513eafc6eb45775ffc70f132e192
                 Type: ValueMapPair
                 Children:
                 - Name: Key
-                  Id: g=7fadbeb955f807bc1007bda896723f3b
                   Type: BaseDataVariableType
                   DataType: Int16
                   Value: 1
                 - Name: Value
-                  Id: g=3cd6f705c145bce36b3eac41a77f90df
                   Type: BaseDataVariableType
                   DataType: ResourceUri
                   Value: "ns=36;%PROJECTDIR%/Graphics/Coesia - Library/indicator items/warning.svg"
               - Name: Pair3
-                Id: g=46d9fa7362ab5a20756417c3264d9c3b
                 Type: ValueMapPair
                 Children:
                 - Name: Key
-                  Id: g=218c4f1f2f91d311b0dbd283163273bb
                   Type: BaseDataVariableType
                   DataType: Int16
                   Value: 2
                 - Name: Value
-                  Id: g=d7d70f97db97b0285a9d9835b15b9190
                   Type: BaseDataVariableType
                   DataType: ResourceUri
                   Value: "ns=36;%PROJECTDIR%/Graphics/Coesia - Library/indicator items/good.svg"
               - Name: Pair4
-                Id: g=fff1be12dd44fb008ebc17330868c235
                 Type: ValueMapPair
                 Children:
                 - Name: Key
-                  Id: g=d931c7cc1d683f1965b567e4789aab51
                   Type: BaseDataVariableType
                   DataType: Int16
                   Value: 3
                 - Name: Value
-                  Id: g=bd4f8364de45fd98be59e3f0181ca325
                   Type: BaseDataVariableType
                   DataType: ResourceUri
                   Value: "ns=36;%PROJECTDIR%/Graphics/Coesia - Library/indicator items/info.svg"
               - Name: Pair5
-                Id: g=cf0e37f1ac55d29dc7dae71460c4864f
                 Type: ValueMapPair
                 Children:
                 - Name: Key
-                  Id: g=92d6f653ac858f3125c9012af2e29de9
                   Type: BaseDataVariableType
                   DataType: Int16
                   Value: 4
                 - Name: Value
-                  Id: g=3dd331cb9dd2693e5b78cb6235060116
                   Type: BaseDataVariableType
                   DataType: ResourceUri
                   Value: "ns=36;%PROJECTDIR%/Graphics/Coesia - Library/indicator items/led-lit.svg"
               - Name: Pair6
-                Id: g=b2b066957802f665330b0c5ea70350a2
                 Type: ValueMapPair
                 Children:
                 - Name: Key
-                  Id: g=09ae607f58478c2c15072f328d98621c
                   Type: BaseDataVariableType
                   DataType: Int16
                   Value: 5
                 - Name: Value
-                  Id: g=f4b71378461d4dcfea172cea02140b53
                   Type: BaseDataVariableType
                   DataType: ResourceUri
                   Value: "ns=36;%PROJECTDIR%/Graphics/Coesia - Library/indicator items/servo axis.svg"
               - Name: Pair7
-                Id: g=6383d3b6af037b52164a585f8355f00c
                 Type: ValueMapPair
                 Children:
                 - Name: Key
-                  Id: g=578d3f1858e4c3eb43c2a19d8382d279
                   Type: BaseDataVariableType
                   DataType: Int16
                   Value: 6
                 - Name: Value
-                  Id: g=d6d4485f204557a055b7d19ce60f600d
                   Type: BaseDataVariableType
                   DataType: ResourceUri
                   Value: "ns=36;%PROJECTDIR%/Graphics/Coesia - Library/indicator items/open.svg"
               - Name: Pair8
-                Id: g=3dd09d7aa67c0fb24e6c81efd356ea95
                 Type: ValueMapPair
                 Children:
                 - Name: Key
-                  Id: g=c087c9bce9ac140f659a4cedf8493c09
                   Type: BaseDataVariableType
                   DataType: Int16
                   Value: 7
                 - Name: Value
-                  Id: g=49a5f03b8427f642de819bda1cb4ea9b
                   Type: BaseDataVariableType
                   DataType: ResourceUri
                   Value: "ns=36;%PROJECTDIR%/Graphics/Coesia - Library/indicator items/closed.svg"
               - Name: Pair9
-                Id: g=9557e34f69c6df394f8507024e331f35
                 Type: ValueMapPair
                 Children:
                 - Name: Key
-                  Id: g=56b81e3ce0e848c082320bb36b8f5715
                   Type: BaseDataVariableType
                   DataType: Int16
                   Value: 8
                 - Name: Value
-                  Id: g=c7e5dfe0bfb48cea5724e9cf013f4ccd
                   Type: BaseDataVariableType
                   DataType: ResourceUri
                   Value: "ns=36;%PROJECTDIR%/Graphics/Coesia - Library/indicator items/error.svg"
               - Name: Pair1
-                Id: g=745e266bfd72dc1e9e9d479f00f573ff
                 Type: ValueMapPair
                 Children:
                 - Name: Key
-                  Id: g=7f65ff0c9a78d3fc41f0afbf8587d751
                   Type: BaseDataVariableType
                   DataType: Int16
                   Value: 9
                 - Name: Value
-                  Id: g=84ebf4474f98bd0bdb927d2f2d002a57
                   Type: BaseDataVariableType
                   DataType: ResourceUri
                   Value: "ns=36;%PROJECTDIR%/Graphics/Coesia - Library/indicator items/exclaim.svg"
               - Name: Pair10
-                Id: g=ff6edb267587807f35146916c7a7ef7f
                 Type: ValueMapPair
                 Children:
                 - Name: Key
-                  Id: g=f06b6787ac4f49247bd6ae64ca2f834b
                   Type: BaseDataVariableType
                   DataType: Int16
                   Value: 10
                 - Name: Value
-                  Id: g=5cc90890e3aa5314a61804194ca96715
                   Type: BaseDataVariableType
                   DataType: ResourceUri
         - Name: Visible
-          Id: g=b51d41caaad6ac2cfcbfd555a736cbe7
           Type: BaseDataVariableType
           DataType: Boolean
           Value: true
           Children:
           - Name: ExpressionEvaluator1
-            Id: g=207a047eabcd951bb1da2ad57f381ef2
             Type: ExpressionEvaluator
             Children:
             - Name: Source0
-              Id: g=11788a4cf5092d0d657d553ee1382df5
               Type: BaseDataVariableType
               DataType: BaseDataType
               ReferenceType: HasSource
               Children:
               - Name: DynamicLink
-                Id: g=f6ccd2d677916b8e85f726b82b19000b
                 Type: DynamicLink
                 DataType: NodePath
                 Value: "../../../../Label/Visible"
             - Name: Source1
-              Id: g=df0872858ee7f6ddbe15fe54c2d9bf51
               Type: BaseDataVariableType
               DataType: BaseDataType
               ReferenceType: HasSource
               Children:
               - Name: DynamicLink
-                Id: g=950c056032762082f8f1461a2b74e288
                 Type: DynamicLink
                 DataType: NodePath
                 Value: "../../../../IndicatorSymbol"
       - Name: IndicatorSymbol
-        Id: g=81f7eb5faafbd6b6034c86d7cf8729c1
         Type: BaseDataVariableType
         DataType: 'Multi-State Indicator Symbols'
         Value: 1
         Children:
         - Name: DynamicLink
-          Id: g=e0f0f9fb46601a128589142ae2121095
           Type: DynamicLink
           DataType: NodePath
           Value: "../../../IndicatorSymbol"
           Children:
           - Name: Mode
-            Id: g=3533254ed9a9935527eadcd07a1fbf08
             Type: BaseVariableType
             DataType: DynamicLinkMode
             ModellingRule: Optional
             Value: 2
       - Name: HorizontalAlignment
-        Id: g=c8fd4448407923558ee74a9db65e3d4b
         Type: BaseVariableType
         DataType: HorizontalAlignment
         ModellingRule: Optional
         Value: 2
       - Name: VerticalAlignment
-        Id: g=c07f0493757c1cdb311a15266657f934
         Type: BaseVariableType
         DataType: VerticalAlignment
         ModellingRule: Optional
         Value: 2
       - Name: Opacity
-        Id: g=7c483eefd2a6118715a44716a91f785f
         Type: BaseVariableType
         DataType: Float
         Value: 100.0
         Children:
         - Name: ConditionalConverter1
-          Id: g=608e256fe5ad21907154889b8732a4d4
           Type: ConditionalConverter
           Children:
           - Name: Condition
-            Id: g=5db18b20bfc2fb0ff2c7f8b820ce88c5
             Type: BaseDataVariableType
             DataType: Boolean
             ReferenceType: HasSource
             Children:
             - Name: ExpressionEvaluator1
-              Id: g=09289b834b69bf4cfb8ea7f7e179b7d0
               Type: ExpressionEvaluator
               Children:
               - Name: Expression
-                Id: g=29ac164f8d5e1e40d0c5e8f4c30f6d64
                 Type: BaseDataVariableType
                 DataType: String
                 ReferenceType: HasParameter
                 ModellingRule: Optional
                 Value: "({#invert}&&!{#toggle})||(!{#invert}&&{#toggle})"
               - Name: ns=9;Sourceinvert
-                Id: g=91425e82f7851b2dd2f83703cc7b7b3e
                 Type: BaseDataVariableType
                 DataType: BaseDataType
                 ReferenceType: HasSource
                 Children:
                 - Name: DynamicLink
-                  Id: g=878559a17bbcf8a1c609479e1b4eadf3
                   Type: DynamicLink
                   DataType: NodePath
                   Value: "../../../../../../../Invert Warning?"
               - Name: ns=9;Sourcetoggle
-                Id: g=b9c59859e94fe478c82910f13dcc7adf
                 Type: BaseDataVariableType
                 DataType: BaseDataType
                 ReferenceType: HasSource
                 Children:
                 - Name: DynamicLink
-                  Id: g=a93249f58f5ee76606eba0757eb044a6
                   Type: DynamicLink
                   DataType: NodePath
                   Value: "../../../../../../../Toggle"
           - Name: TrueValue
-            Id: g=b711479ac39b658b689056c206cfa3df
             Type: BaseDataVariableType
             DataType: Int16
             ReferenceType: HasParameter
             Value: 100
           - Name: FalseValue
-            Id: g=fe93dc9c85626fd56cd428fdc2544801
             Type: BaseDataVariableType
             DataType: Int16
             ReferenceType: HasParameter
       - Name: Rotation
-        Id: g=8b72180816474d947a06c9d50b8e7833
         Type: BaseVariableType
         DataType: Size
         ModellingRule: Optional
       - Name: ns=11;GridLayoutProperties
-        Id: g=92541dcceacd40da272f5e4b3634cf47
         Type: GridLayoutProperties
         DisplayName: {"NamespaceIndex":11,"TextId":"GridLayoutPropertiesDisplayName"}
         Children:
         - Name: ColumnStart
-          Id: g=1f326e1cd286bc84900cb329098b962b
           Type: BaseDataVariableType
           DataType: Int32
           ModellingRule: Optional
           Value: 6
       - Name: TextToDisplay
-        Id: g=e57b66b7bef489931be0f3aabd3b928b
         Type: BaseDataVariableType
         DataType: String
         Children:
         - Name: DynamicLink
-          Id: g=0cc29fa60f00ea244450c30b7bad8aa2
           Type: DynamicLink
           DataType: NodePath
           Value: "../../../Pointer"
           Children:
           - Name: Mode
-            Id: g=053ad9d2597cdf35d004afd084fed46b
             Type: BaseVariableType
             DataType: DynamicLinkMode
             ModellingRule: Optional
             Value: 2
       - Name: Label
-        Id: g=407c0d0d2109cf27188d04efac7a045e
         Type: Label
         Children:
         - Name: Visible
-          Id: g=77ee13ee856baf939871738da5dfd162
           Type: BaseDataVariableType
           DataType: Boolean
           Value: true
           Children:
           - Name: ExpressionEvaluator1
-            Id: g=68452955290113abbc4304ddf9f8c16e
             Type: ExpressionEvaluator
             Children:
             - Name: Source0
-              Id: g=8a826094d5527d3c7641f57eb21e5bbd
               Type: BaseDataVariableType
               DataType: BaseDataType
               ReferenceType: HasSource
               Children:
               - Name: DynamicLink
-                Id: g=6f82ae92281dd778282b04bda1b89c06
                 Type: DynamicLink
                 DataType: NodePath
                 Value: "../../../../TextToDisplay"
         - Name: Text
-          Id: g=7388dcc876d7aac93603540c2714e770
           Type: BaseDataVariableType
           DataType: LocalizedText
           Children:
           - Name: DynamicLink
-            Id: g=9fa15609570f42628e138e524262055e
             Type: DynamicLink
             DataType: NodePath
             Value: "../../TextToDisplay"
       - Name: Visible
-        Id: g=5d61eda91645016c67a286c4c4080398
         Type: BaseDataVariableType
         DataType: Boolean
         Value: true
         Children:
         - Name: ExpressionEvaluator1
-          Id: g=312b6ee8a0994ecc9faac10bcdc6e50d
           Type: ExpressionEvaluator
           Children:
           - Name: Expression
-            Id: g=a60181012e15a5739e26c5d7621ec25f
             Type: BaseDataVariableType
             DataType: String
             ReferenceType: HasParameter
             ModellingRule: Optional
             Value: "{0}!=0&&{1}!=0"
           - Name: ns=9;Source0
-            Id: g=13721dd9551a45bbfd4867e20a6f80b0
             Type: BaseDataVariableType
             DataType: BaseDataType
             ReferenceType: HasSource
             Children:
             - Name: DynamicLink
-              Id: g=d85f66cd304a233b31acaa8ddfcd8d6d
               Type: DynamicLink
               DataType: NodePath
               Value: "../../../../../IndicatorColor"
           - Name: ns=9;Source1
-            Id: g=ab0e91851e9a87427dda84b346be1262
             Type: BaseDataVariableType
             DataType: BaseDataType
             ReferenceType: HasSource
             Children:
             - Name: DynamicLink
-              Id: g=1c6ca91010d848ab31feafebe85009c0
               Type: DynamicLink
               DataType: NodePath
               Value: "../../../../../IndicatorSymbol"
     - Name: HorizontalGap
-      Id: g=a7017c6944e8dae64c672f927bdcd91c
       Type: BaseDataVariableType
       DataType: Size
       ModellingRule: Optional
     - Name: Label Column Setting
-      Id: g=71517f995fd4b4eb76d4015f92fb6e37
       Type: BaseDataVariableType
       DataType: String
       Children:
       - Name: ConditionalConverter1
-        Id: g=22dc8344a4e49e814a4b26bd354c0b2b
         Type: ConditionalConverter
         Children:
         - Name: Condition
-          Id: g=290e2a2c59f4f3f7e701410c899c7f4e
           Type: BaseDataVariableType
           DataType: Boolean
           ReferenceType: HasSource
           Children:
           - Name: DynamicLink
-            Id: g=c1d3693777c0e644632dd80ce4d2e14d
             Type: DynamicLink
             DataType: NodePath
             Value: "../../../Label/Visible"
         - Name: TrueValue
-          Id: g=61fe5fd6ed3773ce57ab6e4d56d270e3
           Type: BaseDataVariableType
           DataType: String
           ReferenceType: HasParameter
           ModellingRule: Optional
           Value: "1fr"
         - Name: FalseValue
-          Id: g=77d139e1dc0f02287ac71c0a63bfb277
           Type: BaseDataVariableType
           DataType: String
           ReferenceType: HasParameter
           ModellingRule: Optional
           Value: "Auto"
     - Name: ItemsVerticalAlignment
-      Id: g=82f402330b58d3089e65526358112d0d
       Type: BaseVariableType
       DataType: VerticalAlignment
       ModellingRule: Optional
       Value: 2
   - Name: IndicatorColor
-    Id: g=4a7104187ce45acec891a141a4cca828
     Type: BaseDataVariableType
     DataType: 'Multi-State Indicator Colors'
     Value: 2
   - Name: IndicatorSymbol
-    Id: g=4777de44ac2e18c6c6ae200ec2cb07bf
     Type: BaseDataVariableType
     DataType: 'Multi-State Indicator Symbols'
     Value: 9
   - Name: 'Invert Warning?'
-    Id: g=7bb93e9d1c055045c3d61f9e8fff521a
     Type: BaseDataVariableType
     DataType: Boolean
   - Name: Pointer
-    Id: g=58808dbf698d134b76564e82fd2f164f
     Type: BaseDataVariableType
     DataType: String

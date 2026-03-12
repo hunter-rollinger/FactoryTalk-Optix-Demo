@@ -1,5 +1,4 @@
 Name: DateTimePickerCalendar
-Id: g=258e56a8c77bb93fa98b877bc60bad23
 Type: FolderType
 Children:
 - Name: CalendarPicker
@@ -8,327 +7,269 @@ Children:
   ReferenceType: HasComponent
   Children:
   - Name: VerticalAlignment
-    Id: g=88de647947ebce26b923ca1f3f166fbd
     Type: BaseVariableType
     DataType: VerticalAlignment
     ModellingRule: Optional
   - Name: FillColor
-    Id: g=6dd43f552e3d0ed9a7114bbda2658d68
     Type: BaseDataVariableType
     DataType: Color
-    Value: "#ffffff00"
+    Value: "#ffffff"
     Children:
     - Name: DynamicLink
-      Id: g=432f954a90c7f4936f000ecaed5e9c6f
       Type: DynamicLink
       DataType: NodePath
       Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Light Grey 1 - ffffff - White"
   - Name: Height
-    Id: g=f3fd218a126c6accbe05d0ff235b3793
     Type: BaseVariableType
     DataType: Size
     ModellingRule: Optional
     Value: 40.0
   - Name: SelectedDate
-    Id: g=c25b7194a8652a62c08bf365a4984e87
     Type: BaseDataVariableType
     DataType: DateTime
   - Name: TextFormat
-    Id: g=fb58c2cbe4526080a6dd5b691a202d60
     Type: BaseDataVariableType
     DataType: String
-    Value: "Date"
-    Children:
-    - Name: StringFormatter1
-      Id: g=783193f186203ea659deb8000d61a7cd
-      Type: StringFormatter
-      Children:
-      - Name: Format
-        Id: g=e6ca5cafaa4c6d8419c3030345cb1cd7
-        Type: BaseDataVariableType
-        DataType: LocalizedText
-        ReferenceType: HasParameter
-        ModellingRule: Optional
-        Value: {"LocaleId":"en-US","Text":"{0:P} {0:t}"}
-      - Name: ns=9;Source0
-        Id: g=7f7c1d82a0415b731688141be560e599
-        Type: BaseDataVariableType
-        DataType: BaseDataType
-        ReferenceType: HasSource
-        Children:
-        - Name: DynamicLink
-          Id: g=119d610d44748ca94953621d47b4bcd9
-          Type: DynamicLink
-          DataType: NodePath
-          Value: "../../../SelectedDate"
-          Children:
-          - Name: Mode
-            Id: g=f37a05051ffb1be0327eb111f705e375
-            Type: BaseVariableType
-            DataType: DynamicLinkMode
-            ModellingRule: Optional
-            Value: 2
-      - Name: Mode
-        Id: g=221f8b58e546e619d67ad116be765796
-        Type: PropertyType
-        DataType: DynamicLinkMode
-        ReferenceType: HasComponent
-        ModellingRule: Optional
-        Value: 2
+    Value: "P"
   - Name: BorderThickness
-    Id: g=43ebee9f7a623950ca15791136c8632f
     Type: BaseDataVariableType
     DataType: Size
     ModellingRule: Optional
     Value: 3.0
   - Name: CornerRadius
-    Id: g=3e370c5478371f0ae2d7b5c795b456c1
     Type: BaseDataVariableType
     DataType: Size
     ModellingRule: Optional
     Value: 8.0
   - Name: BorderColor
-    Id: g=368751da345e166b20b9789da47e7d75
     Type: BaseDataVariableType
     DataType: Color
     Value: "#000000"
     Children:
     - Name: DynamicLink
-      Id: g=af4797901f93967d1ee343e8ff879d99
       Type: DynamicLink
       DataType: NodePath
       Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Dark Grey 6 - 000000 - Black"
   - Name: Width
-    Id: g=bc50be7c732041f9419bbc030b820f47
     Type: BaseVariableType
     DataType: Size
     ModellingRule: Optional
     Value: 200.0
   - Name: Layout
-    Id: g=4881a63073c042347cab94cb083e8996
     Type: RowLayout
     Children:
     - Name: Width
-      Id: g=6c7664f3703904efcba99f3de7e3ce27
       Type: BaseVariableType
       DataType: Size
       ModellingRule: Optional
       Value: -1.0
     - Name: Height
-      Id: g=49db8eed67fefe9f3fa65dacbbdfdbfb
       Type: BaseVariableType
       DataType: Size
       ModellingRule: Optional
       Value: -1.0
     - Name: DateValue
-      Id: g=71d990e8ac0cf4adca01aecd3dfe26a3
       Type: Label
       Children:
       - Name: Text
-        Id: g=b9ed7d80a1e32bc8cf34f962676af5ee
         Type: BaseDataVariableType
         DataType: LocalizedText
         Children:
-        - Name: DynamicLink
-          Id: g=688c733eacb631184e201299b733a9ef
-          Type: DynamicLink
-          DataType: NodePath
-          Value: "../../../SelectedDate"
+        - Name: StringFormatter1
+          Type: StringFormatter
+          Children:
+          - Name: Format
+            Type: BaseDataVariableType
+            DataType: LocalizedText
+            ReferenceType: HasParameter
+            ModellingRule: Optional
+            Value: {"LocaleId":"en-US","Text":"{0:{1}}"}
+          - Name: ns=9;Source0
+            Type: BaseDataVariableType
+            DataType: BaseDataType
+            ReferenceType: HasSource
+            Children:
+            - Name: DynamicLink
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "../../../../../SelectedDate"
+          - Name: ns=9;Source1
+            Type: BaseDataVariableType
+            DataType: BaseDataType
+            ReferenceType: HasSource
+            Children:
+            - Name: DynamicLink
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "../../../../../TextFormat"
       - Name: LeftMargin
-        Id: g=836bc37429e12d2aea403e7082203dcb
         Type: BaseVariableType
         DataType: Size
         ModellingRule: Optional
-        Value: 8.0
       - Name: RightMargin
-        Id: g=ef0c22a59e84f9bc163f32f956d7bc6b
         Type: BaseVariableType
         DataType: Size
         ModellingRule: Optional
       - Name: Width
-        Id: g=cf9946502d15d3c0832e5e9d0eb41625
         Type: BaseVariableType
         DataType: Size
         ModellingRule: Optional
         Value: -1.0
       - Name: Height
-        Id: g=1da636a6114644d047a80b292541f05f
         Type: BaseVariableType
         DataType: Size
         ModellingRule: Optional
         Value: -1.0
       - Name: TextVerticalAlignment
-        Id: g=5574564f02bb72c28a1d8f8d1aedc61e
         Type: BaseVariableType
         DataType: TextVerticalAlignment
         ModellingRule: Optional
         Value: 1
       - Name: FontSize
-        Id: g=2990f8a1f890fdc1166f9b103cf64ef7
         Type: BaseDataVariableType
         DataType: Size
         ModellingRule: Optional
         Value: 20.0
       - Name: VerticalAlignment
-        Id: g=10167bc00cfa90abda85c90e7f6e3836
         Type: BaseVariableType
         DataType: VerticalAlignment
         ModellingRule: Optional
         Value: 3
       - Name: HorizontalAlignment
-        Id: g=ff8e3a53c8cf0e3a1c0c48dee9f2af60
         Type: BaseVariableType
         DataType: HorizontalAlignment
         ModellingRule: Optional
         Value: 3
     - Name: DateImg
-      Id: g=62ce4dd00334869186516625ef5f38bc
       Type: Image
       Children:
       - Name: Path
-        Id: g=2bf3ae1af2ee8fe6d003797ad58d0172
         Type: BaseDataVariableType
         DataType: ResourceUri
         Value: "ns=36;%PROJECTDIR%/Calendar-md.svg"
       - Name: Width
-        Id: g=8e8e6a652e7e7afb14285813cb531ca0
         Type: BaseVariableType
         DataType: Size
         ModellingRule: Optional
         Value: 32.0
       - Name: HorizontalAlignment
-        Id: g=3192c818a69c599d9daa2c28afefb3c8
         Type: BaseVariableType
         DataType: HorizontalAlignment
         ModellingRule: Optional
         Value: 1
       - Name: VerticalAlignment
-        Id: g=8da69819d37e6e7b2e9bf940897007b9
         Type: BaseVariableType
         DataType: VerticalAlignment
         ModellingRule: Optional
         Value: 3
       - Name: FillMode
-        Id: g=eb98be143ed9043050db2e4293167e0e
         Type: BaseDataVariableType
         DataType: ImageFillModeEnum
         ModellingRule: Optional
       - Name: RightMargin
-        Id: g=2cc52195e2fccb49b28a31117cb122ca
         Type: BaseVariableType
         DataType: Size
         ModellingRule: Optional
-        Value: 8.0
     - Name: HorizontalAlignment
-      Id: g=1f72569f67401c40d463bb64c0f00dae
       Type: BaseVariableType
       DataType: HorizontalAlignment
       ModellingRule: Optional
       Value: 3
     - Name: VerticalAlignment
-      Id: g=215726a540bc97d5345fbb928c834889
       Type: BaseVariableType
       DataType: VerticalAlignment
       ModellingRule: Optional
       Value: 2
+    - Name: LeftMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 8.0
+    - Name: RightMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 8.0
   - Name: DatePicker
-    Id: g=23e4a15a428e4b63025647a182259597
     Type: DropDownButton
     Children:
     - Name: Panel
-      Id: g=03872dd61eb8e0e45bfaa43666567f67
       Type: NodePointer
       DataType: NodeId
-      Value: "/Objects/OptimateDemoProject/UI/Widgets/DateTimePickerCalendar/CalendarPickerComponents/CalendarPickerDialog"
+      Value: "/Objects/OptimateDemoProject/UI/Widgets/Custom/DateTimePickerCalendar/CalendarPickerComponents/CalendarPickerDialog"
       Children:
       - Name: Kind
-        Id: g=0c87dc190820bbd045454aab800eb4a7
         Type: PropertyType
         DataType: NodeId
         Value: "/Types/ObjectTypes/BaseObjectType/BaseUIObject/Item/Container"
     - Name: Appearance
-      Id: g=b0b2b79ce1526558b2025ffc056064dd
       Type: BaseVariableType
       DataType: String
       ModellingRule: Optional
       Value: "transparent"
     - Name: ImagePath
-      Id: g=6a4df2fe382ee46dac28bee1ff580fcb
       Type: BaseDataVariableType
       DataType: ResourceUri
       ModellingRule: Optional
     - Name: ImageWidth
-      Id: g=06117fc53e6c159c415c5b94f113cb29
       Type: BaseDataVariableType
       DataType: Size
       ModellingRule: Optional
       Value: -1.0
     - Name: Width
-      Id: g=7308da0cb3e1dc125f102e5b3b65cd2f
       Type: BaseVariableType
       DataType: Size
       ModellingRule: Optional
       Value: 40.0
     - Name: Height
-      Id: g=c35f7e9abf4cdc294bdf58b9b4138b31
       Type: BaseVariableType
       DataType: Size
       ModellingRule: Optional
       Value: -1.0
     - Name: HorizontalAlignment
-      Id: g=673a22411f62ad576e2d928e728d815c
       Type: BaseVariableType
       DataType: HorizontalAlignment
       ModellingRule: Optional
       Value: 3
     - Name: Direction
-      Id: g=cc3bc33a8bc8804ff0b786e0bee7196b
       Type: BaseDataVariableType
       DataType: OrientationEnum
       ModellingRule: Optional
       Value: 1
     - Name: AnimationType
-      Id: g=387b6a27652f362498b9ce28d884df43
       Type: BaseDataVariableType
       DataType: DropDownButtonAnimationTypeEnum
       ModellingRule: Optional
     - Name: PanelAliasNode
-      Id: g=45a0bb1f42a9220b08173db5c207f7d8
       Type: BaseDataVariableType
       DataType: NodeId
       ValueRank: ScalarOrOneDimension
       Children:
       - Name: DynamicLink
-        Id: g=5883592d913d907bbbbbf33b249ff331
         Type: DynamicLink
         DataType: NodePath
         Value: "../..@NodeId"
     - Name: VerticalAlignment
-      Id: g=ed9099fa7c2e08baa9ee20b8dbdc20d6
       Type: BaseVariableType
       DataType: VerticalAlignment
       ModellingRule: Optional
       Value: 3
     - Name: RightMargin
-      Id: g=438c257cdb28b03d59c04c9d022755f5
       Type: BaseVariableType
       DataType: Size
       ModellingRule: Optional
     - Name: ImageHeight
-      Id: g=7a9f4520545f37f5f88324b1a6f8e8a0
       Type: BaseDataVariableType
       DataType: Size
       ModellingRule: Optional
       Value: -1.0
     - Name: Style
-      Id: g=614184a93b5af55821044be920453ee6
       Type: BaseDataVariableType
       DataType: String
       ModellingRule: Optional
       Value: "Invisible"
 - File: CalendarPickerComponents/CalendarPickerComponents.yaml
 - Name: ns=19;LibraryReference
-  Id: g=a20d6e68873d4eeb8b6bd27b65427548
   Type: ObjectLibraryReference
   DataType: ObjectLibraryReferenceDataType
   Value: 

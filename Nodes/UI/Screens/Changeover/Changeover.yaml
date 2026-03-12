@@ -1,5 +1,4 @@
 Name: Changeover
-Id: g=0a423517510ba670a3aa891abe4025b7
 Type: FolderType
 Children:
 - Name: Changeover_Main
@@ -9,156 +8,128 @@ Children:
   ReferenceType: HasComponent
   Children:
   - Name: Height
-    Id: g=8ceeb970d663c38ca9996d61df222fcc
     Type: BaseVariableType
     DataType: Size
     ModellingRule: Optional
     Value: 745.0
   - Name: Width
-    Id: g=d8f0a1676d7a5c53b9159f2d44d24884
     Type: BaseVariableType
     DataType: Size
     ModellingRule: Optional
     Value: 1920.0
   - Name: ScrollView
-    Id: g=caa748cf4143305b04acdbbf25fccbf9
     Type: ScrollView
     Children:
     - Name: Width
-      Id: g=82d1485500e08b0e28047b65783aa7c0
       Type: BaseVariableType
       DataType: Size
       ModellingRule: Optional
       Value: 300.0
     - Name: Height
-      Id: g=dfcb678751b637a1e202e62514e80ad5
       Type: BaseVariableType
       DataType: Size
       ModellingRule: Optional
       Value: 300.0
     - Name: HorizontalAlignment
-      Id: g=9661bef8deda8549cf617bd471a7fdbe
       Type: BaseVariableType
       DataType: HorizontalAlignment
       ModellingRule: Optional
       Value: 3
     - Name: VerticalAlignment
-      Id: g=14cd9125143767f1ae52de98133339bc
       Type: BaseVariableType
       DataType: VerticalAlignment
       ModellingRule: Optional
       Value: 3
     - Name: MinZoomOut
-      Id: g=27481d794b30c16a0fb78a9f13f1b228
       Type: BaseDataVariableType
       DataType: Int32
       ModellingRule: Optional
       Value: 100
     - Name: MaxZoomIn
-      Id: g=d3d422d63d4a7e9b2f3af49beaae8f61
       Type: BaseDataVariableType
       DataType: Int32
       ModellingRule: Optional
       Value: 200
     - Name: Zoommable
-      Id: g=b75977b690cfe0c30d8fc9a66a69cd5b
       Type: BaseDataVariableType
       DataType: Boolean
       ModellingRule: Optional
       Value: true
     - Name: ScrollAxesEnabled
-      Id: g=705b36aefe6a262bcd568625747da8b8
       Type: BaseDataVariableType
       DataType: ScrollAxesEnabledEnum
       ModellingRule: Optional
     - Name: ContentWidth
-      Id: g=98187cfef8e1f6dc5789283ee9655421
       Type: BaseDataVariableType
       DataType: Size
       AccessLevel: Read
     - Name: ContentHeight
-      Id: g=a5528b56f7698bb3215d641d25e56b35
       Type: BaseDataVariableType
       DataType: Size
       AccessLevel: Read
     - Name: ViewWidth
-      Id: g=d29899a7296d4bea12c710b85f85768e
       Type: BaseDataVariableType
       DataType: Size
       AccessLevel: Read
     - Name: ViewHeight
-      Id: g=14678f0021ae6ca4fe5db9dd8b8eb9d6
       Type: BaseDataVariableType
       DataType: Size
       AccessLevel: Read
     - Name: ContentX
-      Id: g=6d066f327786a461eb03dfdb2f4c0571
       Type: BaseDataVariableType
       DataType: Size
     - Name: ContentY
-      Id: g=1d1f20795bf1e970c2bcb2d47829d086
       Type: BaseDataVariableType
       DataType: Size
     - Class: Reference
       Target: ns=11;i=1394
       Direction: Forward
   - Name: Screen Display Name
-    Id: g=260f3975e7a1593ec419d84f440b6968
     Type: Label
     Children:
     - Name: Text
-      Id: g=74a8e971dbcb51035a2e3457b65143cd
       Type: BaseDataVariableType
       DataType: LocalizedText
       Children:
       - Name: DynamicLink
-        Id: g=a7c7e5521956f3a3972b57861b4ecbb0
         Type: DynamicLink
         DataType: NodePath
         Value: "../..@DisplayName"
     - Name: LeftMargin
-      Id: g=afd5710962dc3c756afab38001a36ca6
       Type: BaseVariableType
       DataType: Size
       ModellingRule: Optional
       Value: 20.0
     - Name: TopMargin
-      Id: g=7742f4181ae74424e05b23b8d568ec93
       Type: BaseVariableType
       DataType: Size
       ModellingRule: Optional
       Value: 18.0
     - Name: FontSize
-      Id: g=f9e26f8fd768f73c1e9aa59b0864f87a
       Type: BaseDataVariableType
       DataType: Size
       ModellingRule: Optional
       Value: 24.0
     - Name: FontFamily
-      Id: g=57153fefe82aa2e978f799febe4d056d
       Type: BaseDataVariableType
       DataType: Font
       ModellingRule: Optional
       Value: "Roboto Condensed"
     - Name: Height
-      Id: g=8fb52d62bbd9a3c8f5d5411a929f9b73
       Type: BaseVariableType
       DataType: Size
       ModellingRule: Optional
       Value: 30.0
     - Name: VerticalAlignment
-      Id: g=70b82fde831efbed35a4fecd081cbb13
       Type: BaseVariableType
       DataType: VerticalAlignment
       ModellingRule: Optional
     - Name: TextVerticalAlignment
-      Id: g=410359db06ceb059409b292d50719bf7
       Type: BaseVariableType
       DataType: TextVerticalAlignment
       ModellingRule: Optional
       Value: 1
   - Name: Style
-    Id: g=5eea47b9d0641c8d3361dedb89a4ded9
     Type: BaseDataVariableType
     DataType: String
     ModellingRule: Optional
@@ -169,324 +140,255 @@ Children:
   ReferenceType: HasComponent
   Children:
   - Name: BackgroundColor
-    Id: g=ba77614312ae5e2b597e14cda15aca89
     Type: BaseDataVariableType
     DataType: Color
     Value: "#b6b6b6"
     Children:
     - Name: DynamicLink
-      Id: g=5c3cbd88fddcd6d9d9e55309ebb13c65
       Type: DynamicLink
       DataType: NodePath
       Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Light Grey 6 - b6b6b6"
   - Name: SeparatorContainer
-    Id: g=c8fb50852c5abb5c09390a238d4512e2
     Type: ColumnLayout
     Children:
     - Name: TopRectangle
-      Id: g=ae4ccfb35b5d3acae4bcba879b95039f
       Type: Rectangle
       Children:
       - Name: ButtonContainer
-        Id: g=fa3e53e7cb8b2939df3fdbfd24918ae0
         Type: RowLayout
         Children:
         - Name: Prev
-          Id: g=d59b8b1b97621b4e6784653e4764f664
           Type: Button
           Children:
           - Name: MouseClickEventHandler1
-            Id: g=bcef18362931736e7e9bfd2a1915a2da
             Type: EventHandler
             Children:
             - Name: ListenEventType
-              Id: g=29ca2c717231b7d056b780ef91b4b850
               Type: PropertyType
               DataType: NodeId
               Value: "/Types/EventTypes/BaseEventType/MouseEvent/MouseClickEvent"
             - Name: MethodsToCall
-              Id: g=d4bda830d7d349da0797392964f66d52
               Type: BaseObjectType
               Children:
               - Name: MethodContainer1
-                Id: g=1d88899d28aa90fcc782f7b100d2b5fe
                 Type: BaseObjectType
                 Children:
                 - Name: ObjectPointer
-                  Id: g=2c1f562951a750362b7606c8e1a9d8d5
                   Type: NodePointer
                   DataType: NodeId
                   Children:
                   - Name: Kind
-                    Id: g=7b9e0eb7eb937b51dc58e7df408a7210
                     Type: PropertyType
                     DataType: NodeId
                     Value: "/Types/ObjectTypes/BaseObjectType"
                   - Name: DynamicLink
-                    Id: g=5d1a72ea30de05d0b7b3e7f6f5ee0952
                     Type: DynamicLink
                     DataType: NodePath
                     Value: "{Standard_Content}/BackProvider@NodeId"
                 - Name: Method
-                  Id: g=719c2c6fbb0944a318563614f3136fb8
                   Type: BaseDataVariableType
                   DataType: String
                   Value: "Back"
             - Name: EventArguments
-              Id: g=210544a9352c15f8da29fdd49b7ce8fd
               Type: MouseClickEvent
               Children:
               - Name: EventId
-                Id: g=2c0f7c06aeb60de5b2296106ead90fe9
                 Type: PropertyType
                 DataType: ByteString
               - Name: EventType
-                Id: g=cdb0aff3fc397ffce2585cd8df7f8eff
                 Type: PropertyType
                 DataType: NodeId
               - Name: SourceNode
-                Id: g=52326e1bf5eb34ad53308a766c8311cf
                 Type: PropertyType
                 DataType: NodeId
               - Name: SourceName
-                Id: g=ed0318caecd1f8b2d75ceb3ffab64175
                 Type: PropertyType
                 DataType: String
               - Name: Time
-                Id: g=3f7b82ce7e8c35c4b6adba1c19afee77
                 Type: PropertyType
                 DataType: UtcTime
               - Name: ReceiveTime
-                Id: g=5ad5719b60dd0e0629a689da8679f4df
                 Type: PropertyType
                 DataType: UtcTime
               - Name: Message
-                Id: g=fcd3bc7bb752e0dc9571e8f662b9b2de
                 Type: PropertyType
                 DataType: LocalizedText
               - Name: Severity
-                Id: g=bf9e36e9b2c43168daa85e787d072b49
                 Type: PropertyType
                 DataType: UInt16
           - Name: Enabled
-            Id: g=f04d0c920df67d9ede610b3337bcba3f
             Type: BaseDataVariableType
             DataType: Boolean
             Value: true
             Children:
             - Name: DynamicLink
-              Id: g=5741dac81502adbcaa9c6c78ab3f2aa5
               Type: DynamicLink
               DataType: NodePath
               Value: "{Window}/Standard_Content_Container/VerticalLayout/Main_Content_Container/HorizontalLayout/Standard_Content/BackProvider/CanGoBack"
         - Name: Next
-          Id: g=45ccd58c8f83d8233b1ee6aa2ddb62f8
           Type: Button
           Children:
           - Name: MouseClickEventHandler1
-            Id: g=f8f708982d050c208e9e35ffdf020bb4
             Type: EventHandler
             Children:
             - Name: ListenEventType
-              Id: g=ab4e27ed2c2b8c061ca9eabcc3e0cb18
               Type: PropertyType
               DataType: NodeId
               Value: "/Types/EventTypes/BaseEventType/MouseEvent/MouseClickEvent"
             - Name: MethodsToCall
-              Id: g=c50df962072b8331fc8d9dbc098ecb16
               Type: BaseObjectType
               Children:
               - Name: MethodContainer1
-                Id: g=ad52f7bea2d032d78588cbc25dabbaab
                 Type: BaseObjectType
                 Children:
                 - Name: ObjectPointer
-                  Id: g=33db987f07df42e7140bf24d31884eb2
                   Type: NodePointer
                   DataType: NodeId
                   Children:
                   - Name: Kind
-                    Id: g=f5a0866ee297bdd7197b90e6cd11a05f
                     Type: PropertyType
                     DataType: NodeId
                     Value: "/Types/ObjectTypes/BaseObjectType"
                   - Name: DynamicLink
-                    Id: g=ab5d70ef979900aff9183b8507528871
                     Type: DynamicLink
                     DataType: NodePath
                     Value: "{Standard_Content}/BackProvider@NodeId"
                 - Name: Method
-                  Id: g=e80c701ddeb9d6a94042558667821f7c
                   Type: BaseDataVariableType
                   DataType: String
                   Value: "Next"
             - Name: EventArguments
-              Id: g=fbb243fd0b8f6f55c7be3929e13cf650
               Type: MouseClickEvent
               Children:
               - Name: EventId
-                Id: g=0cf3aa89ec15014555af44e4d6938795
                 Type: PropertyType
                 DataType: ByteString
               - Name: EventType
-                Id: g=824527e03804b1950c48ea6f887ac7f7
                 Type: PropertyType
                 DataType: NodeId
               - Name: SourceNode
-                Id: g=c7aa542fcf2bc0c08d226d895b8d6730
                 Type: PropertyType
                 DataType: NodeId
               - Name: SourceName
-                Id: g=5d5e7c5b4f9237e7fa5d9a8b4f5366c6
                 Type: PropertyType
                 DataType: String
               - Name: Time
-                Id: g=164a829c415b6832714190b1ed53e904
                 Type: PropertyType
                 DataType: UtcTime
               - Name: ReceiveTime
-                Id: g=91d4e53c12cbb3cc71db3b7095a9c198
                 Type: PropertyType
                 DataType: UtcTime
               - Name: Message
-                Id: g=31a6cf4d9120e56bdf4e94a8c1f75fb5
                 Type: PropertyType
                 DataType: LocalizedText
               - Name: Severity
-                Id: g=734836e074dc2ae64bc654b9a03d668d
                 Type: PropertyType
                 DataType: UInt16
           - Name: Enabled
-            Id: g=bd983c31411579172a157f1ddda850b7
             Type: BaseDataVariableType
             DataType: Boolean
             Value: true
             Children:
             - Name: DynamicLink
-              Id: g=f947a711427462eab489b3e55a830970
               Type: DynamicLink
               DataType: NodePath
               Value: "{Window}/Standard_Content_Container/VerticalLayout/Main_Content_Container/HorizontalLayout/Standard_Content/BackProvider/CanGoNext"
         - Name: 'Separator - Dark'
-          Id: g=60c15c00ce3f23c3588a4409fea24d1c
           Type: Rectangle
           Children:
           - Name: FillColor
-            Id: g=99f3a5e5fb590eb41c59946df966d22a
             Type: BaseDataVariableType
             DataType: Color
             Value: "#6d6e70"
             Children:
             - Name: DynamicLink
-              Id: g=287605d9f1e1c4a9d1a47bd47931e02b
               Type: DynamicLink
               DataType: NodePath
               Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Dark Grey 2 - 6d6e70"
         - Name: MenuBarText
-          Id: g=003657298e2df7dd92bb6a40aff934cd
           Type: Label
           Children:
           - Name: Text
-            Id: g=98f37d3233045b3b2647c12c7546d669
             Type: BaseDataVariableType
             DataType: LocalizedText
             Value: {"LocaleId":"en-US","Text":"Placeholder Text"}
           - Name: LeftMargin
-            Id: g=e3aeb7867089e0b9c50f3bcee760f4dc
             Type: BaseVariableType
             DataType: Size
             ModellingRule: Optional
           - Name: TopMargin
-            Id: g=1b5ea0458d4234d63f9cffd53decee8f
             Type: BaseVariableType
             DataType: Size
             ModellingRule: Optional
           - Name: TextHorizontalAlignment
-            Id: g=3000b3c2c66d4d00e249308b3437328b
             Type: BaseVariableType
             DataType: TextHorizontalAlignment
             ModellingRule: Optional
           - Name: TextVerticalAlignment
-            Id: g=ff6b3abeaea163addf533898b9226717
             Type: BaseVariableType
             DataType: TextVerticalAlignment
             ModellingRule: Optional
             Value: 1
           - Name: Style
-            Id: g=837caf27409dee3ad77ce23396519723
             Type: BaseDataVariableType
             DataType: String
             ModellingRule: Optional
             Value: "MenuBarLargeLabel"
           - Name: TextColor
-            Id: g=22bbe4d4f6e491c450d7923b739a6a20
             Type: BaseDataVariableType
             DataType: Color
             Value: "#333333"
             Children:
             - Name: DynamicLink
-              Id: g=83ca1e006df0c74146acf3abf36baefa
               Type: DynamicLink
               DataType: NodePath
               Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Dark Grey 5 - 333333"
           - Name: Height
-            Id: g=ad53436d0148953272e96ffc6f2d2d6b
             Type: BaseVariableType
             DataType: Size
             ModellingRule: Optional
             Value: -1.0
           - Name: VerticalAlignment
-            Id: g=d2ac1a2a5c2e3db68494f31261eb6d43
             Type: BaseVariableType
             DataType: VerticalAlignment
             ModellingRule: Optional
             Value: 2
     - Name: BottomRectangle
-      Id: g=9857fdf7fbf877d0925fafe2798c4cd4
       Type: Rectangle
       Children:
       - Name: BorderColor
-        Id: g=9d7fbb824626f90127f54a2fcfe2ee3a
         Type: BaseDataVariableType
         DataType: Color
         Value: "#000000"
       - Name: FillColor
-        Id: g=79ffc3e5c2c0b9f040d93e93cf49d867
         Type: BaseDataVariableType
         DataType: Color
         Value: "#ffffff"
         Children:
         - Name: DynamicLink
-          Id: g=4117e8458b20e5acba9dca83a393a5d3
           Type: DynamicLink
           DataType: NodePath
           Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Light Grey 1 - ffffff - White"
   - Name: Arrow
-    Id: g=ccc777d9dfdd8e2bfb34188f90d04fb8
     Type: Rectangle
     Children:
     - Name: Width
-      Id: g=9bde6a5f6eef271907bef733e1da464c
       Type: BaseVariableType
       DataType: Size
       Value: 37.0
     - Name: Height
-      Id: g=a4fb8d25a120b0fc5ecd120949ab013d
       Type: BaseVariableType
       DataType: Size
       Value: 37.0
     - Name: BorderColor
-      Id: g=60958ca0e48ab7b36592060e0610e2dc
       Type: BaseDataVariableType
       DataType: Color
     - Name: FillColor
-      Id: g=f423be024ff5b64a62180a054d9d0d22
       Type: BaseDataVariableType
       DataType: Color
       Value: "#b6b6b6"
       Children:
       - Name: DynamicLink
-        Id: g=9be07e2beddd80f709539470430f325f
         Type: DynamicLink
         DataType: NodePath
         Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Light Grey 6 - b6b6b6"

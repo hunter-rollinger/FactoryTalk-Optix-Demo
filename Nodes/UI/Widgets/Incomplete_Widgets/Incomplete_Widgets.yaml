@@ -1,5 +1,4 @@
 Name: Incomplete Widgets
-Id: g=91d9a86c692bfac8a52b2bde968e55f5
 Type: FolderType
 Children:
 - Name: CollapseMenu
@@ -8,795 +7,651 @@ Children:
   ReferenceType: HasComponent
   Children:
   - Name: Width
-    Id: g=a31c1dc310422f8f4c2ff330539cd9f1
     Type: BaseVariableType
     DataType: Size
     ModellingRule: Optional
     Value: -1.0
   - Name: Height
-    Id: g=e839da8e847c82d024ad07e2db4cad48
     Type: BaseVariableType
     DataType: Size
     ModellingRule: Optional
     Value: 98.0
   - Name: CollapseButtonExpand
-    Id: g=47882890023e8119e19e634206bb36a3
     Type: Panel
     Children:
     - Name: Width
-      Id: g=27b5e4a5e0471de1b20c5700442804bd
       Type: BaseVariableType
       DataType: Size
       ModellingRule: Optional
       Value: 114.0
     - Name: Height
-      Id: g=50058fe5a09d5f47de1b1e9f96e569de
       Type: BaseVariableType
       DataType: Size
       ModellingRule: Optional
       Value: 98.0
     - Name: Background
-      Id: g=56771fe79c0f658dae1de8fb067fc399
       Type: Rectangle
       Children:
       - Name: Width
-        Id: g=f3b79926fce7fbda9a57c6e8e1c59332
         Type: BaseVariableType
         DataType: Size
         ModellingRule: Optional
         Value: 98.0
       - Name: Height
-        Id: g=61bcec88b2f9672e2f5b91d448b648df
         Type: BaseVariableType
         DataType: Size
         ModellingRule: Optional
         Value: 98.0
       - Name: BorderThickness
-        Id: g=6c10f4c206b445388877d8e837137b4f
         Type: BaseDataVariableType
         DataType: Size
         ModellingRule: Optional
         Value: 2.0
       - Name: CornerRadius
-        Id: g=e66440b7c0db59847c376fcbfb0dd89c
         Type: BaseDataVariableType
         DataType: Size
         ModellingRule: Optional
         Value: 8.0
       - Name: FillColor
-        Id: g=62621bc71ce897c8af065176396208b9
         Type: BaseDataVariableType
         DataType: Color
         Value: "#ffffff"
         Children:
         - Name: ExpressionEvaluator1
-          Id: g=4995c15f86ce498c423c81effab14409
           Type: ExpressionEvaluator
           Children:
           - Name: Expression
-            Id: g=48b4b5ef0690c26e9104c3728d930200
             Type: BaseDataVariableType
             DataType: String
             ReferenceType: HasParameter
             ModellingRule: Optional
             Value: "if({0}!={1},{2},{3})"
           - Name: ns=9;Source0
-            Id: g=998fb94987831a6c32ff90afa4fde8e9
             Type: BaseDataVariableType
             DataType: BaseDataType
             ReferenceType: HasSource
             Children:
             - Name: DynamicLink
-              Id: g=98754d485d4d57fa42b1da05b2066f08
               Type: DynamicLink
               DataType: NodePath
               Value: "{Standard_Content}/Panel@NodeId"
           - Name: ns=9;Source1
-            Id: g=424b05f29f416cd05ea417718d95ffc0
             Type: BaseDataVariableType
             DataType: BaseDataType
             ReferenceType: HasSource
             Children:
             - Name: DynamicLink
-              Id: g=eb081be235d36385078a9dd71c49fcaa
               Type: DynamicLink
               DataType: NodePath
               Value: "../../../../Screen@NodeId"
           - Name: ns=9;Source2
-            Id: g=3e049007ee4a8122485eaa112e99e19e
             Type: BaseDataVariableType
             DataType: BaseDataType
             ReferenceType: HasSource
             Children:
             - Name: DynamicLink
-              Id: g=949ee910598ba5e687f9da9e26a4f799
               Type: DynamicLink
               DataType: NodePath
               Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Light Grey 1 - ffffff - White"
           - Name: ns=9;Source3
-            Id: g=c6ec7e56b3184634a8a58d012f0bb6d6
             Type: BaseDataVariableType
             DataType: BaseDataType
             ReferenceType: HasSource
             Children:
             - Name: DynamicLink
-              Id: g=2ad0b461041e9246851fb37cbe76c33b
               Type: DynamicLink
               DataType: NodePath
               Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Selected - 6d91b6 - Info - Blue"
       - Name: VerticalAlignment
-        Id: g=0c53921f9bda42dc010255a1e16ed5a9
         Type: BaseVariableType
         DataType: VerticalAlignment
         ModellingRule: Optional
         Value: 3
       - Name: HorizontalAlignment
-        Id: g=225587f3eedb35a576f7e3740df7bf30
         Type: BaseVariableType
         DataType: HorizontalAlignment
         ModellingRule: Optional
         Value: 3
     - Name: Label
-      Id: g=a0364368835bb1524214850550f60aa0
       Type: Label
       Children:
       - Name: Text
-        Id: g=003d0a3a2cb10e10134e3fbcbfaadfd1
         Type: BaseDataVariableType
         DataType: LocalizedText
         Children:
         - Name: DynamicLink
-          Id: g=b80485988abebf26c457f87047f3aa0d
           Type: DynamicLink
           DataType: NodePath
           Value: "../../Button Text"
       - Name: VerticalAlignment
-        Id: g=4b9b9839aee4726eef26227c116b2c83
         Type: BaseVariableType
         DataType: VerticalAlignment
         ModellingRule: Optional
         Value: 3
       - Name: HorizontalAlignment
-        Id: g=2870ccba50ee8ce9a4282f216628fbd6
         Type: BaseVariableType
         DataType: HorizontalAlignment
         ModellingRule: Optional
         Value: 3
       - Name: TopMargin
-        Id: g=1f7c74a8a185e47b647354a8317a9468
         Type: BaseVariableType
         DataType: Size
         ModellingRule: Optional
         Value: 58.0
       - Name: TextHorizontalAlignment
-        Id: g=15d64ab307d8a6bae7c84d03d846e4b4
         Type: BaseVariableType
         DataType: TextHorizontalAlignment
         ModellingRule: Optional
         Value: 1
       - Name: TextVerticalAlignment
-        Id: g=735942a1db9b99384a36e90ac599d768
         Type: BaseVariableType
         DataType: TextVerticalAlignment
         ModellingRule: Optional
         Value: 1
       - Name: WordWrap
-        Id: g=72be0daf373aa8e4a270001782519f6d
         Type: BaseDataVariableType
         DataType: Boolean
         ModellingRule: Optional
         Value: true
       - Name: Elide
-        Id: g=207c1d1e2b24aa6942296c6a49eb2b45
         Type: BaseDataVariableType
         DataType: ElideEnum
         ModellingRule: Optional
         Value: 3
       - Name: FontFamily
-        Id: g=9ad67834bbf01dbd5651aced08834688
         Type: BaseDataVariableType
         DataType: Font
         ModellingRule: Optional
         Value: "Roboto Condensed"
       - Name: FontSize
-        Id: g=6966176c1327ecb48f33673a6912be09
         Type: BaseDataVariableType
         DataType: Size
         Value: 16.0
       - Name: FontWeight
-        Id: g=e1cbb8c89de3fceeaa509b26d25f666c
         Type: BaseDataVariableType
         DataType: FontWeightEnum
         ModellingRule: Optional
         Value: 400
       - Name: Style
-        Id: g=db4adcf15039f47dab3b4e314bbc1540
         Type: BaseDataVariableType
         DataType: String
         ModellingRule: Optional
         Value: "MenuBar"
       - Name: Width
-        Id: g=83dcb38efabcd99f0076c1846d0c7626
         Type: BaseVariableType
         DataType: Size
         ModellingRule: Optional
         Value: -1.0
       - Name: RightMargin
-        Id: g=fa61fdc97efa0ad927f0e1f1c3cce38a
         Type: BaseVariableType
         DataType: Size
         ModellingRule: Optional
         Value: 21.0
       - Name: LeftMargin
-        Id: g=aeab28b6a2718ea65eef3a31cf96f230
         Type: BaseVariableType
         DataType: Size
         ModellingRule: Optional
         Value: 5.0
       - Name: BottomMargin
-        Id: g=693b10896ac1c70c558981ebf6c339c0
         Type: BaseVariableType
         DataType: Size
         ModellingRule: Optional
         Value: 5.0
       - Name: TextColor
-        Id: g=3caae61d7518325ecf46c1c9ea81653c
         Type: BaseDataVariableType
         DataType: Color
         Value: "#000000"
         Children:
         - Name: ExpressionEvaluator1
-          Id: g=094126d9699743daa3d331faf740e4ff
           Type: ExpressionEvaluator
           Children:
           - Name: Expression
-            Id: g=b04f2fa7ae3bdc0b9a1a8aa805ec7471
             Type: BaseDataVariableType
             DataType: String
             ReferenceType: HasParameter
             ModellingRule: Optional
             Value: "if({0}!={1},{2},{3})"
           - Name: ns=9;Source0
-            Id: g=7d65bd55285ba5ae8ad689b1418827b6
             Type: BaseDataVariableType
             DataType: BaseDataType
             ReferenceType: HasSource
             Children:
             - Name: DynamicLink
-              Id: g=9a76adcb6445e6a3855530a9bf364c55
               Type: DynamicLink
               DataType: NodePath
               Value: "{Standard_Content}/Panel@NodeId"
           - Name: ns=9;Source1
-            Id: g=e14d247bda511431e3afd1ebaaa20c98
             Type: BaseDataVariableType
             DataType: BaseDataType
             ReferenceType: HasSource
             Children:
             - Name: DynamicLink
-              Id: g=3053376115a0407cc9716850d1592f83
               Type: DynamicLink
               DataType: NodePath
               Value: "../../../../Screen@NodeId"
           - Name: ns=9;Source2
-            Id: g=6283e7f963f37832f2d7b12aab9ee3e3
             Type: BaseDataVariableType
             DataType: BaseDataType
             ReferenceType: HasSource
             Children:
             - Name: DynamicLink
-              Id: g=a9bdf22391ad85fc7a263037781185c4
               Type: DynamicLink
               DataType: NodePath
               Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Dark Grey 6 - 000000 - Black"
           - Name: ns=9;Source3
-            Id: g=bc05711eb9427aa3929bca5eec463d8e
             Type: BaseDataVariableType
             DataType: BaseDataType
             ReferenceType: HasSource
             Children:
             - Name: DynamicLink
-              Id: g=2971b0ba7d5fadcc3e289a51d50bf655
               Type: DynamicLink
               DataType: NodePath
               Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Light Grey 1 - ffffff - White"
     - Name: Image
-      Id: g=41040c18c68cc1e5da2bae7e006fcb0f
       Type: Image
       Children:
       - Name: Path
-        Id: g=e59be700ce0262a99dc166818fce9aae
         Type: BaseDataVariableType
         DataType: ResourceUri
         Children:
         - Name: ExpressionEvaluator1
-          Id: g=8cc68f51d656838fe6760bc25785f86c
           Type: ExpressionEvaluator
           Children:
           - Name: Expression
-            Id: g=dcf23545f390bd32782628cede5e5f92
             Type: BaseDataVariableType
             DataType: String
             ReferenceType: HasParameter
             ModellingRule: Optional
             Value: "if({0}=={1},{2},{3})"
           - Name: ns=9;Source0
-            Id: g=e223b83bcd989d363c1c88a8cd4d38d6
             Type: BaseDataVariableType
             DataType: BaseDataType
             ReferenceType: HasSource
             Children:
             - Name: DynamicLink
-              Id: g=2b5bfddd9b6c85a6be699772d341f0b2
               Type: DynamicLink
               DataType: NodePath
               Value: "{Standard_Content}/Panel@NodeId"
           - Name: ns=9;Source1
-            Id: g=d46596427665e4a09044da50dbd2e420
             Type: BaseDataVariableType
             DataType: BaseDataType
             ReferenceType: HasSource
             Children:
             - Name: DynamicLink
-              Id: g=770c6f49694c43ef8c1cdddadf03904d
               Type: DynamicLink
               DataType: NodePath
               Value: "../../../../Screen@NodeId"
           - Name: ns=9;Source2
-            Id: g=fbed3f317efb7bcf413b8c02741eed13
             Type: BaseDataVariableType
             DataType: BaseDataType
             ReferenceType: HasSource
             Children:
             - Name: DynamicLink
-              Id: g=ce8d5a3a3216b4ad66e8e9eff0c56e66
               Type: DynamicLink
               DataType: NodePath
               Value: "../../../../Selected Image"
           - Name: ns=9;Source3
-            Id: g=dc564cf146b13f86377394f8846c2c7b
             Type: BaseDataVariableType
             DataType: BaseDataType
             ReferenceType: HasSource
             Children:
             - Name: DynamicLink
-              Id: g=3731d4e3f9f3cf1c3bc01d0a28b3acaa
               Type: DynamicLink
               DataType: NodePath
               Value: "../../../../Standard Image"
       - Name: Width
-        Id: g=7a454db817894961620c9e5a510c580e
         Type: BaseVariableType
         DataType: Size
         ModellingRule: Optional
         Value: 48.0
       - Name: Height
-        Id: g=c98b01f0b93355c3185dba92725ae6e8
         Type: BaseVariableType
         DataType: Size
         ModellingRule: Optional
         Value: 48.0
       - Name: VerticalAlignment
-        Id: g=fdba8c55f87bebf36e135ebfb2fc1037
         Type: BaseVariableType
         DataType: VerticalAlignment
         ModellingRule: Optional
       - Name: HorizontalAlignment
-        Id: g=fb072aece08ecf3b606e1164186265b9
         Type: BaseVariableType
         DataType: HorizontalAlignment
         ModellingRule: Optional
         Value: 2
       - Name: TopMargin
-        Id: g=e4d2c3e53b9284a365f208f93648fc70
         Type: BaseVariableType
         DataType: Size
         ModellingRule: Optional
         Value: 9.0
       - Name: ColorizationMode
-        Id: g=3ea49c5bc4739447b558c0a10483bd7f
         Type: BaseDataVariableType
         DataType: ColorizationModeEnum
         ModellingRule: Optional
       - Name: DynamicColor
-        Id: g=31048e09d0b6cfd5959935ef77dbf9c1
         Type: BaseDataVariableType
         DataType: Color
         ModellingRule: Optional
         Value: "#000000"
       - Name: LeftMargin
-        Id: g=fdc5c00608a4440b61d7917cb389dca5
         Type: BaseVariableType
         DataType: Size
         ModellingRule: Optional
       - Name: RightMargin
-        Id: g=961fe6199270144a3095dac3c906f987
         Type: BaseVariableType
         DataType: Size
         ModellingRule: Optional
         Value: 16.0
     - Name: Expand Button
-      Id: g=479aba8a0ae6e28c22bfc46db87b98cf
       Type: Rectangle
       Children:
       - Name: Width
-        Id: g=f53868d841909dc63604d71787579b89
         Type: BaseVariableType
         DataType: Size
         ModellingRule: Optional
         Value: 16.0
       - Name: Height
-        Id: g=f4c04b3f364105b912643d5477e9d4d7
         Type: BaseVariableType
         DataType: Size
         ModellingRule: Optional
         Value: 50.0
       - Name: VerticalAlignment
-        Id: g=a2d0ed43cfc911c2936dfc2c9a34310b
         Type: BaseVariableType
         DataType: VerticalAlignment
         ModellingRule: Optional
         Value: 3
       - Name: HorizontalAlignment
-        Id: g=211eb81a86f28fd3c592fc35235f12fe
         Type: BaseVariableType
         DataType: HorizontalAlignment
         ModellingRule: Optional
         Value: 1
       - Name: FillColor
-        Id: g=47b667f5c7485227d75806385a5c368b
         Type: BaseDataVariableType
         DataType: Color
         Value: "#404040"
         Children:
         - Name: DynamicLink
-          Id: g=00793b5c8452ebe049717345f99a3ebd
           Type: DynamicLink
           DataType: NodePath
           Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Dark Grey 4 - 404040"
       - Name: CornerRadius
-        Id: g=9f974226e2168da77572827c339c7805
         Type: BaseDataVariableType
         DataType: Size
         ModellingRule: Optional
         Value: 8.0
       - Name: Left Half
-        Id: g=eeacd1ec726e433c75539abf2b254dff
         Type: Rectangle
         Children:
         - Name: Width
-          Id: g=202c5fa2658e4837316ecbc881fd5b7f
           Type: BaseVariableType
           DataType: Size
           ModellingRule: Optional
           Value: 8.0
         - Name: Height
-          Id: g=35d88edb95489a381c325b007352f292
           Type: BaseVariableType
           DataType: Size
           ModellingRule: Optional
           Value: 50.0
         - Name: HorizontalAlignment
-          Id: g=0b390de8821f6d226debb76922fa4a54
           Type: BaseVariableType
           DataType: HorizontalAlignment
           ModellingRule: Optional
           Value: 1
         - Name: VerticalAlignment
-          Id: g=4ab73a572dadf8c7b509ebea429c6947
           Type: BaseVariableType
           DataType: VerticalAlignment
           ModellingRule: Optional
           Value: 3
         - Name: RightMargin
-          Id: g=03e22a399d469832fbb7fd35dac54e44
           Type: BaseVariableType
           DataType: Size
           ModellingRule: Optional
           Value: 8.0
         - Name: FillColor
-          Id: g=834dc41e72612800bbc88ee204899f0a
           Type: BaseDataVariableType
           DataType: Color
           Value: "#404040"
           Children:
           - Name: DynamicLink
-            Id: g=ec2a4bd5e73af25fdc98bac991f0a9d6
             Type: DynamicLink
             DataType: NodePath
             Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Dark Grey 4 - 404040"
       - Name: Arrow
-        Id: g=d9f9037dfecdf441fe0a8ae35b720cd8
         Type: Image
         Children:
         - Name: Path
-          Id: g=4b01e0374d6cacd0f200c7a72b15b78b
           Type: BaseDataVariableType
           DataType: ResourceUri
           Value: "ns=36;%PROJECTDIR%/Graphics/Coesia - Library/General/32x32/expand-2.svg"
         - Name: Width
-          Id: g=23e57b6f324ea6fe7c6c8dc9c44eab82
           Type: BaseVariableType
           DataType: Size
           ModellingRule: Optional
           Value: 36.0
         - Name: Height
-          Id: g=6290f9addaebb86fb66b51115bdaa23f
           Type: BaseVariableType
           DataType: Size
           ModellingRule: Optional
           Value: 56.0
         - Name: LeftMargin
-          Id: g=4553322b4d5845d5f79f4b1f4b893ada
           Type: BaseVariableType
           DataType: Size
           ModellingRule: Optional
           Value: 80.0
         - Name: TopMargin
-          Id: g=ed8e6cfa004475acc3b305fbafdd6133
           Type: BaseVariableType
           DataType: Size
           ModellingRule: Optional
         - Name: HorizontalAlignment
-          Id: g=28ec2bae026b11f3bbce18a611d1916d
           Type: BaseVariableType
           DataType: HorizontalAlignment
           ModellingRule: Optional
           Value: 1
         - Name: VerticalAlignment
-          Id: g=c1ec6f2eedb7a7426c2c6bfc3b5a23d7
           Type: BaseVariableType
           DataType: VerticalAlignment
           ModellingRule: Optional
           Value: 2
         - Name: FillMode
-          Id: g=8b15c84e5f22a8c19ec254947cc46d66
           Type: BaseDataVariableType
           DataType: ImageFillModeEnum
           ModellingRule: Optional
           Value: 1
         - Name: RightMargin
-          Id: g=9a031f97713a905a1c0dc273c383b954
           Type: BaseVariableType
           DataType: Size
           ModellingRule: Optional
           Value: -10.0
     - Name: Button
-      Id: g=37932ce0994ff16fbe73cfdaec026fd4
       Type: Button
       Children:
       - Name: Text
-        Id: g=a12af1a93c49c10925a34e35246cf120
         Type: BaseDataVariableType
         DataType: LocalizedText
       - Name: Width
-        Id: g=e3d99fd7b9c605c4eff128f841c591d3
         Type: BaseVariableType
         DataType: Size
         ModellingRule: Optional
         Value: 98.0
       - Name: Height
-        Id: g=1a8a7c3a5d17394c1e4e579c734b4bee
         Type: BaseVariableType
         DataType: Size
         ModellingRule: Optional
         Value: 98.0
       - Name: Style
-        Id: g=1ae06790a40fb155b91b2c510bb43f56
         Type: BaseDataVariableType
         DataType: String
         ModellingRule: Optional
         Value: "MenuButton"
       - Name: ImagePath
-        Id: g=18b1b90ee26c19448665c88632880c33
         Type: BaseDataVariableType
         DataType: ResourceUri
       - Name: ImagePosition
-        Id: g=877acfca744e71401a2c5e1a95290d3d
         Type: BaseDataVariableType
         DataType: ButtonImagePosition
         ModellingRule: Optional
         Value: 10
       - Name: ImageWidth
-        Id: g=03ac74c818a85cdc21703feddae5ba1a
         Type: BaseDataVariableType
         DataType: Size
         ModellingRule: Optional
         Value: 48.0
       - Name: ImageHeight
-        Id: g=e04be825a1768bcf1bdd919d8bdcde9e
         Type: BaseDataVariableType
         DataType: Size
         ModellingRule: Optional
         Value: 48.0
       - Name: TextColor
-        Id: g=a18c45460de319227f15f2e48f16bebe
         Type: BaseDataVariableType
         DataType: Color
         ModellingRule: Optional
       - Name: BackgroundColor
-        Id: g=98a1e87fa2791e59d5ca92fd0246039f
         Type: BaseDataVariableType
         DataType: Color
         ModellingRule: Optional
       - Name: HorizontalAlignment
-        Id: g=b6b59c182fc42efc570bdb7476193f22
         Type: BaseVariableType
         DataType: HorizontalAlignment
         ModellingRule: Optional
         Value: 3
       - Name: VerticalAlignment
-        Id: g=f035361612296c93bc10068d2852b642
         Type: BaseVariableType
         DataType: VerticalAlignment
         ModellingRule: Optional
         Value: 3
     - Name: Visible
-      Id: g=58b75adb5b5135fda41f47782b3bb3c8
       Type: BaseDataVariableType
       DataType: Boolean
       Value: true
       Children:
       - Name: ExpressionEvaluator1
-        Id: g=16aed7bd5e8d39b13235492b8df6d828
         Type: ExpressionEvaluator
         Children:
         - Name: Expression
-          Id: g=1da4e29baf3687311da58112cf9178cf
           Type: BaseDataVariableType
           DataType: String
           ReferenceType: HasParameter
           ModellingRule: Optional
           Value: "!{0}"
         - Name: ns=9;Source0
-          Id: g=6754166b07f4dc50022fbd6daad33453
           Type: BaseDataVariableType
           DataType: BaseDataType
           ReferenceType: HasSource
           Children:
           - Name: DynamicLink
-            Id: g=1323b4ff62cfe69835b8c414fcda1cb5
             Type: DynamicLink
             DataType: NodePath
             Value: "../../../../CollapseMenuControl/CollapseMenuExpanded"
   - Name: ButtonMenu
-    Id: g=30639ed0d4595659b38d9812634b9315
     Type: Rectangle
     Children:
     - Name: Width
-      Id: g=c7a6a07963cf90b0aee8e22a1d19e07c
       Type: BaseVariableType
       DataType: Size
       ModellingRule: Optional
       Value: -1.0
     - Name: Height
-      Id: g=72972f08bd0796433a40ebb563c9d4f1
       Type: BaseVariableType
       DataType: Size
       ModellingRule: Optional
       Value: 50.0
     - Name: ButtonLayout
-      Id: g=b3f899461fec3266fa9856a6ecc99fe9
       Type: ColumnLayout
       Children:
       - Name: Width
-        Id: g=56397659a5c7e04090ef5f89565fce61
         Type: BaseVariableType
         DataType: Size
         ModellingRule: Optional
         Value: -1.0
       - Name: Height
-        Id: g=7f9c029cd24a2dbca12ebd0e0cf64521
         Type: BaseVariableType
         DataType: Size
         ModellingRule: Optional
         Value: 50.0
       - Name: LeftMargin
-        Id: g=acc798aeb8a114f4c3b5f8ad9093bee7
         Type: BaseVariableType
         DataType: Size
         ModellingRule: Optional
       - Name: TopMargin
-        Id: g=405e3a1fb306c3699d15cbbcd5e03700
         Type: BaseVariableType
         DataType: Size
         ModellingRule: Optional
       - Name: HorizontalAlignment
-        Id: g=441f6e5f11977fc5667449f60d2d6720
         Type: BaseVariableType
         DataType: HorizontalAlignment
         ModellingRule: Optional
       - Name: VerticalAlignment
-        Id: g=cd7e39a26933dd84341e5bb88127dc0c
         Type: BaseVariableType
         DataType: VerticalAlignment
         ModellingRule: Optional
         Value: 3
     - Name: Style
-      Id: g=1864f97831ad1471e773c54ffbfced3d
       Type: BaseDataVariableType
       DataType: String
       ModellingRule: Optional
       Value: "Default"
     - Name: FillColor
-      Id: g=7c8e9e850e0ecc36dce9a8f713c5d5e5
       Type: BaseDataVariableType
       DataType: Color
       Value: "#d9d9d9"
       Children:
       - Name: DynamicLink
-        Id: g=6497a91b63e65b835f73dce9da7f04b1
         Type: DynamicLink
         DataType: NodePath
         Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Light Grey 5 - d9d9d9"
     - Name: BorderThickness
-      Id: g=319095749c9b82fc0cc17c7fdc18b29a
       Type: BaseDataVariableType
       DataType: Size
       ModellingRule: Optional
       Value: 2.0
     - Name: BorderColor
-      Id: g=689b779861e47b69d2b1ce601c13482c
       Type: BaseDataVariableType
       DataType: Color
       Value: "#000000"
       Children:
       - Name: DynamicLink
-        Id: g=e3fd3f2a5e41ad6e62cc3c402e608dc4
         Type: DynamicLink
         DataType: NodePath
         Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Dark Grey 6 - 000000 - Black"
     - Name: CornerRadius
-      Id: g=5619e46c10bc4da214e95b50306e3a70
       Type: BaseDataVariableType
       DataType: Size
       ModellingRule: Optional
       Value: 8.0
     - Name: HorizontalAlignment
-      Id: g=cf76cb15412a46a56409b501d65bad9c
       Type: BaseVariableType
       DataType: HorizontalAlignment
       ModellingRule: Optional
     - Name: VerticalAlignment
-      Id: g=d61d6bdc81643651f93892744313c7a8
       Type: BaseVariableType
       DataType: VerticalAlignment
       ModellingRule: Optional
       Value: 3
     - Name: LeftMargin
-      Id: g=19f50edbe22e2142d1f94e91e22d8b4e
       Type: BaseVariableType
       DataType: Size
       ModellingRule: Optional
     - Name: Visible
-      Id: g=ea27a3f7f628233ae58283fc0a0f254b
       Type: BaseDataVariableType
       DataType: Boolean
       ModellingRule: Optional
       Value: true
   - Name: Button Text
-    Id: g=bfa024672fcc7db621c11d7a9b5c8153
     Type: BaseDataVariableType
     DataType: String
     Description: {"LocaleId":"en-US","Text":"text to appear beneath image"}
   - Name: Standard Image
-    Id: g=c74db76d50600f5078d836dbba07c8b8
     Type: BaseDataVariableType
     DataType: ResourceUri
     Description: {"LocaleId":"en-US","Text":"image to go against white background"}
   - Name: Selected Image
-    Id: g=9a4a9727ac9688c50a09581120e546ed
     Type: BaseDataVariableType
     DataType: ResourceUri
     Description: {"LocaleId":"en-US","Text":"image to go against blue background"}
   - Name: CollapseMenuControl
-    Id: g=3bfbc67e3b56872fcad0bf5aff679ebe
     Type: NetLogic
     Children:
     - Name: CollapseMenuExpanded
-      Id: g=02bae9991b96a437eb60aea563879725
       Type: BaseDataVariableType
       DataType: Boolean
     - Class: Method
       Name: ToggleCollapseMenu
-      Id: g=377a95659f39ed9a1670592723861d15

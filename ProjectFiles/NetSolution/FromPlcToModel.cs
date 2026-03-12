@@ -19,6 +19,9 @@ using FTOptix.CommunicationDriver;
 using FTOptix.SerialPort;
 using FTOptix.Core;
 using FTOptix.DataLogger;
+using FTOptix.Recipe;
+using FTOptix.AuditSigning;
+using FTOptix.RecipeX;
 #endregion
 
 public class FromPlcToModel : BaseNetLogic

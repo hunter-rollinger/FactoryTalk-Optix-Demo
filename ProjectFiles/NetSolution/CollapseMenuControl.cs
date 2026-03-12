@@ -24,6 +24,7 @@ using FTOptix.Core;
 using FTOptix.SerialPort;
 using FTOptix.OPCUAServer;
 using FTOptix.System;
+using FTOptix.AuditSigning;
 #endregion
 
 public class CollapseMenuControl : BaseNetLogic {

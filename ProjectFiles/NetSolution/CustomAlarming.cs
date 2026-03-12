@@ -24,6 +24,7 @@ using FTOptix.TwinCAT;
 using FTOptix.UI;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Data.SqlTypes;
 using System.Diagnostics;
 using System.Linq;
@@ -41,7 +42,7 @@ public class CustomAlarming : BaseNetLogic
 {
 	#region startup / stop
 	public override void Start() {
-        Debugger.Launch();
+        //Debugger.Launch();
 		burgerMenuScreen = (BurgerMenu)InformationModel.Get((NodeId)LogicObject.GetVariable("BurgerMenuScreen").Value);
 		debugMenu = (PanelLoader)InformationModel.Get((NodeId)LogicObject.GetVariable("DebugMenu").Value);
 		standardQuickInfo = (PanelLoader)InformationModel.Get((NodeId)LogicObject.GetVariable("StandardQuickInfo").Value);
@@ -161,9 +162,8 @@ public class CustomAlarming : BaseNetLogic
             alarmsDB = InformationModel.Get<SQLiteStore>(logicNode.GetVariable("AlarmsDatabase").Value);
             dbTable = InformationModel.Get(logicNode.GetVariable("DatabaseTable").Value).BrowseName;
             colReceiveTime = InformationModel.Get(logicNode.GetVariable("TableReceiveTime").Value).BrowseName;
-			colNodeId = InformationModel.Get(logicNode.GetVariable("TableAlarmNodeId").Value).BrowseName;
+			colAlarmActive = InformationModel.Get(logicNode.GetVariable("TableAlarmActive").Value).BrowseName;
 			colUtcTime = InformationModel.Get(logicNode.GetVariable("TableUtcTime").Value).BrowseName;
-			colLocalTime = InformationModel.Get(logicNode.GetVariable("TableLocalTime").Value).BrowseName;
 			colCondName = InformationModel.Get(logicNode.GetVariable("TableConditionName").Value).BrowseName;
 
 			retainedAlarmsCount.Value = retainedAlarms.Count;
@@ -236,7 +236,7 @@ public class CustomAlarming : BaseNetLogic
 				object[,] result;
 				string[] header;
                 try {
-                    string query = $"UPDATE {dbTable} SET {colReceiveTime}=(SELECT {colUtcTime} FROM {dbTable} WHERE {colCondName}='{targetNode.BrowseName}' ORDER BY {colUtcTime} DESC LIMIT 1), {colNodeId}='{targetNode.NodeId}' WHERE rowid=(SELECT rowid FROM {dbTable} ORDER BY {colUtcTime} DESC LIMIT 1)";
+                    string query = $"UPDATE {dbTable} SET {colReceiveTime}=(SELECT {colUtcTime} FROM {dbTable} WHERE {colCondName}='{targetNode.BrowseName}' AND {colAlarmActive}=1 ORDER BY {colUtcTime} DESC LIMIT 1) WHERE rowid=(SELECT rowid FROM {dbTable} WHERE {colCondName}='{targetNode.BrowseName}' ORDER BY {colUtcTime} DESC LIMIT 1)";
 					Log.Info("CustomAlarming", $"Executing query to set NodeId for latest alarm: {query}");
 					alarmsDB.Query(query, out header, out result);
                 } catch { Log.Error("CustomAlarming", "Error when setting NodeId for the latest alarm. Start checking at end of OnReferenceAdded method in NetLogic."); }
@@ -249,14 +249,14 @@ public class CustomAlarming : BaseNetLogic
 				string[] header;
                 try {
                     // get row info
-                    string query = $"SELECT {colReceiveTime} FROM {dbTable} WHERE {colNodeId}='{targetNode.NodeId}'";
+                    string query = $"SELECT {colReceiveTime} FROM {dbTable} WHERE {colCondName}='{targetNode.BrowseName}' AND {colAlarmActive}=1 ORDER BY {colUtcTime} DESC LIMIT 1";
                     Log.Info("CustomAlarming", $"Executing query to set NodeId for latest alarm: {query}");
                     alarmsDB.Query(query, out header, out result);
                     DateTime dtObject = (DateTime)result[0, 0];
-                    string dateTime = dtObject.ToString("yyyy-MM-ddTHH:mm:ss:fffffff");
+                    string dateTime = dtObject.ToString("yyyy-MM-ddTHH:mm:ss.fffffff");
 
                     // set row info
-                    query = $"UPDATE {dbTable} SET {colReceiveTime}='{dateTime}', {colNodeId}='{targetNode.NodeId}' WHERE rowid=(SELECT rowid FROM {dbTable} ORDER BY {colUtcTime} DESC LIMIT 1)";
+                    query = $"UPDATE {dbTable} SET {colReceiveTime}='{dateTime}' WHERE rowid=(SELECT rowid FROM {dbTable} WHERE {colCondName}='{targetNode.BrowseName}' ORDER BY {colUtcTime} DESC LIMIT 1)";
 					Log.Info("CustomAlarming", $"Executing query to set NodeId for latest alarm: {query}");
 					alarmsDB.Query(query, out header, out result);
 				} catch { Log.Error("CustomAlarming", "DB Query Error. See OnReferenceRemoved in NetLogic."); }
@@ -265,9 +265,12 @@ public class CustomAlarming : BaseNetLogic
                 if (alarmIndex == -1) {
                     Log.Error($"The alarm {targetNode.NodeId} was not fond in the alarm banner list");
                     return;
-                }
+				}
+;
+				if (GetActiveAlarmIDs().Count == 0)
+					popupTriggered = false;
 
-                if (alarmIndex < currentIndex)
+				if (alarmIndex < currentIndex)
                     currentIndex--;
 
                 retainedAlarms.RemoveAt(alarmIndex);
@@ -291,9 +294,6 @@ public class CustomAlarming : BaseNetLogic
                         StartRotation();
                     }
 				}
-;
-				if (GetActiveAlarmIDs().Count == 0)
-					popupTriggered = false;
 
 				IContext context = logicNode.Context;
                 var localRetainedAlarms = context.GetNode(FTOptix.Alarm.Objects.RetainedAlarms);
@@ -320,24 +320,33 @@ public class CustomAlarming : BaseNetLogic
         {
             List<int> alarmIDs = [];
 
-            for (int i = 0; i < retainedAlarms.Count; ++i)
-            {
-                var alarmID = retainedAlarms[i];
-                if (alarmID != null)
-                {
-                    IUANode alarmController = InformationModel.Get(alarmID);
-                    if (InformationModel.Get<AlarmController>(alarmController.GetVariable("ConditionId").Value) != null)
-                    {
-                        DigitalAlarm alarm = InformationModel.Get<DigitalAlarm>(alarmController.GetVariable("ConditionId").Value);
-                        if (alarm.Severity == alarmSeverityLevel)
-                        {
-                            alarmIDs.Add(i);
-                        }
-                    }
-                }
-            }
+			for (int i = 0; i < retainedAlarms.Count; ++i) {
+				var alarmID = retainedAlarms[i];
+				if (alarmID == null || alarmID.IsEmpty)
+					continue;
 
-            return alarmIDs;
+				IUANode alarmController = InformationModel.Get(alarmID);
+				if (alarmController == null)
+					continue;
+
+				var conditionIdVar = alarmController.GetVariable("ConditionId");
+				if (conditionIdVar == null)
+					continue;
+
+				var conditionId = conditionIdVar.Value;
+				var alarmController2 = InformationModel.Get<AlarmController>(conditionId);
+				if (alarmController2 == null)
+					continue;
+
+				DigitalAlarm alarm = InformationModel.Get<DigitalAlarm>(conditionId);
+				if (alarm == null)
+					continue;
+
+				if (alarm.Severity == alarmSeverityLevel)
+					alarmIDs.Add(i);
+			}
+
+			return alarmIDs;
         }
         #endregion
         #region alarm popup
@@ -500,9 +509,8 @@ public class CustomAlarming : BaseNetLogic
         SQLiteStore alarmsDB;                           // get alarm database to add time to
 		string dbTable;                                 // get table in database of which to modify
         string colReceiveTime;                          // column name in table to set receive time
-		string colNodeId;                               // column in table to set nodeid for a uid to search
+		string colAlarmActive;                          // column in table to to get alarm active state
 		string colUtcTime;                              // column in table to sort by
-		string colLocalTime;                            // column in table to get timestamp from
 		string colCondName;                             // column in table to get the condition name (variable) from
 
 		#region IDisposable Support

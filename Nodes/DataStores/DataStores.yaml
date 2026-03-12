@@ -1,5 +1,4 @@
 Name: DataStores
-Id: g=3aa28fb3da035d6110cfdd8c47b79ac6
 Type: DataStoresCategoryFolder
 Children:
 - Name: Alarms
@@ -7,7 +6,6 @@ Children:
   Type: SQLiteStore
   Children:
   - Name: Tables
-    Id: g=6f84538a360b77714076b123bc968622
     Type: BaseObjectType
     Children:
     - Name: AlarmsEventLogger
@@ -27,23 +25,10 @@ Children:
         Target: ns=15;i=20
         Direction: Forward
       - Name: Columns
-        Id: g=dc2779de3b9c5b2d8cc8c594a9ddc785
         Type: BaseObjectType
         Children:
         - Name: ActiveState_Id
           Id: g=87c96448a9b10c878716945b960c44cb
-          Type: StoreColumn
-          DataType: Boolean
-        - Name: AckedState_Id
-          Id: g=d307d51056d42bf92725eed256fbd4e8
-          Type: StoreColumn
-          DataType: Boolean
-        - Name: ConfirmedState_Id
-          Id: g=0f40f4a6cba2b976d9b77c380014a53f
-          Type: StoreColumn
-          DataType: Boolean
-        - Name: EnabledState_Id
-          Id: g=8615edf72c4b2f87e5945bd8b47fb8fb
           Type: StoreColumn
           DataType: Boolean
         - Name: ConditionName
@@ -51,27 +36,21 @@ Children:
           Type: StoreColumn
           DataType: String
         - Name: SourceName
-          Id: g=3e1fe509d014bacb06940e39604075dd
           Type: StoreColumn
           DataType: String
         - Name: 'Message_en-US'
-          Id: g=bc0a5ecd34242e9e3bd475ba285a5c88
           Type: StoreColumn
           DataType: String
         - Name: 'Message_it-IT'
-          Id: g=524da0872276b1de0f828092aa2f420a
           Type: StoreColumn
           DataType: String
         - Name: 'Message_de-DE'
-          Id: g=a636236f814177fc68e50a65b833fc66
           Type: StoreColumn
           DataType: String
         - Name: 'Message_es-ES'
-          Id: g=f4c8f66a6f535b0284bf70bda8441192
           Type: StoreColumn
           DataType: String
         - Name: Severity
-          Id: g=585895ea80d9837d31f910a2a1ba9b7d
           Type: StoreColumn
           DataType: UInt16
         - Name: Time
@@ -86,12 +65,19 @@ Children:
           Id: g=abfd3bd57ef45fab06226bc24ac40dbd
           Type: StoreColumn
           DataType: UtcTime
-        - Name: AlarmNodeId
-          Id: g=10574329456c771c49494cc2a7dca211
+        - Name: 'Comment_en-US'
+          Type: StoreColumn
+          DataType: String
+        - Name: 'Comment_it-IT'
+          Type: StoreColumn
+          DataType: String
+        - Name: 'Comment_de-DE'
+          Type: StoreColumn
+          DataType: String
+        - Name: 'Comment_es-ES'
           Type: StoreColumn
           DataType: String
       - Name: RecordLimit
-        Id: g=94e7a4e3e5ebc89d6169338fc82d8009
         Type: BaseDataVariableType
         DataType: UInt32
         Value: 100000
@@ -102,24 +88,20 @@ Children:
     Target: ns=29;i=33
     Direction: Forward
   - Name: MaxColumnNameLength
-    Id: g=9219e1a6a61551089fdae1a54a38d163
     Type: BaseDataVariableType
     DataType: UInt32
     AccessLevel: Read
   - Name: MaxColumnCount
-    Id: g=2b879c933f0bbe32d9e7a67ba170e154
     Type: BaseDataVariableType
     DataType: UInt32
     AccessLevel: Read
   - Name: DataTypeCompatibilityMap
-    Id: g=f61d1acae3c5a11da65892b7b4a46f1d
     Type: BaseDataVariableType
     DataType: NodeId
     AccessLevel: Read
     ValueRank: OneOrMoreDimensions
     ArrayDimensions: [0,0]
   - Name: Status
-    Id: g=1f6b578ae28c5a57cf21add2cc098e18
     Type: PropertyType
     DataType: StoreStatus
     AccessLevel: Read
@@ -161,6 +143,124 @@ Children:
     Target: ns=15;i=67
     Direction: Forward
   - Name: InMemory
-    Id: g=ab7be6bfbf6141d480afffe79bad86fb
+    Type: BaseDataVariableType
+    DataType: Boolean
+- Name: VariableHistory
+  Id: g=1000d5519303c9e417d42591eb13a0d2
+  Type: SQLiteStore
+  Children:
+  - Name: Tables
+    Type: BaseObjectType
+    Children:
+    - Name: EventHistory
+      Type: SQLiteStoreTable
+      Children:
+      - Class: Reference
+        Target: ns=15;i=12
+        Direction: Forward
+      - Class: Reference
+        Target: ns=15;i=15
+        Direction: Forward
+      - Class: Reference
+        Target: ns=15;i=21
+        Direction: Forward
+      - Class: Reference
+        Target: ns=15;i=20
+        Direction: Forward
+      - Name: Columns
+        Type: BaseObjectType
+        Children:
+        - Name: LocalTime
+          Type: StoreColumn
+          DataType: DateTime
+        - Name: 'Message_en-US'
+          Type: StoreColumn
+          DataType: String
+        - Name: 'Message_it-IT'
+          Type: StoreColumn
+          DataType: String
+        - Name: 'Message_de-DE'
+          Type: StoreColumn
+          DataType: String
+        - Name: 'Message_es-ES'
+          Type: StoreColumn
+          DataType: String
+        - Name: Time
+          Type: StoreColumn
+          DataType: UtcTime
+        - Name: ClientUserId
+          Type: StoreColumn
+          DataType: String
+        - Name: NewValue
+          Type: StoreColumn
+          DataType: BaseDataType
+        - Name: OldValue
+          Type: StoreColumn
+          DataType: BaseDataType
+        - Name: SourceName
+          Type: StoreColumn
+          DataType: String
+  - Class: Reference
+    Target: ns=29;i=30
+    Direction: Forward
+  - Class: Reference
+    Target: ns=29;i=33
+    Direction: Forward
+  - Name: MaxColumnNameLength
+    Type: BaseDataVariableType
+    DataType: UInt32
+    AccessLevel: Read
+  - Name: MaxColumnCount
+    Type: BaseDataVariableType
+    DataType: UInt32
+    AccessLevel: Read
+  - Name: DataTypeCompatibilityMap
+    Type: BaseDataVariableType
+    DataType: NodeId
+    AccessLevel: Read
+    ValueRank: OneOrMoreDimensions
+    ArrayDimensions: [0,0]
+  - Name: Status
+    Type: PropertyType
+    DataType: StoreStatus
+    AccessLevel: Read
+    Value: 2
+  - Class: Reference
+    Target: ns=15;i=22
+    Direction: Forward
+  - Class: Reference
+    Target: ns=15;i=6
+    Direction: Forward
+  - Class: Reference
+    Target: ns=15;i=8
+    Direction: Forward
+  - Class: Reference
+    Target: ns=15;i=25
+    Direction: Forward
+  - Class: Reference
+    Target: ns=15;i=38
+    Direction: Forward
+  - Class: Reference
+    Target: ns=15;i=41
+    Direction: Forward
+  - Class: Reference
+    Target: ns=15;i=44
+    Direction: Forward
+  - Class: Reference
+    Target: ns=15;i=53
+    Direction: Forward
+  - Class: Reference
+    Target: ns=15;i=55
+    Direction: Forward
+  - Class: Reference
+    Target: ns=15;i=57
+    Direction: Forward
+  - Class: Reference
+    Target: ns=15;i=59
+    Direction: Forward
+  - Class: Reference
+    Target: ns=15;i=67
+    Direction: Forward
+  - Name: InMemory
     Type: BaseDataVariableType
     DataType: Boolean

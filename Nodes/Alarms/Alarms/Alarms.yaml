@@ -61,39 +61,39 @@ Children:
     DataType: BaseDataType
     ValueRank: OneDimension
     ArrayDimensions: [0]
-  - Name: Message
-    Id: g=edaae6f881890a93f55835af4f86a81f
-    Type: BaseDataVariableType
-    DataType: LocalizedText
-    Value: {"NamespaceIndex":36,"TextId":"PLC Communication Lost"}
-  - Name: Help_Text
-    Id: g=63fda606a93827bf3b32ba32c6bebc03
-    Type: BaseDataVariableType
-    DataType: String
-  - Name: Aux_Text
-    Id: g=e778cf1f3567efdc87a1c6e67ff3279d
-    Type: BaseDataVariableType
-    DataType: String
-  - Name: Image
-    Id: g=3ca2a784d7913afefe8f50cef570b4fe
-    Type: BaseDataVariableType
-    DataType: ResourceUri
-  - Name: Overview
-    Id: g=2b91e1aae49044271ba6c42c91600af4
-    Type: BaseDataVariableType
-    DataType: ResourceUri
   - Name: Severity
     Id: g=2afa28a49d9b67422949c6dcdebdb316
     Type: BaseDataVariableType
     DataType: UInt16
-    Value: 1000
+    Value: 1
     Children:
     - Name: DynamicLink
       Id: g=cf9fa40690743a0083eabfdf5954f156
       Type: DynamicLink
       DataType: NodePath
       Value: "/Objects/OptimateDemoProject/Alarms/AlarmSeverity/Alarm"
+  - Name: Message
+    Id: g=edaae6f881890a93f55835af4f86a81f
+    Type: BaseDataVariableType
+    DataType: LocalizedText
+    Value: {"NamespaceIndex":36,"TextId":"PLC Communication Lost"}
+  - Name: Help_Text
+    Id: g=912be3eb0b1e00b03a4da572cbd05f66
+    Type: BaseDataVariableType
+    DataType: String
+  - Name: Aux_Text
+    Id: g=8cf504f34dba828440ec9fef8c670102
+    Type: BaseDataVariableType
+    DataType: String
+  - Name: Image
+    Id: g=39d82801126ac41e2e60176c01bdb93f
+    Type: BaseDataVariableType
+    DataType: ResourceUri
+  - Name: Overview
+    Id: g=13062fb7261a2ea071e7688326047ec9
+    Type: BaseDataVariableType
+    DataType: ResourceUri
   - Name: Timestamp
-    Id: g=111ba93cfb01a3ea22d6521a77fea7b8
+    Id: g=d308f1e6e3542288df10347ba25f0c1c
     Type: BaseDataVariableType
     DataType: DateTime

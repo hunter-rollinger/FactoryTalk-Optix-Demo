@@ -12,6 +12,8 @@ using FTOptix.OPCUAServer;
 using FTOptix.System;
 using FTOptix.HMIProject;
 using FTOptix.DataLogger;
+using FTOptix.Recipe;
+using FTOptix.AuditSigning;
 #endregion
 
 public class ProductionStatisticsChart_NetLogic : BaseNetLogic

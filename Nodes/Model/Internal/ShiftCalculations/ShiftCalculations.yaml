@@ -1,0 +1,87 @@
+Name: ShiftCalculations
+Type: FolderType
+Children:
+- Name: AlarmTimeFormatted
+  Type: BaseDataVariableType
+  DataType: Duration
+  Children:
+  - Name: ExpressionEvaluator1
+    Type: ExpressionEvaluator
+    Children:
+    - Name: Expression
+      Type: BaseDataVariableType
+      DataType: String
+      ReferenceType: HasParameter
+      Value: "{0}*1000"
+    - Name: ns=9;Source0
+      Type: BaseDataVariableType
+      DataType: BaseDataType
+      ReferenceType: HasSource
+      Children:
+      - Name: DynamicLink
+        Type: DynamicLink
+        DataType: NodePath
+        Value: "../../../../../PLC Link Required/Production Time/AlarmTime"
+- Name: OperatorTimeFormatted
+  Type: BaseDataVariableType
+  DataType: Duration
+  Children:
+  - Name: ExpressionEvaluator1
+    Type: ExpressionEvaluator
+    Children:
+    - Name: Expression
+      Type: BaseDataVariableType
+      DataType: String
+      ReferenceType: HasParameter
+      Value: "{0}*1000"
+    - Name: ns=9;Source0
+      Type: BaseDataVariableType
+      DataType: BaseDataType
+      ReferenceType: HasSource
+      Children:
+      - Name: DynamicLink
+        Type: DynamicLink
+        DataType: NodePath
+        Value: "../../../../../PLC Link Required/Production Time/OperatorTime"
+- Name: RunTimeFormatted
+  Type: BaseDataVariableType
+  DataType: Duration
+  Children:
+  - Name: ExpressionEvaluator1
+    Type: ExpressionEvaluator
+    Children:
+    - Name: Expression
+      Type: BaseDataVariableType
+      DataType: String
+      ReferenceType: HasParameter
+      Value: "{0}*1000"
+    - Name: ns=9;Source0
+      Type: BaseDataVariableType
+      DataType: BaseDataType
+      ReferenceType: HasSource
+      Children:
+      - Name: DynamicLink
+        Type: DynamicLink
+        DataType: NodePath
+        Value: "../../../../../PLC Link Required/Production Time/RunTime"
+- Name: OutsideStopTimeFormatted
+  Type: BaseDataVariableType
+  DataType: Duration
+  Children:
+  - Name: ExpressionEvaluator1
+    Type: ExpressionEvaluator
+    Children:
+    - Name: Expression
+      Type: BaseDataVariableType
+      DataType: String
+      ReferenceType: HasParameter
+      Value: "{0}*1000"
+    - Name: ns=9;Source0
+      Type: BaseDataVariableType
+      DataType: BaseDataType
+      ReferenceType: HasSource
+      Children:
+      - Name: DynamicLink
+        Type: DynamicLink
+        DataType: NodePath
+        Value: "../../../../../PLC Link Required/Production Time/OutsideStopTime"
