@@ -307,7 +307,7 @@ Children:
         Type: NodePointer
         DataType: NodeId
         ReferenceType: HasProperty
-        Value: "/Objects/OptimateDemoProject/Model/PLC Link Required"
+        Value: "/Objects/OptimateDemoProject/Loggers/EventHistorySources"
         Children:
         - Name: Kind
           Type: PropertyType
@@ -479,3 +479,10 @@ Children:
             Type: DynamicLink
             DataType: NodePath
             Value: "../../../../EventArguments/SourceNode@BrowseName"
+    - Name: Recipe
+      Type: EventFieldToLog
+      DataType: String
+      ValueRank: Any
+  - Name: AddRecipeToLog
+    Type: NetLogic
+- File: EventHistorySources/EventHistorySources.yaml
