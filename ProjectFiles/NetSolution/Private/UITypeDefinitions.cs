@@ -60,6 +60,11 @@ public class Production_Loading : FTOptix.UI.Screen
 {
 }
 
+[MapType(NamespaceUri = "OptimateDemoProject", Guid = "6bffc4224bde635e6603c154767b73b3")]
+public class AlarmHistory : FTOptix.UI.Screen
+{
+}
+
 [MapType(NamespaceUri = "OptimateDemoProject", Guid = "dccc18444d54b63c438f4c359ab5800c")]
 public class RejectsByZone : FTOptix.UI.Screen
 {
@@ -92,6 +97,11 @@ public class Debug_Popup : FTOptix.UI.Popup
 
 [MapType(NamespaceUri = "OptimateDemoProject", Guid = "a97b14f33c1f4dff732b0346ab41ce03")]
 public class BurgerMenuBar : MenuBar
+{
+}
+
+[MapType(NamespaceUri = "OptimateDemoProject", Guid = "be0f5f0c3cd399b38360a916d9fb89f6")]
+public class EventHistory : FTOptix.UI.Screen
 {
 }
 
@@ -230,11 +240,6 @@ public class Changeover_Main : FTOptix.UI.Screen
 {
 }
 
-[MapType(NamespaceUri = "OptimateDemoProject", Guid = "cb5fcd2f528fd22475ed541049f4e7e2")]
-public class AlphaNumeric_Simple : FTOptix.UI.VirtualKeyboardPanel
-{
-}
-
 [MapType(NamespaceUri = "OptimateDemoProject", Guid = "c049c11533fc3b24614e7fd49b8690f8")]
 public class RecipeDisplay : FTOptix.UI.Dialog
 {
@@ -267,6 +272,11 @@ public class Debug_Variables : FTOptix.UI.Screen
 
 [MapType(NamespaceUri = "OptimateDemoProject", Guid = "1c6ebda258b0ee76eec69cceef96868c")]
 public class Debug_SystemInfo : FTOptix.UI.Screen
+{
+}
+
+[MapType(NamespaceUri = "OptimateDemoProject", Guid = "cb5fcd2f528fd22475ed541049f4e7e2")]
+public class AlphaNumeric_Simple : FTOptix.UI.VirtualKeyboardPanel
 {
 }
 
@@ -325,13 +335,13 @@ public class Multi_State_Indicator : FTOptix.UI.Panel
 {
 }
 
-[MapType(NamespaceUri = "OptimateDemoProject", Guid = "be4c4c38a6aa8e7e26f8ec8bf50b79d9")]
-public class PanelLoaderWithBack : FTOptix.UI.PanelLoader
+[MapType(NamespaceUri = "OptimateDemoProject", Guid = "22a26780d82d299ba5c0b4ca6cae12e6")]
+public class DigitalFeedbackCounter : FTOptix.UI.Panel
 {
 }
 
-[MapType(NamespaceUri = "OptimateDemoProject", Guid = "22a26780d82d299ba5c0b4ca6cae12e6")]
-public class DigitalFeedbackCounter : FTOptix.UI.Panel
+[MapType(NamespaceUri = "OptimateDemoProject", Guid = "be4c4c38a6aa8e7e26f8ec8bf50b79d9")]
+public class PanelLoaderWithBack : FTOptix.UI.PanelLoader
 {
 }
 
@@ -390,13 +400,13 @@ public class CollapseMenu : FTOptix.UI.Panel
 {
 }
 
-[MapType(NamespaceUri = "OptimateDemoProject", Guid = "a09c4cc08219b78c8d6d8b07c6a71192")]
-public class CalendarPicker : FTOptix.UI.Rectangle
+[MapType(NamespaceUri = "OptimateDemoProject", Guid = "b119615661d25d59965b75c66fc740b5")]
+public class Analysis : FTOptix.UI.Screen
 {
 }
 
-[MapType(NamespaceUri = "OptimateDemoProject", Guid = "6bffc4224bde635e6603c154767b73b3")]
-public class AlarmHistory : FTOptix.UI.Screen
+[MapType(NamespaceUri = "OptimateDemoProject", Guid = "5bf654c77f18a45502d0c82e6b912a8b")]
+public class ShiftStatistics : FTOptix.UI.Screen
 {
 }
 
@@ -445,13 +455,8 @@ public class BasicSwitchPushButton : FTOptix.UI.Button
 {
 }
 
-[MapType(NamespaceUri = "OptimateDemoProject", Guid = "09729a28f8e879ce7c75f655034a218c")]
-public class CalendarPickerElement : FTOptix.UI.Rectangle
-{
-}
-
-[MapType(NamespaceUri = "OptimateDemoProject", Guid = "bbd28155a406d75157573b23ec4083ec")]
-public class CalendarPickerDialog : FTOptix.UI.Panel
+[MapType(NamespaceUri = "OptimateDemoProject", Guid = "a09c4cc08219b78c8d6d8b07c6a71192")]
+public class CalendarPicker : FTOptix.UI.Rectangle
 {
 }
 
@@ -460,17 +465,12 @@ public class NodesCounterPanel : FTOptix.UI.Panel
 {
 }
 
-[MapType(NamespaceUri = "OptimateDemoProject", Guid = "be0f5f0c3cd399b38360a916d9fb89f6")]
-public class EventHistory : FTOptix.UI.Screen
+[MapType(NamespaceUri = "OptimateDemoProject", Guid = "09729a28f8e879ce7c75f655034a218c")]
+public class CalendarPickerElement : FTOptix.UI.Rectangle
 {
 }
 
-[MapType(NamespaceUri = "OptimateDemoProject", Guid = "b119615661d25d59965b75c66fc740b5")]
-public class Analysis : FTOptix.UI.Screen
-{
-}
-
-[MapType(NamespaceUri = "OptimateDemoProject", Guid = "5bf654c77f18a45502d0c82e6b912a8b")]
-public class ShiftStatistics : FTOptix.UI.Screen
+[MapType(NamespaceUri = "OptimateDemoProject", Guid = "bbd28155a406d75157573b23ec4083ec")]
+public class CalendarPickerDialog : FTOptix.UI.Panel
 {
 }

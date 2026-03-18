@@ -36,6 +36,7 @@ namespace OptimateDemoProject
         public static readonly NodeId MenuBar = new NodeId(namespaceIndex, new Guid("d13f2f6fe136a32b8ce6472de8c91cef"));
         public static readonly NodeId Empty = new NodeId(namespaceIndex, new Guid("c8b3cd8f931c33ed8b2c01b7f05167ba"));
         public static readonly NodeId Production_Loading = new NodeId(namespaceIndex, new Guid("61a4cb2dcde203f40cf4588b69cf7603"));
+        public static readonly NodeId AlarmHistory = new NodeId(namespaceIndex, new Guid("6bffc4224bde635e6603c154767b73b3"));
         public static readonly NodeId RejectsByZone = new NodeId(namespaceIndex, new Guid("dccc18444d54b63c438f4c359ab5800c"));
         public static readonly NodeId Template_Screen = new NodeId(namespaceIndex, new Guid("08231cb9559a2a842103718567e83555"));
         public static readonly NodeId Template_ServoReference = new NodeId(namespaceIndex, new Guid("fbe363a18543559c6f2b0b440d5270c7"));
@@ -43,6 +44,7 @@ namespace OptimateDemoProject
         public static readonly NodeId BurgerMenu = new NodeId(namespaceIndex, new Guid("c89e7739efa5fb2f892bde11a2aa6b17"));
         public static readonly NodeId Debug_Popup = new NodeId(namespaceIndex, new Guid("1e70a1a0a42b9cdd51e8f1c611f313f8"));
         public static readonly NodeId BurgerMenuBar = new NodeId(namespaceIndex, new Guid("a97b14f33c1f4dff732b0346ab41ce03"));
+        public static readonly NodeId EventHistory = new NodeId(namespaceIndex, new Guid("be0f5f0c3cd399b38360a916d9fb89f6"));
         public static readonly NodeId Production_Home = new NodeId(namespaceIndex, new Guid("507f1eeb7dc2b29bd3f1fee927d5f928"));
         public static readonly NodeId Maintenance_Carton_Feed = new NodeId(namespaceIndex, new Guid("5273ef4521aba268c7a0bac2cb6fb8ef"));
         public static readonly NodeId Production_Transfer = new NodeId(namespaceIndex, new Guid("58ccd3f928ca16d11e2c4e46da8ec1cb"));
@@ -70,7 +72,6 @@ namespace OptimateDemoProject
         public static readonly NodeId Debug_ProjectSimulation = new NodeId(namespaceIndex, new Guid("4d4cf3cb8d5e44905ded4ea601aa9bb6"));
         public static readonly NodeId Maintenance_Loading = new NodeId(namespaceIndex, new Guid("4bab689b1bbc3287355556f28fb5d5e6"));
         public static readonly NodeId Changeover_Main = new NodeId(namespaceIndex, new Guid("ae721355ffe738149606332ce3fd551f"));
-        public static readonly NodeId AlphaNumeric_Simple = new NodeId(namespaceIndex, new Guid("cb5fcd2f528fd22475ed541049f4e7e2"));
         public static readonly NodeId RecipeDisplay = new NodeId(namespaceIndex, new Guid("c049c11533fc3b24614e7fd49b8690f8"));
         public static readonly NodeId NumericEntry_Cams = new NodeId(namespaceIndex, new Guid("c9f6f1e2dfa068cf4dbd2d0eb4556116"));
         public static readonly NodeId Overview = new NodeId(namespaceIndex, new Guid("024a29d60cbc2f26d0f2fc5a2d03dbe6"));
@@ -78,6 +79,7 @@ namespace OptimateDemoProject
         public static readonly NodeId Debug_Menu = new NodeId(namespaceIndex, new Guid("e0d040a7c3f4e13d67abacb54754d0ea"));
         public static readonly NodeId Debug_Variables = new NodeId(namespaceIndex, new Guid("7c976d477b0b1e19722718d27e3fd3ed"));
         public static readonly NodeId Debug_SystemInfo = new NodeId(namespaceIndex, new Guid("1c6ebda258b0ee76eec69cceef96868c"));
+        public static readonly NodeId AlphaNumeric_Simple = new NodeId(namespaceIndex, new Guid("cb5fcd2f528fd22475ed541049f4e7e2"));
         public static readonly NodeId Numeric_Simple = new NodeId(namespaceIndex, new Guid("afb36c7bfdad4e20cbe181fcb20dbe7e"));
         public static readonly NodeId AlphaNumeric = new NodeId(namespaceIndex, new Guid("ac3f76e888a5e3fdd2691155ca1fc8f6"));
         public static readonly NodeId Numeric = new NodeId(namespaceIndex, new Guid("4579fdf18bdfdaa64772eba31d350d66"));
@@ -89,8 +91,8 @@ namespace OptimateDemoProject
         public static readonly NodeId Position_Dispaly = new NodeId(namespaceIndex, new Guid("216c0c2f4e5ed9b91680fcd43f42c553"));
         public static readonly NodeId Shift_StatisticDisplay = new NodeId(namespaceIndex, new Guid("7233291c453535c0d739de933f626938"));
         public static readonly NodeId Multi_State_Indicator = new NodeId(namespaceIndex, new Guid("224c34cc61384d476566fc8fbc37b72f"));
-        public static readonly NodeId PanelLoaderWithBack = new NodeId(namespaceIndex, new Guid("be4c4c38a6aa8e7e26f8ec8bf50b79d9"));
         public static readonly NodeId DigitalFeedbackCounter = new NodeId(namespaceIndex, new Guid("22a26780d82d299ba5c0b4ca6cae12e6"));
+        public static readonly NodeId PanelLoaderWithBack = new NodeId(namespaceIndex, new Guid("be4c4c38a6aa8e7e26f8ec8bf50b79d9"));
         public static readonly NodeId Production_Statistics_Chart = new NodeId(namespaceIndex, new Guid("1ef550eee5815cb7b8839139305121a8"));
         public static readonly NodeId Production_Time_Chart = new NodeId(namespaceIndex, new Guid("551813fd361d4f22706e13275666b4ff"));
         public static readonly NodeId Switch_OnOff_Standard = new NodeId(namespaceIndex, new Guid("a5fbb402e02c8f20ff8051ce068df2fe"));
@@ -102,8 +104,8 @@ namespace OptimateDemoProject
         public static readonly NodeId Reference_StepText = new NodeId(namespaceIndex, new Guid("198134a9ef740ca61c35b407c3dad3f4"));
         public static readonly NodeId Reference_Indicator = new NodeId(namespaceIndex, new Guid("569036f076b36a1457e195925c89b325"));
         public static readonly NodeId CollapseMenu = new NodeId(namespaceIndex, new Guid("4d31967c7e0e09833aa8493b4ec1e8e0"));
-        public static readonly NodeId CalendarPicker = new NodeId(namespaceIndex, new Guid("a09c4cc08219b78c8d6d8b07c6a71192"));
-        public static readonly NodeId AlarmHistory = new NodeId(namespaceIndex, new Guid("6bffc4224bde635e6603c154767b73b3"));
+        public static readonly NodeId Analysis = new NodeId(namespaceIndex, new Guid("b119615661d25d59965b75c66fc740b5"));
+        public static readonly NodeId ShiftStatistics = new NodeId(namespaceIndex, new Guid("5bf654c77f18a45502d0c82e6b912a8b"));
         public static readonly NodeId NodesCounterDialog = new NodeId(namespaceIndex, new Guid("01a421926031ec41d685808b59f89467"));
         public static readonly NodeId Letters = new NodeId(namespaceIndex, new Guid("927cfa372c73f3452566064604ed4a4f"));
         public static readonly NodeId NumbersAndSymbols1 = new NodeId(namespaceIndex, new Guid("8f7adae455ee882c98f8cccf4970ac99"));
@@ -113,12 +115,10 @@ namespace OptimateDemoProject
         public static readonly NodeId BasicSymbolVerticalButton = new NodeId(namespaceIndex, new Guid("450e1e9381613f4b71607ddf16020ebb"));
         public static readonly NodeId BasicSpaceButton = new NodeId(namespaceIndex, new Guid("0642b30a582e14c745079c727f361ad1"));
         public static readonly NodeId BasicSwitchPushButton = new NodeId(namespaceIndex, new Guid("cf246b9bd07567ff4a53fa5a9a230801"));
+        public static readonly NodeId CalendarPicker = new NodeId(namespaceIndex, new Guid("a09c4cc08219b78c8d6d8b07c6a71192"));
+        public static readonly NodeId NodesCounterPanel = new NodeId(namespaceIndex, new Guid("7fdddbdcf6a84c3a030fee9cd66e58eb"));
         public static readonly NodeId CalendarPickerElement = new NodeId(namespaceIndex, new Guid("09729a28f8e879ce7c75f655034a218c"));
         public static readonly NodeId CalendarPickerDialog = new NodeId(namespaceIndex, new Guid("bbd28155a406d75157573b23ec4083ec"));
-        public static readonly NodeId NodesCounterPanel = new NodeId(namespaceIndex, new Guid("7fdddbdcf6a84c3a030fee9cd66e58eb"));
-        public static readonly NodeId EventHistory = new NodeId(namespaceIndex, new Guid("be0f5f0c3cd399b38360a916d9fb89f6"));
-        public static readonly NodeId Analysis = new NodeId(namespaceIndex, new Guid("b119615661d25d59965b75c66fc740b5"));
-        public static readonly NodeId ShiftStatistics = new NodeId(namespaceIndex, new Guid("5bf654c77f18a45502d0c82e6b912a8b"));
     }
 
     public static class VariableTypes

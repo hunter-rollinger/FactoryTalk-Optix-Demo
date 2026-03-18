@@ -28,8 +28,12 @@ public class AddRecipeToLog : BaseNetLogic
 {
     public override void Start() {
         Debugger.Launch();
-        eventHistory  = Owner as EventLogger;
+        eventHistory = Owner as EventLogger;
         eventHistory.UAEvent += HistoryUpdate;
+        try {
+            tmp = Owner as EventHistory;
+            tmp.UAEvent += HistoryUpdate;
+        } catch (Exception ex) { Debug.WriteLine(ex); }
 	}
 
     public override void Stop() {
@@ -41,4 +45,5 @@ public class AddRecipeToLog : BaseNetLogic
     }
 
     EventLogger eventHistory;
+    EventHistory tmp;
 }
