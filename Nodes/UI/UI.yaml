@@ -1800,6 +1800,14 @@ Children:
                     Type: DynamicLink
                     DataType: NodePath
                     Value: "/Objects/OptimateDemoProject/UI/Stylesheets/Jones/ButtonStyles/BottomNavButtons/Color"
+            - Name: Visible
+              Type: BaseDataVariableType
+              DataType: Boolean
+              Children:
+              - Name: DynamicLink
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "../../../../../Machine Has Changeover"
             - Name: MouseClickEventHandler1
               Type: EventHandler
               Children:
@@ -1824,7 +1832,7 @@ Children:
                     - Name: DynamicLink
                       Type: DynamicLink
                       DataType: NodePath
-                      Value: "../../../../../../../../../ScreenControl@NodeId"
+                      Value: "{Window}/ScreenControl@NodeId"
                   - Name: Method
                     Type: BaseDataVariableType
                     DataType: String
@@ -1875,14 +1883,6 @@ Children:
                 - Name: Severity
                   Type: PropertyType
                   DataType: UInt16
-            - Name: Visible
-              Type: BaseDataVariableType
-              DataType: Boolean
-              Children:
-              - Name: DynamicLink
-                Type: DynamicLink
-                DataType: NodePath
-                Value: "../../../../../Machine Has Changeover"
           - Name: RightMargin
             Type: BaseVariableType
             DataType: Size
@@ -4000,7 +4000,7 @@ Children:
                 - Name: DynamicLink
                   Type: DynamicLink
                   DataType: NodePath
-                  Value: "../../../../../../AlarmList/SelectedItem"
+                  Value: "../../../../../../AlarmList/SelectedItem@NodeId"
               - Name: ParentItem
                 Type: BaseDataVariableType
                 DataType: NodeId

@@ -4190,6 +4190,21 @@ Children:
               Type: DynamicLink
               DataType: NodePath
               Value: "../../../../../Machine Has Changeover"
+          - Name: Enabled
+            Type: BaseDataVariableType
+            DataType: Boolean
+            ModellingRule: Optional
+            Value: true
+          - Name: Width
+            Type: BaseVariableType
+            DataType: Size
+            ModellingRule: Optional
+            Value: 170.0
+          - Name: Height
+            Type: BaseVariableType
+            DataType: Size
+            ModellingRule: Optional
+            Value: 70.0
           - Name: MouseClickEventHandler1
             Type: EventHandler
             Children:
@@ -4214,7 +4229,7 @@ Children:
                   - Name: DynamicLink
                     Type: DynamicLink
                     DataType: NodePath
-                    Value: "../../../../../../../../../ScreenModeControl@NodeId"
+                    Value: "{Window}/ScreenControl@NodeId"
                     Children:
                     - Name: Mode
                       Type: BaseVariableType
@@ -4271,21 +4286,6 @@ Children:
               - Name: Severity
                 Type: PropertyType
                 DataType: UInt16
-          - Name: Enabled
-            Type: BaseDataVariableType
-            DataType: Boolean
-            ModellingRule: Optional
-            Value: true
-          - Name: Width
-            Type: BaseVariableType
-            DataType: Size
-            ModellingRule: Optional
-            Value: 170.0
-          - Name: Height
-            Type: BaseVariableType
-            DataType: Size
-            ModellingRule: Optional
-            Value: 70.0
       - Name: Internal_Mode
         Type: BaseObjectType
         Description: {"LocaleId":"en-US","Text":"HMI Modes"}

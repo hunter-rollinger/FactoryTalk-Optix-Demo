@@ -2,6 +2,7 @@ Name: Loggers
 Type: LoggersCategoryFolder
 Children:
 - Name: AlarmsEventLogger
+  Id: g=29401d8a88e9654720456dafc78ad460
   Type: EventLogger
   WriteMask: BrowseName|DataType|Description|DisplayName|MinimumSamplingInterval|UserAccessLevel
   Children:
@@ -90,7 +91,6 @@ Children:
       - Name: ExcludeNonInteractiveSessions
         Type: PropertyType
         DataType: Boolean
-        Value: true
   - Name: EventArguments
     Type: BaseObjectType
     Children:
@@ -131,6 +131,7 @@ Children:
     Type: BaseObjectType
     Children:
     - Name: ActiveState_Id
+      Id: g=1db21786db5d454eeaa434c8c2a6cc0c
       Type: EventFieldToLog
       DataType: Boolean
       Children:
@@ -144,6 +145,7 @@ Children:
           DataType: DynamicLinkMode
           Value: 2
     - Name: ConditionName
+      Id: g=3711a2d4236b5c4fa384d0af4e0321e4
       Type: EventFieldToLog
       DataType: String
       Children:
@@ -196,6 +198,7 @@ Children:
           DataType: DynamicLinkMode
           Value: 2
     - Name: Time
+      Id: g=2d73077eda3d1f9ef6fb1d5d7109f0ec
       Type: EventFieldToLog
       DataType: UtcTime
       Children:
@@ -209,6 +212,7 @@ Children:
           DataType: DynamicLinkMode
           Value: 2
     - Name: LocalTime
+      Id: g=dcac2a03c5a8aa735633d1ffc726d459
       Type: EventFieldToLog
       DataType: DateTime
       Children:
@@ -239,6 +243,7 @@ Children:
             DataType: NodePath
             Value: "../../../../EventArguments/LocalTime"
     - Name: ReceiveTime
+      Id: g=cc716c9a7bf65ed75413d72264e69cbf
       Type: EventFieldToLog
       DataType: UtcTime
       ValueRank: Any
@@ -307,7 +312,7 @@ Children:
         Type: NodePointer
         DataType: NodeId
         ReferenceType: HasProperty
-        Value: "/Objects/OptimateDemoProject/Loggers/EventHistorySources"
+        Value: "/Objects/OptimateDemoProject/Loggers/VariablesToAudit"
         Children:
         - Name: Kind
           Type: PropertyType
@@ -483,6 +488,4 @@ Children:
       Type: EventFieldToLog
       DataType: String
       ValueRank: Any
-  - Name: AddRecipeToLog
-    Type: NetLogic
-- File: EventHistorySources/EventHistorySources.yaml
+- File: VariablesToAudit/VariablesToAudit.yaml

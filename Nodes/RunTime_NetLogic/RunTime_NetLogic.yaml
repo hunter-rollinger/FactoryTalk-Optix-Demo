@@ -119,31 +119,41 @@ Children:
   - Name: AlarmsDatabase
     Type: BaseDataVariableType
     DataType: NodeId
-    Value: "/Objects/OptimateDemoProject/DataStores/Alarms"
+    Value: {"IdType":2,"Id":"a2b8ad4e9b6e4fe0976d681596148183","Namespace":36}
+    Children:
+    - Name: DynamicLink
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "../../../Loggers/AlarmsEventLogger/Store@NodeId"
+      Children:
+      - Name: Mode
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        Value: 2
   - Name: DatabaseTable
     Type: BaseDataVariableType
     DataType: NodeId
-    Value: "/Objects/OptimateDemoProject/DataStores/Alarms/Tables/AlarmsEventLogger"
+    Value: "/Objects/OptimateDemoProject/Loggers/AlarmsEventLogger"
   - Name: TableReceiveTime
     Type: BaseDataVariableType
     DataType: NodeId
-    Value: "/Objects/OptimateDemoProject/DataStores/Alarms/Tables/AlarmsEventLogger/Columns/ReceiveTime"
+    Value: "/Objects/OptimateDemoProject/Loggers/AlarmsEventLogger/EventFieldsToLog/ReceiveTime"
   - Name: TableUtcTime
     Type: BaseDataVariableType
     DataType: NodeId
-    Value: "/Objects/OptimateDemoProject/DataStores/Alarms/Tables/AlarmsEventLogger/Columns/Time"
+    Value: "/Objects/OptimateDemoProject/Loggers/AlarmsEventLogger/EventFieldsToLog/Time"
   - Name: TableLocalTime
     Type: BaseDataVariableType
     DataType: NodeId
-    Value: "/Objects/OptimateDemoProject/DataStores/Alarms/Tables/AlarmsEventLogger/Columns/LocalTime"
+    Value: "/Objects/OptimateDemoProject/Loggers/AlarmsEventLogger/EventFieldsToLog/LocalTime"
   - Name: TableConditionName
     Type: BaseDataVariableType
     DataType: NodeId
-    Value: "/Objects/OptimateDemoProject/DataStores/Alarms/Tables/AlarmsEventLogger/Columns/ConditionName"
+    Value: "/Objects/OptimateDemoProject/Loggers/AlarmsEventLogger/EventFieldsToLog/ConditionName"
   - Name: TableAlarmActive
     Type: BaseDataVariableType
     DataType: NodeId
-    Value: "/Objects/OptimateDemoProject/DataStores/Alarms/Tables/AlarmsEventLogger/Columns/ActiveState_Id"
+    Value: "/Objects/OptimateDemoProject/Loggers/AlarmsEventLogger/EventFieldsToLog/ActiveState_Id"
 - File: System_Information_Collection/System_Information_Collection.yaml
 - Name: ConstrainedVariablesVerifier
   Type: NetLogic

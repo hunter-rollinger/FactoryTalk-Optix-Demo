@@ -2,14 +2,13 @@ Name: DataStores
 Type: DataStoresCategoryFolder
 Children:
 - Name: Alarms
-  Id: g=a2b8ad4e9b6e4fe0976d681596148183
+  Id: g=17a88478d7efd1f994d2bde134a304a9
   Type: SQLiteStore
   Children:
   - Name: Tables
     Type: BaseObjectType
     Children:
     - Name: AlarmsEventLogger
-      Id: g=eb7475fb79311852dadd2a454f6d3aa2
       Type: SQLiteStoreTable
       Children:
       - Class: Reference
@@ -28,11 +27,9 @@ Children:
         Type: BaseObjectType
         Children:
         - Name: ActiveState_Id
-          Id: g=87c96448a9b10c878716945b960c44cb
           Type: StoreColumn
           DataType: Boolean
         - Name: ConditionName
-          Id: g=a6381283185c50aadb36cda7e63a4af0
           Type: StoreColumn
           DataType: String
         - Name: SourceName
@@ -54,15 +51,12 @@ Children:
           Type: StoreColumn
           DataType: UInt16
         - Name: Time
-          Id: g=cc7f1fad93f3b10418ae4330b475fae6
           Type: StoreColumn
           DataType: UtcTime
         - Name: LocalTime
-          Id: g=a1ef2829b4dcdd39a87dba5059e8929c
           Type: StoreColumn
           DataType: DateTime
         - Name: ReceiveTime
-          Id: g=abfd3bd57ef45fab06226bc24ac40dbd
           Type: StoreColumn
           DataType: UtcTime
         - Name: 'Comment_en-US'
@@ -110,6 +104,9 @@ Children:
     Target: ns=15;i=22
     Direction: Forward
   - Class: Reference
+    Target: ns=15;i=67
+    Direction: Forward
+  - Class: Reference
     Target: ns=15;i=6
     Direction: Forward
   - Class: Reference
@@ -139,12 +136,6 @@ Children:
   - Class: Reference
     Target: ns=15;i=59
     Direction: Forward
-  - Class: Reference
-    Target: ns=15;i=67
-    Direction: Forward
-  - Name: InMemory
-    Type: BaseDataVariableType
-    DataType: Boolean
 - Name: VariableHistory
   Id: g=1000d5519303c9e417d42591eb13a0d2
   Type: SQLiteStore
@@ -203,6 +194,10 @@ Children:
         - Name: Recipe
           Type: StoreColumn
           DataType: String
+      - Name: RecordLimit
+        Type: BaseDataVariableType
+        DataType: UInt32
+        Value: 100000
   - Class: Reference
     Target: ns=29;i=30
     Direction: Forward

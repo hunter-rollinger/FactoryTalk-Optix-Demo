@@ -151,6 +151,7 @@ public class CustomAlarming : BaseNetLogic
             this.retainedAlarmsLock = new Object();
             this.logicNode = logicNode;
             InitializeRetainedAlarmList(localizedAlarmsContainer);
+            Debugger.Launch();
 
             currentDisplayedAlarm = logicNode.GetVariable("CurrentDisplayedAlarm");
             currentDisplayedAlarmIndex = logicNode.GetVariable("CurrentDisplayedAlarmIndex");
@@ -239,7 +240,7 @@ public class CustomAlarming : BaseNetLogic
                     string query = $"UPDATE {dbTable} SET {colReceiveTime}=(SELECT {colUtcTime} FROM {dbTable} WHERE {colCondName}='{targetNode.BrowseName}' AND {colAlarmActive}=1 ORDER BY {colUtcTime} DESC LIMIT 1) WHERE rowid=(SELECT rowid FROM {dbTable} WHERE {colCondName}='{targetNode.BrowseName}' ORDER BY {colUtcTime} DESC LIMIT 1)";
 					Log.Info("CustomAlarming", $"Executing query to set NodeId for latest alarm: {query}");
 					alarmsDB.Query(query, out header, out result);
-                } catch { Log.Error("CustomAlarming", "Error when setting NodeId for the latest alarm. Start checking at end of OnReferenceAdded method in NetLogic."); }
+                } catch (Exception ex) { Log.Error("CustomAlarming", $"Error when setting NodeId for the latest alarm. Start checking at end of OnReferenceAdded method in NetLogic. {ex}"); }
 			}
         }
         public void OnReferenceRemoved(IUANode sourceNode, IUANode targetNode, NodeId referenceTypeId, ulong senderId)
@@ -259,7 +260,7 @@ public class CustomAlarming : BaseNetLogic
                     query = $"UPDATE {dbTable} SET {colReceiveTime}='{dateTime}' WHERE rowid=(SELECT rowid FROM {dbTable} WHERE {colCondName}='{targetNode.BrowseName}' ORDER BY {colUtcTime} DESC LIMIT 1)";
 					Log.Info("CustomAlarming", $"Executing query to set NodeId for latest alarm: {query}");
 					alarmsDB.Query(query, out header, out result);
-				} catch { Log.Error("CustomAlarming", "DB Query Error. See OnReferenceRemoved in NetLogic."); }
+				} catch (Exception ex) { Log.Error("CustomAlarming", $"DB Query Error. See OnReferenceRemoved in NetLogic. {ex}"); }
 
 				var alarmIndex = retainedAlarms.IndexOf(targetNode.NodeId);
                 if (alarmIndex == -1) {
