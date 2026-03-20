@@ -43,10 +43,19 @@ public class EventQueryFormatter : BaseNetLogic {
 		comment.VariableChange += CommentUpdate;
 
 		languageVariable = LogicObject.GetVariable("Language");
-		colReceiveTime = LogicObject.GetVariable("TableReceiveTime").Value;
-		colComment = LogicObject.GetVariable("TableComment").Value;
 
 		resetQuery();
+	}
+
+	private static void UpdateDatabase() {
+		IHistoryUpdate svc = HistoryUpdate.Service;
+		if (svc == null) {
+			Log.Error("EventQueryFormatter", "Could not resolve interface to AppendToEventLogging NetLogic method UpdateDatabase.");
+			return;
+		}
+		try {
+			svc.UpdateDatabase();
+		} catch (Exception e) { Log.Error("EventQueryFormatter", $"Could not update database. Exception: {e.Message}"); }
 	}
 
 	public override void Stop() {
@@ -91,24 +100,29 @@ public class EventQueryFormatter : BaseNetLogic {
 	private void CommentUpdate(object sender, VariableChangeEventArgs e) {
 		if (e.SenderId != 0) {
 			var selectedItem = InformationModel.Get(LogicObject.GetVariable("SelectedItem").Value);
-			string updateValue = comment.Value;
-			DateTime receivedTime = selectedItem.Children.GetVariable(colReceiveTime).Value;
-			string formattedReceivedTime = receivedTime.ToString("yyyy-MM-ddTHH:mm:ss");
-			string alarmMesssage = selectedItem.Children.GetVariable(colAlarmMesssage).Value;
-			string query = $"UPDATE {eventLogger} SET {colComment}='{updateValue}' WHERE {colReceiveTime} LIKE '{formattedReceivedTime}%' AND {language}='{alarmMesssage}'";
+			DateTime time = selectedItem.Children.GetVariable("Time").Value;
+			string formattedTime = time.ToString("yyyy-MM-ddTHH:mm:ss.fffffff");
+			string varModified = selectedItem.Children.GetVariable("SourceName").Value;
+			string ident = languageVariable.Value;
+			string value = comment.Value;
+			string query = $"UPDATE {eventLogger} SET {ident}='{value}' WHERE Time LIKE '{formattedTime}' AND SourceName='{varModified}'";
 			Log.Info("QueryFormatter", $"Executing comment update query: {query}");
 			object[,] result;
 			string[] header;
 			varDB.Query(query, out header, out result);
 		} else {
 			UpdateCommentText();
-		}
+		}	
 	}
 
 	[ExportMethod]
 	public void UpdateCommentText() {
 		var selectedItem = InformationModel.Get(LogicObject.GetVariable("SelectedItem").Value);
-		string currentComment = selectedItem.Children.GetVariable(colComment.Split('_')[0].Replace("\"", "")).Value;
+		string index = languageVariable.Value;
+		string p1 = index.Split('_')[0].Replace("\"", "");
+		string p2 = index.Split('_')[1].Replace("\"", "");
+		string output = $"{p1}_{p2}";
+		string currentComment = selectedItem.Children.GetVariable(output).Value;
 		comment.Value = currentComment;
 	}
 
@@ -127,11 +141,11 @@ public class EventQueryFormatter : BaseNetLogic {
 		else user = "";
 
 		if (fromTimestamp.Year > 1601 && toTimestamp.Year > 1601) {
-			timestampResult = $" WHERE {colReceiveTime} BETWEEN '{ConvertLocalToUtcString(fromTimestamp)}' AND '{ConvertLocalToUtcString(toTimestamp)}'";
-		} else timestampResult = $" WHERE {colReceiveTime} BETWEEN '{ConvertLocalToUtcString(DateTime.Now.AddDays(-1))}' AND '{ConvertLocalToUtcString(DateTime.Now):sql_literal}'";
+			timestampResult = $" WHERE Time BETWEEN '{ConvertLocalToUtcString(fromTimestamp)}' AND '{ConvertLocalToUtcString(toTimestamp)}'";
+		} else timestampResult = $" WHERE Time BETWEEN '{ConvertLocalToUtcString(DateTime.Now.AddDays(-1))}' AND '{ConvertLocalToUtcString(DateTime.Now):sql_literal}'";
 
-		if (language == "Message_" && language.Length < 8)
-			language = " AND Message_en-US";
+		if (language == "Comment_" && language.Length < 8)
+			language = " AND Comment_en-US";
 
 		if (text != "''" && text != "'%%'" && text.Length > 4)
 			text = $" AND {language} LIKE '{text}'";
@@ -143,7 +157,7 @@ public class EventQueryFormatter : BaseNetLogic {
 		} else Log.Verbose1("QueryFormatter", $"Using event logger: {eventLogger}");
 
 		// build sql query. for reference on names of columns see variable database in optix studio
-		string output = $"SELECT {language} AS {language.Split('_')[0].Replace("\"", "")}, User, LocalTime, {colComment} as {colComment.Split('_')[0].Replace("\"", "")}, Recipe, {colReceiveTime} FROM {eventLogger}{timestampResult}{user}{text} ORDER BY {colReceiveTime} DESC";
+		string output = $"SELECT {language} AS Comment, ClientUserId, LocalTime, Recipe, OldValue, NewValue, SourceName, Time FROM {eventLogger}{timestampResult}{user}{text} ORDER BY Time DESC";
 		query.Value = output;
 		Log.Info("QueryFormatter", output);
 	}
@@ -167,7 +181,4 @@ public class EventQueryFormatter : BaseNetLogic {
 	private DateTime toTimestamp;
 	private string user;
 	private string text;
-	private string colReceiveTime;
-	private string colAlarmMesssage;
-	private string colComment;
 }

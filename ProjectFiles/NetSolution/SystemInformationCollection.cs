@@ -30,17 +30,11 @@ public class SystemInformationCollection : BaseNetLogic
 
 		secondTask = new PeriodicTask(UpdateEverySecond, 1000, LogicObject);
 		secondTask.Start();
-
-		minuteTask = new PeriodicTask(UpdateEveryMinute, 60000, LogicObject);
-		minuteTask.Start();
 	}
 
     public override void Stop() {
 		secondTask.Dispose();
 		secondTask = null;
-
-		minuteTask.Dispose();
-		minuteTask = null;
 	}
 
 	private void UpdateEverySecond() {
@@ -49,10 +43,6 @@ public class SystemInformationCollection : BaseNetLogic
 		LogicObject.GetVariable("Yesterday").Value = localTime.AddDays(-1);
 	}
 
-	private void UpdateEveryMinute() {
-	}
-
 	private DateTime localTime;
 	private PeriodicTask secondTask;
-    private PeriodicTask minuteTask;
 }

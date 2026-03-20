@@ -4596,6 +4596,11 @@ Children:
           Type: BaseVariableType
           DataType: Size
           ModellingRule: Optional
+        - Name: TopMargin
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 20.0
       - Name: HorizontalGap
         Type: BaseDataVariableType
         DataType: Size
@@ -5550,6 +5555,42 @@ Children:
                   Type: DynamicLink
                   DataType: NodePath
                   Value: "{Item}/NewValue"
+          - Name: Recipe Name
+            Type: DataGridColumn
+            Children:
+            - Name: Title
+              Type: BaseDataVariableType
+              DataType: LocalizedText
+              Value: {"NamespaceIndex":36,"TextId":"Recipe Name"}
+            - Name: Width
+              Type: BaseDataVariableType
+              DataType: Size
+              Value: 150.0
+            - Name: Visible
+              Type: BaseDataVariableType
+              DataType: Boolean
+              Value: true
+            - Name: HeaderAlignment
+              Type: BaseDataVariableType
+              DataType: TextHorizontalAlignment
+            - Name: ContentAlignment
+              Type: BaseVariableType
+              DataType: HorizontalAlignment
+            - Name: OrderBy
+              Type: BaseDataVariableType
+              DataType: NodePath
+              Value: "{Item}/Recipe"
+            - Name: DataItemTemplate
+              Type: DataGridLabelItemTemplate
+              Children:
+              - Name: Text
+                Type: BaseDataVariableType
+                DataType: LocalizedText
+                Children:
+                - Name: DynamicLink
+                  Type: DynamicLink
+                  DataType: NodePath
+                  Value: "{Item}/Recipe"
           - Name: Comment
             Type: DataGridColumn
             Children:
@@ -5610,12 +5651,29 @@ Children:
               - Name: Text
                 Type: BaseDataVariableType
                 DataType: LocalizedText
-                Value: {"LocaleId":"en-US","Text":"{Item}/Comment"}
                 Children:
                 - Name: DynamicLink
                   Type: DynamicLink
                   DataType: NodePath
-                  Value: "{Item}/Message"
+                  Children:
+                  - Name: DynamicLinkFormatter
+                    Type: StringFormatter
+                    Children:
+                    - Name: Format
+                      Type: BaseDataVariableType
+                      DataType: LocalizedText
+                      ReferenceType: HasParameter
+                      ModellingRule: Optional
+                      Value: {"LocaleId":"","Text":"{Item}/Comment_{0}"}
+                    - Name: ns=9;Source0
+                      Type: BaseDataVariableType
+                      DataType: BaseDataType
+                      ReferenceType: HasSource
+                      Children:
+                      - Name: DynamicLink
+                        Type: DynamicLink
+                        DataType: NodePath
+                        Value: "{Session}/ActualLanguage"
           - Name: User
             Type: DataGridColumn
             Children:
@@ -5648,24 +5706,38 @@ Children:
                 Type: BaseDataVariableType
                 DataType: LocalizedText
                 Children:
-                - Name: StringFormatter1
-                  Type: StringFormatter
+                - Name: ExpressionEvaluator1
+                  Type: ExpressionEvaluator
                   Children:
-                  - Name: Format
+                  - Name: Expression
                     Type: BaseDataVariableType
-                    DataType: LocalizedText
+                    DataType: String
                     ReferenceType: HasParameter
                     ModellingRule: Optional
-                    Value: {"LocaleId":"en-US","Text":"{0:l}"}
+                    Value: "if(isempty({0}),\"Anonymous\",{0})"
                   - Name: ns=9;Source0
                     Type: BaseDataVariableType
                     DataType: BaseDataType
                     ReferenceType: HasSource
                     Children:
-                    - Name: DynamicLink
-                      Type: DynamicLink
-                      DataType: NodePath
-                      Value: "{Item}/ClientUserId"
+                    - Name: StringFormatter1
+                      Type: StringFormatter
+                      Children:
+                      - Name: Format
+                        Type: BaseDataVariableType
+                        DataType: LocalizedText
+                        ReferenceType: HasParameter
+                        ModellingRule: Optional
+                        Value: {"LocaleId":"en-US","Text":"{0:l}"}
+                      - Name: ns=9;Source0
+                        Type: BaseDataVariableType
+                        DataType: BaseDataType
+                        ReferenceType: HasSource
+                        Children:
+                        - Name: DynamicLink
+                          Type: DynamicLink
+                          DataType: NodePath
+                          Value: "{Item}/ClientUserId"
         - Name: SelectedItem
           Type: NodePointer
           DataType: NodeId
@@ -5811,7 +5883,7 @@ Children:
                     DataType: LocalizedText
                     ReferenceType: HasParameter
                     ModellingRule: Optional
-                    Value: {"LocaleId":"en-US","Text":"{1}_{0}"}
+                    Value: {"LocaleId":"en-US","Text":"Comment_{0}"}
                   - Name: ns=9;Source0
                     Type: BaseDataVariableType
                     DataType: BaseDataType
@@ -5821,15 +5893,6 @@ Children:
                       Type: DynamicLink
                       DataType: NodePath
                       Value: "{Session}/ActualLanguage"
-                  - Name: ns=9;Source1
-                    Type: BaseDataVariableType
-                    DataType: BaseDataType
-                    ReferenceType: HasSource
-                    Children:
-                    - Name: DynamicLink
-                      Type: DynamicLink
-                      DataType: NodePath
-                      Value: "/Objects/OptimateDemoProject/Loggers/AlarmsEventLogger/EventFieldsToLog/Message@BrowseName"
           - Name: DatabaseTable
             Type: BaseDataVariableType
             DataType: String
@@ -5851,7 +5914,7 @@ Children:
                 - Name: DynamicLink
                   Type: DynamicLink
                   DataType: NodePath
-                  Value: "/Objects/OptimateDemoProject/DataStores/Alarms/Tables/AlarmsEventLogger@BrowseName"
+                  Value: "/Objects/OptimateDemoProject/Loggers/EventHistory@BrowseName"
                   Children:
                   - Name: Mode
                     Type: BaseVariableType
@@ -5909,66 +5972,6 @@ Children:
                 DataType: DynamicLinkMode
                 ModellingRule: Optional
                 Value: 2
-          - Name: TableReceiveTime
-            Type: BaseDataVariableType
-            DataType: String
-            Children:
-            - Name: DynamicLink
-              Type: DynamicLink
-              DataType: NodePath
-              Value: "/Objects/OptimateDemoProject/Loggers/AlarmsEventLogger/EventFieldsToLog/ReceiveTime@BrowseName"
-              Children:
-              - Name: Mode
-                Type: BaseVariableType
-                DataType: DynamicLinkMode
-                ModellingRule: Optional
-                Value: 2
-          - Name: TableComment
-            Type: BaseDataVariableType
-            DataType: String
-            Value: "0"
-            Children:
-            - Name: StringFormatter1
-              Type: StringFormatter
-              Children:
-              - Name: Format
-                Type: BaseDataVariableType
-                DataType: LocalizedText
-                ReferenceType: HasParameter
-                ModellingRule: Optional
-                Value: {"LocaleId":"en-US","Text":"{0:sql_identifier}"}
-              - Name: ns=9;Source0
-                Type: BaseDataVariableType
-                DataType: BaseDataType
-                ReferenceType: HasSource
-                Children:
-                - Name: StringFormatter1
-                  Type: StringFormatter
-                  Children:
-                  - Name: Format
-                    Type: BaseDataVariableType
-                    DataType: LocalizedText
-                    ReferenceType: HasParameter
-                    ModellingRule: Optional
-                    Value: {"LocaleId":"en-US","Text":"{0}_{1}"}
-                  - Name: ns=9;Source0
-                    Type: BaseDataVariableType
-                    DataType: BaseDataType
-                    ReferenceType: HasSource
-                    Children:
-                    - Name: DynamicLink
-                      Type: DynamicLink
-                      DataType: NodePath
-                      Value: "/Objects/OptimateDemoProject/Loggers/EventHistory/EventFieldsToLog/Message@BrowseName"
-                  - Name: ns=9;Source1
-                    Type: BaseDataVariableType
-                    DataType: BaseDataType
-                    ReferenceType: HasSource
-                    Children:
-                    - Name: DynamicLink
-                      Type: DynamicLink
-                      DataType: NodePath
-                      Value: "{Session}/ActualLanguage"
           - Name: SelectedItem
             Type: BaseDataVariableType
             DataType: NodeId
@@ -6015,8 +6018,6 @@ Children:
                 Value: 2
           - Class: Method
             Name: resetQuery
-          - Class: Method
-            Name: UpdateCommentText
           - Name: UserFilter
             Type: BaseDataVariableType
             DataType: String
@@ -6032,6 +6033,76 @@ Children:
                 DataType: DynamicLinkMode
                 ModellingRule: Optional
                 Value: 2
+          - Class: Method
+            Name: UpdateCommentText
+        - Name: UserSelectionChangedHandler1
+          Type: EventHandler
+          Children:
+          - Name: ListenEventType
+            Type: PropertyType
+            DataType: NodeId
+            Value: "/Types/EventTypes/BaseEventType/UserSelectionChanged"
+          - Name: MethodsToCall
+            Type: BaseObjectType
+            Children:
+            - Name: MethodContainer1
+              Type: BaseObjectType
+              Children:
+              - Name: ns=9;ObjectPointer
+                Type: NodePointer
+                DataType: NodeId
+                Children:
+                - Name: Kind
+                  Type: PropertyType
+                  DataType: NodeId
+                  Value: "/Types/ObjectTypes/BaseObjectType"
+                - Name: DynamicLink
+                  Type: DynamicLink
+                  DataType: NodePath
+                  Value: "../../../../EventQueryFormatter@NodeId"
+                  Children:
+                  - Name: Mode
+                    Type: BaseVariableType
+                    DataType: DynamicLinkMode
+                    ModellingRule: Optional
+                    Value: 2
+              - Name: ns=9;Method
+                Type: BaseDataVariableType
+                DataType: String
+                Value: "UpdateCommentText"
+          - Name: EventArguments
+            Type: UserSelectionChanged
+            Children:
+            - Name: SelectedItem
+              Type: BaseDataVariableType
+              DataType: NodeId
+            - Name: SelectedValue
+              Type: BaseDataVariableType
+              DataType: BaseDataType
+            - Name: EventId
+              Type: PropertyType
+              DataType: ByteString
+            - Name: EventType
+              Type: PropertyType
+              DataType: NodeId
+            - Name: SourceNode
+              Type: PropertyType
+              DataType: NodeId
+            - Name: SourceName
+              Type: PropertyType
+              DataType: String
+            - Name: Time
+              Type: PropertyType
+              DataType: UtcTime
+            - Name: ReceiveTime
+              Type: PropertyType
+              DataType: UtcTime
+            - Name: Message
+              Type: PropertyType
+              DataType: LocalizedText
+            - Name: Severity
+              Type: PropertyType
+              DataType: UInt16
       - Name: HorizontalAlignment
         Type: BaseVariableType
         DataType: HorizontalAlignment
@@ -6666,7 +6737,7 @@ Children:
             - Name: DynamicLink
               Type: DynamicLink
               DataType: NodePath
-              Value: "/Objects/OptimateDemoProject/Model/PLC Link Required/VariablesToAudit/audit test"
+              Value: "/Objects/OptimateDemoProject/Loggers/VariablesToAudit/test2"
               Children:
               - Name: Mode
                 Type: BaseVariableType
@@ -6703,7 +6774,7 @@ Children:
             - Name: DynamicLink
               Type: DynamicLink
               DataType: NodePath
-              Value: "/Objects/OptimateDemoProject/Loggers/VariablesToAudit/test"
+              Value: "/Objects/OptimateDemoProject/Loggers/VariablesToAudit/test1"
               Children:
               - Name: Mode
                 Type: BaseVariableType
@@ -6730,6 +6801,11 @@ Children:
             Type: BaseDataVariableType
             DataType: Double
             Value: 1.0
+        - Name: TopMargin
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 20.0
       - Name: HorizontalGap
         Type: BaseDataVariableType
         DataType: Size

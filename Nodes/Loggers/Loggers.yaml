@@ -307,7 +307,6 @@ Children:
       - Name: ExcludeNonInteractiveSessions
         Type: PropertyType
         DataType: Boolean
-        Value: true
       - Name: EventSource
         Type: NodePointer
         DataType: NodeId
@@ -409,19 +408,6 @@ Children:
             Type: DynamicLink
             DataType: NodePath
             Value: "../../../../EventArguments/LocalTime"
-    - Name: Message
-      Type: EventFieldToLog
-      DataType: LocalizedText
-      Children:
-      - Name: DynamicLink
-        Type: DynamicLink
-        DataType: NodePath
-        Value: "../../EventArguments/Message"
-        Children:
-        - Name: IsPull
-          Type: BaseVariableType
-          DataType: Boolean
-          Value: true
     - Name: Time
       Type: EventFieldToLog
       DataType: UtcTime
@@ -487,5 +473,9 @@ Children:
     - Name: Recipe
       Type: EventFieldToLog
       DataType: String
+      ValueRank: Any
+    - Name: Comment
+      Type: EventFieldToLog
+      DataType: LocalizedText
       ValueRank: Any
 - File: VariablesToAudit/VariablesToAudit.yaml

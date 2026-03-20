@@ -1,0 +1,23 @@
+Name: 'Program:OptixTesting'
+Type: FolderType
+Children:
+- Name: HSR_DINT
+  Type: RAEtherNetIPTag
+  DataType: Int32
+  ValueRank: OneDimension
+  ArrayDimensions: [32]
+  Children:
+  - Name: SymbolName
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "Program:OptixTesting.HSR_DINT"
+- Name: HSR_BOOL
+  Type: RAEtherNetIPTag
+  DataType: Boolean
+  ValueRank: OneDimension
+  ArrayDimensions: [32]
+  Children:
+  - Name: SymbolName
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "Program:OptixTesting.HSR_BOOL"

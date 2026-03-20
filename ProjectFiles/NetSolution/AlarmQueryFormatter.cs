@@ -114,7 +114,8 @@ public class AlarmQueryFormatter : BaseNetLogic
 	[ExportMethod]
 	public void UpdateCommentText() {
 		var selectedItem = InformationModel.Get(LogicObject.GetVariable("SelectedItem").Value);
-		string currentComment = selectedItem.Children.GetVariable(colComment.Split('_')[0].Replace("\"","")).Value;
+		string index = colComment.Split('_')[0].Replace("\"", "");
+		string currentComment = selectedItem.Children.GetVariable(index).Value;
 		comment.Value = currentComment;
 	}
 

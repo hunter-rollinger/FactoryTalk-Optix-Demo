@@ -2,6 +2,55 @@ Name: VariablesToAudit
 Id: g=6db69b666a599571767d838b4da96c4d
 Type: FolderType
 Children:
-- Name: test
+- Name: test1
   Type: BaseDataVariableType
   DataType: Int32
+  Children:
+  - Name: DynamicLink
+    Type: DynamicLink
+    DataType: NodePath
+    Value: "../../../CommDrivers/Rockwell/S17693/Tags/Program&:OptixTesting/HSR_DINT[0]"
+    Children:
+    - Name: Mode
+      Type: BaseVariableType
+      DataType: DynamicLinkMode
+      Value: 2
+- Name: test2
+  Type: BaseDataVariableType
+  DataType: Int32
+  Children:
+  - Name: DynamicLink
+    Type: DynamicLink
+    DataType: NodePath
+    Value: "../../../CommDrivers/Rockwell/S17693/Tags/Program&:OptixTesting/HSR_DINT[1]"
+    Children:
+    - Name: Mode
+      Type: BaseVariableType
+      DataType: DynamicLinkMode
+      Value: 2
+- Name: test3
+  Type: BaseDataVariableType
+  DataType: Int32
+  Children:
+  - Name: DynamicLink
+    Type: DynamicLink
+    DataType: NodePath
+    Value: "../../../CommDrivers/Rockwell/S17693/Tags/Program&:OptixTesting/HSR_DINT[2]"
+    Children:
+    - Name: Mode
+      Type: BaseVariableType
+      DataType: DynamicLinkMode
+      Value: 2
+- Name: test4
+  Type: BaseDataVariableType
+  DataType: Int32
+  Children:
+  - Name: DynamicLink
+    Type: DynamicLink
+    DataType: NodePath
+    Value: "../../../CommDrivers/Rockwell/S17693/Tags/Program&:OptixTesting/HSR_DINT[3]"
+    Children:
+    - Name: Mode
+      Type: BaseVariableType
+      DataType: DynamicLinkMode
+      Value: 2
