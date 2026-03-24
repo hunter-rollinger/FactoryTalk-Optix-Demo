@@ -7,6 +7,7 @@ using FTOptix.DataLogger;
 using FTOptix.Recipe;
 using FTOptix.AuditSigning;
 using FTOptix.RecipeX;
+using FTOptix.OPCUAServer;
 #endregion
 
 public class CalendarPickerLogic : BaseNetLogic

@@ -47,17 +47,6 @@ public class EventQueryFormatter : BaseNetLogic {
 		resetQuery();
 	}
 
-	private static void UpdateDatabase() {
-		IHistoryUpdate svc = HistoryUpdate.Service;
-		if (svc == null) {
-			Log.Error("EventQueryFormatter", "Could not resolve interface to AppendToEventLogging NetLogic method UpdateDatabase.");
-			return;
-		}
-		try {
-			svc.UpdateDatabase();
-		} catch (Exception e) { Log.Error("EventQueryFormatter", $"Could not update database. Exception: {e.Message}"); }
-	}
-
 	public override void Stop() {
 		unsubscribeFromVariableChanges();
 		comment.VariableChange -= CommentUpdate;

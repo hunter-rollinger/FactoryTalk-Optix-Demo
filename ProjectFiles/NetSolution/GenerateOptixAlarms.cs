@@ -8,6 +8,7 @@ using FTOptix.DataLogger;
 using FTOptix.Recipe;
 using FTOptix.AuditSigning;
 using FTOptix.RecipeX;
+using FTOptix.OPCUAServer;
 
 public class GenerateOptixAlarms : BaseNetLogic {
 	[ExportMethod]
