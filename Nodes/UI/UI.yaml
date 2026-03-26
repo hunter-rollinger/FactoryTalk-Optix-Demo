@@ -29,7 +29,7 @@ Children:
   - Name: StartingUser
     Type: NodePointer
     DataType: NodeId
-    Value: "/Objects/OptimateDemoProject/Security/Users/jones"
+    Value: "/Objects/Users/Anonymous"
     Children:
     - Name: Kind
       Type: PropertyType
@@ -638,6 +638,33 @@ Children:
       Type: BaseDataVariableType
       DataType: Boolean
       Description: {"LocaleId":"en-US","Text":"true if greater or equal to 1920x1080"}
+  - Name: GetCurrentUserInfo
+    Type: NetLogic
+    Children:
+    - Name: TopUserRole
+      Type: BaseDataVariableType
+      DataType: String
+    - Name: CurrentUser
+      Type: BaseDataVariableType
+      DataType: NodeId
+      Children:
+      - Name: DynamicLink
+        Type: DynamicLink
+        DataType: NodePath
+        Value: "{Session}/User@NodeId"
+        Children:
+        - Name: Mode
+          Type: BaseVariableType
+          DataType: DynamicLinkMode
+          ModellingRule: Optional
+          Value: 2
+    - Name: AllUserRoles
+      Type: BaseDataVariableType
+      DataType: NodeId
+      Description: {"LocaleId":"en-US","Text":"access level based on array index"}
+      ValueRank: OneDimension
+      ArrayDimensions: [10]
+      Value: [{"IdType":2,"Id":"2a6734f56d95341c0016f564b164feee","Namespace":36},{"IdType":2,"Id":"cfd5c78595304bf3c8a351b3de4eedba","Namespace":36},{"IdType":2,"Id":"9b9c964b82ffd32df20685ed526b6e4a","Namespace":36},{"IdType":0,"Id":0,"Namespace":-1},{"IdType":0,"Id":0,"Namespace":-1},{"IdType":0,"Id":0,"Namespace":-1},{"IdType":0,"Id":0,"Namespace":-1},{"IdType":0,"Id":0,"Namespace":-1},{"IdType":0,"Id":0,"Namespace":-1},{"IdType":2,"Id":"eeb625bfbd66a7c72514c879fa201b2f","Namespace":36}]
   - Name: Standard_Content_Container
     Type: Rectangle
     Children:
@@ -3303,6 +3330,7 @@ Children:
     - Name: UserManagement
       Type: BaseDataVariableType
       DataType: NodeId
+      Value: {"IdType":2,"Id":"ec54b050b50c986416358e4464c8bf09","Namespace":36}
     - Name: MachineConfiguration
       Type: BaseDataVariableType
       DataType: NodeId
@@ -5086,7 +5114,7 @@ Children:
               - Name: DynamicLink
                 Type: DynamicLink
                 DataType: NodePath
-                Value: "{Session}/User@DisplayName"
+                Value: "{Session}/User@BrowseName"
             - Name: TextColor
               Type: BaseDataVariableType
               DataType: Color
@@ -5137,7 +5165,7 @@ Children:
                   Type: DynamicLink
                   DataType: NodePath
                   Value: "{Window}/ScreenControl/ScreenSizeIsNormal"
-        - Name: UserButton
+        - Name: UserLogin
           Type: Button
           Children:
           - Name: MouseClickEventHandler1
@@ -5218,6 +5246,113 @@ Children:
               - Name: Severity
                 Type: PropertyType
                 DataType: UInt16
+          - Name: Visible
+            Type: BaseDataVariableType
+            DataType: Boolean
+            Value: true
+            Children:
+            - Name: ExpressionEvaluator1
+              Type: ExpressionEvaluator
+              Children:
+              - Name: Source0
+                Type: BaseDataVariableType
+                DataType: BaseDataType
+                ReferenceType: HasSource
+                Children:
+                - Name: DynamicLink
+                  Type: DynamicLink
+                  DataType: NodePath
+                  Value: "{Session}/LoggedIn"
+        - Name: UserLogout
+          Type: Button
+          Children:
+          - Name: MouseClickEventHandler1
+            Type: EventHandler
+            Children:
+            - Name: ListenEventType
+              Type: PropertyType
+              DataType: NodeId
+              Value: "/Types/EventTypes/BaseEventType/MouseEvent/MouseClickEvent"
+            - Name: MethodsToCall
+              Type: BaseObjectType
+              Children:
+              - Name: MethodContainer1
+                Type: BaseObjectType
+                Children:
+                - Name: ObjectPointer
+                  Type: NodePointer
+                  DataType: NodeId
+                  Value: "/Objects/Commands/UICommands"
+                  Children:
+                  - Name: Kind
+                    Type: PropertyType
+                    DataType: NodeId
+                    Value: "/Types/ObjectTypes/BaseObjectType"
+                - Name: Method
+                  Type: BaseDataVariableType
+                  DataType: String
+                  Value: "OpenDialog"
+                - Name: InputArguments
+                  Type: BaseObjectType
+                  Children:
+                  - Name: Dialog
+                    Type: BaseDataVariableType
+                    DataType: NodeId
+                    Value: "/Objects/OptimateDemoProject/UI/Screens/Popups/UserLogout"
+                  - Name: AliasNode
+                    Type: BaseDataVariableType
+                    DataType: NodeId
+                    ValueRank: ScalarOrOneDimension
+                  - Name: ParentItem
+                    Type: BaseDataVariableType
+                    DataType: NodeId
+                    Children:
+                    - Name: DynamicLink
+                      Type: DynamicLink
+                      DataType: NodePath
+                      Value: "../../../../..@NodeId"
+                - Name: OutputArguments
+                  Type: BaseObjectType
+                  Children:
+                  - Name: DialogNodeId
+                    Type: BaseDataVariableType
+                    DataType: NodeId
+            - Name: EventArguments
+              Type: MouseClickEvent
+              Children:
+              - Name: EventId
+                Type: PropertyType
+                DataType: ByteString
+              - Name: EventType
+                Type: PropertyType
+                DataType: NodeId
+              - Name: SourceNode
+                Type: PropertyType
+                DataType: NodeId
+              - Name: SourceName
+                Type: PropertyType
+                DataType: String
+              - Name: Time
+                Type: PropertyType
+                DataType: UtcTime
+              - Name: ReceiveTime
+                Type: PropertyType
+                DataType: UtcTime
+              - Name: Message
+                Type: PropertyType
+                DataType: LocalizedText
+              - Name: Severity
+                Type: PropertyType
+                DataType: UInt16
+          - Name: Visible
+            Type: BaseDataVariableType
+            DataType: Boolean
+            Value: true
+            Children:
+            - Name: DynamicLink
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "{Session}/LoggedIn"
       - Name: Separator5
         Type: Rectangle
         Children:

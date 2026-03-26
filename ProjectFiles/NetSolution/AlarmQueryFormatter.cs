@@ -24,12 +24,12 @@ using FTOptix.DataLogger;
 using FTOptix.Recipe;
 using FTOptix.AuditSigning;
 using FTOptix.RecipeX;
+using System.Linq;
 #endregion
 
 public class AlarmQueryFormatter : BaseNetLogic
 {
     public override void Start() {
-		//Debugger.Launch();
 		query = LogicObject.GetVariable("Query");
 		dbTable = LogicObject.GetVariable("DatabaseTable");
 		fromTimestampVariable = LogicObject.GetVariable("FromTimestamp");
@@ -140,8 +140,8 @@ public class AlarmQueryFormatter : BaseNetLogic
 		if (language == "Message_" && language.Length < 8)
 			language = "Message_en-US";
 
-		if (text != "''" && text != "'%%'" && text.Length > 4)
-			text = $" AND {language} LIKE '{text}'";
+		if (!string.IsNullOrWhiteSpace(text) && text.All(char.IsLetterOrDigit))
+			text = $" AND {language} LIKE '%{text}%'";
 		else text = "";
 
 		if (string.IsNullOrWhiteSpace(eventLogger)) {

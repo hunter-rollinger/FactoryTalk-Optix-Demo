@@ -1,29 +1,31 @@
 #region Using directives
-using System;
-using UAManagedCore;
-using OpcUa = UAManagedCore.OpcUa;
-using FTOptix.UI;
-using FTOptix.HMIProject;
-using FTOptix.WebUI;
-using FTOptix.NetLogic;
-using FTOptix.NativeUI;
-using FTOptix.CoreBase;
 using FTOptix.Alarm;
+using FTOptix.AuditSigning;
+using FTOptix.CommunicationDriver;
+using FTOptix.Core;
+using FTOptix.CoreBase;
+using FTOptix.DataLogger;
 using FTOptix.EventLogger;
+using FTOptix.HMIProject;
+using FTOptix.NativeUI;
+using FTOptix.NetLogic;
+using FTOptix.OPCUAServer;
+using FTOptix.RAEtherNetIP;
+using FTOptix.Recipe;
+using FTOptix.RecipeX;
+using FTOptix.Retentivity;
+using FTOptix.SerialPort;
 using FTOptix.SQLiteStore;
 using FTOptix.Store;
-using FTOptix.RAEtherNetIP;
-using FTOptix.Retentivity;
-using FTOptix.OPCUAServer;
-using FTOptix.CommunicationDriver;
-using FTOptix.SerialPort;
-using FTOptix.Core;
-using System.Security.Cryptography;
+using FTOptix.UI;
+using FTOptix.WebUI;
+using System;
 using System.Diagnostics;
-using FTOptix.DataLogger;
-using FTOptix.Recipe;
-using FTOptix.AuditSigning;
-using FTOptix.RecipeX;
+using System.Linq;
+using System.Security.Cryptography;
+using UAManagedCore;
+using OpcUa = UAManagedCore.OpcUa;
+
 #endregion
 
 public class EventQueryFormatter : BaseNetLogic {
@@ -34,7 +36,6 @@ public class EventQueryFormatter : BaseNetLogic {
 		fromTimestampVariable = LogicObject.GetVariable("FromTimestamp");
 		toTimestampVariable = LogicObject.GetVariable("ToTimestamp");
 		textVariable = LogicObject.GetVariable("Text");
-		userVariable = LogicObject.GetVariable("UserFilter");
 		NodeId dbNodeId = LogicObject.GetVariable("VariableDatabase").Value;
 		varDB = InformationModel.Get<SQLiteStore>(dbNodeId);
 
@@ -56,7 +57,6 @@ public class EventQueryFormatter : BaseNetLogic {
 		languageVariable.VariableChange += VariableUpdate;
 		fromTimestampVariable.VariableChange += VariableUpdate;
 		toTimestampVariable.VariableChange += VariableUpdate;
-		userVariable.VariableChange += VariableUpdate;
 		textVariable.VariableChange += VariableUpdate;
 	}
 
@@ -64,7 +64,6 @@ public class EventQueryFormatter : BaseNetLogic {
 		languageVariable.VariableChange -= VariableUpdate;
 		fromTimestampVariable.VariableChange -= VariableUpdate;
 		toTimestampVariable.VariableChange -= VariableUpdate;
-		userVariable.VariableChange -= VariableUpdate;
 		textVariable.VariableChange -= VariableUpdate;
 	}
 
@@ -75,7 +74,6 @@ public class EventQueryFormatter : BaseNetLogic {
 		DateTime now = DateTime.Now;
 		fromTimestampVariable.Value = now.AddDays(-1);
 		toTimestampVariable.Value = now;
-		userVariable.Value = "";
 		textVariable.Value = "";
 
 		subscribeToVariableChanges();
@@ -108,10 +106,7 @@ public class EventQueryFormatter : BaseNetLogic {
 	public void UpdateCommentText() {
 		var selectedItem = InformationModel.Get(LogicObject.GetVariable("SelectedItem").Value);
 		string index = languageVariable.Value;
-		string p1 = index.Split('_')[0].Replace("\"", "");
-		string p2 = index.Split('_')[1].Replace("\"", "");
-		string output = $"{p1}_{p2}";
-		string currentComment = selectedItem.Children.GetVariable(output).Value;
+		string currentComment = selectedItem.Children.GetVariable(index.Split('_')[0].Replace("\"", "")).Value;
 		comment.Value = currentComment;
 	}
 
@@ -121,14 +116,9 @@ public class EventQueryFormatter : BaseNetLogic {
 		eventLogger = dbTable.Value;
 		fromTimestamp = fromTimestampVariable.Value;
 		toTimestamp = toTimestampVariable.Value;
-		user = userVariable.Value;
 		text = textVariable.Value;
 
 		// check variables for null or whitespace and format the query accordingly
-		if (!string.IsNullOrWhiteSpace(user))
-			user = $" AND User = {user}";
-		else user = "";
-
 		if (fromTimestamp.Year > 1601 && toTimestamp.Year > 1601) {
 			timestampResult = $" WHERE Time BETWEEN '{ConvertLocalToUtcString(fromTimestamp)}' AND '{ConvertLocalToUtcString(toTimestamp)}'";
 		} else timestampResult = $" WHERE Time BETWEEN '{ConvertLocalToUtcString(DateTime.Now.AddDays(-1))}' AND '{ConvertLocalToUtcString(DateTime.Now):sql_literal}'";
@@ -136,8 +126,8 @@ public class EventQueryFormatter : BaseNetLogic {
 		if (language == "Comment_" && language.Length < 8)
 			language = " AND Comment_en-US";
 
-		if (text != "''" && text != "'%%'" && text.Length > 4)
-			text = $" AND {language} LIKE '{text}'";
+		if (!string.IsNullOrWhiteSpace(text) && text.All(char.IsLetterOrDigit))
+			text = $" AND SourceName LIKE '%{text}%'";
 		else text = "";
 
 		if (string.IsNullOrWhiteSpace(eventLogger)) {
@@ -146,7 +136,7 @@ public class EventQueryFormatter : BaseNetLogic {
 		} else Log.Verbose1("QueryFormatter", $"Using event logger: {eventLogger}");
 
 		// build sql query. for reference on names of columns see variable database in optix studio
-		string output = $"SELECT {language} AS Comment, ClientUserId, LocalTime, Recipe, OldValue, NewValue, SourceName, Time FROM {eventLogger}{timestampResult}{user}{text} ORDER BY Time DESC";
+		string output = $"SELECT {language} AS Comment, ClientUserId, LocalTime, Recipe, OldValue, NewValue, SourceName, Time FROM {eventLogger}{timestampResult}{text} ORDER BY Time DESC";
 		query.Value = output;
 		Log.Info("QueryFormatter", output);
 	}
@@ -160,7 +150,6 @@ public class EventQueryFormatter : BaseNetLogic {
 	private IUAVariable dbTable;
 	private IUAVariable fromTimestampVariable;
 	private IUAVariable toTimestampVariable;
-	private IUAVariable userVariable;
 	private IUAVariable textVariable;
 	private IUAVariable comment;
 	private SQLiteStore varDB;
@@ -168,6 +157,5 @@ public class EventQueryFormatter : BaseNetLogic {
 	private string eventLogger;
 	private DateTime fromTimestamp;
 	private DateTime toTimestamp;
-	private string user;
 	private string text;
 }

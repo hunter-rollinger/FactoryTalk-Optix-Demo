@@ -65,21 +65,6 @@ public class AlarmHistory : FTOptix.UI.Screen
 {
 }
 
-[MapType(NamespaceUri = "OptimateDemoProject", Guid = "dccc18444d54b63c438f4c359ab5800c")]
-public class RejectsByZone : FTOptix.UI.Screen
-{
-}
-
-[MapType(NamespaceUri = "OptimateDemoProject", Guid = "08231cb9559a2a842103718567e83555")]
-public class Template_Screen : FTOptix.UI.Screen
-{
-}
-
-[MapType(NamespaceUri = "OptimateDemoProject", Guid = "fbe363a18543559c6f2b0b440d5270c7")]
-public class Template_ServoReference : FTOptix.UI.Screen
-{
-}
-
 [MapType(NamespaceUri = "OptimateDemoProject", Guid = "1868a95fea4100a87d4ae18d4bd6b838")]
 public class Manual_Bucket_Conveyor : FTOptix.UI.Screen
 {
@@ -102,6 +87,16 @@ public class BurgerMenuBar : MenuBar
 
 [MapType(NamespaceUri = "OptimateDemoProject", Guid = "be0f5f0c3cd399b38360a916d9fb89f6")]
 public class EventHistory : FTOptix.UI.Screen
+{
+}
+
+[MapType(NamespaceUri = "OptimateDemoProject", Guid = "dccc18444d54b63c438f4c359ab5800c")]
+public class RejectsByZone : FTOptix.UI.Screen
+{
+}
+
+[MapType(NamespaceUri = "OptimateDemoProject", Guid = "08231cb9559a2a842103718567e83555")]
+public class PRODUCTION_TEMPLATE : FTOptix.UI.Screen
 {
 }
 
@@ -132,6 +127,11 @@ public class Production_Bucket_Conveyor : FTOptix.UI.Screen
 
 [MapType(NamespaceUri = "OptimateDemoProject", Guid = "afe8c1007efe65520600fb60a7fbb519")]
 public class Production_Transport : FTOptix.UI.Screen
+{
+}
+
+[MapType(NamespaceUri = "OptimateDemoProject", Guid = "c6c33defd7c0bf115d56aa553bcef7d4")]
+public class MANUAL_TEMPLATE : FTOptix.UI.Screen
 {
 }
 
@@ -200,6 +200,11 @@ public class Manual_Gluing : FTOptix.UI.Screen
 {
 }
 
+[MapType(NamespaceUri = "OptimateDemoProject", Guid = "fbe363a18543559c6f2b0b440d5270c7")]
+public class MAINTENANCE_TEMPLATE : FTOptix.UI.Screen
+{
+}
+
 [MapType(NamespaceUri = "OptimateDemoProject", Guid = "b1954347952e84142f14ac291e5a7565")]
 public class UserLogin : FTOptix.UI.Dialog
 {
@@ -211,7 +216,7 @@ public class Maintenance_Menu_Bar : MenuBar
 }
 
 [MapType(NamespaceUri = "OptimateDemoProject", Guid = "56849d712b23b9d657a4c3cc4898fb9f")]
-public class Maintenance_Transfer : FTOptix.UI.Screen
+public class Maintenance_Transfer : MAINTENANCE_TEMPLATE
 {
 }
 
@@ -225,11 +230,6 @@ public class Maintenance_Bucket_Conveyor : FTOptix.UI.Screen
 {
 }
 
-[MapType(NamespaceUri = "OptimateDemoProject", Guid = "4d4cf3cb8d5e44905ded4ea601aa9bb6")]
-public class Debug_ProjectSimulation : FTOptix.UI.Screen
-{
-}
-
 [MapType(NamespaceUri = "OptimateDemoProject", Guid = "4bab689b1bbc3287355556f28fb5d5e6")]
 public class Maintenance_Loading : FTOptix.UI.Screen
 {
@@ -237,6 +237,11 @@ public class Maintenance_Loading : FTOptix.UI.Screen
 
 [MapType(NamespaceUri = "OptimateDemoProject", Guid = "ae721355ffe738149606332ce3fd551f")]
 public class Changeover_Main : FTOptix.UI.Screen
+{
+}
+
+[MapType(NamespaceUri = "OptimateDemoProject", Guid = "8daefd49de266e2536a78252580b8cd5")]
+public class UserLogout : FTOptix.UI.Dialog
 {
 }
 
@@ -270,28 +275,48 @@ public class Debug_Variables : FTOptix.UI.Screen
 {
 }
 
+[MapType(NamespaceUri = "OptimateDemoProject", Guid = "4d4cf3cb8d5e44905ded4ea601aa9bb6")]
+public class Debug_ProjectSimulation : FTOptix.UI.Screen
+{
+}
+
 [MapType(NamespaceUri = "OptimateDemoProject", Guid = "1c6ebda258b0ee76eec69cceef96868c")]
 public class Debug_SystemInfo : FTOptix.UI.Screen
 {
 }
 
 [MapType(NamespaceUri = "OptimateDemoProject", Guid = "cb5fcd2f528fd22475ed541049f4e7e2")]
+public class AlphaNumeric : FTOptix.UI.VirtualKeyboardPanel
+{
+}
+
+[MapType(NamespaceUri = "OptimateDemoProject", Guid = "7233291c453535c0d739de933f626938")]
+public class Shift_StatisticDisplay : FTOptix.UI.Panel
+{
+}
+
+[MapType(NamespaceUri = "OptimateDemoProject", Guid = "c8823acaf5e047c71c2e61a0f4277091")]
 public class AlphaNumeric_Simple : FTOptix.UI.VirtualKeyboardPanel
 {
 }
 
 [MapType(NamespaceUri = "OptimateDemoProject", Guid = "afb36c7bfdad4e20cbe181fcb20dbe7e")]
+public class Numeric : FTOptix.UI.VirtualKeyboardPanel
+{
+}
+
+[MapType(NamespaceUri = "OptimateDemoProject", Guid = "6a92e631bd411a00af90d4ae4507d601")]
 public class Numeric_Simple : FTOptix.UI.VirtualKeyboardPanel
 {
 }
 
 [MapType(NamespaceUri = "OptimateDemoProject", Guid = "ac3f76e888a5e3fdd2691155ca1fc8f6")]
-public class AlphaNumeric : FTOptix.UI.VirtualKeyboardPanel
+public class AlphaNumeric_Preedit : FTOptix.UI.VirtualKeyboardPanel
 {
 }
 
 [MapType(NamespaceUri = "OptimateDemoProject", Guid = "4579fdf18bdfdaa64772eba31d350d66")]
-public class Numeric : FTOptix.UI.VirtualKeyboardPanel
+public class Numeric_Preedit : FTOptix.UI.VirtualKeyboardPanel
 {
 }
 
@@ -322,11 +347,6 @@ public class PackML_State_Mode_Indicator : FTOptix.UI.Panel
 
 [MapType(NamespaceUri = "OptimateDemoProject", Guid = "216c0c2f4e5ed9b91680fcd43f42c553")]
 public class Position_Dispaly : FTOptix.UI.RowLayout
-{
-}
-
-[MapType(NamespaceUri = "OptimateDemoProject", Guid = "7233291c453535c0d739de933f626938")]
-public class Shift_StatisticDisplay : FTOptix.UI.Panel
 {
 }
 
@@ -377,11 +397,6 @@ public class Button_Standard_DO_NOT_USE : FTOptix.UI.ScaleLayout
 
 [MapType(NamespaceUri = "OptimateDemoProject", Guid = "95767f9bca361096e626572b50ab3afb")]
 public class StatusButton : FTOptix.UI.Panel
-{
-}
-
-[MapType(NamespaceUri = "OptimateDemoProject", Guid = "2a95b1fed95296500fb9002dd6197f58")]
-public class Reference_Button : FTOptix.UI.Panel
 {
 }
 

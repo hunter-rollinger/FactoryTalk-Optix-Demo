@@ -1,461 +1,6 @@
 Name: Servo Referencing
 Type: FolderType
 Children:
-- Name: Reference_Button
-  Id: g=2a95b1fed95296500fb9002dd6197f58
-  Supertype: Panel
-  ReferenceType: HasComponent
-  Children:
-  - Name: Width
-    Type: BaseVariableType
-    DataType: Size
-    ModellingRule: Optional
-    Value: 200.0
-  - Name: Height
-    Type: BaseVariableType
-    DataType: Size
-    ModellingRule: Optional
-    Value: 42.0
-  - Name: StepNumber
-    Type: BaseDataVariableType
-    DataType: String
-    Value: "0"
-  - Name: StepText
-    Type: BaseDataVariableType
-    DataType: String
-    Value: "0"
-  - Name: 'UseSymbol?'
-    Type: BaseDataVariableType
-    DataType: Boolean
-  - Name: GridLayout1
-    Type: GridLayout
-    Children:
-    - Name: Width
-      Type: BaseVariableType
-      DataType: Size
-      ModellingRule: Optional
-      Value: -1.0
-    - Name: Height
-      Type: BaseVariableType
-      DataType: Size
-      ModellingRule: Optional
-      Value: 300.0
-    - Name: Rows
-      Type: BaseDataVariableType
-      DataType: String
-      ValueRank: OneDimension
-      ArrayDimensions: [0]
-      Value: ["1fr"]
-    - Name: Columns
-      Type: BaseDataVariableType
-      DataType: String
-      ValueRank: OneDimension
-      ArrayDimensions: [0]
-      Value: ["Auto","1fr"]
-    - Name: HorizontalAlignment
-      Type: BaseVariableType
-      DataType: HorizontalAlignment
-      ModellingRule: Optional
-      Value: 3
-    - Name: VerticalAlignment
-      Type: BaseVariableType
-      DataType: VerticalAlignment
-      ModellingRule: Optional
-      Value: 3
-    - Name: Indicator
-      Type: Multi_State_Indicator
-      Children:
-      - Name: Circle
-        Type: Ellipse
-        Children:
-        - Name: FillColor
-          Type: BaseDataVariableType
-          DataType: Color
-          Value: "#ff9900"
-          Children:
-          - Name: IndicatorColors1
-            Type: Colors
-            Children:
-            - Name: Source
-              Type: BaseDataVariableType
-              DataType: BaseDataType
-              ReferenceType: HasSource
-              Children:
-              - Name: DynamicLink
-                Type: DynamicLink
-                DataType: NodePath
-                Value: "../../../../IndicatorColor"
-            - Name: Pairs
-              Type: BaseObjectType
-              Children:
-              - Name: Pair3
-                Type: ValueMapPair
-                Children:
-                - Name: Key
-                  Type: BaseDataVariableType
-                  DataType: Int16
-                  Value: 1
-                - Name: Value
-                  Type: BaseDataVariableType
-                  DataType: Color
-                  Value: "#23af72"
-                  Children:
-                  - Name: DynamicLink
-                    Type: DynamicLink
-                    DataType: NodePath
-                    Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Good - 23af72 - Green"
-              - Name: Pair4
-                Type: ValueMapPair
-                Children:
-                - Name: Key
-                  Type: BaseDataVariableType
-                  DataType: Int16
-                  Value: 2
-                - Name: Value
-                  Type: BaseDataVariableType
-                  DataType: Color
-                  Value: "#6d91b6"
-                  Children:
-                  - Name: DynamicLink
-                    Type: DynamicLink
-                    DataType: NodePath
-                    Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Selected - 6d91b6 - Info - Blue"
-              - Name: Pair5
-                Type: ValueMapPair
-                Children:
-                - Name: Key
-                  Type: BaseDataVariableType
-                  DataType: Int16
-                  Value: 3
-                - Name: Value
-                  Type: BaseDataVariableType
-                  DataType: Color
-                  Value: "#ff9900"
-                  Children:
-                  - Name: DynamicLink
-                    Type: DynamicLink
-                    DataType: NodePath
-                    Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Warning - ff9900 - Orange"
-              - Name: Pair
-                Type: ValueMapPair
-                Children:
-                - Name: Key
-                  Type: BaseDataVariableType
-                  DataType: Int16
-                  Value: 4
-                - Name: Value
-                  Type: BaseDataVariableType
-                  DataType: Color
-                  Value: "#cc0036"
-                  Children:
-                  - Name: DynamicLink
-                    Type: DynamicLink
-                    DataType: NodePath
-                    Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Error - cc036 - Red"
-              - Name: Pair6
-                Type: ValueMapPair
-                Children:
-                - Name: Key
-                  Type: BaseDataVariableType
-                  DataType: Int16
-                  Value: 5
-                - Name: Value
-                  Type: BaseDataVariableType
-                  DataType: Color
-                  Value: "#6d6e70"
-                  Children:
-                  - Name: DynamicLink
-                    Type: DynamicLink
-                    DataType: NodePath
-                    Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Dark Grey 2 - 6d6e70"
-              - Name: Pair1
-                Type: ValueMapPair
-                Children:
-                - Name: Key
-                  Type: BaseDataVariableType
-                  DataType: Int16
-                  Value: 6
-                - Name: Value
-                  Type: BaseDataVariableType
-                  DataType: Color
-        - Name: Visible
-          Type: BaseDataVariableType
-          DataType: Boolean
-          Value: true
-          Children:
-          - Name: ExpressionEvaluator1
-            Type: ExpressionEvaluator
-            Children:
-            - Name: Source0
-              Type: BaseDataVariableType
-              DataType: BaseDataType
-              ReferenceType: HasSource
-              Children:
-              - Name: DynamicLink
-                Type: DynamicLink
-                DataType: NodePath
-                Value: "../../../../IndicatorColor"
-      - Name: IndicatorColor
-        Type: BaseDataVariableType
-        DataType: 'Multi-State Indicator Colors'
-      - Name: Indicator
-        Type: Image
-        Children:
-        - Name: Path
-          Type: BaseDataVariableType
-          DataType: ResourceUri
-          Children:
-          - Name: IndicatorSymbol1
-            Type: Symbols
-            Children:
-            - Name: Source
-              Type: BaseDataVariableType
-              DataType: BaseDataType
-              ReferenceType: HasSource
-              Children:
-              - Name: DynamicLink
-                Type: DynamicLink
-                DataType: NodePath
-                Value: "../../../../IndicatorSymbol"
-            - Name: Pairs
-              Type: BaseObjectType
-              Children:
-              - Name: Pair2
-                Type: ValueMapPair
-                Children:
-                - Name: Key
-                  Type: BaseDataVariableType
-                  DataType: Int16
-                  Value: 1
-                - Name: Value
-                  Type: BaseDataVariableType
-                  DataType: ResourceUri
-                  Value: "ns=36;%PROJECTDIR%/Graphics/Coesia - Library/indicator items/warning.svg"
-              - Name: Pair3
-                Type: ValueMapPair
-                Children:
-                - Name: Key
-                  Type: BaseDataVariableType
-                  DataType: Int16
-                  Value: 2
-                - Name: Value
-                  Type: BaseDataVariableType
-                  DataType: ResourceUri
-                  Value: "ns=36;%PROJECTDIR%/Graphics/Coesia - Library/indicator items/good.svg"
-              - Name: Pair4
-                Type: ValueMapPair
-                Children:
-                - Name: Key
-                  Type: BaseDataVariableType
-                  DataType: Int16
-                  Value: 3
-                - Name: Value
-                  Type: BaseDataVariableType
-                  DataType: ResourceUri
-                  Value: "ns=36;%PROJECTDIR%/Graphics/Coesia - Library/indicator items/info.svg"
-              - Name: Pair5
-                Type: ValueMapPair
-                Children:
-                - Name: Key
-                  Type: BaseDataVariableType
-                  DataType: Int16
-                  Value: 4
-                - Name: Value
-                  Type: BaseDataVariableType
-                  DataType: ResourceUri
-                  Value: "ns=36;%PROJECTDIR%/Graphics/Coesia - Library/indicator items/led-lit.svg"
-              - Name: Pair6
-                Type: ValueMapPair
-                Children:
-                - Name: Key
-                  Type: BaseDataVariableType
-                  DataType: Int16
-                  Value: 5
-                - Name: Value
-                  Type: BaseDataVariableType
-                  DataType: ResourceUri
-                  Value: "ns=36;%PROJECTDIR%/Graphics/Coesia - Library/indicator items/servo axis.svg"
-              - Name: Pair7
-                Type: ValueMapPair
-                Children:
-                - Name: Key
-                  Type: BaseDataVariableType
-                  DataType: Int16
-                  Value: 6
-                - Name: Value
-                  Type: BaseDataVariableType
-                  DataType: ResourceUri
-                  Value: "ns=36;%PROJECTDIR%/Graphics/Coesia - Library/indicator items/open.svg"
-              - Name: Pair8
-                Type: ValueMapPair
-                Children:
-                - Name: Key
-                  Type: BaseDataVariableType
-                  DataType: Int16
-                  Value: 7
-                - Name: Value
-                  Type: BaseDataVariableType
-                  DataType: ResourceUri
-                  Value: "ns=36;%PROJECTDIR%/Graphics/Coesia - Library/indicator items/closed.svg"
-              - Name: Pair9
-                Type: ValueMapPair
-                Children:
-                - Name: Key
-                  Type: BaseDataVariableType
-                  DataType: Int16
-                  Value: 8
-                - Name: Value
-                  Type: BaseDataVariableType
-                  DataType: ResourceUri
-                  Value: "ns=36;%PROJECTDIR%/Graphics/Coesia - Library/indicator items/error.svg"
-              - Name: Pair1
-                Type: ValueMapPair
-                Children:
-                - Name: Key
-                  Type: BaseDataVariableType
-                  DataType: Int16
-                  Value: 9
-                - Name: Value
-                  Type: BaseDataVariableType
-                  DataType: ResourceUri
-                  Value: "ns=36;%PROJECTDIR%/Graphics/Coesia - Library/indicator items/exclaim.svg"
-              - Name: Pair10
-                Type: ValueMapPair
-                Children:
-                - Name: Key
-                  Type: BaseDataVariableType
-                  DataType: Int16
-                  Value: 10
-                - Name: Value
-                  Type: BaseDataVariableType
-                  DataType: ResourceUri
-        - Name: Visible
-          Type: BaseDataVariableType
-          DataType: Boolean
-          Value: true
-          Children:
-          - Name: ExpressionEvaluator1
-            Type: ExpressionEvaluator
-            Children:
-            - Name: Source0
-              Type: BaseDataVariableType
-              DataType: BaseDataType
-              ReferenceType: HasSource
-              Children:
-              - Name: DynamicLink
-                Type: DynamicLink
-                DataType: NodePath
-                Value: "../../../../Label/Visible"
-            - Name: Source1
-              Type: BaseDataVariableType
-              DataType: BaseDataType
-              ReferenceType: HasSource
-              Children:
-              - Name: DynamicLink
-                Type: DynamicLink
-                DataType: NodePath
-                Value: "../../../../IndicatorSymbol"
-      - Name: IndicatorSymbol
-        Type: BaseDataVariableType
-        DataType: 'Multi-State Indicator Symbols'
-      - Name: TextToDisplay
-        Type: BaseDataVariableType
-        DataType: String
-        Value: "1"
-      - Name: Label
-        Type: Label
-        Children:
-        - Name: Visible
-          Type: BaseDataVariableType
-          DataType: Boolean
-          Value: true
-          Children:
-          - Name: ExpressionEvaluator1
-            Type: ExpressionEvaluator
-            Children:
-            - Name: Source0
-              Type: BaseDataVariableType
-              DataType: BaseDataType
-              ReferenceType: HasSource
-              Children:
-              - Name: DynamicLink
-                Type: DynamicLink
-                DataType: NodePath
-                Value: "../../../../TextToDisplay"
-        - Name: Text
-          Type: BaseDataVariableType
-          DataType: LocalizedText
-          Children:
-          - Name: DynamicLink
-            Type: DynamicLink
-            DataType: NodePath
-            Value: "../../TextToDisplay"
-      - Name: HorizontalAlignment
-        Type: BaseVariableType
-        DataType: HorizontalAlignment
-        ModellingRule: Optional
-        Value: 2
-      - Name: VerticalAlignment
-        Type: BaseVariableType
-        DataType: VerticalAlignment
-        ModellingRule: Optional
-        Value: 2
-      - Name: Visible
-        Type: BaseDataVariableType
-        DataType: Boolean
-        Value: true
-    - Name: Text
-      Type: Label
-      Children:
-      - Name: Text
-        Type: BaseDataVariableType
-        DataType: LocalizedText
-        Children:
-        - Name: StringFormatter1
-          Type: StringFormatter
-          Children:
-          - Name: Format
-            Type: BaseDataVariableType
-            DataType: LocalizedText
-            ReferenceType: HasParameter
-            ModellingRule: Optional
-            Value: {"LocaleId":"en-US","Text":"{0}."}
-          - Name: ns=9;Source0
-            Type: BaseDataVariableType
-            DataType: BaseDataType
-            ReferenceType: HasSource
-            Children:
-            - Name: DynamicLink
-              Type: DynamicLink
-              DataType: NodePath
-      - Name: Style
-        Type: BaseDataVariableType
-        DataType: String
-        ModellingRule: Optional
-        Value: "StandardControlLabel"
-      - Name: TextHorizontalAlignment
-        Type: BaseVariableType
-        DataType: TextHorizontalAlignment
-        ModellingRule: Optional
-      - Name: TextVerticalAlignment
-        Type: BaseVariableType
-        DataType: TextVerticalAlignment
-        ModellingRule: Optional
-        Value: 1
-      - Name: TextColor
-        Type: BaseDataVariableType
-        DataType: Color
-        Value: "#000000"
-        Children:
-        - Name: DynamicLink
-          Type: DynamicLink
-          DataType: NodePath
-          Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Dark Grey 6 - 000000 - Black"
-    - Name: HorizontalGap
-      Type: BaseDataVariableType
-      DataType: Size
-      ModellingRule: Optional
-      Value: 20.0
 - Name: Reference_StepText
   Id: g=198134a9ef740ca61c35b407c3dad3f4
   Supertype: Panel
@@ -473,8 +18,7 @@ Children:
     Value: 42.0
   - Name: StepNumber
     Type: BaseDataVariableType
-    DataType: String
-    Value: "0"
+    DataType: Int32
   - Name: StepText
     Type: BaseDataVariableType
     DataType: String
@@ -650,9 +194,142 @@ Children:
                 Type: DynamicLink
                 DataType: NodePath
                 Value: "../../../../IndicatorColor"
+        - Name: BorderColor
+          Type: BaseDataVariableType
+          DataType: Color
+          Children:
+          - Name: IndicatorColors1
+            Type: Colors
+            Children:
+            - Name: Source
+              Type: BaseDataVariableType
+              DataType: BaseDataType
+              ReferenceType: HasSource
+              Children:
+              - Name: DynamicLink
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "../../../../IndicatorColor"
+            - Name: Pairs
+              Type: BaseObjectType
+              Children:
+              - Name: Pair3
+                Type: ValueMapPair
+                Children:
+                - Name: Key
+                  Type: BaseDataVariableType
+                  DataType: Int16
+                  Value: 1
+                - Name: Value
+                  Type: BaseDataVariableType
+                  DataType: Color
+                  Value: "#23af72"
+                  Children:
+                  - Name: DynamicLink
+                    Type: DynamicLink
+                    DataType: NodePath
+                    Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Good - 23af72 - Green"
+              - Name: Pair4
+                Type: ValueMapPair
+                Children:
+                - Name: Key
+                  Type: BaseDataVariableType
+                  DataType: Int16
+                  Value: 2
+                - Name: Value
+                  Type: BaseDataVariableType
+                  DataType: Color
+                  Value: "#6d91b6"
+                  Children:
+                  - Name: DynamicLink
+                    Type: DynamicLink
+                    DataType: NodePath
+                    Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Selected - 6d91b6 - Info - Blue"
+              - Name: Pair5
+                Type: ValueMapPair
+                Children:
+                - Name: Key
+                  Type: BaseDataVariableType
+                  DataType: Int16
+                  Value: 3
+                - Name: Value
+                  Type: BaseDataVariableType
+                  DataType: Color
+                  Value: "#ff9900"
+                  Children:
+                  - Name: DynamicLink
+                    Type: DynamicLink
+                    DataType: NodePath
+                    Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Warning - ff9900 - Orange"
+              - Name: Pair
+                Type: ValueMapPair
+                Children:
+                - Name: Key
+                  Type: BaseDataVariableType
+                  DataType: Int16
+                  Value: 4
+                - Name: Value
+                  Type: BaseDataVariableType
+                  DataType: Color
+                  Value: "#cc0036"
+                  Children:
+                  - Name: DynamicLink
+                    Type: DynamicLink
+                    DataType: NodePath
+                    Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Error - cc036 - Red"
+              - Name: Pair6
+                Type: ValueMapPair
+                Children:
+                - Name: Key
+                  Type: BaseDataVariableType
+                  DataType: Int16
+                  Value: 5
+                - Name: Value
+                  Type: BaseDataVariableType
+                  DataType: Color
+                  Value: "#6d6e70"
+                  Children:
+                  - Name: DynamicLink
+                    Type: DynamicLink
+                    DataType: NodePath
+                    Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Dark Grey 2 - 6d6e70"
+              - Name: Pair1
+                Type: ValueMapPair
+                Children:
+                - Name: Key
+                  Type: BaseDataVariableType
+                  DataType: Int16
+                  Value: 6
+                - Name: Value
+                  Type: BaseDataVariableType
+                  DataType: Color
       - Name: IndicatorColor
         Type: BaseDataVariableType
         DataType: 'Multi-State Indicator Colors'
+        Children:
+        - Name: ConditionalConverter1
+          Type: ConditionalConverter
+          Children:
+          - Name: Condition
+            Type: BaseDataVariableType
+            DataType: Boolean
+            ReferenceType: HasSource
+            Children:
+            - Name: DynamicLink
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "../../../../../UseSymbol?"
+          - Name: TrueValue
+            Type: BaseDataVariableType
+            DataType: 'Multi-State Indicator Colors'
+            ReferenceType: HasParameter
+            ModellingRule: Optional
+            Value: 2
+          - Name: FalseValue
+            Type: BaseDataVariableType
+            DataType: 'Multi-State Indicator Colors'
+            ReferenceType: HasParameter
+            ModellingRule: Optional
       - Name: Indicator
         Type: Image
         Children:
@@ -817,6 +494,37 @@ Children:
         Type: BaseDataVariableType
         DataType: String
         Value: "1"
+        Children:
+        - Name: StringFormatter1
+          Type: StringFormatter
+          Children:
+          - Name: Format
+            Type: BaseDataVariableType
+            DataType: LocalizedText
+            ReferenceType: HasParameter
+            ModellingRule: Optional
+            Value: {"LocaleId":"en-US","Text":"{0}."}
+          - Name: ns=9;Source0
+            Type: BaseDataVariableType
+            DataType: BaseDataType
+            ReferenceType: HasSource
+            Children:
+            - Name: DynamicLink
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "../../../../../StepNumber"
+              Children:
+              - Name: Mode
+                Type: BaseVariableType
+                DataType: DynamicLinkMode
+                ModellingRule: Optional
+                Value: 2
+          - Name: Mode
+            Type: PropertyType
+            DataType: DynamicLinkMode
+            ReferenceType: HasComponent
+            ModellingRule: Optional
+            Value: 2
       - Name: Label
         Type: Label
         Children:
@@ -845,6 +553,23 @@ Children:
             Type: DynamicLink
             DataType: NodePath
             Value: "../../TextToDisplay"
+        - Name: Style
+          Type: BaseDataVariableType
+          DataType: String
+          Value: "PointerCirclesWH"
+          Children:
+          - Name: ConditionalConverter1
+            Type: ConditionalConverter
+            Children:
+            - Name: Condition
+              Type: BaseDataVariableType
+              DataType: Boolean
+              ReferenceType: HasSource
+              Children:
+              - Name: DynamicLink
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "../../../../Circle/Visible"
       - Name: HorizontalAlignment
         Type: BaseVariableType
         DataType: HorizontalAlignment
@@ -866,23 +591,10 @@ Children:
         Type: BaseDataVariableType
         DataType: LocalizedText
         Children:
-        - Name: StringFormatter1
-          Type: StringFormatter
-          Children:
-          - Name: Format
-            Type: BaseDataVariableType
-            DataType: LocalizedText
-            ReferenceType: HasParameter
-            ModellingRule: Optional
-            Value: {"LocaleId":"en-US","Text":"{0}."}
-          - Name: ns=9;Source0
-            Type: BaseDataVariableType
-            DataType: BaseDataType
-            ReferenceType: HasSource
-            Children:
-            - Name: DynamicLink
-              Type: DynamicLink
-              DataType: NodePath
+        - Name: DynamicLink
+          Type: DynamicLink
+          DataType: NodePath
+          Value: "../../../StepText"
       - Name: Style
         Type: BaseDataVariableType
         DataType: String
@@ -906,6 +618,16 @@ Children:
           Type: DynamicLink
           DataType: NodePath
           Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Dark Grey 6 - 000000 - Black"
+      - Name: WordWrap
+        Type: BaseDataVariableType
+        DataType: Boolean
+        ModellingRule: Optional
+        Value: true
+      - Name: Elide
+        Type: BaseDataVariableType
+        DataType: ElideEnum
+        ModellingRule: Optional
+        Value: 3
     - Name: HorizontalGap
       Type: BaseDataVariableType
       DataType: Size
@@ -933,14 +655,89 @@ Children:
       Type: BaseDataVariableType
       DataType: 'Multi-Color InfoBox Colors'
       Value: 2
+      Children:
+      - Name: ConditionalConverter1
+        Type: ConditionalConverter
+        Children:
+        - Name: Condition
+          Type: BaseDataVariableType
+          DataType: Boolean
+          ReferenceType: HasSource
+          Children:
+          - Name: DynamicLink
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "../../../../AxisIsReferenced"
+        - Name: TrueValue
+          Type: BaseDataVariableType
+          DataType: 'Multi-Color InfoBox Colors'
+          ReferenceType: HasParameter
+          ModellingRule: Optional
+          Value: 1
+        - Name: FalseValue
+          Type: BaseDataVariableType
+          DataType: 'Multi-Color InfoBox Colors'
+          ReferenceType: HasParameter
+          ModellingRule: Optional
+          Value: 4
     - Name: Symbol
       Type: BaseDataVariableType
       DataType: 'Multi-Color InfoBox Symbols'
       Value: 3
+      Children:
+      - Name: ConditionalConverter1
+        Type: ConditionalConverter
+        Children:
+        - Name: Condition
+          Type: BaseDataVariableType
+          DataType: Boolean
+          ReferenceType: HasSource
+          Children:
+          - Name: DynamicLink
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "../../../../AxisIsReferenced"
+        - Name: TrueValue
+          Type: BaseDataVariableType
+          DataType: 'Multi-Color InfoBox Symbols'
+          ReferenceType: HasParameter
+          ModellingRule: Optional
+          Value: 2
+        - Name: FalseValue
+          Type: BaseDataVariableType
+          DataType: 'Multi-Color InfoBox Symbols'
+          ReferenceType: HasParameter
+          ModellingRule: Optional
+          Value: 8
     - Name: Symbol Shape
       Type: BaseDataVariableType
       DataType: 'Multi-Color InfoBox Symbol Shape'
       Value: 1
+      Children:
+      - Name: ConditionalConverter1
+        Type: ConditionalConverter
+        Children:
+        - Name: Condition
+          Type: BaseDataVariableType
+          DataType: Boolean
+          ReferenceType: HasSource
+          Children:
+          - Name: DynamicLink
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "../../../../AxisIsReferenced"
+        - Name: TrueValue
+          Type: BaseDataVariableType
+          DataType: 'Multi-Color InfoBox Symbol Shape'
+          ReferenceType: HasParameter
+          ModellingRule: Optional
+          Value: 1
+        - Name: FalseValue
+          Type: BaseDataVariableType
+          DataType: 'Multi-Color InfoBox Symbol Shape'
+          ReferenceType: HasParameter
+          ModellingRule: Optional
+          Value: 2
     - Name: Background
       Type: Rectangle
       Children:
@@ -1894,6 +1691,30 @@ Children:
       Type: BaseDataVariableType
       DataType: String
       Value: "This is a test"
+      Children:
+      - Name: ConditionalConverter1
+        Type: ConditionalConverter
+        Children:
+        - Name: Condition
+          Type: BaseDataVariableType
+          DataType: Boolean
+          ReferenceType: HasSource
+          Children:
+          - Name: DynamicLink
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "../../../../AxisIsReferenced"
+        - Name: TrueValue
+          Type: BaseDataVariableType
+          DataType: String
+          ReferenceType: HasParameter
+          ModellingRule: Optional
+          Value: "Referenced"
+        - Name: FalseValue
+          Type: BaseDataVariableType
+          DataType: String
+          ReferenceType: HasParameter
+          Value: "Not Referenced"
     - Name: Visible
       Type: BaseDataVariableType
       DataType: Boolean
@@ -1940,8 +1761,5 @@ Children:
       ModellingRule: Optional
       Value: 3
   - Name: AxisIsReferenced
-    Type: BaseDataVariableType
-    DataType: Boolean
-  - Name: AxisCanHome
     Type: BaseDataVariableType
     DataType: Boolean

@@ -1580,6 +1580,94 @@ Children:
         Type: BaseDataVariableType
         DataType: FontWeightEnum
         Value: 700
+    - Name: ReferenceButton
+      Type: ButtonStyle
+      Children:
+      - Name: FontSize
+        Type: BaseDataVariableType
+        DataType: Size
+        Value: 16.0
+      - Name: BorderWidth
+        Type: BaseDataVariableType
+        DataType: Size
+        Value: 2.0
+      - Name: Radius
+        Type: BaseDataVariableType
+        DataType: Size
+        Value: 8.0
+      - Name: SpacingPercent
+        Type: BaseDataVariableType
+        DataType: Float
+      - Name: BorderColor
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#000000"
+        Children:
+        - Name: DynamicLink
+          Type: DynamicLink
+          DataType: NodePath
+          Value: "../../../../HMI_Project/Dark Grey 6 - 000000 - Black"
+      - Name: PressedBorderColor
+        Type: BaseDataVariableType
+        DataType: Color
+        Children:
+        - Name: DynamicLink
+          Type: DynamicLink
+          DataType: NodePath
+          Value: "../../../../HMI_Project/Transparent - 00000000"
+      - Name: FocusBorderColor
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#6d91b6"
+        Children:
+        - Name: DynamicLink
+          Type: DynamicLink
+          DataType: NodePath
+          Value: "../../../../HMI_Project/Selected - 6d91b6 - Info - Blue"
+      - Name: PressedTextColor
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#ffffff"
+        Children:
+        - Name: DynamicLink
+          Type: DynamicLink
+          DataType: NodePath
+          Value: "../../../../HMI_Project/Light Grey 1 - ffffff - White"
+      - Name: PressedColor
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#6d91b6"
+        Children:
+        - Name: DynamicLink
+          Type: DynamicLink
+          DataType: NodePath
+          Value: "../../../../HMI_Project/Selected - 6d91b6 - Info - Blue"
+      - Name: TextColor
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#000000"
+        Children:
+        - Name: DynamicLink
+          Type: DynamicLink
+          DataType: NodePath
+          Value: "../../../../HMI_Project/Dark Grey 6 - 000000 - Black"
+      - Name: Color
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#f1f1f1"
+        Children:
+        - Name: DynamicLink
+          Type: DynamicLink
+          DataType: NodePath
+          Value: "../../../../HMI_Project/Light Grey 3 - f1f1f1"
+      - Name: FontWeight
+        Type: BaseDataVariableType
+        DataType: FontWeightEnum
+        Value: 700
+      - Name: IconUsesTextColor
+        Type: BaseDataVariableType
+        DataType: Boolean
+        Value: true
   - Name: InputBoxStyles
     Type: BaseObjectType
     Children:
@@ -2637,7 +2725,7 @@ Children:
       - Name: InactiveColor
         Type: BaseDataVariableType
         DataType: Color
-        Value: "#ffffff"
+        Value: "#f7f7f7"
         Children:
         - Name: DynamicLink
           Type: DynamicLink
@@ -2673,7 +2761,7 @@ Children:
       - Name: BackgroundColor
         Type: BaseDataVariableType
         DataType: Color
-        Value: "#f1f1f1"
+        Value: "#e9e9e9"
         Children:
         - Name: DynamicLink
           Type: DynamicLink
@@ -3609,7 +3697,31 @@ Children:
           Type: DynamicLink
           DataType: NodePath
           Value: "../../../../HMI_Project/Dark Grey 6 - 000000 - Black"
-    - Name: PointerCircles
+    - Name: Page Header
+      Type: LabelStyle
+      Children:
+      - Name: TextColor
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#000000"
+        Children:
+        - Name: DynamicLink
+          Type: DynamicLink
+          DataType: NodePath
+          Value: "../../../../HMI_Project/Dark Grey 6 - 000000 - Black"
+      - Name: FontSize
+        Type: BaseDataVariableType
+        DataType: Size
+        Value: 24.0
+      - Name: BackgroundColor
+        Type: BaseDataVariableType
+        DataType: Color
+        Children:
+        - Name: DynamicLink
+          Type: DynamicLink
+          DataType: NodePath
+          Value: "../../../../HMI_Project/Transparent - 00000000"
+    - Name: PointerCirclesWH
       Type: LabelStyle
       Children:
       - Name: TextColor
@@ -3628,7 +3740,7 @@ Children:
       - Name: FontSize
         Type: BaseDataVariableType
         DataType: Size
-        Value: 16.0
+        Value: 20.0
       - Name: Radius
         Type: BaseDataVariableType
         DataType: Size
@@ -3640,7 +3752,7 @@ Children:
           Type: DynamicLink
           DataType: NodePath
           Value: "../../../../HMI_Project/Transparent - 00000000"
-    - Name: Page Header
+    - Name: PointerCirclesBL
       Type: LabelStyle
       Children:
       - Name: TextColor
@@ -3652,10 +3764,17 @@ Children:
           Type: DynamicLink
           DataType: NodePath
           Value: "../../../../HMI_Project/Dark Grey 6 - 000000 - Black"
+      - Name: FontWeight
+        Type: BaseDataVariableType
+        DataType: FontWeightEnum
+        Value: 700
       - Name: FontSize
         Type: BaseDataVariableType
         DataType: Size
-        Value: 24.0
+        Value: 20.0
+      - Name: Radius
+        Type: BaseDataVariableType
+        DataType: Size
       - Name: BackgroundColor
         Type: BaseDataVariableType
         DataType: Color

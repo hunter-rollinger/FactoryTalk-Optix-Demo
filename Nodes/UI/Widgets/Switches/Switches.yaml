@@ -222,6 +222,115 @@ Children:
                 Type: DynamicLink
                 DataType: NodePath
                 Value: "../../../../IndicatorColor"
+        - Name: BorderColor
+          Type: BaseDataVariableType
+          DataType: Color
+          Children:
+          - Name: IndicatorColors1
+            Type: Colors
+            Children:
+            - Name: Source
+              Type: BaseDataVariableType
+              DataType: BaseDataType
+              ReferenceType: HasSource
+              Children:
+              - Name: DynamicLink
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "../../../../IndicatorColor"
+            - Name: Pairs
+              Type: BaseObjectType
+              Children:
+              - Name: Pair3
+                Type: ValueMapPair
+                Children:
+                - Name: Key
+                  Type: BaseDataVariableType
+                  DataType: Int16
+                  Value: 1
+                - Name: Value
+                  Type: BaseDataVariableType
+                  DataType: Color
+                  Value: "#23af72"
+                  Children:
+                  - Name: DynamicLink
+                    Type: DynamicLink
+                    DataType: NodePath
+                    Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Good - 23af72 - Green"
+              - Name: Pair4
+                Type: ValueMapPair
+                Children:
+                - Name: Key
+                  Type: BaseDataVariableType
+                  DataType: Int16
+                  Value: 2
+                - Name: Value
+                  Type: BaseDataVariableType
+                  DataType: Color
+                  Value: "#6d91b6"
+                  Children:
+                  - Name: DynamicLink
+                    Type: DynamicLink
+                    DataType: NodePath
+                    Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Selected - 6d91b6 - Info - Blue"
+              - Name: Pair5
+                Type: ValueMapPair
+                Children:
+                - Name: Key
+                  Type: BaseDataVariableType
+                  DataType: Int16
+                  Value: 3
+                - Name: Value
+                  Type: BaseDataVariableType
+                  DataType: Color
+                  Value: "#ff9900"
+                  Children:
+                  - Name: DynamicLink
+                    Type: DynamicLink
+                    DataType: NodePath
+                    Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Warning - ff9900 - Orange"
+              - Name: Pair
+                Type: ValueMapPair
+                Children:
+                - Name: Key
+                  Type: BaseDataVariableType
+                  DataType: Int16
+                  Value: 4
+                - Name: Value
+                  Type: BaseDataVariableType
+                  DataType: Color
+                  Value: "#cc0036"
+                  Children:
+                  - Name: DynamicLink
+                    Type: DynamicLink
+                    DataType: NodePath
+                    Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Error - cc036 - Red"
+              - Name: Pair6
+                Type: ValueMapPair
+                Children:
+                - Name: Key
+                  Type: BaseDataVariableType
+                  DataType: Int16
+                  Value: 5
+                - Name: Value
+                  Type: BaseDataVariableType
+                  DataType: Color
+                  Value: "#6d6e70"
+                  Children:
+                  - Name: DynamicLink
+                    Type: DynamicLink
+                    DataType: NodePath
+                    Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Dark Grey 2 - 6d6e70"
+              - Name: Pair1
+                Type: ValueMapPair
+                Children:
+                - Name: Key
+                  Type: BaseDataVariableType
+                  DataType: Int16
+                  Value: 6
+                - Name: Value
+                  Type: BaseDataVariableType
+                  DataType: Color
       - Name: IndicatorColor
         Type: BaseDataVariableType
         DataType: 'Multi-State Indicator Colors'
@@ -454,6 +563,23 @@ Children:
             Type: DynamicLink
             DataType: NodePath
             Value: "../../TextToDisplay"
+        - Name: Style
+          Type: BaseDataVariableType
+          DataType: String
+          Value: "PointerCirclesWH"
+          Children:
+          - Name: ConditionalConverter1
+            Type: ConditionalConverter
+            Children:
+            - Name: Condition
+              Type: BaseDataVariableType
+              DataType: Boolean
+              ReferenceType: HasSource
+              Children:
+              - Name: DynamicLink
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "../../../../Circle/Visible"
       - Name: Visible
         Type: BaseDataVariableType
         DataType: Boolean
@@ -610,6 +736,115 @@ Children:
                   Type: DynamicLink
                   DataType: NodePath
                   Value: "../../../../IndicatorColor"
+          - Name: BorderColor
+            Type: BaseDataVariableType
+            DataType: Color
+            Children:
+            - Name: IndicatorColors1
+              Type: Colors
+              Children:
+              - Name: Source
+                Type: BaseDataVariableType
+                DataType: BaseDataType
+                ReferenceType: HasSource
+                Children:
+                - Name: DynamicLink
+                  Type: DynamicLink
+                  DataType: NodePath
+                  Value: "../../../../IndicatorColor"
+              - Name: Pairs
+                Type: BaseObjectType
+                Children:
+                - Name: Pair3
+                  Type: ValueMapPair
+                  Children:
+                  - Name: Key
+                    Type: BaseDataVariableType
+                    DataType: Int16
+                    Value: 1
+                  - Name: Value
+                    Type: BaseDataVariableType
+                    DataType: Color
+                    Value: "#23af72"
+                    Children:
+                    - Name: DynamicLink
+                      Type: DynamicLink
+                      DataType: NodePath
+                      Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Good - 23af72 - Green"
+                - Name: Pair4
+                  Type: ValueMapPair
+                  Children:
+                  - Name: Key
+                    Type: BaseDataVariableType
+                    DataType: Int16
+                    Value: 2
+                  - Name: Value
+                    Type: BaseDataVariableType
+                    DataType: Color
+                    Value: "#6d91b6"
+                    Children:
+                    - Name: DynamicLink
+                      Type: DynamicLink
+                      DataType: NodePath
+                      Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Selected - 6d91b6 - Info - Blue"
+                - Name: Pair5
+                  Type: ValueMapPair
+                  Children:
+                  - Name: Key
+                    Type: BaseDataVariableType
+                    DataType: Int16
+                    Value: 3
+                  - Name: Value
+                    Type: BaseDataVariableType
+                    DataType: Color
+                    Value: "#ff9900"
+                    Children:
+                    - Name: DynamicLink
+                      Type: DynamicLink
+                      DataType: NodePath
+                      Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Warning - ff9900 - Orange"
+                - Name: Pair
+                  Type: ValueMapPair
+                  Children:
+                  - Name: Key
+                    Type: BaseDataVariableType
+                    DataType: Int16
+                    Value: 4
+                  - Name: Value
+                    Type: BaseDataVariableType
+                    DataType: Color
+                    Value: "#cc0036"
+                    Children:
+                    - Name: DynamicLink
+                      Type: DynamicLink
+                      DataType: NodePath
+                      Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Error - cc036 - Red"
+                - Name: Pair6
+                  Type: ValueMapPair
+                  Children:
+                  - Name: Key
+                    Type: BaseDataVariableType
+                    DataType: Int16
+                    Value: 5
+                  - Name: Value
+                    Type: BaseDataVariableType
+                    DataType: Color
+                    Value: "#6d6e70"
+                    Children:
+                    - Name: DynamicLink
+                      Type: DynamicLink
+                      DataType: NodePath
+                      Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Dark Grey 2 - 6d6e70"
+                - Name: Pair1
+                  Type: ValueMapPair
+                  Children:
+                  - Name: Key
+                    Type: BaseDataVariableType
+                    DataType: Int16
+                    Value: 6
+                  - Name: Value
+                    Type: BaseDataVariableType
+                    DataType: Color
         - Name: IndicatorColor
           Type: BaseDataVariableType
           DataType: 'Multi-State Indicator Colors'
@@ -900,6 +1135,23 @@ Children:
               Type: DynamicLink
               DataType: NodePath
               Value: "../../TextToDisplay"
+          - Name: Style
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "PointerCirclesWH"
+            Children:
+            - Name: ConditionalConverter1
+              Type: ConditionalConverter
+              Children:
+              - Name: Condition
+                Type: BaseDataVariableType
+                DataType: Boolean
+                ReferenceType: HasSource
+                Children:
+                - Name: DynamicLink
+                  Type: DynamicLink
+                  DataType: NodePath
+                  Value: "../../../../Circle/Visible"
         - Name: Visible
           Type: BaseDataVariableType
           DataType: Boolean
@@ -1469,6 +1721,115 @@ Children:
                 Type: DynamicLink
                 DataType: NodePath
                 Value: "../../../../IndicatorColor"
+        - Name: BorderColor
+          Type: BaseDataVariableType
+          DataType: Color
+          Children:
+          - Name: IndicatorColors1
+            Type: Colors
+            Children:
+            - Name: Source
+              Type: BaseDataVariableType
+              DataType: BaseDataType
+              ReferenceType: HasSource
+              Children:
+              - Name: DynamicLink
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "../../../../IndicatorColor"
+            - Name: Pairs
+              Type: BaseObjectType
+              Children:
+              - Name: Pair3
+                Type: ValueMapPair
+                Children:
+                - Name: Key
+                  Type: BaseDataVariableType
+                  DataType: Int16
+                  Value: 1
+                - Name: Value
+                  Type: BaseDataVariableType
+                  DataType: Color
+                  Value: "#23af72"
+                  Children:
+                  - Name: DynamicLink
+                    Type: DynamicLink
+                    DataType: NodePath
+                    Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Good - 23af72 - Green"
+              - Name: Pair4
+                Type: ValueMapPair
+                Children:
+                - Name: Key
+                  Type: BaseDataVariableType
+                  DataType: Int16
+                  Value: 2
+                - Name: Value
+                  Type: BaseDataVariableType
+                  DataType: Color
+                  Value: "#6d91b6"
+                  Children:
+                  - Name: DynamicLink
+                    Type: DynamicLink
+                    DataType: NodePath
+                    Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Selected - 6d91b6 - Info - Blue"
+              - Name: Pair5
+                Type: ValueMapPair
+                Children:
+                - Name: Key
+                  Type: BaseDataVariableType
+                  DataType: Int16
+                  Value: 3
+                - Name: Value
+                  Type: BaseDataVariableType
+                  DataType: Color
+                  Value: "#ff9900"
+                  Children:
+                  - Name: DynamicLink
+                    Type: DynamicLink
+                    DataType: NodePath
+                    Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Warning - ff9900 - Orange"
+              - Name: Pair
+                Type: ValueMapPair
+                Children:
+                - Name: Key
+                  Type: BaseDataVariableType
+                  DataType: Int16
+                  Value: 4
+                - Name: Value
+                  Type: BaseDataVariableType
+                  DataType: Color
+                  Value: "#cc0036"
+                  Children:
+                  - Name: DynamicLink
+                    Type: DynamicLink
+                    DataType: NodePath
+                    Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Error - cc036 - Red"
+              - Name: Pair6
+                Type: ValueMapPair
+                Children:
+                - Name: Key
+                  Type: BaseDataVariableType
+                  DataType: Int16
+                  Value: 5
+                - Name: Value
+                  Type: BaseDataVariableType
+                  DataType: Color
+                  Value: "#6d6e70"
+                  Children:
+                  - Name: DynamicLink
+                    Type: DynamicLink
+                    DataType: NodePath
+                    Value: "/Objects/OptimateDemoProject/UI/Stylesheets/HMI_Project/Dark Grey 2 - 6d6e70"
+              - Name: Pair1
+                Type: ValueMapPair
+                Children:
+                - Name: Key
+                  Type: BaseDataVariableType
+                  DataType: Int16
+                  Value: 6
+                - Name: Value
+                  Type: BaseDataVariableType
+                  DataType: Color
       - Name: IndicatorColor
         Type: BaseDataVariableType
         DataType: 'Multi-State Indicator Colors'
@@ -1770,6 +2131,23 @@ Children:
             Type: DynamicLink
             DataType: NodePath
             Value: "../../TextToDisplay"
+        - Name: Style
+          Type: BaseDataVariableType
+          DataType: String
+          Value: "PointerCirclesWH"
+          Children:
+          - Name: ConditionalConverter1
+            Type: ConditionalConverter
+            Children:
+            - Name: Condition
+              Type: BaseDataVariableType
+              DataType: Boolean
+              ReferenceType: HasSource
+              Children:
+              - Name: DynamicLink
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "../../../../Circle/Visible"
       - Name: Visible
         Type: BaseDataVariableType
         DataType: Boolean

@@ -234,8 +234,6 @@ Children:
         Type: BaseVariableType
         DataType: DynamicLinkMode
         Value: 2
-  - Class: Method
-    Name: UpdateDatabase
   - Name: TableRecipeColumn
     Type: BaseDataVariableType
     DataType: String
@@ -253,4 +251,93 @@ Children:
   - Name: LoggerPath
     Type: BaseDataVariableType
     DataType: NodeId
-    Value: "/Objects/OptimateDemoProject/Loggers/VariablesToAudit/test1"
+    Description: {"LocaleId":"en-US","Text":"must point to a folder of items"}
+    Value: "/Objects/OptimateDemoProject/Loggers/VariablesToAudit"
+  - Name: DBUpdateText
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "0"
+    Children:
+    - Name: ExpressionEvaluator1
+      Type: ExpressionEvaluator
+      Children:
+      - Name: Expression
+        Type: BaseDataVariableType
+        DataType: String
+        ReferenceType: HasParameter
+        Value: "if(isempty({0}),{1},{2})"
+      - Name: ns=9;Source0
+        Type: BaseDataVariableType
+        DataType: BaseDataType
+        ReferenceType: HasSource
+        Children:
+        - Name: DynamicLink
+          Type: DynamicLink
+          DataType: NodePath
+          Value: "../../../RecipeName"
+      - Name: ns=9;Source1
+        Type: BaseDataVariableType
+        DataType: BaseDataType
+        ReferenceType: HasSource
+        Children:
+        - Name: StringFormatter1
+          Type: StringFormatter
+          Children:
+          - Name: Format
+            Type: BaseDataVariableType
+            DataType: LocalizedText
+            ReferenceType: HasParameter
+            Value: {"LocaleId":"en-US","Text":"{0:sql_literal}"}
+          - Name: ns=9;Source0
+            Type: BaseDataVariableType
+            DataType: BaseDataType
+            ReferenceType: HasSource
+            Children:
+            - Name: DynamicLink
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "../../../../../RecipeNumber"
+      - Name: ns=9;Source2
+        Type: BaseDataVariableType
+        DataType: BaseDataType
+        ReferenceType: HasSource
+        Children:
+        - Name: StringFormatter1
+          Type: StringFormatter
+          Children:
+          - Name: Format
+            Type: BaseDataVariableType
+            DataType: LocalizedText
+            ReferenceType: HasParameter
+            Value: {"LocaleId":"en-US","Text":"{0:sql_literal}"}
+          - Name: ns=9;Source0
+            Type: BaseDataVariableType
+            DataType: BaseDataType
+            ReferenceType: HasSource
+            Children:
+            - Name: StringFormatter1
+              Type: StringFormatter
+              Children:
+              - Name: Format
+                Type: BaseDataVariableType
+                DataType: LocalizedText
+                ReferenceType: HasParameter
+                Value: {"LocaleId":"en-US","Text":"{0} - {1}"}
+              - Name: ns=9;Source0
+                Type: BaseDataVariableType
+                DataType: BaseDataType
+                ReferenceType: HasSource
+                Children:
+                - Name: DynamicLink
+                  Type: DynamicLink
+                  DataType: NodePath
+                  Value: "../../../../../../../RecipeNumber"
+              - Name: ns=9;Source1
+                Type: BaseDataVariableType
+                DataType: BaseDataType
+                ReferenceType: HasSource
+                Children:
+                - Name: DynamicLink
+                  Type: DynamicLink
+                  DataType: NodePath
+                  Value: "../../../../../../../RecipeName"

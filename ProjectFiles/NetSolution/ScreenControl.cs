@@ -135,9 +135,7 @@ public class ScreenControl : BaseNetLogic
 
 	private static void ClosePopupsRecurse(Session session) {
 		foreach (Dialog item in session.Get("UIRoot").Children.OfType<Dialog>().ToList()) {
-			if (item.BrowseName.ToLowerInvariant() == "alarmpopup" || item.BrowseName.ToLowerInvariant() == "screensaver") {
-				item.Close(); // close any currently open alarm popups
-			}
+			item.Close(); // close any currently open alarm popups
 		}
 	}
 
