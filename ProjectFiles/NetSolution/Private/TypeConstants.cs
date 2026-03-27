@@ -122,6 +122,7 @@ namespace OptimateDemoProject
         public static readonly NodeId NodesCounterPanel = new NodeId(namespaceIndex, new Guid("7fdddbdcf6a84c3a030fee9cd66e58eb"));
         public static readonly NodeId CalendarPickerElement = new NodeId(namespaceIndex, new Guid("09729a28f8e879ce7c75f655034a218c"));
         public static readonly NodeId CalendarPickerDialog = new NodeId(namespaceIndex, new Guid("bbd28155a406d75157573b23ec4083ec"));
+        public static readonly NodeId CustomBooleanDefault = new NodeId(namespaceIndex, new Guid("c6e3768aa9d64b9a174fad0ce1a377b8"));
     }
 
     public static class VariableTypes

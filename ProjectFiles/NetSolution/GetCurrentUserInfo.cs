@@ -18,13 +18,14 @@ using FTOptix.CommunicationDriver;
 using FTOptix.Core;
 using System.Diagnostics;
 using System.Collections.Generic;
+using System.Linq;
 #endregion
 
 public class GetCurrentUserInfo : BaseNetLogic
 {
     public override void Start() {
         //Debugger.Launch();
-        topUserRole = LogicObject.GetVariable("topUserRole");
+        topUserRole = LogicObject.GetVariable("TopUserRole");
         userNodeId = LogicObject.GetVariable("CurrentUser");
 		userNodeId.VariableChange += UserChanged;
     }
@@ -32,13 +33,23 @@ public class GetCurrentUserInfo : BaseNetLogic
 	private void UserChanged(object sender, VariableChangeEventArgs e) {
 		var currentUser = InformationModel.Get(userNodeId.Value);
 		var userRoles = currentUser.Refs.GetObjects(FTOptix.Core.ReferenceTypes.HasRole, false);
-        NodeId[] roleVar = LogicObject.GetVariable("AllUserRoles").Value.Value as NodeId[];
-        HashSet<Role> roles = [];
-        foreach (NodeId child in roleVar) {
-            if (child == null)
+        if (userRoles.Count < 1)
+            return;
+        
+        NodeId[] userRoleIds = new NodeId[userRoles.Count];
+        int i = 0;
+        foreach (Role role in userRoles) {
+            userRoleIds[i] = role.NodeId;
+            i++;
+        }
+
+        NodeId[] roleVars = LogicObject.GetVariable("AllUserRoles").Value.Value as NodeId[];
+        for (i = roleVars.Length - 1; i > -1; i--) {
+            if (!userRoleIds.Contains(roleVars[i]))
                 continue;
-            Role role = InformationModel.Get(child) as Role;
-            roles.Add(role);
+            string roleName = InformationModel.Get<Role>(roleVars[i]).BrowseName;
+            topUserRole.Value = roleName;
+            return;
         }
 	}
 

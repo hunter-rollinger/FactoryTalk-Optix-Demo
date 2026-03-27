@@ -2327,3 +2327,56 @@ Children:
         Type: BaseDataVariableType
         DataType: String
         Value: "Alarm"
+- Name: CustomBooleanDefault
+  Id: g=c6e3768aa9d64b9a174fad0ce1a377b8
+  Supertype: ValueMapConverter
+  ReferenceType: HasComponent
+  Children:
+  - Name: Source
+    Type: BaseDataVariableType
+    DataType: BaseDataType
+    ReferenceType: HasSource
+  - Name: ns=9;Pairs
+    Type: BaseObjectType
+    Children:
+    - Name: Pair
+      Type: ValueMapPair
+      Children:
+      - Name: Key
+        Type: BaseDataVariableType
+        DataType: CustomBoolean
+      - Name: Value
+        Type: BaseDataVariableType
+        DataType: Boolean
+    - Name: Pair1
+      Type: ValueMapPair
+      Children:
+      - Name: Key
+        Type: BaseDataVariableType
+        DataType: CustomBoolean
+        Value: 1
+      - Name: Value
+        Type: BaseDataVariableType
+        DataType: Boolean
+        Value: true
+    - Name: Pair2
+      Type: ValueMapPair
+      Children:
+      - Name: Key
+        Type: BaseDataVariableType
+        DataType: CustomBoolean
+        Value: 2
+      - Name: Value
+        Type: BaseDataVariableType
+        DataType: Boolean
+        Children:
+        - Name: DynamicLink
+          Type: DynamicLink
+          DataType: NodePath
+          Value: "{ApplicationWindow}/ScreenControl/ScreenSizeIsNormal"
+          Children:
+          - Name: Mode
+            Type: BaseVariableType
+            DataType: DynamicLinkMode
+            ModellingRule: Optional
+            Value: 2
