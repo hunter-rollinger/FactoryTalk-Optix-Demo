@@ -4838,7 +4838,7 @@ Children:
             - Name: DynamicLink
               Type: DynamicLink
               DataType: NodePath
-              Value: "../../../../../Label"
+              Value: "../../../../../NumericDisplay Label"
       - Name: VerticalAlignment
         Type: BaseVariableType
         DataType: VerticalAlignment
@@ -4986,7 +4986,7 @@ Children:
             DataType: LocalizedText
             ReferenceType: HasParameter
             ModellingRule: Optional
-            Value: {"LocaleId":"en-US","Text":"{0:u}"}
+            Value: {"LocaleId":"en-US","Text":"{0:f1}"}
           - Name: ns=9;Source0
             Type: BaseDataVariableType
             DataType: BaseDataType
@@ -4995,7 +4995,7 @@ Children:
             - Name: DynamicLink
               Type: DynamicLink
               DataType: NodePath
-              Value: "../../../../../Label"
+              Value: "../../../../../NumericDisplay Value"
       - Name: VerticalAlignment
         Type: BaseVariableType
         DataType: VerticalAlignment
@@ -5033,10 +5033,24 @@ Children:
         DataType: Boolean
         Value: true
         Children:
-        - Name: DynamicLink
-          Type: DynamicLink
-          DataType: NodePath
-          Value: "../../../NumericDisplay Label"
+        - Name: ExpressionEvaluator1
+          Type: ExpressionEvaluator
+          Children:
+          - Name: Expression
+            Type: BaseDataVariableType
+            DataType: String
+            ReferenceType: HasParameter
+            ModellingRule: Optional
+            Value: "!isempty({0})"
+          - Name: ns=9;Source0
+            Type: BaseDataVariableType
+            DataType: BaseDataType
+            ReferenceType: HasSource
+            Children:
+            - Name: DynamicLink
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "../../../../../NumericDisplay Label"
       - Name: ns=11;GridLayoutProperties
         Type: GridLayoutProperties
         DisplayName: {"NamespaceIndex":11,"TextId":"GridLayoutPropertiesDisplayName"}
@@ -5060,6 +5074,11 @@ Children:
         DataType: TextVerticalAlignment
         ModellingRule: Optional
         Value: 1
+      - Name: FontWeight
+        Type: BaseDataVariableType
+        DataType: FontWeightEnum
+        ModellingRule: Optional
+        Value: 700
     - Name: Spacer4
       Type: Rectangle
       Children:

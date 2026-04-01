@@ -1129,10 +1129,10 @@ Children:
           DataType: Boolean
           Value: true
           Children:
-          - Name: ExpressionEvaluator1
-            Type: ExpressionEvaluator
+          - Name: KeyValueConverter1
+            Type: ValueMapConverter
             Children:
-            - Name: Source0
+            - Name: Source
               Type: BaseDataVariableType
               DataType: BaseDataType
               ReferenceType: HasSource
@@ -1141,6 +1141,49 @@ Children:
                 Type: DynamicLink
                 DataType: NodePath
                 Value: "../../../../../Symbol Shape"
+            - Name: Pairs
+              Type: BaseObjectType
+              Children:
+              - Name: Pair
+                Type: ValueMapPair
+                Children:
+                - Name: Key
+                  Type: BaseDataVariableType
+                  DataType: 'Multi-Color InfoBox Symbol Shape'
+                  Value: 1
+                - Name: Value
+                  Type: BaseDataVariableType
+                  DataType: Boolean
+              - Name: Pair1
+                Type: ValueMapPair
+                Children:
+                - Name: Key
+                  Type: BaseDataVariableType
+                  DataType: 'Multi-Color InfoBox Symbol Shape'
+                - Name: Value
+                  Type: BaseDataVariableType
+                  DataType: Boolean
+              - Name: Pair2
+                Type: ValueMapPair
+                Children:
+                - Name: Key
+                  Type: BaseDataVariableType
+                  DataType: 'Multi-Color InfoBox Symbol Shape'
+                  Value: 2
+                - Name: Value
+                  Type: BaseDataVariableType
+                  DataType: Boolean
+                  Value: true
+              - Name: Pair3
+                Type: ValueMapPair
+                Children:
+                - Name: Key
+                  Type: BaseDataVariableType
+                  DataType: 'Multi-Color InfoBox Symbol Shape'
+                  Value: 3
+                - Name: Value
+                  Type: BaseDataVariableType
+                  DataType: Boolean
       - Name: Diamond
         Type: Rectangle
         Children:
@@ -1390,10 +1433,10 @@ Children:
           DataType: Boolean
           Value: true
           Children:
-          - Name: ExpressionEvaluator1
-            Type: ExpressionEvaluator
+          - Name: KeyValueConverter1
+            Type: ValueMapConverter
             Children:
-            - Name: Source0
+            - Name: Source
               Type: BaseDataVariableType
               DataType: BaseDataType
               ReferenceType: HasSource
@@ -1402,6 +1445,49 @@ Children:
                 Type: DynamicLink
                 DataType: NodePath
                 Value: "../../../../../Symbol Shape"
+            - Name: Pairs
+              Type: BaseObjectType
+              Children:
+              - Name: Pair
+                Type: ValueMapPair
+                Children:
+                - Name: Key
+                  Type: BaseDataVariableType
+                  DataType: 'Multi-Color InfoBox Symbol Shape'
+                  Value: 1
+                - Name: Value
+                  Type: BaseDataVariableType
+                  DataType: Boolean
+              - Name: Pair1
+                Type: ValueMapPair
+                Children:
+                - Name: Key
+                  Type: BaseDataVariableType
+                  DataType: 'Multi-Color InfoBox Symbol Shape'
+                - Name: Value
+                  Type: BaseDataVariableType
+                  DataType: Boolean
+              - Name: Pair2
+                Type: ValueMapPair
+                Children:
+                - Name: Key
+                  Type: BaseDataVariableType
+                  DataType: 'Multi-Color InfoBox Symbol Shape'
+                  Value: 2
+                - Name: Value
+                  Type: BaseDataVariableType
+                  DataType: Boolean
+              - Name: Pair3
+                Type: ValueMapPair
+                Children:
+                - Name: Key
+                  Type: BaseDataVariableType
+                  DataType: 'Multi-Color InfoBox Symbol Shape'
+                  Value: 3
+                - Name: Value
+                  Type: BaseDataVariableType
+                  DataType: Boolean
+                  Value: true
         - Name: GridLayoutProperties
           Type: GridLayoutProperties
       - Name: Circle
@@ -1660,10 +1746,10 @@ Children:
           DataType: Boolean
           Value: true
           Children:
-          - Name: ExpressionEvaluator1
-            Type: ExpressionEvaluator
+          - Name: KeyValueConverter1
+            Type: ValueMapConverter
             Children:
-            - Name: Source0
+            - Name: Source
               Type: BaseDataVariableType
               DataType: BaseDataType
               ReferenceType: HasSource
@@ -1728,6 +1814,84 @@ Children:
           DataType: BaseDataType
           ReferenceType: HasSource
           Children:
+          - Name: KeyValueConverter1
+            Type: ValueMapConverter
+            Children:
+            - Name: Source
+              Type: BaseDataVariableType
+              DataType: BaseDataType
+              ReferenceType: HasSource
+              Children:
+              - Name: DynamicLink
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "../../../../../Symbol Shape"
+        - Name: Source1
+          Type: BaseDataVariableType
+          DataType: BaseDataType
+          ReferenceType: HasSource
+          Children:
+          - Name: KeyValueConverter1
+            Type: ValueMapConverter
+            Children:
+            - Name: Source
+              Type: BaseDataVariableType
+              DataType: BaseDataType
+              ReferenceType: HasSource
+              Children:
+              - Name: DynamicLink
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "../../../../../Symbol"
+        - Name: Source2
+          Type: BaseDataVariableType
+          DataType: BaseDataType
+          ReferenceType: HasSource
+          Children:
+          - Name: DynamicLink
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "../../../MessageText"
+        - Name: Source3
+          Type: BaseDataVariableType
+          DataType: BaseDataType
+          ReferenceType: HasSource
+          Children:
+          - Name: KeyValueConverter1
+            Type: ValueMapConverter
+            Children:
+            - Name: Source
+              Type: BaseDataVariableType
+              DataType: BaseDataType
+              ReferenceType: HasSource
+              Children:
+              - Name: DynamicLink
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "../../../../../Color"
+    - Name: HorizontalAlignment
+      Type: BaseVariableType
+      DataType: HorizontalAlignment
+      ModellingRule: Optional
+      Value: 3
+    - Name: VerticalAlignment
+      Type: BaseVariableType
+      DataType: VerticalAlignment
+      ModellingRule: Optional
+      Value: 3
+    - Name: Enabled
+      Type: BaseDataVariableType
+      DataType: Boolean
+      Value: true
+      Children:
+      - Name: ExpressionEvaluator1
+        Type: ExpressionEvaluator
+        Children:
+        - Name: Source0
+          Type: BaseDataVariableType
+          DataType: BaseDataType
+          ReferenceType: HasSource
+          Children:
           - Name: DynamicLink
             Type: DynamicLink
             DataType: NodePath
@@ -1750,16 +1914,6 @@ Children:
             Type: DynamicLink
             DataType: NodePath
             Value: "../../../Symbol Shape"
-    - Name: HorizontalAlignment
-      Type: BaseVariableType
-      DataType: HorizontalAlignment
-      ModellingRule: Optional
-      Value: 3
-    - Name: VerticalAlignment
-      Type: BaseVariableType
-      DataType: VerticalAlignment
-      ModellingRule: Optional
-      Value: 3
   - Name: AxisIsReferenced
     Type: BaseDataVariableType
     DataType: Boolean

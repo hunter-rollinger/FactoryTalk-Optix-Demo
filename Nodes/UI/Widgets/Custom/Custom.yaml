@@ -1599,16 +1599,10 @@ Children:
         DataType: Boolean
         Value: true
         Children:
-        - Name: ExpressionEvaluator1
-          Type: ExpressionEvaluator
+        - Name: KeyValueConverter1
+          Type: ValueMapConverter
           Children:
-          - Name: Expression
-            Type: BaseDataVariableType
-            DataType: String
-            ReferenceType: HasParameter
-            ModellingRule: Optional
-            Value: "{0}==2"
-          - Name: ns=9;Source0
+          - Name: Source
             Type: BaseDataVariableType
             DataType: BaseDataType
             ReferenceType: HasSource
@@ -1617,6 +1611,49 @@ Children:
               Type: DynamicLink
               DataType: NodePath
               Value: "../../../../../Symbol Shape"
+          - Name: ns=9;Pairs
+            Type: BaseObjectType
+            Children:
+            - Name: Pair
+              Type: ValueMapPair
+              Children:
+              - Name: Key
+                Type: BaseDataVariableType
+                DataType: 'Multi-Color InfoBox Symbol Shape'
+                Value: 1
+              - Name: Value
+                Type: BaseDataVariableType
+                DataType: Boolean
+            - Name: Pair1
+              Type: ValueMapPair
+              Children:
+              - Name: Key
+                Type: BaseDataVariableType
+                DataType: 'Multi-Color InfoBox Symbol Shape'
+              - Name: Value
+                Type: BaseDataVariableType
+                DataType: Boolean
+            - Name: Pair2
+              Type: ValueMapPair
+              Children:
+              - Name: Key
+                Type: BaseDataVariableType
+                DataType: 'Multi-Color InfoBox Symbol Shape'
+                Value: 2
+              - Name: Value
+                Type: BaseDataVariableType
+                DataType: Boolean
+                Value: true
+            - Name: Pair3
+              Type: ValueMapPair
+              Children:
+              - Name: Key
+                Type: BaseDataVariableType
+                DataType: 'Multi-Color InfoBox Symbol Shape'
+                Value: 3
+              - Name: Value
+                Type: BaseDataVariableType
+                DataType: Boolean
     - Name: Diamond
       Type: Rectangle
       Children:
@@ -1987,16 +2024,10 @@ Children:
         DataType: Boolean
         Value: true
         Children:
-        - Name: ExpressionEvaluator1
-          Type: ExpressionEvaluator
+        - Name: KeyValueConverter1
+          Type: ValueMapConverter
           Children:
-          - Name: Expression
-            Type: BaseDataVariableType
-            DataType: String
-            ReferenceType: HasParameter
-            ModellingRule: Optional
-            Value: "{0}==3"
-          - Name: ns=9;Source0
+          - Name: Source
             Type: BaseDataVariableType
             DataType: BaseDataType
             ReferenceType: HasSource
@@ -2005,6 +2036,49 @@ Children:
               Type: DynamicLink
               DataType: NodePath
               Value: "../../../../../Symbol Shape"
+          - Name: ns=9;Pairs
+            Type: BaseObjectType
+            Children:
+            - Name: Pair
+              Type: ValueMapPair
+              Children:
+              - Name: Key
+                Type: BaseDataVariableType
+                DataType: 'Multi-Color InfoBox Symbol Shape'
+                Value: 1
+              - Name: Value
+                Type: BaseDataVariableType
+                DataType: Boolean
+            - Name: Pair1
+              Type: ValueMapPair
+              Children:
+              - Name: Key
+                Type: BaseDataVariableType
+                DataType: 'Multi-Color InfoBox Symbol Shape'
+              - Name: Value
+                Type: BaseDataVariableType
+                DataType: Boolean
+            - Name: Pair2
+              Type: ValueMapPair
+              Children:
+              - Name: Key
+                Type: BaseDataVariableType
+                DataType: 'Multi-Color InfoBox Symbol Shape'
+                Value: 2
+              - Name: Value
+                Type: BaseDataVariableType
+                DataType: Boolean
+            - Name: Pair3
+              Type: ValueMapPair
+              Children:
+              - Name: Key
+                Type: BaseDataVariableType
+                DataType: 'Multi-Color InfoBox Symbol Shape'
+                Value: 3
+              - Name: Value
+                Type: BaseDataVariableType
+                DataType: Boolean
+                Value: true
       - Name: Opacity
         Type: BaseVariableType
         DataType: Float
@@ -2384,16 +2458,10 @@ Children:
         DataType: Boolean
         Value: true
         Children:
-        - Name: ExpressionEvaluator1
-          Type: ExpressionEvaluator
+        - Name: KeyValueConverter1
+          Type: ValueMapConverter
           Children:
-          - Name: Expression
-            Type: BaseDataVariableType
-            DataType: String
-            ReferenceType: HasParameter
-            ModellingRule: Optional
-            Value: "{0}==1"
-          - Name: ns=9;Source0
+          - Name: Source
             Type: BaseDataVariableType
             DataType: BaseDataType
             ReferenceType: HasSource
@@ -2402,6 +2470,62 @@ Children:
               Type: DynamicLink
               DataType: NodePath
               Value: "../../../../../Symbol Shape"
+          - Name: ns=9;Pairs
+            Type: BaseObjectType
+            ModellingRule: None
+            Children:
+            - Name: Pair
+              Type: ValueMapPair
+              ModellingRule: None
+              Children:
+              - Name: Key
+                Type: BaseDataVariableType
+                DataType: 'Multi-Color InfoBox Symbol Shape'
+                ModellingRule: None
+                Value: 1
+              - Name: Value
+                Type: BaseDataVariableType
+                DataType: Boolean
+                ModellingRule: None
+                Value: true
+            - Name: Pair1
+              Type: ValueMapPair
+              ModellingRule: None
+              Children:
+              - Name: Key
+                Type: BaseDataVariableType
+                DataType: 'Multi-Color InfoBox Symbol Shape'
+                ModellingRule: None
+              - Name: Value
+                Type: BaseDataVariableType
+                DataType: Boolean
+                ModellingRule: None
+            - Name: Pair2
+              Type: ValueMapPair
+              ModellingRule: None
+              Children:
+              - Name: Key
+                Type: BaseDataVariableType
+                DataType: 'Multi-Color InfoBox Symbol Shape'
+                ModellingRule: None
+                Value: 2
+              - Name: Value
+                Type: BaseDataVariableType
+                DataType: Boolean
+                ModellingRule: None
+            - Name: Pair3
+              Type: ValueMapPair
+              ModellingRule: None
+              Children:
+              - Name: Key
+                Type: BaseDataVariableType
+                DataType: 'Multi-Color InfoBox Symbol Shape'
+                ModellingRule: None
+                Value: 3
+              - Name: Value
+                Type: BaseDataVariableType
+                DataType: Boolean
+                ModellingRule: None
       - Name: ns=11;GridLayoutProperties
         Type: GridLayoutProperties
         DisplayName: {"NamespaceIndex":11,"TextId":"GridLayoutPropertiesDisplayName"}
@@ -2513,6 +2637,274 @@ Children:
     DataType: String
     Value: "This is a test"
   - Name: Visible
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Value: true
+    Children:
+    - Name: ExpressionEvaluator1
+      Type: ExpressionEvaluator
+      Children:
+      - Name: Expression
+        Type: BaseDataVariableType
+        DataType: String
+        ReferenceType: HasParameter
+        ModellingRule: Optional
+        Value: "{0}!=1 && {1} != 1 && !isempty({2}) && {3} != 1"
+      - Name: ns=9;Source0
+        Type: BaseDataVariableType
+        DataType: BaseDataType
+        ReferenceType: HasSource
+        Children:
+        - Name: KeyValueConverter1
+          Type: ValueMapConverter
+          Children:
+          - Name: Source
+            Type: BaseDataVariableType
+            DataType: BaseDataType
+            ReferenceType: HasSource
+            Children:
+            - Name: DynamicLink
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "../../../../../Symbol Shape"
+          - Name: ns=9;Pairs
+            Type: BaseObjectType
+            ModellingRule: None
+            Children:
+            - Name: Pair
+              Type: ValueMapPair
+              ModellingRule: None
+              Children:
+              - Name: Key
+                Type: BaseDataVariableType
+                DataType: 'Multi-Color InfoBox Symbol Shape'
+                ModellingRule: None
+              - Name: Value
+                Type: BaseDataVariableType
+                DataType: Int16
+                ModellingRule: None
+                Value: 1
+            - Name: Pair1
+              Type: ValueMapPair
+              ModellingRule: None
+              Children:
+              - Name: Key
+                Type: BaseDataVariableType
+                DataType: 'Multi-Color InfoBox Symbol Shape'
+                ModellingRule: None
+                Value: 1
+              - Name: Value
+                Type: BaseDataVariableType
+                DataType: Int16
+                ModellingRule: None
+            - Name: Pair2
+              Type: ValueMapPair
+              ModellingRule: None
+              Children:
+              - Name: Key
+                Type: BaseDataVariableType
+                DataType: 'Multi-Color InfoBox Symbol Shape'
+                ModellingRule: None
+                Value: 2
+              - Name: Value
+                Type: BaseDataVariableType
+                DataType: Int16
+                ModellingRule: None
+            - Name: Pair3
+              Type: ValueMapPair
+              ModellingRule: None
+              Children:
+              - Name: Key
+                Type: BaseDataVariableType
+                DataType: 'Multi-Color InfoBox Symbol Shape'
+                ModellingRule: None
+                Value: 3
+              - Name: Value
+                Type: BaseDataVariableType
+                DataType: Int16
+                ModellingRule: None
+      - Name: ns=9;Source1
+        Type: BaseDataVariableType
+        DataType: BaseDataType
+        ReferenceType: HasSource
+        Children:
+        - Name: KeyValueConverter1
+          Type: ValueMapConverter
+          Children:
+          - Name: Source
+            Type: BaseDataVariableType
+            DataType: BaseDataType
+            ReferenceType: HasSource
+            Children:
+            - Name: DynamicLink
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "../../../../../Symbol"
+          - Name: ns=9;Pairs
+            Type: BaseObjectType
+            ModellingRule: None
+            Children:
+            - Name: Pair
+              Type: ValueMapPair
+              ModellingRule: None
+              Children:
+              - Name: Key
+                Type: BaseDataVariableType
+                DataType: 'Multi-Color InfoBox Symbols'
+                ModellingRule: None
+              - Name: Value
+                Type: BaseDataVariableType
+                DataType: Int16
+                ModellingRule: None
+                Value: 1
+            - Name: Pair1
+              Type: ValueMapPair
+              ModellingRule: None
+              Children:
+              - Name: Key
+                Type: BaseDataVariableType
+                DataType: 'Multi-Color InfoBox Symbols'
+                ModellingRule: None
+                Value: 1
+              - Name: Value
+                Type: BaseDataVariableType
+                DataType: Int16
+                ModellingRule: None
+            - Name: Pair2
+              Type: ValueMapPair
+              ModellingRule: None
+              Children:
+              - Name: Key
+                Type: BaseDataVariableType
+                DataType: 'Multi-Color InfoBox Symbols'
+                ModellingRule: None
+                Value: 2
+              - Name: Value
+                Type: BaseDataVariableType
+                DataType: Int16
+                ModellingRule: None
+            - Name: Pair3
+              Type: ValueMapPair
+              ModellingRule: None
+              Children:
+              - Name: Key
+                Type: BaseDataVariableType
+                DataType: 'Multi-Color InfoBox Symbols'
+                ModellingRule: None
+                Value: 8
+              - Name: Value
+                Type: BaseDataVariableType
+                DataType: Int16
+                ModellingRule: None
+            - Name: Pair4
+              Type: ValueMapPair
+              ModellingRule: None
+              Children:
+              - Name: Key
+                Type: BaseDataVariableType
+                DataType: 'Multi-Color InfoBox Symbols'
+                ModellingRule: None
+                Value: 3
+              - Name: Value
+                Type: BaseDataVariableType
+                DataType: Int16
+                ModellingRule: None
+      - Name: ns=9;Source2
+        Type: BaseDataVariableType
+        DataType: BaseDataType
+        ReferenceType: HasSource
+        Children:
+        - Name: DynamicLink
+          Type: DynamicLink
+          DataType: NodePath
+          Value: "../../../MessageText"
+      - Name: ns=9;Source3
+        Type: BaseDataVariableType
+        DataType: BaseDataType
+        ReferenceType: HasSource
+        Children:
+        - Name: KeyValueConverter1
+          Type: ValueMapConverter
+          Children:
+          - Name: Source
+            Type: BaseDataVariableType
+            DataType: BaseDataType
+            ReferenceType: HasSource
+            Children:
+            - Name: DynamicLink
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "../../../../../Color"
+          - Name: ns=9;Pairs
+            Type: BaseObjectType
+            ModellingRule: None
+            Children:
+            - Name: Pair
+              Type: ValueMapPair
+              ModellingRule: None
+              Children:
+              - Name: Key
+                Type: BaseDataVariableType
+                DataType: 'Multi-Color InfoBox Colors'
+                ModellingRule: None
+              - Name: Value
+                Type: BaseDataVariableType
+                DataType: Int16
+                ModellingRule: None
+                Value: 1
+            - Name: Pair1
+              Type: ValueMapPair
+              ModellingRule: None
+              Children:
+              - Name: Key
+                Type: BaseDataVariableType
+                DataType: 'Multi-Color InfoBox Colors'
+                ModellingRule: None
+                Value: 1
+              - Name: Value
+                Type: BaseDataVariableType
+                DataType: Int16
+                ModellingRule: None
+            - Name: Pair2
+              Type: ValueMapPair
+              ModellingRule: None
+              Children:
+              - Name: Key
+                Type: BaseDataVariableType
+                DataType: 'Multi-Color InfoBox Colors'
+                ModellingRule: None
+                Value: 3
+              - Name: Value
+                Type: BaseDataVariableType
+                DataType: Int16
+                ModellingRule: None
+            - Name: Pair3
+              Type: ValueMapPair
+              ModellingRule: None
+              Children:
+              - Name: Key
+                Type: BaseDataVariableType
+                DataType: 'Multi-Color InfoBox Colors'
+                ModellingRule: None
+                Value: 2
+              - Name: Value
+                Type: BaseDataVariableType
+                DataType: Int16
+                ModellingRule: None
+            - Name: Pair4
+              Type: ValueMapPair
+              ModellingRule: None
+              Children:
+              - Name: Key
+                Type: BaseDataVariableType
+                DataType: 'Multi-Color InfoBox Colors'
+                ModellingRule: None
+                Value: 4
+              - Name: Value
+                Type: BaseDataVariableType
+                DataType: Int16
+                ModellingRule: None
+  - Name: Enabled
     Type: BaseDataVariableType
     DataType: Boolean
     Value: true
